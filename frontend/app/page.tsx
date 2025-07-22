@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <main className="max-w-xl mx-auto px-4 py-10 flex flex-col gap-6">
-      <h1 className="text-xl font-semibold text-center">SML Giải Toán</h1>
+      <h1 className="text-xl font-semibold text-center">SLM Giải Toán</h1>
 
       <Textarea
         placeholder="Nhập câu hỏi toán học..."

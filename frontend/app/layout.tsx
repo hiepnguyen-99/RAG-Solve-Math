@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SML Giải Toán",
+  title: "SLM Giải Toán",
 };
 
 export default function RootLayout({
