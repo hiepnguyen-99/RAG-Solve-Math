@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Giải Toán RAG</title>
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: 40px auto; }
+    textarea { width: 100%; height: 120px; font-size: 16px; }
+    .answer, .docs { background: #f5f5f5; padding: 15px; margin-top: 20px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <h1>📐 Trợ lý Giải Toán</h1>
+  <form method="POST">
+    <label>Nhập câu hỏi toán học:</label><br>
+    <textarea name="question" required>{{ question }}</textarea><br><br>
+    <button type="submit">Giải toán</button>
+  </form>
+
+  {% if answer %}
+  <div class="answer">
+    <strong>✅ Kết quả:</strong>
+    <p>{{ answer }}</p>
+  </div>
+  {% endif %}
+
+  {% if docs %}
+  <div class="docs">
+    <strong>📚 Tài liệu liên quan:</strong>
+    <ul>
+      {% for doc in docs %}
+      <li>{{ doc }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</body>
+</html>
