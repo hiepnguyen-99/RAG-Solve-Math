@@ -1,0 +1,9 @@
+Flask==3.1.1
+langchain==0.3.26
+langchain_chroma==0.2.5
+langchain_community==0.3.27
+langchain_huggingface==0.3.1
+transformers==4.52.4
+--extra-index-url https://download.pytorch.org/whl/cu118
+torch==2.5.1+cu118
+torch==2.7.1
