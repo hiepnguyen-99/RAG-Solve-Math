@@ -1,4 +1,6 @@
 # RAG-Solve-Math
 
-pip install pigar
-pigar generate
+tạo file requirements.txt
+
+pip install pipreqs
+pipreqs . --ignore ragmathenv --force
