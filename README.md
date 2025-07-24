@@ -2,4 +2,4 @@
 
 tạo file requirements.txt
 pip install pipreqs
-pipreqs . --force
+pipreqs . --ignore ragmathenv --force
