@@ -22,7 +22,7 @@ db = Chroma(
     embedding_function=embedding_model,
     collection_name="math_vectors"
 )
-retriever = db.as_retriever(search_kwargs={"k": 3})
+retriever = db.as_retriever(search_type="mmr",search_kwargs={"k": 3})
 
 # 4. Load LLM
 model_name = "Qwen/Qwen2-1.5B-Instruct"
@@ -36,7 +36,7 @@ generation_pipe = pipeline(
     "text-generation",
     model=model,
     tokenizer=tokenizer,
-    max_new_tokens=200,
+    max_new_tokens=300,
     temperature=0.6,
     top_p=0.9,
     do_sample=False,
@@ -49,7 +49,7 @@ llm = HuggingFacePipeline(pipeline=generation_pipe)
 prompt_template = PromptTemplate(
     input_variables=["context", "question"],
     template=(
-        "Dựa trên thông tin sau, hãy trả lời ngắn gọn và không lặp lại câu hỏi:\n"
+        "Dựa trên thông tin sau, hãy trả lời ngắn gọn, đúng trọng tâm câu hỏi, chỉ sử dụng tài liệu liên quan đến câu hỏi nhất để trả lời, tài liệu không liên quan vui lòng bỏ qua, chỉ trả lời 1 lần không cần tóm lại và không lặp lại câu hỏi:\n"
         "{context}\n"
         "Câu hỏi: {question}\n"
         "Trả lời:"
