@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from rag_engine import solve_question
+from model.rag_engine import solve_question
 
 app = Flask(__name__)
 
