@@ -12,7 +12,8 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 # 2. Mô hình embedding
 embedding_model = HuggingFaceEmbeddings(
     model_name="intfloat/multilingual-e5-base",
-    model_kwargs={"device": device}
+    model_kwargs={"device": device},
+    encode_kwargs={"normalize_embeddings": True}
 )
 
 # 3. Load Chroma
@@ -22,7 +23,7 @@ db = Chroma(
     embedding_function=embedding_model,
     collection_name="math_vectors"
 )
-retriever = db.as_retriever(search_type="mmr",search_kwargs={"k": 3})
+retriever = db.as_retriever(search_kwargs={"k": 3})
 
 # 4. Load LLM
 model_name = "Qwen/Qwen2-1.5B-Instruct"
