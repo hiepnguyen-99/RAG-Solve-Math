@@ -1,9 +1,9 @@
 # Chương 1 Ma trận
 ## 1.1 Các khái niệm cơ bản
-### Định nghĩa 1.1 (Ma trận). 
+#### Định nghĩa 1.1 (Ma trận). 
 Ma trận cỡ m × n là một bảng số (thực hoặc phức) hình chữ nhật có m hàng và n cột.
 $$ A = \left( \begin{matrix} { a }_{ 11 } & \cdots & { a }_{ 1j } & \cdots & { a }_{ 1n } \\ \vdots & \ddots & \vdots & \ddots & \vdots \\ { a }_{ i1 } & \cdots & { a }_{ ij } & \cdots & { a }_{ in } \\ \vdots & \ddots & \vdots & \ddots & \vdots \\ { a }_{ m1 } & \cdots & { a }_{ mj } & \cdots & { a }_{ mn } \end{matrix} \right) $$
-Ví dụ 1.1
+#### Ví dụ 1.1
 $$ A = \left( \begin{matrix} 3 & 4 & 1 \\ 2 & 0 & 5 \end{matrix} \right)_{ 2 \times 3 } , \quad B = \left( \begin{matrix} 1 + i & 2 \\ 3-i & 4i \end{matrix} \right) $$
 A là ma trận cỡ 2 × 3 có 2 hàng và 3 cột. Các phần tử của ma trận A:
 a11 = 3, a12 = 4, a13 = 1, a21 = 2, a22 = 0, a32 = 5.
