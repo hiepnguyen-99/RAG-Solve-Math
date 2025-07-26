@@ -40,7 +40,8 @@ generation_pipe = pipeline(
     temperature=0.7,
     top_p=0.9,
     do_sample=False,
-    device=0 if device == "cuda" else -1
+    device=0 if device == "cuda" else -1,
+    framework="pt"
 )
 llm = HuggingFacePipeline(pipeline=generation_pipe)
 
