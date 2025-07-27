@@ -23,7 +23,6 @@ db = Chroma(
     embedding_function=embedding_model,
     collection_name="math_vectors"
 )
-retriever = db.as_retriever(search_kwargs={"k": 3})
 
 # 4. Load LLM
 model_name = "Qwen/Qwen2-1.5B-Instruct"
@@ -57,26 +56,33 @@ prompt_template = PromptTemplate(
     )
 )
 
-# 7. Tạo QA chain
-qa_chain = RetrievalQA.from_chain_type(
-    llm=llm,
-    retriever=retriever,
-    chain_type="stuff",
-    chain_type_kwargs={"prompt": prompt_template},
-    return_source_documents=True
-)
-
 # 8. Hàm giải đáp
-def solve_question(question: str):
-    result = qa_chain.invoke({"query": question})
+def solve_question(question: str, k: int = 3):
+    # Tạo retriever mới với k tài liệu gần nhất
+    custom_retriever = db.as_retriever(search_kwargs={"k": k})
+
+    temp_qa_chain = RetrievalQA.from_chain_type(
+        llm=llm,
+        retriever=custom_retriever,
+        chain_type="stuff",
+        chain_type_kwargs={"prompt": prompt_template},
+        return_source_documents=True
+    )
+
+    result = temp_qa_chain.invoke({"query": question})
     answer = result["result"].strip()
 
-    # Xử lý lặp lại prompt
+    # Xử lý lặp lại prompt trong câu trả lời
     if question in answer:
         answer = answer.split(question)[-1].strip(": \n")
 
-    docs = [doc.page_content for doc in result.get("source_documents", [])]
-
+    docs = [
+    {
+        "page_content": doc.page_content,
+        "metadata": doc.metadata
+    }
+    for doc in result.get("source_documents", [])
+]
     # fallback nếu không có kết quả
     if not answer:
         fallback_prompt = f"Câu hỏi: {question}\nTrả lời ngắn gọn:"
