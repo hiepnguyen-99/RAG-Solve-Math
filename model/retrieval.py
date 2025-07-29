@@ -2,7 +2,6 @@ import torch
 
 from langchain.vectorstores import Chroma
 from langchain.embeddings import HuggingFaceEmbeddings
-from google.generativeai import genai
 from langchain_community.rerankers import FlagReranker
 
 
@@ -24,18 +23,6 @@ vectorstore = Chroma(
     embedding_function=embedding_model,
     collection_name="math_vectors"
 )
-
-genai.configure(api_key="AIzaSyD-0XwdOenWyJyQo5nB2BEYQUjpfYhlhrs")
-model = genai.GenerativeModel("gemini-2.5-flash-lite")
-
-
-def rewrite_query(query):
-    query_rewrite_prompt = f"""Viết lại truy vấn sau theo cách phổ biến và đơn giản nhất để tra cứu thông tin trong tài liệu toán học. Nếu có từ đồng nghĩa hoặc cách diễn đạt khác sát nghĩa hơn, hãy ưu tiên dùng:
-    Gốc: "{query}"
-    (Chỉ in ra truy vấn đã viết lại)
-    """
-    response = model.generate_content(query_rewrite_prompt)
-    return response.text.strip()
 
 
 def rerank_docs_with_model(query, docs, reranker, metadata_fields=["title", "section", "subsection"]):
