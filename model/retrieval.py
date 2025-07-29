@@ -1,12 +1,5 @@
-import re
-import os
 import torch
-import glob
-import hashlib
 
-from langchain.text_splitter import MarkdownHeaderTextSplitter
-from langchain.document_loaders import TextLoader, DirectoryLoader
-from sentence_transformers import SentenceTransformer
 from langchain.vectorstores import Chroma
 from langchain.embeddings import HuggingFaceEmbeddings
 from google.generativeai import genai
@@ -15,13 +8,13 @@ from langchain_community.rerankers import FlagReranker
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 raw_data_folder = "../TEST"
-model_name = "math-similarity/Bert-MLM_arXiv-MP-class_zbMath"
+embedding_model_name = "Qwen/Qwen3-Embedding-0.6B"
 persist_directory = "../chroma_db"
 rerank_model = "BAAI/bge-reranker-base"
 
 
 embedding_model = HuggingFaceEmbeddings(
-    model_name=model_name,
+    model_name=embedding_model_name,
     model_kwargs={"device": DEVICE},
     encode_kwargs={"normalize_embeddings": True}
 )
@@ -45,9 +38,17 @@ def rewrite_query(query):
     return response.text.strip()
 
 
-def rerank_docs_with_model(query, docs, reranker):
-    pairs = [(query, doc.page_content) for doc in docs]
+def rerank_docs_with_model(query, docs, reranker, metadata_fields=["title", "section", "subsection"]):
+    pairs = []
+    for doc in docs:
+        # Kết hợp nhiều trường metadata lại thành một chuỗi
+        content_parts = [doc.metadata.get(field, "") for field in metadata_fields]
+        content_for_rerank = " - ".join(part for part in content_parts if part)  # loại bỏ rỗng
+        pairs.append((query, content_for_rerank))
+
+    # Reranker trả về list điểm tương ứng
     scores = reranker.compute_score(pairs)
+
     scored_docs = list(zip(docs, scores))
     ranked_docs = sorted(scored_docs, key=lambda x: x[1], reverse=True)
     return [doc for doc, _ in ranked_docs]

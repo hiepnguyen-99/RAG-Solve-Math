@@ -12,8 +12,9 @@ print("Đang sử dụng thiết bị:", device)
 
 # 2. Mô hình embedding
 embedding_model = HuggingFaceEmbeddings(
-    model_name="intfloat/multilingual-e5-base",
-    model_kwargs={"device": device}
+    model_name="Qwen/Qwen3-Embedding-0.6B",
+    model_kwargs={"device": device},
+    encode_kwargs={"normalize_embeddings": True}
 )
 
 # 3. Load Chroma DB

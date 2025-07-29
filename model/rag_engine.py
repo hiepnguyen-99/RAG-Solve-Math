@@ -11,7 +11,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # 2. Mô hình embedding
 embedding_model = HuggingFaceEmbeddings(
-    model_name="intfloat/multilingual-e5-base",
+    model_name="Qwen/Qwen3-Embedding-0.6B",
     model_kwargs={"device": device},
     encode_kwargs={"normalize_embeddings": True}
 )
@@ -41,7 +41,7 @@ generation_pipe = pipeline(
     top_p=0.9,
     do_sample=False,
     return_full_text=False,
-    device=0 if device == "cuda" else -1
+    device=device
 )
 llm = HuggingFacePipeline(pipeline=generation_pipe)
 
