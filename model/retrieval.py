@@ -2,7 +2,7 @@ import torch
 
 from langchain.vectorstores import Chroma
 from langchain.embeddings import HuggingFaceEmbeddings
-from langchain_community.rerankers import FlagReranker
+from FlagEmbedding import FlagReranker
 
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
