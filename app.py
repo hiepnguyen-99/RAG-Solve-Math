@@ -7,12 +7,17 @@ import sys
 import markdown
 import re
 import json
+from dotenv import load_dotenv
+
+# Load .env
+load_dotenv()
 
 # Import các model RAG
 sys.path.append('./model')
 try:
     from rag_4b import solve_question_4b  
     from rag_15b import solve_question_15b
+    from rag_api import solve_question_api
     models_available = True
 except ImportError as e:
     print(f"Warning: Could not import RAG models: {e}")
@@ -22,6 +27,8 @@ except ImportError as e:
         return f"Fallback response (4B) for: {question}", []
     def solve_question_15b(question, k=3, rerank=False):
         return f"Fallback response (15B) for: {question}", []
+    def solve_question_api(question, k=3, rerank=False):
+        return f"Fallback response (API) for: {question}", []
 
 app = Flask(__name__)
 app.secret_key = 'your-secret-key-here'
@@ -30,7 +37,8 @@ app.secret_key = 'your-secret-key-here'
 class Config:
     MODELS = {
         'qwen-4b': {'name': 'Qwen 4B (Ngrok)', 'function': solve_question_4b},
-        'qwen-15b': {'name': 'Qwen 15B (Local)', 'function': solve_question_15b}
+        'qwen-15b': {'name': 'Qwen 15B (Local)', 'function': solve_question_15b},
+        'qwen-api': {'name': 'Meta-llama 70B (API) ', 'function': solve_question_api}
     }
     DEFAULT_MODEL = 'qwen-4b'
     DEFAULT_K_DOCUMENTS = 3
