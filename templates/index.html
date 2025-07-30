@@ -1,251 +1,211 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>📐 Trợ lý Giải Toán</title>
-  <style>
-    * { box-sizing: border-box; }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f8fc;
-      color: #222;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-
-    h1 {
-      text-align: center;
-      color: #1e88e5;
-      margin-bottom: 30px;
-    }
-
-    .chat-box {
-      background: #ffffff;
-      padding: 16px;
-      border-radius: 20px;
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      border: 1px solid #c2dfff;
-    }
-
-    .chat-box textarea {
-      flex: 1;
-      background: transparent;
-      color: #000;
-      border: none;
-      resize: none;
-      font-size: 16px;
-      line-height: 1.5;
-      min-height: 28px;
-      overflow: hidden;
-    }
-
-    .chat-box textarea:focus {
-      outline: none;
-    }
-
-    .chat-box button {
-      background: #1e88e5;
-      color: white;
-      border: none;
-      padding: 8px 16px;
-      font-size: 14px;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    .tools {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .tool-select {
-      background: #e3f2fd;
-      color: #000;
-      border-radius: 8px;
-      padding: 6px 10px;
-      font-size: 14px;
-      border: 1px solid #90caf9;
-    }
-
-    .answer, .docs {
-      background: #ffffff;
-      padding: 20px;
-      margin-top: 25px;
-      border-left: 6px solid #1e88e5;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .answer strong, .docs strong {
-      font-size: 18px;
-      color: #1e88e5;
-    }
-
-    .docs ul {
-      margin-top: 10px;
-      padding-left: 20px;
-    }
-
-    .docs li {
-      margin-bottom: 12px;
-    }
-
-    .docs a {
-      color: #1e88e5;
-      text-decoration: underline;
-      cursor: pointer;
-    }
-
-    #docModal {
-      display: none;
-      position: fixed;
-      top: 10%;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #ffffff;
-      color: #000;
-      border: 2px solid #1e88e5;
-      padding: 20px;
-      z-index: 1000;
-      width: 60%;
-      max-height: 80%;
-      overflow-y: auto;
-      border-radius: 10px;
-      box-shadow: 0 0 25px rgba(0,0,0,0.3);
-    }
-
-    #overlay {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.2);
-      z-index: 999;
-    }
-
-    #docModal .close-btn {
-      float: right;
-      cursor: pointer;
-      font-size: 20px;
-      font-weight: bold;
-      color: #666;
-    }
-
-    #modalContent {
-      margin-top: 20px;
-      white-space: pre-wrap;
-      line-height: 1.6;
-    }
-
-    .tool-label {
-      font-size: 14px;
-      color: #333;
-    }
-  </style>
-
-  <!-- MathJax -->
-  <script>
-    window.MathJax = {
-      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
-      svg: { fontCache: 'global' }
-    };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trợ lý Toán học</title>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- MathJax for LaTeX rendering -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 </head>
-
 <body>
-  <h1>📐 Trợ lý Giải Toán</h1>
+    <div class="app-container" id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <span class="material-icons">psychology</span>
+                    </div>
+                    <h1 class="app-title">Trợ lý Toán học</h1>
+                </div>
+                
+                <div class="header-controls">
+                    <!-- Model Selector -->
+                    <div class="control-group">
+                        <label for="model-select" class="control-label">
+                            <span class="material-icons">memory</span>
+                            Model AI
+                        </label>
+                        <select id="model-select" class="model-select">
+                            {% for key, model in models.items() %}
+                            <option value="{{ key }}" {% if key == current_model %}selected{% endif %}>
+                                {{ model.name }}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    
+                    <!-- Document Count Selector -->
+                    <div class="control-group">
+                        <label for="k-select" class="control-label">
+                            <span class="material-icons">description</span>
+                            Số tài liệu
+                        </label>
+                        <select id="k-select" class="k-select">
+                            <option value="1">1 tài liệu</option>
+                            <option value="2">2 tài liệu</option>
+                            <option value="3" selected>3 tài liệu</option>
+                            <option value="4">4 tài liệu</option>
+                            <option value="5">5 tài liệu</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Theme Toggle -->
+                    <button class="theme-toggle" id="theme-toggle" title="Chuyển đổi theme">
+                        <span class="material-icons">light_mode</span>
+                    </button>
+                    
+                    <!-- Document Library Toggle -->
+                    <button class="docs-toggle" id="docs-toggle" title="Thư viện tài liệu">
+                        <span class="material-icons">library_books</span>
+                    </button>
+                    
+                    <!-- Clear Chat -->
+                    <button class="clear-chat" id="clear-chat" title="Xóa cuộc trò chuyện">
+                        <span class="material-icons">delete_sweep</span>
+                    </button>
+                </div>
+            </div>
+        </header>
 
-  <form method="POST">
-    <div class="chat-box">
-      <textarea name="question" placeholder="Hãy hỏi tôi về Toán" required>{{ question }}</textarea>
-
-      <div class="tools">
-  <label class="tool-label" for="k">Tài liệu</label>
-  <select class="tool-select" name="k" id="k">
-    {% for i in range(1, 11) %}
-      <option value="{{ i }}" {% if k == i %}selected{% endif %}>{{ i }}</option>
-    {% endfor %}
-  </select>
-
-  <label class="tool-label" for="model">Mô hình</label>
-  <select class="tool-select" name="model" id="model">
-    <option value="4b" {% if model == '4b' %}selected{% endif %}>Qwen-4B</option>
-    <option value="1_5b" {% if model == '1_5b' %}selected{% endif %}>Qwen-1.5B</option>
-  </select>
-
-  <button type="submit">Giải toán</button>
-</div>
+        <!-- Main Content -->
+        <div class="main-layout">
+            <!-- Document Sidebar -->
+            <aside class="document-sidebar" id="document-sidebar">
+                <div class="sidebar-header">
+                    <h3>
+                        <span class="material-icons">library_books</span>
+                        Thư viện tài liệu
+                    </h3>
+                    <button class="sidebar-close" id="sidebar-close">
+                        <span class="material-icons">close</span>
+                    </button>
+                </div>
+                
+                <div class="sidebar-content">
+                    <div class="document-search">
+                        <input type="text" id="doc-search" placeholder="Tìm kiếm tài liệu..." />
+                        <span class="material-icons">search</span>
+                    </div>
+                    
+                    <div class="document-categories">
+                        <div class="category-section">
+                            <h4>📐 Ma trận cơ bản</h4>
+                            <div class="doc-list" id="basic-docs"></div>
+                        </div>
+                        
+                        <div class="category-section">
+                            <h4>🔢 Phép toán ma trận</h4>
+                            <div class="doc-list" id="operation-docs"></div>
+                        </div>
+                        
+                        <div class="category-section">
+                            <h4>🧮 Ứng dụng nâng cao</h4>
+                            <div class="doc-list" id="advanced-docs"></div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            
+            <!-- Main Chat Area -->
+            <main class="main-content">
+            <!-- Chat Container -->
+            <div class="chat-container">
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Welcome Message -->
+                    <div class="welcome-message">
+                        <div class="welcome-icon">
+                            <span class="material-icons">psychology</span>
+                        </div>
+                        <h2>Chào mừng đến với Trợ lý Toán học!</h2>
+                        <p>Tôi có thể giúp bạn giải quyết các bài toán mà bạn đưa ra 1 cách chi tiết và dễ hiểu. Hãy đặt câu hỏi về toán học!</p>
+                        <div class="feature-highlights">
+                            <div class="feature">
+                                <span class="material-icons">auto_awesome</span>
+                                <span>AI thông minh</span>
+                            </div>
+                            <div class="feature">
+                                <span class="material-icons">library_books</span>
+                                <span>Tài liệu phong phú</span>
+                            </div>
+                            <div class="feature">
+                                <span class="material-icons">speed</span>
+                                <span>Trả lời nhanh</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Loading Indicator -->
+                <div class="loading-indicator" id="loading-indicator">
+                    <div class="loading-dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <span>Đang suy nghĩ...</span>
+                </div>
+            </div>
+            
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <textarea 
+                            id="user-input" 
+                            placeholder="Đặt câu hỏi về toán học..."
+                            rows="1"
+                            maxlength="2000"
+                        ></textarea>
+                        <button class="send-button" id="send-button" disabled>
+                            <span class="material-icons">send</span>
+                        </button>
+                    </div>
+                    <div class="input-footer">
+                        <span class="char-counter" id="char-counter">0/2000</span>
+                        <span class="model-info" id="model-info">Qwen 1.5B (Local)</span>
+                    </div>
+                </div>
+            </div>
+            </main>
+        </div>
+        
+        <!-- Document Modal -->
+        <div class="document-modal" id="document-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modal-title">Tài liệu</h3>
+                    <button class="modal-close" id="modal-close">
+                        <span class="material-icons">close</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <!-- Document content will be loaded here -->
+                </div>
+            </div>
+        </div>        <!-- Toast Notifications -->
+        <div class="toast-container" id="toast-container"></div>
     </div>
-  </form>
 
-  {% if answer %}
-  <div class="answer">
-    <strong>✅ Kết quả:</strong>
-    <p>{{ answer | safe }}</p>
-  </div>
-  {% endif %}
-
-  {% if docs %}
-  <div class="docs">
-    <strong>📚 Tài liệu liên quan:</strong>
-    <ul>
-      {% for doc in docs %}
-      <li>
-        <a onclick='showModal(`{{ doc.page_content | tojson | safe }}`)'>📄 Xem tài liệu {{ loop.index }}</a>
-    {% if doc.metadata.source %}
-      &nbsp;🔗 <a href="{{ url_for('view_markdown', filename=doc.metadata.source) }}"target="_blank">Link</a>
-    {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-  {% endif %}
-
-  <!-- Modal -->
-  <div id="overlay" onclick="closeModal()"></div>
-  <div id="docModal">
-    <span class="close-btn" onclick="closeModal()">&times;</span>
-    <div id="modalContent"></div>
-  </div>
-
-  <script>
-    function showModal(content) {
-      const modal = document.getElementById("docModal");
-      const overlay = document.getElementById("overlay");
-      const modalContent = document.getElementById("modalContent");
-
-      modalContent.innerHTML = content;
-      modal.style.display = "block";
-      overlay.style.display = "block";
-
-      if (window.MathJax) {
-        MathJax.typesetPromise([modalContent]);
-      }
-    }
-
-    function closeModal() {
-      document.getElementById("docModal").style.display = "none";
-      document.getElementById("overlay").style.display = "none";
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const textarea = document.querySelector("textarea");
-      if (textarea) {
-        textarea.addEventListener("input", () => {
-          textarea.style.height = "auto";
-          textarea.style.height = textarea.scrollHeight + "px";
-        });
-        textarea.style.height = "auto";
-        textarea.style.height = textarea.scrollHeight + "px";
-      }
-    });
-  </script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>
 </html>

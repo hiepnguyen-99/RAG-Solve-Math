@@ -49,7 +49,7 @@ Trả lời:
 """
 )
 
-def solve_question_4b(question: str, k: int = 3, ngrok_url: str = "https://ac96f24f7980.ngrok-free.app"):
+def solve_question_4b(question: str, k: int = 3, ngrok_url: str = "https://7845ef7ba5cc.ngrok-free.app"):
     # Tìm kiếm tài liệu liên quan
     custom_retriever = db.as_retriever(search_kwargs={"k": k})
     docs = custom_retriever.get_relevant_documents(question)
