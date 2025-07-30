@@ -6,6 +6,15 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 from langchain_huggingface import HuggingFacePipeline
 
+# Optional import for reranking
+try:
+    from FlagEmbedding import FlagReranker
+    RERANK_AVAILABLE = True
+except ImportError:
+    print("Warning: FlagEmbedding not available. Reranking will be disabled.")
+    RERANK_AVAILABLE = False
+    FlagReranker = None
+
 # 1. Thiết bị
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
@@ -30,6 +39,37 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(
     model_name, torch_dtype=torch.float16
 ).to(device)
+
+# Configuration
+RERANK_MODEL = "BAAI/bge-reranker-base"
+
+def rerank_docs_with_model(query, docs, reranker, metadata_fields=["title", "section", "subsection"]):
+    """
+    Rerank documents using a reranker model
+    """
+    if not RERANK_AVAILABLE:
+        print("Reranking not available, returning original order")
+        return docs
+        
+    pairs = []
+    for doc in docs:
+        # Combine multiple metadata fields
+        content_parts = [doc.metadata.get(field, "") for field in metadata_fields]
+        content_for_rerank = " - ".join(part for part in content_parts if part)
+        
+        # If no metadata, use part of page content
+        if not content_for_rerank:
+            content_for_rerank = doc.page_content[:200]  # First 200 chars
+            
+        pairs.append((query, content_for_rerank))
+
+    # Get scores from reranker
+    scores = reranker.compute_score(pairs)
+
+    # Sort documents by scores
+    scored_docs = list(zip(docs, scores))
+    ranked_docs = sorted(scored_docs, key=lambda x: x[1], reverse=True)
+    return [doc for doc, _ in ranked_docs]
 
 # 5. Pipeline tối ưu
 generation_pipe = pipeline(
@@ -57,9 +97,21 @@ prompt_template = PromptTemplate(
 )
 
 # 8. Hàm giải đáp
-def solve_question_15b(question: str, k: int = 3):
+def solve_question_15b(question: str, k: int = 3, rerank: bool = False):
     # Tạo retriever mới với k tài liệu gần nhất
     custom_retriever = db.as_retriever(search_kwargs={"k": k})
+    docs = custom_retriever.get_relevant_documents(question)
+    
+    # Apply reranking if enabled
+    if rerank and docs and RERANK_AVAILABLE:
+        try:
+            reranker = FlagReranker(RERANK_MODEL, use_fp16=True)
+            docs = rerank_docs_with_model(question, docs, reranker)
+            print(f"Reranking applied to {len(docs)} documents")
+        except Exception as e:
+            print(f"Reranking failed: {e}, continuing without reranking...")
+    elif rerank and not RERANK_AVAILABLE:
+        print("Reranking requested but FlagEmbedding not available")
 
     temp_qa_chain = RetrievalQA.from_chain_type(
         llm=llm,
@@ -76,12 +128,15 @@ def solve_question_15b(question: str, k: int = 3):
     if question in answer:
         answer = answer.split(question)[-1].strip(": \n")
 
+    # Use reranked docs if available, otherwise use original
+    source_docs = docs if rerank else result.get("source_documents", [])
+    
     docs = [
     {
         "page_content": doc.page_content,
         "metadata": doc.metadata
     }
-    for doc in result.get("source_documents", [])
+    for doc in source_docs
 ]
     # fallback nếu không có kết quả
     if not answer:

@@ -6,6 +6,15 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 from langchain_huggingface import HuggingFacePipeline
 
+# Optional import for reranking
+try:
+    from FlagEmbedding import FlagReranker
+    RERANK_AVAILABLE = True
+except ImportError:
+    print("Warning: FlagEmbedding not available. Reranking will be disabled.")
+    RERANK_AVAILABLE = False
+    FlagReranker = None
+
 # 1. Thiết bị
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
@@ -27,6 +36,37 @@ db = Chroma(
 # 4. Load LLM
 import requests
 
+# Configuration
+RERANK_MODEL = "BAAI/bge-reranker-base"
+
+def rerank_docs_with_model(query, docs, reranker, metadata_fields=["title", "section", "subsection"]):
+    """
+    Rerank documents using a reranker model
+    """
+    if not RERANK_AVAILABLE:
+        print("Reranking not available, returning original order")
+        return docs
+        
+    pairs = []
+    for doc in docs:
+        # Combine multiple metadata fields
+        content_parts = [doc.metadata.get(field, "") for field in metadata_fields]
+        content_for_rerank = " - ".join(part for part in content_parts if part)
+        
+        # If no metadata, use part of page content
+        if not content_for_rerank:
+            content_for_rerank = doc.page_content[:200]  # First 200 chars
+            
+        pairs.append((query, content_for_rerank))
+
+    # Get scores from reranker
+    scores = reranker.compute_score(pairs)
+
+    # Sort documents by scores
+    scored_docs = list(zip(docs, scores))
+    ranked_docs = sorted(scored_docs, key=lambda x: x[1], reverse=True)
+    return [doc for doc, _ in ranked_docs]
+
 def call_qwen_4b(prompt: str, ngrok_url: str):
     response = requests.post(f"{ngrok_url}/generate", json={"prompt": prompt})
     if response.status_code == 200:
@@ -41,18 +81,28 @@ prompt_template = PromptTemplate(
     input_variables=["context", "question"],
     template="""
 Bạn là một trợ lý AI thông minh, chỉ trả lời câu hỏi dựa trên thông tin đã cho:
-
 {context}
-Dựa vào thông tin trên, hãy trả lời câu hỏi sau một cách ngắn gọn và chính xác:
+Dựa vào thông tin trên, hãy trả lời câu hỏi sau một chính xác:
 Câu hỏi: {question}
 Trả lời:
 """
 )
 
-def solve_question_4b(question: str, k: int = 3, ngrok_url: str = "https://7845ef7ba5cc.ngrok-free.app"):
+def solve_question_4b(question: str, k: int = 3, ngrok_url: str = "https://7df30a3ef6e2.ngrok-free.app", rerank: bool = False):
     # Tìm kiếm tài liệu liên quan
     custom_retriever = db.as_retriever(search_kwargs={"k": k})
     docs = custom_retriever.get_relevant_documents(question)
+
+    # Apply reranking if enabled
+    if rerank and docs and RERANK_AVAILABLE:
+        try:
+            reranker = FlagReranker(RERANK_MODEL, use_fp16=True)
+            docs = rerank_docs_with_model(question, docs, reranker)
+            print(f"Reranking applied to {len(docs)} documents")
+        except Exception as e:
+            print(f"Reranking failed: {e}, continuing without reranking...")
+    elif rerank and not RERANK_AVAILABLE:
+        print("Reranking requested but FlagEmbedding not available")
 
     # Lấy nội dung các tài liệu
     context = "\n".join([doc.page_content for doc in docs])

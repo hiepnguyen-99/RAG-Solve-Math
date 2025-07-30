@@ -69,9 +69,34 @@
                         </select>
                     </div>
                     
+                    <!-- Rerank Toggle -->
+                    <div class="control-group">
+                        <label for="rerank-toggle" class="control-label">
+                            <span class="material-icons">trending_up</span>
+                            Reranking
+                        </label>
+                        <div class="toggle-switch" title="Bật/tắt chế độ reranking để cải thiện độ chính xác tìm kiếm">
+                            <input type="checkbox" id="rerank-toggle" class="toggle-input" {% if rerank_enabled %}checked{% endif %}>
+                            <label for="rerank-toggle" class="toggle-label">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <small class="rerank-status" id="rerank-status">Đang kiểm tra...</small>
+                    </div>
+                    
                     <!-- Theme Toggle -->
                     <button class="theme-toggle" id="theme-toggle" title="Chuyển đổi theme">
                         <span class="material-icons">light_mode</span>
+                    </button>
+                    
+                    <!-- New Chat -->
+                    <button class="new-chat" id="new-chat" title="Cuộc trò chuyện mới">
+                        <span class="material-icons">add_comment</span>
+                    </button>
+                    
+                    <!-- Chat History Toggle -->
+                    <button class="chat-history-toggle" id="chat-history-toggle" title="Lịch sử trò chuyện">
+                        <span class="material-icons">history</span>
                     </button>
                     
                     <!-- Document Library Toggle -->
@@ -89,6 +114,33 @@
 
         <!-- Main Content -->
         <div class="main-layout">
+            <!-- Chat History Sidebar -->
+            <aside class="chat-history-sidebar" id="chat-history-sidebar">
+                <div class="sidebar-header">
+                    <h3>
+                        <span class="material-icons">history</span>
+                        Lịch sử trò chuyện
+                    </h3>
+                    <button class="sidebar-close" id="chat-history-close">
+                        <span class="material-icons">close</span>
+                    </button>
+                </div>
+                
+                <div class="sidebar-content">
+                    <div class="chat-history-search">
+                        <input type="text" id="chat-search" placeholder="Tìm kiếm cuộc trò chuyện..." />
+                        <span class="material-icons">search</span>
+                    </div>
+                    
+                    <div class="chat-list" id="chat-list">
+                        <div class="loading-chats">
+                            <span class="material-icons">hourglass_empty</span>
+                            <span>Đang tải...</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            
             <!-- Document Sidebar -->
             <aside class="document-sidebar" id="document-sidebar">
                 <div class="sidebar-header">

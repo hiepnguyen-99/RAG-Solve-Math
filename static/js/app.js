@@ -12,8 +12,10 @@ class ChatApp {
         this.initEventListeners();
         this.initTheme();
         this.autoResizeTextarea();
-        this.loadChatHistory();
+        this.loadChatHistoryFromSession();
         this.loadDocuments();
+        this.checkRerankStatus();
+        this.loadChatHistorySidebar();
     }
 
     initElements() {
@@ -26,15 +28,24 @@ class ChatApp {
         // Controls
         this.modelSelect = document.getElementById('model-select');
         this.kSelect = document.getElementById('k-select');
+        this.rerankToggle = document.getElementById('rerank-toggle');
         this.themeToggle = document.getElementById('theme-toggle');
         this.clearChat = document.getElementById('clear-chat');
         this.docsToggle = document.getElementById('docs-toggle');
+        this.newChat = document.getElementById('new-chat');
+        this.chatHistoryToggle = document.getElementById('chat-history-toggle');
         
         // Sidebar elements
         this.documentSidebar = document.getElementById('document-sidebar');
         this.sidebarClose = document.getElementById('sidebar-close');
         this.docSearch = document.getElementById('doc-search');
         this.mainContent = document.querySelector('.main-content');
+        
+        // Chat history elements
+        this.chatHistorySidebar = document.getElementById('chat-history-sidebar');
+        this.chatHistoryClose = document.getElementById('chat-history-close');
+        this.chatSearch = document.getElementById('chat-search');
+        this.chatList = document.getElementById('chat-list');
         
         // Modal elements
         this.documentModal = document.getElementById('document-modal');
@@ -46,6 +57,7 @@ class ChatApp {
         this.charCounter = document.getElementById('char-counter');
         this.modelInfo = document.getElementById('model-info');
         this.toastContainer = document.getElementById('toast-container');
+        this.rerankStatus = document.getElementById('rerank-status');
     }
 
     initEventListeners() {
@@ -57,13 +69,18 @@ class ChatApp {
         // Control events
         this.modelSelect.addEventListener('change', () => this.handleModelChange());
         this.kSelect.addEventListener('change', () => this.handleKChange());
+        this.rerankToggle.addEventListener('change', () => this.handleRerankToggle());
         this.themeToggle.addEventListener('click', () => this.toggleTheme());
         this.clearChat.addEventListener('click', () => this.handleClearChat());
+        this.newChat.addEventListener('click', () => this.handleNewChat());
+        this.chatHistoryToggle.addEventListener('click', () => this.toggleChatHistory());
         
         // Sidebar events
         this.docsToggle.addEventListener('click', () => this.toggleSidebar());
         this.sidebarClose.addEventListener('click', () => this.closeSidebar());
+        this.chatHistoryClose.addEventListener('click', () => this.closeChatHistory());
         this.docSearch.addEventListener('input', (e) => this.searchDocuments(e.target.value));
+        this.chatSearch.addEventListener('input', (e) => this.filterChats(e.target.value));
         
         // Modal events
         this.modalClose.addEventListener('click', () => this.closeModal());
@@ -250,6 +267,7 @@ class ChatApp {
 
         const selectedModel = this.modelSelect.value;
         const kDocuments = parseInt(this.kSelect.value);
+        const rerankEnabled = this.rerankToggle.checked;
 
         // Clear input and disable controls
         this.userInput.value = '';
@@ -265,7 +283,8 @@ class ChatApp {
                 body: JSON.stringify({
                     message: message,
                     model: selectedModel,
-                    k_documents: kDocuments
+                    k_documents: kDocuments,
+                    rerank: rerankEnabled
                 })
             });
 
@@ -276,7 +295,6 @@ class ChatApp {
                 this.addMessage(data.user_message);
                 // Add bot response
                 this.addMessage(data.message);
-                this.scrollToBottom();
             } else {
                 this.showToast(data.error || 'Đã xảy ra lỗi', 'error');
             }
@@ -288,7 +306,7 @@ class ChatApp {
         }
     }
 
-    addMessage(message) {
+    addMessage(message, autoScroll = true) {
         const messageElement = document.createElement('div');
         messageElement.className = `message message-${message.type}`;
         messageElement.innerHTML = this.createMessageHTML(message);
@@ -310,6 +328,11 @@ class ChatApp {
         this.processLaTeX(message.content);
         
         this.messages.push(message);
+        
+        // Auto-scroll only if requested
+        if (autoScroll) {
+            this.scrollToBottom();
+        }
     }
 
     createMessageHTML(message) {
@@ -425,6 +448,12 @@ class ChatApp {
         // Just update the UI, no immediate action needed
     }
 
+    handleRerankToggle() {
+        const isEnabled = this.rerankToggle.checked;
+        const statusText = isEnabled ? 'bật' : 'tắt';
+        this.showToast(`Đã ${statusText} reranking`, 'info');
+    }
+
     async handleClearChat() {
         if (this.messages.length === 0) return;
 
@@ -469,6 +498,176 @@ class ChatApp {
         const icon = this.themeToggle.querySelector('.material-icons');
         icon.textContent = this.currentTheme === 'light' ? 'light_mode' : 'dark_mode';
         this.themeToggle.title = this.currentTheme === 'light' ? 'Chuyển sang chế độ tối' : 'Chuyển sang chế độ sáng';
+    }
+
+    // ===== Chat History Functions =====
+    async handleNewChat() {
+        if (confirm('Bạn có muốn tạo cuộc trò chuyện mới? Cuộc trò chuyện hiện tại sẽ được lưu.')) {
+            try {
+                const response = await fetch('/api/chats/new', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    this.messages = [];
+                    this.chatMessages.innerHTML = this.createWelcomeMessage();
+                    this.showToast('Đã tạo cuộc trò chuyện mới', 'success');
+                    this.loadChatHistorySidebar();
+                } else {
+                    this.showToast('Không thể tạo cuộc trò chuyện mới', 'error');
+                }
+            } catch (error) {
+                console.error('Error creating new chat:', error);
+                this.showToast('Đã xảy ra lỗi', 'error');
+            }
+        }
+    }
+
+    toggleChatHistory() {
+        this.chatHistorySidebar.classList.toggle('open');
+        if (this.chatHistorySidebar.classList.contains('open')) {
+            this.loadChatHistorySidebar();
+        }
+    }
+
+    closeChatHistory() {
+        this.chatHistorySidebar.classList.remove('open');
+    }
+
+    async loadChatHistorySidebar() {
+        try {
+            const response = await fetch('/api/chats');
+            const data = await response.json();
+            
+            this.renderChatHistory(data.chats);
+        } catch (error) {
+            console.error('Error loading chat history:', error);
+            this.chatList.innerHTML = '<div class="empty-chats"><span class="material-icons">error</span><span>Không thể tải lịch sử</span></div>';
+        }
+    }
+
+    renderChatHistory(chats) {
+        if (chats.length === 0) {
+            this.chatList.innerHTML = `
+                <div class="empty-chats">
+                    <span class="material-icons">chat_bubble_outline</span>
+                    <span>Chưa có cuộc trò chuyện nào</span>
+                </div>
+            `;
+            return;
+        }
+
+        this.chatList.innerHTML = chats.map(chat => `
+            <div class="chat-item" data-chat-id="${chat.id}">
+                <div class="chat-title">${this.escapeHtml(chat.title)}</div>
+                <div class="chat-meta">
+                    <span>${chat.message_count} tin nhắn</span>
+                    <span>${this.formatDate(chat.updated_at)}</span>
+                </div>
+                <div class="chat-actions">
+                    <button class="chat-delete" data-chat-id="${chat.id}" title="Xóa cuộc trò chuyện">
+                        <span class="material-icons">delete</span>
+                    </button>
+                </div>
+            </div>
+        `).join('');
+
+        // Add event listeners
+        this.chatList.querySelectorAll('.chat-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                if (!e.target.closest('.chat-delete')) {
+                    this.loadChatConversation(item.dataset.chatId);
+                }
+            });
+        });
+
+        this.chatList.querySelectorAll('.chat-delete').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.deleteChatConversation(btn.dataset.chatId);
+            });
+        });
+    }
+
+    async loadChatConversation(chatId) {
+        try {
+            const response = await fetch(`/api/chats/${chatId}/load`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' }
+            });
+            
+            const data = await response.json();
+            
+            if (data.success) {
+                this.messages = data.messages;
+                this.renderMessages();
+                this.closeChatHistory();
+                this.showToast('Đã tải cuộc trò chuyện', 'success');
+            } else {
+                this.showToast(data.error || 'Không thể tải cuộc trò chuyện', 'error');
+            }
+        } catch (error) {
+            console.error('Error loading chat:', error);
+            this.showToast('Đã xảy ra lỗi', 'error');
+        }
+    }
+
+    async deleteChatConversation(chatId) {
+        if (confirm('Bạn có chắc chắn muốn xóa cuộc trò chuyện này?')) {
+            try {
+                const response = await fetch(`/api/chats/${chatId}`, {
+                    method: 'DELETE'
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    this.showToast('Đã xóa cuộc trò chuyện', 'success');
+                    this.loadChatHistorySidebar();
+                } else {
+                    this.showToast(data.error || 'Không thể xóa cuộc trò chuyện', 'error');
+                }
+            } catch (error) {
+                console.error('Error deleting chat:', error);
+                this.showToast('Đã xảy ra lỗi', 'error');
+            }
+        }
+    }
+
+    filterChats(query) {
+        const chatItems = this.chatList.querySelectorAll('.chat-item');
+        chatItems.forEach(item => {
+            const title = item.querySelector('.chat-title').textContent.toLowerCase();
+            const visible = title.includes(query.toLowerCase());
+            item.style.display = visible ? 'block' : 'none';
+        });
+    }
+
+    renderMessages() {
+        this.chatMessages.innerHTML = '';
+        if (this.messages.length === 0) {
+            this.chatMessages.innerHTML = this.createWelcomeMessage();
+        } else {
+            this.messages.forEach(message => {
+                this.addMessage(message, false); // false = don't auto-scroll
+            });
+            this.scrollToBottom();
+        }
+    }
+
+    formatDate(dateString) {
+        if (!dateString) return '';
+        const date = new Date(dateString);
+        const now = new Date();
+        const diffTime = Math.abs(now - date);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        
+        if (diffDays === 1) return 'Hôm qua';
+        if (diffDays < 7) return `${diffDays} ngày trước`;
+        return date.toLocaleDateString('vi-VN');
     }
 
     // ===== Utility Functions =====
@@ -516,6 +715,29 @@ class ChatApp {
         }, 3000);
     }
 
+    async checkRerankStatus() {
+        try {
+            const response = await fetch('/api/rerank-status');
+            const data = await response.json();
+            
+            if (this.rerankStatus) {
+                this.rerankStatus.textContent = data.message;
+                this.rerankStatus.className = `rerank-status ${data.available ? 'available' : 'unavailable'}`;
+                
+                if (!data.available && this.rerankToggle) {
+                    this.rerankToggle.disabled = true;
+                    this.rerankToggle.checked = false;
+                }
+            }
+        } catch (error) {
+            console.error('Error checking rerank status:', error);
+            if (this.rerankStatus) {
+                this.rerankStatus.textContent = 'Không thể kiểm tra';
+                this.rerankStatus.className = 'rerank-status unavailable';
+            }
+        }
+    }
+
     escapeHtml(text) {
         const div = document.createElement('div');
         div.textContent = text;
@@ -537,8 +759,8 @@ class ChatApp {
                 <div class="welcome-icon">
                     <span class="material-icons">psychology</span>
                 </div>
-                <h2>Chào mừng đến với RAG Math Solver!</h2>
-                <p>Tôi có thể giúp bạn giải quyết các bài toán dựa trên tài liệu đã được tải sẵn. Hãy đặt câu hỏi về toán học!</p>
+                <h2>Chào mừng đến với Trợ lý Toán học!</h2>
+                <p>Tôi có thể giúp bạn giải quyết các bài toán 1 cách nhanh chóng và chính xác. Hãy đặt câu hỏi về toán học!</p>
                 <div class="feature-highlights">
                     <div class="feature">
                         <span class="material-icons">auto_awesome</span>
@@ -558,7 +780,7 @@ class ChatApp {
     }
 
     // ===== Data Persistence =====
-    async loadChatHistory() {
+    async loadChatHistoryFromSession() {
         try {
             const response = await fetch('/api/history');
             const data = await response.json();
