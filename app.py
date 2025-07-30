@@ -1,29 +1,37 @@
 from flask import Flask, render_template, request
-from model.rag_engine import solve_question
 from flask import render_template_string
 import markdown
 import os
+from model.rag_4b import solve_question_4b
+from model.rag_15b import solve_question_15b
 
 app = Flask(__name__)
+
 @app.route("/", methods=["GET", "POST"])
 def index():
     answer = ""
     docs = []
     question = ""
-    k = 3  # mặc định lấy 3 tài liệu nếu người dùng chưa chọn
+    k = 3
+    model_choice = "4b"  # mặc định
 
     if request.method == "POST":
         question = request.form.get("question", "")
-        k_str = request.form.get("k", "3")  # lấy giá trị từ select, luôn là chuỗi
+        k_str = request.form.get("k", "3")
+        model_choice = request.form.get("model", "4b")
+
         try:
             k = int(k_str)
         except ValueError:
-            k = 3  # fallback nếu không chuyển được sang int
+            k = 3
 
         if question.strip():
-            answer, docs = solve_question(question, k=k)
+            if model_choice == "1_5b":
+                answer, docs = solve_question_15b(question, k=k)
+            else:
+                answer, docs = solve_question_4b(question, k=k)
 
-    return render_template("index.html", question=question, answer=answer, docs=docs, k=k)
+    return render_template("index.html", question=question, answer=answer, docs=docs, k=k, model=model_choice)
 
 @app.route("/view/<path:filename>")
 def view_markdown(filename):

@@ -167,14 +167,21 @@
       <textarea name="question" placeholder="Hãy hỏi tôi về Toán" required>{{ question }}</textarea>
 
       <div class="tools">
-        <label class="tool-label" for="k">Tài liệu</label>
-        <select class="tool-select" name="k" id="k">
-          {% for i in range(1, 11) %}
-            <option value="{{ i }}" {% if k == i %}selected{% endif %}>{{ i }}</option>
-          {% endfor %}
-        </select>
-        <button type="submit">Giải toán</button>
-      </div>
+  <label class="tool-label" for="k">Tài liệu</label>
+  <select class="tool-select" name="k" id="k">
+    {% for i in range(1, 11) %}
+      <option value="{{ i }}" {% if k == i %}selected{% endif %}>{{ i }}</option>
+    {% endfor %}
+  </select>
+
+  <label class="tool-label" for="model">Mô hình</label>
+  <select class="tool-select" name="model" id="model">
+    <option value="4b" {% if model == '4b' %}selected{% endif %}>Qwen-4B</option>
+    <option value="1_5b" {% if model == '1_5b' %}selected{% endif %}>Qwen-1.5B</option>
+  </select>
+
+  <button type="submit">Giải toán</button>
+</div>
     </div>
   </form>
 
