@@ -34,7 +34,16 @@ def retrieve_docs(query, k=5, rerank=False, vectorstore=None):
         docs = rerank_docs_with_model(query, docs, reranker)
     return docs
 
-
+def retrieve_docs_RAG_fuson(queries, k=5, rerank=False, vectorstore=None, reranker=None):
+    docs = []
+    for query in queries:
+        retriever = vectorstore.as_retriever(search_kwargs={"k": k})
+        doc = retriever.get_relevant_documents(query)
+        if doc:
+            if rerank:
+                doc = rerank_docs_with_model(query, doc, reranker)
+            docs.extend([doc])
+    return docs
 
 # Example usage
 # dos.metadata.get("source") sẽ chứa đường dẫn đến file gốc
