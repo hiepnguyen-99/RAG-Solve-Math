@@ -4,7 +4,7 @@ from FlagEmbedding import FlagReranker
 from langchain.load import dumps, loads
 
 
-def rerank_docs_with_model(query, docs, reranker, metadata_fields=["title", "section", "subsection"]):
+def rerank_docs_with_model(query, docs, reranker, metadata_fields=["title", "section", "subsection"], num_doc = 3):
     pairs = []
     for doc in docs:
         # Kết hợp nhiều trường metadata lại thành một chuỗi
@@ -17,7 +17,7 @@ def rerank_docs_with_model(query, docs, reranker, metadata_fields=["title", "sec
 
     scored_docs = list(zip(docs, scores))
     ranked_docs = sorted(scored_docs, key=lambda x: x[1], reverse=True)
-    return [doc for doc, _ in ranked_docs]
+    return [doc for doc, _ in ranked_docs][:num_doc]
 
 
 def retrieve_docs(query, k=5, rerank=False, vectorstore=None, rerank_model=None):
@@ -40,7 +40,7 @@ def retrieve_docs_RAG_fuson(queries, k=5, rerank=False, vectorstore=None, rerank
     return docs
 
 
-def reciprocal_rank_fusion(matrix: list[list], k=60, num_docs=5):
+def reciprocal_rank_fusion(matrix: list[list], k=60, num_docs=3):
     fused_scores = {}
     doc_map = {}
 

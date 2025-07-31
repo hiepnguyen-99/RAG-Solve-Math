@@ -82,7 +82,7 @@ def solve_question_api_gemini(question: str, k: int = 3, rerank: bool = False, r
             if rerank and RERANK_AVAILABLE:
                 try:
                     reranker = FlagReranker(RERANK_MODEL, use_fp16=True)
-                    doc = rerank_docs_with_model(query, doc, reranker)
+                    doc = rerank_docs_with_model(query, doc, reranker, num_doc=k)
                 except Exception as e:
                     print(f"Lỗi khi rerank với FlagReranker: {str(e)}")
             docs.extend([doc])
