@@ -6,6 +6,10 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
+from dotenv import load_dotenv
+
+# Load .env
+load_dotenv()
 
 # Nếu có FlagEmbedding để rerank
 try:
@@ -38,6 +42,7 @@ db = Chroma(
 RERANK_MODEL = "BAAI/bge-reranker-base"
 
 # Gọi API mô hình
+# Gọi API mô hình
 def call_qwen_api(prompt: str):
     api_url = os.environ.get("API_URL", "https://api.together.xyz")
     api_key = os.environ.get("TOGETHER_API_KEY")
@@ -51,24 +56,22 @@ def call_qwen_api(prompt: str):
     }
 
     payload = {
-    "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free",
-    "messages": [
-        {"role": "system", "content": "Bạn là một trợ lý AI chuyên giải toán."},
-        {"role": "user", "content": prompt}
-    ],
-    "temperature": 0.7,
-    "max_tokens": 512,
-    "top_p": 0.9,
-    "stop": ["<|im_end|>"]
+        "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free",
+        "messages": [
+            {"role": "system", "content": "Bạn là một trợ lý AI chuyên giải toán."},
+            {"role": "user", "content": prompt}
+        ],
+        "temperature": 0.7,
+        "max_tokens": 512,
+        "top_p": 0.9,
+        "stop": ["<|im_end|>"]
     }
 
-    try:
-        response = requests.post(f"{api_url}/v1/chat/completions", headers=headers, json=payload)
-        if response.status_code == 200:
-            return response.json()["choices"][0]["text"].strip()
-        return f"❌ Lỗi API: {response.text}"
-    except Exception as e:
-        return f"❌ Lỗi kết nối API: {e}"
+    response = requests.post(f"{api_url}/v1/chat/completions", headers=headers, json=payload)
+    
+    if response.status_code == 200:
+        data = response.json()
+        return data["choices"][0]["message"]["content"].strip()
 
 # Prompt Template
 prompt_template = PromptTemplate(

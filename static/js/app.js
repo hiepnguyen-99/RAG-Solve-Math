@@ -746,9 +746,9 @@ class ChatApp {
 
     getModelDisplayName(modelKey) {
         const models = {
-            'qwen-1.5b': 'Qwen 1.5B (Local)',
-            'qwen-4b': 'Qwen 4B (Ngrok)',
-            'qwen-15b': 'Qwen 15B (Local)'
+            'qwen-1.5b': 'Qwen 1.5B',
+            'qwen-4b': 'Qwen 4B',
+            'model-api': 'Meta-llama 70B (API)'
         };
         return models[modelKey] || modelKey;
     }

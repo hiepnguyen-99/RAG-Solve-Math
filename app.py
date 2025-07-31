@@ -11,7 +11,6 @@ from dotenv import load_dotenv
 
 # Load .env
 load_dotenv()
-
 # Import các model RAG
 sys.path.append('./model')
 try:
@@ -26,7 +25,7 @@ except ImportError as e:
     def solve_question_4b(question, k=3, ngrok_url="", rerank=False):
         return f"Fallback response (4B) for: {question}", []
     def solve_question_15b(question, k=3, rerank=False):
-        return f"Fallback response (15B) for: {question}", []
+        return f"Fallback response (1.5B) for: {question}", []
     def solve_question_api(question, k=3, rerank=False):
         return f"Fallback response (API) for: {question}", []
 
@@ -36,9 +35,9 @@ app.secret_key = 'your-secret-key-here'
 # Cấu hình
 class Config:
     MODELS = {
-        'qwen-4b': {'name': 'Qwen 4B (Ngrok)', 'function': solve_question_4b},
-        'qwen-15b': {'name': 'Qwen 15B (Local)', 'function': solve_question_15b},
-        'qwen-api': {'name': 'Meta-llama 70B (API) ', 'function': solve_question_api}
+        'qwen-4b': {'name': 'Qwen 4B', 'function': solve_question_4b},
+        'qwen-1.5b': {'name': 'Qwen 1.5B', 'function': solve_question_15b},
+        'model-api': {'name': 'Meta-llama 70B (API) ', 'function': solve_question_api}
     }
     DEFAULT_MODEL = 'qwen-4b'
     DEFAULT_K_DOCUMENTS = 3
@@ -138,6 +137,12 @@ def chat():
         
         # Gọi function tương ứng
         if selected_model == 'qwen-4b':
+            answer, source_docs = model_config['function'](
+                question=user_message, 
+                k=k_documents, 
+                rerank=rerank_enabled
+            )
+        elif selected_model == 'qwen-1.5b':
             answer, source_docs = model_config['function'](
                 question=user_message, 
                 k=k_documents, 
