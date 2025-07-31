@@ -5,6 +5,7 @@ from langchain_chroma import Chroma
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 from langchain_huggingface import HuggingFacePipeline
+from retrieval import *
 
 # Optional import for reranking
 try:
@@ -38,34 +39,6 @@ import requests
 
 # Configuration
 RERANK_MODEL = "BAAI/bge-reranker-base"
-
-def rerank_docs_with_model(query, docs, reranker, metadata_fields=["title", "section", "subsection"]):
-    """
-    Rerank documents using a reranker model
-    """
-    if not RERANK_AVAILABLE:
-        print("Reranking not available, returning original order")
-        return docs
-        
-    pairs = []
-    for doc in docs:
-        # Combine multiple metadata fields
-        content_parts = [doc.metadata.get(field, "") for field in metadata_fields]
-        content_for_rerank = " - ".join(part for part in content_parts if part)
-        
-        # If no metadata, use part of page content
-        if not content_for_rerank:
-            content_for_rerank = doc.page_content[:200]  # First 200 chars
-            
-        pairs.append((query, content_for_rerank))
-
-    # Get scores from reranker
-    scores = reranker.compute_score(pairs)
-
-    # Sort documents by scores
-    scored_docs = list(zip(docs, scores))
-    ranked_docs = sorted(scored_docs, key=lambda x: x[1], reverse=True)
-    return [doc for doc, _ in ranked_docs]
 
 def call_qwen_4b(prompt: str, ngrok_url: str):
     response = requests.post(f"{ngrok_url}/generate", json={"prompt": prompt})

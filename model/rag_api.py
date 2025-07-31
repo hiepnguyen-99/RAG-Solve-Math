@@ -7,6 +7,7 @@ from langchain_chroma import Chroma
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 from dotenv import load_dotenv
+from retrieval import *
 
 # Load .env
 load_dotenv()
@@ -84,23 +85,6 @@ Câu hỏi: {question}
 Trả lời:
 """
 )
-
-# Rerank nếu có
-def rerank_docs_with_model(query, docs, reranker, metadata_fields=["title", "section", "subsection"]):
-    if not RERANK_AVAILABLE:
-        return docs
-
-    pairs = []
-    for doc in docs:
-        content_parts = [doc.metadata.get(field, "") for field in metadata_fields]
-        content_for_rerank = " - ".join(part for part in content_parts if part)
-        if not content_for_rerank:
-            content_for_rerank = doc.page_content[:200]
-        pairs.append((query, content_for_rerank))
-
-    scores = reranker.compute_score(pairs)
-    ranked_docs = sorted(zip(docs, scores), key=lambda x: x[1], reverse=True)
-    return [doc for doc, _ in ranked_docs]
 
 # Hàm chính giải toán qua API
 def solve_question_api(question: str, k: int = 3, rerank: bool = False):
