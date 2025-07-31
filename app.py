@@ -14,9 +14,9 @@ load_dotenv()
 # Import các model RAG
 sys.path.append('./model')
 try:
-    from rag_4b import solve_question_4b  
-    from rag_15b import solve_question_15b
-    from rag_api import solve_question_api
+    from model.rag_4b import solve_question_4b  
+    from model.rag_15b import solve_question_15b
+    from model.rag_api import solve_question_api
     models_available = True
 except ImportError as e:
     print(f"Warning: Could not import RAG models: {e}")
