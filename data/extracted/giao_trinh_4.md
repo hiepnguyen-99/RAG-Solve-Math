@@ -1,5 +1,19 @@
 # Chương 1
 
+Nội dung
+
+· Định nghĩa và ví dụ.
+
+· Các phép biến đổi sơ cấp.
+
+• Các phép toán đối với ma trận.
+
+· Hạng của ma trận.
+
+· Ma trận nghịch đảo.
+
+Các khái niệm cơ bản
+
 ## 1.1 Các khái niệm cơ bản
 
 ### Dịnh nghĩa 1.1 (Ma trận).
@@ -351,6 +365,16 @@ $ Bài 6. Tìm ma trận nghịch đảo (nếu có) của A = \begin{pmatrix} 1
 
 # Chương 2
 
+Nội dung
+
+· Định nghĩa định thức và ví dụ.
+
+· Tính chất định thức.
+
+· Dùng định thức để tìm ma trận nghịch đảo.
+
+### Định nghĩa định thức và ví dụ
+
 ## 2.1 Định nghĩa định thức và ví dụ
 
 Định thức ma trận vuông A $= (a_{ij})_n$ là một số, được ký
@@ -571,6 +595,39 @@ DS: $-\frac{1}{384}$, 36.
 
 
 # Chương 3
+
+Dinh nghĩa 3.1 (hệ phương trình tuyên tính) Hệ phương trình tuyến tính gồm m phương trình, n ấn
+
+có dạng
+
+$ \left\{\n\begin{array}{ccccccc}\na_{11}x_1 & + & a_{12}x_2 & + & \dots & + & a_{1n}x_n & = & b_1 \\
+a_{21}x_1 & + & a_{22}x_2 & + & \dots & + & a_{2n}x_n & = & b_2 \\
+\vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\
+a_{m1}x_1 & + & a_{m2}x_2 & + & \dots & + & a_{mn}x_n & = & b_m\n\end{array}\n\right. $
+
+$a_{11}$, $a_{12}$, $\ldots$, $a_{mn}$ được gọi là hệ số của hệ phương trình.
+
+$b_1$, $b_2$, $\ldots$, $b_m$ được gọi là hệ số tự do của hệ phương trình.
+
+Ta ký hiệu
+
+$ A = \begin{pmatrix} a_{11} & a_{12} & \dots & a_{1n} \\ a_{21} & a_{22} & \dots & a_{2n} \\ \dots & \dots & \dots & \dots \\ a_{m1} & a_{m2} & \dots & a_{mn} \end{pmatrix}, \quad X = \begin{pmatrix} x_1 \\ x_2 \\ \dots \\ x_n \end{pmatrix}, b = \begin{pmatrix} b_1 \\ b_2 \\ \dots \\ b_m \end{pmatrix}, \quad (A|b) = \begin{pmatrix} a_{11} & a_{12} & \dots & a_{1n} & b_1 \\ a_{21} & a_{22} & \dots & a_{2n} & b_2 \\ \dots & \dots & \dots & \dots \\ a $
+
+Hệ phương trình được viết lại
+
+A.X $=$ b hoặc viết gọn (A|b).
+
+Chú thích
+
+• Một hệ phương trình tuyến tính có thể:
+
+1) vô nghiệm 2) có nghiệm duy nhất 3) vô số nghiệm.
+
+• Hai hệ phương trình gọi là tương đương nếu chúng cùng tập nghiệm.
+
+• Để giải hệ phương trình, ta dùng phép biến đổi tương đương để đưa về
+
+hệ đơn giản.
 
 
 
@@ -810,6 +867,24 @@ $ (b) \begin{bmatrix} 1 & 1 & 1 & 1 \\ 2 & 1 & 3 & -1 \\ 3 & 4 & 2 & 0 \\ -2 & -
 
 
 # Chương 4
+
+Nội dung
+
+• Dịnh nghĩa và ví dụ
+
+• Độc lập tuyến tính - phụ thuộc tuyến tính
+
+$\bullet$ Hạng của họ véc tơ
+
+· Cơ sở và số chiều
+
+$\bullet$ Tọa độ véc tơ
+
+• Không gian con
+
+• Tổng giao 2 không gian con
+
+### Dịnh nghĩa và ví dụ
 
 ## 4.1 Dịnh nghĩa và ví dụ
 
@@ -1733,6 +1808,18 @@ Câu 5) Trong $R^4$, cho U $= \{(x_1$, $x_2$, $x_3$, $x_4) \in R^4$ : $x_1$ + $x
 
 # Chương 5
 
+Nội dung
+
+Tích vô hướng của 2 véc tơ.
+
+2) Bù vuông góc của không gian con.
+
+3) Quá trình trực giao hóa Gram-Schmidt.
+
+4) Hình chiếu vuông góc xuống không gian con.
+
+Tích vô hướng của 2 véc tơ
+
 ## 5.1 Tích vô hướng của 2 véc tơ
 
 ### Dịnh nghĩa 5.1 (Tích vô hướng) Tích vô hướng trong R-kgvt V là một hàm thực sao cho mỗi cặp véctơ
@@ -2158,6 +2245,20 @@ $ U: \begin{cases} x_1 + x_2 - x_3 + x_4 = 0, \\ 2x_1 - x_2 + x_3 + 2x_4 = 0. \e
 
 
 # Chương 6
+
+Nội dung
+
+1) Định nghĩa và ví dụ.
+
+2) Nhân và ảnh của ánh xạ tuyến tính.
+
+3) Ma trận của ánh xạ tuyến tính trong một cặp cơ
+
+$S\ddot{\mathbf{O}}$.
+
+4) Ma trận chuyển cơ sở và đồng dạng.
+
+### Dịnh nghĩa và ví dụ
 
 ## 6.1 Dịnh nghĩa và ví dụ
 
@@ -2596,6 +2697,22 @@ Khi đó A và B đồng dạng.
 
 
 # Chương 7
+
+Nội dung
+
+1) Trị riêng - véc tơ riêng ma trận
+
+2) Chéo hóa ma trận
+
+3) Chéo hóa ma trận đối xứng thực
+
+4) Trị riêng - véc tơ riêng ánh xạ tuyến
+
+tính
+
+5) Chéo hóa ánh xạ tuyến tính
+
+Trị riêng - véc tơ riêng
 
 ## 7.1 Trị riêng - véc tơ riêng
 
@@ -3234,6 +3351,16 @@ Câu 6) Cho axt f: $R^3 \to R^3$. E $= \{e_1 =$ (1, 1, 0); $e_2 =$ (2, 1, 1); $e
 
 
 # Chương 8
+
+Nội dung
+
+· Định nghĩa dạng toàn phương
+
+• Dưa dạng toàn phương về dạng chính tắc
+
+• Phân loại dạng toàn phương
+
+Dinh nghĩa
 
 ## 8.1 Dinh nghĩa
 
