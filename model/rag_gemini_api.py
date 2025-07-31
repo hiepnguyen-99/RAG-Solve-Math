@@ -7,8 +7,6 @@ import google.generativeai as genai
 from retrieval import *
 from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
 
 RERANK_MODEL = "BAAI/bge-reranker-base"
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -39,7 +37,6 @@ db = Chroma(
 )
 
 
-
 # Gọi API mô hình
 api_key = os.getenv("GEMINI_API_KEY")
 model = genai.GenerativeModel("gemini-2.0-flash-lite")
@@ -67,22 +64,6 @@ def promt_text(context, question):
         Trả lời:
     """
 
-def flatten_docs(docs):
-    """Flatten nested lists và chỉ giữ lại valid document objects"""
-    flattened = []
-    if not docs:
-        return flattened
-    
-    for item in docs:
-        if hasattr(item, 'page_content'):
-            # Đây là document object hợp lệ
-            flattened.append(item)
-        elif isinstance(item, list):
-            # Đây là nested list, flatten recursively
-            flattened.extend(flatten_docs(item))
-    
-    return flattened
-
 
 # Hàm chính giải toán qua API
 def solve_question_api_gemini(question: str, k: int = 3, rerank: bool = False, rewrite: bool = True):
@@ -94,21 +75,19 @@ def solve_question_api_gemini(question: str, k: int = 3, rerank: bool = False, r
         else:
             queries = [question]
 
-        # Retrieve documents
-        if rerank and RERANK_AVAILABLE:
-            try:
-                reranker = FlagReranker(RERANK_MODEL, use_fp16=True)
-                docs = retrieve_docs_RAG_fuson(queries, k=k, rerank=True, vectorstore=db, reranker=reranker)
-            except Exception as e:
-                print(f"⚠️ Lỗi rerank: {e}, tiếp tục không rerank.")
-                docs = retrieve_docs_RAG_fuson(queries, k=k, rerank=False, vectorstore=db)
-        else:
-            docs = retrieve_docs_RAG_fuson(queries, k=k, rerank=False, vectorstore=db)
+        docs = []
+        for query in queries:
+            retriever = db.as_retriever(search_kwargs={"k": k})
+            doc = retriever.get_relevant_documents(query)
+            if rerank and RERANK_AVAILABLE:
+                try:
+                    reranker = FlagReranker(RERANK_MODEL, use_fp16=True)
+                    doc = rerank_docs_with_model(query, doc, reranker)
+                except Exception as e:
+                    print(f"Lỗi khi rerank với FlagReranker: {str(e)}")
+            docs.extend([doc])
 
-        # Flatten documents để xử lý nested lists
-        docs = flatten_docs(docs)
-
-        # Tạo context từ documents
+        docs = reciprocal_rank_fusion(docs, num_docs=k)
         context = "\n".join([doc.page_content for doc in docs]) if docs else "Không tìm thấy tài liệu liên quan."
         
         # Gọi API Gemini
@@ -127,6 +106,7 @@ def solve_question_api_gemini(question: str, k: int = 3, rerank: bool = False, r
         # Tạo source documents
         source_docs = [{"page_content": doc.page_content, "metadata": doc.metadata} for doc in docs]
         return answer.strip(), source_docs
-        
+    
     except Exception as e:
         return f"Lỗi khi xử lý câu hỏi với Gemini: {str(e)}", []
+    

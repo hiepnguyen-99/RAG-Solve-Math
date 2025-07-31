@@ -1,13 +1,7 @@
 import torch
 
 from FlagEmbedding import FlagReranker
-
-
-DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-raw_data_folder = "../TEST"
-embedding_model_name = "Qwen/Qwen3-Embedding-0.6B"
-persist_directory = "../chroma_db"
-rerank_model = "BAAI/bge-reranker-base"
+from langchain.load import dumps, loads
 
 
 def rerank_docs_with_model(query, docs, reranker, metadata_fields=["title", "section", "subsection"]):
@@ -26,7 +20,7 @@ def rerank_docs_with_model(query, docs, reranker, metadata_fields=["title", "sec
     return [doc for doc, _ in ranked_docs]
 
 
-def retrieve_docs(query, k=5, rerank=False, vectorstore=None):
+def retrieve_docs(query, k=5, rerank=False, vectorstore=None, rerank_model=None):
     retriever = vectorstore.as_retriever(search_kwargs={"k": k})
     docs = retriever.get_relevant_documents(query)
     if rerank:
@@ -34,16 +28,33 @@ def retrieve_docs(query, k=5, rerank=False, vectorstore=None):
         docs = rerank_docs_with_model(query, docs, reranker)
     return docs
 
+
 def retrieve_docs_RAG_fuson(queries, k=5, rerank=False, vectorstore=None, reranker=None):
     docs = []
     for query in queries:
         retriever = vectorstore.as_retriever(search_kwargs={"k": k})
         doc = retriever.get_relevant_documents(query)
-        if doc:
-            if rerank:
-                doc = rerank_docs_with_model(query, doc, reranker)
-            docs.extend([doc])
+        if rerank:
+            doc = rerank_docs_with_model(query, doc, reranker)
+        docs.extend([doc])
     return docs
+
+
+def reciprocal_rank_fusion(matrix: list[list], k=60, num_docs=5):
+    fused_scores = {}
+
+    for query_result in matrix: 
+        for rank, doc in enumerate(query_result):
+            doc_str = dumps(doc) 
+            if doc_str not in fused_scores:
+                fused_scores[doc_str] = 0
+            fused_scores[doc_str] += 1 / (rank + k)
+
+    reranked_results = [
+        (loads(doc_str), score)
+        for doc_str, score in sorted(fused_scores.items(), key=lambda x: x[1], reverse=True)
+    ]
+    return [doc for doc, _ in reranked_results][:num_docs] 
 
 # Example usage
 # dos.metadata.get("source") sẽ chứa đường dẫn đến file gốc
