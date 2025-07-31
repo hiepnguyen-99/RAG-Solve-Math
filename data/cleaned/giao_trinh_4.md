@@ -99,7 +99,7 @@ Ma trận đối xứng thỏa mãn $A^T = A$
 ### Ma trận đối xứng
 Ma trận đối xứng thỏa $A^T = -A$
 
-Vi du 
+Vi dụ
 
 Ma trận tam giác trên $A = \begin{pmatrix} 1 & 2 & 3 \\ 0 & 2 & 0 \\ 0 & 0 & -2 \end{pmatrix}$. Ma trận tam giác dưới $A = \begin{pmatrix} 1 & 0 & 0 \\ -3 & 0 & 0 \\ 3 & 2 & -2 \end{pmatrix}$
 
@@ -336,3 +336,162 @@ i) $(A^{-1})^{-1} = A$
 ii) $(AB)^{-1} = B^{-1}A^{-1}$ 
 
 iii) $(A^T)^{-1} = (A^{-1})^T$.
+
+# Chương 2 Đinh thức
+
+## 2.1 Định nghĩa định thức và ví dụ
+
+### Định nghĩa
+
+Định thức ma trận vuông $ A = (a_{ij})_n $ được kí hiệu bởi
+
+$$\det(A) = |a^{ij}|_n = |A|$$
+
+### Bù đại số
+
+Bù đại số của phần tử $a_{ij}$ là
+
+$$ A_{ij} = (-1)^{i+j} \begin{vmatrix} \text{định thức thu được từ } A \\ \text{bỏ đi hàng i, cột j} \end{vmatrix}_{n-1} $$
+
+### Định nghĩa định thức bằng qui nạp
+
+$ i) \ k = 1 : A = [a_{11}] \Rightarrow |A| = a_{11}$
+
+$ ii) \ k = 2 : A = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix} \Rightarrow |A| = a_{11}A_{11} + a_{12}A_{12} = a_{11}a_{22} - a_{12}a_{21} $
+
+$ iii) \ k = n : A = \begin{pmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ \vdots & \vdots & \ddots & \vdots \\ \end{pmatrix} \Rightarrow |A| = a_{11}A_{11} + a_{12}A_{12} + \cdots + a_{1n}A_{1n} $
+
+Ví dụ: Tính định thức của $\begin{pmatrix} 1 & 2 & -3 \\ 2 & 3 & 0 \\ 3 & 2 & 4 \end{pmatrix}$
+
+Bài giải
+
+$\det(A) = a_{11}A_{11}$ + $a_{12}A_{12}$ + $a_{13}A_{13} = 1A_{11}$ + $2A_{12}$ - $3A_{13}$.
+
+$ A_{11} = (-1)^{1+1} \begin{vmatrix} 3 & 0 \\ 2 & 4 \end{vmatrix} = 12$ (từ A, bỏ hàng 1 và cột 1)
+
+Tương tự: $\det(A) = 1(-1)^{1+1} \begin{vmatrix} 3 & 0 \\ 3 & 4 \end{vmatrix} + 2(-1)^{1+2} \begin{vmatrix} 2 & 0 \\ 3 & 4 \end{vmatrix} - 3(-1)^{1+3} \begin{vmatrix} 2 & 3 \\ 3 & 2 \end{vmatrix} = 12 - 16 + 15 = 11. $
+
+## 2.2 Tính chất định thức
+
+### Tính định thức bằng khai triển
+Có thể tính định thức bằng cách khai triển theo một hàng hoặc 1 cột bất kỳ
+
+$$ |A| = \begin{vmatrix} \cdots & \cdots & \cdots & \cdots \\ a_{k1} & a_{k2} & \cdots & a_{kn} \\ \cdots & \cdots & \cdots & \cdots \end{vmatrix} = a_{k1}A_{k1} + a_{k2}A_{k2} + \cdots + a_{kn}A_{kn} $$
+
+Ví dụ 2.2 Tính định thức
+
+$$a) \begin{vmatrix} 1 & 2 & -1 \\ 2 & 1 & 3 \\ 0 & 0 & -3 \end{vmatrix} \qquad b) \begin{vmatrix} 2 & -3 & 3 & 2 \\ 3 & 0 & 1 & 4 \\ -2 & 0 & 3 & 2 \\ 4 & 0 & -1 & 5 \end{vmatrix} $$
+
+a) Khai triển theo hàng 3: $\begin{vmatrix} 1 & 2 & -1 \\ 2 & 1 & 3 \\ 0 & 0 & -3 \end{vmatrix} = -3(-1)^{3+3} \begin{vmatrix} 1 & 2 \\ 2 & 1 \end{vmatrix} = -3(-3) = 9. $
+
+b) Khai triển theo cột 2
+$ I = \begin{vmatrix} 2 & -3 & 3 & 2 \\ 3 & 0 & 1 & 4 \\ -2 & 0 & 3 & 2 \\ 4 & 0 & -1 & 5 \end{vmatrix} = -3(-1)^{1+2} \begin{vmatrix} 3 & 1 & 4 \\ -2 & 3 & 2 \\ 4 & -1 & 5 \end{vmatrix} \xrightarrow{\text{khai triển theo hàng 1}} = 3 \Big (3(-1)^{1+1} \begin{vmatrix} 3 & 2 \\ -1 & 5 \end{vmatrix} + 1(-1)^{1+2} \begin{vmatrix} -2 & 2 \\ 4 & 5 \end{vmatrix} + 4(-1)^{1+3} \begin{vmatrix} -2 & 3 \\ 4 & -1 \end{vmatrix}\Big ) = 3(51+18-40) = 87 $
+
+### Tính định thức của ma trận tam giác
+Định thức của ma trận tam giác bằng tích các phần tử nằm trên đường chéo chính
+
+Ví dụ:
+$ \begin{vmatrix} 1 & -2 & 2 & 3 \\ 0 & 4 & -2 & 0 \\ 0 & 0 & -3 & 2 \\ 0 & 0 & 0 & 5 \end{vmatrix} = 1.4.(-3).5 = -60 $
+
+### Tính định thức dùng biến đổi đổi sơ cấp
+Dùng biến đổi sơ cấp để tính định thức
+
+1. Nếu A $\xrightarrow{h_i \to \alpha h_j}$ B thì |B| $= \alpha$ |A|
+
+2. Nếu A $\xrightarrow{h_i + \beta h_j}$ B thì |B| $=$ |A|.
+
+3. Nếu A $\xrightarrow{h_i \leftrightarrow h_j}$ B thì |B| $=$ -|A|.
+
+
+### Nguyên tắc tính định thức sử dụng biến đối sơ cấp
+
+1. Chọn 1 hàng (hoặc 1 cột tùy ý).
+
+2. Chọn 1 phần tử khác 0 của hàng (cột) đó. Dùng biến
+
+đối sơ cấp, khử tất cả các phần tử khác.
+
+3. Khai triển theo hàng (hay cột) đã chọn.
+
+Ví du 2.4.
+
+$ (a) I = \begin{vmatrix} 1 & 1 & 2 & -1 \\ 2 & 3 & 5 & 0 \\ 3 & 2 & 6 & -2 \\ -2 & 1 & 3 & 1 \end{vmatrix} \xrightarrow[h_4 + 2h_1]{\substack{h_2 - 2h_1 \\ h_3 - 3h_1}} \begin{vmatrix} 1 & 1 & 2 & -1 \\ 0 & 1 & 1 & 2 \\ 0 & -1 & 0 & 1 \\ 0 & 3 & 7 & -1 \end{vmatrix} \xrightarrow[\text{theo cột 1}]{\text{khai triển}} 1.(-1)^{1+1} \begin{vmatrix} 1 & 1 & 2 \\ -1 & 0 & 1 \\ 3 & 7 & -1 \end{vmatrix} \frac{h_3 - 3h_1}{-1} \begin{vmatrix} 1 & 1 & 2 \\ -1 & 0 & 1 \\ -4 & 0 & -15 \end{vmatrix} = 1.(-1)^{1+2} \begin{vmatrix} -1 & 1 \\ -4 & -15 \end{vmatrix} = -1(15+4) = -19. $
+
+$ b) \begin{vmatrix} 3 & 2 & -1 & 1 \\ 2 & 3 & -2 & 0 \\ -3 & 1 & 4 & -2 \\ 4 & 1 & 3 & 1 \end{vmatrix} \xrightarrow[h_4-h_1]{h_3+2h_1} \begin{vmatrix} 3 & 2 & -1 & 1 \\ 2 & 3 & -2 & 0 \\ 3 & 5 & 2 & 0 \\ 1 & -1 & 4 & 0 \end{vmatrix} \xrightarrow[\text{theo cột 4}]{\text{khai triển}} -1 \begin{vmatrix} 2 & 3 & -2 \\ 3 & 5 &2 \\ 1 & -1 & 4 \end{vmatrix} = -\begin{vmatrix} 2 & 3 & -2 \\ 5 & 8 & 0 \\ 5 & 5 & 0 \end{vmatrix} = 2\begin{vmatrix} 5 & 8 \\ 5 & 5 \end{vmatrix} = -30 $
+
+### Tính chất định thức
+Cho $A \in M_n$.
+
+i) $\det(A^T) = \det(A)$ 
+
+ii) $|\alpha A| = \alpha^n |A| $
+
+iii) $\det(AB) = \det(A) \cdot \det(B)$
+
+iv) $|A^m| = |A|^m$
+
+v) A có 1 hàng (hoặc cột) bằng 0 thì $|A| = 0$
+
+vi) A có 2 hàng (hoặc cột) tỷ lệ thì $|A| = 0$
+
+Chú ý: nhìn chung $det(A + B) \neq \det(A) + \det(B)$.
+
+Ví dụ: Cho $A, B \in M_3$ thỏa $|A| = 2, |B| = 3$
+
+Ta có $|2A^3| = 2^3. |A|^3 = 8.2^3 = 64 \qquad  |3AB^T| = 3^3|A||B| = 27.2.3 = 162$
+
+### Điều kiện khả nghịch
+
+A khả nghịch khi và chỉ khi |A| $\neq$ 0.
+
+**Ví dụ**: Tìm m để A.B khả nghịch. Biết $ A = \begin{pmatrix} 1 & 2 & 1 \\ 0 & -1 & 2 \\ 0 & -1 & 3 \end{pmatrix}, B = \begin{pmatrix} 2 & -1 & 3 \\ 0 & 1 & 1 \\ m & 2 & 1 \end{pmatrix}. $
+
+**Bài làm**
+
+AB khả nghịch khi và chỉ khi $det(AB) \neq 0$
+
+$\iff \det(A) \cdot \det(B) \neq 0 \iff -1 \cdot (-4m-1) \neq 0 \iff m \neq -\frac{1}{4}$
+
+
+## 2.3 Tìm ma trận nghịch đảo bằng phương pháp định thức
+
+### Định nghĩa (Ma trận phụ hợp)
+
+Ma trận phụ hợp của ma trận vuông $A \in M_n$ được định nghĩa là
+
+$ P_A = \begin{pmatrix} A_{11} & A_{12} & \ldots & A_{1n} \\ A_{21} & A_{22} & \ldots & A_{2n} \\ \ldots & \ldots & \ldots & \ldots \\ A_{n1} & A_{n2} & \ldots & A_{nn} \end{pmatrix}. $
+
+Công thức tính ma trận nghịch đảo $A^{-1} = \frac{1}{|A|} .P_A$
+
+**Ví dụ** Tìm ma trận nghịch đảo $A = \begin{pmatrix} 1 & 1 & 1 \\ 2 & 3 & 1 \\ 3 & 4 & 0 \end{pmatrix} $
+
+**Bài làm**
+
+$\det(A) = -2 \neq 0 \Longrightarrow$ A khả nghịch.
+
+$ A_{11} = (-1)^{1+1} \begin{pmatrix} 3 & 1 \\ 4 & 0 \end{pmatrix} = -4, A_{12} = (-1)^{1+2} \begin{pmatrix} 2 & 1 \\ 3 & 0 \end{pmatrix} = 3, A_{13} = (-1)^{1+3} = \begin{pmatrix} 2 & 3 \\ 3 & 4 \end{pmatrix} = -1$
+
+Tương tự: $A_{21} = 4, A_{22} = -3, A_{23} = -1, A_{31} = -2, A_{32} = 1, A_{33} = 1. $
+
+Ma trận nghịch đảo $A^{-1} = \frac{1}{|A|} P_A = \frac{1}{-2} \begin{pmatrix} -4 & 4 & -2 \\ 3 & -3 & 1 \\ -1 & -1 & 1 \end{pmatrix} (\text{nhớ lấy chuyển vị}). $
+
+### Tính chất
+
+$ i)\ |A^{-1}| = \frac{1}{|A|} $
+
+$ ii)\ P_A = |A|^{n-1}$
+
+$ iii)\ r(P_A) = \begin{cases} n, & \text{nếu } r(A) = n \\ 1, & \text{nếu } r(A) = n - 1 \\ 0, & \text{nếu } r(A) < n - 1 \end{cases} $
+
+**Ví dụ**: Cho $A \in M_3$ biết $|A| = -2$. Tính $det(2P_A^2)$.
+
+**Bài làm**
+
+Ta có: $\det(2P_4^2) = 2^3 \cdot |P_A|^2 = 8 \cdot (|A|^{3-1})^2 = 8 \cdot (-2)^4 = 128$
+
+**Ví dụ**: Cho $A = \begin{pmatrix} 1 & 2 & 1 \\ 2 & 3 & -1 \\ 1 & 1 & m \end{pmatrix}$. Tìm m để $r(P_A) = 1$
+
+**Bài làm**
+
+$ A = \begin{pmatrix} 1 & 2 & 1 \\ 2 & 3 & -1 \\ 1 & 1 & m \end{pmatrix} \xrightarrow{bdsc} \begin{pmatrix} 1 & 2 & 1 \\ 0 & -1 & -3 \\ 0 & 0 & m+2 \end{pmatrix}, r(P_A) = 1 \Longleftrightarrow r(A) = 3 - 1 = 2 \Longleftrightarrow m = -2 $
+
