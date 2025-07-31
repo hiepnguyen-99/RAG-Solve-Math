@@ -495,3 +495,247 @@ Ta có: $\det(2P_4^2) = 2^3 \cdot |P_A|^2 = 8 \cdot (|A|^{3-1})^2 = 8 \cdot (-2)
 
 $ A = \begin{pmatrix} 1 & 2 & 1 \\ 2 & 3 & -1 \\ 1 & 1 & m \end{pmatrix} \xrightarrow{bdsc} \begin{pmatrix} 1 & 2 & 1 \\ 0 & -1 & -3 \\ 0 & 0 & m+2 \end{pmatrix}, r(P_A) = 1 \Longleftrightarrow r(A) = 3 - 1 = 2 \Longleftrightarrow m = -2 $
 
+# Chương 3
+
+### Định nghĩa 3.1 (hệ phương trình tuyên tính) 
+Hệ phương trình tuyến tính gồm m phương trình, n ấn có dạng
+
+$ \left \{
+\begin{array}{ccccccccc}
+  a_{11}x_1 & + & a_{12}x_2 & + & \dots & + & a_{1n}x_n & = & b_1 \\
+  a_{21}x_1 & + & a_{22}x_2 & + & \dots & + & a_{2n}x_n & = & b_2 \\
+  \vdots    &     & \vdots    &     & \ddots &     & \vdots    &     & \vdots \\
+  a_{m1}x_1 & + & a_{m2}x_2 & + & \dots & + & a_{mn}x_n & = & b_m
+\end{array}
+\right. $
+
+$a_{11}, a_{12}, \ldots, a_{mn}$ được gọi là hệ số của hệ phương trình.
+
+$b_1, b_2, \ldots, b_m$ được gọi là hệ số tự do của hệ phương trình.
+
+Ta ký hiệu
+
+$ A = \begin{pmatrix}
+a_{11} & a_{12} & \dots & a_{1n} \\
+a_{21} & a_{22} & \dots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{m1} & a_{m2} & \dots & a_{mn}
+\end{pmatrix}, \quad
+X = \begin{pmatrix}
+x_1 \\ x_2 \\ \vdots \\ x_n
+\end{pmatrix}, \quad
+b = \begin{pmatrix}
+b_1 \\ b_2 \\ \vdots \\ b_m
+\end{pmatrix}, \quad
+(A\mid b) = \left(
+\begin{array}{cccc|c}
+a_{11} & a_{12} & \dots & a_{1n} & b_1 \\
+a_{21} & a_{22} & \dots & a_{2n} & b_2 \\
+\vdots & \vdots & \ddots & \vdots & \vdots \\
+a_{m1} & a_{m2} & \dots & a_{mn} & b_m
+\end{array}
+\right) $
+
+Hệ phương trình được viết lại
+
+A.X $=$ b hoặc viết gọn (A|b).
+
+**Chú thích**
+
+• Một hệ phương trình tuyến tính có thể:
+
+$$\text{1) vô nghiệm \qquad 2) có nghiệm duy nhất \qquad 3) vô số nghiệm.}$$
+
+• Hai hệ phương trình gọi là tương đương nếu chúng cùng tập nghiệm.
+
+• Để giải hệ phương trình, ta dùng phép biến đổi tương đương để đưa về hệ đơn giản.
+
+
+### Phép biến đổi tương đương
+
+Một phép biến đổi được gọi là tương đương nếu nó biến một hệ phương trình bất kỳ thành một hệ phương trình tương đương.
+
+Ta có 3 phép biến đổi tương đương thường gặp:
+
+i) Nhân 2 về của một phương trình với 1 số khác 0.
+
+ii) Cộng vào một phương trình một phương trình khác đã được nhân với một số tùy ý.
+
+iii) Đổi chổ hai phương trình.
+
+**Chú ý**:
+
+• Đây là 3 phép biến đổi quen thuộc ở phổ thông mà chúng ta đã biết.
+
+• Nếu ta ký hiệu hệ phương trình ở dạng ma trận mở rộng (A|b). Các phép biến đổi sơ cấp đối với ma trận tương ứng với các phép biến đổi tương đương đối với hệ phương trình.
+
+### Ẩn cơ sở
+Ẩn cơ sở của hệ phương trình ở dạng bậc thang
+
+$\bullet$ Ẩn cơ sở là ẩn tương ứng với cột chứa phần tử cơ sở.
+
+$\bullet$ Ẩn tự do là ẩn tương ứng với cột không có phần tử cơ sở.
+
+Ví dụ:
+$
+\left[
+\begin{array}{cccc|c}
+1 & 1 & 1 & 2 & 1 \\
+2 & 2 & 3 & 5 & 6 \\
+3 & 3 & 4 & 1 & -1
+\end{array}
+\right]
+\xrightarrow{\text{Biến đổi sơ cấp}}
+\left[
+\begin{array}{cccc|c}
+(1) & 1 & 1 & 2 & 1 \\ 
+0 & 0 & (1) & 1 & 4 \\ 
+0 & 0 & 0 & (-6) & -8 
+\end{array}
+\right] $
+
+$x_1$, $x_3$, $x_4$ là phần tử cơ sở. $x_2$ là phần tử tự do.
+
+### Các bước giải hệ phương trình
+
+Bước 1: Đưa ma trận $\tilde{A} =$ [A|b] về dạng bậc thang bằng biến đổi sơ cấp theo hàng.
+
+Kiểm tra hệ có nghiệm hay không.
+
+Bước 2: Giải hệ phương trình từ dưới lên.
+
+**Ví dụ** Giải hệ phương trình
+
+$ \begin{cases} x_1 + x_2 - x_3 + 2x_4 = 1 \\ 2x_1 + 3x_2 - 3x_3 + 3x_4 = 3 \\ 3x_1 + 2x_2 - 5x_3 + 7x_4 = 5 \end{cases} $
+
+**Bài làm**
+
+$ \tilde{A} = \left[\begin{array}{cccc|c} 1 & 1 & -1 & 2 & 1 \\ 2 & 3 & -3 & 3 & 3 \\ 3 & 2 & -5 & 7 & 5 \end{array}\right] \xrightarrow[h_3-3h_1]{h_2-2h_1} \left[\begin{array}{cccc|c} 1 & 1 & -1 & 2 & 1 \\ 0 & 1 & -1 & -1 & 1 \\ 0 & -1 & -2 & 1 & 2 \end{array}\right] \xrightarrow{h_3+h_2} \left[ \begin{array}{cccc|c} \boxed{1} & 1 & -1 & 2 & 1 \\ 0 & \boxed{1} & -1 & -1 & 1 \\ 0 & 0 & \boxed{-3} & 0 & 3 \end{array} \right]$
+
+Dặt $x_4 = \alpha$. pt (3): $x_3 = -1$. Từ pt (2): $x_2 = 1 + x_3 + x_4 = \alpha$. Từ pt (1): $x_1 = 1 - x_2 + x_3 - 2x_4 = -3\alpha$.
+
+Vậy nghiệm của hệ là $(x_1, x_2, x_3, x_4) = (-3\alpha, \alpha, -1, \alpha), \alpha \in R$
+
+
+
+### Định lý Kronecker Capelli
+
+Nếu $r(A|b) \neq r(A)$ thì hệ $AX = b$ vô nghiệm.
+
+Nếu $r(A|b) = r(A)$ thì hệ $AX = b$ có nghiệm.
+
+i) Nếu $r(A|b) = r(A) =$ số ẩn thì hệ $AX $=$ b$ có nghiệm duy nhất.
+
+ii) Nếu $r(A|b) = r(A)$ < số ẩn thì hệ $AX = b$ có vô số nghiệm.
+
+**Ví dụ** Tìm tất cả các giá trị của m để hệ sau vô số nghiệm
+
+$ \begin{cases}x_1 + x_2 - 2x_3 = 1 \\
+2x_1 + 3x_2 - 3x_3 = 5 \\
+3x_1 + mx_2 - 7x_3 = 8\end{cases} $
+
+**Bài làm**
+
+$ [A|b]=\left[\begin{array}{ccc|c} 1 & 1 & -2 & 1 \\ 2 & 3 & -3 & 5 \\ 3 & m & -7 & 8 \end{array}\right]\longrightarrow \left[\begin{array}{ccc|c} 1 & 1 & -2 & 1 \\ 0 & 1 & 1 & 3 \\ 0 & m-3 & -1 & 5 \end{array}\right]\longrightarrow \left[\begin{array}{ccc|c} 1 & -2 & 1 & 1 \\ 0 & 1 & 1 & 3 \\ 0 & -1 & m-3 & 5 \end{array}\right]\longrightarrow \left[\begin{array}{ccc|c} 1 & -2 & 1 & 1 \\ 0 & 1 & 1 & 3 \\ 0 & 0 & m-2 & 8 \end{array}\right] $
+
+Hệ vô số nghiệm khi và chỉ khi r(A) = r(A) < 3. Vì r(A|b) $=$ 3 nên không tồn tại m để hệ vô số nghiệm.
+
+**Ví dụ** Tìm tất cả các giá trị m để hệ có nghiệm duy nhất
+
+$ \begin{cases}x_1 + 2x_2 + x_3 - x_4 = 5 \\
+2x_1 + mx_2 - x_3 = -1 \\
+mx_1 + x_2 - 3x_4 = 6\end{cases} $
+
+Vì hệ có 3 phương trình nên r(A) $\leq$ 3 $<$ 4 = số ẩn nên hệ không có nghiệm duy nhất.
+
+Chú ý: Nếu hệ có số phương trình ít hơn số ẩn thì không thể có nghiệm duy nhất.
+
+## 3.1 Hệ Cramer
+
+Hệ AX $=$ b gọi là hệ Cramer nếu A là ma trận vuông và $\det(A) \neq$ 0.
+
+Hệ Cramer có nghiệm duy nhất
+
+$x_i = \frac{|A_i|}{|A|}, i \in \overline{1,n}$
+
+với $A_i$ là ma trận thu từ A bằng cách thay cột i bởi cột tự do b.
+
+**Ví dụ** Kiểm tra hệ sau là Cramer và giải hệ
+
+$ \begin{cases}x_1 + 2x_2 - x_3 = 12 \\
+2x_1 + 3x_2 - 3x_3 = 4 \\
+3x_1 + 2x_2 + 5x_3 = -8\end{cases} $
+
+**Bài làm**
+
+$ A = \begin{pmatrix} 1 & 2 & -1 \\ 2 & 3 & -3 \\ 3 & 2 & 5 \end{pmatrix}, A_1 = \begin{pmatrix} 12 & 2 & -1 \\ 4 & 3 & -3 \\ -8 & 2 & 5 \end{pmatrix}, A_2 = \begin{pmatrix} 1 & 12 & -1 \\ 2 & 4 & -3 \\ 3 & -8 & 5 \end{pmatrix} A_3 = \begin{pmatrix} 1 & 2 & 12 \\ 2 & 3 & 4 \\ 3 & 2 & -8 \end{pmatrix} $
+
+$|A| = -12 \neq 0$ nên hệ là Cramer.
+
+$|A_1| = 228, |A_2| = -204, |A_3| = -36$. Nghiệm của hệ là $\left(\frac{|A_1|}{|A|}, \frac{|A_2|}{|A|}, \frac{|A_3|}{|A|}\right) = (-19, 17, 3)$
+
+## 3.2 Hệ thuần nhất
+
+### Hệ thuần nhất
+
+• Hệ $AX = b$ gọi là thuần nhất nếu tất cả các hệ số tự do
+
+$$b_1 = b_2 = \cdots = b_m = 0$$
+
+• Hệ thuần nhất luôn có nghiệm tầm thường.
+
+$$x_1 = x_2 = \cdots = x_n = 0$$
+
+• Hệ thuần nhất có nghiệm duy nhất khi và chỉ khi
+
+$$r(A) = n = \text{số ẩn}$$
+
+• Cho A là ma trận vuông. Hệ thuần nhất $AX = 0$ có nghiệm không tầm thường (nghiệm khác 0) khi và chỉ khi
+
+$$|A| \neq 0 $$
+
+**Ví dụ** Giải hệ phương trình
+
+$ \begin{cases}x_1 + x_2 - x_3 + 2x_4 = 0 \\
+2x_1 + 3x_2 - 3x_3 + 3x_4 = 0 \\
+3x_1 + 5x_2 - 5x_3 + 4x_4 = 0.\end{cases} $
+
+**Bài làm**
+
+$ \left[ \begin{array}{cccc|c} 1 & 1 & -1 & 2 & 0 \\ 2 & 3 & -3 & 3 & 0 \\ 3 & 5 & -5 & 4 & 0 \end{array} \right]
+\longrightarrow \left[ \begin{array}{cccc|c}  1 & 1 & -1 & 2 & 0 \\ 0 & 1 & -1 & -1 & 0 \\ 0 & 2 & -2 & -2 & 0 \end{array} \right] \longrightarrow \left[ \begin{array}{cccc|c} \boxed{1} & 1 & -1 & 2 & 0 \\ 0 & \boxed{1} & -1 & -1 & 0 \\ 0 & 0 & 0 & 0 & 0 \end{array} \right] $
+
+Đặt các ẩn tự do làm tham số $x_3 = \alpha, x_4 = \beta$.
+
+Pt(2): $x_2 = x_3 + x_4 = \alpha+ \beta \qquad$ Pt(1):$ x_1 = -x_2 + x_3 - 2x_4 = -3\beta$
+
+Vậy nghiệm của hệ là $(x_1, x_2, x_3, x_4) = (-3\beta, \alpha + \beta, \alpha, \beta)$
+
+**Ví dụ** Tìm m để hệ có nghiệm không tầm thường
+
+$ \begin{cases}mx_1 + x_2 + x_3 + x_4 = 0 \\
+x_1 + mx_2 + x_3 + x_4 = 0 \\
+x_1 + x_2 + mx_3 + x_4 = 0 \\
+x_1 + x_2 + x_3 + mx_4 = 0\end{cases} $
+
+**Bài làm**
+
+Hệ có nghiệm không tầm thường khi và chỉ khi $r(A) < n \Longleftrightarrow  |A| = 0$
+
+$ |A| = \begin{vmatrix} m & 1 & 1 & 1 \\ 1 & m & 1 & 1 \\ 1 & 1 & m & 1 \\ 1 & 1 & 1 & m \end{vmatrix} = (m+3) \begin{vmatrix} 1 & 1 & 1 & 1 \\ 1 & m & 1 & 1 \\ 1 & 1 & m & 1 \\ 1 & 1 & 1 & m \end{vmatrix} = (m+3) \begin{vmatrix} 1 & 1 & 1 & 1 \\ 0 & m-1 & 0 & 0 \\ 0 & 0 & m-1 & 0 \\ 0 & 0 & 0 & m-1 \end{vmatrix} = (m+3)(m-1)^3 $
+
+Vậy $m = -3 \vee m = 1$
+
+
+
+**Ví dụ** Tìm m để hệ có vô số nghiệm
+
+$ \begin{cases}x_1 + x_2 + 2x_3 - x_4 = 0 \\
+x_1 + 3x_2 + mx_3 + 2x_4 = 0 \\
+mx_1 - x_2 + 3x_3 - 2x_4 = 0\end{cases} $
+
+**Bài làm**
+
+Vì A là ma trận cở 3 $\times$ 4 nên r(A) $\leq$ 3 $<$ 4 = số ẩn. Vậy hệ luôn có vô số nghiệm.
+
+Chú ý: Hệ thuần nhất có số phương trình ít hơn số ẩn thì vô số nghiệm.
