@@ -1,7 +1,5 @@
 import torch
 
-from langchain.vectorstores import Chroma
-from langchain.embeddings import HuggingFaceEmbeddings
 from FlagEmbedding import FlagReranker
 
 
@@ -10,19 +8,6 @@ raw_data_folder = "../TEST"
 embedding_model_name = "Qwen/Qwen3-Embedding-0.6B"
 persist_directory = "../chroma_db"
 rerank_model = "BAAI/bge-reranker-base"
-
-
-embedding_model = HuggingFaceEmbeddings(
-    model_name=embedding_model_name,
-    model_kwargs={"device": DEVICE},
-    encode_kwargs={"normalize_embeddings": True}
-)
-
-vectorstore = Chroma(
-    persist_directory=persist_directory,
-    embedding_function=embedding_model,
-    collection_name="math_vectors"
-)
 
 
 def rerank_docs_with_model(query, docs, reranker, metadata_fields=["title", "section", "subsection"]):
@@ -41,7 +26,7 @@ def rerank_docs_with_model(query, docs, reranker, metadata_fields=["title", "sec
     return [doc for doc, _ in ranked_docs]
 
 
-def retrieve_docs(query, k=5, rerank=False):
+def retrieve_docs(query, k=5, rerank=False, vectorstore=None):
     retriever = vectorstore.as_retriever(search_kwargs={"k": k})
     docs = retriever.get_relevant_documents(query)
     if rerank:
