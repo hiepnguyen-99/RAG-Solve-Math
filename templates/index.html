@@ -52,6 +52,7 @@
                             </option>
                             {% endfor %}
                         </select>
+                        <small class="model-info" id="loaded-models-info" style="display: none;">Models đã load: 0</small>
                     </div>
                     
                     <!-- Document Count Selector -->
@@ -104,6 +105,11 @@
                         <span class="material-icons">history</span>
                     </button>
                     
+                    <!-- Model Management Toggle -->
+                    <button class="model-management-toggle" id="model-management-toggle" title="Quản lý Models">
+                        <span class="material-icons">settings</span>
+                    </button>
+                    
                     <!-- Document Library Toggle -->
                     <button class="docs-toggle" id="docs-toggle" title="Thư viện tài liệu">
                         <span class="material-icons">library_books</span>
@@ -119,6 +125,54 @@
 
         <!-- Main Content -->
         <div class="main-layout">
+            <!-- Model Management Sidebar -->
+            <aside class="model-management-sidebar" id="model-management-sidebar">
+                <div class="sidebar-header">
+                    <h3>
+                        <span class="material-icons">settings</span>
+                        Quản lý Models
+                    </h3>
+                    <button class="sidebar-close" id="model-management-close">
+                        <span class="material-icons">close</span>
+                    </button>
+                </div>
+                
+                <div class="sidebar-content">
+                    <div class="model-status-section">
+                        <h4>Trạng thái Models</h4>
+                        <div class="model-list" id="model-status-list">
+                            <!-- Models sẽ được load động -->
+                        </div>
+                    </div>
+                    
+                    <div class="model-actions-section">
+                        <h4>Hành động</h4>
+                        <button class="action-btn" id="unload-all-models">
+                            <span class="material-icons">clear_all</span>
+                            Unload All Models
+                        </button>
+                        <button class="action-btn" id="refresh-model-status">
+                            <span class="material-icons">refresh</span>
+                            Refresh Status
+                        </button>
+                    </div>
+                    
+                    <div class="model-info-section">
+                        <h4>Thông tin hệ thống</h4>
+                        <div class="system-info" id="system-info">
+                            <div class="info-item">
+                                <span class="label">CUDA:</span>
+                                <span class="value" id="cuda-status">Đang kiểm tra...</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Memory:</span>
+                                <span class="value" id="memory-status">Đang kiểm tra...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            
             <!-- Chat History Sidebar -->
             <aside class="chat-history-sidebar" id="chat-history-sidebar">
                 <div class="sidebar-header">

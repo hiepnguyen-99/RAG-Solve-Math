@@ -11,34 +11,16 @@ from dotenv import load_dotenv
 
 # Load .env
 load_dotenv()
-# Import các model RAG
+
+# Import model manager
 sys.path.append('./model')
-try:
-    from model.rag_4b import solve_question_4b  
-    from model.rag_15b import solve_question_15b
-    from model.rag_api import solve_question_api
-    models_available = True
-except ImportError as e:
-    print(f"Warning: Could not import RAG models: {e}")
-    models_available = False
-    # Fallback functions for testing
-    def solve_question_4b(question, k=3, ngrok_url="", rerank=False):
-        return f"Fallback response (4B) for: {question}", []
-    def solve_question_15b(question, k=3, rerank=False):
-        return f"Fallback response (1.5B) for: {question}", []
-    def solve_question_api(question, k=3, rerank=False):
-        return f"Fallback response (API) for: {question}", []
+from model.model_manager import model_manager
 
 app = Flask(__name__)
 app.secret_key = 'your-secret-key-here'
 
 # Cấu hình
 class Config:
-    MODELS = {
-        'qwen-4b': {'name': 'Qwen 4B', 'function': solve_question_4b},
-        'qwen-1.5b': {'name': 'Qwen 1.5B', 'function': solve_question_15b},
-        'model-api': {'name': 'Meta-llama 70B (API) ', 'function': solve_question_api}
-    }
     DEFAULT_MODEL = 'qwen-4b'
     DEFAULT_K_DOCUMENTS = 3
     DEFAULT_RERANK = False
@@ -90,7 +72,7 @@ def init_session():
 def index():
     init_session()
     return render_template('index.html', 
-                         models=Config.MODELS, 
+                         models=model_manager.get_available_models(), 
                          current_model=session.get('selected_model', Config.DEFAULT_MODEL),
                          rerank_enabled=session.get('rerank_enabled', Config.DEFAULT_RERANK))
 
@@ -130,30 +112,39 @@ def chat():
         
         # Xử lý với model đã chọn
         start_time = time.time()
-        model_config = Config.MODELS.get(selected_model)
         
-        if not model_config:
-            return jsonify({'error': 'Model không hợp lệ'}), 400
+        # Load model nếu chưa được load
+        try:
+            model_function = model_manager.get_model_function(selected_model)
+        except ValueError as e:
+            return jsonify({'error': str(e)}), 400
         
-        # Gọi function tương ứng
-        if selected_model == 'qwen-4b':
-            answer, source_docs = model_config['function'](
-                question=user_message, 
-                k=k_documents, 
-                rerank=rerank_enabled
-            )
-        elif selected_model == 'qwen-1.5b':
-            answer, source_docs = model_config['function'](
-                question=user_message, 
-                k=k_documents, 
-                rerank=rerank_enabled
-            )
-        else:
-            answer, source_docs = model_config['function'](
-                question=user_message, 
-                k=k_documents, 
-                rerank=rerank_enabled
-            )
+        # Gọi function với các tham số phù hợp
+        try:
+            if selected_model == 'qwen-4b':
+                # Qwen 4B có thể cần ngrok_url parameter
+                answer, source_docs = model_function(
+                    question=user_message, 
+                    k=k_documents, 
+                    rerank=rerank_enabled,
+                    ngrok_url=""  # Có thể được config từ environment
+                )
+            elif selected_model == 'gemini-api':
+                # Gemini có parameter rewrite
+                answer, source_docs = model_function(
+                    question=user_message,
+                    k=k_documents,
+                    rerank=rerank_enabled,
+                    rewrite=True  # Có thể được config từ UI
+                )
+            else:
+                answer, source_docs = model_function(
+                    question=user_message, 
+                    k=k_documents, 
+                    rerank=rerank_enabled
+                )
+        except Exception as e:
+            return jsonify({'error': f'Lỗi khi xử lý với model {selected_model}: {str(e)}'}), 500
         
         processing_time = round(time.time() - start_time, 2)
         
@@ -195,9 +186,92 @@ def get_history():
 @app.route('/api/models')
 def get_models():
     return jsonify({
-        'models': Config.MODELS,
-        'current': session.get('selected_model', Config.DEFAULT_MODEL)
+        'models': model_manager.get_available_models(),
+        'current': session.get('selected_model', Config.DEFAULT_MODEL),
+        'loaded_models': model_manager.get_loaded_models()
     })
+
+@app.route('/api/models/<model_id>/load', methods=['POST'])
+def load_model(model_id):
+    """Load một model cụ thể"""
+    try:
+        success = model_manager.load_model(model_id)
+        if success:
+            return jsonify({
+                'success': True, 
+                'message': f'Model {model_id} đã được load thành công',
+                'loaded_models': model_manager.get_loaded_models()
+            })
+        else:
+            return jsonify({
+                'success': False, 
+                'message': f'Không thể load model {model_id}, sử dụng fallback',
+                'loaded_models': model_manager.get_loaded_models()
+            })
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)}), 500
+
+@app.route('/api/models/<model_id>/unload', methods=['POST'])
+def unload_model(model_id):
+    """Unload một model để giải phóng bộ nhớ"""
+    try:
+        success = model_manager.unload_model(model_id)
+        if success:
+            return jsonify({
+                'success': True, 
+                'message': f'Model {model_id} đã được unload',
+                'loaded_models': model_manager.get_loaded_models()
+            })
+        else:
+            return jsonify({
+                'success': False, 
+                'message': f'Model {model_id} không được load hoặc không tồn tại'
+            })
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)}), 500
+
+@app.route('/api/models/unload-all', methods=['POST'])
+def unload_all_models():
+    """Unload tất cả models"""
+    try:
+        model_manager.unload_all_models()
+        return jsonify({
+            'success': True, 
+            'message': 'Đã unload tất cả models',
+            'loaded_models': []
+        })
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)}), 500
+
+@app.route('/api/system-info')
+def get_system_info():
+    """Lấy thông tin hệ thống"""
+    try:
+        import torch
+        import psutil
+        
+        system_info = {
+            'cuda_available': torch.cuda.is_available(),
+            'cuda_device_count': torch.cuda.device_count() if torch.cuda.is_available() else 0,
+            'memory_total': round(psutil.virtual_memory().total / (1024**3), 2),  # GB
+            'memory_available': round(psutil.virtual_memory().available / (1024**3), 2),  # GB
+            'memory_percent': psutil.virtual_memory().percent
+        }
+        
+        if torch.cuda.is_available():
+            try:
+                system_info['cuda_memory_total'] = round(torch.cuda.get_device_properties(0).total_memory / (1024**3), 2)  # GB
+                system_info['cuda_memory_allocated'] = round(torch.cuda.memory_allocated(0) / (1024**3), 2)  # GB
+                system_info['cuda_memory_reserved'] = round(torch.cuda.memory_reserved(0) / (1024**3), 2)  # GB
+            except:
+                system_info['cuda_memory_error'] = True
+        
+        return jsonify({
+            'success': True,
+            'system_info': system_info
+        })
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)}), 500
 
 @app.route('/api/documents')
 def get_documents():

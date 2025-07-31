@@ -16,6 +16,7 @@ class ChatApp {
         this.loadDocuments();
         this.checkRerankStatus();
         this.loadChatHistorySidebar();
+        this.initializeModelStatus();
     }
 
     initElements() {
@@ -74,6 +75,25 @@ class ChatApp {
         this.clearChat.addEventListener('click', () => this.handleClearChat());
         this.newChat.addEventListener('click', () => this.handleNewChat());
         this.chatHistoryToggle.addEventListener('click', () => this.toggleChatHistory());
+        
+        // Model management events
+        const modelManagementToggle = document.getElementById('model-management-toggle');
+        const modelManagementClose = document.getElementById('model-management-close');
+        const unloadAllBtn = document.getElementById('unload-all-models');
+        const refreshStatusBtn = document.getElementById('refresh-model-status');
+        
+        if (modelManagementToggle) {
+            modelManagementToggle.addEventListener('click', () => this.toggleModelManagement());
+        }
+        if (modelManagementClose) {
+            modelManagementClose.addEventListener('click', () => this.closeModelManagement());
+        }
+        if (unloadAllBtn) {
+            unloadAllBtn.addEventListener('click', () => this.unloadAllModels());
+        }
+        if (refreshStatusBtn) {
+            refreshStatusBtn.addEventListener('click', () => this.refreshModelStatus());
+        }
         
         // Sidebar events
         this.docsToggle.addEventListener('click', () => this.toggleSidebar());
@@ -439,9 +459,80 @@ class ChatApp {
     }
 
     // ===== Control Handlers =====
-    handleModelChange() {
+    async handleModelChange() {
         const selectedModel = this.modelSelect.value;
         this.modelInfo.textContent = this.getModelDisplayName(selectedModel);
+        
+        this.showModelLoadingState(selectedModel);
+        
+        try {
+            const response = await fetch(`/api/models/${selectedModel}/load`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                this.showToast(`Model ${this.getModelDisplayName(selectedModel)} đã sẵn sàng`, 'success');
+                this.updateModelStatus(selectedModel, 'loaded');
+            } else {
+                this.showToast(`Cảnh báo: ${result.message}`, 'warning');
+                this.updateModelStatus(selectedModel, 'fallback');
+            }
+            
+            this.updateLoadedModelsList(result.loaded_models || []);
+            
+        } catch (error) {
+            this.showToast('Lỗi khi load model', 'error');
+            this.updateModelStatus(selectedModel, 'error');
+        }
+    }
+    
+    showModelLoadingState(modelId) {
+        const option = this.modelSelect.querySelector(`option[value="${modelId}"]`);
+        if (option) {
+            option.textContent = `🔄 ${this.getModelDisplayName(modelId)} (Đang load...)`;
+        }
+        
+        this.modelSelect.disabled = true;
+    }
+    
+    updateModelStatus(modelId, status) {
+        const option = this.modelSelect.querySelector(`option[value="${modelId}"]`);
+        if (option) {
+            const baseName = this.getModelDisplayName(modelId);
+            switch (status) {
+                case 'loaded':
+                    option.textContent = `✅ ${baseName}`;
+                    break;
+                case 'fallback':
+                    option.textContent = `⚠️ ${baseName} (Fallback)`;
+                    break;
+                case 'error':
+                    option.textContent = `❌ ${baseName} (Lỗi)`;
+                    break;
+                default:
+                    option.textContent = baseName;
+            }
+        }
+        
+        // Re-enable model select
+        this.modelSelect.disabled = false;
+    }
+    
+    updateLoadedModelsList(loadedModels) {
+        const loadedInfo = document.getElementById('loaded-models-info');
+        if (loadedInfo) {
+            if (loadedModels.length > 0) {
+                loadedInfo.textContent = `Models đã load: ${loadedModels.length}`;
+                loadedInfo.style.display = 'block';
+            } else {
+                loadedInfo.style.display = 'none';
+            }
+        }
     }
 
     handleKChange() {
@@ -535,6 +626,220 @@ class ChatApp {
 
     closeChatHistory() {
         this.chatHistorySidebar.classList.remove('open');
+    }
+
+    // ===== Model Management Methods =====
+    toggleModelManagement() {
+        const sidebar = document.getElementById('model-management-sidebar');
+        sidebar.classList.toggle('open');
+        if (sidebar.classList.contains('open')) {
+            this.loadModelStatus();
+        }
+    }
+
+    closeModelManagement() {
+        const sidebar = document.getElementById('model-management-sidebar');
+        sidebar.classList.remove('open');
+    }
+
+    async loadModelStatus() {
+        try {
+            const response = await fetch('/api/models');
+            const data = await response.json();
+            
+            this.renderModelStatus(data.models, data.loaded_models || []);
+            await this.loadSystemInfo(); // Load system info khi mở model management
+        } catch (error) {
+            console.error('Error loading model status:', error);
+            this.showToast('Không thể tải trạng thái models', 'error');
+        }
+    }
+
+    renderModelStatus(models, loadedModels) {
+        const statusList = document.getElementById('model-status-list');
+        if (!statusList) return;
+
+        statusList.innerHTML = '';
+
+        Object.entries(models).forEach(([modelId, modelInfo]) => {
+            const isLoaded = loadedModels.includes(modelId);
+            
+            const modelItem = document.createElement('div');
+            modelItem.className = `model-item ${isLoaded ? 'loaded' : 'unloaded'}`;
+            
+            modelItem.innerHTML = `
+                <div class="model-info">
+                    <div class="model-name">
+                        <span class="status-indicator ${isLoaded ? 'loaded' : 'unloaded'}"></span>
+                        ${modelInfo.name}
+                    </div>
+                    <div class="model-status">
+                        ${isLoaded ? 'Đã load' : 'Chưa load'}
+                    </div>
+                </div>
+                <div class="model-actions">
+                    ${!isLoaded ? `
+                        <button class="model-action-btn load" onclick="app.loadModel('${modelId}')" title="Load model">
+                            <span class="material-icons">download</span>
+                        </button>
+                    ` : `
+                        <button class="model-action-btn unload" onclick="app.unloadModel('${modelId}')" title="Unload model">
+                            <span class="material-icons">delete</span>
+                        </button>
+                    `}
+                </div>
+            `;
+            
+            statusList.appendChild(modelItem);
+        });
+    }
+
+    async loadModel(modelId) {
+        try {
+            const response = await fetch(`/api/models/${modelId}/load`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                this.showToast(result.message, 'success');
+                this.loadModelStatus(); // Refresh status
+                this.updateLoadedModelsList(result.loaded_models || []);
+            } else {
+                this.showToast(result.message, 'warning');
+            }
+        } catch (error) {
+            console.error('Error loading model:', error);
+            this.showToast('Lỗi khi load model', 'error');
+        }
+    }
+
+    async unloadModel(modelId) {
+        if (!confirm(`Bạn có chắc chắn muốn unload model này?${modelId === this.modelSelect.value ? ' (Đây là model hiện tại)' : ''}`)) {
+            return;
+        }
+
+        try {
+            const response = await fetch(`/api/models/${modelId}/unload`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                this.showToast(result.message, 'success');
+                this.loadModelStatus(); // Refresh status
+                this.updateLoadedModelsList(result.loaded_models || []);
+                
+                // Reset model select display if this was the current model
+                if (modelId === this.modelSelect.value) {
+                    this.updateModelStatus(modelId, 'unloaded');
+                }
+            } else {
+                this.showToast(result.message, 'warning');
+            }
+        } catch (error) {
+            console.error('Error unloading model:', error);
+            this.showToast('Lỗi khi unload model', 'error');
+        }
+    }
+
+    async unloadAllModels() {
+        if (!confirm('Bạn có chắc chắn muốn unload tất cả models? Điều này sẽ giải phóng bộ nhớ nhưng các model sẽ cần được load lại khi sử dụng.')) {
+            return;
+        }
+
+        try {
+            const response = await fetch('/api/models/unload-all', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                this.showToast(result.message, 'success');
+                this.loadModelStatus(); // Refresh status
+                this.updateLoadedModelsList([]);
+                
+                // Reset all model select options
+                this.modelSelect.querySelectorAll('option').forEach(option => {
+                    const modelId = option.value;
+                    this.updateModelStatus(modelId, 'unloaded');
+                });
+            } else {
+                this.showToast(result.message, 'error');
+            }
+        } catch (error) {
+            console.error('Error unloading all models:', error);
+            this.showToast('Lỗi khi unload models', 'error');
+        }
+    }
+
+    async refreshModelStatus() {
+        await this.loadModelStatus();
+        this.showToast('Đã refresh trạng thái models', 'info');
+    }
+
+    async initializeModelStatus() {
+        try {
+            const response = await fetch('/api/models');
+            const data = await response.json();
+            
+            this.updateLoadedModelsList(data.loaded_models || []);
+            
+            // Update model select options to show initial status
+            Object.keys(data.models).forEach(modelId => {
+                const isLoaded = (data.loaded_models || []).includes(modelId);
+                this.updateModelStatus(modelId, isLoaded ? 'loaded' : 'unloaded');
+            });
+        } catch (error) {
+            console.error('Error initializing model status:', error);
+        }
+    }
+
+    async loadSystemInfo() {
+        try {
+            const response = await fetch('/api/system-info');
+            const data = await response.json();
+            
+            if (data.success) {
+                this.renderSystemInfo(data.system_info);
+            }
+        } catch (error) {
+            console.error('Error loading system info:', error);
+        }
+    }
+
+    renderSystemInfo(info) {
+        const cudaStatus = document.getElementById('cuda-status');
+        const memoryStatus = document.getElementById('memory-status');
+        
+        if (cudaStatus) {
+            const cudaText = info.cuda_available ? 
+                `Có (${info.cuda_device_count} GPU)` : 'Không có';
+            cudaStatus.textContent = cudaText;
+            cudaStatus.style.color = info.cuda_available ? 'var(--secondary-color)' : 'var(--text-secondary)';
+        }
+        
+        if (memoryStatus) {
+            const memoryText = `${info.memory_available}GB / ${info.memory_total}GB (${100-info.memory_percent}% free)`;
+            memoryStatus.textContent = memoryText;
+            
+            // Add CUDA memory info if available
+            if (info.cuda_available && !info.cuda_memory_error) {
+                memoryStatus.title = `CUDA Memory: ${info.cuda_memory_allocated}GB / ${info.cuda_memory_total}GB used`;
+            }
+        }
     }
 
     async loadChatHistorySidebar() {
@@ -748,7 +1053,8 @@ class ChatApp {
         const models = {
             'qwen-1.5b': 'Qwen 1.5B',
             'qwen-4b': 'Qwen 4B',
-            'model-api': 'Meta-llama 70B (API)'
+            'model-api': 'Meta-llama 70B (API)',
+            'gemini-api': 'Gemini (API)',
         };
         return models[modelKey] || modelKey;
     }
@@ -829,13 +1135,13 @@ class ChatApp {
 
 // ===== Application Initialization =====
 document.addEventListener('DOMContentLoaded', () => {
-    const app = new ChatApp();
+    window.app = new ChatApp(); // Make app globally accessible
     
     // Load saved state
-    app.loadSavedState();
+    window.app.loadSavedState();
     
     // Focus on input
-    app.userInput.focus();
+    window.app.userInput.focus();
     
     // Add some visual polish
     setTimeout(() => {

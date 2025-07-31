@@ -1377,3 +1377,233 @@ body {
         height: auto;
     }
 }
+
+/* ===== Model Management Sidebar ===== */
+.model-management-sidebar {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 350px;
+    height: 100vh;
+    background: var(--surface-color);
+    border-left: 1px solid var(--border-color);
+    z-index: 1000;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+}
+
+.model-management-sidebar.open {
+    right: 0;
+}
+
+.model-management-sidebar .sidebar-header {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.model-status-section,
+.model-actions-section,
+.model-info-section {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.model-status-section h4,
+.model-actions-section h4,
+.model-info-section h4 {
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.model-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.model-item {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.model-item.loaded {
+    border-color: var(--secondary-color);
+    background: rgba(52, 168, 83, 0.1);
+}
+
+.model-item.loading {
+    border-color: var(--primary-color);
+    background: rgba(26, 115, 232, 0.1);
+}
+
+.model-item.error {
+    border-color: #ea4335;
+    background: rgba(234, 67, 53, 0.1);
+}
+
+.model-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.model-name {
+    font-weight: 500;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+.model-status {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.model-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.model-action-btn {
+    padding: 0.25rem;
+    border: none;
+    border-radius: 4px;
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.model-action-btn:hover {
+    background: var(--surface-hover);
+    color: var(--text-primary);
+}
+
+.model-action-btn.load {
+    color: var(--primary-color);
+}
+
+.model-action-btn.unload {
+    color: #ea4335;
+}
+
+.action-btn {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--background-color);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.action-btn:hover {
+    background: var(--surface-hover);
+    border-color: var(--primary-color);
+}
+
+.action-btn:last-child {
+    margin-bottom: 0;
+}
+
+.system-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background: var(--background-color);
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.info-item .label {
+    font-weight: 500;
+    color: var(--text-primary);
+    font-size: 0.85rem;
+}
+
+.info-item .value {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.model-info small {
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+/* Status indicators */
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.status-indicator.loaded {
+    background: var(--secondary-color);
+}
+
+.status-indicator.loading {
+    background: var(--primary-color);
+    animation: pulse 1.5s infinite;
+}
+
+.status-indicator.error {
+    background: #ea4335;
+}
+
+.status-indicator.unloaded {
+    background: var(--text-muted);
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Button for toggle */
+.model-management-toggle {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--background-color);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.model-management-toggle:hover {
+    background: var(--surface-hover);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
