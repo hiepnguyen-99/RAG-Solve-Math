@@ -78,7 +78,7 @@ def solve_question_4b(question: str, k: int = 3, ngrok_url: str = "https://7df30
         print("Reranking requested but FlagEmbedding not available")
 
     # Lấy nội dung các tài liệu
-    context = "\n".join([doc.page_content for doc in docs])
+    context = "\n".join([doc.metadata.get("original_content")for doc in docs])
 
     # Áp dụng PromptTemplate để tạo prompt hoàn chỉnh
     prompt_text = prompt_template.format(context=context, question=question)
@@ -97,7 +97,7 @@ def solve_question_4b(question: str, k: int = 3, ngrok_url: str = "https://7df30
 
     # Trả kết quả kèm tài liệu nguồn
     source_docs = [{
-        "page_content": doc.page_content,
+        "page_content": doc.metadata.get("original_content"),
         "metadata": doc.metadata
     } for doc in docs]
 

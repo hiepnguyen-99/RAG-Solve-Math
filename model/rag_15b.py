@@ -107,7 +107,7 @@ def solve_question_15b(question: str, k: int = 3, rerank: bool = False):
     
     docs = [
     {
-        "page_content": doc.page_content,
+        "page_content": doc.metadata.get("original_content"),
         "metadata": doc.metadata
     }
     for doc in source_docs

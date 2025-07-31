@@ -42,19 +42,22 @@ def retrieve_docs_RAG_fuson(queries, k=5, rerank=False, vectorstore=None, rerank
 
 def reciprocal_rank_fusion(matrix: list[list], k=60, num_docs=5):
     fused_scores = {}
+    doc_map = {}
 
-    for query_result in matrix: 
+    for query_result in matrix:
         for rank, doc in enumerate(query_result):
-            doc_str = dumps(doc) 
-            if doc_str not in fused_scores:
-                fused_scores[doc_str] = 0
-            fused_scores[doc_str] += 1 / (rank + k)
+            doc_id = doc.page_content  # hoặc dùng hash(doc.page_content + str(doc.metadata))
+            if doc_id not in fused_scores:
+                fused_scores[doc_id] = 0
+                doc_map[doc_id] = doc  # Lưu lại object gốc
 
-    reranked_results = [
-        (loads(doc_str), score)
-        for doc_str, score in sorted(fused_scores.items(), key=lambda x: x[1], reverse=True)
-    ]
-    return [doc for doc, _ in reranked_results][:num_docs] 
+            fused_scores[doc_id] += 1 / (rank + k)
+
+    # Sắp xếp theo điểm giảm dần
+    reranked = sorted(fused_scores.items(), key=lambda x: x[1], reverse=True)
+
+    return [doc_map[doc_id] for doc_id, _ in reranked][:num_docs]
+
 
 # Example usage
 # dos.metadata.get("source") sẽ chứa đường dẫn đến file gốc
