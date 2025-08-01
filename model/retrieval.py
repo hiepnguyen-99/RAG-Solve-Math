@@ -17,7 +17,9 @@ def rerank_docs_with_model(query, docs, reranker, metadata_fields=["title", "sec
 
     scored_docs = list(zip(docs, scores))
     ranked_docs = sorted(scored_docs, key=lambda x: x[1], reverse=True)
-    return [doc for doc, _ in ranked_docs][:num_doc]
+    docs = [doc for doc, _ in ranked_docs]
+    num_doc = len(docs) if len(docs) < num_doc else num_doc
+    return docs[:num_doc]
 
 
 def retrieve_docs(query, k=5, rerank=False, vectorstore=None, rerank_model=None):

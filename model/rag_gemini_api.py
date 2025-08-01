@@ -52,7 +52,13 @@ def rewrite_query(query, k=5):
 
     Câu hỏi gốc: {query}
     """
-    response = model.generate_content(query_rewrite_prompt)
+    response = model.generate_content(query_rewrite_prompt,
+                                      generation_config={
+                                        "temperature": 0.9,        
+                                        "top_p": 0.8,              
+                                        "top_k": 40,   
+                                        }
+                                      )
     return response.text.strip().split('\n')
 
 
@@ -91,7 +97,13 @@ def solve_question_api_gemini(question: str, k: int = 3, rerank: bool = False, r
         context = "\n".join([doc.metadata.get("original_content") for doc in docs]) if docs else "Không tìm thấy tài liệu liên quan."
         
         # Gọi API Gemini
-        response = model.generate_content(promt_text(context, question))
+        response = model.generate_content(promt_text(context, question),
+                                          generation_config={
+                                                "temperature": 0.9,        
+                                                "top_p": 0.8,              
+                                                "top_k": 40,   
+                                                }
+                                          )
         answer = response.text if hasattr(response, 'text') else str(response)
 
         # Xử lý câu trả lời
