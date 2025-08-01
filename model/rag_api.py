@@ -120,10 +120,11 @@ def solve_question_api(question: str, k: int = 3, rerank: bool = False, rewrite:
                     print(f"Lỗi khi rerank với FlagReranker: {str(e)}")
             docs.append(doc)
 
-        docs = reciprocal_rank_fusion(docs, num_docs=k)
+        all_docs = [doc for sublist in docs for doc in sublist]
+        docs = reciprocal_rank_fusion([all_docs], num_docs=k)
 
         # Tạo context
-        context = "\n".join([doc.metadata.get("original_content", "") for doc in docs]).strip()
+        context = "\n".join([doc.metadata.get("original_content", "") if doc.metadata else "" for doc in docs]).strip()
 
         if not context:
             print("Không tìm thấy tài liệu liên quan. Chuyển sang trả lời bằng kiến thức mô hình.")
