@@ -2075,6 +2075,918 @@
           "Cụ thể: Chọn ma trận mở rộng, qua khử Gauss, luôn có ít nhất $n - r \\geq 1$ biến tự do → nghiệm không tầm thường (đpcm)."
         ]
       }
+    },
+    {
+      "question": "Chứng minh rằng tập hợp $W = \\{ (x, y, z) \\in \\mathbb{R}^3 \\mid x - 3y + 2z = 0 \\}$ là một không gian vector con của $\\mathbb{R}^3$.",
+      "answer": {
+        "steps": [
+          "Để chứng minh W là một không gian vector con của $\\mathbb{R}^3$, ta cần kiểm tra ba điều kiện:",
+          "1. Vector không có thuộc W không? Ta có vector không trong $\\mathbb{R}^3$ là $\\mathbf{0} = (0, 0, 0)$. Thay vào phương trình của W: $0 - 3(0) + 2(0) = 0$. Điều này đúng, vậy $\\mathbf{0} \\in W$.",
+          "2. W có đóng với phép cộng không? Lấy hai vector bất kỳ $\\mathbf{u} = (x_1, y_1, z_1)$ và $\\mathbf{v} = (x_2, y_2, z_2)$ thuộc W. Điều này có nghĩa là $x_1 - 3y_1 + 2z_1 = 0$ và $x_2 - 3y_2 + 2z_2 = 0$.",
+          "Xét tổng $\\mathbf{u} + \\mathbf{v} = (x_1+x_2, y_1+y_2, z_1+z_2)$. Ta kiểm tra xem tổng này có thuộc W không: $(x_1+x_2) - 3(y_1+y_2) + 2(z_1+z_2) = (x_1 - 3y_1 + 2z_1) + (x_2 - 3y_2 + 2z_2) = 0 + 0 = 0$. Vậy $\\mathbf{u} + \\mathbf{v} \\in W$.",
+          "3. W có đóng với phép nhân vô hướng không? Lấy một vector bất kỳ $\\mathbf{u} = (x, y, z) \\in W$ và một số thực bất kỳ $c$. Ta có $x - 3y + 2z = 0$.",
+          "Xét tích $c\\mathbf{u} = (cx, cy, cz)$. Ta kiểm tra xem tích này có thuộc W không: $(cx) - 3(cy) + 2(cz) = c(x - 3y + 2z) = c(0) = 0$. Vậy $c\\mathbf{u} \\in W$.",
+          "Kết luận: Vì W thỏa mãn cả ba điều kiện nên W là một không gian vector con của $\\mathbb{R}^3$."
+        ]
+      }
+    },
+    {
+      "question": "Biểu diễn vector $\\mathbf{v} = (9, 2, 7)$ thành một tổ hợp tuyến tính của các vector $\\mathbf{u}_1 = (1, 2, 1)$, $\\mathbf{u}_2 = (2, 9, 0)$ và $\\mathbf{u}_3 = (3, 3, 4)$ nếu có thể.",
+      "answer": {
+        "steps": [
+          "Ta cần tìm các số vô hướng $c_1, c_2, c_3$ sao cho: $c_1\\mathbf{u}_1 + c_2\\mathbf{u}_2 + c_3\\mathbf{u}_3 = \\mathbf{v}$.",
+          "Viết phương trình trên dưới dạng hệ phương trình tuyến tính: $\\begin{cases} c_1 + 2c_2 + 3c_3 = 9 \\\\ 2c_1 + 9c_2 + 3c_3 = 2 \\\\ c_1 + 0c_2 + 4c_3 = 7 \\end{cases}$",
+          "Lập ma trận hệ số mở rộng và khử Gauss: $\\begin{pmatrix} 1 & 2 & 3 & | & 9 \\\\ 2 & 9 & 3 & | & 2 \\\\ 1 & 0 & 4 & | & 7 \\end{pmatrix}$",
+          "Thực hiện các phép biến đổi hàng: $H_2 \\to H_2 - 2H_1$, $H_3 \\to H_3 - H_1$. Ta được: $\\begin{pmatrix} 1 & 2 & 3 & | & 9 \\\\ 0 & 5 & -3 & | & -16 \\\\ 0 & -2 & 1 & | & -2 \\end{pmatrix}$",
+          "Thực hiện phép biến đổi $H_2 \\to H_2 + 2H_3$: $\\begin{pmatrix} 1 & 2 & 3 & | & 9 \\\\ 0 & 1 & -1 & | & -20 \\\\ 0 & -2 & 1 & | & -2 \\end{pmatrix}$. Tiếp tục khử: $H_3 \\to H_3 + 2H_2$. Ta được: $\\begin{pmatrix} 1 & 2 & 3 & | & 9 \\\\ 0 & 1 & -1 & | & -20 \\\\ 0 & 0 & -1 & | & -42 \\end{pmatrix}$",
+          "Từ hàng cuối, ta có $-c_3 = -42 \\implies c_3 = 42$. Thay vào hàng hai: $c_2 - 42 = -20 \\implies c_2 = 22$. Thay vào hàng một: $c_1 + 2(22) + 3(42) = 9 \\implies c_1 + 44 + 126 = 9 \\implies c_1 = -161$.",
+          "Vậy, $\\mathbf{v}$ có thể được biểu diễn thành tổ hợp tuyến tính: $\\mathbf{v} = -161\\mathbf{u}_1 + 22\\mathbf{u}_2 + 42\\mathbf{u}_3$."
+        ]
+      }
+    },
+    {
+      "question": "Xét xem tập hợp các vector sau trong $\\mathbb{R}^3$ là độc lập tuyến tính hay phụ thuộc tuyến tính: $S = \\{ \\mathbf{v}_1=(1, 2, 3), \\mathbf{v}_2=(0, 1, 2), \\mathbf{v}_3=(-2, 0, 1) \\}$.",
+      "answer": {
+        "steps": [
+          "Để kiểm tra tính độc lập tuyến tính, ta xét phương trình $c_1\\mathbf{v}_1 + c_2\\mathbf{v}_2 + c_3\\mathbf{v}_3 = \\mathbf{0}$. Nếu hệ chỉ có nghiệm tầm thường $c_1=c_2=c_3=0$ thì tập hợp S độc lập tuyến tính.",
+          "Phương trình vector trên tương đương với hệ phương trình tuyến tính thuần nhất: $\\begin{cases} c_1 - 2c_3 = 0 \\\\ 2c_1 + c_2 = 0 \\\\ 3c_1 + 2c_2 + c_3 = 0 \\end{cases}$",
+          "Lập ma trận hệ số: $A = \\begin{pmatrix} 1 & 0 & -2 \\\\ 2 & 1 & 0 \\\\ 3 & 2 & 1 \\end{pmatrix}$.",
+          "Ta có thể kiểm tra tính độc lập tuyến tính bằng cách tính định thức của A. Nếu det(A) ≠ 0 thì các vector độc lập tuyến tính.",
+          "Tính định thức của A: det(A) = $1(1 \\cdot 1 - 0 \\cdot 2) - 0 + (-2)(2 \\cdot 2 - 1 \\cdot 3) = 1(1) - 2(4 - 3) = 1 - 2(1) = -1$.",
+          "Vì det(A) = -1 ≠ 0, hệ phương trình chỉ có nghiệm duy nhất là nghiệm tầm thường ($c_1=c_2=c_3=0$).",
+          "Kết luận: Tập hợp S là độc lập tuyến tính."
+        ]
+      }
+    },
+    {
+      "question": "Tìm một cơ sở và số chiều của không gian con W của $\\mathbb{R}^4$ được sinh bởi các vector: $\\mathbf{u}_1=(1, -4, -2, 1)$, $\\mathbf{u}_2=(-1, 5, 3, 0)$, $\\mathbf{u}_3=(2, -9, -5, 1)$.",
+      "answer": {
+        "steps": [
+          "Một cơ sở cho không gian con sinh bởi các vector này có thể được tìm thấy bằng cách xác định các vector độc lập tuyến tính trong tập hợp. Ta đặt các vector này thành các hàng (hoặc cột) của một ma trận và đưa về dạng bậc thang.",
+          "Lập ma trận A với các vector là hàng: $A = \\begin{pmatrix} 1 & -4 & -2 & 1 \\\\ -1 & 5 & 3 & 0 \\\\ 2 & -9 & -5 & 1 \\end{pmatrix}$.",
+          "Khử Gauss để đưa A về dạng bậc thang: $H_2 \\to H_2 + H_1$, $H_3 \\to H_3 - 2H_1$. Ta được: $\\begin{pmatrix} 1 & -4 & -2 & 1 \\\\ 0 & 1 & 1 & 1 \\\\ 0 & -1 & -1 & -1 \\end{pmatrix}$.",
+          "Tiếp tục thực hiện phép biến đổi $H_3 \\to H_3 + H_2$: $\\begin{pmatrix} 1 & -4 & -2 & 1 \\\\ 0 & 1 & 1 & 1 \\\\ 0 & 0 & 0 & 0 \\end{pmatrix}$.",
+          "Ma trận bậc thang thu được có hai hàng khác không. Các hàng này tạo thành một cơ sở cho không gian sinh bởi các hàng của A (cũng chính là W).",
+          "Một cơ sở của W là $B = \\{ (1, -4, -2, 1), (0, 1, 1, 1) \\}$.",
+          "Số chiều của W, ký hiệu là dim(W), bằng số vector trong một cơ sở của nó. Vậy dim(W) = 2."
+        ]
+      }
+    },
+    {
+      "question": "Cho cơ sở $B = \\{ \\mathbf{b}_1=(1, -1), \\mathbf{b}_2=(2, 1) \\}$ của $\\mathbb{R}^2$. Tìm tọa độ của vector $\\mathbf{x} = (1, 5)$ theo cơ sở B, ký hiệu là $[\\mathbf{x}]_B$.",
+      "answer": {
+        "steps": [
+          "Tọa độ $[\\mathbf{x}]_B = \\begin{pmatrix} c_1 \\\\ c_2 \\end{pmatrix}$ là các hệ số trong tổ hợp tuyến tính $\\mathbf{x} = c_1\\mathbf{b}_1 + c_2\\mathbf{b}_2$.",
+          "Ta có phương trình vector: $(1, 5) = c_1(1, -1) + c_2(2, 1) = (c_1 + 2c_2, -c_1 + c_2)$.",
+          "Điều này dẫn đến hệ phương trình tuyến tính: $\\begin{cases} c_1 + 2c_2 = 1 \\\\ -c_1 + c_2 = 5 \\end{cases}$",
+          "Cộng hai phương trình lại với nhau, ta được: $3c_2 = 6 \\implies c_2 = 2$.",
+          "Thay $c_2 = 2$ vào phương trình đầu tiên: $c_1 + 2(2) = 1 \\implies c_1 + 4 = 1 \\implies c_1 = -3$.",
+          "Vậy, tọa độ của $\\mathbf{x}$ theo cơ sở B là $(-3, 2)$.",
+          "Kết luận: $[\\mathbf{x}]_B = \\begin{pmatrix} -3 \\\\ 2 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm hạng của ma trận $A = \\begin{pmatrix} 1 & 2 & 0 & -1 \\\\ 2 & 6 & -3 & -3 \\\\ 3 & 10 & -6 & -5 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Hạng của một ma trận là số lượng hàng khác không (hoặc số phần tử trụ) trong dạng bậc thang của nó.",
+          "Ta sẽ đưa ma trận A về dạng bậc thang bằng các phép biến đổi hàng.",
+          "Thực hiện $H_2 \\to H_2 - 2H_1$ và $H_3 \\to H_3 - 3H_1$: $\\begin{pmatrix} 1 & 2 & 0 & -1 \\\\ 0 & 2 & -3 & -1 \\\\ 0 & 4 & -6 & -2 \\end{pmatrix}$.",
+          "Thực hiện $H_3 \\to H_3 - 2H_2$: $\\begin{pmatrix} 1 & 2 & 0 & -1 \\\\ 0 & 2 & -3 & -1 \\\\ 0 & 0 & 0 & 0 \\end{pmatrix}$.",
+          "Ma trận đã ở dạng bậc thang. Ta thấy có hai hàng khác không.",
+          "Kết luận: Hạng của ma trận A, ký hiệu là rank(A), là 2."
+        ]
+      }
+    },
+    {
+      "question": "Tìm một cơ sở cho không gian hạt nhân (null space) của ma trận $A = \\begin{pmatrix} 1 & 5 & 4 \\\\ 0 & 1 & 2 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Không gian hạt nhân của A, ký hiệu Nul(A), là tập hợp các vector $\\mathbf{x}$ sao cho $A\\mathbf{x} = \\mathbf{0}$.",
+          "Ta giải hệ phương trình $A\\mathbf{x} = \\mathbf{0}$: $\\begin{pmatrix} 1 & 5 & 4 \\\\ 0 & 1 & 2 \\end{pmatrix} \\begin{pmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}$.",
+          "Hệ phương trình tương ứng là: $\\begin{cases} x_1 + 5x_2 + 4x_3 = 0 \\\\ x_2 + 2x_3 = 0 \\end{cases}$",
+          "Ma trận đã ở dạng bậc thang. $x_1, x_2$ là các biến cơ sở, $x_3$ là biến tự do. Đặt $x_3 = t$ (với $t$ là tham số).",
+          "Từ phương trình thứ hai: $x_2 = -2x_3 = -2t$.",
+          "Thay vào phương trình thứ nhất: $x_1 + 5(-2t) + 4(t) = 0 \\implies x_1 - 10t + 4t = 0 \\implies x_1 = 6t$.",
+          "Vậy nghiệm tổng quát của hệ là $\\mathbf{x} = \\begin{pmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{pmatrix} = \\begin{pmatrix} 6t \\\\ -2t \\\\ t \\end{pmatrix} = t \\begin{pmatrix} 6 \\\\ -2 \\\\ 1 \\end{pmatrix}$.",
+          "Vector $\\begin{pmatrix} 6 \\\\ -2 \\\\ 1 \\end{pmatrix}$ sinh ra không gian hạt nhân. Do đó, nó tạo thành một cơ sở cho Nul(A).",
+          "Kết luận: Một cơ sở cho Nul(A) là $\\{ (6, -2, 1) \\}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm một cơ sở cho không gian cột (column space) của ma trận $A = \\begin{pmatrix} 1 & 1 & 2 \\\\ 2 & 2 & 4 \\\\ -1 & -1 & -2 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Không gian cột của A, ký hiệu Col(A), được sinh bởi các cột của A. Một cơ sở cho Col(A) bao gồm các cột trụ của A.",
+          "Ta đưa A về dạng bậc thang để xác định các cột trụ.",
+          "Thực hiện $H_2 \\to H_2 - 2H_1$ và $H_3 \\to H_3 + H_1$: $\\begin{pmatrix} 1 & 1 & 2 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{pmatrix}$.",
+          "Ma trận bậc thang có một phần tử trụ (pivot) ở cột 1.",
+          "Do đó, cột 1 của ma trận *gốc* A tạo thành một cơ sở cho không gian cột.",
+          "Kết luận: Một cơ sở cho Col(A) là $\\{ \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix} \\}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $P_2$ là không gian các đa thức có bậc nhỏ hơn hoặc bằng 2. Tập hợp $S = \\{1, t, t^2\\}$ có phải là một cơ sở của $P_2$ không? Giải thích.",
+      "answer": {
+        "steps": [
+          "Để S là một cơ sở của $P_2$, nó phải thỏa mãn hai điều kiện: S phải độc lập tuyến tính và S phải sinh ra $P_2$.",
+          "1. Kiểm tra tính độc lập tuyến tính: Xét phương trình $c_1(1) + c_2(t) + c_3(t^2) = 0$, trong đó 0 là đa thức không.",
+          "Phương trình này có nghĩa là đa thức $c_3t^2 + c_2t + c_1$ bằng 0 với mọi giá trị của t. Một đa thức chỉ bằng không với mọi t khi và chỉ khi tất cả các hệ số của nó bằng không.",
+          "Do đó, $c_1 = 0, c_2 = 0, c_3 = 0$. Vì phương trình chỉ có nghiệm tầm thường, tập S là độc lập tuyến tính.",
+          "2. Kiểm tra tính sinh: Một đa thức bất kỳ $p(t) = a_0 + a_1t + a_2t^2$ trong $P_2$ có thể được viết dưới dạng tổ hợp tuyến tính của các vector trong S: $p(t) = a_0(1) + a_1(t) + a_2(t^2)$.",
+          "Điều này cho thấy mọi đa thức trong $P_2$ đều có thể được tạo ra từ S. Vậy S sinh ra $P_2$.",
+          "Kết luận: Vì S vừa độc lập tuyến tính vừa sinh ra $P_2$, S là một cơ sở của $P_2$. Nó được gọi là cơ sở chính tắc của $P_2$."
+        ]
+      }
+    },
+    {
+      "question": "Tập hợp $W = \\{ (x, y) \\in \\mathbb{R}^2 \\mid y = x^2 \\}$ có phải là một không gian vector con của $\\mathbb{R}^2$ không? Chứng minh.",
+      "answer": {
+        "steps": [
+          "Ta cần kiểm tra ba điều kiện của một không gian con. Nếu một trong các điều kiện không thỏa mãn, W không phải là không gian con.",
+          "1. Kiểm tra vector không: Vector không trong $\\mathbb{R}^2$ là $(0, 0)$. Thay vào phương trình của W: $0 = 0^2$, điều này đúng. Vậy $\\mathbf{0} \\in W$.",
+          "2. Kiểm tra tính đóng với phép cộng: Lấy hai vector bất kỳ trong W, ví dụ $\\mathbf{u} = (1, 1)$ (vì $1 = 1^2$) và $\\mathbf{v} = (2, 4)$ (vì $4 = 2^2$).",
+          "Tính tổng $\\mathbf{u} + \\mathbf{v} = (1+2, 1+4) = (3, 5)$.",
+          "Kiểm tra xem tổng này có thuộc W không. Ta có $y=5$ và $x=3$. Liệu $y = x^2$ có đúng không? $5 \\neq 3^2 = 9$.",
+          "Vì tổng của hai vector trong W không nhất thiết thuộc W, nên W không đóng với phép cộng.",
+          "Kết luận: Vì W không thỏa mãn điều kiện đóng với phép cộng, W không phải là một không gian vector con của $\\mathbb{R}^2$."
+        ]
+      }
+    },
+    {
+      "question": "Xét xem tập hợp tất cả các dãy $(x_1, \\ldots, x_n) \\in \\mathbb{F}^n$ thỏa mãn điều kiện $x_1 + \\cdots + x_n = 0$ có lập thành F-không gian vector hay không đối với các phép toán thông thường.",
+      "answer": {
+        "steps": [
+          "Đây là một không gian vector con của $\\mathbb{F}^n$. Ta cần chứng minh 3 điều kiện:",
+          "1. Tập hợp khác rỗng: Vector không $(0, \\ldots, 0)$ thuộc tập hợp vì $0 + \\cdots + 0 = 0$.",
+          "2. Tính đóng với phép cộng: Giả sử $\\mathbf{x} = (x_1, \\ldots, x_n)$ và $\\mathbf{y} = (y_1, \\ldots, y_n)$ thuộc tập hợp. Khi đó, $\\sum x_i = 0$ và $\\sum y_i = 0$. Xét vector tổng $\\mathbf{x} + \\mathbf{y} = (x_1+y_1, \\ldots, x_n+y_n)$. Ta có tổng các thành phần là $\\sum(x_i+y_i) = \\sum x_i + \\sum y_i = 0 + 0 = 0$. Vậy $\\mathbf{x} + \\mathbf{y}$ cũng thuộc tập hợp.",
+          "3. Tính đóng với phép nhân vô hướng: Giả sử $\\mathbf{x} = (x_1, \\ldots, x_n)$ thuộc tập hợp và $c \\in \\mathbb{F}$. Khi đó, $\\sum x_i = 0$. Xét vector $c\\mathbf{x} = (cx_1, \\ldots, cx_n)$. Ta có tổng các thành phần là $\\sum(cx_i) = c(\\sum x_i) = c \\cdot 0 = 0$. Vậy $c\\mathbf{x}$ cũng thuộc tập hợp.",
+          "Kết luận: Tập hợp đã cho là một F-không gian vector."
+        ]
+      }
+    },
+    {
+      "question": "Xét xem tập hợp tất cả các dãy $(x_1, \\ldots, x_n) \\in \\mathbb{F}^n$ thỏa mãn điều kiện $x_1 + \\cdots + x_n = 1$ có lập thành F-không gian vector hay không đối với các phép toán thông thường.",
+      "answer": {
+        "steps": [
+          "Đây không phải là một không gian vector. Ta chỉ cần chỉ ra một điều kiện không thỏa mãn.",
+          "Cách 1: Không chứa vector không. Vector không của $\\mathbb{F}^n$ là $(0, \\ldots, 0)$. Tổng các thành phần của nó là $0 + \\cdots + 0 = 0 \\neq 1$. Do đó, vector không không thuộc tập hợp này.",
+          "Cách 2: Phép cộng không đóng. Giả sử $\\mathbf{x} = (1, 0, \\ldots, 0)$ và $\\mathbf{y} = (0, 1, \\ldots, 0)$ đều thuộc tập hợp (vì tổng các thành phần của chúng bằng 1).",
+          "Khi đó, $\\mathbf{x} + \\mathbf{y} = (1, 1, 0, \\ldots, 0)$. Tổng các thành phần của vector tổng là $1 + 1 + 0 + \\cdots + 0 = 2 \\neq 1$. Do đó, phép cộng không đóng trong tập hợp này.",
+          "Kết luận: Tập hợp đã cho không phải là một F-không gian vector."
+        ]
+      }
+    },
+    {
+      "question": "Xét xem tập hợp tất cả các dãy $(x_1, \\ldots, x_n) \\in \\mathbb{F}^n$ thỏa mãn điều kiện $x_1 = x_n = -1$ có lập thành F-không gian vector hay không đối với các phép toán thông thường.",
+      "answer": {
+        "steps": [
+          "Đây không phải là một không gian vector.",
+          "Lý do: Tập hợp này không chứa vector không. Vector không của $\\mathbb{F}^n$ là $(0, \\ldots, 0)$. Thành phần đầu tiên của nó là $x_1 = 0 \\neq -1$. Do đó, vector không không thuộc tập hợp.",
+          "Ngoài ra, phép cộng cũng không đóng. Ví dụ: cho $\\mathbf{x} = (-1, x_2, \\ldots, -1)$ và $\\mathbf{y} = (-1, y_2, \\ldots, -1)$ là hai vector thuộc tập hợp. Vector tổng $\\mathbf{x} + \\mathbf{y}$ sẽ có thành phần đầu tiên là $-1 + (-1) = -2 \\neq -1$. Do đó, tổng của hai vector không thuộc tập hợp.",
+          "Kết luận: Tập hợp đã cho không phải là một F-không gian vector."
+        ]
+      }
+    },
+    {
+      "question": "Xét xem tập hợp tất cả các dãy $(x_1, \\ldots, x_n) \\in \\mathbb{F}^n$ thỏa mãn điều kiện $x_1 = x_3 = x_5 = \\cdots$, $x_2 = x_4 = x_6 = \\cdots$ có lập thành F-không gian vector hay không đối với các phép toán thông thường.",
+      "answer": {
+        "steps": [
+          "Đây là một không gian vector. Ta kiểm tra 3 điều kiện:",
+          "1. Chứa vector không: Vector không $(0, \\ldots, 0)$ thỏa mãn điều kiện vì tất cả các thành phần ở vị trí lẻ đều bằng 0, và tất cả các thành phần ở vị trí chẵn đều bằng 0.",
+          "2. Tính đóng với phép cộng: Giả sử $\\mathbf{x}=(x_i)$ và $\\mathbf{y}=(y_i)$ thuộc tập hợp. Tức là $x_1=x_3=\\dots$ và $x_2=x_4=\\dots$; tương tự $y_1=y_3=\\dots$ và $y_2=y_4=\\dots$. Xét tổng $\\mathbf{z} = \\mathbf{x} + \\mathbf{y}$ với $z_i = x_i+y_i$. Ta có $z_1 = x_1+y_1, z_3=x_3+y_3, \\dots$. Vì $x_1=x_3$ và $y_1=y_3$ nên $z_1=z_3$. Tương tự cho các vị trí lẻ khác và các vị trí chẵn. Vậy phép cộng là đóng.",
+          "3. Tính đóng với phép nhân vô hướng: Giả sử $\\mathbf{x}=(x_i)$ thuộc tập hợp và $c \\in \\mathbb{F}$. Xét $c\\mathbf{x} = (cx_i)$. Ta có $cx_1, cx_3, \\dots$. Vì $x_1=x_3=\\dots$ nên $cx_1 = cx_3 = \\dots$. Tương tự cho các vị trí chẵn. Vậy phép nhân vô hướng là đóng.",
+          "Kết luận: Tập hợp đã cho là một F-không gian vector."
+        ]
+      }
+    },
+    {
+      "question": "Xét xem tập hợp các ma trận vuông $(a_{ij})_{n\\times n}$ đối xứng cỡ n, nghĩa là các ma trận thỏa mãn $a_{ij} = a_{ji}$ với $1 \\leq i, j \\leq n$, có lập thành F-không gian vector hay không đối với các phép toán thông thường.",
+      "answer": {
+        "steps": [
+          "Đây là một không gian vector. Ta kiểm tra 3 điều kiện cho không gian con:",
+          "1. Chứa vector không: Vector không trong không gian ma trận là ma trận không (mọi phần tử bằng 0). Ma trận này rõ ràng đối xứng vì $a_{ij} = 0 = a_{ji}$ với mọi $i, j$.",
+          "2. Tính đóng với phép cộng: Giả sử $A = (a_{ij})$ và $B = (b_{ij})$ là hai ma trận đối xứng. Tức là $a_{ij}=a_{ji}$ và $b_{ij}=b_{ji}$. Xét ma trận tổng $C = A+B$ có phần tử $c_{ij} = a_{ij} + b_{ij}$. Ta có $c_{ji} = a_{ji} + b_{ji} = a_{ij} + b_{ij} = c_{ij}$. Vậy $C$ cũng là ma trận đối xứng.",
+          "3. Tính đóng với phép nhân vô hướng: Giả sử $A=(a_{ij})$ là ma trận đối xứng và $k \\in \\mathbb{F}$. Xét ma trận $D = kA$ có phần tử $d_{ij} = k \\cdot a_{ij}$. Ta có $d_{ji} = k \\cdot a_{ji} = k \\cdot a_{ij} = d_{ij}$. Vậy $D$ cũng là ma trận đối xứng.",
+          "Kết luận: Tập hợp các ma trận đối xứng cỡ n là một F-không gian vector."
+        ]
+      }
+    },
+    {
+      "question": "Tập hợp tất cả các dãy $(x_1, \\ldots, x_n) \\in \\mathbb{R}^n$ với tất cả các thành phần $x_1, \\ldots, x_n$ đều nguyên có lập thành một R-không gian vector hay không?",
+      "answer": {
+        "steps": [
+          "Không, tập hợp này không lập thành một R-không gian vector.",
+          "Lý do là vì tập hợp này không đóng đối với phép nhân vô hướng.",
+          "Để chứng minh, ta lấy một vector bất kỳ trong tập hợp, ví dụ $\\mathbf{x} = (1, 2, \\ldots, n)$. Tất cả các thành phần của $\\mathbf{x}$ đều là số nguyên, vậy $\\mathbf{x}$ thuộc tập hợp.",
+          "Bây giờ, ta chọn một vô hướng là số thực nhưng không phải số nguyên, ví dụ $c = \\sqrt{2} \\in \\mathbb{R}$.",
+          "Thực hiện phép nhân vô hướng: $c\\mathbf{x} = \\sqrt{2} \\cdot (1, 2, \\ldots, n) = (\\sqrt{2}, 2\\sqrt{2}, \\ldots, n\\sqrt{2})$.",
+          "Vector kết quả có các thành phần không phải là số nguyên, do đó nó không thuộc tập hợp ban đầu.",
+          "Kết luận: Vì phép nhân vô hướng không đóng, đây không phải là một R-không gian vector."
+        ]
+      }
+    },
+    {
+      "question": "Với các phép toán thông thường, $\\mathbb{Q}$ có là một R-không gian vector hay không? $\\mathbb{R}$ có là một C-không gian vector hay không?",
+      "answer": {
+        "steps": [
+          "Cả hai đều không phải là không gian vector.",
+          "Trường hợp 1: $\\mathbb{Q}$ không phải là một R-không gian vector.",
+          "Lý do là phép nhân vô hướng không đóng. Vô hướng thuộc $\\mathbb{R}$ và vector thuộc $\\mathbb{Q}$.",
+          "Ví dụ: Chọn vector $x = 1 \\in \\mathbb{Q}$ và vô hướng $c = \\sqrt{2} \\in \\mathbb{R}$.",
+          "Tích của chúng là $c \\cdot x = \\sqrt{2} \\cdot 1 = \\sqrt{2}$.",
+          "Kết quả $\\sqrt{2}$ là một số vô tỷ, do đó $\\sqrt{2} \\notin \\mathbb{Q}$.",
+          "Trường hợp 2: $\\mathbb{R}$ không phải là một C-không gian vector.",
+          "Lý do cũng là vì phép nhân vô hướng không đóng. Vô hướng thuộc $\\mathbb{C}$ và vector thuộc $\\mathbb{R}$.",
+          "Ví dụ: Chọn vector $x = 1 \\in \\mathbb{R}$ và vô hướng $c = i \\in \\mathbb{C}$ (với $i$ là đơn vị ảo).",
+          "Tích của chúng là $c \\cdot x = i \\cdot 1 = i$.",
+          "Kết quả $i$ là một số phức không phải số thực, do đó $i \\notin \\mathbb{R}$."
+        ]
+      }
+    },
+    {
+      "question": "Trong $\\mathbb{R}^2$, cho hai cơ sở $B = \\{ \\mathbf{b}_1=(1, 2), \\mathbf{b}_2=(3, 5) \\}$ và $C = \\{ \\mathbf{c}_1=(1, -1), \\mathbf{c}_2=(1, -2) \\}$. Tìm ma trận chuyển cơ sở từ B sang C, ký hiệu là $P_{C \\leftarrow B}$.",
+      "answer": {
+        "steps": [
+          "Ma trận chuyển cơ sở $P_{C \\leftarrow B}$ biến đổi tọa độ theo cơ sở B thành tọa độ theo cơ sở C. Ta có thể tìm nó bằng cách giải các phương trình $\\mathbf{b}_1 = p_{11}\\mathbf{c}_1 + p_{21}\\mathbf{c}_2$ và $\\mathbf{b}_2 = p_{12}\\mathbf{c}_1 + p_{22}\\mathbf{c}_2$.",
+          "Một phương pháp hiệu quả hơn là dùng phép khử Gauss-Jordan trên ma trận mở rộng $[C | B] = [\\mathbf{c}_1 \\, \\mathbf{c}_2 | \\mathbf{b}_1 \\, \\mathbf{b}_2]$.",
+          "Lập ma trận mở rộng: $\\begin{pmatrix} 1 & 1 & | & 1 & 3 \\\\ -1 & -2 & | & 2 & 5 \\end{pmatrix}$.",
+          "Ta cần biến đổi vế trái thành ma trận đơn vị $I$. Thực hiện phép biến đổi hàng $H_2 \\to H_2 + H_1$: $\\begin{pmatrix} 1 & 1 & | & 1 & 3 \\\\ 0 & -1 & | & 3 & 8 \\end{pmatrix}$.",
+          "Thực hiện $H_2 \\to -H_2$: $\\begin{pmatrix} 1 & 1 & | & 1 & 3 \\\\ 0 & 1 & | & -3 & -8 \\end{pmatrix}$.",
+          "Thực hiện $H_1 \\to H_1 - H_2$: $\\begin{pmatrix} 1 & 0 & | & 4 & 11 \\\\ 0 & 1 & | & -3 & -8 \\end{pmatrix}$.",
+          "Vế trái đã là ma trận đơn vị. Vế phải chính là ma trận chuyển cơ sở cần tìm.",
+          "Kết quả: $P_{C \\leftarrow B} = \\begin{pmatrix} 4 & 11 \\\\ -3 & -8 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{pmatrix} 1 & -2 & 0 & 4 \\\\ 3 & -6 & 1 & 13 \\end{pmatrix}$. Tìm số chiều của không gian cột (Col A) và không gian hạt nhân (Nul A), sau đó kiểm chứng Định lý về hạng (Rank Theorem).",
+      "answer": {
+        "steps": [
+          "Định lý về hạng phát biểu rằng: rank(A) + dim(Nul A) = n, trong đó n là số cột của A.",
+          "Đầu tiên, ta tìm rank(A) = dim(Col A) bằng cách đưa A về dạng bậc thang. Thực hiện $H_2 \\to H_2 - 3H_1$: $\\begin{pmatrix} 1 & -2 & 0 & 4 \\\\ 0 & 0 & 1 & 1 \\end{pmatrix}$.",
+          "Ma trận bậc thang có 2 hàng khác không, vậy rank(A) = 2. Do đó, dim(Col A) = 2.",
+          "Tiếp theo, tìm dim(Nul A). Ta giải hệ $A\\mathbf{x} = \\mathbf{0}$ từ dạng bậc thang: $\\begin{cases} x_1 - 2x_2 + 4x_4 = 0 \\\\ x_3 + x_4 = 0 \\end{cases}$.",
+          "Các biến cơ sở là $x_1, x_3$. Các biến tự do là $x_2, x_4$. Đặt $x_2 = s$ và $x_4 = t$.",
+          "Ta có $x_3 = -x_4 = -t$ và $x_1 = 2x_2 - 4x_4 = 2s - 4t$.",
+          "Nghiệm tổng quát là $\\mathbf{x} = \\begin{pmatrix} 2s-4t \\\\ s \\\\ -t \\\\ t \\end{pmatrix} = s\\begin{pmatrix} 2 \\\\ 1 \\\\ 0 \\\\ 0 \\end{pmatrix} + t\\begin{pmatrix} -4 \\\\ 0 \\\\ -1 \\\\ 1 \\end{pmatrix}$.",
+          "Một cơ sở của Nul A là $\\{ (2, 1, 0, 0), (-4, 0, -1, 1) \\}$. Vậy dim(Nul A) = 2.",
+          "Kiểm chứng định lý: rank(A) + dim(Nul A) = 2 + 2 = 4. Số cột của A là n=4. Vậy định lý được kiểm chứng: 4 = 4."
+        ]
+      }
+    },
+    {
+      "question": "Tìm một cơ sở cho không gian hàng (Row space) của ma trận $A = \\begin{pmatrix} 1 & -3 & 2 \\\\ -2 & 6 & -4 \\\\ 3 & -7 & 8 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Không gian hàng của A, ký hiệu Row(A), được sinh bởi các vector hàng của A. Một cơ sở cho không gian hàng có thể được tìm bằng cách đưa ma trận về dạng bậc thang.",
+          "Các hàng khác không trong ma trận bậc thang tạo thành một cơ sở cho không gian hàng.",
+          "Thực hiện các phép biến đổi hàng: $H_2 \\to H_2 + 2H_1$, $H_3 \\to H_3 - 3H_1$. Ta được: $\\begin{pmatrix} 1 & -3 & 2 \\\\ 0 & 0 & 0 \\\\ 0 & 2 & 2 \\end{pmatrix}$.",
+          "Hoán đổi hàng 2 và hàng 3: $\\begin{pmatrix} 1 & -3 & 2 \\\\ 0 & 2 & 2 \\\\ 0 & 0 & 0 \\end{pmatrix}$.",
+          "Ma trận đã ở dạng bậc thang. Các hàng khác không là $(1, -3, 2)$ và $(0, 2, 2)$.",
+          "Kết luận: Một cơ sở cho không gian hàng của A là $\\{ (1, -3, 2), (0, 2, 2) \\}$."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng tập hợp $S_{2 \\times 2}$ gồm tất cả các ma trận đối xứng cấp $2 \\times 2$ là một không gian vector con của không gian các ma trận vuông $M_{2 \\times 2}$.",
+      "answer": {
+        "steps": [
+          "Một ma trận A cấp $2 \\times 2$ được gọi là đối xứng nếu $A^T = A$. Ta cần kiểm tra ba điều kiện của không gian con.",
+          "1. Vector không (ma trận không) có thuộc $S_{2 \\times 2}$ không? Ma trận không là $\\mathbf{0} = \\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$. Ta có $\\mathbf{0}^T = \\mathbf{0}$, vậy ma trận không là ma trận đối xứng. $\\mathbf{0} \\in S_{2 \\times 2}$.",
+          "2. $S_{2 \\times 2}$ có đóng với phép cộng không? Lấy hai ma trận đối xứng bất kỳ $A, B \\in S_{2 \\times 2}$. Ta có $A^T = A$ và $B^T = B$.",
+          "Xét tổng $A+B$. Ta có $(A+B)^T = A^T + B^T = A+B$. Vậy $A+B$ cũng là một ma trận đối xứng. Do đó, $A+B \\in S_{2 \\times 2}$.",
+          "3. $S_{2 \\times 2}$ có đóng với phép nhân vô hướng không? Lấy ma trận đối xứng $A \\in S_{2 \\times 2}$ và một số thực c.",
+          "Xét tích $cA$. Ta có $(cA)^T = cA^T = cA$. Vậy $cA$ cũng là một ma trận đối xứng. Do đó, $cA \\in S_{2 \\times 2}$.",
+          "Kết luận: Vì $S_{2 \\times 2}$ thỏa mãn cả ba điều kiện nên nó là một không gian con của $M_{2 \\times 2}$."
+        ]
+      }
+    },
+    {
+      "question": "Trong không gian đa thức $P_2$, xét xem tập hợp các đa thức sau có độc lập tuyến tính không: $S = \\{ p_1(t) = 1 - t, p_2(t) = t + t^2, p_3(t) = 1 + t^2 \\}$.",
+      "answer": {
+        "steps": [
+          "Ta xét phương trình tổ hợp tuyến tính bằng đa thức không: $c_1 p_1(t) + c_2 p_2(t) + c_3 p_3(t) = 0$.",
+          "Thay các đa thức vào: $c_1(1 - t) + c_2(t + t^2) + c_3(1 + t^2) = 0$.",
+          "Nhóm các hệ số theo lũy thừa của t: $(c_1 + c_3) + (-c_1 + c_2)t + (c_2 + c_3)t^2 = 0$.",
+          "Để một đa thức bằng không với mọi t, tất cả các hệ số của nó phải bằng không. Điều này cho ta một hệ phương trình tuyến tính thuần nhất: $\\begin{cases} c_1 + c_3 = 0 \\\\ -c_1 + c_2 = 0 \\\\ c_2 + c_3 = 0 \\end{cases}$",
+          "Từ phương trình 1, $c_1 = -c_3$. Từ phương trình 2, $c_1 = c_2$. Suy ra $c_2 = -c_3$.",
+          "Thay vào phương trình 3: $(-c_3) + c_3 = 0$, hay $0=0$. Điều này cho thấy hệ có vô số nghiệm (không chỉ nghiệm tầm thường).",
+          "Ví dụ, chọn $c_3=1$, ta được $c_1=-1$ và $c_2=-1$. Ta có thể kiểm tra: $-1(1-t) -1(t+t^2) + 1(1+t^2) = -1+t-t-t^2+1+t^2 = 0$.",
+          "Vì tồn tại một tổ hợp tuyến tính không tầm thường bằng không, tập S là phụ thuộc tuyến tính."
+        ]
+      }
+    },
+    {
+      "question": "Tập hợp các vector $S = \\{(1, 0, 0), (0, 1, 0), (1, 1, 0)\\}$ có phải là một cơ sở của $\\mathbb{R}^3$ không? Giải thích.",
+      "answer": {
+        "steps": [
+          "Một tập hợp là cơ sở của $\\mathbb{R}^3$ nếu nó là tập hợp độc lập tuyến tính và sinh ra $\\mathbb{R}^3$. Một cách kiểm tra nhanh là số lượng vector.",
+          "Số chiều của $\\mathbb{R}^3$ là 3. Bất kỳ cơ sở nào của $\\mathbb{R}^3$ cũng phải có đúng 3 vector.",
+          "Tập S có 3 vector, vì vậy nó có thể là một cơ sở. Ta cần kiểm tra xem nó có sinh ra $\\mathbb{R}^3$ không, điều này tương đương với việc kiểm tra chúng có độc lập tuyến tính không.",
+          "Để kiểm tra tính độc lập tuyến tính, ta nhận thấy rằng vector thứ ba là tổng của hai vector đầu tiên: $(1, 1, 0) = (1, 0, 0) + (0, 1, 0)$.",
+          "Do đó, tập S là phụ thuộc tuyến tính. Một tập hợp phụ thuộc tuyến tính không thể là một cơ sở.",
+          "Ngoài ra, vì các vector này phụ thuộc tuyến tính, không gian sinh bởi chúng (span S) chỉ có số chiều là 2 (là mặt phẳng xy). Chúng không thể sinh ra toàn bộ không gian $\\mathbb{R}^3$.",
+          "Kết luận: Tập hợp S không phải là một cơ sở của $\\mathbb{R}^3$ vì nó là một tập hợp phụ thuộc tuyến tính."
+        ]
+      }
+    },
+    {
+      "question": "Tìm một cơ sở cho không gian giao của hai không gian con sau của $\\mathbb{R}^3$: $W_1 = \\text{span}\\{(1, 1, 0), (0, 1, 1)\\}$ và $W_2 = \\text{span}\\{(1, 0, 1), (0, 1, 0)\\}$.",
+      "answer": {
+        "steps": [
+          "Một vector $\\mathbf{v}$ thuộc $W_1$ nếu $\\mathbf{v} = a(1, 1, 0) + b(0, 1, 1) = (a, a+b, b)$ với $a,b \\in \\mathbb{R}$.",
+          "Một vector $\\mathbf{v}$ thuộc $W_2$ nếu $\\mathbf{v} = c(1, 0, 1) + d(0, 1, 0) = (c, d, c)$ với $c,d \\in \\mathbb{R}$.",
+          "Một vector $\\mathbf{v}$ thuộc giao $W_1 \\cap W_2$ nếu nó có thể được biểu diễn theo cả hai cách. Ta cho hai biểu diễn bằng nhau: $(a, a+b, b) = (c, d, c)$.",
+          "Điều này dẫn đến hệ phương trình: $\\begin{cases} a = c \\\\ a+b = d \\\\ b = c \\end{cases}$",
+          "Từ phương trình 1 và 3, ta có $a = b = c$. Thay vào phương trình 2, ta có $d = a+b = c+c = 2c$.",
+          "Bây giờ, ta biểu diễn vector trong không gian giao bằng một trong hai cách, ví dụ dùng $W_2$. Thay $d=2c$ vào biểu diễn của $W_2$: $\\mathbf{v} = (c, 2c, c) = c(1, 2, 1)$.",
+          "Điều này cho thấy mọi vector trong không gian giao $W_1 \\cap W_2$ đều là bội số của vector $(1, 2, 1)$.",
+          "Kết luận: Một cơ sở cho không gian giao $W_1 \\cap W_2$ là $\\{ (1, 2, 1) \\}$."
+        ]
+      }
+    },
+    {
+      "question": "Sử dụng ma trận chuyển cơ sở đã tìm ở bài 1, $P_{C \\leftarrow B} = \\begin{pmatrix} 4 & 11 \\\\ -3 & -8 \\end{pmatrix}$, hãy tìm tọa độ theo cơ sở C của vector $\\mathbf{x}$ biết rằng tọa độ của nó theo cơ sở B là $[\\mathbf{x}]_B = \\begin{pmatrix} 2 \\\\ -1 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Ta có công thức liên hệ giữa tọa độ của một vector theo hai cơ sở B và C là: $[\\mathbf{x}]_C = P_{C \\leftarrow B} [\\mathbf{x}]_B$.",
+          "Ta đã được cho ma trận chuyển cơ sở $P_{C \\leftarrow B}$ và tọa độ $[\\mathbf{x}]_B$.",
+          "Thay các giá trị đã cho vào công thức: $[\\mathbf{x}]_C = \\begin{pmatrix} 4 & 11 \\\\ -3 & -8 \\end{pmatrix} \\begin{pmatrix} 2 \\\\ -1 \\end{pmatrix}$.",
+          "Thực hiện phép nhân ma trận: $[\\mathbf{x}]_C = \\begin{pmatrix} 4(2) + 11(-1) \\\\ -3(2) + (-8)(-1) \\end{pmatrix}$.",
+          "Tính toán các phần tử: $[\\mathbf{x}]_C = \\begin{pmatrix} 8 - 11 \\\\ -6 + 8 \\end{pmatrix} = \\begin{pmatrix} -3 \\\\ 2 \\end{pmatrix}$.",
+          "Kết luận: Tọa độ của vector $\\mathbf{x}$ theo cơ sở C là $[\\mathbf{x}]_C = \\begin{pmatrix} -3 \\\\ 2 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho H là một không gian con của $\\mathbb{R}^4$ và có số chiều dim(H) = 3. Tập hợp $S = \\{\\mathbf{v}_1, \\mathbf{v}_2, \\mathbf{v}_3\\}$ gồm ba vector trong H. Để kết luận S là một cơ sở của H, ta chỉ cần kiểm tra điều kiện nào? Tại sao?",
+      "answer": {
+        "steps": [
+          "Một tập hợp là cơ sở cho không gian con H nếu nó độc lập tuyến tính và sinh ra H.",
+          "Ta biết số chiều của H là 3. Điều này có nghĩa là bất kỳ cơ sở nào của H cũng phải có đúng 3 vector.",
+          "Tập hợp S đã cho có đúng 3 vector, bằng với số chiều của H.",
+          "Có một định lý quan trọng trong đại số tuyến tính (Định lý về cơ sở): Nếu một không gian vector V có số chiều là p, thì:",
+          "  a) Bất kỳ tập hợp độc lập tuyến tính nào có p phần tử trong V cũng là một cơ sở của V.",
+          "  b) Bất kỳ tập hợp nào có p phần tử sinh ra V cũng là một cơ sở của V.",
+          "Áp dụng định lý này cho trường hợp của chúng ta (với V=H, p=3), vì S có đúng 3 vector, ta chỉ cần kiểm tra một trong hai điều kiện.",
+          "Thông thường, việc kiểm tra tính độc lập tuyến tính dễ dàng hơn về mặt tính toán so với việc chứng minh tập hợp sinh ra toàn bộ không gian.",
+          "Kết luận: Ta chỉ cần kiểm tra tập hợp $S = \\{\\mathbf{v}_1, \\mathbf{v}_2, \\mathbf{v}_3\\}$ có độc lập tuyến tính hay không. Nếu có, nó tự động là một cơ sở cho H."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng tập W gồm tất cả các ma trận tam giác trên cấp $2 \\times 2$ là một không gian con của $M_{2 \\times 2}$ và tìm một cơ sở cũng như số chiều của nó.",
+      "answer": {
+        "steps": [
+          "Một ma trận tam giác trên cấp $2 \\times 2$ có dạng $\\begin{pmatrix} a & b \\\\ 0 & c \\end{pmatrix}$.",
+          "Bước 1: Chứng minh W là không gian con.",
+          "  a) Ma trận không $\\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$ có dạng tam giác trên (với a=b=c=0), vậy $\\mathbf{0} \\in W$.",
+          "  b) Lấy hai ma trận tam giác trên $A = \\begin{pmatrix} a_1 & b_1 \\\\ 0 & c_1 \\end{pmatrix}$ và $B = \\begin{pmatrix} a_2 & b_2 \\\\ 0 & c_2 \\end{pmatrix}$. Tổng $A+B = \\begin{pmatrix} a_1+a_2 & b_1+b_2 \\\\ 0 & c_1+c_2 \\end{pmatrix}$ cũng là ma trận tam giác trên. W đóng với phép cộng.",
+          "  c) Lấy ma trận tam giác trên A và số thực k. Tích $kA = \\begin{pmatrix} ka_1 & kb_1 \\\\ 0 & kc_1 \\end{pmatrix}$ cũng là ma trận tam giác trên. W đóng với phép nhân vô hướng. Vậy W là không gian con.",
+          "Bước 2: Tìm một cơ sở và số chiều.",
+          "Một ma trận bất kỳ trong W có thể được viết là: $\\begin{pmatrix} a & b \\\\ 0 & c \\end{pmatrix} = a\\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix} + b\\begin{pmatrix} 0 & 1 \\\\ 0 & 0 \\end{pmatrix} + c\\begin{pmatrix} 0 & 0 \\\\ 0 & 1 \\end{pmatrix}$.",
+          "Điều này cho thấy tập hợp các ma trận $B = \\left\\{ \\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}, \\begin{pmatrix} 0 & 1 \\\\ 0 & 0 \\end{pmatrix}, \\begin{pmatrix} 0 & 0 \\\\ 0 & 1 \\end{pmatrix} \\right\\}$ sinh ra W.",
+          "Dễ dàng thấy rằng các ma trận này độc lập tuyến tính (không có ma trận nào là tổ hợp tuyến tính của các ma trận còn lại).",
+          "Do đó, B là một cơ sở của W.",
+          "Số chiều của W là số vector (ma trận) trong cơ sở của nó. Vậy dim(W) = 3."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng không gian các ma trận vuông $M_{n \\times n}$ là tổng trực tiếp của không gian con các ma trận đối xứng (U) và không gian con các ma trận phản đối xứng (W). Tức là, $M_{n \\times n} = U \\oplus W$.",
+      "answer": {
+        "steps": [
+          "Để chứng minh $M_{n \\times n} = U \\oplus W$, ta cần chứng minh hai điều: 1) $M_{n \\times n} = U + W$ và 2) $U \\cap W = \\{\\mathbf{0}\\}$ (với $\\mathbf{0}$ là ma trận không).",
+          "Chứng minh 1) $M_{n \\times n} = U + W$: Ta cần chỉ ra rằng mọi ma trận $A \\in M_{n \\times n}$ đều có thể viết thành tổng của một ma trận đối xứng và một ma trận phản đối xứng.",
+          "Với mọi ma trận A, ta có thể viết: $A = \\frac{1}{2}(A + A^T) + \\frac{1}{2}(A - A^T)$.",
+          "Đặt $S = \\frac{1}{2}(A + A^T)$ và $K = \\frac{1}{2}(A - A^T)$. Ta kiểm tra tính chất của S và K.",
+          "Xét $S^T = \\left(\\frac{1}{2}(A + A^T)\\right)^T = \\frac{1}{2}(A^T + (A^T)^T) = \\frac{1}{2}(A^T + A) = S$. Vậy S là ma trận đối xứng, $S \\in U$.",
+          "Xét $K^T = \\left(\\frac{1}{2}(A - A^T)\\right)^T = \\frac{1}{2}(A^T - (A^T)^T) = \\frac{1}{2}(A^T - A) = -\\frac{1}{2}(A - A^T) = -K$. Vậy K là ma trận phản đối xứng, $K \\in W$.",
+          "Do đó, mọi ma trận A đều có thể viết dưới dạng $A=S+K$ với $S \\in U$ và $K \\in W$. Suy ra $M_{n \\times n} = U + W$.",
+          "Chứng minh 2) $U \\cap W = \\{\\mathbf{0}\\}$: Giả sử ma trận B vừa là ma trận đối xứng, vừa là ma trận phản đối xứng. Tức là $B \\in U \\cap W$.",
+          "Vì $B \\in U$, ta có $B^T = B$. Vì $B \\in W$, ta có $B^T = -B$.",
+          "Từ hai điều trên, ta có $B = -B$, suy ra $2B = \\mathbf{0}$, do đó $B = \\mathbf{0}$.",
+          "Vậy, ma trận duy nhất nằm trong giao của U và W là ma trận không. $U \\cap W = \\{\\mathbf{0}\\}$.",
+          "Kết luận: Vì cả hai điều kiện đều được thỏa mãn, $M_{n \\times n}$ là tổng trực tiếp của không gian các ma trận đối xứng và phản đối xứng."
+        ]
+      }
+    },
+    {
+      "question": "Tìm tất cả các giá trị của tham số $m$ để tập hợp các vector sau trong $\\mathbb{R}^3$ là phụ thuộc tuyến tính: $S = \\{ (1, 2, m), (1, m, 2), (m, 1, 2) \\}$.",
+      "answer": {
+        "steps": [
+          "Một tập hợp gồm 3 vector trong $\\mathbb{R}^3$ là phụ thuộc tuyến tính khi và chỉ khi ma trận tạo bởi các vector này (xếp theo hàng hoặc cột) có định thức bằng 0.",
+          "Lập ma trận A với các vector trong S là các hàng: $A = \\begin{pmatrix} 1 & 2 & m \\\\ 1 & m & 2 \\\\ m & 1 & 2 \\end{pmatrix}$.",
+          "Tính định thức của A: det(A) = $1(m \\cdot 2 - 2 \\cdot 1) - 2(1 \\cdot 2 - 2 \\cdot m) + m(1 \\cdot 1 - m \\cdot m)$.",
+          "det(A) = $(2m - 2) - 2(2 - 2m) + m(1 - m^2) = 2m - 2 - 4 + 4m + m - m^3 = -m^3 + 7m - 6$.",
+          "Để S phụ thuộc tuyến tính, ta cần giải phương trình det(A) = 0, tức là $-m^3 + 7m - 6 = 0$ hay $m^3 - 7m + 6 = 0$.",
+          "Ta thấy tổng các hệ số là $1 - 7 + 6 = 0$, nên phương trình có một nghiệm $m=1$.",
+          "Phân tích đa thức thành nhân tử: $(m-1)(m^2+m-6) = 0$.",
+          "Tiếp tục phân tích: $(m-1)(m-2)(m+3) = 0$.",
+          "Phương trình có các nghiệm là $m=1, m=2, m=-3$.",
+          "Kết luận: Tập hợp S phụ thuộc tuyến tính khi và chỉ khi $m \\in \\{1, 2, -3\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $T: P_2 \\to P_2$ là một ánh xạ tuyến tính xác định bởi phép lấy đạo hàm: $T(p(t)) = p'(t)$. Tìm một cơ sở cho hạt nhân (Ker T) và một cơ sở cho ảnh (Im T) của T.",
+      "answer": {
+        "steps": [
+          "Hạt nhân của T, Ker(T), là tập hợp các đa thức $p(t) \\in P_2$ sao cho $T(p(t)) = 0$.",
+          "Một đa thức $p(t) = at^2 + bt + c$ thuộc Ker(T) nếu $p'(t) = 2at + b = 0$ với mọi t.",
+          "Điều này xảy ra khi và chỉ khi $2a = 0$ và $b=0$, suy ra $a=0$ và $b=0$. Hệ số c có thể là bất kỳ.",
+          "Vậy, các đa thức trong Ker(T) có dạng $p(t) = c$, là các đa thức hằng. Một cơ sở cho không gian các đa thức hằng này là đa thức hằng 1.",
+          "Cơ sở của Ker(T) là $\\{1\\}$. Do đó, dim(Ker(T)) = 1.",
+          "Ảnh của T, Im(T), là không gian được sinh bởi ảnh của các vector cơ sở của $P_2$. Lấy cơ sở chính tắc của $P_2$ là $B = \\{1, t, t^2\\}$.",
+          "Tính ảnh của các vector cơ sở: $T(1) = 0$, $T(t) = 1$, $T(t^2) = 2t$.",
+          "Im(T) = span$\\{T(1), T(t), T(t^2)\\}$ = span$\\{0, 1, 2t\\}$ = span$\\{1, 2t\\}$ = span$\\{1, t\\}$.",
+          "Tập $\\{1, t\\}$ là độc lập tuyến tính. Do đó, nó là một cơ sở cho Im(T). Im(T) chính là không gian $P_1$ các đa thức bậc không quá 1.",
+          "Cơ sở của Im(T) là $\\{1, t\\}$. Do đó, dim(Im(T)) = 2.",
+          "Kiểm tra bằng Định lý về hạng và số chiều hạt nhân: dim(Ker T) + dim(Im T) = 1 + 2 = 3 = dim($P_2$). Định lý được thỏa mãn."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng $W = \\{ f \\in C[0, 1] \\mid f(0) = f(1) \\}$ là một không gian vector con của không gian $C[0, 1]$ các hàm liên tục trên đoạn $[0, 1]$.",
+      "answer": {
+        "steps": [
+          "Ta cần kiểm tra ba điều kiện của một không gian con đối với W.",
+          "1. Vector không (hàm không) có thuộc W không? Hàm không là hàm $f_0(x) = 0$ với mọi $x \\in [0, 1]$. Hàm này liên tục. Ta có $f_0(0)=0$ và $f_0(1)=0$. Vì $f_0(0)=f_0(1)$, hàm không thuộc W.",
+          "2. W có đóng với phép cộng không? Lấy hai hàm bất kỳ $f, g \\in W$. Điều này có nghĩa là $f, g$ liên tục trên $[0, 1]$ và $f(0)=f(1)$, $g(0)=g(1)$.",
+          "Xét tổng $h = f+g$. Vì tổng hai hàm liên tục là một hàm liên tục, h liên tục trên $[0, 1]$.",
+          "Ta kiểm tra giá trị tại hai đầu mút: $h(0) = f(0)+g(0)$ và $h(1) = f(1)+g(1)$. Vì $f(0)=f(1)$ và $g(0)=g(1)$, ta có $h(0) = f(1)+g(1) = h(1)$. Vậy $h \\in W$.",
+          "3. W có đóng với phép nhân vô hướng không? Lấy hàm $f \\in W$ và một số thực c. Ta có f liên tục và $f(0)=f(1)$.",
+          "Xét hàm $k = cf$. Tích của một hằng số với một hàm liên tục là một hàm liên tục. Ta kiểm tra giá trị tại hai đầu mút: $k(0) = c \\cdot f(0)$ và $k(1) = c \\cdot f(1)$.",
+          "Vì $f(0)=f(1)$, ta có $k(0) = c \\cdot f(1) = k(1)$. Vậy $k \\in W$.",
+          "Kết luận: Vì W thỏa mãn cả ba điều kiện nên W là một không gian con của $C[0, 1]$."
+        ]
+      }
+    },
+    {
+      "question": "Trong $\\mathbb{R}^4$, cho hai không gian con $W_1 = \\text{span}\\{(1,0,1,0), (0,1,1,1)\\}$ và $W_2 = \\text{span}\\{(1,1,0,0), (1,2,2,1)\\}$. Tìm một cơ sở và số chiều của không gian tổng $W_1 + W_2$.",
+      "answer": {
+        "steps": [
+          "Không gian tổng $W_1 + W_2$ được sinh bởi hợp của các tập sinh của $W_1$ và $W_2$.",
+          "$W_1 + W_2 = \\text{span}\\{(1,0,1,0), (0,1,1,1), (1,1,0,0), (1,2,2,1)\\}$.",
+          "Để tìm một cơ sở cho không gian này, ta đặt các vector sinh thành các hàng của một ma trận và đưa nó về dạng bậc thang. Các hàng khác không của ma trận bậc thang sẽ tạo thành một cơ sở.",
+          "Lập ma trận A: $A = \\begin{pmatrix} 1 & 0 & 1 & 0 \\\\ 0 & 1 & 1 & 1 \\\\ 1 & 1 & 0 & 0 \\\\ 1 & 2 & 2 & 1 \\end{pmatrix}$.",
+          "Thực hiện các phép biến đổi hàng: $H_3 \\to H_3 - H_1$, $H_4 \\to H_4 - H_1$: $\\begin{pmatrix} 1 & 0 & 1 & 0 \\\\ 0 & 1 & 1 & 1 \\\\ 0 & 1 & -1 & 0 \\\\ 0 & 2 & 1 & 1 \\end{pmatrix}$.",
+          "Tiếp tục khử: $H_3 \\to H_3 - H_2$, $H_4 \\to H_4 - 2H_2$: $\\begin{pmatrix} 1 & 0 & 1 & 0 \\\\ 0 & 1 & 1 & 1 \\\\ 0 & 0 & -2 & -1 \\\\ 0 & 0 & -1 & -1 \\end{pmatrix}$.",
+          "Tiếp tục khử: $H_4 \\to 2H_4 - H_3$: $\\begin{pmatrix} 1 & 0 & 1 & 0 \\\\ 0 & 1 & 1 & 1 \\\\ 0 & 0 & -2 & -1 \\\\ 0 & 0 & 0 & -1 \\end{pmatrix}$.",
+          "Ma trận bậc thang thu được có 4 hàng khác không. Điều này có nghĩa là 4 vector ban đầu là độc lập tuyến tính.",
+          "Một cơ sở cho $W_1 + W_2$ chính là tập hợp các hàng khác không của ma trận bậc thang, hoặc là tập hợp các vector ban đầu. Lấy tập các hàng của ma trận bậc thang cho đơn giản.",
+          "Một cơ sở là $\\{ (1,0,1,0), (0,1,1,1), (0,0,-2,-1), (0,0,0,-1) \\}$. Số chiều của $W_1+W_2$ là 4. Vì $W_1+W_2$ là một không gian con 4 chiều của $\\mathbb{R}^4$, ta có $W_1+W_2 = \\mathbb{R}^4$."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng không gian hàng của một ma trận A, Row(A), là phần bù trực giao của không gian hạt nhân của A, Nul(A).",
+      "answer": {
+        "steps": [
+          "Ta cần chứng minh rằng một vector $\\mathbf{x}$ thuộc Nul(A) khi và chỉ khi $\\mathbf{x}$ trực giao với mọi vector trong Row(A).",
+          "Ký hiệu các vector hàng của A là $\\mathbf{r}_1, \\mathbf{r}_2, \\dots, \\mathbf{r}_m$. Vậy Row(A) = span$\\{\\mathbf{r}_1, \\dots, \\mathbf{r}_m\\}$.",
+          "Định nghĩa của Nul(A) là tập hợp các vector $\\mathbf{x}$ sao cho $A\\mathbf{x} = \\mathbf{0}$.",
+          "Viết phép nhân ma trận $A\\mathbf{x}$ dưới dạng tích vô hướng của các hàng của A với $\\mathbf{x}$: $A\\mathbf{x} = \\begin{pmatrix} \\mathbf{r}_1 \\cdot \\mathbf{x} \\\\ \\mathbf{r}_2 \\cdot \\mathbf{x} \\\\ \\vdots \\\\ \\mathbf{r}_m \\cdot \\mathbf{x} \\end{pmatrix}$.",
+          "Do đó, phương trình $A\\mathbf{x} = \\mathbf{0}$ tương đương với việc $\\mathbf{r}_i \\cdot \\mathbf{x} = 0$ với mọi $i = 1, \\dots, m$.",
+          "Điều này có nghĩa là $\\mathbf{x}$ trực giao với mọi vector hàng của A.",
+          "Bây giờ, ta cần chỉ ra rằng nếu $\\mathbf{x}$ trực giao với mọi vector hàng, thì nó cũng trực giao với mọi vector trong không gian hàng.",
+          "Lấy một vector bất kỳ $\\mathbf{v} \\in$ Row(A). Theo định nghĩa, $\\mathbf{v}$ có thể được viết dưới dạng tổ hợp tuyến tính của các vector hàng: $\\mathbf{v} = c_1\\mathbf{r}_1 + c_2\\mathbf{r}_2 + \\dots + c_m\\mathbf{r}_m$.",
+          "Tính tích vô hướng $\\mathbf{v} \\cdot \\mathbf{x} = (c_1\\mathbf{r}_1 + \\dots + c_m\\mathbf{r}_m) \\cdot \\mathbf{x} = c_1(\\mathbf{r}_1 \\cdot \\mathbf{x}) + \\dots + c_m(\\mathbf{r}_m \\cdot \\mathbf{x})$.",
+          "Vì $\\mathbf{r}_i \\cdot \\mathbf{x} = 0$ với mọi i, ta có $\\mathbf{v} \\cdot \\mathbf{x} = c_1(0) + \\dots + c_m(0) = 0$.",
+          "Vậy, $\\mathbf{x}$ trực giao với mọi vector trong Row(A). Điều này chứng tỏ Nul(A) là phần bù trực giao của Row(A)."
+        ]
+      }
+    },
+    {
+      "question": "Cho $W$ là không gian con của $\\mathbb{R}^3$ sinh bởi các vector $\\mathbf{u}_1=(1, 0, 1)$ và $\\mathbf{u}_2=(0, 1, 1)$. Tìm hình chiếu trực giao của vector $\\mathbf{v}=(2, 3, 4)$ lên không gian con W.",
+      "answer": {
+        "steps": [
+          "Hình chiếu của $\\mathbf{v}$ lên W, ký hiệu $\\text{proj}_W \\mathbf{v}$, là vector $\\hat{\\mathbf{v}} \\in W$ sao cho $\\mathbf{v} - \\hat{\\mathbf{v}}$ trực giao với W.",
+          "Ta có thể tìm $\\hat{\\mathbf{v}}$ bằng công thức $\\hat{\\mathbf{v}} = A(A^TA)^{-1}A^T\\mathbf{v}$, với A là ma trận có các cột là cơ sở của W.",
+          "Các vector $\\mathbf{u}_1, \\mathbf{u}_2$ độc lập tuyến tính nên chúng tạo thành một cơ sở cho W. Lập ma trận A: $A = \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\\\ 1 & 1 \\end{pmatrix}$.",
+          "Tính $A^TA$: $A^T A = \\begin{pmatrix} 1 & 0 & 1 \\\\ 0 & 1 & 1 \\end{pmatrix} \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\\\ 1 & 1 \\end{pmatrix} = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}$.",
+          "Tính ma trận nghịch đảo $(A^TA)^{-1}$: $(A^TA)^{-1} = \\frac{1}{2(2)-1(1)} \\begin{pmatrix} 2 & -1 \\\\ -1 & 2 \\end{pmatrix} = \\frac{1}{3} \\begin{pmatrix} 2 & -1 \\\\ -1 & 2 \\end{pmatrix}$.",
+          "Tính $A^T\\mathbf{v}$: $A^T\\mathbf{v} = \\begin{pmatrix} 1 & 0 & 1 \\\\ 0 & 1 & 1 \\end{pmatrix} \\begin{pmatrix} 2 \\\\ 3 \\\\ 4 \\end{pmatrix} = \\begin{pmatrix} 6 \\\\ 7 \\end{pmatrix}$.",
+          "Bây giờ, tính $\\hat{\\mathbf{v}} = A (A^TA)^{-1} (A^T\\mathbf{v}) = \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\\\ 1 & 1 \\end{pmatrix} \\left( \\frac{1}{3} \\begin{pmatrix} 2 & -1 \\\\ -1 & 2 \\end{pmatrix} \\right) \\begin{pmatrix} 6 \\\\ 7 \\end{pmatrix}$.",
+          "$\\hat{\\mathbf{v}} = \\frac{1}{3} \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\\\ 1 & 1 \\end{pmatrix} \\begin{pmatrix} 2(6) - 1(7) \\\\ -1(6) + 2(7) \\end{pmatrix} = \\frac{1}{3} \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\\\ 1 & 1 \\end{pmatrix} \\begin{pmatrix} 5 \\\\ 8 \\end{pmatrix} = \\frac{1}{3} \\begin{pmatrix} 5 \\\\ 8 \\\\ 13 \\end{pmatrix}$.",
+          "Kết luận: Hình chiếu của $\\mathbf{v}$ lên W là $\\hat{\\mathbf{v}} = (5/3, 8/3, 13/3)$."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng nếu một tập hợp $S = \\{\\mathbf{v}_1, \\mathbf{v}_2, \\dots, \\mathbf{v}_p\\}$ trong không gian vector V là độc lập tuyến tính, thì mọi tập con khác rỗng của S cũng độc lập tuyến tính.",
+      "answer": {
+        "steps": [
+          "Giả sử $S = \\{\\mathbf{v}_1, \\mathbf{v}_2, \\dots, \\mathbf{v}_p\\}$ là độc lập tuyến tính. Điều này có nghĩa là phương trình $c_1\\mathbf{v}_1 + c_2\\mathbf{v}_2 + \\dots + c_p\\mathbf{v}_p = \\mathbf{0}$ chỉ có nghiệm tầm thường $c_1=c_2=\\dots=c_p=0$.",
+          "Lấy một tập con khác rỗng bất kỳ của S, gọi là S'. Không mất tính tổng quát, giả sử S' có dạng $S' = \\{\\mathbf{v}_{i_1}, \\mathbf{v}_{i_2}, \\dots, \\mathbf{v}_{i_k}\\}$, với $k \\le p$.",
+          "Để chứng minh S' độc lập tuyến tính, ta xét tổ hợp tuyến tính của các vector trong S' bằng vector không: $a_1\\mathbf{v}_{i_1} + a_2\\mathbf{v}_{i_2} + \\dots + a_k\\mathbf{v}_{i_k} = \\mathbf{0}$.",
+          "Ta có thể xem đây là một tổ hợp tuyến tính của tất cả các vector trong S, trong đó các hệ số của các vector không thuộc S' thì bằng 0.",
+          "Tức là: $c_1\\mathbf{v}_1 + c_2\\mathbf{v}_2 + \\dots + c_p\\mathbf{v}_p = \\mathbf{0}$, với $c_j = a_m$ nếu $\\mathbf{v}_j = \\mathbf{v}_{i_m}$ và $c_j = 0$ nếu $\\mathbf{v}_j \\notin S'$.",
+          "Vì tập hợp S ban đầu là độc lập tuyến tính, phương trình này chỉ có nghiệm tầm thường, nghĩa là tất cả các hệ số $c_j$ phải bằng 0.",
+          "Điều này bao gồm cả các hệ số tương ứng với các vector trong S'. Do đó, $a_1 = a_2 = \\dots = a_k = 0$.",
+          "Vì tổ hợp tuyến tính của các vector trong S' bằng không chỉ khi tất cả các hệ số bằng không, nên S' là độc lập tuyến tính.",
+          "Kết luận: Mọi tập con khác rỗng của một tập hợp độc lập tuyến tính cũng là độc lập tuyến tính."
+        ]
+      }
+    },
+    {
+      "question": "Tìm một cơ sở cho không gian con W của $M_{2 \\times 2}$ gồm tất cả các ma trận A sao cho $A \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Gọi một ma trận A bất kỳ trong W là $A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$.",
+          "Điều kiện để A thuộc W là $A \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix} = \\mathbf{0}$.",
+          "Thực hiện phép nhân ma trận: $\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix} = \\begin{pmatrix} a + 2b \\\\ c + 2d \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}$.",
+          "Điều này cho ta một hệ phương trình tuyến tính ràng buộc các phần tử của A: $\\begin{cases} a + 2b = 0 \\\\ c + 2d = 0 \\end{cases}$.",
+          "Từ hệ phương trình, ta có thể biểu diễn các biến cơ sở theo các biến tự do. Ta có $a = -2b$ và $c = -2d$. Các biến b và d là tự do.",
+          "Thay các biểu thức này vào ma trận A: $A = \\begin{pmatrix} -2b & b \\\\ -2d & d \\end{pmatrix}$.",
+          "Ta có thể tách ma trận này thành tổ hợp tuyến tính theo các biến tự do b và d: $A = b \\begin{pmatrix} -2 & 1 \\\\ 0 & 0 \\end{pmatrix} + d \\begin{pmatrix} 0 & 0 \\\\ -2 & 1 \\end{pmatrix}$.",
+          "Điều này cho thấy mọi ma trận trong W đều là tổ hợp tuyến tính của hai ma trận $M_1 = \\begin{pmatrix} -2 & 1 \\\\ 0 & 0 \\end{pmatrix}$ và $M_2 = \\begin{pmatrix} 0 & 0 \\\\ -2 & 1 \\end{pmatrix}$.",
+          "Hai ma trận $M_1$ và $M_2$ này rõ ràng là độc lập tuyến tính (vì không ma trận nào là bội số của ma trận kia). Do đó, chúng tạo thành một cơ sở cho W.",
+          "Kết luận: Một cơ sở cho W là $\\{ \\begin{pmatrix} -2 & 1 \\\\ 0 & 0 \\end{pmatrix}, \\begin{pmatrix} 0 & 0 \\\\ -2 & 1 \\end{pmatrix} \\}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $B = \\{\\mathbf{b}_1, \\dots, \\mathbf{b}_n\\}$ là một cơ sở của không gian vector V. Chứng minh rằng ánh xạ tọa độ $T: V \\to \\mathbb{R}^n$ xác định bởi $T(\\mathbf{x}) = [\\mathbf{x}]_B$ là một phép đẳng cấu tuyến tính.",
+      "answer": {
+        "steps": [
+          "Một phép đẳng cấu tuyến tính là một ánh xạ tuyến tính song ánh (vừa đơn ánh, vừa toàn ánh). Ta cần chứng minh ba điều: T tuyến tính, T đơn ánh, và T toàn ánh.",
+          "1. Chứng minh T là ánh xạ tuyến tính: Ta cần chứng minh $T(\\mathbf{u} + \\mathbf{v}) = T(\\mathbf{u}) + T(\\mathbf{v})$ và $T(c\\mathbf{u}) = cT(\\mathbf{u})$.",
+          "Giả sử $[\\mathbf{u}]_B = (u_1, \\dots, u_n)$ và $[\\mathbf{v}]_B = (v_1, \\dots, v_n)$. Khi đó $\\mathbf{u} = \\sum u_i \\mathbf{b}_i$ và $\\mathbf{v} = \\sum v_i \\mathbf{b}_i$.",
+          "$\\mathbf{u} + \\mathbf{v} = \\sum u_i \\mathbf{b}_i + \\sum v_i \\mathbf{b}_i = \\sum (u_i+v_i) \\mathbf{b}_i$. Do đó, $[\\mathbf{u}+\\mathbf{v}]_B = (u_1+v_1, \\dots, u_n+v_n) = [\\mathbf{u}]_B + [\\mathbf{v}]_B$. Vậy $T(\\mathbf{u}+\\mathbf{v}) = T(\\mathbf{u})+T(\\mathbf{v})$.",
+          "$c\\mathbf{u} = c\\sum u_i \\mathbf{b}_i = \\sum (cu_i) \\mathbf{b}_i$. Do đó, $[c\\mathbf{u}]_B = (cu_1, \\dots, cu_n) = c[\\mathbf{u}]_B$. Vậy $T(c\\mathbf{u}) = cT(\\mathbf{u})$. T là ánh xạ tuyến tính.",
+          "2. Chứng minh T là đơn ánh: Ta cần chứng minh nếu $T(\\mathbf{x}) = \\mathbf{0}$ thì $\\mathbf{x} = \\mathbf{0}$.",
+          "Giả sử $T(\\mathbf{x}) = [\\mathbf{x}]_B = (0, \\dots, 0)$. Điều này có nghĩa là $\\mathbf{x} = 0\\mathbf{b}_1 + \\dots + 0\\mathbf{b}_n = \\mathbf{0}$.",
+          "Vì hạt nhân của T chỉ chứa vector không, T là đơn ánh.",
+          "3. Chứng minh T là toàn ánh: Ta cần chứng minh với mọi vector $\\mathbf{c} = (c_1, \\dots, c_n) \\in \\mathbb{R}^n$, tồn tại một vector $\\mathbf{x} \\in V$ sao cho $T(\\mathbf{x}) = \\mathbf{c}$.",
+          "Với một $\\mathbf{c}=(c_1, \\dots, c_n)$ bất kỳ, ta có thể xây dựng vector $\\mathbf{x} = c_1\\mathbf{b}_1 + \\dots + c_n\\mathbf{b}_n$. Vector này thuộc V vì V là không gian vector.",
+          "Theo định nghĩa của vector tọa độ, $[\\mathbf{x}]_B = (c_1, \\dots, c_n) = \\mathbf{c}$. Vậy T là toàn ánh.",
+          "Kết luận: Vì T là một ánh xạ tuyến tính, đơn ánh và toàn ánh, T là một phép đẳng cấu tuyến tính."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{pmatrix} 1 & 2 & 3 & 1 \\\\ 2 & 4 & 7 & 3 \\\\ 3 & 6 & 10 & 4 \\end{pmatrix}$. Tìm cơ sở cho bốn không gian con cơ bản: Col(A), Row(A), Nul(A), và Nul(Aᵀ).",
+      "answer": {
+        "steps": [
+          "Bước 1: Đưa A về dạng bậc thang rút gọn (RREF). $A \\xrightarrow{H_2-2H_1, H_3-3H_1} \\begin{pmatrix} 1 & 2 & 3 & 1 \\\\ 0 & 0 & 1 & 1 \\\\ 0 & 0 & 1 & 1 \\end{pmatrix} \\xrightarrow{H_3-H_2, H_1-3H_2} \\begin{pmatrix} 1 & 2 & 0 & -2 \\\\ 0 & 0 & 1 & 1 \\\\ 0 & 0 & 0 & 0 \\end{pmatrix}$. Gọi ma trận này là R.",
+          "Bước 2: Tìm cơ sở cho Col(A) và Row(A).",
+          "  - Cơ sở Col(A): Các cột trụ (pivot) của R là cột 1 và 3. Vậy cơ sở của Col(A) là các cột tương ứng trong ma trận *gốc* A: $\\{ \\begin{pmatrix} 1 \\\\ 2 \\\\ 3 \\end{pmatrix}, \\begin{pmatrix} 3 \\\\ 7 \\\\ 10 \\end{pmatrix} \\}$.",
+          "  - Cơ sở Row(A): Các hàng khác không của ma trận bậc thang R tạo thành một cơ sở cho Row(A): $\\{ (1, 2, 0, -2), (0, 0, 1, 1) \\}$.",
+          "Bước 3: Tìm cơ sở cho Nul(A). Ta giải hệ $R\\mathbf{x} = \\mathbf{0}$: $\\begin{cases} x_1 + 2x_2 - 2x_4 = 0 \\\\ x_3 + x_4 = 0 \\end{cases}$.",
+          "  Biến tự do là $x_2=s, x_4=t$. Ta có $x_1 = -2s+2t$ và $x_3 = -t$. Vậy $\\mathbf{x} = s(-2,1,0,0) + t(2,0,-1,1)$.",
+          "  Cơ sở Nul(A): $\\{ (-2, 1, 0, 0), (2, 0, -1, 1) \\}$.",
+          "Bước 4: Tìm cơ sở cho Nul(Aᵀ). Ta giải hệ $A^T\\mathbf{y} = \\mathbf{0}$. Đưa $A^T$ về dạng bậc thang: $A^T = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 7 & 10 \\\\ 1 & 3 & 4 \\end{pmatrix} \\to \\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{pmatrix}$.",
+          "  Hệ phương trình là $\\begin{cases} y_1 + 2y_2 + 3y_3 = 0 \\\\ y_2 + y_3 = 0 \\end{cases}$. Biến tự do là $y_3=t$. Ta có $y_2=-t$ và $y_1 = -2(-t)-3t = -t$.",
+          "  Cơ sở Nul(Aᵀ): $\\{ (-1, -1, 1) \\}$."
+        ]
+      }
+    },
+    {
+      "question": "Sử dụng quy trình Gram-Schmidt để biến đổi cơ sở $B = \\{\\mathbf{x}_1=(1,1,0), \\mathbf{x}_2=(1,2,0), \\mathbf{x}_3=(0,1,2)\\}$ của $\\mathbb{R}^3$ thành một cơ sở trực chuẩn.",
+      "answer": {
+        "steps": [
+          "Bước 1: Xây dựng cơ sở trực giao $\\{\\mathbf{v}_1, \\mathbf{v}_2, \\mathbf{v}_3\\}$.",
+          "  - Đặt $\\mathbf{v}_1 = \\mathbf{x}_1 = (1, 1, 0)$.",
+          "  - Tính $\\mathbf{v}_2 = \\mathbf{x}_2 - \\text{proj}_{\\mathbf{v}_1}\\mathbf{x}_2 = \\mathbf{x}_2 - \\frac{\\mathbf{x}_2 \\cdot \\mathbf{v}_1}{\\|\\mathbf{v}_1\\|^2} \\mathbf{v}_1 = (1,2,0) - \\frac{1(1)+2(1)+0(0)}{1^2+1^2+0^2}(1,1,0) = (1,2,0) - \\frac{3}{2}(1,1,0) = (-\\frac{1}{2}, \\frac{1}{2}, 0)$.",
+          "  - Tính $\\mathbf{v}_3 = \\mathbf{x}_3 - \\text{proj}_{\\mathbf{v}_1}\\mathbf{x}_3 - \\text{proj}_{\\mathbf{v}_2}\\mathbf{x}_3 = (0,1,2) - \\frac{1}{2}(1,1,0) - \\frac{1/2}{1/2}( -\\frac{1}{2}, \\frac{1}{2}, 0) = (0,1,2) - (\\frac{1}{2},\\frac{1}{2},0) - (-\\frac{1}{2}, \\frac{1}{2}, 0) = (0,0,2)$.",
+          "Bước 2: Chuẩn hóa cơ sở trực giao để có cơ sở trực chuẩn $\\{\\mathbf{u}_1, \\mathbf{u}_2, \\mathbf{u}_3\\}$.",
+          "  - $\\|\\mathbf{v}_1\\| = \\sqrt{1^2+1^2} = \\sqrt{2}$. Vậy $\\mathbf{u}_1 = \\frac{\\mathbf{v}_1}{\\|\\mathbf{v}_1\\|} = (\\frac{1}{\\sqrt{2}}, \\frac{1}{\\sqrt{2}}, 0)$.",
+          "  - $\\|\\mathbf{v}_2\\| = \\sqrt{(-\\frac{1}{2})^2+(\\frac{1}{2})^2} = \\sqrt{\\frac{1}{2}} = \\frac{1}{\\sqrt{2}}$. Vậy $\\mathbf{u}_2 = \\frac{\\mathbf{v}_2}{\\|\\mathbf{v}_2\\|} = (-\\frac{1}{\\sqrt{2}}, \\frac{1}{\\sqrt{2}}, 0)$. (Lưu ý: Ta đã nhân với $\\sqrt{2}$)",
+          "  - $\\|\\mathbf{v}_3\\| = \\sqrt{2^2} = 2$. Vậy $\\mathbf{u}_3 = \\frac{\\mathbf{v}_3}{\\|\\mathbf{v}_3\\|} = (0, 0, 1)$.",
+          "Kết luận: Cơ sở trực chuẩn cần tìm là $\\{ (\\frac{1}{\\sqrt{2}}, \\frac{1}{\\sqrt{2}}, 0), (-\\frac{1}{\\sqrt{2}}, \\frac{1}{\\sqrt{2}}, 0), (0, 0, 1) \\}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $U$ và $W$ là hai không gian con của $\\mathbb{R}^4$. Biết rằng dim(U) = 3, dim(W) = 2, và $U+W = \\mathbb{R}^4$. Tìm số chiều của không gian giao $U \\cap W$.",
+      "answer": {
+        "steps": [
+          "Ta sử dụng định lý về số chiều của không gian tổng: $\\dim(U+W) = \\dim(U) + \\dim(W) - \\dim(U \\cap W)$.",
+          "Theo giả thiết, ta có các thông tin sau:",
+          "  - $\\dim(U) = 3$.",
+          "  - $\\dim(W) = 2$.",
+          "  - Vì $U+W = \\mathbb{R}^4$, ta có $\\dim(U+W) = \\dim(\\mathbb{R}^4) = 4$.",
+          "Thay các giá trị này vào công thức của định lý: $4 = 3 + 2 - \\dim(U \\cap W)$.",
+          "Giải phương trình cho $\\dim(U \\cap W)$: $4 = 5 - \\dim(U \\cap W)$.",
+          "Suy ra $\\dim(U \\cap W) = 5 - 4 = 1$.",
+          "Kết luận: Số chiều của không gian giao $U \\cap W$ là 1."
+        ]
+      }
+    },
+    {
+      "question": "Xét xem tập hợp các đa thức sau trong $P_2$ có phải là một cơ sở không: $S = \\{1+t, t+t^2, 1-t^2\\}$.",
+      "answer": {
+        "steps": [
+          "Vì dim($P_2$)=3 và tập S có 3 vector (đa thức), S sẽ là một cơ sở nếu và chỉ nếu nó độc lập tuyến tính.",
+          "Ta sử dụng phép đẳng cấu tọa độ giữa $P_2$ và $\\mathbb{R}^3$ thông qua cơ sở chính tắc $B = \\{1, t, t^2\\}$.",
+          "Biểu diễn các đa thức trong S dưới dạng vector tọa độ theo cơ sở B:",
+          "  - $p_1(t) = 1+t \\implies [p_1]_B = (1, 1, 0)$.",
+          "  - $p_2(t) = t+t^2 \\implies [p_2]_B = (0, 1, 1)$.",
+          "  - $p_3(t) = 1-t^2 \\implies [p_3]_B = (1, 0, -1)$.",
+          "Tập hợp các đa thức S độc lập tuyến tính khi và chỉ khi tập hợp các vector tọa độ tương ứng trong $\\mathbb{R}^3$ là độc lập tuyến tính.",
+          "Ta kiểm tra tính độc lập tuyến tính của các vector tọa độ bằng cách tính định thức của ma trận tạo bởi chúng: $A = \\begin{pmatrix} 1 & 0 & 1 \\\\ 1 & 1 & 0 \\\\ 0 & 1 & -1 \\end{pmatrix}$.",
+          "det(A) = $1(1(-1)-0(1)) - 0(...) + 1(1(1)-1(0)) = -1 + 1 = 0$.",
+          "Vì det(A)=0, các vector tọa độ là phụ thuộc tuyến tính. Do đó, các đa thức trong S cũng phụ thuộc tuyến tính.",
+          "Kết luận: Vì S là tập hợp phụ thuộc tuyến tính, nó không phải là một cơ sở của $P_2$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm một cơ sở cho không gian con W của $M_{2 \\times 2}$ gồm các ma trận X sao cho $AX = XA$, với $A = \\begin{pmatrix} 1 & 1 \\\\ 0 & 2 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Gọi một ma trận X bất kỳ trong W là $X = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$. Ta cần giải phương trình $AX=XA$.",
+          "Tính vế trái: $AX = \\begin{pmatrix} 1 & 1 \\\\ 0 & 2 \\end{pmatrix} \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} = \\begin{pmatrix} a+c & b+d \\\\ 2c & 2d \\end{pmatrix}$.",
+          "Tính vế phải: $XA = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} \\begin{pmatrix} 1 & 1 \\\\ 0 & 2 \\end{pmatrix} = \\begin{pmatrix} a & a+2b \\\\ c & c+2d \\end{pmatrix}$.",
+          "Cho hai ma trận kết quả bằng nhau, ta có hệ phương trình cho các phần tử a, b, c, d:",
+          "  $\\begin{cases} a+c = a \\\\ b+d = a+2b \\\\ 2c = c \\\\ 2d = c+2d \\end{cases}$.",
+          "Rút gọn hệ phương trình: $\\begin{cases} c = 0 \\\\ d = a+b \\\\ c = 0 \\\\ c = 0 \\end{cases}$.",
+          "Hệ thống nhất lại thành $c=0$ và $a+b-d=0$. Ta có thể chọn a, b làm biến tự do. Khi đó $d=a+b$.",
+          "Vậy một ma trận X bất kỳ trong W có dạng: $X = \\begin{pmatrix} a & b \\\\ 0 & a+b \\end{pmatrix}$.",
+          "Tách X thành tổ hợp tuyến tính theo các biến tự do a và b: $X = a\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix} + b\\begin{pmatrix} 0 & 1 \\\\ 0 & 1 \\end{pmatrix}$.",
+          "Hai ma trận $\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$ và $\\begin{pmatrix} 0 & 1 \\\\ 0 & 1 \\end{pmatrix}$ là độc lập tuyến tính và sinh ra W.",
+          "Kết luận: Một cơ sở cho W là $\\{ \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}, \\begin{pmatrix} 0 & 1 \\\\ 0 & 1 \\end{pmatrix} \\}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $P_{B \\leftarrow C} = \\begin{pmatrix} 1 & -2 \\\\ -3 & 5 \\end{pmatrix}$ là ma trận chuyển từ cơ sở C sang cơ sở B. Tìm ma trận chuyển từ cơ sở B sang cơ sở C, $P_{C \\leftarrow B}$.",
+      "answer": {
+        "steps": [
+          "Ta có mối quan hệ giữa hai ma trận chuyển cơ sở là chúng là ma trận nghịch đảo của nhau: $P_{C \\leftarrow B} = (P_{B \\leftarrow C})^{-1}$.",
+          "Nhiệm vụ của chúng ta là tìm ma trận nghịch đảo của ma trận $A = \\begin{pmatrix} 1 & -2 \\\\ -3 & 5 \\end{pmatrix}$.",
+          "Đối với ma trận cấp $2 \\times 2$, $A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$, ma trận nghịch đảo được tính bằng công thức $A^{-1} = \\frac{1}{ad-bc} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}$.",
+          "Tính định thức của A: det(A) = $1(5) - (-2)(-3) = 5 - 6 = -1$.",
+          "Áp dụng công thức nghịch đảo: $A^{-1} = \\frac{1}{-1} \\begin{pmatrix} 5 & 2 \\\\ 3 & 1 \\end{pmatrix} = -1 \\begin{pmatrix} 5 & 2 \\\\ 3 & 1 \\end{pmatrix}$.",
+          "Nhân hằng số -1 vào ma trận: $A^{-1} = \\begin{pmatrix} -5 & -2 \\\\ -3 & -1 \\end{pmatrix}$.",
+          "Kết luận: Ma trận chuyển từ cơ sở B sang cơ sở C là $P_{C \\leftarrow B} = \\begin{pmatrix} -5 & -2 \\\\ -3 & -1 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng tập hợp W các hàm số là nghiệm của phương trình vi phân thuần nhất $y'' - 5y' + 6y = 0$ là một không gian vector con của không gian các hàm khả vi vô hạn lần $C^{\\infty}(\\mathbb{R})$. Tìm một cơ sở cho W.",
+      "answer": {
+        "steps": [
+          "Bước 1: Chứng minh W là không gian con.",
+          "  a) Hàm không $y_0(x)=0$ là một nghiệm ($0-0+0=0$), vậy hàm không thuộc W.",
+          "  b) Giả sử $y_1, y_2$ là hai nghiệm trong W. Ta có $y_1'' - 5y_1' + 6y_1 = 0$ và $y_2'' - 5y_2' + 6y_2 = 0$. Xét tổng $y = y_1+y_2$. Ta có $y'' - 5y' + 6y = (y_1''+y_2'') - 5(y_1'+y_2') + 6(y_1+y_2) = (y_1''-5y_1'+6y_1) + (y_2''-5y_2'+6y_2) = 0+0=0$. Vậy $y_1+y_2 \\in W$.",
+          "  c) Giả sử y là nghiệm trong W và c là hằng số. Ta có $y''-5y'+6y=0$. Xét $z=cy$. Ta có $z''-5z'+6z = (cy)''-5(cy)'+6(cy) = c(y''-5y'+6y) = c(0)=0$. Vậy $cy \\in W$.",
+          "  Vì ba điều kiện được thỏa mãn, W là một không gian con của $C^{\\infty}(\\mathbb{R})$.",
+          "Bước 2: Tìm một cơ sở cho W.",
+          "  Đây là phương trình vi phân tuyến tính thuần nhất cấp 2 với hệ số hằng. Ta giải phương trình đặc trưng: $r^2 - 5r + 6 = 0$.",
+          "  Phân tích thành $(r-2)(r-3)=0$. Phương trình có hai nghiệm thực phân biệt $r_1=2$ và $r_2=3$.",
+          "  Theo lý thuyết phương trình vi phân, hai nghiệm độc lập tuyến tính cơ bản là $y_1(x) = e^{2x}$ và $y_2(x) = e^{3x}$.",
+          "  Mọi nghiệm của phương trình đều có dạng $y(x) = c_1 e^{2x} + c_2 e^{3x}$. Điều này có nghĩa là tập $\\{e^{2x}, e^{3x}\\}$ sinh ra không gian nghiệm W.",
+          "  Hai hàm này độc lập tuyến tính. Vậy chúng tạo thành một cơ sở cho W.",
+          "Kết luận: Một cơ sở cho W là $\\{e^{2x}, e^{3x}\\}$. Số chiều của W là 2."
+        ]
+      }
+    },
+    {
+      "question": "Tìm một cơ sở cho không gian giao $W_1 \\cap W_2$ của hai không gian con của $\\mathbb{R}^4$, trong đó $W_1 = \\{(x,y,z,w) \\mid x+y=0, z-w=0\\}$ và $W_2 = \\{(x,y,z,w) \\mid x-y-z+w=0\\}$.",
+      "answer": {
+        "steps": [
+          "Một vector $\\mathbf{v}=(x,y,z,w)$ thuộc không gian giao $W_1 \\cap W_2$ nếu nó thỏa mãn đồng thời tất cả các phương trình định nghĩa của cả hai không gian con.",
+          "Ta có một hệ phương trình tuyến tính thuần nhất: $\\begin{cases} x + y = 0 \\\\ z - w = 0 \\\\ x - y - z + w = 0 \\end{cases}$.",
+          "Ta cần tìm không gian nghiệm của hệ này. Từ hai phương trình đầu tiên, ta có $y=-x$ và $z=w$.",
+          "Thay các biểu thức này vào phương trình thứ ba: $x - (-x) - (w) + w = 0$.",
+          "Rút gọn: $2x = 0$, suy ra $x=0$.",
+          "Từ $y=-x$, ta có $y=0$.",
+          "Phương trình $z=w$ vẫn còn. Điều này có nghĩa là $z$ và $w$ có thể là bất kỳ giá trị nào miễn là chúng bằng nhau. Ta có thể chọn w là biến tự do, đặt $w=t$. Khi đó $z=t$.",
+          "Vậy, một vector bất kỳ trong không gian giao có dạng $(0, 0, t, t) = t(0, 0, 1, 1)$.",
+          "Điều này cho thấy không gian giao được sinh bởi một vector duy nhất là $(0, 0, 1, 1)$.",
+          "Kết luận: Một cơ sở cho $W_1 \\cap W_2$ là $\\{ (0, 0, 1, 1) \\}$."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng nếu $S = \\{\\mathbf{v}_1, \\dots, \\mathbf{v}_p\\}$ là một tập hợp sinh ra không gian vector V và vector $\\mathbf{v}_k$ là một tổ hợp tuyến tính của các vector khác trong S, thì tập hợp $S' = S \\setminus \\{\\mathbf{v}_k\\}$ cũng sinh ra V.",
+      "answer": {
+        "steps": [
+          "Giả sử S sinh ra V. Điều này có nghĩa là mọi vector $\\mathbf{x} \\in V$ đều có thể được viết dưới dạng $\\mathbf{x} = c_1\\mathbf{v}_1 + \\dots + c_k\\mathbf{v}_k + \\dots + c_p\\mathbf{v}_p$.",
+          "Giả sử $\\mathbf{v}_k$ là một tổ hợp tuyến tính của các vector khác trong S. Không mất tính tổng quát, ta có thể viết $\\mathbf{v}_k = a_1\\mathbf{v}_1 + \\dots + a_{k-1}\\mathbf{v}_{k-1} + a_{k+1}\\mathbf{v}_{k+1} + \\dots + a_p\\mathbf{v}_p$.",
+          "Bây giờ, ta thay biểu thức của $\\mathbf{v}_k$ vào biểu thức của $\\mathbf{x}$:",
+          "$\\mathbf{x} = c_1\\mathbf{v}_1 + \\dots + c_k(a_1\\mathbf{v}_1 + \\dots + a_p\\mathbf{v}_p) + \\dots + c_p\\mathbf{v}_p$.",
+          "Phân phối $c_k$ và nhóm lại các hệ số của từng vector $\\mathbf{v}_i$ (với $i \\neq k$):",
+          "$\\mathbf{x} = (c_1+c_ka_1)\\mathbf{v}_1 + \\dots + (c_{k-1}+c_ka_{k-1})\\mathbf{v}_{k-1} + (c_{k+1}+c_ka_{k+1})\\mathbf{v}_{k+1} + \\dots + (c_p+c_ka_p)\\mathbf{v}_p$.",
+          "Biểu thức này cho thấy $\\mathbf{x}$ có thể được viết dưới dạng một tổ hợp tuyến tính của các vector trong tập $S' = \\{\\mathbf{v}_1, \\dots, \\mathbf{v}_{k-1}, \\mathbf{v}_{k+1}, \\dots, \\mathbf{v}_p\\}$.",
+          "Vì $\\mathbf{x}$ là một vector bất kỳ trong V, điều này chứng tỏ tập hợp S' cũng sinh ra V.",
+          "Kết luận: Việc loại bỏ một vector phụ thuộc tuyến tính khỏi một tập hợp sinh không làm thay đổi không gian sinh của nó."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh Định lý Đẳng cấu Thứ nhất cho không gian vector: Cho $T: V \\to W$ là một ánh xạ tuyến tính. Chứng minh rằng không gian thương $V/\\ker(T)$ đẳng cấu với không gian ảnh $\\text{im}(T)$. (Tức là, $V/\\ker(T) \\cong \\text{im}(T)$)",
+      "answer": {
+        "steps": [
+          "Để chứng minh $V/\\ker(T) \\cong \\text{im}(T)$, ta cần xây dựng một ánh xạ tuyến tính song ánh (đơn ánh và toàn ánh) $\\Phi: V/\\ker(T) \\to \\text{im}(T)$.",
+          "Bước 1: Định nghĩa ánh xạ. Ta định nghĩa $\\Phi(\\mathbf{v} + \\ker(T)) = T(\\mathbf{v})$ cho mọi lớp tương đương $\\mathbf{v} + \\ker(T) \\in V/\\ker(T)$.",
+          "Bước 2: Chứng minh $\\Phi$ được định nghĩa tốt (well-defined). Ta cần chỉ ra rằng nếu $\\mathbf{v}_1 + \\ker(T) = \\mathbf{v}_2 + \\ker(T)$, thì $\\Phi(\\mathbf{v}_1 + \\ker(T)) = \\Phi(\\mathbf{v}_2 + \\ker(T))$.",
+          "  Nếu $\\mathbf{v}_1 + \\ker(T) = \\mathbf{v}_2 + \\ker(T)$, thì $\\mathbf{v}_1 - \\mathbf{v}_2 \\in \\ker(T)$. Theo định nghĩa của hạt nhân, $T(\\mathbf{v}_1 - \\mathbf{v}_2) = \\mathbf{0}$. Do T tuyến tính, $T(\\mathbf{v}_1) - T(\\mathbf{v}_2) = \\mathbf{0}$, suy ra $T(\\mathbf{v}_1) = T(\\mathbf{v}_2)$. Điều này có nghĩa là $\\Phi(\\mathbf{v}_1 + \\ker(T)) = \\Phi(\\mathbf{v}_2 + \\ker(T))$. Vậy $\\Phi$ được định nghĩa tốt.",
+          "Bước 3: Chứng minh $\\Phi$ là tuyến tính.",
+          "  - Phép cộng: $\\Phi((\\mathbf{u}+\\ker(T)) + (\\mathbf{v}+\\ker(T))) = \\Phi((\\mathbf{u}+\\mathbf{v}) + \\ker(T)) = T(\\mathbf{u}+\\mathbf{v}) = T(\\mathbf{u}) + T(\\mathbf{v}) = \\Phi(\\mathbf{u}+\\ker(T)) + \\Phi(\\mathbf{v}+\\ker(T))$.",
+          "  - Phép nhân vô hướng: $\\Phi(c(\\mathbf{v}+\\ker(T))) = \\Phi(c\\mathbf{v} + \\ker(T)) = T(c\\mathbf{v}) = cT(\\mathbf{v}) = c\\Phi(\\mathbf{v}+\\ker(T))$.",
+          "Bước 4: Chứng minh $\\Phi$ là đơn ánh. Ta chỉ cần chứng minh $\\ker(\\Phi) = \\{\\mathbf{0}_{V/\\ker(T)}\\}$. Vector không trong $V/\\ker(T)$ là lớp $\\mathbf{0} + \\ker(T)$.",
+          "  Giả sử $\\Phi(\\mathbf{v}+\\ker(T)) = \\mathbf{0}_W$. Theo định nghĩa, $T(\\mathbf{v}) = \\mathbf{0}_W$. Điều này có nghĩa là $\\mathbf{v} \\in \\ker(T)$, suy ra lớp tương đương $\\mathbf{v} + \\ker(T)$ chính là lớp không $\\mathbf{0} + \\ker(T)$. Vậy $\\Phi$ là đơn ánh.",
+          "Bước 5: Chứng minh $\\Phi$ là toàn ánh. Lấy một phần tử bất kỳ $\\mathbf{w} \\in \\text{im}(T)$. Theo định nghĩa của ảnh, tồn tại $\\mathbf{v} \\in V$ sao cho $T(\\mathbf{v})=\\mathbf{w}$. Khi đó, ta có $\\Phi(\\mathbf{v}+\\ker(T)) = T(\\mathbf{v})=\\mathbf{w}$. Vậy $\\Phi$ là toàn ánh.",
+          "Kết luận: Vì $\\Phi$ là một ánh xạ tuyến tính song ánh, ta có $V/\\ker(T) \\cong \\text{im}(T)$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $W$ là một không gian con của không gian vector hữu hạn chiều $V$. Chứng minh rằng $\\dim(V/W) = \\dim(V) - \\dim(W)$, trong đó $V/W$ là không gian thương.",
+      "answer": {
+        "steps": [
+          "Giả sử $\\dim(W) = k$ và $\\dim(V) = n$. Lấy một cơ sở của W là $B_W = \\{\\mathbf{w}_1, \\dots, \\mathbf{w}_k\\}$.",
+          "Ta có thể mở rộng cơ sở này để tạo thành một cơ sở cho V. Gọi cơ sở của V là $B_V = \\{\\mathbf{w}_1, \\dots, \\mathbf{w}_k, \\mathbf{v}_1, \\dots, \\mathbf{v}_{n-k}\\}$.",
+          "Ta sẽ chứng minh rằng tập hợp các lớp kề $S = \\{\\mathbf{v}_1+W, \\dots, \\mathbf{v}_{n-k}+W\\}$ là một cơ sở của không gian thương $V/W$.",
+          "Bước 1: Chứng minh S sinh ra $V/W$. Lấy một lớp kề bất kỳ $\\mathbf{x}+W \\in V/W$. Vì $\\mathbf{x} \\in V$, ta có thể viết $\\mathbf{x} = (c_1\\mathbf{w}_1+\\dots+c_k\\mathbf{w}_k) + (d_1\\mathbf{v}_1+\\dots+d_{n-k}\\mathbf{v}_{n-k})$.",
+          "  Đặt $\\mathbf{w} = c_1\\mathbf{w}_1+\\dots+c_k\\mathbf{w}_k \\in W$. Khi đó $\\mathbf{x} = \\mathbf{w} + (d_1\\mathbf{v}_1+\\dots+d_{n-k}\\mathbf{v}_{n-k})$.",
+          "  Do đó, $\\mathbf{x}+W = (d_1\\mathbf{v}_1+\\dots+d_{n-k}\\mathbf{v}_{n-k}) + W = d_1(\\mathbf{v}_1+W) + \\dots + d_{n-k}(\\mathbf{v}_{n-k}+W)$. Vậy S sinh ra $V/W$.",
+          "Bước 2: Chứng minh S độc lập tuyến tính. Xét tổ hợp tuyến tính bằng vector không trong $V/W$ (tức là lớp $0+W=W$):",
+          "  $a_1(\\mathbf{v}_1+W) + \\dots + a_{n-k}(\\mathbf{v}_{n-k}+W) = 0+W$. Điều này có nghĩa là $(a_1\\mathbf{v}_1+\\dots+a_{n-k}\\mathbf{v}_{n-k}) + W = W$.",
+          "  Điều này xảy ra khi và chỉ khi vector $a_1\\mathbf{v}_1+\\dots+a_{n-k}\\mathbf{v}_{n-k}$ thuộc W.",
+          "  Nếu vector này thuộc W, nó có thể được viết thành tổ hợp tuyến tính của cơ sở của W: $a_1\\mathbf{v}_1+\\dots+a_{n-k}\\mathbf{v}_{n-k} = b_1\\mathbf{w}_1+\\dots+b_k\\mathbf{w}_k$.",
+          "  $a_1\\mathbf{v}_1+\\dots+a_{n-k}\\mathbf{v}_{n-k} - b_1\\mathbf{w}_1-\\dots-b_k\\mathbf{w}_k = \\mathbf{0}$. Đây là một tổ hợp tuyến tính của các vector trong cơ sở $B_V$ của V. Vì $B_V$ độc lập tuyến tính, tất cả các hệ số phải bằng 0. Cụ thể, $a_1 = \\dots = a_{n-k} = 0$.",
+          "  Vậy S là độc lập tuyến tính.",
+          "Kết luận: Vì S là một cơ sở của $V/W$, số chiều của $V/W$ là số phần tử của S, tức là $n-k$. Do đó, $\\dim(V/W) = n-k = \\dim(V) - \\dim(W)$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $P_2(\\mathbb{R})$ với tích trong $\\langle p, q \\rangle = \\int_{-1}^{1} p(t)q(t) dt$. Cho $W = \\text{span}\\{1, t\\}$. Tìm hình chiếu trực giao của đa thức $p(t) = t^2$ lên không gian con $W^\\perp$ (phần bù trực giao của W).",
+      "answer": {
+        "steps": [
+          "Ta có công thức phân tích trực giao: $p = \\text{proj}_W p + \\text{proj}_{W^\\perp} p$. Do đó, $\\text{proj}_{W^\\perp} p = p - \\text{proj}_W p$. Ta sẽ tính hình chiếu của p lên W trước.",
+          "Để tính $\\text{proj}_W p$, ta cần một cơ sở trực giao cho W. Cơ sở cho W là $\\{1, t\\}$. Ta kiểm tra xem chúng có trực giao không: $\\langle 1, t \\rangle = \\int_{-1}^{1} 1 \\cdot t dt = [\\frac{t^2}{2}]_{-1}^{1} = \\frac{1}{2} - \\frac{1}{2} = 0$. Vậy cơ sở $\\{1, t\\}$ đã là trực giao.",
+          "Hình chiếu của p lên W được tính bằng: $\\text{proj}_W p = \\frac{\\langle p, 1 \\rangle}{\\|1\\|^2} \\cdot 1 + \\frac{\\langle p, t \\rangle}{\\|t\\|^2} \\cdot t$.",
+          "Tính các tích trong cần thiết:",
+          "  - $\\langle p, 1 \\rangle = \\langle t^2, 1 \\rangle = \\int_{-1}^{1} t^2 dt = [\\frac{t^3}{3}]_{-1}^{1} = \\frac{1}{3} - (-\\frac{1}{3}) = \\frac{2}{3}$.",
+          "  - $\\langle p, t \\rangle = \\langle t^2, t \\rangle = \\int_{-1}^{1} t^3 dt = [\\frac{t^4}{4}]_{-1}^{1} = \\frac{1}{4} - \\frac{1}{4} = 0$.",
+          "  - $\\|1\\|^2 = \\langle 1, 1 \\rangle = \\int_{-1}^{1} 1^2 dt = [t]_{-1}^{1} = 1 - (-1) = 2$.",
+          "  - $\\|t\\|^2 = \\langle t, t \\rangle = \\int_{-1}^{1} t^2 dt = \\frac{2}{3}$.",
+          "Thay các giá trị vào công thức hình chiếu: $\\text{proj}_W p = \\frac{2/3}{2} \\cdot 1 + \\frac{0}{2/3} \\cdot t = \\frac{1}{3}$.",
+          "Cuối cùng, tính hình chiếu lên $W^\\perp$: $\\text{proj}_{W^\\perp} p = p(t) - \\text{proj}_W p = t^2 - \\frac{1}{3}$.",
+          "Kết luận: Hình chiếu trực giao của $t^2$ lên $W^\\perp$ là đa thức $t^2 - \\frac{1}{3}$."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng không gian vector $P(\\mathbb{R})$ của tất cả các đa thức với hệ số thực là vô hạn chiều.",
+      "answer": {
+        "steps": [
+          "Để chứng minh $P(\\mathbb{R})$ là vô hạn chiều, ta sử dụng phương pháp phản chứng.",
+          "Bước 1: Giả sử $P(\\mathbb{R})$ là hữu hạn chiều. Gọi số chiều của nó là $n$.",
+          "Bước 2: Theo định nghĩa của số chiều, bất kỳ tập hợp nào có nhiều hơn n vector trong $P(\\mathbb{R})$ đều phải phụ thuộc tuyến tính.",
+          "Bước 3: Xét tập hợp $S = \\{1, t, t^2, \\dots, t^n\\}$. Tập hợp này có $n+1$ đa thức (vector) trong $P(\\mathbb{R})$.",
+          "Bước 4: Theo giả sử ở bước 2, tập S phải là phụ thuộc tuyến tính. Điều này có nghĩa là tồn tại các hằng số $c_0, c_1, \\dots, c_n$, không phải tất cả đều bằng không, sao cho: $c_0 \\cdot 1 + c_1 \\cdot t + c_2 \\cdot t^2 + \\dots + c_n \\cdot t^n = 0$ (đa thức không).",
+          "Bước 5: Phương trình trên nói rằng đa thức $p(t) = c_0 + c_1t + \\dots + c_n t^n$ bằng 0 với mọi giá trị của $t$.",
+          "Bước 6: Tuy nhiên, một định lý cơ bản của đại số nói rằng một đa thức khác không bậc n có tối đa n nghiệm thực. Để một đa thức bằng 0 với mọi t (tức là có vô số nghiệm), tất cả các hệ số của nó phải bằng không. Do đó, $c_0 = c_1 = \\dots = c_n = 0$.",
+          "Bước 7: Điều này mâu thuẫn với kết luận ở bước 4 rằng không phải tất cả các hệ số đều bằng không. Do đó, giả sử ban đầu là sai.",
+          "Kết luận: Không gian vector $P(\\mathbb{R})$ phải là vô hạn chiều."
+        ]
+      }
+    },
+    {
+      "question": "Cho V là không gian vector hữu hạn chiều và $V^*$ là không gian đối ngẫu của nó. Chứng minh rằng $V$ và $V^*$ là đẳng cấu.",
+      "answer": {
+        "steps": [
+          "Để chứng minh $V \\cong V^*$, ta cần chỉ ra rằng $\\dim(V) = \\dim(V^*)$. Nếu hai không gian vector có cùng số chiều hữu hạn, chúng đẳng cấu với nhau.",
+          "Giả sử $\\dim(V) = n$. Lấy một cơ sở của V là $B = \\{\\mathbf{v}_1, \\dots, \\mathbf{v}_n\\}$.",
+          "Ta sẽ xây dựng một cơ sở cho $V^*$ và chỉ ra rằng nó có n phần tử. Cơ sở này được gọi là cơ sở đối ngẫu.",
+          "Định nghĩa tập hợp các phiếm hàm tuyến tính $B^* = \\{f_1, \\dots, f_n\\}$ trong $V^*$ bởi quy tắc: $f_i(\\mathbf{v}_j) = \\delta_{ij}$ (với $\\delta_{ij}$ là delta Kronecker, bằng 1 nếu $i=j$ và 0 nếu $i \\neq j$).",
+          "Bước 1: Chứng minh $B^*$ độc lập tuyến tính. Xét tổ hợp tuyến tính bằng phiếm hàm không: $c_1f_1 + \\dots + c_n f_n = 0$.",
+          "  Áp dụng phiếm hàm này lên vector cơ sở $\\mathbf{v}_j$: $(c_1f_1 + \\dots + c_n f_n)(\\mathbf{v}_j) = 0(\\mathbf{v}_j) = 0$.",
+          "  Vế trái: $c_1f_1(\\mathbf{v}_j) + \\dots + c_jf_j(\\mathbf{v}_j) + \\dots + c_n f_n(\\mathbf{v}_j) = c_1(0) + \\dots + c_j(1) + \\dots + c_n(0) = c_j$.",
+          "  Do đó, $c_j = 0$. Vì điều này đúng với mọi $j=1, \\dots, n$, nên tất cả các hệ số đều bằng 0. Vậy $B^*$ độc lập tuyến tính.",
+          "Bước 2: Chứng minh $B^*$ sinh ra $V^*$. Lấy một phiếm hàm tuyến tính bất kỳ $f \\in V^*$. Đặt $a_i = f(\\mathbf{v}_i)$ cho $i=1, \\dots, n$.",
+          "  Ta sẽ chứng minh rằng $f = a_1f_1 + \\dots + a_n f_n$. Gọi phiếm hàm ở vế phải là $g$. Ta cần chứng minh $f=g$.",
+          "  Hai phiếm hàm tuyến tính bằng nhau nếu chúng có cùng giá trị trên tất cả các vector của một cơ sở. Xét giá trị của g trên $\\mathbf{v}_j$:",
+          "  $g(\\mathbf{v}_j) = (a_1f_1 + \\dots + a_n f_n)(\\mathbf{v}_j) = a_1f_1(\\mathbf{v}_j) + \\dots + a_j f_j(\\mathbf{v}_j) + \\dots = a_j$.",
+          "  Mà ta đã đặt $a_j = f(\\mathbf{v}_j)$. Do đó $g(\\mathbf{v}_j) = f(\\mathbf{v}_j)$ với mọi j. Vậy $f=g$.",
+          "  Điều này chứng tỏ mọi $f \\in V^*$ có thể được viết thành tổ hợp tuyến tính của các phần tử trong $B^*$. Vậy $B^*$ sinh ra $V^*$.",
+          "Kết luận: Vì $B^*$ là một cơ sở của $V^*$ và có n phần tử, $\\dim(V^*) = n = \\dim(V)$. Do đó $V \\cong V^*$."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh Bất đẳng thức Hạng Sylvester: Cho $A$ là ma trận $m \\times n$ và $B$ là ma trận $n \\times p$. Chứng minh rằng $\\text{rank}(A) + \\text{rank}(B) - n \\le \\text{rank}(AB)$.",
+      "answer": {
+        "steps": [
+          "Gọi $T_A: \\mathbb{R}^n \\to \\mathbb{R}^m$ và $T_B: \\mathbb{R}^p \\to \\mathbb{R}^n$ là các ánh xạ tuyến tính tương ứng. Ta có $\\text{rank}(A) = \\dim(\\text{im}(T_A))$ và $\\text{rank}(B) = \\dim(\\text{im}(T_B))$. Tích $AB$ tương ứng với ánh xạ hợp $T_A \\circ T_B$.",
+          "Xét ánh xạ $T_A$ bị thu hẹp trên không gian con $\\text{im}(T_B) \\subseteq \\mathbb{R}^n$. Gọi ánh xạ thu hẹp này là $S: \\text{im}(T_B) \\to \\mathbb{R}^m$, với $S(\\mathbf{y}) = T_A(\\mathbf{y})$.",
+          "Ảnh của S là $\\text{im}(S) = T_A(\\text{im}(T_B)) = \\text{im}(T_A \\circ T_B)$, có số chiều là $\\text{rank}(AB)$.",
+          "Hạt nhân của S là $\\ker(S) = \\{\\mathbf{y} \\in \\text{im}(T_B) \\mid T_A(\\mathbf{y}) = \\mathbf{0}\\} = \\text{im}(T_B) \\cap \\ker(T_A)$.",
+          "Áp dụng Định lý về hạng và số chiều hạt nhân cho ánh xạ S:",
+          "$\\dim(\\text{domain}(S)) = \\dim(\\ker(S)) + \\dim(\\text{im}(S))$.",
+          "$\\dim(\\text{im}(T_B)) = \\dim(\\text{im}(T_B) \\cap \\ker(T_A)) + \\text{rank}(AB)$.",
+          "$\\text{rank}(B) = \\dim(\\text{im}(T_B) \\cap \\ker(T_A)) + \\text{rank}(AB)$. (1)",
+          "Ta có $\\text{im}(T_B) \\cap \\ker(T_A)$ là một không gian con của $\\ker(T_A)$, do đó $\\dim(\\text{im}(T_B) \\cap \\ker(T_A)) \\le \\dim(\\ker(T_A))$.",
+          "Áp dụng định lý hạng cho $T_A$: $\\dim(\\mathbb{R}^n) = \\dim(\\ker(T_A)) + \\dim(\\text{im}(T_A))$, hay $n = \\dim(\\ker(T_A)) + \\text{rank}(A)$.",
+          "Suy ra $\\dim(\\ker(T_A)) = n - \\text{rank}(A)$.",
+          "Vậy, $\\dim(\\text{im}(T_B) \\cap \\ker(T_A)) \\le n - \\text{rank}(A)$. (2)",
+          "Kết hợp (1) và (2): $\\text{rank}(B) \\le (n - \\text{rank}(A)) + \\text{rank}(AB)$.",
+          "Sắp xếp lại bất đẳng thức, ta được: $\\text{rank}(A) + \\text{rank}(B) - n \\le \\text{rank}(AB)$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $W_1, W_2$ là các không gian con của không gian vector V. Chứng minh rằng tổng $W_1+W_2$ là một tổng trực tiếp khi và chỉ khi mọi vector $\\mathbf{x} \\in W_1+W_2$ có biểu diễn duy nhất dạng $\\mathbf{x}=\\mathbf{w}_1+\\mathbf{w}_2$ với $\\mathbf{w}_1 \\in W_1, \\mathbf{w}_2 \\in W_2$.",
+      "answer": {
+        "steps": [
+          "Theo định nghĩa, tổng $W_1+W_2$ là một tổng trực tiếp, ký hiệu $W_1 \\oplus W_2$, khi và chỉ khi $W_1 \\cap W_2 = \\{\\mathbf{0}\\}$. Ta sẽ chứng minh hai chiều.",
+          "Chiều $(\\implies)$: Giả sử $W_1+W_2$ là tổng trực tiếp. Lấy một vector $\\mathbf{x} \\in W_1+W_2$. Giả sử $\\mathbf{x}$ có hai cách biểu diễn: $\\mathbf{x} = \\mathbf{w}_1 + \\mathbf{w}_2$ và $\\mathbf{x} = \\mathbf{w}'_1 + \\mathbf{w}'_2$, trong đó $\\mathbf{w}_1, \\mathbf{w}'_1 \\in W_1$ và $\\mathbf{w}_2, \\mathbf{w}'_2 \\in W_2$.",
+          "Cho hai biểu diễn bằng nhau: $\\mathbf{w}_1 + \\mathbf{w}_2 = \\mathbf{w}'_1 + \\mathbf{w}'_2$.",
+          "Sắp xếp lại: $\\mathbf{w}_1 - \\mathbf{w}'_1 = \\mathbf{w}'_2 - \\mathbf{w}_2$.",
+          "Vế trái là một vector trong $W_1$ (vì $W_1$ là không gian con). Vế phải là một vector trong $W_2$ (vì $W_2$ là không gian con).",
+          "Do đó, vector này phải thuộc giao $W_1 \\cap W_2$. Vì tổng là trực tiếp, $W_1 \\cap W_2 = \\{\\mathbf{0}\\}$.",
+          "Suy ra $\\mathbf{w}_1 - \\mathbf{w}'_1 = \\mathbf{0}$ và $\\mathbf{w}'_2 - \\mathbf{w}_2 = \\mathbf{0}$.",
+          "Điều này có nghĩa là $\\mathbf{w}_1 = \\mathbf{w}'_1$ và $\\mathbf{w}_2 = \\mathbf{w}'_2$. Vậy biểu diễn là duy nhất.",
+          "Chiều $(\\impliedby)$: Giả sử mọi vector $\\mathbf{x} \\in W_1+W_2$ có biểu diễn duy nhất. Ta cần chứng minh $W_1 \\cap W_2 = \\{\\mathbf{0}\\}$.",
+          "Lấy một vector $\\mathbf{z} \\in W_1 \\cap W_2$. Ta có thể viết vector không $\\mathbf{0}$ theo hai cách:",
+          "  - Cách 1 (tầm thường): $\\mathbf{0} = \\mathbf{0} + \\mathbf{0}$, với $\\mathbf{0} \\in W_1$ và $\\mathbf{0} \\in W_2$.",
+          "  - Cách 2: Vì $\\mathbf{z} \\in W_1$ và $-\\mathbf{z} \\in W_2$ (do $W_2$ là không gian con), ta có thể viết $\\mathbf{0} = \\mathbf{z} + (-\\mathbf{z})$.",
+          "Vì vector $\\mathbf{0}$ thuộc $W_1+W_2$ và có biểu diễn duy nhất, hai cách biểu diễn trên phải giống nhau. Tức là thành phần trong $W_1$ phải bằng nhau và thành phần trong $W_2$ phải bằng nhau.",
+          "So sánh thành phần trong $W_1$, ta có $\\mathbf{z} = \\mathbf{0}$.",
+          "Điều này chứng tỏ vector duy nhất trong giao $W_1 \\cap W_2$ là vector không. Vậy $W_1 \\cap W_2 = \\{\\mathbf{0}\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $T: V \\to V$ là một toán tử tuyến tính trên không gian vector V. Một không gian con $W$ của $V$ được gọi là $T$-bất biến nếu $T(W) \\subseteq W$. Chứng minh rằng nếu $W$ là một không gian con $T$-bất biến của $V$, thì tồn tại một cơ sở của $V$ sao cho ma trận của $T$ đối với cơ sở này có dạng khối $\\begin{pmatrix} A & B \\\\ 0 & C \\end{pmatrix}$, trong đó $A$ là ma trận của ánh xạ $T$ thu hẹp trên $W$.",
+      "answer": {
+        "steps": [
+          "Giả sử $W$ là một không gian con $T$-bất biến của $V$. Giả sử $\\dim(W) = k$ và $\\dim(V) = n$.",
+          "Bước 1: Xây dựng cơ sở. Chọn một cơ sở cho W, gọi là $B_W = \\{\\mathbf{w}_1, \\dots, \\mathbf{w}_k\\}$.",
+          "Sau đó, mở rộng $B_W$ để tạo thành một cơ sở cho toàn bộ không gian V. Gọi cơ sở này là $B_V = \\{\\mathbf{w}_1, \\dots, \\mathbf{w}_k, \\mathbf{v}_1, \\dots, \\mathbf{v}_{n-k}\\}$.",
+          "Bước 2: Tìm ma trận của T đối với cơ sở $B_V$. Ma trận này, ký hiệu $[T]_{B_V}$, có các cột là các vector tọa độ của ảnh của các vector cơ sở, tức là $[T(\\mathbf{w}_1)]_{B_V}, \\dots, [T(\\mathbf{w}_k)]_{B_V}, [T(\\mathbf{v}_1)]_{B_V}, \\dots, [T(\\mathbf{v}_{n-k})]_{B_V}$.",
+          "Bước 3: Xét k cột đầu tiên. Với mọi $j=1, \\dots, k$, vector $\\mathbf{w}_j$ thuộc W. Vì W là $T$-bất biến, ảnh $T(\\mathbf{w}_j)$ cũng thuộc W.",
+          "Do đó, $T(\\mathbf{w}_j)$ có thể được viết dưới dạng một tổ hợp tuyến tính của *chỉ* các vector trong cơ sở của W, $B_W$.",
+          "$T(\\mathbf{w}_j) = a_{1j}\\mathbf{w}_1 + \\dots + a_{kj}\\mathbf{w}_k + 0\\mathbf{v}_1 + \\dots + 0\\mathbf{v}_{n-k}$.",
+          "Vector tọa độ của $T(\\mathbf{w}_j)$ đối với cơ sở $B_V$ sẽ là $[T(\\mathbf{w}_j)]_{B_V} = \\begin{pmatrix} a_{1j} \\\\ \\vdots \\\\ a_{kj} \\\\ 0 \\\\ \\vdots \\\\ 0 \\end{pmatrix}$.",
+          "Các tọa độ tương ứng với các vector $\\mathbf{v}_i$ đều bằng 0.",
+          "Bước 4: Xét $n-k$ cột còn lại. Với $j=1, \\dots, n-k$, vector $T(\\mathbf{v}_j)$ là một vector trong V và có thể được viết dưới dạng tổ hợp tuyến tính של tất cả các vector trong $B_V$:",
+          "$T(\\mathbf{v}_j) = b_{1j}\\mathbf{w}_1 + \\dots + b_{kj}\\mathbf{w}_k + c_{1j}\\mathbf{v}_1 + \\dots + c_{n-k,j}\\mathbf{v}_{n-k}$.",
+          "Vector tọa độ của $T(\\mathbf{v}_j)$ là $[T(\\mathbf{v}_j)]_{B_V} = \\begin{pmatrix} b_{1j} \\\\ \\vdots \\\\ b_{kj} \\\\ c_{1j} \\\\ \\vdots \\\\ c_{n-k,j} \\end{pmatrix}$.",
+          "Bước 5: Lắp ráp ma trận. Ghép các vector tọa độ này lại thành các cột của ma trận $[T]_{B_V}$, ta được ma trận có dạng khối:",
+          "$[T]_{B_V} = \\begin{pmatrix} A & B \\\\ 0 & C \\end{pmatrix}$, trong đó A là ma trận $k \\times k$ tạo bởi các hệ số $a_{ij}$, B là ma trận $k \\times (n-k)$ tạo bởi các hệ số $b_{ij}$, 0 là ma trận không $(n-k) \\times k$, và C là ma trận $(n-k) \\times (n-k)$ tạo bởi các hệ số $c_{ij}$.",
+          "Ma trận A chính là ma trận của ánh xạ $T$ thu hẹp trên W đối với cơ sở $B_W$. Chứng minh hoàn tất."
+        ]
+      }
+    },
+    {
+      "question": "Cho V là một không gian vector hữu hạn chiều với tích trong. Cho $W$ là một không gian con của $V$. Chứng minh rằng $(W^{\\perp})^{\\perp} = W$.",
+      "answer": {
+        "steps": [
+          "Ta sẽ chứng minh bằng cách chỉ ra $W \\subseteq (W^{\\perp})^{\\perp}$ và sau đó sử dụng số chiều để kết luận chúng bằng nhau.",
+          "Bước 1: Chứng minh $W \\subseteq (W^{\\perp})^{\\perp}$.",
+          "  Lấy một vector bất kỳ $\\mathbf{w} \\in W$.",
+          "  Ta cần chứng minh $\\mathbf{w} \\in (W^{\\perp})^{\\perp}$. Điều này có nghĩa là $\\mathbf{w}$ phải trực giao với mọi vector trong $W^{\\perp}$.",
+          "  Lấy một vector bất kỳ $\\mathbf{v} \\in W^{\\perp}$. Theo định nghĩa của $W^{\\perp}$, $\\mathbf{v}$ trực giao với mọi vector trong W. Cụ thể, $\\langle \\mathbf{v}, \\mathbf{w} \\rangle = 0$.",
+          "  Do tính đối xứng của tích trong, $\\langle \\mathbf{w}, \\mathbf{v} \\rangle = 0$.",
+          "  Vì $\\mathbf{w}$ trực giao với mọi vector $\\mathbf{v} \\in W^{\\perp}$, theo định nghĩa, $\\mathbf{w}$ thuộc $(W^{\\perp})^{\\perp}$.",
+          "  Vì điều này đúng với mọi $\\mathbf{w} \\in W$, ta có $W \\subseteq (W^{\\perp})^{\\perp}$.",
+          "Bước 2: Sử dụng số chiều.",
+          "  Đối với một không gian con $U$ của $V$, ta có một định lý cơ bản rằng $V = U \\oplus U^{\\perp}$, và do đó $\\dim(V) = \\dim(U) + \\dim(U^{\\perp})$.",
+          "  Áp dụng định lý này cho không gian con W: $\\dim(V) = \\dim(W) + \\dim(W^{\\perp})$. (1)",
+          "  Bây giờ, áp dụng định lý này cho không gian con $W^{\\perp}$: $\\dim(V) = \\dim(W^{\\perp}) + \\dim((W^{\\perp})^{\\perp})$. (2)",
+          "  Từ (1) và (2), ta có $\\dim(W) + \\dim(W^{\\perp}) = \\dim(W^{\\perp}) + \\dim((W^{\\perp})^{\\perp})$.",
+          "  Trừ $\\dim(W^{\\perp})$ khỏi cả hai vế, ta được $\\dim(W) = \\dim((W^{\\perp})^{\\perp})$.",
+          "Bước 3: Kết luận.",
+          "  Ta đã chứng minh được rằng $W$ là một không gian con của $(W^{\\perp})^{\\perp}$ và chúng có cùng số chiều hữu hạn.",
+          "  Một định lý cơ bản khác nói rằng nếu một không gian con có cùng số chiều với không gian chứa nó, thì chúng phải bằng nhau.",
+          "  Do đó, $W = (W^{\\perp})^{\\perp}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $V$ là không gian các ma trận thực $n \\times n$. Chứng minh rằng $W = \\{ A \\in V \\mid \\text{tr}(A) = 0 \\}$ là một không gian con của $V$. Tìm số chiều của $W$.",
+      "answer": {
+        "steps": [
+          "Bước 1: Chứng minh W là không gian con.",
+          "  a) Ma trận không $\\mathbf{0}$ có $\\text{tr}(\\mathbf{0}) = 0$, vậy $\\mathbf{0} \\in W$.",
+          "  b) Lấy $A, B \\in W$. Ta có $\\text{tr}(A)=0$ và $\\text{tr}(B)=0$. Do tính chất tuyến tính của vết, $\\text{tr}(A+B) = \\text{tr}(A) + \\text{tr}(B) = 0+0=0$. Vậy $A+B \\in W$.",
+          "  c) Lấy $A \\in W$ và $c \\in \\mathbb{R}$. Ta có $\\text{tr}(A)=0$. $\\text{tr}(cA) = c \\cdot \\text{tr}(A) = c \\cdot 0 = 0$. Vậy $cA \\in W$.",
+          "  Vì ba điều kiện được thỏa mãn, W là một không gian con của V.",
+          "Bước 2: Tìm số chiều của W.",
+          "  Ta sẽ sử dụng Định lý về hạng và số chiều hạt nhân. Xét ánh xạ vết $\\text{tr}: V \\to \\mathbb{R}$.",
+          "  Đây là một ánh xạ tuyến tính từ không gian $V = M_{n \\times n}$ vào không gian $\\mathbb{R}$. Theo định nghĩa, W chính là hạt nhân của ánh xạ này: $W = \\ker(\\text{tr})$.",
+          "  Áp dụng định lý: $\\dim(V) = \\dim(\\ker(\\text{tr})) + \\dim(\\text{im}(\\text{tr}))$.",
+          "  Ta cần tìm số chiều của V và ảnh của tr.",
+          "  Số chiều của $V = M_{n \\times n}$ là $n^2$ (một cơ sở có thể là các ma trận $E_{ij}$ có số 1 ở vị trí (i,j) và 0 ở các vị trí khác).",
+          "  Ảnh của tr là một không gian con của $\\mathbb{R}$. Ta cần xem nó có phải là tập $\\{\\mathbf{0}\\}$ hay toàn bộ $\\mathbb{R}$.",
+          "  Lấy ma trận đơn vị $I_n$. Ta có $\\text{tr}(I_n) = n \\neq 0$ (giả sử n>0). Lấy ma trận $A = c/n \\cdot I_n$, ta có $\\text{tr}(A) = c/n \\cdot \\text{tr}(I_n) = c/n \\cdot n = c$. Vì ta có thể tạo ra mọi số thực c, ảnh của tr là toàn bộ $\\mathbb{R}$.",
+          "  Do đó, $\\dim(\\text{im}(\\text{tr})) = \\dim(\\mathbb{R}) = 1$.",
+          "  Thay vào công thức của định lý: $n^2 = \\dim(W) + 1$.",
+          "  Giải ra $\\dim(W) = n^2 - 1$.",
+          "Kết luận: W là một không gian con của V và có số chiều là $n^2 - 1$."
+        ]
+      }
     }
   ]
 }
