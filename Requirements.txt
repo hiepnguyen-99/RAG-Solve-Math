@@ -10,4 +10,4 @@ sentence-transformers
 python-dotenv
 FlagEmbedding 
 markdown
-google-genativeai
+google-generativeai
