@@ -39,18 +39,18 @@ db = Chroma(
 
 # Gọi API mô hình
 api_key = os.getenv("GEMINI_API_KEY")
-model = genai.GenerativeModel("gemini-2.0-flash-lite")
+model = genai.GenerativeModel("gemini-2.5-pro")
 
 
 def rewrite_query(query, k=5):
     query_rewrite_prompt = f"""
-    Bạn là một trợ lý hữu ích, tạo ra {k} truy vấn tìm kiếm dựa trên một truy vấn đầu vào duy nhất theo nhiều góc độ ngữ nghĩa khác nhau.
+    Tạo {k} truy vấn tìm kiếm khác nhau từ truy vấn sau theo nhiều góc nhìn ngữ nghĩa. 
     Yêu cầu:
-    - Mỗi câu hỏi phải rõ ràng, dễ hiểu.
-    - Không viết dài dòng; ngắn gọn, súc tích, không lan man.
-    - Chỉ hiển thị danh sách các câu hỏi thay thế, mỗi câu trên một dòng mới.
+    - Mỗi truy vấn phải rõ ràng, dễ hiểu.
+    - Ngắn gọn, không lan man.
+    - Mỗi truy vấn trên một dòng.
 
-    Câu hỏi gốc: {query}
+    Câu gốc: {query}
     """
     response = model.generate_content(query_rewrite_prompt,
                                       generation_config={
@@ -64,10 +64,11 @@ def rewrite_query(query, k=5):
 
 def promt_text(context, question):
     return f"""
-    "Dựa trên thông tin sau, hãy trả lời ngắn gọn, đúng trọng tâm câu hỏi, chỉ sử dụng tài liệu liên quan đến câu hỏi nhất để trả lời, tài liệu không liên quan vui lòng bỏ qua, chỉ trả lời 1 lần không cần tóm lại và không lặp lại câu hỏi:\n"
-        Thông tin \n{context}\n
-        Câu hỏi: \n{question}\n"
-        Trả lời:
+    "Dựa trên thông tin sau, hãy trả lời câu hỏi, 
+    Khi trả lời, hãy định dạng các công thức toán học bằng LaTeX giữa hai dấu $$ hoặc trong `code block`. Mỗi bước xuống dòng rõ ràng.\n"
+    Thông tin \n{context}\n
+    Câu hỏi: \n{question}\n"
+    Trả lời:
     """
 
 
