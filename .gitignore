@@ -2,3 +2,4 @@
 /model/__pycache__
 /appenv
 chat_history.json
+.venv/
