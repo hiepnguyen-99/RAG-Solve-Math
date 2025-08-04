@@ -5760,6 +5760,697 @@
           "$\\Leftrightarrow$ v là vector riêng của $T^*$ với giá trị riêng $\\bar{\\lambda}$."
         ]
       }
+    },
+    {
+      "question": "Tìm ma trận của dạng toàn phương $q(x_1, x_2) = 3x_1^2 - 8x_1x_2 + 5x_2^2$.",
+      "answer": {
+        "steps": [
+          "Dạng toàn phương $q(x) = x^T A x$ có ma trận đối xứng A.",
+          "Các phần tử trên đường chéo chính của A là các hệ số của $x_i^2$. Ta có $a_{11} = 3$ và $a_{22} = 5$.",
+          "Các phần tử ngoài đường chéo chính $a_{ij}$ (với $i \\neq j$) bằng một nửa hệ số của số hạng $x_i x_j$. Hệ số của $x_1x_2$ là -8.",
+          "Vậy $a_{12} = a_{21} = \\frac{-8}{2} = -4$.",
+          "Kết luận, ma trận của dạng toàn phương là: $A = \\begin{pmatrix} 3 & -4 \\\\ -4 & 5 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận đối xứng $A = \\begin{pmatrix} 1 & 2 & -3 \\\\ 2 & 5 & 0 \\\\ -3 & 0 & -4 \\end{pmatrix}$. Viết dạng toàn phương $q(x_1, x_2, x_3)$ tương ứng.",
+      "answer": {
+        "steps": [
+          "Dạng toàn phương được tính bằng công thức $q(x) = x^T A x = \\begin{pmatrix} x_1 & x_2 & x_3 \\end{pmatrix} \\begin{pmatrix} 1 & 2 & -3 \\\\ 2 & 5 & 0 \\\\ -3 & 0 & -4 \\end{pmatrix} \\begin{pmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{pmatrix}$.",
+          "Các hệ số của $x_i^2$ chính là các phần tử trên đường chéo chính của A: $1x_1^2$, $5x_2^2$, $-4x_3^2$.",
+          "Hệ số của $x_i x_j$ (với $i \\neq j$) bằng $2a_{ij}$.",
+          "Tính hệ số của $x_1x_2$: $2a_{12} = 2 \\times 2 = 4$.",
+          "Tính hệ số của $x_1x_3$: $2a_{13} = 2 \\times (-3) = -6$.",
+          "Tính hệ số của $x_2x_3$: $2a_{23} = 2 \\times 0 = 0$.",
+          "Kết hợp lại, dạng toàn phương là: $q(x_1, x_2, x_3) = x_1^2 + 5x_2^2 - 4x_3^2 + 4x_1x_2 - 6x_1x_3$."
+        ]
+      }
+    },
+    {
+      "question": "Sử dụng phương pháp Lagrange, đưa dạng toàn phương $q(x_1, x_2) = x_1^2 + 6x_1x_2 + 8x_2^2$ về dạng chính tắc.",
+      "answer": {
+        "steps": [
+          "Ta nhóm các số hạng chứa $x_1$: $q = (x_1^2 + 6x_1x_2) + 8x_2^2$.",
+          "Bổ sung để tạo thành một bình phương đúng (hoàn thành bình phương): $q = \\left[x_1^2 + 2 \\cdot x_1 \\cdot (3x_2) + (3x_2)^2\\right] - (3x_2)^2 + 8x_2^2$.",
+          "Viết lại dưới dạng bình phương: $q = (x_1 + 3x_2)^2 - 9x_2^2 + 8x_2^2$.",
+          "Rút gọn biểu thức: $q = (x_1 + 3x_2)^2 - x_2^2$.",
+          "Thực hiện phép đổi biến: Đặt $y_1 = x_1 + 3x_2$ và $y_2 = x_2$.",
+          "Dạng chính tắc của q là: $q = y_1^2 - y_2^2$."
+        ]
+      }
+    },
+    {
+      "question": "Sử dụng phương pháp Lagrange, đưa dạng toàn phương $q(x_1, x_2, x_3) = x_1^2 + 2x_2^2 + 3x_3^2 + 2x_1x_2 + 2x_1x_3 + 4x_2x_3$ về dạng chính tắc.",
+      "answer": {
+        "steps": [
+          "Nhóm các số hạng chứa $x_1$: $q = (x_1^2 + 2x_1x_2 + 2x_1x_3) + 2x_2^2 + 3x_3^2 + 4x_2x_3$.",
+          "Hoàn thành bình phương cho $x_1$: $q = (x_1 + x_2 + x_3)^2 - (x_2+x_3)^2 + 2x_2^2 + 3x_3^2 + 4x_2x_3$.",
+          "Rút gọn: $q = (x_1 + x_2 + x_3)^2 - (x_2^2 + 2x_2x_3 + x_3^2) + 2x_2^2 + 3x_3^2 + 4x_2x_3 = (x_1 + x_2 + x_3)^2 + x_2^2 + 2x_3^2 + 2x_2x_3$.",
+          "Nhóm các số hạng chứa $x_2$: $q = (x_1 + x_2 + x_3)^2 + (x_2^2 + 2x_2x_3) + 2x_3^2$.",
+          "Hoàn thành bình phương cho $x_2$: $q = (x_1 + x_2 + x_3)^2 + (x_2 + x_3)^2 - x_3^2 + 2x_3^2 = (x_1 + x_2 + x_3)^2 + (x_2 + x_3)^2 + x_3^2$.",
+          "Đặt $y_1 = x_1 + x_2 + x_3$, $y_2 = x_2 + x_3$, $y_3 = x_3$. Dạng chính tắc là: $q = y_1^2 + y_2^2 + y_3^2$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm các giá trị riêng của ma trận $A = \\begin{pmatrix} 2 & -1 \\\\ -1 & 2 \\end{pmatrix}$ của một dạng toàn phương.",
+      "answer": {
+        "steps": [
+          "Để tìm giá trị riêng (trị riêng) $\\lambda$, ta giải phương trình đặc trưng $\\det(A - \\lambda I) = 0$.",
+          "$A - \\lambda I = \\begin{pmatrix} 2 - \\lambda & -1 \\\\ -1 & 2 - \\lambda \\end{pmatrix}$.",
+          "Tính định thức: $\\det(A - \\lambda I) = (2 - \\lambda)(2 - \\lambda) - (-1)(-1) = (2 - \\lambda)^2 - 1$.",
+          "Giải phương trình: $(2 - \\lambda)^2 - 1 = 0 \\implies (2 - \\lambda)^2 = 1$.",
+          "Ta có hai trường hợp: $2 - \\lambda = 1$ hoặc $2 - \\lambda = -1$.",
+          "Kết quả, các giá trị riêng là $\\lambda_1 = 1$ và $\\lambda_2 = 3$."
+        ]
+      }
+    },
+    {
+      "question": "Sử dụng phương pháp chéo hóa trực giao (giá trị riêng), đưa dạng toàn phương $q(x_1, x_2) = 2x_1^2 + 2x_2^2 - 2x_1x_2$ về dạng chính tắc.",
+      "answer": {
+        "steps": [
+          "Bước 1: Tìm ma trận của dạng toàn phương. $a_{11}=2, a_{22}=2, a_{12}=a_{21}=-2/2=-1$. Vậy $A = \\begin{pmatrix} 2 & -1 \\\\ -1 & 2 \\end{pmatrix}$.",
+          "Bước 2: Tìm giá trị riêng của A bằng cách giải $\\det(A - \\lambda I) = 0$.",
+          "Ta có $(2-\\lambda)^2 - 1 = 0 \\implies \\lambda^2 - 4\\lambda + 3 = 0$.",
+          "Phương trình có hai nghiệm $\\lambda_1 = 1$ và $\\lambda_2 = 3$.",
+          "Bước 3: Dạng chính tắc có các hệ số là các giá trị riêng vừa tìm được.",
+          "Kết luận: Dạng chính tắc là $q = 1 \\cdot y_1^2 + 3 \\cdot y_2^2 = y_1^2 + 3y_2^2$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định dấu của dạng toàn phương $q(x_1, x_2) = x_1^2 + 4x_2^2 + 6x_1x_2$.",
+      "answer": {
+        "steps": [
+          "Cách 1: Đưa về dạng chính tắc. $q = (x_1^2 + 6x_1x_2) + 4x_2^2 = (x_1+3x_2)^2 - 9x_2^2 + 4x_2^2 = (x_1+3x_2)^2 - 5x_2^2$.",
+          "Đặt $y_1 = x_1+3x_2, y_2 = x_2$, ta có $q = y_1^2 - 5y_2^2$.",
+          "Dạng chính tắc có cả hệ số dương (1) và hệ số âm (-5), do đó dạng toàn phương là không xác định dấu.",
+          "Cách 2: Sử dụng tiêu chuẩn Sylvester. Ma trận $A = \\begin{pmatrix} 1 & 3 \\\\ 3 & 4 \\end{pmatrix}$.",
+          "Định thức con chính cấp 1: $\\Delta_1 = 1 > 0$.",
+          "Định thức con chính cấp 2: $\\Delta_2 = \\det(A) = 1 \\cdot 4 - 3 \\cdot 3 = 4 - 9 = -5 < 0$.",
+          "Kết luận: Vì các định thức con chính không cùng dấu dương, dạng toàn phương không xác định dấu."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng toàn phương $q = 2y_1^2 - 3y_2^2 + 0y_3^2$. Hãy tìm chỉ số quán tính dương, chỉ số quán tính âm và ký số của dạng toàn phương này.",
+      "answer": {
+        "steps": [
+          "Dạng toàn phương đã cho ở dạng chính tắc $q = 2y_1^2 - 3y_2^2$.",
+          "Chỉ số quán tính dương (p) là số lượng các hệ số dương trong dạng chính tắc.",
+          "Trong biểu thức có một hệ số dương là 2. Vậy $p=1$.",
+          "Chỉ số quán tính âm (q) là số lượng các hệ số âm trong dạng chính tắc.",
+          "Trong biểu thức có một hệ số âm là -3. Vậy $q=1$.",
+          "Ký số (signature) của dạng toàn phương là cặp $(p, q)$. Vậy ký số là $(1, 1)$."
+        ]
+      }
+    },
+    {
+      "question": "Phân loại dạng toàn phương $q(x_1, x_2, x_3) = 3x_1^2 + 2x_2^2 + x_3^2$.",
+      "answer": {
+        "steps": [
+          "Dạng toàn phương đã cho không có các số hạng chéo ($x_ix_j$ với $i \\neq j$), nên nó đã ở dạng chính tắc.",
+          "Các hệ số của dạng chính tắc là $3, 2, 1$.",
+          "Ta kiểm tra dấu của các hệ số này.",
+          "Tất cả các hệ số (3, 2, 1) đều lớn hơn 0.",
+          "Theo định nghĩa, nếu tất cả các hệ số trong dạng chính tắc đều dương, dạng toàn phương là xác định dương."
+        ]
+      }
+    },
+    {
+      "question": "Một dạng toàn phương có ma trận $A$ với các giá trị riêng là $\\lambda_1 = 5, \\lambda_2 = 0, \\lambda_3 = 2$. Dạng toàn phương này được phân loại là gì?",
+      "answer": {
+        "steps": [
+          "Dạng chính tắc của một dạng toàn phương có thể được viết thông qua các giá trị riêng của ma trận của nó: $q = \\lambda_1 y_1^2 + \\lambda_2 y_2^2 + \\lambda_3 y_3^2$.",
+          "Thay các giá trị riêng vào, ta có: $q = 5y_1^2 + 0y_2^2 + 2y_3^2 = 5y_1^2 + 2y_3^2$.",
+          "Kiểm tra các hệ số của dạng chính tắc: 5 và 2.",
+          "Tất cả các hệ số đều không âm (lớn hơn hoặc bằng 0) và có ít nhất một hệ số bằng 0.",
+          "Kết luận: Theo định nghĩa, dạng toàn phương này là nửa xác định dương (hoặc xác định không âm)."
+        ]
+      }
+    },
+    {
+      "question": "Sử dụng phương pháp Lagrange, đưa dạng toàn phương $q(x_1, x_2) = 6x_1x_2$ về dạng chính tắc.",
+      "answer": {
+        "steps": [
+          "Dạng toàn phương này không chứa số hạng bình phương $x_i^2$. Đây là một trường hợp đặc biệt.",
+          "Ta sử dụng phép đổi biến: $x_1 = y_1 + y_2$ và $x_2 = y_1 - y_2$.",
+          "Thay vào biểu thức của q: $q = 6(y_1 + y_2)(y_1 - y_2)$.",
+          "Khai triển và rút gọn: $q = 6(y_1^2 - y_2^2) = 6y_1^2 - 6y_2^2$.",
+          "Kết luận: Dạng chính tắc của q là $6y_1^2 - 6y_2^2$."
+        ]
+      }
+    },
+    {
+      "question": "Sử dụng tiêu chuẩn Sylvester để xác định dấu của dạng toàn phương $q(x_1, x_2) = 2x_1^2 + 4x_1x_2 + 3x_2^2$.",
+      "answer": {
+        "steps": [
+          "Bước 1: Lập ma trận đối xứng A của dạng toàn phương. $A = \\begin{pmatrix} 2 & 2 \\\\ 2 & 3 \\end{pmatrix}$.",
+          "Bước 2: Tiêu chuẩn Sylvester nói rằng dạng toàn phương xác định dương nếu và chỉ nếu tất cả các định thức con chính của A đều dương.",
+          "Tính định thức con chính cấp 1: $\\Delta_1 = |a_{11}| = 2$.",
+          "Tính định thức con chính cấp 2: $\\Delta_2 = \\det(A) = (2 \\times 3) - (2 \\times 2) = 6 - 4 = 2$.",
+          "Kết luận: Vì $\\Delta_1 = 2 > 0$ và $\\Delta_2 = 2 > 0$, dạng toàn phương là xác định dương."
+        ]
+      }
+    },
+    {
+      "question": "Sử dụng tiêu chuẩn Sylvester để phân loại dạng toàn phương $q(x_1, x_2) = -x_1^2 + 6x_1x_2 - 10x_2^2$.",
+      "answer": {
+        "steps": [
+          "Bước 1: Lập ma trận đối xứng A. $A = \\begin{pmatrix} -1 & 3 \\\\ 3 & -10 \\end{pmatrix}$.",
+          "Bước 2: Tiêu chuẩn Sylvester cho dạng xác định âm là các định thức con chính đổi dấu, bắt đầu bằng dấu âm. Tức là $(-1)^k \\Delta_k > 0$.",
+          "Tính $\\Delta_1 = -1$. Ta có $(-1)^1 \\Delta_1 = (-1)(-1) = 1 > 0$. Điều kiện đầu tiên thỏa mãn.",
+          "Tính $\\Delta_2 = \\det(A) = (-1)(-10) - (3)(3) = 10 - 9 = 1$. Ta có $(-1)^2 \\Delta_2 = (1)(1) = 1 > 0$. Điều kiện thứ hai thỏa mãn.",
+          "Kết luận: Vì các định thức con chính thỏa mãn điều kiện, dạng toàn phương là xác định âm."
+        ]
+      }
+    },
+    {
+      "question": "Tìm hạng của dạng toàn phương $q(x_1, x_2, x_3) = x_1^2 + 4x_2^2 + 9x_3^2 + 4x_1x_2 + 6x_1x_3 + 12x_2x_3$.",
+      "answer": {
+        "steps": [
+          "Hạng của dạng toàn phương bằng hạng của ma trận của nó.",
+          "Lập ma trận A: $a_{11}=1, a_{22}=4, a_{33}=9$. $a_{12}=4/2=2, a_{13}=6/2=3, a_{23}=12/2=6$. $A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 6 & 9 \\end{pmatrix}$.",
+          "Để tìm hạng, ta có thể dùng phép biến đổi sơ cấp. Lấy Hàng 2 trừ 2 lần Hàng 1, Hàng 3 trừ 3 lần Hàng 1.",
+          "Ta được ma trận: $\\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{pmatrix}$.",
+          "Ma trận này chỉ có một hàng khác không, vậy hạng của A là 1.",
+          "Kết luận: Hạng của dạng toàn phương là 1."
+        ]
+      }
+    },
+    {
+      "question": "Phân loại dạng toàn phương $q(x_1, x_2) = -x_1^2 + 6x_1x_2 - 9x_2^2$.",
+      "answer": {
+        "steps": [
+          "Ta có thể đưa về dạng chính tắc bằng phương pháp Lagrange.",
+          "Đặt dấu trừ ra ngoài: $q = -(x_1^2 - 6x_1x_2 + 9x_2^2)$.",
+          "Biểu thức trong ngoặc là một hằng đẳng thức: $q = -(x_1 - 3x_2)^2$.",
+          "Đặt $y_1 = x_1 - 3x_2$ và $y_2 = x_2$, dạng chính tắc là $q = -y_1^2 + 0y_2^2 = -y_1^2$.",
+          "Kết luận: Vì tất cả các hệ số trong dạng chính tắc đều không dương ($\\leq 0$) và có ít nhất một hệ số bằng 0, dạng toàn phương này là nửa xác định âm."
+        ]
+      }
+    },
+    {
+      "question": "Đưa dạng toàn phương $q(x_1, x_2) = 5x_1^2 + 2x_2^2 + 4x_1x_2$ về dạng chính tắc và tìm phép đổi biến $x=Py$ tương ứng.",
+      "answer": {
+        "steps": [
+          "Sử dụng phương pháp Lagrange: $q = (5x_1^2 + 4x_1x_2) + 2x_2^2 = 5(x_1^2 + \\frac{4}{5}x_1x_2) + 2x_2^2$.",
+          "Hoàn thành bình phương: $q = 5\\left( (x_1 + \\frac{2}{5}x_2)^2 - (\\frac{2}{5}x_2)^2 \\right) + 2x_2^2 = 5(x_1 + \\frac{2}{5}x_2)^2 - 5 \\cdot \\frac{4}{25}x_2^2 + 2x_2^2$.",
+          "Rút gọn: $q = 5(x_1 + \\frac{2}{5}x_2)^2 - \\frac{4}{5}x_2^2 + \\frac{10}{5}x_2^2 = 5(x_1 + \\frac{2}{5}x_2)^2 + \\frac{6}{5}x_2^2$.",
+          "Đặt $y_1 = x_1 + \\frac{2}{5}x_2$ và $y_2 = x_2$. Dạng chính tắc là $q = 5y_1^2 + \\frac{6}{5}y_2^2$.",
+          "Tìm phép đổi biến: Từ $y_2 = x_2$, ta có $x_1 = y_1 - \\frac{2}{5}x_2 = y_1 - \\frac{2}{5}y_2$.",
+          "Kết luận: Vậy phép đổi biến là $x_1 = y_1 - \\frac{2}{5}y_2$ và $x_2 = y_2$, hay $x = \\begin{pmatrix} 1 & -2/5 \\\\ 0 & 1 \\end{pmatrix} y$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm ma trận của phép đổi biến trực giao đưa dạng toàn phương $q(x_1, x_2) = 3x_1^2 + 3x_2^2 - 2x_1x_2$ về dạng chính tắc.",
+      "answer": {
+        "steps": [
+          "Ma trận của q là $A = \\begin{pmatrix} 3 & -1 \\\\ -1 & 3 \\end{pmatrix}$. Phép đổi biến trực giao $x=Py$ được xây dựng từ các vector riêng trực chuẩn của A.",
+          "Tìm giá trị riêng: $\\det(A - \\lambda I) = (3-\\lambda)^2 - 1 = 0 \\implies \\lambda^2 - 6\\lambda + 8 = 0 \\implies (\\lambda-2)(\\lambda-4)=0$. Vậy $\\lambda_1=2, \\lambda_2=4$.",
+          "Với $\\lambda_1=2$, giải $(A-2I)v=0$: $\\begin{pmatrix} 1 & -1 \\\\ -1 & 1 \\end{pmatrix}v=0 \\implies v_1=\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$. Vector riêng trực chuẩn là $p_1 = \\frac{1}{\\sqrt{2}}\\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$.",
+          "Với $\\lambda_2=4$, giải $(A-4I)v=0$: $\\begin{pmatrix} -1 & -1 \\\\ -1 & -1 \\end{pmatrix}v=0 \\implies v_2=\\begin{pmatrix} 1 \\\\ -1 \\end{pmatrix}$. Vector riêng trực chuẩn là $p_2 = \\frac{1}{\\sqrt{2}}\\begin{pmatrix} 1 \\\\ -1 \\end{pmatrix}$.",
+          "Kết luận: Ma trận trực giao P được lập từ các cột $p_1, p_2$: $P = \\begin{pmatrix} 1/\\sqrt{2} & 1/\\sqrt{2} \\\\ 1/\\sqrt{2} & -1/\\sqrt{2} \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Dạng toàn phương q có dạng chính tắc là $q = 2y_1^2 - 7y_2^2 - y_3^2$. Tìm hạng và ký số của q.",
+      "answer": {
+        "steps": [
+          "Hạng của dạng toàn phương là số hệ số khác 0 trong dạng chính tắc của nó.",
+          "Các hệ số là 2, -7, -1. Cả ba hệ số đều khác 0. Vậy hạng của q là 3.",
+          "Ký số của dạng toàn phương là cặp (p, q), trong đó p là chỉ số quán tính dương (số hệ số dương) và q là chỉ số quán tính âm (số hệ số âm).",
+          "Có một hệ số dương (2), vậy p = 1.",
+          "Có hai hệ số âm (-7, -1), vậy q = 2.",
+          "Kết luận: Hạng của q là 3 và ký số là (1, 2)."
+        ]
+      }
+    },
+    {
+      "question": "Nhận dạng đường cong bậc hai (conic) được cho bởi phương trình $x^2 - 4xy + 4y^2 - 2x - y - 1 = 0$.",
+      "answer": {
+        "steps": [
+          "Ta chỉ cần xét phần toàn phương $q(x, y) = x^2 - 4xy + 4y^2$ để xác định loại đường cong.",
+          "Ma trận của q là $A = \\begin{pmatrix} 1 & -2 \\\\ -2 & 4 \\end{pmatrix}$.",
+          "Tính định thức của A: $\\det(A) = (1)(4) - (-2)(-2) = 4 - 4 = 0$.",
+          "Kết luận: Vì $\\det(A) = 0$, đường cong bậc hai này thuộc loại parabol.",
+          "Lưu ý: Nếu $\\det(A)>0$ là loại ellipse, nếu $\\det(A)<0$ là loại hyperbola."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng toàn phương $q(x_1, x_2, x_3) = (x_1-x_2)^2 + (x_2-x_3)^2 + (x_3-x_1)^2$. Phân loại dạng toàn phương này.",
+      "answer": {
+        "steps": [
+          "Khai triển biểu thức: $q = (x_1^2 - 2x_1x_2 + x_2^2) + (x_2^2 - 2x_2x_3 + x_3^2) + (x_3^2 - 2x_3x_1 + x_1^2)$.",
+          "Rút gọn: $q = 2x_1^2 + 2x_2^2 + 2x_3^2 - 2x_1x_2 - 2x_2x_3 - 2x_1x_3$.",
+          "Ma trận của q là $A = \\begin{pmatrix} 2 & -1 & -1 \\\\ -1 & 2 & -1 \\\\ -1 & -1 & 2 \\end{pmatrix}$.",
+          "Dùng tiêu chuẩn Sylvester: $\\Delta_1 = 2 > 0$.",
+          "$\\Delta_2 = \\det\\begin{pmatrix} 2 & -1 \\\\ -1 & 2 \\end{pmatrix} = 4 - 1 = 3 > 0$.",
+          "$\\Delta_3 = \\det(A) = 2(4-1) - (-1)(-2-1) + (-1)(1+2) = 2(3) - 3 - 3 = 0$.",
+          "Kết luận: Vì các định thức con chính đều $\\ge 0$ và có ít nhất một định thức bằng 0, dạng toàn phương là nửa xác định dương."
+        ]
+      }
+    },
+    {
+      "question": "Tìm tất cả các giá trị của tham số $m$ để dạng toàn phương $q(x_1, x_2, x_3) = 2x_1^2 + 2x_2^2 + 5x_3^2 + 2mx_1x_2 - 2x_1x_3 - 2x_2x_3$ là xác định dương.",
+      "answer": {
+        "steps": [
+          "Bước 1: Viết ma trận của dạng toàn phương. $A = \\begin{pmatrix} 2 & m & -1 \\\\ m & 2 & -1 \\\\ -1 & -1 & 5 \\end{pmatrix}$.",
+          "Bước 2: Áp dụng tiêu chuẩn Sylvester. Dạng toàn phương xác định dương khi và chỉ khi tất cả các định thức con chính của A đều dương.",
+          "Bước 3: Tính định thức con chính cấp 1: $\\Delta_1 = 2$. Điều kiện $\\Delta_1 > 0$ luôn thỏa mãn.",
+          "Bước 4: Tính định thức con chính cấp 2: $\\Delta_2 = \\det\\begin{pmatrix} 2 & m \\\\ m & 2 \\end{pmatrix} = 4 - m^2$. Điều kiện là $4 - m^2 > 0 \\iff m^2 < 4 \\iff -2 < m < 2$.",
+          "Bước 5: Tính định thức con chính cấp 3: $\\Delta_3 = \\det(A) = 2(10-1) - m(5m-1) - 1(-m+2) = 18 - 5m^2 + m - 2 = -5m^2 + m + 16$.",
+          "Bước 6: Giải bất phương trình $\\Delta_3 > 0 \\iff -5m^2 + m + 16 > 0$. Phương trình $-5m^2+m+16=0$ có nghiệm $m = \\frac{-1 \\pm \\sqrt{1 - 4(-5)(16)}}{-10} = \\frac{-1 \\pm \\sqrt{321}}{-10}$. Vậy $\\frac{1-\\sqrt{321}}{10} < m < \\frac{1+\\sqrt{321}}{10}$.",
+          "Kết luận: Kết hợp các điều kiện từ Bước 4 và 6. Ta có $-2 < m < 2$ và $\\frac{1-\\sqrt{321}}{10} \\approx -1.69 < m < \\frac{1+\\sqrt{321}}{10} \\approx 1.89$. Giao hai khoảng này là $(-2, 2)$. Vậy $-2 < m < 2$."
+        ]
+      }
+    },
+    {
+      "question": "Dùng phép biến đổi trực giao, đưa dạng toàn phương $q(x, y, z) = 2x^2 + y^2 + 2z^2 - 2xy - 2yz$ về dạng chính tắc và chỉ rõ phép biến đổi.",
+      "answer": {
+        "steps": [
+          "Bước 1: Tìm ma trận A của dạng toàn phương. $A = \\begin{pmatrix} 2 & -1 & 0 \\\\ -1 & 1 & -1 \\\\ 0 & -1 & 2 \\end{pmatrix}$.",
+          "Bước 2: Tìm các giá trị riêng của A. Giải $\\det(A - \\lambda I) = 0$: $(2-\\lambda)((1-\\lambda)(2-\\lambda)-1) - (-1)(-(2-\\lambda)) = 0$. Khai triển ta được: $(2-\\lambda)(\\lambda^2-3\\lambda+1) - (2-\\lambda) = 0 \\implies (2-\\lambda)(\\lambda^2-3\\lambda)=0$. Các giá trị riêng là $\\lambda_1 = 0, \\lambda_2=2, \\lambda_3=3$.",
+          "Bước 3: Dạng chính tắc được tạo từ các giá trị riêng: $Q = 0y_1^2 + 2y_2^2 + 3y_3^2 = 2y_2^2 + 3y_3^2$.",
+          "Bước 4: Tìm các vector riêng tương ứng. Với $\\lambda_1=0$, $v_1=(1, 2, 1)^T$. Với $\\lambda_2=2$, $v_2=(-1, 0, 1)^T$. Với $\\lambda_3=3$, $v_3=(1, -1, 1)^T$.",
+          "Bước 5: Trực chuẩn hóa các vector riêng: $p_1 = \\frac{1}{\\sqrt{6}}(1, 2, 1)^T$, $p_2 = \\frac{1}{\\sqrt{2}}(-1, 0, 1)^T$, $p_3 = \\frac{1}{\\sqrt{3}}(1, -1, 1)^T$.",
+          "Kết luận: Phép biến đổi trực giao là $x = Py$, với $P = (p_1 | p_2 | p_3) = \\begin{pmatrix} 1/\\sqrt{6} & -1/\\sqrt{2} & 1/\\sqrt{3} \\\\ 2/\\sqrt{6} & 0 & -1/\\sqrt{3} \\\\ 1/\\sqrt{6} & 1/\\sqrt{2} & 1/\\sqrt{3} \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm giá trị lớn nhất và nhỏ nhất của dạng toàn phương $q(x, y) = 5x^2 + 2y^2 + 4xy$ với điều kiện $x^2 + y^2 = 1$.",
+      "answer": {
+        "steps": [
+          "Bước 1: Vấn đề này tương đương với việc tìm giá trị riêng lớn nhất và nhỏ nhất của ma trận dạng toàn phương.",
+          "Bước 2: Viết ma trận của dạng toàn phương: $A = \\begin{pmatrix} 5 & 2 \\\\ 2 & 2 \\end{pmatrix}$.",
+          "Bước 3: Tìm các giá trị riêng của A bằng cách giải phương trình đặc trưng $\\det(A - \\lambda I) = 0$.",
+          "Bước 4: $\\det\\begin{pmatrix} 5-\\lambda & 2 \\\\ 2 & 2-\\lambda \\end{pmatrix} = (5-\\lambda)(2-\\lambda) - 4 = \\lambda^2 - 7\\lambda + 10 - 4 = \\lambda^2 - 7\\lambda + 6 = 0$.",
+          "Bước 5: Giải phương trình bậc hai, ta có $(\\lambda - 1)(\\lambda - 6) = 0$. Các giá trị riêng là $\\lambda_1 = 1$ và $\\lambda_2 = 6$.",
+          "Bước 6: Giá trị lớn nhất của q trên đường tròn đơn vị là giá trị riêng lớn nhất, $\\lambda_{max} = 6$.",
+          "Kết luận: Giá trị nhỏ nhất của q trên đường tròn đơn vị là giá trị riêng nhỏ nhất, $\\lambda_{min} = 1$."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng toàn phương $q(x) = x^T A x$ với $A = \\begin{pmatrix} 1 & 2 \\\\ 2 & 1 \\end{pmatrix}$. Xét phép đổi biến $x=Py$ với $P = \\begin{pmatrix} 1 & 1 \\\\ 0 & 2 \\end{pmatrix}$. Tìm biểu thức của dạng toàn phương theo biến mới $y = (y_1, y_2)^T$.",
+      "answer": {
+        "steps": [
+          "Bước 1: Biểu thức của dạng toàn phương trong cơ sở mới được cho bởi công thức $q(y) = y^T (P^T A P) y$. Ta cần tính ma trận $A' = P^T A P$.",
+          "Bước 2: Tìm ma trận chuyển vị $P^T = \\begin{pmatrix} 1 & 0 \\\\ 1 & 2 \\end{pmatrix}$.",
+          "Bước 3: Tính tích $A \\cdot P$: $AP = \\begin{pmatrix} 1 & 2 \\\\ 2 & 1 \\end{pmatrix} \\begin{pmatrix} 1 & 1 \\\\ 0 & 2 \\end{pmatrix} = \\begin{pmatrix} 1 & 5 \\\\ 2 & 4 \\end{pmatrix}$.",
+          "Bước 4: Tính tích $P^T (AP)$: $A' = \\begin{pmatrix} 1 & 0 \\\\ 1 & 2 \\end{pmatrix} \\begin{pmatrix} 1 & 5 \\\\ 2 & 4 \\end{pmatrix} = \\begin{pmatrix} 1 & 5 \\\\ 1+4 & 5+8 \\end{pmatrix} = \\begin{pmatrix} 1 & 5 \\\\ 5 & 13 \\end{pmatrix}$.",
+          "Bước 5: Viết dạng toàn phương từ ma trận mới $A'$: $q(y_1, y_2) = 1 \\cdot y_1^2 + 13 \\cdot y_2^2 + 2 \\cdot 5 \\cdot y_1y_2$.",
+          "Kết luận: Kết quả cuối cùng là $q(y_1, y_2) = y_1^2 + 13y_2^2 + 10y_1y_2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng toàn phương $q(x_1, x_2, x_3) = x_1^2 + x_2^2 - 3x_3^2 + 4x_1x_2$. Tìm một cơ sở của $\\mathbb{R}^3$ để trong đó dạng toàn phương có dạng chính tắc.",
+      "answer": {
+        "steps": [
+          "Bước 1: Ma trận của q là $A = \\begin{pmatrix} 1 & 2 & 0 \\\\ 2 & 1 & 0 \\\\ 0 & 0 & -3 \\end{pmatrix}$. Cơ sở cần tìm là cơ sở gồm các vector riêng trực chuẩn của A.",
+          "Bước 2: Tìm các giá trị riêng. $\\det(A-\\lambda I) = ((1-\\lambda)^2-4)(-3-\\lambda) = (\\lambda^2-2\\lambda-3)(-3-\\lambda) = 0$. Các nghiệm là $\\lambda_1=-1, \\lambda_2=3, \\lambda_3=-3$.",
+          "Bước 3: Tìm vector riêng ứng với $\\lambda_1=-1$: giải $(A+I)v=0$, ta có $\\begin{pmatrix} 2 & 2 & 0 \\\\ 2 & 2 & 0 \\\\ 0 & 0 & -2 \\end{pmatrix}v=0$. Một vector riêng là $v_1=(1, -1, 0)^T$.",
+          "Bước 4: Tìm vector riêng ứng với $\\lambda_2=3$: giải $(A-3I)v=0$, ta có $\\begin{pmatrix} -2 & 2 & 0 \\\\ 2 & -2 & 0 \\\\ 0 & 0 & -6 \\end{pmatrix}v=0$. Một vector riêng là $v_2=(1, 1, 0)^T$.",
+          "Bước 5: Tìm vector riêng ứng với $\\lambda_3=-3$: giải $(A+3I)v=0$, ta có $\\begin{pmatrix} 4 & 2 & 0 \\\\ 2 & 4 & 0 \\\\ 0 & 0 & 0 \\end{pmatrix}v=0$. Một vector riêng là $v_3=(0, 0, 1)^T$.",
+          "Bước 6: Các vector $v_1, v_2, v_3$ đã trực giao với nhau. Ta chỉ cần chuẩn hóa chúng.",
+          "Kết luận: Cơ sở cần tìm là $\\{ \\frac{1}{\\sqrt{2}}(1, -1, 0)^T, \\frac{1}{\\sqrt{2}}(1, 1, 0)^T, (0, 0, 1)^T \\}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng song tuyến tính đối xứng $f(u, v) = 2u_1v_1 - u_1v_2 - u_2v_1 + 3u_2v_2$ trên $\\mathbb{R}^2$. Tìm dạng toàn phương $q(u)$ tương ứng và phân loại nó.",
+      "answer": {
+        "steps": [
+          "Bước 1: Dạng toàn phương $q(u)$ được sinh bởi dạng song tuyến tính $f(u, v)$ bằng cách cho $v = u$, tức là $q(u) = f(u, u)$.",
+          "Bước 2: Thay $v_1=u_1$ và $v_2=u_2$ vào biểu thức của f: $q(u_1, u_2) = 2u_1u_1 - u_1u_2 - u_2u_1 + 3u_2u_2$.",
+          "Bước 3: Rút gọn biểu thức: $q(u_1, u_2) = 2u_1^2 - 2u_1u_2 + 3u_2^2$.",
+          "Bước 4: Để phân loại, ta sử dụng tiêu chuẩn Sylvester. Lập ma trận $A = \\begin{pmatrix} 2 & -1 \\\\ -1 & 3 \\end{pmatrix}$.",
+          "Bước 5: Tính các định thức con chính. $\\Delta_1 = 2 > 0$.",
+          "Bước 6: $\\Delta_2 = \\det(A) = (2)(3) - (-1)(-1) = 6 - 1 = 5 > 0$.",
+          "Kết luận: Vì tất cả các định thức con chính đều dương, dạng toàn phương là xác định dương."
+        ]
+      }
+    },
+    {
+      "question": "Nhận dạng và vẽ phác mặt bậc hai có phương trình $2xy + 2xz + 2yz = 1$.",
+      "answer": {
+        "steps": [
+          "Bước 1: Viết ma trận A của dạng toàn phương $q(x,y,z) = 2xy+2xz+2yz$: $A = \\begin{pmatrix} 0 & 1 & 1 \\\\ 1 & 0 & 1 \\\\ 1 & 1 & 0 \\end{pmatrix}$.",
+          "Bước 2: Tìm các giá trị riêng của A. $\\det(A - \\lambda I) = -\\lambda(\\lambda^2-1) - 1(-\\lambda-1) + 1(1+\\lambda) = -\\lambda^3 + \\lambda + 2\\lambda + 2 = -\\lambda^3 + 3\\lambda + 2 = 0$.",
+          "Bước 3: Thử các nghiệm nguyên, ta thấy $\\lambda = -1$ là một nghiệm. Phân tích thành $(\\lambda+1)(-\\lambda^2+\\lambda+2)=0 \\implies -(\\lambda+1)(\\lambda-2)(\\lambda+1)=0$. Các giá trị riêng là $\\lambda_1 = 2$ (bội 1) và $\\lambda_2 = -1$ (bội 2).",
+          "Bước 4: Dạng chính tắc của mặt là $2y_1^2 - y_2^2 - y_3^2 = 1$.",
+          "Bước 5: Phương trình này có dạng $\\frac{y_1^2}{a^2} - \\frac{y_2^2}{b^2} - \\frac{y_3^2}{c^2} = 1$. Đây là phương trình của một hyperboloid 2 tầng.",
+          "Bước 6: Trục đối xứng của hyperboloid là trục tương ứng với giá trị riêng dương, tức là hướng của vector riêng ứng với $\\lambda=2$. Vector này là $(1, 1, 1)^T$. Mặt sẽ 'mở' ra dọc theo đường thẳng $x=y=z$.",
+          "Kết luận: Phác thảo: Vẽ hai 'chén' hyperboloid đối xứng qua gốc tọa độ, có trục là đường thẳng $x=y=z$."
+        ]
+      }
+    },
+    {
+      "question": "Biện luận theo tham số $m$ hạng và ký số của dạng toàn phương $q(x, y, z) = x^2 + 2y^2 + mz^2 + 2xy$.",
+      "answer": {
+        "steps": [
+          "Bước 1: Đưa dạng toàn phương về dạng chính tắc bằng phương pháp Lagrange.",
+          "Bước 2: Nhóm các số hạng chứa x: $q = (x^2 + 2xy) + 2y^2 + mz^2$.",
+          "Bước 3: Hoàn thành bình phương: $q = (x+y)^2 - y^2 + 2y^2 + mz^2 = (x+y)^2 + y^2 + mz^2$.",
+          "Bước 4: Dạng chính tắc là $q = Y_1^2 + Y_2^2 + mY_3^2$, với $Y_1=x+y, Y_2=y, Y_3=z$. Các hệ số là 1, 1, và $m$.",
+          "Bước 5: Biện luận dựa trên dấu của $m$.",
+          "Trường hợp 1: $m > 0$. Cả ba hệ số đều dương. Hạng = 3. Ký số = (3, 0). (Xác định dương)",
+          "Trường hợp 2: $m = 0$. Các hệ số là 1, 1, 0. Có hai hệ số khác không. Hạng = 2. Ký số = (2, 0). (Nửa xác định dương)",
+          "Trường hợp 3: $m < 0$. Có hai hệ số dương (1, 1) và một hệ số âm ($m$). Hạng = 3. Ký số = (2, 1). (Không xác định dấu)"
+        ]
+      }
+    },
+    {
+      "question": "Chứng tỏ rằng nếu A là một ma trận đối xứng, xác định dương thì tồn tại duy nhất một ma trận đối xứng, xác định dương B sao cho $B^2 = A$. (B được gọi là căn bậc hai của A).",
+      "answer": {
+        "steps": [
+          "Bước 1: Vì A đối xứng, tồn tại ma trận trực giao P sao cho $A = PDP^T$, với D là ma trận đường chéo chứa các giá trị riêng $\\lambda_i$ của A.",
+          "Bước 2: Vì A xác định dương, tất cả các giá trị riêng $\\lambda_i$ của nó đều lớn hơn 0.",
+          "Bước 3: Điều này cho phép ta định nghĩa một ma trận đường chéo $D^{1/2}$ có các phần tử trên đường chéo là $\\sqrt{\\lambda_i}$. Vì $\\lambda_i>0$, $\\sqrt{\\lambda_i}$ là các số thực dương.",
+          "Bước 4: Xây dựng ma trận $B = P D^{1/2} P^T$. Ta kiểm tra các tính chất của B.",
+          "Bước 5: Kiểm tra $B^2=A$: $B^2 = (P D^{1/2} P^T)(P D^{1/2} P^T) = P D^{1/2} (P^T P) D^{1/2} P^T = P D^{1/2} I D^{1/2} P^T = P D P^T = A$. Vậy B tồn tại.",
+          "Bước 6: Kiểm tra B đối xứng và xác định dương: B đối xứng vì $B^T = (P D^{1/2} P^T)^T = (P^T)^T (D^{1/2})^T P^T = P D^{1/2} P^T = B$. Các giá trị riêng của B là $\\sqrt{\\lambda_i} > 0$, nên B xác định dương.",
+          "Kết luận: Việc chứng minh tính duy nhất phức tạp hơn, nhưng ý tưởng là nếu có một ma trận $C$ khác thỏa mãn, thì $C$ phải giao hoán với A và có cùng các vector riêng, dẫn đến $C=B$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $q(x, y) = ax^2 + 2bxy + cy^2$ là một dạng toàn phương xác định dương. Chứng minh rằng $(ac-b^2) (ax^2 + 2bxy + cy^2) \\le a(ay+cx)^2 - 2b(ay+cx)(ax+by) + c(ax+by)^2$.",
+      "answer": {
+        "steps": [
+          "Bước 1: Ma trận của q là $A = \\begin{pmatrix} a & b \\\\ b & c \\end{pmatrix}$. Vì q xác định dương, ta có $a > 0$ và $\\det(A) = ac - b^2 > 0$.",
+          "Bước 2: Vế phải của bất đẳng thức là một dạng toàn phương mới theo các biến $X = ay+cx$ và $Y = ax+by$. Gọi nó là $Q(X, Y) = aX^2 - 2bXY + cY^2$.",
+          "Bước 3: Ma trận của dạng toàn phương $Q(X, Y)$ là $A' = \\begin{pmatrix} a & -b \\\\ -b & c \\end{pmatrix}$. Ma trận này là ma trận kề của $A$, $A' = adj(A)$.",
+          "Bước 4: Ta biết rằng $A^{-1} = \\frac{1}{\\det(A)} adj(A) = \\frac{1}{ac-b^2} \\begin{pmatrix} c & -b \\\\ -b & a \\end{pmatrix}$. Chú ý ma trận Q không phải là adj(A). Biểu thức $Q$ là dạng toàn phương $aX^2-2bXY+cY^2$.",
+          "Bước 5: Cách tiếp cận khác: Xét dạng song tuyến tính $f((x,y),(x',y')) = axx' + b(xy'+x'y) + cyy'$. Ta có $q(x,y)=f((x,y),(x,y))$.",
+          "Bước 6: Bất đẳng thức Cauchy-Schwarz cho dạng song tuyến tính xác định dương là: $[f(u, v)]^2 \\le f(u, u)f(v, v)$.",
+          "Bước 7: Chọn $u=(x,y)$ và $v=(y, -x)$. Khi đó $f(u,u) = q(x,y)$. $f(v,v) = ay^2-2bxy+cx^2$. $f(u,v) = axy - b(x^2-y^2) - cxy = (a-c)xy - b(x^2-y^2)$. Đây không phải là hướng đúng.",
+          "Kết luận: (Hướng đúng) Bất đẳng thức này là một dạng của Bất đẳng thức Aczél. Tuy nhiên, một cách chứng minh trực tiếp là khai triển toàn bộ vế phải và rút gọn, sau đó sử dụng điều kiện $ac-b^2 > 0$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm các giá trị của tham số $m$ để dạng toàn phương $q(x, y, z) = x^2 + y^2 + 5z^2 + 2mxy + 2xz + 2yz$ có ký số là $(2, 1)$.",
+      "answer": {
+        "steps": [
+          "Bước 1: Viết ma trận của dạng toàn phương: $A = \\begin{pmatrix} 1 & m & 1 \\\\ m & 1 & 1 \\\\ 1 & 1 & 5 \\end{pmatrix}$.",
+          "Bước 2: Ký số $(2, 1)$ có nghĩa là trong dạng chính tắc, có 2 hệ số dương và 1 hệ số âm. Điều này tương đương với việc ma trận A có 2 giá trị riêng dương và 1 giá trị riêng âm.",
+          "Bước 3: Theo quy tắc dấu Descartes, điều này xảy ra khi tích các giá trị riêng là âm, tức là $\\det(A) = \\lambda_1\\lambda_2\\lambda_3 < 0$.",
+          "Bước 4: Tính định thức của A: $\\det(A) = 1(5-1) - m(5m-1) + 1(m-1) = 4 - 5m^2 + m + m - 1 = -5m^2 + 2m + 3$.",
+          "Bước 5: Giải bất phương trình $\\det(A) < 0 \\iff -5m^2 + 2m + 3 < 0$.",
+          "Bước 6: Tìm nghiệm của tam thức $-5m^2 + 2m + 3 = 0$. Các nghiệm là $m=1$ và $m=-3/5$.",
+          "Kết luận: Vì hệ số của $m^2$ là âm, tam thức sẽ âm khi $m$ nằm ngoài khoảng hai nghiệm. Vậy, $m < -3/5$ hoặc $m > 1$."
+        ]
+      }
+    },
+    {
+      "question": "Cho hai dạng toàn phương $q_1(x) = 2x_1^2 + 2x_1x_2 + 2x_2^2$ và $q_2(x) = 7x_1^2 - 2x_1x_2 + 7x_2^2$. Có tồn tại hay không một phép đổi biến trực giao $x=Py$ để đưa đồng thời cả hai dạng toàn phương về dạng chính tắc? Tại sao?",
+      "answer": {
+        "steps": [
+          "Bước 1: Một phép đổi biến trực giao có thể đưa đồng thời hai dạng toàn phương về dạng chính tắc nếu và chỉ nếu ma trận của chúng giao hoán với nhau.",
+          "Bước 2: Viết ma trận của $q_1$: $A = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}$.",
+          "Bước 3: Viết ma trận của $q_2$: $B = \\begin{pmatrix} 7 & -1 \\\\ -1 & 7 \\end{pmatrix}$.",
+          "Bước 4: Kiểm tra tính giao hoán: tính $A \\cdot B$ và $B \\cdot A$.",
+          "Bước 5: $A \\cdot B = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix} \\begin{pmatrix} 7 & -1 \\\\ -1 & 7 \\end{pmatrix} = \\begin{pmatrix} 14-1 & -2+7 \\\\ 7-2 & -1+14 \\end{pmatrix} = \\begin{pmatrix} 13 & 5 \\\\ 5 & 13 \\end{pmatrix}$.",
+          "Bước 6: $B \\cdot A = \\begin{pmatrix} 7 & -1 \\\\ -1 & 7 \\end{pmatrix} \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix} = \\begin{pmatrix} 14-1 & 7-2 \\\\ -2+7 & -1+14 \\end{pmatrix} = \\begin{pmatrix} 13 & 5 \\\\ 5 & 13 \\end{pmatrix}$.",
+          "Kết luận: Vì $A \\cdot B = B \\cdot A$, hai ma trận giao hoán với nhau. Do đó, tồn tại một phép đổi biến trực giao đưa đồng thời cả hai dạng về dạng chính tắc."
+        ]
+      }
+    },
+    {
+      "question": "Tìm tâm và nhận dạng đường cong bậc hai $5x^2 + 8xy + 5y^2 - 18x - 18y + 9 = 0$.",
+      "answer": {
+        "steps": [
+          "Bước 1: Phương trình có thể viết dưới dạng ma trận $x^T A x + Kx + f = 0$ với $x=(x,y)^T$, $A=\\begin{pmatrix} 5 & 4 \\\\ 4 & 5 \\end{pmatrix}$, $K=(-18, -18)$.",
+          "Bước 2: Để tìm tâm $(x_0, y_0)$ của đường cong, ta giải hệ phương trình $2Ax + K^T = 0$.",
+          "Bước 3: Hệ phương trình là $2\\begin{pmatrix} 5 & 4 \\\\ 4 & 5 \\end{pmatrix}\\begin{pmatrix} x \\\\ y \\end{pmatrix} + \\begin{pmatrix} -18 \\\\ -18 \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}$, hay $\\begin{cases} 10x + 8y = 18 \\\\ 8x + 10y = 18 \\end{cases}$.",
+          "Bước 4: Giải hệ, ta được $x=1, y=1$. Vậy tâm của đường cong là $I(1, 1)$.",
+          "Bước 5: Để nhận dạng đường cong, ta xét định thức của ma trận A: $\\det(A) = 5 \\cdot 5 - 4 \\cdot 4 = 25 - 16 = 9 > 0$.",
+          "Kết luận: Vì $\\det(A) > 0$, đây là một đường cong loại ellipse."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng toàn phương $q(x, y) = 3x^2 - 2xy + 3y^2$. Tìm tổng và tích các hệ số trong dạng chính tắc của nó mà không cần tìm dạng chính tắc.",
+      "answer": {
+        "steps": [
+          "Bước 1: Các hệ số trong dạng chính tắc của một dạng toàn phương (khi đưa về bằng phép biến đổi trực giao) chính là các giá trị riêng của ma trận của nó.",
+          "Bước 2: Viết ma trận của dạng toàn phương: $A = \\begin{pmatrix} 3 & -1 \\\\ -1 & 3 \\end{pmatrix}$.",
+          "Bước 3: Gọi $\\lambda_1, \\lambda_2$ là các giá trị riêng. Dạng chính tắc sẽ là $\\lambda_1 Y_1^2 + \\lambda_2 Y_2^2$. Các hệ số là $\\lambda_1, \\lambda_2$.",
+          "Bước 4: Tổng các giá trị riêng bằng vết (trace) của ma trận A: $\\lambda_1 + \\lambda_2 = \\text{tr}(A) = 3 + 3 = 6$.",
+          "Bước 5: Tích các giá trị riêng bằng định thức của ma trận A: $\\lambda_1 \\cdot \\lambda_2 = \\det(A) = (3)(3) - (-1)(-1) = 9 - 1 = 8$.",
+          "Kết luận: Tổng các hệ số trong dạng chính tắc là 6, và tích của chúng là 8."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng song tuyến tính $f(u, v) = u_1v_1 + 2u_1v_2 + 2u_2v_1 - 3u_2v_2$ trên $\\mathbb{R}^2$. Tìm không gian con $W$ gồm tất cả các vector $v$ trực giao với vector $u=(1, 1)$ theo dạng $f$.",
+      "answer": {
+        "steps": [
+          "Bước 1: Vector $v=(v_1, v_2)$ trực giao với $u=(1, 1)$ theo $f$ nếu $f(u, v) = 0$.",
+          "Bước 2: Thay $u_1=1, u_2=1$ vào biểu thức của $f(u, v)$.",
+          "Bước 3: $f((1,1), (v_1, v_2)) = (1)v_1 + 2(1)v_2 + 2(1)v_1 - 3(1)v_2 = v_1 + 2v_2 + 2v_1 - 3v_2$.",
+          "Bước 4: Rút gọn biểu thức: $3v_1 - v_2$.",
+          "Bước 5: Điều kiện trực giao là $3v_1 - v_2 = 0$, hay $v_2 = 3v_1$.",
+          "Bước 6: Vậy, mọi vector $v$ trong không gian con $W$ đều có dạng $(v_1, 3v_1) = v_1(1, 3)$.",
+          "Kết luận: Không gian con $W$ là không gian sinh bởi vector $(1, 3)$, tức là $W = \\text{span}\\{(1, 3)\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng nếu A là ma trận của một dạng toàn phương xác định âm thì $\\det(A) < 0$ nếu A cấp lẻ và $\\det(A) > 0$ nếu A cấp chẵn.",
+      "answer": {
+        "steps": [
+          "Bước 1: Gọi $A$ là ma trận cấp $n \\times n$. Dạng toàn phương xác định âm có nghĩa là tất cả các giá trị riêng $\\lambda_1, \\lambda_2, \\dots, \\lambda_n$ của A đều âm.",
+          "Bước 2: Ta biết rằng định thức của một ma trận bằng tích của các giá trị riêng của nó: $\\det(A) = \\lambda_1 \\cdot \\lambda_2 \\cdots \\lambda_n$.",
+          "Bước 3: Vì mọi $\\lambda_i < 0$, dấu của $\\det(A)$ phụ thuộc vào số lượng các giá trị riêng, tức là cấp $n$ của ma trận.",
+          "Bước 4: Nếu $n$ là số lẻ, tích của $n$ số âm sẽ là một số âm. Do đó, $\\det(A) < 0$.",
+          "Bước 5: Nếu $n$ là số chẵn, tích của $n$ số âm sẽ là một số dương. Do đó, $\\det(A) > 0$.",
+          "Kết luận: Kết luận này phù hợp với tiêu chuẩn Sylvester cho dạng xác định âm, trong đó dấu của các định thức con chính $\\Delta_k$ phải là $(-1)^k$."
+        ]
+      }
+    },
+    {
+      "question": "Một dạng toàn phương $q(x, y)$ trên $\\mathbb{R}^2$ có giá trị lớn nhất là 5 trên đường tròn đơn vị $x^2+y^2=1$, đạt được tại vector tỉ lệ với $(1, 2)$. Giá trị nhỏ nhất là 1. Tìm ma trận của $q$.",
+      "answer": {
+        "steps": [
+          "Bước 1: Giá trị lớn nhất và nhỏ nhất của q trên đường tròn đơn vị chính là các giá trị riêng lớn nhất và nhỏ nhất của ma trận A. Vậy $\\lambda_{max}=5, \\lambda_{min}=1$.",
+          "Bước 2: Hướng mà tại đó giá trị max/min đạt được là các vector riêng tương ứng.",
+          "Bước 3: Vector riêng ứng với $\\lambda_1=5$ là $v_1$ tỉ lệ với $(1, 2)$. Chuẩn hóa nó: $p_1 = \\frac{1}{\\sqrt{1^2+2^2}}(1, 2)^T = \\frac{1}{\\sqrt{5}}(1, 2)^T$.",
+          "Bước 4: Vector riêng ứng với $\\lambda_2=1$ phải trực giao với $v_1$. Một vector trực giao với $(1, 2)$ là $v_2=(-2, 1)$. Chuẩn hóa nó: $p_2 = \\frac{1}{\\sqrt{(-2)^2+1^2}}(-2, 1)^T = \\frac{1}{\\sqrt{5}}(-2, 1)^T$.",
+          "Bước 5: Ta có thể tái tạo ma trận A bằng công thức chéo hóa $A = PDP^T$, với $P$ là ma trận chứa các vector riêng trực chuẩn và D là ma trận đường chéo chứa các giá trị riêng.",
+          "Bước 6: $P = \\frac{1}{\\sqrt{5}}\\begin{pmatrix} 1 & -2 \\\\ 2 & 1 \\end{pmatrix}$, $D = \\begin{pmatrix} 5 & 0 \\\\ 0 & 1 \\end{pmatrix}$. $P^T = \\frac{1}{\\sqrt{5}}\\begin{pmatrix} 1 & 2 \\\\ -2 & 1 \\end{pmatrix}$.",
+          "Kết luận: $A = \\frac{1}{5} \\begin{pmatrix} 1 & -2 \\\\ 2 & 1 \\end{pmatrix} \\begin{pmatrix} 5 & 0 \\\\ 0 & 1 \\end{pmatrix} \\begin{pmatrix} 1 & 2 \\\\ -2 & 1 \\end{pmatrix} = \\frac{1}{5} \\begin{pmatrix} 5 & -2 \\\\ 10 & 1 \\end{pmatrix} \\begin{pmatrix} 1 & 2 \\\\ -2 & 1 \\end{pmatrix} = \\frac{1}{5} \\begin{pmatrix} 9 & 8 \\\\ 8 & 21 \\end{pmatrix} = \\begin{pmatrix} 9/5 & 8/5 \\\\ 8/5 & 21/5 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm giá trị lớn nhất và nhỏ nhất của hàm số $f(x, y) = 2x^2 + 3y^2$ với điều kiện ràng buộc $x^2+xy+y^2=1$.",
+      "answer": {
+        "steps": [
+          "Bước 1: Đây là bài toán tối ưu hóa một dạng toàn phương $q_1(x) = 2x^2+3y^2$ với điều kiện là một dạng toàn phương khác $q_2(x) = x^2+xy+y^2 = 1$.",
+          "Bước 2: Bài toán này dẫn đến việc giải phương trình giá trị riêng suy rộng: $\\det(A - \\lambda B) = 0$, trong đó A là ma trận của $q_1$ và B là ma trận của $q_2$.",
+          "Bước 3: $A = \\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix}$ và $B = \\begin{pmatrix} 1 & 1/2 \\\\ 1/2 & 1 \\end{pmatrix}$.",
+          "Bước 4: Tính $A - \\lambda B = \\begin{pmatrix} 2-\\lambda & -\\lambda/2 \\\\ -\\lambda/2 & 3-\\lambda \\end{pmatrix}$.",
+          "Bước 5: Giải $\\det(A - \\lambda B) = 0$: $(2-\\lambda)(3-\\lambda) - (-\\lambda/2)^2 = 0 \\implies 6 - 5\\lambda + \\lambda^2 - \\frac{\\lambda^2}{4} = 0$.",
+          "Bước 6: Nhân 4 cho cả hai vế: $24 - 20\\lambda + 4\\lambda^2 - \\lambda^2 = 0 \\implies 3\\lambda^2 - 20\\lambda + 24 = 0$.",
+          "Bước 7: Nghiệm của phương trình là $\\lambda = \\frac{20 \\pm \\sqrt{400 - 4(3)(24)}}{6} = \\frac{20 \\pm \\sqrt{112}}{6} = \\frac{10 \\pm 2\\sqrt{7}}{3}$.",
+          "Kết luận: Giá trị lớn nhất là $\\frac{10 + 2\\sqrt{7}}{3}$ và giá trị nhỏ nhất là $\\frac{10 - 2\\sqrt{7}}{3}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng toàn phương $q(x_1, x_2) = 2x_1x_2 + x_2^2$. Dùng hai phép đổi biến khác nhau để đưa q về dạng chính tắc và kiểm chứng Định luật quán tính (chỉ số dương và âm không đổi).",
+      "answer": {
+        "steps": [
+          "Bước 1: Cách 1 - Phương pháp Lagrange. Vì không có $x_1^2$, ta đặt $x_1=y_1-y_2, x_2=y_1+y_2$.",
+          "Bước 2: $q = 2(y_1-y_2)(y_1+y_2) + (y_1+y_2)^2 = 2(y_1^2-y_2^2) + (y_1^2+2y_1y_2+y_2^2) = 3y_1^2 - y_2^2 + 2y_1y_2$. Vẫn còn số hạng chéo, cách này không hiệu quả. Thử lại.",
+          "Bước 3: (Lagrange cách khác) $q = (x_2^2 + 2x_1x_2)$. Ta có thể xem đây là bình phương thiếu của $(x_2+x_1)^2$. $q = (x_2+x_1)^2 - x_1^2$.",
+          "Bước 4: Đặt $Y_1 = x_1+x_2, Y_2=x_1$. Dạng chính tắc là $q = Y_1^2 - Y_2^2$. Các hệ số là 1 và -1. Ký số là (1, 1).",
+          "Bước 5: Cách 2 - Phương pháp chéo hóa trực giao. Ma trận là $A = \\begin{pmatrix} 0 & 1 \\\\ 1 & 1 \\end{pmatrix}$.",
+          "Bước 6: Tìm giá trị riêng: $\\det(A-\\lambda I) = -\\lambda(1-\\lambda) - 1 = \\lambda^2 - \\lambda - 1 = 0$.",
+          "Bước 7: Các giá trị riêng là $\\lambda_{1,2} = \\frac{1 \\pm \\sqrt{1+4}}{2} = \\frac{1 \\pm \\sqrt{5}}{2}$.",
+          "Bước 8: Dạng chính tắc là $q = \\frac{1+\\sqrt{5}}{2}Z_1^2 + \\frac{1-\\sqrt{5}}{2}Z_2^2$. Một hệ số dương, một hệ số âm. Ký số là (1, 1).",
+          "Kết luận: Cả hai phương pháp đều cho cùng một ký số (1, 1), minh họa cho Định luật quán tính cho dạng toàn phương."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng mọi dạng toàn phương $q(x)$ trên $\\mathbb{R}^n$ đều có thể được viết dưới dạng hiệu của hai dạng toàn phương xác định dương, $q(x) = q_1(x) - q_2(x)$.",
+      "answer": {
+        "steps": [
+          "Bước 1: Theo định lý về phép đưa về dạng chính tắc bằng biến đổi trực giao, tồn tại ma trận trực giao P sao cho $x=Py$ và $q$ có dạng $q(y) = \\sum_{i=1}^n \\lambda_i y_i^2$.",
+          "Bước 2: Phân chia các giá trị riêng $\\lambda_i$ thành hai nhóm: nhóm các giá trị riêng dương hoặc bằng 0, và nhóm các giá trị riêng âm.",
+          "Bước 3: Ta có thể viết lại $q(y) = \\sum_{\\lambda_i > 0} \\lambda_i y_i^2 + \\sum_{\\lambda_i < 0} \\lambda_i y_i^2$.",
+          "Bước 4: Đặt $q_1(y) = \\sum_{\\lambda_i > 0} \\lambda_i y_i^2$ và $q_2(y) = \\sum_{\\lambda_i < 0} -\\lambda_i y_i^2$.",
+          "Bước 5: Khi đó, $q(y) = q_1(y) - q_2(y)$.",
+          "Bước 6: Xét $q_1(y)$. Các hệ số $\\lambda_i$ đều dương. Nếu thêm một số hạng nhỏ $\\epsilon \\sum y_i^2$ với $\\epsilon > 0$ rất nhỏ, $q_1$ sẽ trở thành xác định dương. Tương tự với $q_2$.",
+          "Bước 7: Một cách chặt chẽ hơn, $q_1(y)$ và $q_2(y)$ là các dạng toàn phương nửa xác định dương. Ta có thể viết $q_1$ và $q_2$ tương ứng với các biến $x$ ban đầu, và chúng vẫn là các dạng nửa xác định dương.",
+          "Kết luận: Phân tích này cho thấy bất kỳ dạng toàn phương nào cũng là hiệu của hai dạng nửa xác định dương. Để chúng xác định dương, ta có thể thêm và bớt một dạng xác định dương nhỏ, ví dụ: $q = (q_1+\\epsilon I) - (q_2+\\epsilon I)$."
+        ]
+      }
+    },
+    {
+      "question": "Cho A và B là hai ma trận đối xứng thực cấp $n \\times n$, trong đó B xác định dương. Chứng minh rằng tồn tại một ma trận khả nghịch P sao cho $P^T A P$ và $P^T B P$ đều là các ma trận đường chéo. (Đây là bài toán chéo hóa đồng thời).",
+      "answer": {
+        "steps": [
+          "Bước 1: Vì B xác định dương, tồn tại ma trận khả nghịch C sao cho $B = C^T C$ (Phân rã Cholesky). Do đó $I = (C^T)^{-1} B C^{-1}$.",
+          "Bước 2: Xét ma trận $S = (C^T)^{-1} A C^{-1}$. Dễ dàng kiểm tra S là ma trận đối xứng: $S^T = (C^{-1})^T A^T ((C^T)^{-1})^T = C A (C^T)^{-1}$ không đúng, phải là $S^T = (C^{-1})^T A^T ((C^T)^{-1})^T = C^{-T} A C^{-1}$, không bằng S. Cách tiếp cận này không đúng. Thử lại.",
+          "Bước 1 (Đúng): Vì B xác định dương, tồn tại ma trận khả nghịch $Q$ sao cho $Q^T B Q = I$. (Ví dụ, Q có các cột là các vector riêng trực giao hóa của B theo tích vô hướng chuẩn, được chia cho căn bậc hai của các giá trị riêng tương ứng).",
+          "Bước 2: Xét ma trận $A' = Q^T A Q$. Vì A đối xứng, A' cũng đối xứng. Do đó, tồn tại một ma trận trực giao R (tức là $R^T R = I$) sao cho $R^T A' R = D_A$, với $D_A$ là ma trận đường chéo.",
+          "Bước 3: Đặt $P = Q R$. P là ma trận khả nghịch vì nó là tích của hai ma trận khả nghịch.",
+          "Bước 4: Biến đổi ma trận A theo P: $P^T A P = (QR)^T A (QR) = R^T (Q^T A Q) R = R^T A' R = D_A$. Đây là ma trận đường chéo.",
+          "Bước 5: Biến đổi ma trận B theo P: $P^T B P = (QR)^T B (QR) = R^T (Q^T B Q) R = R^T I R = R^T R = I$. Đây cũng là một ma trận đường chéo.",
+          "Vậy, phép đổi biến $x=Py$ sẽ đưa đồng thời dạng toàn phương ứng với A và B về dạng chính tắc (dạng đường chéo)."
+        ]
+      }
+    },
+    {
+      "question": "Sử dụng Phân rã giá trị suy biến (SVD), hãy tìm giá trị lớn nhất của dạng song tuyến tính $f(x, y) = y^T A x$ với $A = \\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}$ với điều kiện $||x||_2 = 1$ và $||y||_2 = 1$.",
+      "answer": {
+        "steps": [
+          "Bước 1: Giá trị lớn nhất của $y^T A x$ với điều kiện $x, y$ là các vector đơn vị chính là giá trị suy biến (singular value) lớn nhất của A, ký hiệu là $\\sigma_{max}$.",
+          "Bước 2: Giá trị suy biến của A là căn bậc hai của các giá trị riêng của ma trận $A^T A$.",
+          "Bước 3: Tính $A^T A$: $A^T A = \\begin{pmatrix} 1 & 0 \\\\ 1 & 1 \\end{pmatrix} \\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix} = \\begin{pmatrix} 1 & 1 \\\\ 1 & 2 \\end{pmatrix}$.",
+          "Bước 4: Tìm các giá trị riêng của $A^T A$. Phương trình đặc trưng là $\\det(A^T A - \\lambda I) = 0$.",
+          "Bước 5: $(1-\\lambda)(2-\\lambda) - 1 = \\lambda^2 - 3\\lambda + 2 - 1 = \\lambda^2 - 3\\lambda + 1 = 0$.",
+          "Bước 6: Các giá trị riêng là $\\lambda = \\frac{3 \\pm \\sqrt{9-4}}{2} = \\frac{3 \\pm \\sqrt{5}}{2}$.",
+          "Bước 7: Các giá trị suy biến của A là $\\sigma_1 = \\sqrt{\\frac{3+\\sqrt{5}}{2}}$ và $\\sigma_2 = \\sqrt{\\frac{3-\\sqrt{5}}{2}}$.",
+          "Kết luận: Giá trị lớn nhất cần tìm là $\\sigma_{max} = \\sqrt{\\frac{3+\\sqrt{5}}{2}}$, cũng chính là tỉ lệ vàng $\\phi$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $A$ là ma trận đối xứng thực cấp $n$. Gọi $B$ là ma trận con chính cấp $(n-1) \\times (n-1)$ của A (thu được bằng cách xóa hàng và cột cuối cùng của A). Chứng minh rằng các giá trị riêng của B xen kẽ với các giá trị riêng của A. (Định lý xen kẽ Cauchy).",
+      "answer": {
+        "steps": [
+          "Bước 1: Gọi các giá trị riêng của A là $\\lambda_1 \\ge \\lambda_2 \\ge \\dots \\ge \\lambda_n$ và các giá trị riêng của B là $\\mu_1 \\ge \\mu_2 \\ge \\dots \\ge \\mu_{n-1}$. Ta cần chứng minh $\\lambda_k \\ge \\mu_k \\ge \\lambda_{k+1}$ for $k=1, \\dots, n-1$.",
+          "Bước 2: Sử dụng Định lý min-max Courant-Fischer, giá trị riêng thứ $k$ của A là $\\lambda_k = \\max_{S_k} \\min_{x \\in S_k, ||x||=1} x^T A x$, với $S_k$ là một không gian con k chiều của $\\mathbb{R}^n$.",
+          "Bước 3: Tương tự, $\\mu_k = \\max_{T_k} \\min_{y \\in T_k, ||y||=1} y^T B y$, với $T_k$ là không gian con k chiều của $\\mathbb{R}^{n-1}$. Ta có thể xem $y$ là vector trong $\\mathbb{R}^n$ với thành phần cuối bằng 0.",
+          "Bước 4: Chứng minh $\\mu_k \\le \\lambda_k$: Lấy không gian con $T_k$ tối ưu cho $\\mu_k$ trong $\\mathbb{R}^{n-1}$. $T_k$ cũng là một không gian con k chiều trong $\\mathbb{R}^n$. Do đó $\\lambda_k = \\max_{S_k} (\\dots) \\ge \\min_{x \\in T_k, ||x||=1} x^T A x = \\mu_k$.",
+          "Bước 5: Chứng minh $\\lambda_{k+1} \\le \\mu_k$: Giá trị riêng $\\lambda_{k+1}$ có thể được viết là $\\lambda_{k+1} = \\min_{S_{n-k}} \\max_{x \\in S_{n-k}, ||x||=1} x^T A x$.",
+          "Bước 6: Lấy không gian con $T_k$ tối ưu cho $\\mu_k$ trong $\\mathbb{R}^{n-1}$. Gọi $V$ là không gian con trực giao với $T_k$ trong $\\mathbb{R}^{n-1}$, $\\dim(V) = n-1-k$.",
+          "Bước 7: Gọi $W$ là không gian con của $\\mathbb{R}^n$ gồm các vector có $n-1$ thành phần đầu thuộc $V$. $\\dim(W)=n-1-k$. $\\mu_k = \\max_{x \\in V^{\\perp}, x_n=0, ||x||=1} x^T A x$. So sánh điều này với công thức max-min cho $\\lambda_k$ và $\\lambda_{k+1}$ sẽ dẫn đến kết quả. (Đây là một chứng minh phức tạp, các bước trên chỉ là dàn ý).",
+          "Kết luận cuối cùng là $\\lambda_1 \\ge \\mu_1 \\ge \\lambda_2 \\ge \\mu_2 \\ge \\dots \\ge \\mu_{n-1} \\ge \\lambda_n$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm tất cả các giá trị của tham số thực $a, b$ sao cho dạng toàn phương $q(x, y, z) = ax^2 + ay^2 + az^2 + 2xy + 2xz + 2yz$ là nửa xác định dương.",
+      "answer": {
+        "steps": [
+          "Bước 1: Ma trận của dạng toàn phương là $A = \\begin{pmatrix} a & 1 & 1 \\\\ 1 & a & 1 \\\\ 1 & 1 & a \\end{pmatrix}$.",
+          "Bước 2: Dạng toàn phương nửa xác định dương khi và chỉ khi tất cả các định thức con chính của A đều không âm.",
+          "Bước 3: $\\Delta_1 = a \\ge 0$.",
+          "Bước 4: $\\Delta_2 = \\det\\begin{pmatrix} a & 1 \\\\ 1 & a \\end{pmatrix} = a^2 - 1 \\ge 0$. Kết hợp với $\\Delta_1 \\ge 0$, ta có $a \\ge 1$.",
+          "Bước 5: $\\Delta_3 = \\det(A) = a(a^2-1) - 1(a-1) + 1(1-a) = a^3 - a - a + 1 + 1 - a = a^3 - 3a + 2$.",
+          "Bước 6: Ta cần $a^3 - 3a + 2 \\ge 0$. Phân tích đa thức, ta thấy $a=1$ là nghiệm kép và $a=-2$ là nghiệm đơn: $a^3 - 3a + 2 = (a-1)^2(a+2)$.",
+          "Bước 7: Điều kiện là $(a-1)^2(a+2) \\ge 0$. Vì $(a-1)^2 \\ge 0$ với mọi $a$, điều này tương đương với $a+2 \\ge 0$, hay $a \\ge -2$.",
+          "Bước 8: Kết hợp tất cả các điều kiện: $a \\ge 1$ (từ $\\Delta_1, \\Delta_2$) và $a \\ge -2$ (từ $\\Delta_3$). Giao của chúng là $a \\ge 1$. Tham số $b$ không xuất hiện, vậy nó có thể là bất kỳ số thực nào. Tuy nhiên, câu hỏi không có tham số b. Vậy đáp án chỉ phụ thuộc vào $a$.",
+          "Kết luận: Dạng toàn phương là nửa xác định dương khi và chỉ khi $a \\ge 1$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $q_A(x)=x^TAx$ và $q_B(x)=x^TBx$ là hai dạng toàn phương trên $\\mathbb{R}^n$, với $q_B(x)$ xác định dương. Chứng minh rằng giá trị lớn nhất của tỉ số Rayleigh $R(x) = \\frac{q_A(x)}{q_B(x)}$ bằng giá trị riêng lớn nhất của bài toán giá trị riêng suy rộng $Av = \\lambda Bv$.",
+      "answer": {
+        "steps": [
+          "Bước 1: Vì $q_B(x)$ xác định dương, ma trận B xác định dương. Do đó tồn tại ma trận khả nghịch C sao cho $B = C^TC$.",
+          "Bước 2: Thực hiện phép đổi biến $x = C^{-1}y$. Khi đó $y=Cx$.",
+          "Bước 3: Biến đổi mẫu số: $q_B(x) = x^T B x = (C^{-1}y)^T (C^T C) (C^{-1}y) = y^T (C^{-1})^T C^T C C^{-1} y = y^T I y = ||y||^2$.",
+          "Bước 4: Biến đổi tử số: $q_A(x) = x^T A x = (C^{-1}y)^T A (C^{-1}y) = y^T (C^{-1})^T A C^{-1} y = y^T S y$, với $S = (C^{-1})^T A C^{-1}$ là một ma trận đối xứng.",
+          "Bước 5: Tỉ số Rayleigh trở thành $R(x) = \\frac{y^T S y}{||y||^2}$. Đây là tỉ số Rayleigh chuẩn cho ma trận S.",
+          "Bước 6: Giá trị lớn nhất của tỉ số Rayleigh chuẩn này chính là giá trị riêng lớn nhất của S, $\\lambda_{max}(S)$.",
+          "Bước 7: Xét bài toán giá trị riêng suy rộng $Av = \\lambda Bv$. Thay $B=C^TC$ vào: $Av = \\lambda C^T C v$.",
+          "Bước 8: Nhân trái với $(C^T)^{-1}$: $(C^T)^{-1}Av = \\lambda C v$. Đặt $v=C^{-1}y$, ta có $(C^T)^{-1}A(C^{-1}y) = \\lambda C (C^{-1}y) = \\lambda y$.",
+          "Kết luận: Điều này tương đương với $Sy = \\lambda y$. Vậy các giá trị riêng của bài toán suy rộng $Av=\\lambda Bv$ chính là các giá trị riêng của ma trận S. Do đó, $\\max R(x) = \\lambda_{max}(S) = \\lambda_{max}(A, B)$."
+        ]
+      }
+    },
+    {
+      "question": "Cho A là một ma trận đối xứng, xác định dương. Chứng minh bất đẳng thức Hadamard: $\\det(A) \\le \\prod_{i=1}^n a_{ii}$. Dấu bằng xảy ra khi nào?",
+      "answer": {
+        "steps": [
+          "Bước 1: Vì A xác định dương, ta có thể thực hiện phân rã Cholesky $A = LL^T$, với L là ma trận tam giác dưới có các phần tử trên đường chéo $l_{ii} > 0$.",
+          "Bước 2: Ta có $\\det(A) = \\det(LL^T) = \\det(L)\\det(L^T) = (\\det(L))^2 = (\\prod_{i=1}^n l_{ii})^2 = \\prod_{i=1}^n l_{ii}^2$.",
+          "Bước 3: Các phần tử trên đường chéo của A được cho bởi $a_{ii} = (LL^T)_{ii} = \\sum_{k=1}^n L_{ik} (L^T)_{ki} = \\sum_{k=1}^n L_{ik}^2$.",
+          "Bước 4: Cụ thể, $a_{ii} = \\sum_{k=1}^i l_{ik}^2 = l_{i1}^2 + l_{i2}^2 + \\dots + l_{ii}^2$.",
+          "Bước 5: Từ đây suy ra $l_{ii}^2 \\le a_{ii}$ vì tất cả các số hạng trong tổng đều không âm.",
+          "Bước 6: Do đó, $\\det(A) = \\prod_{i=1}^n l_{ii}^2 \\le \\prod_{i=1}^n a_{ii}$. Bất đẳng thức đã được chứng minh.",
+          "Bước 7: Dấu bằng xảy ra khi và chỉ khi $l_{ii}^2 = a_{ii}$ với mọi $i$. Điều này có nghĩa là $l_{ik} = 0$ với mọi $k < i$.",
+          "Kết luận: Nếu $l_{ik}=0$ với $k<i$, ma trận L là ma trận đường chéo. Khi đó, A = LL^T cũng là ma trận đường chéo. Vậy dấu bằng xảy ra khi và chỉ khi A là ma trận đường chéo."
+        ]
+      }
+    },
+    {
+      "question": "Xét không gian các đa thức bậc không quá 2, $P_2[x]$, với tích vô hướng $\\langle p, q \\rangle = \\int_{-1}^{1} p(x)q(x)dx$. Xét dạng toàn phương $Q(p) = p(1)^2 - p(-1)^2$. Tìm dạng chính tắc của Q.",
+      "answer": {
+        "steps": [
+          "Bước 1: Tìm một cơ sở trực chuẩn cho $P_2[x]$. Bắt đầu với cơ sở $\\{1, x, x^2\\}$ và trực chuẩn hóa bằng Gram-Schmidt, ta được các đa thức Legendre (đã chuẩn hóa): $p_0(x)=\\frac{1}{\\sqrt{2}}$, $p_1(x)=\\sqrt{\\frac{3}{2}}x$, $p_2(x)=\\sqrt{\\frac{5}{8}}(3x^2-1)$.",
+          "Bước 2: Biểu diễn dạng toàn phương Q thông qua ma trận trong cơ sở trực chuẩn này. Ma trận A có các phần tử $A_{ij} = \\langle L(p_i), p_j \\rangle$ không áp dụng được ở đây vì Q không có dạng tích vô hướng. Ta tính $A_{ij}$ từ dạng song tuyến tính $B(p,q) = p(1)q(1) - p(-1)q(-1)$.",
+          "Bước 3: (Cách khác hiệu quả hơn) Tìm các vector riêng của Q. Một vector $p$ là vector riêng nếu $Q(p) = \\lambda \\langle p, p \\rangle$. Đây không phải là cách tiếp cận chuẩn.",
+          "Bước 4: (Cách đúng) Tìm ma trận của dạng song tuyến tính $B(p,q)$ trong một cơ sở thuận tiện (ví dụ $\\{1, x, x^2\\}$), sau đó chéo hóa nó.",
+          "Bước 5: $B(1,1)=1-1=0$, $B(x,x)=1-1=0$, $B(x^2,x^2)=1-1=0$. $B(1,x)=1-(-1)=2$. $B(1,x^2)=1-1=0$. $B(x,x^2)=1-(-1)=2$.",
+          "Bước 6: Ma trận của dạng song tuyến tính B trong cơ sở $\\{1, x, x^2\\}$ là $M = \\begin{pmatrix} 0 & 2 & 0 \\\\ 2 & 0 & 2 \\\\ 0 & 2 & 0 \\end{pmatrix}$. Ma trận của dạng toàn phương là $M$.",
+          "Bước 7: Tìm các giá trị riêng của M: $\\det(M-\\lambda I) = -\\lambda(\\lambda^2-4) - 2(-2\\lambda) = -\\lambda^3 + 4\\lambda + 4\\lambda = -\\lambda^3+8\\lambda = -\\lambda(\\lambda^2-8)=0$.",
+          "Bước 8: Các giá trị riêng là $\\lambda_1=0, \\lambda_2=2\\sqrt{2}, \\lambda_3=-2\\sqrt{2}$. Đây là các hệ số trong dạng chính tắc.",
+          "Kết luận: Dạng chính tắc của Q là $2\\sqrt{2}y_1^2 - 2\\sqrt{2}y_2^2$ (hệ số 0 bị bỏ qua)."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng một ma trận đối xứng A là nửa xác định dương nếu và chỉ nếu nó có thể được viết dưới dạng $A=B^TB$ cho một ma trận B nào đó.",
+      "answer": {
+        "steps": [
+          "Bước 1: Chiều thuận ($\\implies$): Giả sử A là nửa xác định dương. A là đối xứng nên tồn tại ma trận trực giao P sao cho $A=PDP^T$, với D là ma trận đường chéo chứa các giá trị riêng $\\lambda_i$ của A.",
+          "Bước 2: Vì A nửa xác định dương, tất cả $\\lambda_i \\ge 0$. Do đó, ta có thể định nghĩa ma trận đường chéo $D^{1/2}$ có các phần tử là $\\sqrt{\\lambda_i}$.",
+          "Bước 3: Ta có $A = P D P^T = P D^{1/2} D^{1/2} P^T = P D^{1/2} (D^{1/2})^T P^T = (P D^{1/2})(D^{1/2} P^T)^T$. Không đúng. Thử lại.",
+          "Bước 4: $A = P D P^T = P D^{1/2} D^{1/2} P^T = P D^{1/2} (P^T P) D^{1/2} P^T$. Không đúng.",
+          "Bước 5: Thử lại: $A = P D P^T = P D^{1/2} (D^{1/2})^T P^T = (P D^{1/2}) (P D^{1/2})^T$. Đặt $B^T = P D^{1/2}$, suy ra $B = (D^{1/2})^T P^T = D^{1/2} P^T$. Vậy $A = B^T B$.",
+          "Bước 6: Chiều đảo ($\\impliedby$): Giả sử $A=B^TB$. Ta cần chứng minh A đối xứng và nửa xác định dương.",
+          "Bước 7: Tính đối xứng: $A^T = (B^T B)^T = B^T (B^T)^T = B^T B = A$. Vậy A đối xứng.",
+          "Bước 8: Tính nửa xác định dương: Xét dạng toàn phương $x^T A x = x^T (B^T B) x = (Bx)^T (Bx) = ||Bx||_2^2$.",
+          "Kết luận: Vì norm bình phương của một vector luôn không âm, ta có $x^T A x = ||Bx||_2^2 \\ge 0$ với mọi vector $x$. Do đó, A là nửa xác định dương."
+        ]
+      }
+    },
+    {
+      "question": "Xác định tập hợp tất cả các điểm $(x, y) \\in \\mathbb{R}^2$ sao cho dạng toàn phương $q(z_1, z_2, z_3) = x z_1^2 + 2 z_1 z_2 + y z_2^2 + 2 z_2 z_3 + x z_3^2$ là xác định dương.",
+      "answer": {
+        "steps": [
+          "Bước 1: Viết ma trận của dạng toàn phương: $A = \\begin{pmatrix} x & 1 & 0 \\\\ 1 & y & 1 \\\\ 0 & 1 & x \\end{pmatrix}$.",
+          "Bước 2: Áp dụng tiêu chuẩn Sylvester. Dạng toàn phương xác định dương khi và chỉ khi tất cả các định thức con chính của A đều dương.",
+          "Bước 3: $\\Delta_1 = x > 0$.",
+          "Bước 4: $\\Delta_2 = \\det\\begin{pmatrix} x & 1 \\\\ 1 & y \\end{pmatrix} = xy - 1 > 0$. Suy ra $y > 1/x$.",
+          "Bước 5: $\\Delta_3 = \\det(A) = x(xy-1) - 1(x-0) = x^2y - x - x = x^2y - 2x = x(xy-2)$.",
+          "Bước 6: Ta cần $\\Delta_3 > 0$. Vì từ $\\Delta_1$ ta đã có $x>0$, điều kiện này trở thành $xy-2 > 0$, hay $y > 2/x$.",
+          "Bước 7: Tổng hợp các điều kiện: (1) $x > 0$, (2) $y > 1/x$, (3) $y > 2/x$.",
+          "Bước 8: Vì $x>0$, ta có $2/x > 1/x$. Do đó, nếu điều kiện (3) được thỏa mãn thì điều kiện (2) cũng được thỏa mãn.",
+          "Kết luận: Vậy tập hợp các điểm $(x, y)$ cần tìm là miền được xác định bởi các bất đẳng thức: $x>0$ và $y > 2/x$. Đây là miền nằm ở góc phần tư thứ nhất và ở phía trên của nhánh hyperbola $y = 2/x$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $A, B$ là hai ma trận thực đối xứng cấp n. Chứng minh rằng nếu A xác định dương thì các nghiệm của phương trình đặc trưng $\\det(B - \\lambda A) = 0$ đều là số thực.",
+      "answer": {
+        "steps": [
+          "Bước 1: Vì A xác định dương, nó khả nghịch và tồn tại căn bậc hai xác định dương $A^{1/2}$ sao cho $A = A^{1/2}A^{1/2}$.",
+          "Bước 2: Xét phương trình $\\det(B - \\lambda A) = 0$. Ta có thể viết lại $B - \\lambda A = A^{1/2}(A^{-1/2} B A^{-1/2} - \\lambda I)A^{1/2}$.",
+          "Bước 3: Sử dụng tính chất $\\det(XYZ) = \\det(X)\\det(Y)\\det(Z)$, ta có: $\\det(B-\\lambda A) = \\det(A^{1/2}) \\det(A^{-1/2} B A^{-1/2} - \\lambda I) \\det(A^{1/2})$.",
+          "Bước 4: Vì A xác định dương, $\\det(A) > 0$ và $\\det(A^{1/2}) = \\sqrt{\\det(A)} \\neq 0$. Do đó, $\\det(B-\\lambda A) = 0$ khi và chỉ khi $\\det(A^{-1/2} B A^{-1/2} - \\lambda I) = 0$.",
+          "Bước 5: Đặt $C = A^{-1/2} B A^{-1/2}$. Ta cần chứng minh ma trận C là ma trận đối xứng. $C^T = (A^{-1/2})^T B^T (A^{-1/2})^T$.",
+          "Bước 6: Vì A đối xứng, $A^{1/2}$ và $A^{-1/2}$ cũng đối xứng. B cũng đối xứng. Do đó, $C^T = A^{-1/2} B A^{-1/2} = C$.",
+          "Bước 7: Vậy, phương trình đặc trưng ban đầu tương đương với việc tìm các giá trị riêng của ma trận đối xứng C.",
+          "Bước 8: Một định lý cơ bản trong đại số tuyến tính là mọi giá trị riêng của một ma trận đối xứng thực đều là số thực.",
+          "Kết luận: Do đó, các nghiệm $\\lambda$ của phương trình $\\det(B - \\lambda A) = 0$ đều là số thực."
+        ]
+      }
     }
   ]
 }
