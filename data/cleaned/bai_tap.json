@@ -1,0 +1,632 @@
+{
+  "problems": [
+    {
+      "question": "Cho hai ma trận: $A = \\begin{pmatrix} 2 & 1 \\\\ 3 & 0 \\end{pmatrix}$ và $B = \\begin{pmatrix} 1 & -1 & 2 \\\\ 5 & 4 & 0 \\end{pmatrix}$. Tính tích $A \\cdot B$.",
+      "answer": {
+        "steps": [
+          "Kiểm tra điều kiện: A là ma trận cấp $2 \\times 2$ và B là ma trận cấp $2 \\times 3$. Vì số cột của A (2) bằng số hàng của B (2), phép nhân $A \\cdot B$ là hợp lệ. Ma trận kết quả sẽ có cấp $2 \\times 3$.",
+          "Phần tử ở hàng i, cột j của ma trận tích bằng tổng của tích các phần tử ở hàng i của A với các phần tử tương ứng ở cột j của B.",
+          "Tính các phần tử của hàng 1: $c_{11} = (2 \\times 1) + (1 \\times 5) = 7$; $c_{12} = (2 \\times -1) + (1 \\times 4) = 2$; $c_{13} = (2 \\times 2) + (1 \\times 0) = 4$.",
+          "Tính các phần tử của hàng 2: $c_{21} = (3 \\times 1) + (0 \\times 5) = 3$; $c_{22} = (3 \\times -1) + (0 \\times 4) = -3$; $c_{23} = (3 \\times 2) + (0 \\times 0) = 6$.",
+          "Kết quả: $A \\cdot B = \\begin{pmatrix} 7 & 2 & 4 \\\\ 3 & -3 & 6 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho hai ma trận: $A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & -1 & 4 \\end{pmatrix}$ và $B = \\begin{pmatrix} -2 & 3 & 0 \\\\ 1 & 5 & -1 \\end{pmatrix}$. Tính $A + B$.",
+      "answer": {
+        "steps": [
+          "Để cộng hai ma trận, ta cộng các phần tử ở vị trí tương ứng với nhau.",
+          "Ta có: $A + B = \\begin{pmatrix} 1+(-2) & 2+3 & 3+0 \\\\ 0+1 & -1+5 & 4+(-1) \\end{pmatrix}$",
+          "Thực hiện các phép cộng trong ma trận:",
+          "Kết quả: $A + B = \\begin{pmatrix} -1 & 5 & 3 \\\\ 1 & 4 & 3 \\end{pmatrix}$"
+        ]
+      }
+    },
+    {
+      "question": "Cho hai ma trận: $A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & -1 & 4 \\end{pmatrix}$ và $B = \\begin{pmatrix} -2 & 3 & 0 \\\\ 1 & 5 & -1 \\end{pmatrix}$. Tính $A - 2B$.",
+      "answer": {
+        "steps": [
+          "Đầu tiên, ta tính ma trận $2B$ bằng cách nhân mỗi phần tử của $B$ với 2.",
+          "$2B = 2 \\times \\begin{pmatrix} -2 & 3 & 0 \\\\ 1 & 5 & -1 \\end{pmatrix} = \\begin{pmatrix} 2 \\times (-2) & 2 \\times 3 & 2 \\times 0 \\\\ 2 \\times 1 & 2 \\times 5 & 2 \\times (-1) \\end{pmatrix} = \\begin{pmatrix} -4 & 6 & 0 \\\\ 2 & 10 & -2 \\end{pmatrix}$",
+          "Tiếp theo, ta thực hiện phép trừ ma trận $A - 2B$.",
+          "$A - 2B = \\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & -1 & 4 \\end{pmatrix} - \\begin{pmatrix} -4 & 6 & 0 \\\\ 2 & 10 & -2 \\end{pmatrix} = \\begin{pmatrix} 1-(-4) & 2-6 & 3-0 \\\\ 0-2 & -1-10 & 4-(-2) \\end{pmatrix}$",
+          "Thực hiện các phép trừ trong ma trận:",
+          "Kết quả: $A - 2B = \\begin{pmatrix} 5 & -4 & 3 \\\\ -2 & -11 & 6 \\end{pmatrix}$"
+        ]
+      }
+    },
+    {
+      "question": "Tìm ma trận nghịch đảo $A^{-1}$ của ma trận $A = \\begin{pmatrix} 4 & 7 \\\\ 2 & 6 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Bước 1: Tính định thức của A. Định thức của ma trận cấp 2 được tính bằng công thức $ad - bc$.",
+          "$\\det(A) = (4 \\times 6) - (7 \\times 2) = 24 - 14 = 10$.",
+          "Vì $\\det(A) = 10 \\neq 0$, ma trận A có ma trận nghịch đảo.",
+          "Bước 2: Áp dụng công thức tìm ma trận nghịch đảo cấp 2: $A^{-1} = \\frac{1}{\\det(A)} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}$.",
+          "Thay các giá trị vào công thức: $A^{-1} = \\frac{1}{10} \\begin{pmatrix} 6 & -7 \\\\ -2 & 4 \\end{pmatrix}$.",
+          "Nhân vô hướng $\\frac{1}{10}$ vào từng phần tử của ma trận: $A^{-1} = \\begin{pmatrix} 6/10 & -7/10 \\\\ -2/10 & 4/10 \\end{pmatrix} = \\begin{pmatrix} 3/5 & -7/10 \\\\ -1/5 & 2/5 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm hạng của ma trận $A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 7 & 10 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Ta sử dụng các phép biến đổi sơ cấp trên hàng để đưa ma trận về dạng bậc thang.",
+          "Ma trận ban đầu: $A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 7 & 10 \\end{pmatrix}$.",
+          "Thực hiện phép biến đổi $h_2 \\rightarrow h_2 - 2h_1$: $\\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & 0 & 0 \\\\ 3 & 7 & 10 \\end{pmatrix}$.",
+          "Tiếp tục thực hiện phép biến đổi $h_3 \\rightarrow h_3 - 3h_1$: $\\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & 0 & 0 \\\\ 0 & 1 & 1 \\end{pmatrix}$.",
+          "Hoán đổi hàng 2 và hàng 3 ($h_2 \\leftrightarrow h_3$) để có dạng bậc thang chuẩn: $\\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 0 \\end{pmatrix}$.",
+          "Ma trận bậc thang thu được có 2 hàng khác không (hàng 1 và hàng 2).",
+          "Vậy, hạng của ma trận A là 2. Ký hiệu: $rank(A) = 2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $C = \\begin{pmatrix} 1 & -2 & 0 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \\end{pmatrix}$. Tìm ma trận chuyển vị $C^T$.",
+      "answer": {
+        "steps": [
+          "Ma trận chuyển vị ($C^T$) được tạo ra bằng cách hoán đổi các hàng thành các cột tương ứng.",
+          "Hàng 1 của C là (1, -2, 0) sẽ trở thành Cột 1 của $C^T$.",
+          "Hàng 2 của C là (4, 5, 6) sẽ trở thành Cột 2 của $C^T$.",
+          "Hàng 3 của C là (7, 8, 9) sẽ trở thành Cột 3 của $C^T$.",
+          "Vậy, ma trận chuyển vị là: $C^T = \\begin{pmatrix} 1 & 4 & 7 \\\\ -2 & 5 & 8 \\\\ 0 & 6 & 9 \\end{pmatrix}$"
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $A = \\begin{pmatrix} 3 & 5 \\\\ 1 & 4 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Đây là ma trận vuông cấp 2. Ta sử dụng công thức $\\det(A) = ad - bc$.",
+          "Áp dụng công thức: $\\det(A) = (3 \\times 4) - (5 \\times 1)$.",
+          "Thực hiện phép tính: $12 - 5 = 7$.",
+          "Kết luận: $\\det(A) = 7$."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $B = \\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & 1 & 4 \\\\ 5 & 6 & 0 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Đây là ma trận vuông cấp 3. Ta có thể sử dụng quy tắc Sarrus.",
+          "Bước 1: Tính tổng các tích của các đường chéo chính.",
+          "Tổng chéo chính = $(1 \\times 1 \\times 0) + (2 \\times 4 \\times 5) + (3 \\times 0 \\times 6) = 0 + 40 + 0 = 40$.",
+          "Bước 2: Tính tổng các tích của các đường chéo phụ.",
+          "Tổng chéo phụ = $(3 \\times 1 \\times 5) + (1 \\times 4 \\times 6) + (2 \\times 0 \\times 0) = 15 + 24 + 0 = 39$.",
+          "Bước 3: Lấy tổng đường chéo chính trừ đi tổng đường chéo phụ.",
+          "$\\det(B) = 40 - 39 = 1$.",
+          "Kết luận: Định thức của B là 1."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình sau bằng phương pháp ma trận nghịch đảo: $\\begin{cases} 4x + 7y = 1 \\\\ 2x + 6y = 4 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Bước 1: Viết hệ phương trình dưới dạng ma trận $AX = B$.",
+          "Ta có $A = \\begin{pmatrix} 4 & 7 \\\\ 2 & 6 \\end{pmatrix}$, $X = \\begin{pmatrix} x \\\\ y \\end{pmatrix}$, $B = \\begin{pmatrix} 1 \\\\ 4 \\end{pmatrix}$.",
+          "Bước 2: Tìm ma trận nghịch đảo $A^{-1}$. Từ bài trước, ta có $A^{-1} = \\begin{pmatrix} 3/5 & -7/10 \\\\ -1/5 & 2/5 \\end{pmatrix}$.",
+          "Bước 3: Tìm nghiệm theo công thức $X = A^{-1}B$.",
+          "$X = \\begin{pmatrix} x \\\\ y \\end{pmatrix} = \\begin{pmatrix} 3/5 & -7/10 \\\\ -1/5 & 2/5 \\end{pmatrix} \\begin{pmatrix} 1 \\\\ 4 \\end{pmatrix}$.",
+          "Thực hiện phép nhân ma trận: $x = (3/5 \\times 1) + (-7/10 \\times 4) = 3/5 - 28/10 = -22/10 = -11/5$.",
+          "$y = (-1/5 \\times 1) + (2/5 \\times 4) = -1/5 + 8/5 = 7/5$.",
+          "Vậy nghiệm của hệ phương trình là $x = -11/5$ và $y = 7/5$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình sau bằng quy tắc Cramer: $\\begin{cases} 2x - y = 3 \\\\ 3x + 2y = 8 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Bước 1: Tính định thức của ma trận hệ số D.",
+          "$D = \\begin{vmatrix} 2 & -1 \\\\ 3 & 2 \\end{vmatrix} = (2 \\times 2) - (-1 \\times 3) = 4 + 3 = 7$.",
+          "Bước 2: Tính các định thức $D_x$ và $D_y$.",
+          "$D_x$ được tính bằng cách thay cột x bằng cột hệ số tự do: $D_x = \\begin{vmatrix} 3 & -1 \\\\ 8 & 2 \\end{vmatrix} = (3 \\times 2) - (-1 \\times 8) = 6 + 8 = 14$.",
+          "$D_y$ được tính bằng cách thay cột y bằng cột hệ số tự do: $D_y = \\begin{vmatrix} 2 & 3 \\\\ 3 & 8 \\end{vmatrix} = (2 \\times 8) - (3 \\times 3) = 16 - 9 = 7$.",
+          "Bước 3: Tìm nghiệm bằng công thức $x = \\frac{D_x}{D}$ và $y = \\frac{D_y}{D}$.",
+          "$x = \\frac{14}{7} = 2$.",
+          "$y = \\frac{7}{7} = 1$.",
+          "Vậy nghiệm của hệ phương trình là $x = 2$ và $y = 1$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình sau bằng phương pháp khử Gauss: $\\begin{cases} x + y + 2z = 9 \\\\ 2x + 4y - 3z = 1 \\\\ 3x + 6y - 5z = 0 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Bước 1: Lập ma trận mở rộng $[A|B]$ từ hệ phương trình.",
+          "$\\begin{pmatrix} 1 & 1 & 2 & | & 9 \\\\ 2 & 4 & -3 & | & 1 \\\\ 3 & 6 & -5 & | & 0 \\end{pmatrix}$",
+          "Bước 2: Dùng các phép biến đổi sơ cấp trên hàng để đưa ma trận về dạng bậc thang.",
+          "Thực hiện $h_2 \\rightarrow h_2 - 2h_1$ và $h_3 \\rightarrow h_3 - 3h_1$: $\\begin{pmatrix} 1 & 1 & 2 & | & 9 \\\\ 0 & 2 & -7 & | & -17 \\\\ 0 & 3 & -11 & | & -27 \\end{pmatrix}$",
+          "Tiếp tục, thực hiện $h_3 \\rightarrow 2h_3 - 3h_2$: $\\begin{pmatrix} 1 & 1 & 2 & | & 9 \\\\ 0 & 2 & -7 & | & -17 \\\\ 0 & 0 & -1 & | & -3 \\end{pmatrix}$",
+          "Bước 3: Viết lại hệ phương trình từ ma trận bậc thang và giải bằng thế ngược.",
+          "Hệ phương trình tương đương: $\\begin{cases} x + y + 2z = 9 \\\\ 2y - 7z = -17 \\\\ -z = -3 \\end{cases}$",
+          "Từ phương trình cuối, ta có $z = 3$.",
+          "Thế $z=3$ vào phương trình thứ hai: $2y - 7(3) = -17 \\Rightarrow 2y - 21 = -17 \\Rightarrow 2y = 4 \\Rightarrow y = 2$.",
+          "Thế $y=2$ và $z=3$ vào phương trình đầu tiên: $x + 2 + 2(3) = 9 \\Rightarrow x + 8 = 9 \\Rightarrow x = 1$.",
+          "Vậy nghiệm của hệ phương trình là $(x, y, z) = (1, 2, 3)$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm ma trận $X$ biết: $2X + \\begin{pmatrix} 1 & 0 \\\\ -1 & 2 \\end{pmatrix} = \\begin{pmatrix} 3 & 4 \\\\ 5 & 6 \\end{pmatrix}$",
+      "answer": {
+        "steps": [
+          "Ta có phương trình ma trận dạng $2X + A = B$. Để tìm X, ta biến đổi phương trình.",
+          "$2X = B - A \\Rightarrow X = \\frac{1}{2}(B - A)$.",
+          "Bước 1: Tính hiệu ma trận $B - A$.",
+          "$B - A = \\begin{pmatrix} 3 & 4 \\\\ 5 & 6 \\end{pmatrix} - \\begin{pmatrix} 1 & 0 \\\\ -1 & 2 \\end{pmatrix} = \\begin{pmatrix} 3-1 & 4-0 \\\\ 5-(-1) & 6-2 \\end{pmatrix} = \\begin{pmatrix} 2 & 4 \\\\ 6 & 4 \\end{pmatrix}$.",
+          "Bước 2: Tính X bằng cách nhân ma trận kết quả với $\\frac{1}{2}$.",
+          "$X = \\frac{1}{2} \\begin{pmatrix} 2 & 4 \\\\ 6 & 4 \\end{pmatrix} = \\begin{pmatrix} \\frac{1}{2} \\times 2 & \\frac{1}{2} \\times 4 \\\\ \\frac{1}{2} \\times 6 & \\frac{1}{2} \\times 4 \\end{pmatrix}$.",
+          "Vậy ma trận cần tìm là $X = \\begin{pmatrix} 1 & 2 \\\\ 3 & 2 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho hai ma trận $A = \\begin{pmatrix} 1 & 2 \\\\ 0 & 3 \\end{pmatrix}$ và $B = \\begin{pmatrix} 4 & 1 \\\\ -1 & 0 \\end{pmatrix}$. a) Tính $A \\cdot B$. b) Tính $B \\cdot A$. c) So sánh kết quả và cho biết phép nhân ma trận có tính giao hoán không.",
+      "answer": {
+        "steps": [
+          "a) Tính $A \\cdot B$:",
+          "$A \\cdot B = \\begin{pmatrix} 1 & 2 \\\\ 0 & 3 \\end{pmatrix} \\begin{pmatrix} 4 & 1 \\\\ -1 & 0 \\end{pmatrix} = \\begin{pmatrix} 1(4)+2(-1) & 1(1)+2(0) \\\\ 0(4)+3(-1) & 0(1)+3(0) \\end{pmatrix} = \\begin{pmatrix} 2 & 1 \\\\ -3 & 0 \\end{pmatrix}$.",
+          "b) Tính $B \\cdot A$:",
+          "$B \\cdot A = \\begin{pmatrix} 4 & 1 \\\\ -1 & 0 \\end{pmatrix} \\begin{pmatrix} 1 & 2 \\\\ 0 & 3 \\end{pmatrix} = \\begin{pmatrix} 4(1)+1(0) & 4(2)+1(3) \\\\ -1(1)+0(0) & -1(2)+0(3) \\end{pmatrix} = \\begin{pmatrix} 4 & 11 \\\\ -1 & -2 \\end{pmatrix}$.",
+          "c) Kết luận:",
+          "So sánh hai kết quả, ta thấy $A \\cdot B \\neq B \\cdot A$.",
+          "Do đó, phép nhân ma trận nói chung không có tính giao hoán."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận tam giác trên $A = \\begin{pmatrix} 2 & 5 & -1 \\\\ 0 & 3 & 4 \\\\ 0 & 0 & -4 \\end{pmatrix}$. a) Tính $\\det(A)$. b) Tìm ma trận chuyển vị $A^T$ và cho biết đó là loại ma trận gì.",
+      "answer": {
+        "steps": [
+          "a) Tính định thức của A:",
+          "Đối với một ma trận tam giác (trên hoặc dưới), định thức của nó bằng tích các phần tử trên đường chéo chính.",
+          "$\\det(A) = 2 \\times 3 \\times (-4) = -24$.",
+          "b) Tìm ma trận chuyển vị $A^T$:",
+          "Ma trận chuyển vị được tạo bằng cách hoán đổi hàng và cột: $A^T = \\begin{pmatrix} 2 & 0 & 0 \\\\ 5 & 3 & 0 \\\\ -1 & 4 & -4 \\end{pmatrix}$.",
+          "Ma trận $A^T$ có tất cả các phần tử phía trên đường chéo chính bằng 0, do đó nó là một ma trận tam giác dưới."
+        ]
+      }
+    },
+    {
+      "question": "Tìm giá trị của tham số $m$ để ma trận $A = \\begin{pmatrix} 1 & 0 & -2 \\\\ 3 & 1 & 4 \\\\ m & 2 & -1 \\end{pmatrix}$ không khả nghịch.",
+      "answer": {
+        "steps": [
+          "Một ma trận vuông không khả nghịch (hay suy biến) khi và chỉ khi định thức của nó bằng 0. Ta cần giải phương trình $\\det(A) = 0$.",
+          "Ta tính định thức của A bằng cách khai triển theo hàng 1:",
+          "$\\det(A) = 1 \\cdot \\begin{vmatrix} 1 & 4 \\\\ 2 & -1 \\end{vmatrix} - 0 \\cdot \\begin{vmatrix} 3 & 4 \\\\ m & -1 \\end{vmatrix} + (-2) \\cdot \\begin{vmatrix} 3 & 1 \\\\ m & 2 \\end{vmatrix}$.",
+          "$\\det(A) = 1 \\cdot (1(-1) - 4(2)) - 0 - 2 \\cdot (3(2) - 1(m))$.",
+          "$\\det(A) = (-1 - 8) - 2(6 - m) = -9 - 12 + 2m = 2m - 21$.",
+          "Để ma trận A không khả nghịch, ta đặt $\\det(A) = 0$:",
+          "$2m - 21 = 0 \\Rightarrow 2m = 21$.",
+          "Vậy, $m = \\frac{21}{2}$."
+        ]
+      }
+    },
+    {
+      "question": "Vết của một ma trận vuông, ký hiệu là $tr(A)$, là tổng các phần tử trên đường chéo chính. Cho ma trận $A = \\begin{pmatrix} 1 & -2 & 3 \\\\ 4 & 5 & -6 \\\\ 7 & 8 & 9 \\end{pmatrix}$. a) Tính $tr(A)$. b) Cho $B = 2A$, tính $tr(B)$ và so sánh với $2 \\cdot tr(A)$.",
+      "answer": {
+        "steps": [
+          "a) Tính $tr(A)$:",
+          "Các phần tử trên đường chéo chính của A là 1, 5, và 9.",
+          "$tr(A) = 1 + 5 + 9 = 15$.",
+          "b) Tính $tr(B)$ và so sánh:",
+          "Đầu tiên, tính ma trận $B = 2A = 2 \\begin{pmatrix} 1 & -2 & 3 \\\\ 4 & 5 & -6 \\\\ 7 & 8 & 9 \\end{pmatrix} = \\begin{pmatrix} 2 & -4 & 6 \\\\ 8 & 10 & -12 \\\\ 14 & 16 & 18 \\end{pmatrix}$.",
+          "Vết của B là tổng các phần tử trên đường chéo chính của nó: $tr(B) = 2 + 10 + 18 = 30$.",
+          "So sánh với $2 \\cdot tr(A)$: $2 \\cdot tr(A) = 2 \\cdot 15 = 30$.",
+          "Kết luận: $tr(2A) = 2 \\cdot tr(A)$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{pmatrix} 2 & 1 \\\\ 1 & 3 \\end{pmatrix}$ và ma trận đơn vị $I = \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$. Tính giá trị của đa thức $f(A) = A^2 - 5A + 5I$.",
+      "answer": {
+        "steps": [
+          "Bước 1: Tính $A^2$.",
+          "$A^2 = A \\cdot A = \\begin{pmatrix} 2 & 1 \\\\ 1 & 3 \\end{pmatrix} \\begin{pmatrix} 2 & 1 \\\\ 1 & 3 \\end{pmatrix} = \\begin{pmatrix} 5 & 5 \\\\ 5 & 10 \\end{pmatrix}$.",
+          "Bước 2: Tính $5A$.",
+          "$5A = 5 \\begin{pmatrix} 2 & 1 \\\\ 1 & 3 \\end{pmatrix} = \\begin{pmatrix} 10 & 5 \\\\ 5 & 15 \\end{pmatrix}$.",
+          "Bước 3: Tính $5I$.",
+          "$5I = 5 \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix} = \\begin{pmatrix} 5 & 0 \\\\ 0 & 5 \\end{pmatrix}$.",
+          "Bước 4: Tính $f(A) = A^2 - 5A + 5I$.",
+          "$f(A) = \\begin{pmatrix} 5 & 5 \\\\ 5 & 10 \\end{pmatrix} - \\begin{pmatrix} 10 & 5 \\\\ 5 & 15 \\end{pmatrix} + \\begin{pmatrix} 5 & 0 \\\\ 0 & 5 \\end{pmatrix} = \\begin{pmatrix} 5-10+5 & 5-5+0 \\\\ 5-5+0 & 10-15+5 \\end{pmatrix}$.",
+          "Kết quả là ma trận không: $f(A) = \\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận chéo $D = \\begin{pmatrix} 2 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 3 \\end{pmatrix}$. Tính $D^3$.",
+      "answer": {
+        "steps": [
+          "Đối với một ma trận chéo, lũy thừa bậc n của nó được tính bằng cách lấy lũy thừa bậc n của từng phần tử trên đường chéo chính.",
+          "Áp dụng quy tắc này cho $D^3$:",
+          "$D^3 = \\begin{pmatrix} 2^3 & 0 & 0 \\\\ 0 & (-1)^3 & 0 \\\\ 0 & 0 & 3^3 \\end{pmatrix}$.",
+          "Thực hiện các phép tính lũy thừa:",
+          "$D^3 = \\begin{pmatrix} 8 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 27 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $A = \\begin{pmatrix} 1 & 3 \\\\ 2 & 0 \\end{pmatrix}$ và $B = \\begin{pmatrix} 1 & -1 & 2 \\\\ 0 & 4 & 1 \\end{pmatrix}$. Hãy tính $(AB)^T$ và $B^T A^T$ để xác minh tính chất $(AB)^T = B^T A^T$.",
+      "answer": {
+        "steps": [
+          "Bước 1: Tính tích $AB$.",
+          "$AB = \\begin{pmatrix} 1 & 3 \\\\ 2 & 0 \\end{pmatrix} \\begin{pmatrix} 1 & -1 & 2 \\\\ 0 & 4 & 1 \\end{pmatrix} = \\begin{pmatrix} 1 & 11 & 5 \\\\ 2 & -2 & 4 \\end{pmatrix}$.",
+          "Bước 2: Tìm ma trận chuyển vị của tích, $(AB)^T$.",
+          "$(AB)^T = \\begin{pmatrix} 1 & 2 \\\\ 11 & -2 \\\\ 5 & 4 \\end{pmatrix}$.",
+          "Bước 3: Tìm các ma trận chuyển vị $A^T$ và $B^T$.",
+          "$A^T = \\begin{pmatrix} 1 & 2 \\\\ 3 & 0 \\end{pmatrix}$ và $B^T = \\begin{pmatrix} 1 & 0 \\\\ -1 & 4 \\\\ 2 & 1 \\end{pmatrix}$.",
+          "Bước 4: Tính tích $B^T A^T$.",
+          "$B^T A^T = \\begin{pmatrix} 1 & 0 \\\\ -1 & 4 \\\\ 2 & 1 \\end{pmatrix} \\begin{pmatrix} 1 & 2 \\\\ 3 & 0 \\end{pmatrix} = \\begin{pmatrix} 1 & 2 \\\\ 11 & -2 \\\\ 5 & 4 \\end{pmatrix}$.",
+          "Kết luận: So sánh kết quả từ Bước 2 và Bước 4, ta thấy $(AB)^T = B^T A^T$. Tính chất đã được xác minh."
+        ]
+      }
+    },
+    {
+      "question": "Biện luận theo tham số $m$ số nghiệm của hệ phương trình: $\\begin{cases} x + y + z = 1 \\\\ x + 2y + 3z = 2 \\\\ x + 3y + mz = 3 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Lập ma trận hệ số A và tính định thức của nó: $A = \\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 2 & 3 \\\\ 1 & 3 & m \\end{pmatrix}$.",
+          "$\\det(A) = 1(2m-9) - 1(m-3) + 1(3-2) = 2m - 9 - m + 3 + 1 = m - 5$.",
+          "Trường hợp 1: Hệ có nghiệm duy nhất khi $\\det(A) \\neq 0$.",
+          "$m - 5 \\neq 0 \\Leftrightarrow m \\neq 5$.",
+          "Trường hợp 2: Xét khi $\\det(A) = 0 \\Leftrightarrow m = 5$. Ta dùng phép khử Gauss cho ma trận mở rộng.",
+          "Ma trận mở rộng khi $m=5$: $[A|B] = \\begin{pmatrix} 1 & 1 & 1 & | & 1 \\\\ 1 & 2 & 3 & | & 2 \\\\ 1 & 3 & 5 & | & 3 \\end{pmatrix}$.",
+          "Thực hiện $h_2 \\rightarrow h_2 - h_1$ và $h_3 \\rightarrow h_3 - h_1$: $\\begin{pmatrix} 1 & 1 & 1 & | & 1 \\\\ 0 & 1 & 2 & | & 1 \\\\ 0 & 2 & 4 & | & 2 \\end{pmatrix}$.",
+          "Thực hiện $h_3 \\rightarrow h_3 - 2h_2$: $\\begin{pmatrix} 1 & 1 & 1 & | & 1 \\\\ 0 & 1 & 2 & | & 1 \\\\ 0 & 0 & 0 & | & 0 \\end{pmatrix}$.",
+          "Vì hàng cuối cùng là $[0 \\ 0 \\ 0 \\ | \\ 0]$, hệ có vô số nghiệm khi $m = 5$.",
+          "Kết luận: Nếu $m \\neq 5$, hệ có nghiệm duy nhất. Nếu $m = 5$, hệ có vô số nghiệm."
+        ]
+      }
+    },
+    {
+      "question": "Tìm ma trận $X$ biết $A = \\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$, $B = \\begin{pmatrix} 1 & 0 \\\\ 1 & 1 \\end{pmatrix}$ và $C = \\begin{pmatrix} 3 & 4 \\\\ 1 & 2 \\end{pmatrix}$ thỏa mãn $AXB = C$.",
+      "answer": {
+        "steps": [
+          "Từ phương trình $AXB = C$, ta có thể tìm X bằng công thức $X = A^{-1}CB^{-1}$.",
+          "Bước 1: Tìm $A^{-1}$. Ta có $\\det(A) = 1$. Vậy $A^{-1} = \\frac{1}{1} \\begin{pmatrix} 1 & -2 \\\\ 0 & 1 \\end{pmatrix} = \\begin{pmatrix} 1 & -2 \\\\ 0 & 1 \\end{pmatrix}$.",
+          "Bước 2: Tìm $B^{-1}$. Ta có $\\det(B) = 1$. Vậy $B^{-1} = \\frac{1}{1} \\begin{pmatrix} 1 & 0 \\\\ -1 & 1 \\end{pmatrix} = \\begin{pmatrix} 1 & 0 \\\\ -1 & 1 \\end{pmatrix}$.",
+          "Bước 3: Tính tích trung gian $A^{-1}C$.",
+          "$A^{-1}C = \\begin{pmatrix} 1 & -2 \\\\ 0 & 1 \\end{pmatrix} \\begin{pmatrix} 3 & 4 \\\\ 1 & 2 \\end{pmatrix} = \\begin{pmatrix} 1 & 0 \\\\ 1 & 2 \\end{pmatrix}$.",
+          "Bước 4: Tính $X = (A^{-1}C)B^{-1}$.",
+          "$X = \\begin{pmatrix} 1 & 0 \\\\ 1 & 2 \\end{pmatrix} \\begin{pmatrix} 1 & 0 \\\\ -1 & 1 \\end{pmatrix} = \\begin{pmatrix} 1 & 0 \\\\ -1 & 2 \\end{pmatrix}$.",
+          "Vậy ma trận cần tìm là $X = \\begin{pmatrix} 1 & 0 \\\\ -1 & 2 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Một ma trận vuông A được gọi là trực giao nếu $A^T A = I$. Kiểm tra xem ma trận $A = \\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{pmatrix}$ có phải là ma trận trực giao không.",
+      "answer": {
+        "steps": [
+          "Bước 1: Tìm ma trận chuyển vị $A^T$.",
+          "$A^T = \\begin{pmatrix} \\cos\\theta & \\sin\\theta \\\\ -\\sin\\theta & \\cos\\theta \\end{pmatrix}$.",
+          "Bước 2: Tính tích $A^T A$.",
+          "$A^T A = \\begin{pmatrix} \\cos\\theta & \\sin\\theta \\\\ -\\sin\\theta & \\cos\\theta \\end{pmatrix} \\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{pmatrix}$.",
+          "Thực hiện phép nhân: $A^T A = \\begin{pmatrix} \\cos^2\\theta + \\sin^2\\theta & -\\cos\\theta\\sin\\theta + \\sin\\theta\\cos\\theta \\\\ -\\sin\\theta\\cos\\theta + \\cos\\theta\\sin\\theta & \\sin^2\\theta + \\cos^2\\theta \\end{pmatrix}$.",
+          "Bước 3: Sử dụng hằng đẳng thức lượng giác cơ bản $\\sin^2\\theta + \\cos^2\\theta = 1$ để rút gọn.",
+          "$A^T A = \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix} = I$.",
+          "Kết luận: Vì $A^T A$ bằng ma trận đơn vị $I$, ma trận A là một ma trận trực giao."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & 1 & 4 \\\\ 5 & 6 & 0 \\end{pmatrix}$. Sử dụng ma trận phụ hợp để tìm ma trận nghịch đảo $A^{-1}$.",
+      "answer": {
+        "steps": [
+          "Ta sử dụng công thức $A^{-1} = \\frac{1}{\\det(A)} \\text{adj}(A)$, với $\\text{adj}(A)$ là ma trận phụ hợp, tức chuyển vị của ma trận các phần phụ đại số ($C_{ij}$).",
+          "Bước 1: Tính các phần phụ đại số $C_{ij} = (-1)^{i+j}M_{ij}$.",
+          "$C_{11} = \\begin{vmatrix} 1 & 4 \\\\ 6 & 0 \\end{vmatrix} = -24$; $C_{12} = -\\begin{vmatrix} 0 & 4 \\\\ 5 & 0 \\end{vmatrix} = 20$; $C_{13} = \\begin{vmatrix} 0 & 1 \\\\ 5 & 6 \\end{vmatrix} = -5$.",
+          "$C_{21} = -\\begin{vmatrix} 2 & 3 \\\\ 6 & 0 \\end{vmatrix} = 18$; $C_{22} = \\begin{vmatrix} 1 & 3 \\\\ 5 & 0 \\end{vmatrix} = -15$; $C_{23} = -\\begin{vmatrix} 1 & 2 \\\\ 5 & 6 \\end{vmatrix} = 4$.",
+          "$C_{31} = \\begin{vmatrix} 2 & 3 \\\\ 1 & 4 \\end{vmatrix} = 5$; $C_{32} = -\\begin{vmatrix} 1 & 3 \\\\ 0 & 4 \\end{vmatrix} = -4$; $C_{33} = \\begin{vmatrix} 1 & 2 \\\\ 0 & 1 \\end{vmatrix} = 1$.",
+          "Bước 2: Lập ma trận các phần phụ đại số (Cofactor Matrix) và ma trận phụ hợp (Adjugate Matrix).",
+          "Ma trận các phần phụ đại số: $C = \\begin{pmatrix} -24 & 20 & -5 \\\\ 18 & -15 & 4 \\\\ 5 & -4 & 1 \\end{pmatrix}$.",
+          "Ma trận phụ hợp: $\\text{adj}(A) = C^T = \\begin{pmatrix} -24 & 18 & 5 \\\\ 20 & -15 & -4 \\\\ -5 & 4 & 1 \\end{pmatrix}$.",
+          "Bước 3: Tính định thức và ma trận nghịch đảo.",
+          "Từ bài trước, ta có $\\det(A) = 1$.",
+          "$A^{-1} = \\frac{1}{1} \\text{adj}(A) = \\begin{pmatrix} -24 & 18 & 5 \\\\ 20 & -15 & -4 \\\\ -5 & 4 & 1 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{pmatrix} 1 & -2 & 0 & 4 \\\\ 2 & -3 & 1 & 6 \\\\ -1 & 4 & -2 & -9 \\end{pmatrix}$. Tìm một cơ sở cho không gian cột (Col(A)) và một cơ sở cho không gian null (Nul(A)).",
+      "answer": {
+        "steps": [
+          "Bước 1: Đưa A về dạng bậc thang rút gọn (RREF).",
+          "Sau các phép biến đổi sơ cấp trên hàng, ta thu được dạng RREF của A là: $\\begin{pmatrix} 1 & 0 & 0 & -1/2 \\\\ 0 & 1 & 0 & -9/4 \\\\ 0 & 0 & 1 & 1/4 \\end{pmatrix}$.",
+          "Bước 2: Tìm cơ sở cho không gian cột - Col(A).",
+          "Các cột cơ sở (pivot columns) là các cột 1, 2, và 3. Cơ sở của Col(A) là các cột tương ứng trong ma trận A ban đầu.",
+          "Cơ sở cho Col(A) là: $\\left\\{ \\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}, \\begin{pmatrix} -2 \\\\ -3 \\\\ 4 \\end{pmatrix}, \\begin{pmatrix} 0 \\\\ 1 \\\\ -2 \\end{pmatrix} \\right\\}$.",
+          "Bước 3: Tìm cơ sở cho không gian null - Nul(A).",
+          "Ta giải hệ $A\\vec{x} = \\vec{0}$ từ dạng RREF: $\\begin{cases} x_1 - \\frac{1}{2}x_4 = 0 \\\\ x_2 - \\frac{9}{4}x_4 = 0 \\\\ x_3 + \\frac{1}{4}x_4 = 0 \\end{cases}$.",
+          "Biến tự do là $x_4$. Ta có: $x_1 = \\frac{1}{2}x_4$, $x_2 = \\frac{9}{4}x_4$, $x_3 = -\\frac{1}{4}x_4$.",
+          "Nghiệm tổng quát có dạng: $\\vec{x} = x_4 \\begin{pmatrix} 1/2 \\\\ 9/4 \\\\ -1/4 \\\\ 1 \\end{pmatrix}$.",
+          "Một cơ sở cho Nul(A) là vector $\\left\\{ \\begin{pmatrix} 1/2 \\\\ 9/4 \\\\ -1/4 \\\\ 1 \\end{pmatrix} \\right\\}$, hoặc dạng nguyên là $\\left\\{ \\begin{pmatrix} 2 \\\\ 9 \\\\ -1 \\\\ 4 \\end{pmatrix} \\right\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm tất cả các trị riêng và các vector riêng tương ứng của ma trận $A = \\begin{pmatrix} 4 & 0 & 1 \\\\ -2 & 1 & 0 \\\\ -2 & 0 & 1 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Bước 1: Tìm trị riêng bằng cách giải phương trình đặc trưng $\\det(A - \\lambda I) = 0$.",
+          "$\\det \\begin{pmatrix} 4-\\lambda & 0 & 1 \\\\ -2 & 1-\\lambda & 0 \\\\ -2 & 0 & 1-\\lambda \\end{pmatrix} = (1-\\lambda) \\begin{vmatrix} 4-\\lambda & 1 \\\\ -2 & 1-\\lambda \\end{vmatrix} = (1-\\lambda)((4-\\lambda)(1-\\lambda) + 2) = 0$.",
+          "$(1-\\lambda)(\\lambda^2 - 5\\lambda + 6) = 0 \\Rightarrow (1-\\lambda)(\\lambda-2)(\\lambda-3) = 0$.",
+          "Vậy, A có 3 trị riêng là $\\lambda_1 = 1$, $\\lambda_2 = 2$, $\\lambda_3 = 3$.",
+          "Bước 2: Tìm các vector riêng tương ứng.",
+          "Với $\\lambda_1 = 1$, giải $(A-I)\\vec{v}=\\vec{0}$. Ta có $x=0, z=0$, y là biến tự do. Vector riêng là $\\vec{v_1} = \\begin{pmatrix} 0 \\\\ 1 \\\\ 0 \\end{pmatrix}$.",
+          "Với $\\lambda_2 = 2$, giải $(A-2I)\\vec{v}=\\vec{0}$. Ta có $z=-2x, y=-2x$. Vector riêng là $\\vec{v_2} = \\begin{pmatrix} 1 \\\\ -2 \\\\ -2 \\end{pmatrix}$.",
+          "Với $\\lambda_3 = 3$, giải $(A-3I)\\vec{v}=\\vec{0}$. Ta có $z=-x, y=-x$. Vector riêng là $\\vec{v_3} = \\begin{pmatrix} 1 \\\\ -1 \\\\ -1 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{pmatrix} 1 & 3 & 3 \\\\ -3 & -5 & -3 \\\\ 3 & 3 & 1 \\end{pmatrix}$. Hãy tìm ma trận P khả nghịch và ma trận chéo D sao cho $A = PDP^{-1}$.",
+      "answer": {
+        "steps": [
+          "Để chéo hóa A, ta cần tìm các trị riêng và vector riêng của nó.",
+          "Bước 1: Tìm trị riêng. Giải phương trình đặc trưng $\\det(A-\\lambda I) = 0$.",
+          "Đa thức đặc trưng là $(1-\\lambda)(2+\\lambda)^2 = 0$. Suy ra A có các trị riêng là $\\lambda_1 = 1$ (bội 1) và $\\lambda_2 = -2$ (bội 2).",
+          "Bước 2: Tìm các vector riêng.",
+          "Với $\\lambda_1 = 1$, giải $(A-I)\\vec{v} = \\vec{0}$ ta được một vector riêng là $\\vec{v_1} = \\begin{pmatrix} 1 \\\\ -1 \\\\ 1 \\end{pmatrix}$.",
+          "Với $\\lambda_2 = -2$, giải $(A+2I)\\vec{v} = \\vec{0}$ ta được phương trình $x+y+z=0$. Không gian null có số chiều là 2. Ta chọn hai vector riêng độc lập tuyến tính, ví dụ: $\\vec{v_2} = \\begin{pmatrix} -1 \\\\ 1 \\\\ 0 \\end{pmatrix}$ và $\\vec{v_3} = \\begin{pmatrix} -1 \\\\ 0 \\\\ 1 \\end{pmatrix}$.",
+          "Bước 3: Lập các ma trận P và D.",
+          "Ma trận D là ma trận chéo chứa các trị riêng: $D = \\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & -2 & 0 \\\\ 0 & 0 & -2 \\end{pmatrix}$.",
+          "Ma trận P có các cột là các vector riêng tương ứng: $P = \\begin{pmatrix} 1 & -1 & -1 \\\\ -1 & 1 & 0 \\\\ 1 & 0 & 1 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{pmatrix} 3 & -2 \\\\ 1 & 0 \\end{pmatrix}$. a) Tìm đa thức đặc trưng. b) Chứng minh A thỏa mãn định lý Cayley-Hamilton. c) Dùng kết quả đó để tính $A^{-1}$.",
+      "answer": {
+        "steps": [
+          "a) Tìm đa thức đặc trưng $p(\\lambda)$:",
+          "$p(\\lambda) = \\det(A - \\lambda I) = \\begin{vmatrix} 3-\\lambda & -2 \\\\ 1 & -\\lambda \\end{vmatrix} = (3-\\lambda)(-\\lambda) - (-2)(1) = \\lambda^2 - 3\\lambda + 2$.",
+          "b) Chứng minh định lý Cayley-Hamilton ($p(A) = 0$):",
+          "Ta cần chứng minh $A^2 - 3A + 2I = 0$.",
+          "Tính $A^2 = \\begin{pmatrix} 3 & -2 \\\\ 1 & 0 \\end{pmatrix}\\begin{pmatrix} 3 & -2 \\\\ 1 & 0 \\end{pmatrix} = \\begin{pmatrix} 7 & -6 \\\\ 3 & -2 \\end{pmatrix}$.",
+          "Thay vào biểu thức: $A^2 - 3A + 2I = \\begin{pmatrix} 7 & -6 \\\\ 3 & -2 \\end{pmatrix} - 3\\begin{pmatrix} 3 & -2 \\\\ 1 & 0 \\end{pmatrix} + 2\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix} = \\begin{pmatrix} 7-9+2 & -6+6+0 \\\\ 3-3+0 & -2-0+2 \\end{pmatrix} = \\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$. Định lý đã được chứng minh.",
+          "c) Tính $A^{-1}$:",
+          "Từ $A^2 - 3A + 2I = 0$, ta biến đổi: $2I = 3A - A^2$.",
+          "Nhân cả hai vế với $A^{-1}$: $2IA^{-1} = 3AA^{-1} - A^2A^{-1} \\Rightarrow 2A^{-1} = 3I - A$.",
+          "$A^{-1} = \\frac{1}{2}(3I - A) = \\frac{1}{2} \\left( \\begin{pmatrix} 3 & 0 \\\\ 0 & 3 \\end{pmatrix} - \\begin{pmatrix} 3 & -2 \\\\ 1 & 0 \\end{pmatrix} \\right) = \\frac{1}{2}\\begin{pmatrix} 0 & 2 \\\\ -1 & 3 \\end{pmatrix} = \\begin{pmatrix} 0 & 1 \\\\ -1/2 & 3/2 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm ma trận T trong không gian $\\mathbb{R}^2$ biểu diễn cho phép biến đổi tuyến tính thực hiện lần lượt 2 thao tác: 1. Đối xứng qua trục y. 2. Quay một góc $90^\\circ$ ngược chiều kim đồng hồ.",
+      "answer": {
+        "steps": [
+          "Ma trận của phép biến đổi hợp thành $T$ là tích của các ma trận thành phần: $T = T_2 T_1$, trong đó $T_1$ là phép biến đổi đầu tiên và $T_2$ là phép biến đổi thứ hai.",
+          "Bước 1: Tìm ma trận $T_1$ của phép đối xứng qua trục y.",
+          "Ảnh của các vector cơ sở chuẩn là: $T_1(\\vec{e_1}) = \\begin{pmatrix} -1 \\\\ 0 \\end{pmatrix}$ và $T_1(\\vec{e_2}) = \\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}$.",
+          "Vậy, $T_1 = \\begin{pmatrix} -1 & 0 \\\\ 0 & 1 \\end{pmatrix}$.",
+          "Bước 2: Tìm ma trận $T_2$ của phép quay $90^\\circ$ ngược chiều kim đồng hồ.",
+          "Ảnh của các vector cơ sở chuẩn là: $T_2(\\vec{e_1}) = \\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}$ và $T_2(\\vec{e_2}) = \\begin{pmatrix} -1 \\\\ 0 \\end{pmatrix}$.",
+          "Vậy, $T_2 = \\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix}$.",
+          "Bước 3: Tính ma trận tổng hợp $T = T_2 T_1$.",
+          "$T = \\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix} \\begin{pmatrix} -1 & 0 \\\\ 0 & 1 \\end{pmatrix} = \\begin{pmatrix} 0 & -1 \\\\ -1 & 0 \\end{pmatrix}$.",
+          "Ma trận của phép biến đổi hợp thành là $T = \\begin{pmatrix} 0 & -1 \\\\ -1 & 0 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Trong không gian $\\mathbb{R}^2$, cho cơ sở chuẩn $E$ và một cơ sở mới $B = \\{\\vec{b_1}, \\vec{b_2}\\}$ với $\\vec{b_1} = \\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$ và $\\vec{b_2} = \\begin{pmatrix} 2 \\\\ 1 \\end{pmatrix}$. Tìm ma trận chuyển cơ sở $P_{E \\leftarrow B}$ và dùng nó để tìm tọa độ trong cơ sở $E$ của vector có tọa độ $[\\vec{x}]_B = \\begin{pmatrix} 3 \\\\ -1 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "a) Tìm ma trận chuyển cơ sở $P_{E \\leftarrow B}$:",
+          "Ma trận chuyển cơ sở từ một cơ sở bất kỳ sang cơ sở chuẩn có các cột là các vector của cơ sở đó.",
+          "Vậy, $P_{E \\leftarrow B} = [\\vec{b_1} \\ | \\ \\vec{b_2}] = \\begin{pmatrix} 1 & 2 \\\\ 1 & 1 \\end{pmatrix}$.",
+          "b) Tìm tọa độ của $\\vec{x}$ trong cơ sở E:",
+          "Sử dụng công thức chuyển đổi tọa độ: $[\\vec{x}]_E = P_{E \\leftarrow B} [\\vec{x}]_B$.",
+          "$[\\vec{x}]_E = \\begin{pmatrix} 1 & 2 \\\\ 1 & 1 \\end{pmatrix} \\begin{pmatrix} 3 \\\\ -1 \\end{pmatrix} = \\begin{pmatrix} 1(3)+2(-1) \\\\ 1(3)+1(-1) \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}$.",
+          "Tọa độ của vector $\\vec{x}$ trong cơ sở chuẩn E là $\\begin{pmatrix} 1 \\\\ 2 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Một ma trận vuông A được gọi là lũy linh nếu tồn tại số nguyên dương $k$ sao cho $A^k = 0$. Chứng minh rằng nếu A là một ma trận vuông lũy linh thì ma trận $(I - A)$ khả nghịch.",
+      "answer": {
+        "steps": [
+          "Để chứng minh $(I - A)$ khả nghịch, ta cần chỉ ra rằng tồn tại một ma trận B sao cho $B(I - A) = I$.",
+          "Xét chuỗi tổng hữu hạn sau: $B = I + A + A^2 + \\dots + A^{k-1}$.",
+          "Nhân $B$ với $(I - A)$: $(I - A)B = (I - A)(I + A + A^2 + \\dots + A^{k-1})$.",
+          "Khai triển vế phải: $(I + A + A^2 + \\dots + A^{k-1}) - (A + A^2 + A^3 + \\dots + A^k)$.",
+          "Các số hạng ở giữa sẽ triệt tiêu lẫn nhau, chỉ còn lại số hạng đầu và cuối: $I - A^k$.",
+          "Theo giả thiết, A là ma trận lũy linh, nên tồn tại $k$ sao cho $A^k = 0$.",
+          "Do đó, $(I - A)B = I - 0 = I$.",
+          "Kết luận: Ma trận $(I-A)$ có ma trận nghịch đảo là $B = I + A + \\dots + A^{k-1}$, vậy $(I - A)$ khả nghịch."
+        ]
+      }
+    },
+    {
+      "question": "Tìm điều kiện của $a$ và $b$ để hệ phương trình sau có nghiệm duy nhất, vô số nghiệm, hoặc vô nghiệm: $\\begin{cases} x + y + z = 1 \\\\ x + ay + z = 2 \\\\ 2x + 2y + (a^2-1)z = b \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Lập ma trận mở rộng và thực hiện phép khử Gauss:",
+          "$[A|B] = \\begin{pmatrix} 1 & 1 & 1 & | & 1 \\\\ 1 & a & 1 & | & 2 \\\\ 2 & 2 & a^2-1 & | & b \\end{pmatrix} \\xrightarrow{h_2-h_1, h_3-2h_1} \\begin{pmatrix} 1 & 1 & 1 & | & 1 \\\\ 0 & a-1 & 0 & | & 1 \\\\ 0 & 0 & a^2-3 & | & b-2 \\end{pmatrix}$.",
+          "Trường hợp 1: Hệ có nghiệm duy nhất. Điều này xảy ra khi các phần tử trên đường chéo của ma trận hệ số khác 0.",
+          "$\\begin{cases} a-1 \\neq 0 \\\\ a^2-3 \\neq 0 \\end{cases} \\Rightarrow \\begin{cases} a \\neq 1 \\\\ a \\neq \\pm\\sqrt{3} \\end{cases}$.",
+          "Trường hợp 2: Hệ vô nghiệm. Điều này xảy ra khi có một hàng dạng $[0 \\ 0 \\ 0 \\ | \\ c]$ với $c \\neq 0$.",
+          "Nếu $a=1$, hàng thứ hai trở thành $[0 \\ 0 \\ 0 \\ | \\ 1]$, hệ vô nghiệm.",
+          "Nếu $a = \\pm\\sqrt{3}$ (suy ra $a^2-3=0$) và $b-2 \\neq 0$ (tức $b \\neq 2$), hàng thứ ba trở thành $[0 \\ 0 \\ 0 \\ | \\ \\text{khác 0}]$, hệ vô nghiệm.",
+          "Trường hợp 3: Hệ có vô số nghiệm. Điều này xảy ra khi có một hàng không và không có mâu thuẫn.",
+          "Nếu $a = \\pm\\sqrt{3}$ và $b-2 = 0$ (tức $b=2$), hàng cuối cùng là $[0 \\ 0 \\ 0 \\ | \\ 0]$, hệ có vô số nghiệm.",
+          "Kết luận: Nghiệm duy nhất khi $a \\neq 1$ và $a \\neq \\pm\\sqrt{3}$. Vô nghiệm khi $a=1$ hoặc ($a=\\pm\\sqrt{3}$ và $b \\neq 2$). Vô số nghiệm khi $a=\\pm\\sqrt{3}$ và $b=2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho các ma trận khối $M = \\begin{pmatrix} A & B \\\\ 0 & C \\end{pmatrix}$ và $N = \\begin{pmatrix} D & E \\\\ 0 & F \\end{pmatrix}$ với $A=I, B=\\begin{pmatrix} 2&3\\\\4&5 \\end{pmatrix}, C=\\begin{pmatrix} 6&0\\\\0&7 \\end{pmatrix}, D=\\begin{pmatrix} 1&1\\\\1&1 \\end{pmatrix}, E=0, F=I$. Tính tích $M \\cdot N$.",
+      "answer": {
+        "steps": [
+          "Áp dụng công thức nhân ma trận khối: $M \\cdot N = \\begin{pmatrix} A & B \\\\ 0 & C \\end{pmatrix} \\begin{pmatrix} D & E \\\\ 0 & F \\end{pmatrix} = \\begin{pmatrix} AD+B0 & AE+BF \\\\ 0D+C0 & 0E+CF \\end{pmatrix} = \\begin{pmatrix} AD & AE+BF \\\\ 0 & CF \\end{pmatrix}$.",
+          "Bước 1: Tính các tích con.",
+          "$AD = I \\cdot D = D = \\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix}$.",
+          "$AE = A \\cdot 0 = 0 = \\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$.",
+          "$BF = B \\cdot I = B = \\begin{pmatrix} 2 & 3 \\\\ 4 & 5 \\end{pmatrix}$.",
+          "$CF = \\begin{pmatrix} 6 & 0 \\\\ 0 & 7 \\end{pmatrix} \\cdot I = \\begin{pmatrix} 6 & 0 \\\\ 0 & 7 \\end{pmatrix}$.",
+          "Bước 2: Tính tổng $AE + BF = 0 + B = B = \\begin{pmatrix} 2 & 3 \\\\ 4 & 5 \\end{pmatrix}$.",
+          "Bước 3: Ghép các khối kết quả lại.",
+          "$M \\cdot N = \\begin{pmatrix} AD & AE+BF \\\\ 0 & CF \\end{pmatrix} = \\begin{pmatrix} \\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix} & \\begin{pmatrix} 2 & 3 \\\\ 4 & 5 \\end{pmatrix} \\\\ \\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix} & \\begin{pmatrix} 6 & 0 \\\\ 0 & 7 \\end{pmatrix} \\end{pmatrix}$.",
+          "Kết quả cuối cùng là ma trận 4x4: $M \\cdot N = \\begin{pmatrix} 1 & 1 & 2 & 3 \\\\ 1 & 1 & 4 & 5 \\\\ 0 & 0 & 6 & 0 \\\\ 0 & 0 & 0 & 7 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{pmatrix} 4 & 1 \\\\ 2 & 3 \\end{pmatrix}$. Sử dụng phương pháp chéo hóa, hãy tính $A^{10}$.",
+      "answer": {
+        "steps": [
+          "Để tính $A^{10}$ bằng chéo hóa, ta sử dụng công thức $A^n = PD^n P^{-1}$, trong đó D là ma trận chéo các trị riêng và P là ma trận các vector riêng tương ứng.",
+          "Bước 1: Tìm trị riêng và vector riêng.",
+          "Trị riêng của A là $\\lambda_1 = 2$ và $\\lambda_2 = 5$.",
+          "Vector riêng tương ứng là $\\vec{v_1} = \\begin{pmatrix} 1 \\\\ -2 \\end{pmatrix}$ và $\\vec{v_2} = \\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$.",
+          "Bước 2: Lập các ma trận D, P và tìm $P^{-1}$.",
+          "$D = \\begin{pmatrix} 2 & 0 \\\\ 0 & 5 \\end{pmatrix}$ và $P = \\begin{pmatrix} 1 & 1 \\\\ -2 & 1 \\end{pmatrix}$.",
+          "$\\det(P) = 1(1) - 1(-2) = 3$, do đó $P^{-1} = \\frac{1}{3} \\begin{pmatrix} 1 & -1 \\\\ 2 & 1 \\end{pmatrix}$.",
+          "Bước 3: Tính $A^{10} = PD^{10}P^{-1}$.",
+          "$D^{10} = \\begin{pmatrix} 2^{10} & 0 \\\\ 0 & 5^{10} \\end{pmatrix} = \\begin{pmatrix} 1024 & 0 \\\\ 0 & 9765625 \\end{pmatrix}$.",
+          "$A^{10} = \\frac{1}{3} \\begin{pmatrix} 1 & 1 \\\\ -2 & 1 \\end{pmatrix} \\begin{pmatrix} 1024 & 0 \\\\ 0 & 9765625 \\end{pmatrix} \\begin{pmatrix} 1 & -1 \\\\ 2 & 1 \\end{pmatrix} = \\frac{1}{3} \\begin{pmatrix} 1024 & 9765625 \\\\ -2048 & 9765625 \\end{pmatrix} \\begin{pmatrix} 1 & -1 \\\\ 2 & 1 \\end{pmatrix}$.",
+          "$A^{10} = \\frac{1}{3} \\begin{pmatrix} 19532274 & 9764601 \\\\ 19529202 & 9767673 \\end{pmatrix} = \\begin{pmatrix} 6510758 & 3254867 \\\\ 6509734 & 3255891 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm phân tích LU cho ma trận $A = \\begin{pmatrix} 2 & 4 & -2 \\\\ 4 & 9 & -3 \\\\ -2 & -3 & 7 \\end{pmatrix}$, trong đó L là ma trận tam giác dưới với đường chéo chính là 1, và U là ma trận tam giác trên.",
+      "answer": {
+        "steps": [
+          "Ta dùng phép khử Gauss trên A để tìm ma trận tam giác trên U. Các hệ số nhân sẽ tạo thành ma trận tam giác dưới L.",
+          "Bước 1: Khử cột đầu tiên của A.",
+          "Thực hiện $h_2 \\rightarrow h_2 - (2)h_1$ (hệ số $l_{21}=2$) và $h_3 \\rightarrow h_3 - (-1)h_1$ (hệ số $l_{31}=-1$). Ma trận trở thành: $\\begin{pmatrix} 2 & 4 & -2 \\\\ 0 & 1 & 1 \\\\ 0 & 1 & 5 \\end{pmatrix}$.",
+          "Bước 2: Khử cột thứ hai.",
+          "Thực hiện $h_3 \\rightarrow h_3 - (1)h_2$ (hệ số $l_{32}=1$). Ma trận U cuối cùng là: $U = \\begin{pmatrix} 2 & 4 & -2 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 4 \\end{pmatrix}$.",
+          "Bước 3: Lập ma trận L từ các hệ số nhân đã tìm.",
+          "$L = \\begin{pmatrix} 1 & 0 & 0 \\\\ l_{21} & 1 & 0 \\\\ l_{31} & l_{32} & 1 \\end{pmatrix} = \\begin{pmatrix} 1 & 0 & 0 \\\\ 2 & 1 & 0 \\\\ -1 & 1 & 1 \\end{pmatrix}$.",
+          "Vậy, phân tích LU của A là $L = \\begin{pmatrix} 1 & 0 & 0 \\\\ 2 & 1 & 0 \\\\ -1 & 1 & 1 \\end{pmatrix}$ và $U = \\begin{pmatrix} 2 & 4 & -2 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 4 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Trong không gian $\\mathbb{R}^3$, tìm ma trận P biểu diễn cho phép chiếu trực giao lên đường thẳng đi qua gốc tọa độ và song song với vector $\\vec{a} = \\begin{pmatrix} 1 \\\\ 2 \\\\ 2 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Công thức cho ma trận chiếu trực giao P lên đường thẳng xác định bởi vector $\\vec{a}$ là: $P = \\frac{\\vec{a}\\vec{a}^T}{\\vec{a}^T\\vec{a}}$.",
+          "Bước 1: Tính tử số, là tích ngoài $\\vec{a}\\vec{a}^T$.",
+          "$\\vec{a}\\vec{a}^T = \\begin{pmatrix} 1 \\\\ 2 \\\\ 2 \\end{pmatrix} \\begin{pmatrix} 1 & 2 & 2 \\end{pmatrix} = \\begin{pmatrix} 1 & 2 & 2 \\\\ 2 & 4 & 4 \\\\ 2 & 4 & 4 \\end{pmatrix}$.",
+          "Bước 2: Tính mẫu số, là tích trong $\\vec{a}^T\\vec{a}$ (bình phương độ dài của $\\vec{a}$).",
+          "$\\vec{a}^T\\vec{a} = 1^2 + 2^2 + 2^2 = 1 + 4 + 4 = 9$.",
+          "Bước 3: Lập ma trận P bằng cách chia tử số cho mẫu số.",
+          "$P = \\frac{1}{9} \\begin{pmatrix} 1 & 2 & 2 \\\\ 2 & 4 & 4 \\\\ 2 & 4 & 4 \\end{pmatrix} = \\begin{pmatrix} 1/9 & 2/9 & 2/9 \\\\ 2/9 & 4/9 & 4/9 \\\\ 2/9 & 4/9 & 4/9 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm phương trình đường thẳng $y = c + mx$ xấp xỉ tốt nhất (theo phương pháp bình phương tối thiểu) cho các điểm dữ liệu sau: $(0, 1), (1, 3), (2, 4), (3, 4)$.",
+      "answer": {
+        "steps": [
+          "Hệ phương trình tương ứng là $A\\vec{x} = \\vec{b}$, với $A = \\begin{pmatrix} 1 & 0 \\\\ 1 & 1 \\\\ 1 & 2 \\\\ 1 & 3 \\end{pmatrix}$, $\\vec{x} = \\begin{pmatrix} c \\\\ m \\end{pmatrix}$, và $\\vec{b} = \\begin{pmatrix} 1 \\\\ 3 \\\\ 4 \\\\ 4 \\end{pmatrix}$.",
+          "Hệ này vô nghiệm. Ta tìm nghiệm bình phương tối thiểu $\\hat{x}$ bằng cách giải phương trình $A^T A \\hat{x} = A^T \\vec{b}$.",
+          "Bước 1: Tính $A^T A$ và $A^T \\vec{b}$.",
+          "$A^T A = \\begin{pmatrix} 1 & 1 & 1 & 1 \\\\ 0 & 1 & 2 & 3 \\end{pmatrix} \\begin{pmatrix} 1 & 0 \\\\ 1 & 1 \\\\ 1 & 2 \\\\ 1 & 3 \\end{pmatrix} = \\begin{pmatrix} 4 & 6 \\\\ 6 & 14 \\end{pmatrix}$.",
+          "$A^T \\vec{b} = \\begin{pmatrix} 1 & 1 & 1 & 1 \\\\ 0 & 1 & 2 & 3 \\end{pmatrix} \\begin{pmatrix} 1 \\\\ 3 \\\\ 4 \\\\ 4 \\end{pmatrix} = \\begin{pmatrix} 12 \\\\ 23 \\end{pmatrix}$.",
+          "Bước 2: Giải hệ phương trình $A^T A \\hat{x} = A^T \\vec{b}$.",
+          "$\\begin{pmatrix} 4 & 6 \\\\ 6 & 14 \\end{pmatrix} \\begin{pmatrix} c \\\\ m \\end{pmatrix} = \\begin{pmatrix} 12 \\\\ 23 \\end{pmatrix}$.",
+          "Giải hệ này, ta được $c = 1.5$ và $m = 1$.",
+          "Vậy phương trình đường thẳng xấp xỉ tốt nhất là $y = 1.5 + x$."
+        ]
+      }
+    },
+    {
+      "question": "Cho các vector $\\vec{v_1}=(1, 1, 0)$, $\\vec{v_2}=(1, 2, 0)$, $\\vec{v_3}=(0, 1, 2)$. Hãy sử dụng quá trình Gram-Schmidt để tìm một cơ sở trực giao ${\\vec{u_1}, \\vec{u_2}, \\vec{u_3}}$.",
+      "answer": {
+        "steps": [
+          "Bước 1: Tìm $\\vec{u_1}$. Ta chọn $\\vec{u_1} = \\vec{v_1} = (1, 1, 0)$.",
+          "Bước 2: Tìm $\\vec{u_2}$. Ta tính $\\vec{u_2} = \\vec{v_2} - \\text{proj}_{\\vec{u_1}}(\\vec{v_2}) = \\vec{v_2} - \\frac{\\vec{v_2} \\cdot \\vec{u_1}}{|\\vec{u_1}|^2}\\vec{u_1}$.",
+          "$\\vec{v_2} \\cdot \\vec{u_1} = 3$ và $|\\vec{u_1}|^2 = 2$.",
+          "$\\vec{u_2} = (1, 2, 0) - \\frac{3}{2}(1, 1, 0) = (-\\frac{1}{2}, \\frac{1}{2}, 0)$. Để đơn giản, ta chọn vector cùng phương $\\vec{u_2}' = (-1, 1, 0)$.",
+          "Bước 3: Tìm $\\vec{u_3}$. Ta tính $\\vec{u_3} = \\vec{v_3} - \\text{proj}_{\\vec{u_1}}(\\vec{v_3}) - \\text{proj}_{\\vec{u_2}'}(\\vec{v_3})$.",
+          "$\\vec{v_3} \\cdot \\vec{u_1} = 1$ và $\\vec{v_3} \\cdot \\vec{u_2}' = 1$. $|\\vec{u_2}'|^2 = 2$.",
+          "$\\vec{u_3} = (0, 1, 2) - \\frac{1}{2}(1, 1, 0) - \\frac{1}{2}(-1, 1, 0) = (0, 0, 2)$.",
+          "Vậy, một cơ sở trực giao là: ${\\vec{u_1}=(1, 1, 0), \\vec{u_2}'=(-1, 1, 0), \\vec{u_3}=(0, 0, 2)}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng toàn phương $Q(x_1, x_2) = 3x_1^2 + 2x_1x_2 + 3x_2^2$. a) Tìm ma trận đối xứng A sao cho $Q(\\vec{x}) = \\vec{x}^T A \\vec{x}$. b) Xác định xem dạng toàn phương này là xác định dương, xác định âm hay không xác định.",
+      "answer": {
+        "steps": [
+          "a) Tìm ma trận A:",
+          "Các phần tử trên đường chéo chính là hệ số của các số hạng bình phương. Các phần tử ngoài đường chéo bằng một nửa hệ số của số hạng chéo.",
+          "$A = \\begin{pmatrix} 3 & \\frac{1}{2}(2) \\\\ \\frac{1}{2}(2) & 3 \\end{pmatrix} = \\begin{pmatrix} 3 & 1 \\\\ 1 & 3 \\end{pmatrix}$.",
+          "b) Phân loại dạng toàn phương:",
+          "Ta xét dấu các trị riêng của ma trận A. Giải phương trình đặc trưng $\\det(A - \\lambda I) = 0$.",
+          "$\\begin{vmatrix} 3-\\lambda & 1 \\\\ 1 & 3-\\lambda \\end{vmatrix} = (3-\\lambda)^2 - 1 = 0 \\Rightarrow 3-\\lambda = \\pm 1$.",
+          "Các trị riêng là $\\lambda_1 = 2$ và $\\lambda_2 = 4$.",
+          "Vì tất cả các trị riêng của A đều dương, dạng toàn phương này là xác định dương."
+        ]
+      }
+    },
+    {
+      "question": "Một thị trường có hai nhãn hiệu A và B. Mỗi tháng, 80% khách hàng của A vẫn dùng A, 20% chuyển sang B. Trong khi đó, 70% khách hàng của B vẫn dùng B, 30% chuyển sang A. a) Viết ma trận chuyển đổi P. b) Tìm vector trạng thái ổn định của thị trường.",
+      "answer": {
+        "steps": [
+          "a) Viết ma trận chuyển đổi P:",
+          "Các cột của P biểu diễn trạng thái 'từ', các hàng biểu diễn trạng thái 'đến'. $P = \\begin{pmatrix} \\text{A} \\to \\text{A} & \\text{B} \\to \\text{A} \\\\ \\text{A} \\to \\text{B} & \\text{B} \\to \\text{B} \\end{pmatrix} = \\begin{pmatrix} 0.8 & 0.3 \\\\ 0.2 & 0.7 \\end{pmatrix}$.",
+          "b) Tìm vector trạng thái ổn định $\\vec{q}$:",
+          "Vector trạng thái ổn định thỏa mãn $P\\vec{q} = \\vec{q}$ và tổng các thành phần của $\\vec{q}$ bằng 1. Ta giải hệ $(P - I)\\vec{q} = \\vec{0}$.",
+          "$\\begin{pmatrix} -0.2 & 0.3 \\\\ 0.2 & -0.3 \\end{pmatrix} \\begin{pmatrix} q_A \\\\ q_B \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}$.",
+          "Hệ phương trình tương đương với $0.2q_A = 0.3q_B$, hay $2q_A = 3q_B$.",
+          "Kết hợp với điều kiện $q_A + q_B = 1$, ta giải hệ và được $q_A = 0.6$ và $q_B = 0.4$.",
+          "Vậy, vector trạng thái ổn định là $\\vec{q} = \\begin{pmatrix} 0.6 \\\\ 0.4 \\end{pmatrix}$, nghĩa là thị phần của A là 60% và của B là 40%."
+        ]
+      }
+    },
+    {
+      "question": "Xét không gian vector $M_{2 \\times 2}$ gồm tất cả các ma trận vuông cấp 2. Hỏi tập hợp $S$ gồm tất cả các ma trận $2 \\times 2$ không khả nghịch (suy biến) có phải là một không gian con của $M_{2 \\times 2}$ không?",
+      "answer": {
+        "steps": [
+          "Để S là một không gian con, nó phải đóng kín với phép cộng và phép nhân vô hướng, và chứa vector không.",
+          "Kiểm tra vector không: Ma trận không $0 = \\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$ có $\\det(0)=0$, nên nó không khả nghịch và thuộc S.",
+          "Kiểm tra tính đóng với phép cộng: Ta tìm một phản ví dụ.",
+          "Xét hai ma trận không khả nghịch $A = \\begin{pmatrix} 1 & 0 \\\\ 0 & 0 \\end{pmatrix}$ và $B = \\begin{pmatrix} 0 & 0 \\\\ 0 & 1 \\end{pmatrix}$. Cả A và B đều thuộc S.",
+          "Tính tổng $A+B = \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix} = I$.",
+          "Ma trận tổng là ma trận đơn vị I, có $\\det(I) = 1 \\neq 0$. Do đó, $A+B$ là ma trận khả nghịch và không thuộc S.",
+          "Kết luận: Vì S không đóng kín với phép cộng, nó không phải là một không gian con của $M_{2 \\times 2}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{pmatrix} 1 & 2 & 3 & 4 \\\\ 2 & 4 & 7 & 9 \\\\ -1 & -2 & -2 & -3 \\end{pmatrix}$. a) Tìm hạng của A. b) Sử dụng Định lý Rank-Nullity để tìm số chiều của không gian null của A.",
+      "answer": {
+        "steps": [
+          "a) Tìm hạng của A (rank(A)):",
+          "Ta đưa A về dạng bậc thang bằng các phép biến đổi sơ cấp trên hàng.",
+          "$A \\xrightarrow{h_2-2h_1, h_3+h_1} \\begin{pmatrix} 1 & 2 & 3 & 4 \\\\ 0 & 0 & 1 & 1 \\\\ 0 & 0 & 1 & 1 \\end{pmatrix} \\xrightarrow{h_3-h_2} \\begin{pmatrix} 1 & 2 & 3 & 4 \\\\ 0 & 0 & 1 & 1 \\\\ 0 & 0 & 0 & 0 \\end{pmatrix}$.",
+          "Ma trận bậc thang có 2 hàng khác không. Vậy, $rank(A) = 2$.",
+          "b) Tìm số chiều không gian null (nullity(A)):",
+          "Định lý Rank-Nullity phát biểu: $rank(A) + nullity(A) = n$, với $n$ là số cột của A.",
+          "Trong trường hợp này, $n=4$. Ta có: $2 + nullity(A) = 4$.",
+          "Suy ra, $nullity(A) = 4 - 2 = 2$. Số chiều của không gian null của A là 2."
+        ]
+      }
+    },
+    {
+      "question": "Hai ma trận A và B được gọi là đồng dạng nếu tồn tại ma trận khả nghịch P sao cho $B = P^{-1}AP$. Hỏi $A = \\begin{pmatrix} 1 & 1 \\\\ 0 & 2 \\end{pmatrix}$ và $B = \\begin{pmatrix} 1 & 0 \\\\ 0 & 2 \\end{pmatrix}$ có đồng dạng với nhau không?",
+      "answer": {
+        "steps": [
+          "Một ma trận vuông A đồng dạng với một ma trận chéo D khi và chỉ khi A có thể chéo hóa được. Ma trận chéo D đó sẽ chứa các trị riêng của A.",
+          "Bước 1: Kiểm tra khả năng chéo hóa của A.",
+          "A là ma trận tam giác nên các trị riêng của nó là các phần tử trên đường chéo chính: $\\lambda_1 = 1$ và $\\lambda_2 = 2$.",
+          "Vì A có 2 trị riêng phân biệt, nó chắc chắn có 2 vector riêng độc lập tuyến tính. Do đó, A có thể chéo hóa được.",
+          "Bước 2: Tìm ma trận chéo D mà A đồng dạng.",
+          "Ma trận chéo mà A đồng dạng là $D = \\begin{pmatrix} 1 & 0 \\\\ 0 & 2 \\end{pmatrix}$ (hoặc hoán vị các trị riêng).",
+          "Bước 3: So sánh D với B.",
+          "Ta thấy ma trận chéo D này chính là ma trận B.",
+          "Kết luận: Vì A có thể chéo hóa thành ma trận D, và D chính là B, nên A và B đồng dạng với nhau."
+        ]
+      }
+    }
+  ]
+}
