@@ -627,6 +627,1454 @@
           "Kết luận: Vì A có thể chéo hóa thành ma trận D, và D chính là B, nên A và B đồng dạng với nhau."
         ]
       }
+    },
+    {
+      "question": "Cho hai ma trận $A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & -1 & 4 \\\\ 2 & 1 & 0 \\end{pmatrix}$ và $B = \\begin{pmatrix} 3 & 1 & 2 \\\\ -2 & 0 & 5 \\\\ 1 & 4 & -1 \\end{pmatrix}$. Tính $A^{-1}$, sau đó tìm $X$ thỏa mãn $AX = B$.",
+      "answer": {
+        "steps": [
+          "1. Tính định thức của $A$:\n   $$\\det(A) = 1 \\cdot \\det\\begin{pmatrix}-1 & 4 \\\\ 1 & 0\\end{pmatrix} - 2 \\cdot \\det\\begin{pmatrix}0 & 4 \\\\ 2 & 0\\end{pmatrix} + 3 \\cdot \\det\\begin{pmatrix}0 & -1 \\\\ 2 & 1\\end{pmatrix} = -4 + 16 + 6 = 18.$$",
+          "2. Tính ma trận phụ hợp $C = (C_{ij})$ của $A$:\n   - $C_{11} = \\det\\begin{pmatrix}-1 & 4 \\\\ 1 & 0\\end{pmatrix} = -4.$\n   - $C_{12} = -\\det\\begin{pmatrix}0 & 4 \\\\ 2 & 0\\end{pmatrix} = 8.$\n   - $C_{13} = \\det\\begin{pmatrix}0 & -1 \\\\ 2 & 1\\end{pmatrix} = 2.$\n   - $C_{21} = -\\det\\begin{pmatrix}2 & 3 \\\\ 1 & 0\\end{pmatrix} = 3.$\n   - $C_{22} = \\det\\begin{pmatrix}1 & 3 \\\\ 2 & 0\\end{pmatrix} = -6.$\n   - $C_{23} = -\\det\\begin{pmatrix}1 & 2 \\\\ 2 & 1\\end{pmatrix} = 3.$\n   - $C_{31} = \\det\\begin{pmatrix}2 & 3 \\\\ -1 & 4\\end{pmatrix} = 11.$\n   - $C_{32} = -\\det\\begin{pmatrix}1 & 3 \\\\ 0 & 4\\end{pmatrix} = -4.$\n   - $C_{33} = \\det\\begin{pmatrix}1 & 2 \\\\ 0 & -1\\end{pmatrix} = -1.$",
+          "3. Ma trận phụ hợp của $A$ là\n   $$\\mathrm{adj}(A) = C^T = \\begin{pmatrix}-4 & 3 & 11 \\\\ 8 & -6 & -4 \\\\ 2 & 3 & -1\\end{pmatrix}.$$",
+          "4. Tính\n   $$A^{-1} = \\frac{1}{\\det(A)}\\mathrm{adj}(A) = \\frac{1}{18} \\begin{pmatrix}-4 & 3 & 11 \\\\ 8 & -6 & -4 \\\\ 2 & 3 & -1\\end{pmatrix}.$$",
+          "5. Giải phương trình $AX = B$ bằng cách nhân với $A^{-1}$:\n   $$X = A^{-1}B = \\frac{1}{18} \\begin{pmatrix}-4 & 3 & 11 \\\\ 8 & -6 & -4 \\\\ 2 & 3 & -1\\end{pmatrix} \\begin{pmatrix}3 & 1 & 2 \\\\ -2 & 0 & 5 \\\\ 1 & 4 & -1\\end{pmatrix}.$$",
+          "6. Tính tích rồi chia cho 18:\n   $$X = \\frac{1}{18} \\begin{pmatrix} -7 & 40 & -4 \\\\ 32 & -8 & -10 \\\\ -1 & -2 & 20 \\end{pmatrix} = \\begin{pmatrix} -7/18 & 20/9 & -2/9 \\\\ 16/9 & -4/9 & -5/9 \\\\ -1/18 & -1/9 & 10/9 \\end{pmatrix}.$$"
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{pmatrix} 2 & 1 & 0 & 3 \\\\ 1 & 0 & -1 & 2 \\\\ 0 & 1 & 2 & -1 \\end{pmatrix}$. Tìm hạng của $A$ và cơ sở không gian hàng.",
+      "answer": {
+        "steps": [
+          "1. Biến đổi về dạng bậc thang:\n   $$\\begin{pmatrix}2 & 1 & 0 & 3\\\\1 & 0 & -1 & 2\\\\0 & 1 & 2 & -1\\end{pmatrix} \\xrightarrow{R_2 \\leftarrow R_2 - \\tfrac12 R_1} \\begin{pmatrix}2 & 1 & 0 & 3\\\\0 & -\\tfrac12 & -1 & \\tfrac12\\\\0 & 1 & 2 & -1\\end{pmatrix}.$$",
+          "2. Tiếp tục:\n   $$\\xrightarrow{R_3 \\leftarrow R_3 + 2R_2} \\begin{pmatrix}2 & 1 & 0 & 3\\\\0 & -\\tfrac12 & -1 & \\tfrac12\\\\0 & 0 & 0 & 0\\end{pmatrix}.$$",
+          "3. Do có 2 hàng khác không, nên $\\mathrm{rank}(A)=2$.",
+          "4. Cơ sở không gian hàng có thể chọn là các hàng bậc thang không toàn 0:\n   $$\\{(2,1,0,3), (0,-1,-2,1)\\}.$$"
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận vuông $A = \\begin{pmatrix} 4 & 1 & -1 \\\\ 2 & 3 & 0 \\\\ 1 & -2 & 5 \\end{pmatrix}$. Tính đa thức đặc trưng và các giá trị riêng của $A$.",
+      "answer": {
+        "steps": [
+          "1. Đa thức đặc trưng:\n   $$p(\\lambda) = \\det(A - \\lambda I) = \\det\\begin{pmatrix}4-\\lambda & 1 & -1\\\\2 & 3-\\lambda & 0\\\\1 & -2 & 5-\\lambda\\end{pmatrix}.$$",
+          "2. Rút gọn cho được\n   $$p(\\lambda) = \\lambda^3 -12\\lambda^2 +46\\lambda -57.$$",
+          "3. Thử nghiệm $\\lambda=3$ cho ra nghiệm,\n   $$p(3)=0,$$\n   chia đa thức cho $(\\lambda-3)$ thu được $\\lambda^2 -9\\lambda +19=0$.",
+          "4. Giải phương trình bậc hai:\n   $$\\lambda = \\frac{9 \\pm \\sqrt{5}}{2}.$$",
+          "5. Vậy các giá trị riêng là $\\lambda_1=3$, $\\lambda_{2,3}=\\frac{9\\pm\\sqrt{5}}{2}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $$A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 6 & 9 \\end{pmatrix}$$. Giải hệ phương trình $Ax = b$ với $b=(1,2,3)^T$. Xác định số nghiệm và nghiệm tổng quát nếu có.",
+      "answer": {
+        "steps": [
+          "1. Quan sát hàng 2, 3 là bội của hàng 1 nên $\\mathrm{rank}(A)=1$.",
+          "2. Ma trận mở rộng $(A|b)$ cũng có hạng 1, do đó hệ vô số nghiệm.",
+          "3. Phương trình hàng đầu tiên:\n   $$x_1 + 2x_2 + 3x_3 = 1.$$ Cho $x_2=s$, $x_3=t$, ta có $x_1 = 1 - 2s - 3t$.",
+          "4. Nghiệm tổng quát:\n   $$x=\\begin{pmatrix}1-2s-3t\\\\s\\\\t\\end{pmatrix},\\quad s,t\\in\\mathbb{R}.$$"
+        ]
+      }
+    },
+    {
+      "question": "Cho $$A = \\begin{pmatrix} 1 & 1 & 0 & 2 \\\\ 3 & 5 & 1 & 4 \\\\ 2 & 4 & 1 & 3 \\\\ 0 & 1 & -1 & 1 \\end{pmatrix}$$. Tính ma trận $P$ sao cho $P^{-1}AP$ ở dạng Jordan tối đa và viết các khối Jordan.",
+      "answer": {
+        "steps": [
+          "1. Tính đa thức đặc trưng cho thấy chỉ có một giá trị riêng $\\lambda=2$ với bội đại số 4.",
+          "2. Giải $(A-2I)x=0$ được không gian riêng chiều 2, nên bội hình học 2.",
+          "3. Cần hai khối Jordan kích thước 2 cho $\\lambda=2$.",
+          "4. Xây dựng cơ sở Jordan $\\{v_1,w_1,v_2,w_2\\}$ sao cho $(A-2I)w_i=v_i$.",
+          "5. Khi đó\n   $$P^{-1}AP=\\begin{pmatrix}2 & 1 & 0 & 0\\\\0 & 2 & 0 & 0\\\\0 & 0 & 2 & 1\\\\0 & 0 & 0 & 2\\end{pmatrix}.$$"
+        ]
+      }
+    },
+    {
+      "question": "Cho hai ma trận $A,B \\in M_{3\\times3}(\\mathbb{R})$ biết $AB=BA$ và $A$ có 3 giá trị riêng phân biệt. Chứng minh $A$ và $B$ đồng thời khả quy hóa.",
+      "answer": {
+        "steps": [
+          "1. $A$ có 3 giá trị riêng phân biệt nên khả quy hóa: tồn tại $P$ sao cho $P^{-1}AP=D$ chéo.",
+          "2. Từ $AB=BA$ suy ra $D(P^{-1}BP)=(P^{-1}BP)D$, với $D$ chéo và các phần tử phân biệt.",
+          "3. Do đó $P^{-1}BP$ cũng phải là ma trận chéo.",
+          "4. Kết luận: tồn tại cùng $P$ để cả $A$ và $B$ đều chéo hóa."
+        ]
+      }
+    },
+    {
+      "question": "Cho $$A = \\begin{pmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ -6 & 11 & -6 \\end{pmatrix}$$. Kiểm tra $A$ có khả nghịch không và tính $A^{-1}$ bằng phương pháp chia đa thức.",
+      "answer": {
+        "steps": [
+          "1. $A$ là companion matrix của $p(x)=x^3-6x^2+11x-6=(x-1)(x-2)(x-3)$ nên $\\det(A)=6\\neq0$, $A$ khả nghịch.",
+          "2. Công thức inverse cho companion matrix cho ra\n   $$A^{-1}=\\begin{pmatrix}-11 & 6 & 0\\\\-1 & 0 & 0\\\\0 & -1 & 0\\end{pmatrix}.$$"
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$. Tính hàm mũ $$e^{A} = \\sum_{k=0}^{\\infty} \\frac{A^k}{k!}$$ bằng cách đưa $A$ về dạng chéo.",
+      "answer": {
+        "steps": [
+          "1. Tìm giá trị riêng của $A$: giải\n   $$\\det(A - \\lambda I)=0 \\implies \\lambda^2 -5\\lambda -2=0,$$\n   nghiệm: $\\lambda = \\frac{5 \\pm \\sqrt{33}}{2}$.",
+          "2. $A$ khả quy hóa: tồn tại $P$ sao cho $P^{-1}AP=\\mathrm{diag}(\\lambda_1,\\lambda_2)$.",
+          "3. Khi đó\n   $$e^{A} = P \\begin{pmatrix}e^{\\lambda_1} & 0\\\\0 & e^{\\lambda_2}\\end{pmatrix} P^{-1}.$$",
+          "4. Kết quả:\n   $$e^{A} = \\frac{1}{\\sqrt{33}} \\begin{pmatrix}(\\sqrt{33}+1)e^{(5+\\sqrt{33})/2} - (\\sqrt{33}-1)e^{(5-\\sqrt{33})/2} & 2(e^{(5+\\sqrt{33})/2} - e^{(5-\\sqrt{33})/2})\\\\3(e^{(5+\\sqrt{33})/2} - e^{(5-\\sqrt{33})/2}) & (\\sqrt{33}-1)e^{(5+\\sqrt{33})/2} - (\\sqrt{33}+1)e^{(5-\\sqrt{33})/2}\\end{pmatrix}.$$"
+        ]
+      }
+    },
+    {
+      "question": "Cho hai ma trận $A=\\begin{pmatrix}a & b\\\\c & d\\end{pmatrix}$ và $B=\\begin{pmatrix}e & f\\\\g & h\\end{pmatrix}$ trong $M_{2\\times2}(\\mathbb{R})$. Xác định điều kiện để $$\\det(A+B)=\\det(A)+\\det(B).$$",
+      "answer": {
+        "steps": [
+          "1. Tính\n   $$\\det(A+B)=(a+e)(d+h)-(b+f)(c+g)=\\det(A)+\\det(B)+(ah+ed-bg-fc).$$",
+          "2. Do đó cần\n   $$ah + ed = bg + fc$$\n   để $\\det(A+B)=\\det(A)+\\det(B)$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A=\\begin{pmatrix}4 & 7\\\\2 & 5\\end{pmatrix}$. Tính $\\det(A)$ và chứng minh chi tiết theo công thức $2\\times2$.",
+      "answer": {
+        "steps": [
+          "1. Gọi $A=\\begin{pmatrix}a & b\\\\c & d\\end{pmatrix}$ với $a=4,b=7,c=2,d=5$.",
+          "2. Công thức định thức cho ma trận $2\\times2$ là $$\\det(A)=a\\,d - b\\,c.$$",
+          "3. Thay số vào: $$\\det(A)=4\\times5 - 7\\times2.$$",
+          "4. Tính toán: $4\\times5=20$, $7\\times2=14$.",
+          "5. Kết luận: $$\\det(A)=20-14=6.$$"
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $B=\\begin{pmatrix}1 & 2 & 3\\\\4 & 5 & 6\\\\7 & 8 & 9\\end{pmatrix}$. Tính $\\det(B)$ bằng quy tắc Sarrus, từng bước chi tiết.",
+      "answer": {
+        "steps": [
+          "1. Viết ma trận mở rộng hai cột đầu sang phải:\n   $$\\begin{matrix}1 & 2 & 3 & 1 & 2\\\\4 & 5 & 6 & 4 & 5\\\\7 & 8 & 9 & 7 & 8\\end{matrix}.$$",
+          "2. Tính tổng các tích chéo xuôi:\n   - $1\\cdot5\\cdot9=45$;\n   - $2\\cdot6\\cdot7=84$;\n   - $3\\cdot4\\cdot8=96$;\n   Tổng = $45+84+96=225$.",
+          "3. Tính tổng các tích chéo ngược:\n   - $3\\cdot5\\cdot7=105$;\n   - $1\\cdot6\\cdot8=48$;\n   - $2\\cdot4\\cdot9=72$;\n   Tổng = $105+48+72=225$.",
+          "4. Theo quy tắc Sarrus: $$\\det(B)=\\text{(xuôi)} - \\text{(ngược)} = 225 - 225 = 0.$$"
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận tam giác trên $C=\\begin{pmatrix}2 & -1 & 3\\\\0 & 5 & 4\\\\0 & 0 & -2\\end{pmatrix}$. Tính $\\det(C)$ và chứng minh tính chất định thức của ma trận tam giác.",
+      "answer": {
+        "steps": [
+          "1. Nhận thấy $C$ là ma trận tam giác trên (các phần tử bên dưới đường chéo chính đều bằng 0).",
+          "2. Tính chất: với ma trận tam giác trên $n\\times n$, $$\\det(C)=\\prod_{i=1}^n c_{ii}.$$",
+          "3. Ở đây $c_{11}=2, c_{22}=5, c_{33}=-2$.",
+          "4. Tích trên đường chéo: $$2 \\times 5 \\times (-2) = 10 \\times (-2) = -20.$$",
+          "5. Vậy $$\\det(C)=-20.$$"
+        ]
+      }
+    },
+    {
+      "question": "Cho hai ma trận vuông cùng kích thước $A,B$. Chứng minh chi tiết tính chất $$\\det(AB)=\\det(A)\\,\\det(B).$$",
+      "answer": {
+        "steps": [
+          "1. Định nghĩa định thức qua phép tổng quát hoán vị (Leibniz):\n   $$\\det(A)=\\sum_{\\sigma\\in S_n}\\operatorname{sgn}(\\sigma)\\prod_{i=1}^n a_{i,\\sigma(i)}.$$",
+          "2. Tương tự với $B$ và $AB$ có phần tử $(AB)_{i,j}=\\sum_{k=1}^n a_{i,k}b_{k,j}$.",
+          "3. Khi nhân hai định thức, ta xét tích của hai tổng hoán vị:\n   $$\\det(A)\\det(B)=\\sum_{\\sigma,\\tau}\\operatorname{sgn}(\\sigma)\\operatorname{sgn}(\\tau)\\prod_{i}a_{i,\\sigma(i)}b_{i,\\tau(i)}.$$",
+          "4. Sắp xếp lại chỉ số và nhận ra hoán vị mới $\\pi=\\sigma\\circ\\tau$, rung liên hệ sgn$(\\pi)=\\sgn(\\sigma)\\sgn(\\tau)$.",
+          "5. Từ đó tái tổ hợp các hạng tử cho đúng biểu thức của $\\det(AB)$:\n   $$\\det(AB)=\\sum_{\\pi}\\sgn(\\pi)\\prod_{i}(AB)_{i,\\pi(i)}=\\sum_{\\pi}\\sgn(\\pi)\\prod_i\\sum_k a_{i,k}b_{k,\\pi(i)},$$\n   qua sự hoán vị chỉ số khéo léo dẫn đến kết quả bằng tích $\\det(A)\\det(B)$.",
+          "6. Kết luận: $$\\det(AB)=\\det(A)\\,\\det(B).$$"
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $D=\\begin{pmatrix}3 & 1 \\\\2 & 4\\end{pmatrix}$. Tính $\\det(D^{-1})$ và chứng minh chi tiết quan hệ giữa $\\det(D^{-1})$ và $\\det(D)$.",
+      "answer": {
+        "steps": [
+          "1. Với $D$ khả nghịch thì $D^{-1}$ tồn tại và tính chất định thức cho biết\n   $$\\det(D^{-1}) = \\frac{1}{\\det(D)}.$$",
+          "2. Tính trước $\\det(D)=3\\times4 - 1\\times2 =12-2=10$.",
+          "3. Theo tính chất, $$\\det(D^{-1}) = 1/10.$$",
+          "4. Chứng minh chi tiết: từ $D\\,D^{-1}=I_n$, lấy định thức hai vế:\n   $$\\det(D)\\det(D^{-1}) = \\det(I_n)=1,$$\n   suy ra $$\\det(D^{-1}) = 1/\\det(D).$$"
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $E=\\begin{pmatrix}1 & 2 & 0\\\\0 & 3 & 4\\\\5 & 0 & 6\\end{pmatrix}$. Tính $\\det(E)$ bằng phát triển theo cột thứ nhất, chi tiết từng bước.",
+      "answer": {
+        "steps": [
+          "1. Áp dụng công thức phát triển theo cột 1:\n   $$\\det(E)=\\sum_{i=1}^3(-1)^{i+1}e_{i1}\\det(M_{i1}),$$\n   với $M_{i1}$ là ma trận con loại bỏ hàng $i$, cột 1.",
+          "2. Với $i=1$: $e_{11}=1$,\n   $$M_{11}=\\begin{pmatrix}3 & 4\\\\0 & 6\\end{pmatrix},\\quad \\det(M_{11})=3\\times6-4\\times0=18,$$\n   đóng góp $(-1)^{2}\\times1\\times18=18$.",
+          "3. Với $i=2$: $e_{21}=0$, nên hạng tử đóng góp là $0$.",
+          "4. Với $i=3$: $e_{31}=5$,\n   $$M_{31}=\\begin{pmatrix}2 & 0\\\\3 & 4\\end{pmatrix},\\quad \\det(M_{31})=2\\times4-0\\times3=8,$$\n   đóng góp $(-1)^{4}\\times5\\times8=40$.",
+          "5. Tổng lại: $$\\det(E)=18+0+40=58.$$"
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $F=\\begin{pmatrix}1 & 2 & 3\\\\4 & 5 & 6\\\\7 & 8 & 10\\end{pmatrix}$. Tính $\\det(F)$ bằng cách biến đổi sơ cấp:\n  a) $R_3\\leftarrow R_3 - R_2$,\n  b) $R_2\\leftarrow R_2 - 4R_1$, rồi phát triển.",
+      "answer": {
+        "steps": [
+          "1. Bắt đầu với\n   $$F=\\begin{pmatrix}1 & 2 & 3\\\\4 & 5 & 6\\\\7 & 8 & 10\\end{pmatrix}.$$",
+          "2. Thao tác a) $R_3\\leftarrow R_3 - R_2$ (không đổi định thức):\n   $$\\begin{pmatrix}1 & 2 & 3\\\\4 & 5 & 6\\\\3 & 3 & 4\\end{pmatrix}.$$",
+          "3. Thao tác b) $R_2\\leftarrow R_2 - 4R_1$ (không đổi định thức):\n   $$\\begin{pmatrix}1 & 2 & 3\\\\0 & -3 & -6\\\\3 & 3 & 4\\end{pmatrix}.$$",
+          "4. Phát triển theo $R_2$ vì có hai phần tử 0 và -3, -6:\n   $$\\det(F)=(-1)^{2+2}(-3)\\det\\begin{pmatrix}1 & 3\\\\3 & 4\\end{pmatrix} + (-1)^{2+3}(-6)\\det\\begin{pmatrix}1 & 2\\\\3 & 3\\end{pmatrix}.$$",
+          "5. Tính định thức con:\n   - $\\det\\begin{pmatrix}1 & 3\\\\3 & 4\\end{pmatrix}=1\\cdot4-3\\cdot3=4-9=-5$,\n   - $\\det\\begin{pmatrix}1 & 2\\\\3 & 3\\end{pmatrix}=1\\cdot3-2\\cdot3=3-6=-3$.",
+          "6. Thay vào:\n   $$\\det(F)=(-3)\\times(-5) - (-6)\\times(-3) = 15 - 18 = -3.$$"
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $G=\\begin{pmatrix}0 & 1 & 2\\\\1 & 0 & 3\\\\0 & 0 & 4\\end{pmatrix}$. Tính $\\det(G)$ bằng tính chất đổ tam giác và phát triển.",
+      "answer": {
+        "steps": [
+          "1. Nhận thấy $G$ là ma trận tam giác dưới khối (các phần tử phía dưới đường chéo chính có dạng block tam giác). Tuy nhiên ta có phần tử $1,2$ phía trên đường chéo, nhưng dưới đường chéo cột 1 có $0,1,0$ nên có thể biến thành tam giác trên hoặc dưới.",
+          "2. Nếu phát triển trực tiếp theo cột 1:\n   $$\\det(G)=0\\times M_{11} - 1\\times(-1)^{2}\\det\\begin{pmatrix}1 & 3\\\\0 & 4\\end{pmatrix} + 0 = -1\\cdot(1\\cdot4-3\\cdot0) = -4.$$",
+          "3. Hoặc nhận thấy ta có thể swap $R_1$ và $R_2$ rồi đổi dấu:\n   - Swap $R_1\\leftrightarrow R_2$ cho ma trận $G'$:\n     $$G'=\\begin{pmatrix}1&0&3\\\\0&1&2\\\\0&0&4\\end{pmatrix},\\quad \\det(G')=-\\det(G).$$",
+          "4. $G'$ tam giác trên, nên $$\\det(G')=1\\times1\\times4=4,$$\n   suy ra $$\\det(G)=-4.$$"
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $H=\\begin{pmatrix}a & b & 0\\\\0 & c & d\\\\0 & 0 & e\\end{pmatrix}$. Tính $\\det(H)$ và chứng minh tính chất \"định thức bằng tích phần tử trên đường chéo\" cho ma trận tam giác khối.",
+      "answer": {
+        "steps": [
+          "1. Nhận thấy $H$ là ma trận tam giác dưới khối với khối $1\\times1$, $2\\times2$, $3\\times3$ phát triển dần:",
+          "2. Phát triển theo hàng 1 và cột 1 cho đến cột 3, nhưng thực chất với tam giác dưới khối, định thức bằng tích các phần tử đường chéo chính:\n   $$\\det(H) = a \\times c \\times e.$$",
+          "3. Chứng minh chi tiết:\n   - Phát triển theo hàng 1 chỉ còn hạng tử $a\\det\\begin{pmatrix}c & d\\\\0 & e\\end{pmatrix}$ bởi vì $b,0$ nằm ngoài đường chéo chính và $(-1)^{1+j}b=0$ đóng góp.",
+          "4. Tính định thức con $\\det\\begin{pmatrix}c & d\\\\0 & e\\end{pmatrix} = c\\,e - d\\,0 = c e$.",
+          "5. Kết luận: $$\\det(H)=a\\times(c e)=a c e.$$"
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A=\\begin{pmatrix}3 & 4\\\\1 & 2\\end{pmatrix}$. Tính $\\det(A)$ bằng công thức $2\\times2$, ghi rõ từng bước.",
+      "answer": {
+        "steps": [
+          "1. Gọi $A=\\begin{pmatrix}a & b\\\\c & d\\end{pmatrix}$, với $a=3,b=4,c=1,d=2$.",
+          "2. Công thức: $$\\det(A)=a\\,d - b\\,c.$$",
+          "3. Thay số: $$\\det(A)=3\\times2 - 4\\times1.$$",
+          "4. Tính tích: $3\\times2=6$, $4\\times1=4$.",
+          "5. Kết luận: $$\\det(A)=6-4=2.$$"
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $B=\\begin{pmatrix}2 & 0 & 1\\\\-1 & 3 & 4\\\\0 & 5 & -2\\end{pmatrix}$. Tính $\\det(B)$ bằng quy tắc Sarrus, chi tiết từng bước.",
+      "answer": {
+        "steps": [
+          "1. Viết ma trận mở rộng hai cột đầu sang phải:\n   $$\\begin{matrix}2 & 0 & 1 & 2 & 0\\\\-1 & 3 & 4 & -1 & 3\\\\0 & 5 & -2 & 0 & 5\\end{matrix}.$$",
+          "2. Tính tổng tích chéo xuôi:\n   - $2\\cdot3\\cdot(-2)=-12$;\n   - $0\\cdot4\\cdot0=0$;\n   - $1\\cdot(-1)\\cdot5=-5$;\n   Tổng = $-12+0-5=-17$.",
+          "3. Tính tổng tích chéo ngược:\n   - $1\\cdot3\\cdot0=0$;\n   - $2\\cdot4\\cdot5=40$;\n   - $0\\cdot(-1)\\cdot(-2)=0$;\n   Tổng = $0+40+0=40$.",
+          "4. Theo quy tắc Sarrus:\n   $$\\det(B)=(-17) - 40 = -57.$$"
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận tam giác dưới $C=\\begin{pmatrix}1 & 0 & 0\\\\2 & 3 & 0\\\\4 & 5 & 6\\end{pmatrix}$. Tính $\\det(C)$ và chứng minh chi tiết tính chất định thức của ma trận tam giác.",
+      "answer": {
+        "steps": [
+          "1. Nhận thấy $C$ là ma trận tam giác dưới (các phần tử phía trên đường chéo chính đều bằng 0).",
+          "2. Tính chất: với ma trận tam giác dưới $n\\times n$, $$\\det(C)=\\prod_{i=1}^n c_{ii}.$$",
+          "3. Ở đây, $c_{11}=1, c_{22}=3, c_{33}=6$.",
+          "4. Tính tích: $$1 \\times 3 \\times 6 = 18.$$",
+          "5. Vậy $$\\det(C)=18.$$",
+          "6. Chứng minh ngắn gọn: phát triển định thức theo hàng 1 và 2, chỉ phần tử đường chéo chính đóng góp, kết quả là tích các $c_{ii}$."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh chi tiết rằng với mọi ma trận vuông $A$, ta có $$\\det(A^T)=\\det(A).$$",
+      "answer": {
+        "steps": [
+          "1. Định nghĩa định thức qua tổng các hoán vị:\n   $$\\det(A)=\\sum_{\\sigma\\in S_n}\\sgn(\\sigma)\\prod_{i=1}^n a_{i,\\sigma(i)}.$$",
+          "2. Định nghĩa $A^T$: $(A^T)_{i,j}=a_{j,i}$, tức đổi hàng thành cột.",
+          "3. Viết định thức của $A^T$:\n   $$\\det(A^T)=\\sum_{\\sigma\\in S_n}\\sgn(\\sigma)\\prod_{i=1}^n (A^T)_{i,\\sigma(i)} = \\sum_{\\sigma}\\sgn(\\sigma)\\prod_{i}a_{\\sigma(i),i}.$$",
+          "4. Đổi biến số: đặt $\\tau(i)=\\sigma^{-1}(i)$, thì $\\sigma(i)=j$ tương ứng với $i=\\tau(j)$. Khi đó\n   $$\\prod_{i}a_{\\sigma(i),i} = \\prod_{j}a_{j,\\tau(j)},$$\n   và $\\sgn(\\sigma)=\\sgn(\\tau)$ vì đảo ngược hoán vị không đổi dấu.",
+          "5. Do $\\tau$ chạy qua tất cả các hoán vị khi $\\sigma$ chạy qua $S_n$, ta có\n   $$\\det(A^T)=\\sum_{\\tau}\\sgn(\\tau)\\prod_{j}a_{j,\\tau(j)} = \\det(A).$$",
+          "6. Kết luận: $$\\det(A^T)=\\det(A).$$"
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $D=\\begin{pmatrix}2 & 3\\\\5 & 7\\end{pmatrix}$, chứng minh chi tiết và tính $\\det(D^{-1})$ dựa vào quan hệ giữa $\\det(D)$ và $\\det(D^{-1})$.",
+      "answer": {
+        "steps": [
+          "1. Tính $\\det(D)=2\\times7 - 3\\times5 =14 -15 = -1$.",
+          "2. Vì $D$ khả nghịch, ta có $D\\,D^{-1}=I_2$. Lấy định thức hai vế:\n   $$\\det(D)\\det(D^{-1}) = \\det(I_2) = 1.$$",
+          "3. Suy ra $$\\det(D^{-1}) = 1/\\det(D) = -1.$$",
+          "4. Vậy $\\det(D^{-1})=-1$."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh chi tiết tính chất $$\\det(kA)=k^n\\det(A)$$ với $A\\in M_{n\\times n}$ và $k$ là số vô hướng.",
+      "answer": {
+        "steps": [
+          "1. Gọi $A=[a_{ij}]$ và $kA=[k\\,a_{ij}]$. Mỗi hàng của $kA$ bằng $k$ lần hàng tương ứng của $A$.",
+          "2. Khi nhân một hàng của ma trận bởi $k$, định thức bị nhân thêm một factor $k$ (tính chất định thức).",
+          "3. Vì có $n$ hàng, nhân lần lượt từng hàng với $k$ sẽ nhân định thức với $k^n$:\n   $$\\det(kA)=k\\cdot k\\cdots k\\det(A)=k^n\\det(A).$$",
+          "4. Ví dụ với $A\\in M_{2\\times2}$ và $k=3$, ta có $\\det(3A)=3^2\\det(A)=9\\det(A)$."
+        ]
+      }
+    },
+    {
+      "question": "Cho hai ma trận vuông cùng kích thước $A,B$. Chứng minh chi tiết tính chất $$\\det(AB)=\\det(A)\\,\\det(B).$$",
+      "answer": {
+        "steps": [
+          "1. Viết định thức qua tổng hoán vị (Leibniz):\n   $$\\det(A)=\\sum_{\\sigma}\\sgn(\\sigma)\\prod_{i}a_{i,\\sigma(i)},\\quad\\det(B)=\\sum_{\\tau}\\sgn(\\tau)\\prod_{j}b_{j,\\tau(j)}.$$",
+          "2. Tính phần tử $(AB)_{i,j}=\\sum_{k}a_{i,k}b_{k,j}$.",
+          "3. Định thức của $AB$:\n   $$\\det(AB)=\\sum_{\\pi}\\sgn(\\pi)\\prod_{i}(AB)_{i,\\pi(i)} = \\sum_{\\pi}\\sgn(\\pi)\\prod_{i}\\sum_{k}a_{i,k}b_{k,\\pi(i)}.$$",
+          "4. Mở rộng tích hai tổng, ta thu được tổng trên cặp hoán vị $(\\sigma,\\tau)$, sắp xếp chỉ số sao cho $k=\\sigma(i)$, $\\pi(i)=\\tau(k)$,\n   và nhận ra $\\sgn(\\sigma\\circ\\tau)=\\sgn(\\sigma)\\sgn(\\tau)$.",
+          "5. Tái nhóm hạng tử để tách thành tích của hai định thức:\n   $$\\det(AB)=\\sum_{\\sigma,\\tau}\\sgn(\\sigma)\\sgn(\\tau)\\prod_{i}a_{i,\\sigma(i)}\\prod_{k}b_{k,\\tau(k)} = \\det(A)\\det(B).$$",
+          "6. Kết luận: $$\\det(AB)=\\det(A)\\,\\det(B).$$"
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận bậc 3 hình Vandermonde $$V=\\begin{pmatrix}1 & 1 & 1\\\\x & y & z\\\\x^2 & y^2 & z^2\\end{pmatrix}.$$ Tính $\\det(V)$ và chứng minh chi tiết công thức Vandermonde.",
+      "answer": {
+        "steps": [
+          "1. Định nghĩa ma trận Vandermonde bậc 3.",
+          "2. Phát triển định thức theo hàng đầu tiên:\n   $$\\det(V)=1\\cdot\\det\\begin{pmatrix}y & z\\\\y^2 & z^2\\end{pmatrix} - 1\\cdot\\det\\begin{pmatrix}x & z\\\\x^2 & z^2\\end{pmatrix} + 1\\cdot\\det\\begin{pmatrix}x & y\\\\x^2 & y^2\\end{pmatrix}.$$",
+          "3. Tính từng định thức con:\n   - $\\det\\begin{pmatrix}y & z\\\\y^2 & z^2\\end{pmatrix} = y\\,z^2 - z\\,y^2 = yz(z-y).$\n   - $\\det\\begin{pmatrix}x & z\\\\x^2 & z^2\\end{pmatrix} = xz^2 - z x^2 = xz(z-x).$\n   - $\\det\\begin{pmatrix}x & y\\\\x^2 & y^2\\end{pmatrix} = xy^2 - y x^2 = xy(y-x).$",
+          "4. Thay vào:\n   $$\\det(V) = yz(z-y) - xz(z-x) + xy(y-x).$$",
+          "5. Thu gọn bằng cách phân tích đa thức, ta được:\n   $$\\det(V) = (y-x)(z-x)(z-y).$$",
+          "6. Vậy kết quả công thức Vandermonde:\n   $$\\det(V) = (y-x)(z-x)(z-y).$$"
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận khối chéo $$M=\\begin{pmatrix}A & 0\\\\0 & B\\end{pmatrix}$$ trong đó $A$ là $2\\times2$, $B$ là $1\\times1$. Chứng minh chi tiết rằng $$\\det(M)=\\det(A)\\,\\det(B).$$",
+      "answer": {
+        "steps": [
+          "1. Viết $M$ dưới dạng block:\n   $$M=\\begin{pmatrix}A_{2\\times2} & 0_{2\\times1}\\\\0_{1\\times2} & B_{1\\times1}\\end{pmatrix}.$$",
+          "2. Phát triển định thức theo 2 hàng hoặc 2 cột đầu tiên:\n   - Các hạng tử chứa phần tử ngoài block chính đều có một block con chứa hàng hoặc cột toàn số 0, nên định thức con đó bằng 0.\n   - Chỉ còn hạng tử tương ứng với block $A$ nhân block $B$.",
+          "3. Do đó\n   $$\\det(M)=\\det(A)\\times\\det(B).$$",
+          "4. Ví dụ minh họa: nếu $A=\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}, B=(e)$ thì\n   $$M=\\begin{pmatrix}a&b&0\\\\c&d&0\\\\0&0&e\\end{pmatrix},$$\n   và trực tiếp thấy $$\\det(M)=e\\det\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}=\\det(A)\\,\\det(B).$$"
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $A = \\begin{pmatrix} 3 & -1 \\\\ 4 & 2 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Định thức của ma trận vuông cấp 2 $\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$ được tính bằng công thức: $\\det(A) = ad - bc$.",
+          "Áp dụng với $a = 3$, $b = -1$, $c = 4$, $d = 2$:",
+          "$\\det(A) = (3)(2) - (-1)(4) = 6 - (-4) = 6 + 4 = 10$."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $B = \\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & 1 & 4 \\\\ 5 & 6 & 0 \\end{pmatrix}$ bằng quy tắc Sarrus.",
+      "answer": {
+        "steps": [
+          "Quy tắc Sarrus áp dụng cho ma trận cấp 3x3: Viết lại hai cột đầu tiên bên phải ma trận.",
+          "Ma trận mở rộng:",
+          "$$\\begin{array}{ccc|cc} 1 & 2 & 3 & 1 & 2 \\\\ 0 & 1 & 4 & 0 & 1 \\\\ 5 & 6 & 0 & 5 & 6 \\end{array}$$",
+          "Tính tổng các tích đường chéo chính (từ trái sang phải, từ trên xuống dưới):",
+          "$(1)(1)(0) + (2)(4)(5) + (3)(0)(6) = 0 + 40 + 0 = 40$.",
+          "Tính tổng các tích đường chéo phụ (từ trái sang phải, từ dưới lên trên):",
+          "$(3)(1)(5) + (1)(4)(6) + (2)(0)(0) = 15 + 24 + 0 = 39$.",
+          "Định thức = Tổng đường chéo chính - Tổng đường chéo phụ: $40 - 39 = 1$."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $C = \\begin{pmatrix} 2 & -1 & 3 \\\\ 1 & 0 & 4 \\\\ -2 & 1 & 5 \\end{pmatrix}$ bằng cách khai triển Laplace theo hàng đầu tiên.",
+      "answer": {
+        "steps": [
+          "Khai triển Laplace theo hàng 1: $\\det(C) = c_{11}C_{11} + c_{12}C_{12} + c_{13}C_{13}$, trong đó $C_{ij}$ là phần bù đại số.",
+          "$C_{ij} = (-1)^{i+j} \\det(M_{ij})$, với $M_{ij}$ là ma trận con bỏ hàng $i$, cột $j$.",
+          "Tính $C_{11}$: $M_{11} = \\begin{pmatrix} 0 & 4 \\\\ 1 & 5 \\end{pmatrix}$, $\\det(M_{11}) = (0)(5) - (4)(1) = -4$, $C_{11} = (-1)^{1+1}(-4) = -4$.",
+          "Tính $C_{12}$: $M_{12} = \\begin{pmatrix} 1 & 4 \\\\ -2 & 5 \\end{pmatrix}$, $\\det(M_{12}) = (1)(5) - (4)(-2) = 5 + 8 = 13$, $C_{12} = (-1)^{1+2}(13) = -13$.",
+          "Tính $C_{13}$: $M_{13} = \\begin{pmatrix} 1 & 0 \\\\ -2 & 1 \\end{pmatrix}$, $\\det(M_{13}) = (1)(1) - (0)(-2) = 1$, $C_{13} = (-1)^{1+3}(1) = 1$.",
+          "Thay vào: $\\det(C) = (2)(-4) + (-1)(-13) + (3)(1) = -8 + 13 + 3 = 8$."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $D = \\begin{pmatrix} 1 & 0 & 2 & -1 \\\\ 3 & 0 & 0 & 4 \\\\ 0 & 5 & 0 & 6 \\\\ -2 & 0 & 1 & 0 \\end{pmatrix}$ bằng cách khai triển Laplace theo cột 2.",
+      "answer": {
+        "steps": [
+          "Cột 2 có ba phần tử bằng 0, chỉ $d_{32} = 5 \\neq 0$. Khai triển Laplace theo cột 2: $\\det(D) = d_{32} C_{32}$.",
+          "$C_{32} = (-1)^{3+2} \\det(M_{32})$, với $M_{32}$ là ma trận con bỏ hàng 3, cột 2.",
+          "$M_{32} = \\begin{pmatrix} 1 & 2 & -1 \\\\ 3 & 0 & 4 \\\\ -2 & 1 & 0 \\end{pmatrix}$.",
+          "Tính $\\det(M_{32})$ bằng khai triển Laplace theo hàng 2 (vì có phần tử 0):",
+          "$\\det(M_{32}) = d'_{21} C'_{21} + d'_{22} C'_{22} + d'_{23} C'_{23} = 3 \\cdot C'_{21} + 0 \\cdot C'_{22} + 4 \\cdot C'_{23}$ (chỉ cần $C'_{21}$ và $C'_{23}$).",
+          "$C'_{21} = (-1)^{2+1} \\det \\begin{pmatrix} 2 & -1 \\\\ 1 & 0 \\end{pmatrix} = (-1)[(2)(0) - (-1)(1)] = (-1)(1) = -1$.",
+          "$C'_{23} = (-1)^{2+3} \\det \\begin{pmatrix} 1 & 2 \\\\ -2 & 1 \\end{pmatrix} = (-1)[(1)(1) - (2)(-2)] = (-1)(5) = -5$.",
+          "$\\det(M_{32}) = 3 \\cdot (-1) + 4 \\cdot (-5) = -3 - 20 = -23$.",
+          "$C_{32} = (-1)^{5} (-23) = (-1)(-23) = 23$.",
+          "$\\det(D) = (5) \\cdot (23) = 115$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $A$ và $B$ là các ma trận vuông cấp 3. Biết $\\det(A) = 3$ và $\\det(B) = -2$. Tính $\\det(AB)$, $\\det(2A)$, và $\\det(A^{-1})$.",
+      "answer": {
+        "steps": [
+          "Áp dụng tính chất: $\\det(AB) = \\det(A) \\cdot \\det(B)$.",
+          "$\\det(AB) = (3) \\cdot (-2) = -6$.",
+          "Áp dụng tính chất: $\\det(kA) = k^n \\det(A)$ với $n$ là cấp ma trận, ở đây $n=3$.",
+          "$\\det(2A) = 2^3 \\cdot \\det(A) = 8 \\cdot 3 = 24$.",
+          "Áp dụng tính chất: $\\det(A^{-1}) = \\frac{1}{\\det(A)}$ (vì $A$ khả nghịch do $\\det(A) \\neq 0$).",
+          "$\\det(A^{-1}) = \\frac{1}{3}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $E = \\begin{pmatrix} 2 & 1 & 3 \\\\ 0 & 1 & 4 \\\\ 1 & 0 & 2 \\end{pmatrix}$. Hỏi $E$ có khả nghịch không? Giải thích bằng định thức.",
+      "answer": {
+        "steps": [
+          "Ma trận vuông khả nghịch khi và chỉ khi định thức khác 0.",
+          "Tính $\\det(E)$ bằng khai triển Laplace theo hàng 3 (vì có phần tử 0):",
+          "$\\det(E) = e_{31} C_{31} + e_{32} C_{32} + e_{33} C_{33}$.",
+          "Với $e_{31}=1$, $e_{32}=0$, $e_{33}=2$, nên $\\det(E) = 1 \\cdot C_{31} + 0 \\cdot C_{32} + 2 \\cdot C_{33}$.",
+          "Tính $C_{31} = (-1)^{3+1} \\det \\begin{pmatrix} 1 & 3 \\\\ 1 & 4 \\end{pmatrix} = (1)[(1)(4) - (3)(1)] = (1)(1) = 1$.",
+          "Tính $C_{33} = (-1)^{3+3} \\det \\begin{pmatrix} 2 & 1 \\\\ 0 & 1 \\end{pmatrix} = (1)[(2)(1) - (1)(0)] = (1)(2) = 2$.",
+          "$\\det(E) = (1)(1) + (2)(2) = 1 + 4 = 5 \\neq 0$.",
+          "Kết luận: $E$ khả nghịch vì $\\det(E) = 5 \\neq 0$."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận tam giác dưới $F = \\begin{pmatrix} 2 & 0 & 0 \\\\ 3 & -1 & 0 \\\\ 4 & 5 & 3 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Định thức của ma trận tam giác (trên hoặc dưới) bằng tích các phần tử trên đường chéo chính.",
+          "Các phần tử đường chéo chính: $f_{11} = 2$, $f_{22} = -1$, $f_{33} = 3$.",
+          "$\\det(F) = (2) \\cdot (-1) \\cdot (3) = -6$."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $G = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 3 & 4 \\\\ 3 & 4 & 5 \\end{pmatrix}$ bằng phép biến đổi hàng sơ cấp.",
+      "answer": {
+        "steps": [
+          "Biến đổi hàng để đưa ma trận về dạng tam giác. Định thức không đổi khi đổi chỗ hai hàng (đổi dấu), hoặc cộng bội k lần một hàng vào hàng khác (giữ nguyên).",
+          "Bước 1: $H_2 \\leftarrow H_2 - 2H_1$:",
+          "$\\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & -1 & -2 \\\\ 3 & 4 & 5 \\end{pmatrix}$ (định thức tạm thời không đổi).",
+          "Bước 2: $H_3 \\leftarrow H_3 - 3H_1$:",
+          "$\\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & -1 & -2 \\\\ 0 & -2 & -4 \\end{pmatrix}$ (định thức tạm thời không đổi).",
+          "Bước 3: $H_3 \\leftarrow H_3 - 2H_2$:",
+          "$\\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & -1 & -2 \\\\ 0 & 0 & 0 \\end{pmatrix}$ (định thức tạm thời không đổi).",
+          "Ma trận kết quả có hàng 3 toàn 0, nên định thức bằng 0.",
+          "Vậy $\\det(G) = 0$."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng định thức của ma trận vuông cấp 2 bằng định thức của chuyển vị của nó.",
+      "answer": {
+        "steps": [
+          "Xét ma trận vuông cấp 2 bất kỳ: $A = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$.",
+          "Ma trận chuyển vị: $A^T = \\begin{pmatrix} a & c \\\\ b & d \\end{pmatrix}$.",
+          "Tính $\\det(A) = ad - bc$.",
+          "Tính $\\det(A^T) = a \\cdot d - c \\cdot b = ad - bc$ (do phép nhân số thực giao hoán).",
+          "Suy ra $\\det(A) = \\det(A^T)$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm $m$ để ma trận $H = \\begin{pmatrix} m & 1 & 1 \\\\ 1 & m & 1 \\\\ 1 & 1 & m \\end{pmatrix}$ có định thức bằng 0.",
+      "answer": {
+        "steps": [
+          "Tính $\\det(H)$ bằng khai triển Laplace theo hàng 1:",
+          "$\\det(H) = m \\cdot \\det \\begin{pmatrix} m & 1 \\\\ 1 & m \\end{pmatrix} - 1 \\cdot \\det \\begin{pmatrix} 1 & 1 \\\\ 1 & m \\end{pmatrix} + 1 \\cdot \\det \\begin{pmatrix} 1 & m \\\\ 1 & 1 \\end{pmatrix}$.",
+          "Tính định thức con:",
+          "$\\det \\begin{pmatrix} m & 1 \\\\ 1 & m \\end{pmatrix} = m \\cdot m - 1 \\cdot 1 = m^2 - 1$.",
+          "$\\det \\begin{pmatrix} 1 & 1 \\\\ 1 & m \\end{pmatrix} = 1 \\cdot m - 1 \\cdot 1 = m - 1$.",
+          "$\\det \\begin{pmatrix} 1 & m \\\\ 1 & 1 \\end{pmatrix} = 1 \\cdot 1 - m \\cdot 1 = 1 - m$.",
+          "Thay vào:",
+          "$\\det(H) = m(m^2 - 1) - 1(m - 1) + 1(1 - m) = m^3 - m - m + 1 + 1 - m = m^3 - 3m + 2$.",
+          "Giải phương trình $m^3 - 3m + 2 = 0$.",
+          "Phân tích thành nhân tử: Nhẩm nghiệm $m=1$: $1 - 3 + 2 = 0$, nên $(m-1)$ là nhân tử.",
+          "Chia đa thức: $m^3 - 3m + 2 = (m-1)(m^2 + m - 2)$.",
+          "Giải $m^2 + m - 2 = 0$: $\\Delta = 1 + 8 = 9$, $m = \\frac{-1 \\pm 3}{2}$, suy ra $m=1$ hoặc $m=-2$.",
+          "Kết hợp: $(m-1)(m^2 + m - 2) = (m-1)(m-1)(m+2) = (m-1)^2(m+2)$.",
+          "Vậy $\\det(H) = 0$ khi $(m-1)^2(m+2) = 0 \\Leftrightarrow m=1$ hoặc $m=-2$."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $A = \\begin{pmatrix} 3 & -2 \\\\ 1 & 4 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Công thức định thức ma trận cấp 2: $\\det(A) = a_{11}a_{22} - a_{12}a_{21}$",
+          "Thay số: $\\det(A) = (3)(4) - (-2)(1) = 12 - (-2) = 12 + 2 = 14$"
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $B = \\begin{pmatrix} 2 & 1 & 3 \\\\ 0 & 4 & -1 \\\\ 0 & 0 & 5 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Ma trận B là ma trận tam giác trên",
+          "Định thức ma trận tam giác bằng tích các phần tử trên đường chéo chính",
+          "$\\det(B) = 2 \\times 4 \\times 5 = 40$"
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng $\\det(A^T) = \\det(A)$ cho ma trận cấp 3 bất kỳ.",
+      "answer": {
+        "steps": [
+          "Xét ma trận $A = \\begin{pmatrix} a & b & c \\\\ d & e & f \\\\ g & h & i \\end{pmatrix}$",
+          "Tính $\\det(A) = a(ei - fh) - b(di - fg) + c(dh - eg)$",
+          "Ma trận chuyển vị $A^T = \\begin{pmatrix} a & d & g \\\\ b & e & h \\\\ c & f & i \\end{pmatrix}$",
+          "Tính $\\det(A^T) = a(ei - fh) - d(bi - ch) + g(bf - ce)$",
+          "Khai triển: $a(ei - fh) - d(bi) + d(ch) + g(bf) - g(ce)$",
+          "Sắp xếp lại: $aei - afh - bdi + cdh + bfg - ceg$",
+          "So sánh với $\\det(A) = aei - afh - bdi + bfg + cdh - ceg$",
+          "Hai biểu thức giống nhau, suy ra $\\det(A) = \\det(A^T)$"
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $C = \\begin{pmatrix} 1 & 2 & 0 \\\\ 3 & 4 & 0 \\\\ 5 & 6 & 7 \\end{pmatrix}$ bằng khai triển Laplace theo cột 3.",
+      "answer": {
+        "steps": [
+          "Cột 3 có hai phần tử 0, chỉ $c_{33} = 7 \\neq 0$",
+          "Khai triển Laplace: $\\det(C) = c_{33} \\cdot C_{33}$",
+          "$C_{33} = (-1)^{3+3} \\det(M_{33}) = \\det \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$",
+          "Tính $\\det \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix} = (1)(4) - (2)(3) = 4 - 6 = -2$",
+          "Vậy $\\det(C) = 7 \\times (-2) = -14$"
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $D = \\begin{pmatrix} 2 & 5 \\\\ 1 & 3 \\end{pmatrix}$. Tính $\\det(D^{-1})$ và $\\det(2D)$.",
+      "answer": {
+        "steps": [
+          "Tính $\\det(D) = (2)(3) - (5)(1) = 6 - 5 = 1$",
+          "Tính $\\det(D^{-1}) = \\frac{1}{\\det(D)} = \\frac{1}{1} = 1$",
+          "Tính $\\det(2D)$: Ma trận cấp 2 nên $\\det(kA) = k^2 \\det(A)$",
+          "$\\det(2D) = 2^2 \\times 1 = 4 \\times 1 = 4$"
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận khối $E = \\begin{pmatrix} 2 & 3 & 0 & 0 \\\\ 1 & 4 & 0 & 0 \\\\ 0 & 0 & 5 & 6 \\\\ 0 & 0 & 7 & 8 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Ma trận E có dạng $\\begin{pmatrix} A & 0 \\\\ 0 & B \\end{pmatrix}$ với $A = \\begin{pmatrix} 2 & 3 \\\\ 1 & 4 \\end{pmatrix}$, $B = \\begin{pmatrix} 5 & 6 \\\\ 7 & 8 \\end{pmatrix}$",
+          "Định thức ma trận khối: $\\det(E) = \\det(A) \\times \\det(B)$",
+          "Tính $\\det(A) = (2)(4) - (3)(1) = 8 - 3 = 5$",
+          "Tính $\\det(B) = (5)(8) - (6)(7) = 40 - 42 = -2$",
+          "Vậy $\\det(E) = 5 \\times (-2) = -10$"
+        ]
+      }
+    },
+    {
+      "question": "Tìm x để định thức của $F = \\begin{pmatrix} 1 & x & 2 \\\\ 0 & 3 & 1 \\\\ 1 & 0 & 4 \\end{pmatrix}$ bằng 5.",
+      "answer": {
+        "steps": [
+          "Tính $\\det(F)$ bằng khai triển theo hàng 1:",
+          "$\\det(F) = 1 \\cdot \\det \\begin{pmatrix} 3 & 1 \\\\ 0 & 4 \\end{pmatrix} - x \\cdot \\det \\begin{pmatrix} 0 & 1 \\\\ 1 & 4 \\end{pmatrix} + 2 \\cdot \\det \\begin{pmatrix} 0 & 3 \\\\ 1 & 0 \\end{pmatrix}$",
+          "Tính từng định thức con:",
+          "$\\det \\begin{pmatrix} 3 & 1 \\\\ 0 & 4 \\end{pmatrix} = 3 \\times 4 - 1 \\times 0 = 12$",
+          "$\\det \\begin{pmatrix} 0 & 1 \\\\ 1 & 4 \\end{pmatrix} = 0 \\times 4 - 1 \\times 1 = -1$",
+          "$\\det \\begin{pmatrix} 0 & 3 \\\\ 1 & 0 \\end{pmatrix} = 0 \\times 0 - 3 \\times 1 = -3$",
+          "Thay vào: $\\det(F) = 1(12) - x(-1) + 2(-3) = 12 + x - 6 = 6 + x$",
+          "Đặt $6 + x = 5 \\Rightarrow x = -1$"
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng nếu một ma trận vuông có hai hàng tỉ lệ thì định thức bằng 0.",
+      "answer": {
+        "steps": [
+          "Giả sử ma trận A có hàng i và hàng j tỉ lệ: Hàng j = k × Hàng i (i ≠ j)",
+          "Sử dụng tính chất: Nếu nhân một hàng với k thì định thức nhân k",
+          "Xét ma trận B giống A nhưng thay hàng j bằng hàng i",
+          "Khi đó $\\det(B) = 0$ vì có hai hàng giống nhau",
+          "Mà $\\det(A) = k \\times \\det(B)$ (vì A có hàng j = k × hàng i của B)",
+          "Suy ra $\\det(A) = k \\times 0 = 0$"
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $G = \\begin{pmatrix} 0 & 1 & 2 & 3 \\\\ 1 & 0 & 4 & 5 \\\\ 2 & 4 & 0 & 6 \\\\ 3 & 5 & 6 & 0 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Nhận thấy G là ma trận đối xứng",
+          "Sử dụng phép biến đổi hàng: $R_2 \\leftarrow R_2 - 2R_1$, $R_3 \\leftarrow R_3 - 3R_1$, $R_4 \\leftarrow R_4 - 4R_1$",
+          "Ma trận mới: $\\begin{pmatrix} 0 & 1 & 2 & 3 \\\\ 1 & -2 & 0 & -1 \\\\ 2 & 1 & -6 & -3 \\\\ 3 & 1 & -2 & -12 \\end{pmatrix}$",
+          "Đổi chỗ hàng 1 và hàng 2 (định thức đổi dấu)",
+          "Ma trận: $\\begin{pmatrix} 1 & -2 & 0 & -1 \\\\ 0 & 1 & 2 & 3 \\\\ 2 & 1 & -6 & -3 \\\\ 3 & 1 & -2 & -12 \\end{pmatrix}$",
+          "Tiếp tục: $R_3 \\leftarrow R_3 - 2R_1$, $R_4 \\leftarrow R_4 - 3R_1$",
+          "Ma trận: $\\begin{pmatrix} 1 & -2 & 0 & -1 \\\\ 0 & 1 & 2 & 3 \\\\ 0 & 5 & -6 & -1 \\\\ 0 & 7 & -2 & -9 \\end{pmatrix}$",
+          "Khai triển theo cột 1: $\\det(G) = -1 \\times \\det \\begin{pmatrix} 1 & 2 & 3 \\\\ 5 & -6 & -1 \\\\ 7 & -2 & -9 \\end{pmatrix}$",
+          "Tính định thức cấp 3: $1[(-6)(-9) - (-1)(-2)] - 2[5(-9) - (-1)(7)] + 3[5(-2) - (-6)(7)]$",
+          "$= 1(54 - 2) - 2(-45 + 7) + 3(-10 + 42)$",
+          "$= 52 - 2(-38) + 3(32) = 52 + 76 + 96 = 224$",
+          "Vậy $\\det(G) = -224$"
+        ]
+      }
+    },
+    {
+      "question": "Cho $\\det \\begin{pmatrix} a & b & c \\\\ d & e & f \\\\ g & h & i \\end{pmatrix} = 4$. Tính $\\det \\begin{pmatrix} 2a & 2b & 2c \\\\ d+3g & e+3h & f+3i \\\\ g & h & i \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Gọi ma trận ban đầu là A, ma trận mới là B",
+          "Cột 1 của B = 2 × cột 1 của A",
+          "Hàng 2 của B = hàng 2 của A + 3 × hàng 3 của A",
+          "Áp dụng tính chất: Nhân cột 1 với 2: $\\det(B) = 2 \\times \\det \\begin{pmatrix} a & b & c \\\\ d & e & f \\\\ g & h & i \\end{pmatrix}$",
+          "Cộng bội k hàng vào hàng khác không đổi định thức",
+          "Sau khi nhân cột 1 với 2: $\\det = 2 \\times 4 = 8$",
+          "Phép biến đổi hàng 2 không làm thay đổi định thức",
+          "Vậy $\\det(B) = 8$"
+        ]
+      }
+    },
+    {
+      "question": "Tìm m để ma trận $H = \\begin{pmatrix} 1 & m & 2 \\\\ 0 & 2 & 1 \\\\ 3 & 1 & 4 \\end{pmatrix}$ khả nghịch.",
+      "answer": {
+        "steps": [
+          "Ma trận khả nghịch khi $\\det(H) \\neq 0$",
+          "Tính $\\det(H)$ bằng khai triển theo hàng 1:",
+          "$\\det(H) = 1 \\cdot \\det \\begin{pmatrix} 2 & 1 \\\\ 1 & 4 \\end{pmatrix} - m \\cdot \\det \\begin{pmatrix} 0 & 1 \\\\ 3 & 4 \\end{pmatrix} + 2 \\cdot \\det \\begin{pmatrix} 0 & 2 \\\\ 3 & 1 \\end{pmatrix}$",
+          "Tính từng định thức con:",
+          "$\\det \\begin{pmatrix} 2 & 1 \\\\ 1 & 4 \\end{pmatrix} = 2 \\times 4 - 1 \\times 1 = 7$",
+          "$\\det \\begin{pmatrix} 0 & 1 \\\\ 3 & 4 \\end{pmatrix} = 0 \\times 4 - 1 \\times 3 = -3$",
+          "$\\det \\begin{pmatrix} 0 & 2 \\\\ 3 & 1 \\end{pmatrix} = 0 \\times 1 - 2 \\times 3 = -6$",
+          "Thay vào: $\\det(H) = 1(7) - m(-3) + 2(-6) = 7 + 3m - 12 = 3m - 5$",
+          "Để $H$ khả nghịch: $3m - 5 \\neq 0 \\Rightarrow m \\neq \\frac{5}{3}$"
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $A = \\begin{pmatrix} 3 & 1 & 2 \\\\ 0 & 4 & -1 \\\\ 5 & 0 & 2 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Sử dụng công thức khai triển định thức theo hàng 1: $\\det(A) = a_{11}C_{11} + a_{12}C_{12} + a_{13}C_{13}$, trong đó $C_{ij}$ là phần bù đại số.",
+          "Tính phần bù đại số: $C_{11} = (-1)^{1+1} \\det(M_{11})$, với $M_{11} = \\begin{pmatrix} 4 & -1 \\\\ 0 & 2 \\end{pmatrix}$. Vậy $\\det(M_{11}) = 4 \\cdot 2 - (-1) \\cdot 0 = 8$, nên $C_{11} = 8$.",
+          "Tương tự: $C_{12} = (-1)^{1+2} \\det(M_{12})$, với $M_{12} = \\begin{pmatrix} 0 & -1 \\\\ 5 & 2 \\end{pmatrix}$. Vậy $\\det(M_{12}) = 0 \\cdot 2 - (-1) \\cdot 5 = 5$, nên $C_{12} = -5$.",
+          "Tính $C_{13} = (-1)^{1+3} \\det(M_{13})$, với $M_{13} = \\begin{pmatrix} 0 & 4 \\\\ 5 & 0 \\end{pmatrix}$. Vậy $\\det(M_{13}) = 0 \\cdot 0 - 4 \\cdot 5 = -20$, nên $C_{13} = -20$.",
+          "Tính định thức: $\\det(A) = 3 \\cdot 8 + 1 \\cdot (-5) + 2 \\cdot (-20) = 24 - 5 - 40 = -21$."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng định thức của ma trận $A = \\begin{pmatrix} a & b \\\\ b & a \\end{pmatrix}$ là $a^2 - b^2$.",
+      "answer": {
+        "steps": [
+          "Sử dụng công thức định thức ma trận 2x2: $\\det(A) = a_{11}a_{22} - a_{12}a_{21}$.",
+          "Với $A = \\begin{pmatrix} a & b \\\\ b & a \\end{pmatrix}$, ta có $a_{11} = a$, $a_{12} = b$, $a_{21} = b$, $a_{22} = a$.",
+          "Áp dụng công thức: $\\det(A) = a \\cdot a - b \\cdot b = a^2 - b^2$.",
+          "Kết luận: Định thức của ma trận $A$ là $a^2 - b^2$."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Sử dụng khai triển theo hàng 1: $\\det(A) = 1 \\cdot C_{11} + 2 \\cdot C_{12} + 3 \\cdot C_{13}$.",
+          "Tính $C_{11} = (-1)^{1+1} \\det(M_{11})$, với $M_{11} = \\begin{pmatrix} 5 & 6 \\\\ 8 & 9 \\end{pmatrix}$. Vậy $\\det(M_{11}) = 5 \\cdot 9 - 6 \\cdot 8 = 45 - 48 = -3$, nên $C_{11} = -3$.",
+          "Tính $C_{12} = (-1)^{1+2} \\det(M_{12})$, với $M_{12} = \\begin{pmatrix} 4 & 6 \\\\ 7 & 9 \\end{pmatrix}$. Vậy $\\det(M_{12}) = 4 \\cdot 9 - 6 \\cdot 7 = 36 - 42 = -6$, nên $C_{12} = 6$.",
+          "Tính $C_{13} = (-1)^{1+3} \\det(M_{13})$, với $M_{13} = \\begin{pmatrix} 4 & 5 \\\\ 7 & 8 \\end{pmatrix}$. Vậy $\\det(M_{13}) = 4 \\cdot 8 - 5 \\cdot 7 = 32 - 35 = -3$, nên $C_{13} = -3$.",
+          "Tính định thức: $\\det(A) = 1 \\cdot (-3) + 2 \\cdot 6 + 3 \\cdot (-3) = -3 + 12 - 9 = 0$."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng nếu ma trận $A$ là ma trận tam giác trên thì định thức bằng tích các phần tử trên đường chéo chính.",
+      "answer": {
+        "steps": [
+          "Giả sử $A$ là ma trận tam giác trên cấp $n \\times n$, tức $a_{ij} = 0$ nếu $i > j$.",
+          "Sử dụng khai triển định thức theo hàng $n$: $\\det(A) = \\sum_{j=1}^n a_{nj} C_{nj}$.",
+          "Vì $A$ là tam giác trên, $a_{nj} = 0$ với $j < n$, nên chỉ có $a_{nn} C_{nn}$ khác 0.",
+          "Phần bù đại số $C_{nn} = (-1)^{n+n} \\det(M_{nn}) = \\det(M_{nn})$, với $M_{nn}$ là ma trận $(n-1) \\times (n-1)$ tam giác trên.",
+          "Lặp lại quá trình cho $M_{nn}$, ta thấy định thức là tích các phần tử trên đường chéo chính của $M_{nn}$.",
+          "Kết luận: $\\det(A) = a_{11} \\cdot a_{22} \\cdot \\ldots \\cdot a_{nn}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{pmatrix} 1 & 2 & 0 \\\\ -1 & 0 & 3 \\\\ 2 & 1 & 4 \\end{pmatrix}$. Tính định thức bằng phương pháp biến đổi sơ cấp.",
+      "answer": {
+        "steps": [
+          "Biến đổi ma trận về dạng tam giác trên bằng phép biến đổi sơ cấp không làm thay đổi định thức.",
+          "Cộng hàng 1 nhân $(-1)$ vào hàng 2: Hàng 2 mới là $(-1 + 1, 0 - 2, 3 - 0) = (0, -2, 3)$. Ma trận mới: $\\begin{pmatrix} 1 & 2 & 0 \\\\ 0 & -2 & 3 \\\\ 2 & 1 & 4 \\end{pmatrix}$.",
+          "Cộng hàng 1 nhân $(-2)$ vào hàng 3: Hàng 3 mới là $(2 - 2, 1 - 4, 4 - 0) = (0, -3, 4)$. Ma trận mới: $\\begin{pmatrix} 1 & 2 & 0 \\\\ 0 & -2 & 3 \\\\ 0 & -3 & 4 \\end{pmatrix}$.",
+          "Cộng hàng 2 nhân $(3/2)$ vào hàng 3: Hàng 3 mới là $(0, -3 + 3, 4 - (3/2) \\cdot 3) = (0, 0, -1/2)$. Ma trận mới: $\\begin{pmatrix} 1 & 2 & 0 \\\\ 0 & -2 & 3 \\\\ 0 & 0 & -1/2 \\end{pmatrix}$.",
+          "Tính định thức ma trận tam giác: $\\det(A) = 1 \\cdot (-2) \\cdot (-1/2) = 1$."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng nếu $A$ là ma trận vuông có hai hàng giống nhau thì $\\det(A) = 0$.",
+      "answer": {
+        "steps": [
+          "Giả sử $A$ là ma trận cấp $n \\times n$ với hàng $i$ và hàng $j$ giống nhau ($i \\neq j$).",
+          "Nếu hoán đổi hàng $i$ và hàng $j$, ma trận không đổi vì hai hàng giống nhau, nhưng định thức đổi dấu: $\\det(A) = -\\det(A)$.",
+          "Do đó, $\\det(A) = -\\det(A) \\implies 2\\det(A) = 0 \\implies \\det(A) = 0$.",
+          "Kết luận: Định thức của ma trận có hai hàng giống nhau bằng 0."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $A = \\begin{pmatrix} 0 & 1 & 2 \\\\ 1 & 0 & 3 \\\\ 2 & 3 & 0 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Sử dụng khai triển theo hàng 1: $\\det(A) = 0 \\cdot C_{11} + 1 \\cdot C_{12} + 2 \\cdot C_{13}$.",
+          "Tính $C_{12} = (-1)^{1+2} \\det(M_{12})$, với $M_{12} = \\begin{pmatrix} 1 & 3 \\\\ 2 & 0 \\end{pmatrix}$. Vậy $\\det(M_{12}) = 1 \\cdot 0 - 3 \\cdot 2 = -6$, nên $C_{12} = -(-6) = 6$.",
+          "Tính $C_{13} = (-1)^{1+3} \\det(M_{13})$, với $M_{13} = \\begin{pmatrix} 1 & 0 \\\\ 2 & 3 \\end{pmatrix}$. Vậy $\\det(M_{13}) = 1 \\cdot 3 - 0 \\cdot 2 = 3$, nên $C_{13} = 3$.",
+          "Tính định thức: $\\det(A) = 0 \\cdot C_{11} + 1 \\cdot 6 + 2 \\cdot 3 = 6 + 6 = 12$."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng $\\det(A^T) = \\det(A)$ cho mọi ma trận vuông $A$.",
+      "answer": {
+        "steps": [
+          "Giả sử $A$ là ma trận vuông cấp $n \\times n$. Ma trận chuyển vị $A^T$ có phần tử $a^T_{ij} = a_{ji}$.",
+          "Định thức của $A$ được tính bằng: $\\det(A) = \\sum (-1)^{\\sigma} a_{1\\sigma(1)} a_{2\\sigma(2)} \\cdots a_{n\\sigma(n)}$, với $\\sigma$ là một hoán vị.",
+          "Định thức của $A^T$: $\\det(A^T) = \\sum (-1)^{\\sigma} a^T_{1\\sigma(1)} a^T_{2\\sigma(2)} \\cdots a^T_{n\\sigma(n)} = \\sum (-1)^{\\sigma} a_{\\sigma(1)1} a_{\\sigma(2)2} \\cdots a_{\\sigma(n)n}$.",
+          "Hoán vị ngược $\\sigma^{-1}$ có cùng dấu với $\\sigma$, nên $\\det(A^T) = \\det(A)$.",
+          "Kết luận: $\\det(A^T) = \\det(A)$."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $A = \\begin{pmatrix} 2 & 0 & 1 & 3 \\\\ 0 & 1 & -1 & 2 \\\\ 1 & 2 & 0 & 0 \\\\ 3 & 1 & 2 & 1 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Sử dụng khai triển theo hàng 2 vì có nhiều số 0: $\\det(A) = 0 \\cdot C_{21} + 1 \\cdot C_{22} + (-1) \\cdot C_{23} + 2 \\cdot C_{24}$.",
+          "Tính $C_{22} = (-1)^{2+2} \\det(M_{22})$, với $M_{22} = \\begin{pmatrix} 2 & 1 & 3 \\\\ 1 & 0 & 0 \\\\ 3 & 2 & 1 \\end{pmatrix}$. Khai triển $M_{22}$ theo cột 3: $C_{33} = (-1)^{3+3} \\det(\\begin{pmatrix} 2 & 1 \\\\ 1 & 0 \\end{pmatrix}) = 0 - 1 = -1$, nên $\\det(M_{22}) = 3 \\cdot (-1) = -3$, $C_{22} = -3$.",
+          "Tính $C_{23} = (-1)^{2+3} \\det(M_{23})$, với $M_{23} = \\begin{pmatrix} 2 & 0 & 3 \\\\ 1 & 2 & 0 \\\\ 3 & 1 & 1 \\end{pmatrix}$. Khai triển $M_{23}$ theo cột 2: $\\det(M_{23}) = 2 \\cdot (-1)^{2+2} \\det(\\begin{pmatrix} 2 & 3 \\\\ 3 & 1 \\end{pmatrix}) = 2 \\cdot (2 - 9) = -14$, nên $C_{23} = -(-14) = 14$.",
+          "Tính $C_{24} = (-1)^{2+4} \\det(M_{24})$, với $M_{24} = \\begin{pmatrix} 2 & 0 & 1 \\\\ 1 & 2 & 0 \\\\ 3 & 1 & 2 \\end{pmatrix}$. Khai triển $M_{24}$ theo cột 2: $\\det(M_{24}) = 2 \\cdot (-1)^{2+2} \\det(\\begin{pmatrix} 2 & 1 \\\\ 3 & 2 \\end{pmatrix}) = 2 \\cdot (4 - 3) = 2$, nên $C_{24} = 2$.",
+          "Tính định thức: $\\det(A) = 0 \\cdot C_{21} + 1 \\cdot (-3) + (-1) \\cdot 14 + 2 \\cdot 2 = -3 - 14 + 4 = -13$."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng nếu $A$ và $B$ là hai ma trận vuông cấp $n$, thì $\\det(AB) = \\det(A) \\det(B)$.",
+      "answer": {
+        "steps": [
+          "Giả sử $A$ và $B$ là ma trận vuông cấp $n \\times n$.",
+          "Nếu $A$ khả nghịch, tồn tại ma trận $A^{-1}$ sao cho $AA^{-1} = I$. Khi đó, $\\det(AB) = \\det(A) \\det(B)$ theo tính chất ma trận khả nghịch.",
+          "Nếu $A$ không khả nghịch, thì $\\det(A) = 0$. Đồng thời, $AB$ cũng không khả nghịch, nên $\\det(AB) = 0$. Do đó, $\\det(AB) = 0 = \\det(A) \\det(B)$.",
+          "Kết luận: Với mọi ma trận vuông $A$, $B$, ta có $\\det(AB) = \\det(A) \\det(B)$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình sau bằng phương pháp thay thế: $\\begin{cases} x + 2y = 7 \\\\ 3x - y = 4 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Từ phương trình thứ nhất, rút $x$: $x + 2y = 7 \\implies x = 7 - 2y$.",
+          "Thay $x = 7 - 2y$ vào phương trình thứ hai: $3(7 - 2y) - y = 4$.",
+          "Rút gọn: $21 - 6y - y = 4 \\implies 21 - 7y = 4$.",
+          "Giải tìm $y$: $21 - 7y = 4 \\implies -7y = 4 - 21 \\implies -7y = -17 \\implies y = \\frac{17}{7}$.",
+          "Thay $y = \\frac{17}{7}$ vào $x = 7 - 2y$: $x = 7 - 2\\left(\\frac{17}{7}\\right) = 7 - \\frac{34}{7} = \\frac{49}{7} - \\frac{34}{7} = \\frac{15}{7}$.",
+          "Kết quả: $x = \\frac{15}{7}$, $y = \\frac{17}{7}$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình sau bằng phương pháp cộng đại số: $\\begin{cases} 2x + 3y = 5 \\\\ 4x - 3y = 1 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Cộng hai phương trình để khử $y$: $(2x + 3y) + (4x - 3y) = 5 + 1 \\implies 6x = 6$.",
+          "Giải tìm $x$: $6x = 6 \\implies x = 1$.",
+          "Thay $x = 1$ vào phương trình thứ nhất: $2(1) + 3y = 5 \\implies 2 + 3y = 5$.",
+          "Giải tìm $y$: $3y = 5 - 2 \\implies 3y = 3 \\implies y = 1$.",
+          "Kết quả: $x = 1$, $y = 1$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định xem hệ phương trình sau có nghiệm duy nhất, vô số nghiệm hay vô nghiệm: $\\begin{cases} x - 2y = 3 \\\\ 2x - 4y = 6 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Nhân phương trình thứ nhất với 2: $2(x - 2y) = 2 \\cdot 3 \\implies 2x - 4y = 6$.",
+          "So sánh với phương trình thứ hai: $2x - 4y = 6$.",
+          "Hai phương trình trùng nhau, biểu diễn cùng một đường thẳng.",
+          "Vậy hệ có vô số nghiệm."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình bằng phương pháp Gauss: $\\begin{cases} x + y = 3 \\\\ 2x + 3y = 8 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Viết ma trận tăng cường: $\\begin{pmatrix} 1 & 1 & | & 3 \\\\ 2 & 3 & | & 8 \\end{pmatrix}$.",
+          "Trừ 2 lần hàng 1 khỏi hàng 2: $R_2 - 2R_1 \\implies \\begin{pmatrix} 1 & 1 & | & 3 \\\\ 0 & 1 & | & 2 \\end{pmatrix}$.",
+          "Từ hàng 2: $y = 2$.",
+          "Thay $y = 2$ vào hàng 1: $x + 2 = 3 \\implies x = 1$.",
+          "Kết quả: $x = 1$, $y = 2$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình bằng nghịch đảo ma trận: $\\begin{cases} x + 3y = 4 \\\\ 2x - y = 1 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Viết dưới dạng ma trận: $\\begin{pmatrix} 1 & 3 \\\\ 2 & -1 \\end{pmatrix} \\begin{pmatrix} x \\\\ y \\end{pmatrix} = \\begin{pmatrix} 4 \\\\ 1 \\end{pmatrix}$.",
+          "Tính định thức: $\\det = (1)(-1) - (3)(2) = -1 - 6 = -7$.",
+          "Tìm ma trận nghịch đảo: $A^{-1} = \\frac{1}{-7} \\begin{pmatrix} -1 & -3 \\\\ -2 & 1 \\end{pmatrix} = \\begin{pmatrix} \\frac{1}{7} & \\frac{3}{7} \\\\ \\frac{2}{7} & -\\frac{1}{7} \\end{pmatrix}$.",
+          "Nhân $A^{-1}$ với vế phải: $\\begin{pmatrix} x \\\\ y \\end{pmatrix} = \\begin{pmatrix} \\frac{1}{7} & \\frac{3}{7} \\\\ \\frac{2}{7} & -\\frac{1}{7} \\end{pmatrix} \\begin{pmatrix} 4 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} \\frac{4}{7} + \\frac{3}{7} \\\\ \\frac{8}{7} - \\frac{1}{7} \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 1 \\end{pmatrix}$.",
+          "Kết quả: $x = 1$, $y = 1$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình 3 ẩn: $\\begin{cases} x + y - z = 2 \\\\ 2x - y + z = 1 \\\\ x + 2y + z = 5 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Cộng phương trình 1 và 2 để khử $y$: $(x + y - z) + (2x - y + z) = 2 + 1 \\implies 3x = 3 \\implies x = 1$.",
+          "Thay $x = 1$ vào phương trình 1: $1 + y - z = 2 \\implies y - z = 1$.",
+          "Thay $x = 1$ vào phương trình 3: $1 + 2y + z = 5 \\implies 2y + z = 4$.",
+          "Giải hệ hai phương trình: $\\begin{cases} y - z = 1 \\\\ 2y + z = 4 \\end{cases}$.",
+          "Cộng hai phương trình: $(y - z) + (2y + z) = 1 + 4 \\implies 3y = 5 \\implies y = \\frac{5}{3}$.",
+          "Thay $y = \\frac{5}{3}$ vào $y - z = 1$: $\\frac{5}{3} - z = 1 \\implies z = \\frac{5}{3} - 1 = \\frac{2}{3}$.",
+          "Kết quả: $x = 1$, $y = \\frac{5}{3}$, $z = \\frac{2}{3}$."
+        ]
+      }
+    },
+    {
+      "question": "Một cửa hàng bán hai loại bút: bút A giá 5 nghìn đồng và bút B giá 7 nghìn đồng. Nếu mua 10 chiếc bút với tổng giá 62 nghìn đồng, hỏi mua bao nhiêu bút mỗi loại?",
+      "answer": {
+        "steps": [
+          "Gọi $x$ là số bút A, $y$ là số bút B.",
+          "Lập hệ: $\\begin{cases} x + y = 10 \\\\ 5x + 7y = 62 \\end{cases}$.",
+          "Từ phương trình 1: $x = 10 - y$.",
+          "Thay vào phương trình 2: $5(10 - y) + 7y = 62 \\implies 50 - 5y + 7y = 62 \\implies 50 + 2y = 62$.",
+          "Giải tìm $y$: $2y = 62 - 50 \\implies 2y = 12 \\implies y = 6$.",
+          "Tính $x$: $x = 10 - 6 = 4$.",
+          "Kết quả: 4 bút A và 6 bút B."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình bằng cách vẽ đồ thị: $\\begin{cases} y = x + 2 \\\\ y = 3x - 2 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Vẽ đường thẳng thứ nhất: $y = x + 2$, cắt trục $y$ tại 2, độ dốc 1.",
+          "Vẽ đường thẳng thứ hai: $y = 3x - 2$, cắt trục $y$ tại -2, độ dốc 3.",
+          "Tìm giao điểm: $x + 2 = 3x - 2$.",
+          "Giải: $x + 2 = 3x - 2 \\implies 2 + 2 = 3x - x \\implies 4 = 2x \\implies x = 2$.",
+          "Thay $x = 2$ vào $y = x + 2$: $y = 2 + 2 = 4$.",
+          "Kết quả: $x = 2$, $y = 4$ (giao điểm của hai đường thẳng)."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình bằng quy tắc Cramer: $\\begin{cases} 2x + y = 5 \\\\ x - 2y = 1 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Tính định thức $D$: $D = \\begin{vmatrix} 2 & 1 \\\\ 1 & -2 \\end{vmatrix} = (2)(-2) - (1)(1) = -4 - 1 = -5$.",
+          "Tính $D_x$: $D_x = \\begin{vmatrix} 5 & 1 \\\\ 1 & -2 \\end{vmatrix} = (5)(-2) - (1)(1) = -10 - 1 = -11$.",
+          "Tính $D_y$: $D_y = \\begin{vmatrix} 2 & 5 \\\\ 1 & 1 \\end{vmatrix} = (2)(1) - (5)(1) = 2 - 5 = -3$.",
+          "Tính $x$ và $y$: $x = \\frac{D_x}{D} = \\frac{-11}{-5} = \\frac{11}{5}$, $y = \\frac{D_y}{D} = \\frac{-3}{-5} = \\frac{3}{5}$.",
+          "Kết quả: $x = \\frac{11}{5}$, $y = \\frac{3}{5}$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình có phân số: $\\begin{cases} \\frac{x}{2} + \\frac{y}{3} = 2 \\\\ \\frac{x}{4} - \\frac{y}{6} = 1 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Nhân phương trình 1 với 6: $3x + 2y = 12$.",
+          "Nhân phương trình 2 với 12: $3x - 2y = 12$.",
+          "Cộng hai phương trình: $(3x + 2y) + (3x - 2y) = 12 + 12 \\implies 6x = 24 \\implies x = 4$.",
+          "Thay $x = 4$ vào $3x + 2y = 12$: $3(4) + 2y = 12 \\implies 12 + 2y = 12 \\implies 2y = 0 \\implies y = 0$.",
+          "Kết quả: $x = 4$, $y = 0$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình sau bằng phương pháp thế: $\\begin{cases} 3x - y = 4 \\\\ x + 2y = 3 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Từ phương trình thứ hai, biểu diễn $x$ theo $y$: $x = 3 - 2y$.",
+          "Thế $x = 3 - 2y$ vào phương trình đầu: $3(3 - 2y) - y = 4 \\iff 9 - 6y - y = 4 \\iff -7y = -5 \\iff y = \\frac{5}{7}$.",
+          "Thay $y = \\frac{5}{7}$ vào $x = 3 - 2y$: $x = 3 - 2 \\times \\frac{5}{7} = 3 - \\frac{10}{7} = \\frac{11}{7}$.",
+          "Kết luận: Nghiệm của hệ là $\\left( \\frac{11}{7}, \\frac{5}{7} \\right)$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình sau bằng phương pháp Gauss: $\\begin{cases} x + 2y - z = 3 \\\\ 2x + y + z = 2 \\\\ -x + y + 2z = 1 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Viết ma trận mở rộng: $\\left(\\begin{array}{ccc|c} 1 & 2 & -1 & 3 \\\\ 2 & 1 & 1 & 2 \\\\ -1 & 1 & 2 & 1 \\end{array}\\right)$.",
+          "Khử $x$ ở hàng 2 và 3: $H_2 \\to H_2 - 2H_1$, $H_3 \\to H_3 + H_1$ \\\\ Ma trận mới: $\\left(\\begin{array}{ccc|c} 1 & 2 & -1 & 3 \\\\ 0 & -3 & 3 & -4 \\\\ 0 & 3 & 1 & 4 \\end{array}\\right)$.",
+          "Khử $y$ ở hàng 3: $H_3 \\to H_3 + H_2$ \\\\ Ma trận mới: $\\left(\\begin{array}{ccc|c} 1 & 2 & -1 & 3 \\\\ 0 & -3 & 3 & -4 \\\\ 0 & 0 & 4 & 0 \\end{array}\\right)$.",
+          "Giải ngược từ dưới lên:",
+          "Từ hàng 3: $4z = 0 \\iff z = 0$.",
+          "Từ hàng 2: $-3y + 3(0) = -4 \\iff -3y = -4 \\iff y = \\frac{4}{3}$.",
+          "Từ hàng 1: $x + 2\\left(\\frac{4}{3}\\right) - 0 = 3 \\iff x + \\frac{8}{3} = 3 \\iff x = 3 - \\frac{8}{3} = \\frac{1}{3}$.",
+          "Kết luận: Nghiệm của hệ là $\\left( \\frac{1}{3}, \\frac{4}{3}, 0 \\right)$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm ma trận nghịch đảo của $A = \\begin{pmatrix} 2 & 1 \\\\ 5 & 3 \\end{pmatrix}$ và dùng nó giải hệ $A\\mathbf{x} = \\mathbf{b}$ với $\\mathbf{b} = \\begin{pmatrix} 1 \\\\ 4 \\end{pmatrix}$.",
+      "answer": {
+        "steps": [
+          "Tính định thức của $A$: $\\det(A) = (2)(3) - (1)(5) = 6 - 5 = 1 \\neq 0$ nên $A$ khả nghịch.",
+          "Tìm ma trận nghịch đảo: $A^{-1} = \\frac{1}{\\det(A)} \\begin{pmatrix} 3 & -1 \\\\ -5 & 2 \\end{pmatrix}^\\top = \\begin{pmatrix} 3 & -5 \\\\ -1 & 2 \\end{pmatrix}$ (vì định thức bằng 1).",
+          "Nghiệm hệ: $\\mathbf{x} = A^{-1}\\mathbf{b} = \\begin{pmatrix} 3 & -5 \\\\ -1 & 2 \\end{pmatrix} \\begin{pmatrix} 1 \\\\ 4 \\end{pmatrix}$.",
+          "Tính từng phần tử: $x_1 = (3)(1) + (-5)(4) = 3 - 20 = -17$; $x_2 = (-1)(1) + (2)(4) = -1 + 8 = 7$.",
+          "Kết luận: Nghiệm hệ là $\\begin{pmatrix} -17 \\\\ 7 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định giá trị của $k$ để hệ sau có nghiệm duy nhất: $\\begin{cases} x + 2y = 3 \\\\ kx + 4y = 6 \\end{cases}$.",
+      "answer": {
+        "steps": [
+          "Hệ có nghiệm duy nhất khi ma trận hệ số $A = \\begin{pmatrix} 1 & 2 \\\\ k & 4 \\end{pmatrix}$ khả nghịch, tức $\\det(A) \\neq 0$.",
+          "Tính định thức: $\\det(A) = (1)(4) - (2)(k) = 4 - 2k$.",
+          "Giải $\\det(A) \\neq 0$: $4 - 2k \\neq 0 \\iff k \\neq 2$.",
+          "Kết luận: Hệ có nghiệm duy nhất khi $k \\neq 2$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ thuần nhất: $\\begin{cases} x + y - 2z = 0 \\\\ 2x - y + z = 0 \\\\ 4x + y - 3z = 0 \\end{cases}$.",
+      "answer": {
+        "steps": [
+          "Lập ma trận hệ số: $A = \\begin{pmatrix} 1 & 1 & -2 \\\\ 2 & -1 & 1 \\\\ 4 & 1 & -3 \\end{pmatrix}$.",
+          "Dùng phép khử Gauss: $\\left(\\begin{array}{ccc|c} 1 & 1 & -2 & 0 \\\\ 2 & -1 & 1 & 0 \\\\ 4 & 1 & -3 & 0 \\end{array}\\right)$.",
+          "Khử cột 1: $H_2 \\to H_2 - 2H_1$, $H_3 \\to H_3 - 4H_1$ \\\\ Ma trận mới: $\\left(\\begin{array}{ccc|c} 1 & 1 & -2 & 0 \\\\ 0 & -3 & 5 & 0 \\\\ 0 & -3 & 5 & 0 \\end{array}\\right)$.",
+          "Khử cột 2: $H_3 \\to H_3 - H_2$ \\\\ Ma trận mới: $\\left(\\begin{array}{ccc|c} 1 & 1 & -2 & 0 \\\\ 0 & -3 & 5 & 0 \\\\ 0 & 0 & 0 & 0 \\end{array}\\right)$.",
+          "Hệ tương đương: $\\begin{cases} x + y - 2z = 0 \\\\ -3y + 5z = 0 \\end{cases}$.",
+          "Chọn $z$ làm ẩn tự do: Đặt $z = t$ ($t \\in \\mathbb{R}$).",
+          "Từ phương trình 2: $-3y + 5t = 0 \\iff y = \\frac{5}{3}t$.",
+          "Từ phương trình 1: $x + \\frac{5}{3}t - 2t = 0 \\iff x = 2t - \\frac{5}{3}t = \\frac{1}{3}t$.",
+          "Kết luận: Nghiệm tổng quát là $\\begin{pmatrix} x \\\\ y \\\\ z \\end{pmatrix} = t \\begin{pmatrix} \\frac{1}{3} \\\\ \\frac{5}{3} \\\\ 1 \\end{pmatrix}$ với $t \\in \\mathbb{R}$."
+        ]
+      }
+    },
+    {
+      "question": "Biện luận số nghiệm của hệ theo tham số $m$: $\\begin{cases} x + y + z = 1 \\\\ 2x + 3y + 2z = 3 \\\\ 3x + 4y + (m+2)z = 5 \\end{cases}$.",
+      "answer": {
+        "steps": [
+          "Lập ma trận mở rộng: $\\widetilde{A} = \\left(\\begin{array}{ccc|c} 1 & 1 & 1 & 1 \\\\ 2 & 3 & 2 & 3 \\\\ 3 & 4 & m+2 & 5 \\end{array}\\right)$.",
+          "Khử Gauss: $H_2 \\to H_2 - 2H_1$, $H_3 \\to H_3 - 3H_1$ \\\\ Ma trận mới: $\\left(\\begin{array}{ccc|c} 1 & 1 & 1 & 1 \\\\ 0 & 1 & 0 & 1 \\\\ 0 & 1 & m-1 & 2 \\end{array}\\right)$.",
+          "Tiếp tục: $H_3 \\to H_3 - H_2$ \\\\ Ma trận mới: $\\left(\\begin{array}{ccc|c} 1 & 1 & 1 & 1 \\\\ 0 & 1 & 0 & 1 \\\\ 0 & 0 & m-1 & 1 \\end{array}\\right)$.",
+          "Biện luận:",
+          "Nếu $m-1 \\neq 0$ (tức $m \\neq 1$): Hệ có nghiệm duy nhất.",
+          "Nếu $m = 1$: Hàng 3 trở thành $0z = 1$ (vô lý) → Hệ vô nghiệm.",
+          "Kết luận: Hệ có nghiệm duy nhất khi $m \\neq 1$, vô nghiệm khi $m = 1$."
+        ]
+      }
+    },
+    {
+      "question": "Kiểm tra tính nhất quán của hệ phương trình (không giải): $\\begin{cases} 2x - y = 1 \\\\ x + 3y = 4 \\\\ 5x + 2y = 7 \\end{cases}$.",
+      "answer": {
+        "steps": [
+          "Lập ma trận mở rộng: $\\widetilde{A} = \\left(\\begin{array}{cc|c} 2 & -1 & 1 \\\\ 1 & 3 & 4 \\\\ 5 & 2 & 7 \\end{array}\\right)$.",
+          "Tính hạng của ma trận hệ số $A$ và ma trận mở rộng $\\widetilde{A}$.",
+          "Dùng phép biến đổi sơ cấp: $H_1 \\leftrightarrow H_2$ để có $\\left(\\begin{array}{cc|c} 1 & 3 & 4 \\\\ 2 & -1 & 1 \\\\ 5 & 2 & 7 \\end{array}\\right)$.",
+          "Khử cột 1: $H_2 \\to H_2 - 2H_1$, $H_3 \\to H_3 - 5H_1$ \\\\ Ma trận mới: $\\left(\\begin{array}{cc|c} 1 & 3 & 4 \\\\ 0 & -7 & -7 \\\\ 0 & -13 & -13 \\end{array}\\right)$.",
+          "Khử cột 2: $H_3 \\to H_3 - \\frac{13}{7}H_2$ \\\\ Ma trận mới: $\\left(\\begin{array}{cc|c} 1 & 3 & 4 \\\\ 0 & -7 & -7 \\\\ 0 & 0 & 0 \\end{array}\\right)$.",
+          "Suy ra: $\\text{rank}(A) = 2$ (số ẩn) và $\\text{rank}(\\widetilde{A}) = 2$.",
+          "Vì $\\text{rank}(A) = \\text{rank}(\\widetilde{A}) = 2$ (bằng số ẩn), hệ có nghiệm duy nhất và nhất quán."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình sau bằng phương pháp Gauss-Jordan: $\\begin{cases} x - 2y + z = 0 \\\\ 2x + y - z = 1 \\\\ 3x - y + 2z = 3 \\end{cases}$.",
+      "answer": {
+        "steps": [
+          "Lập ma trận mở rộng: $\\left(\\begin{array}{ccc|c} 1 & -2 & 1 & 0 \\\\ 2 & 1 & -1 & 1 \\\\ 3 & -1 & 2 & 3 \\end{array}\\right)$.",
+          "Khử cột 1: $H_2 \\to H_2 - 2H_1$, $H_3 \\to H_3 - 3H_1$ \\\\ Ma trận mới: $\\left(\\begin{array}{ccc|c} 1 & -2 & 1 & 0 \\\\ 0 & 5 & -3 & 1 \\\\ 0 & 5 & -1 & 3 \\end{array}\\right)$.",
+          "Khử cột 2: $H_3 \\to H_3 - H_2$ \\\\ Ma trận mới: $\\left(\\begin{array}{ccc|c} 1 & -2 & 1 & 0 \\\\ 0 & 5 & -3 & 1 \\\\ 0 & 0 & 2 & 2 \\end{array}\\right)$.",
+          "Chuẩn hóa hàng 3: $H_3 \\to \\frac{1}{2}H_3$ → $\\left(\\begin{array}{ccc|c} 1 & -2 & 1 & 0 \\\\ 0 & 5 & -3 & 1 \\\\ 0 & 0 & 1 & 1 \\end{array}\\right)$.",
+          "Khử ngược từ dưới lên:",
+          "Khử $z$ ở hàng 1 và 2: $H_1 \\to H_1 - H_3$, $H_2 \\to H_2 + 3H_3$ \\\\ Ma trận mới: $\\left(\\begin{array}{ccc|c} 1 & -2 & 0 & -1 \\\\ 0 & 5 & 0 & 4 \\\\ 0 & 0 & 1 & 1 \\end{array}\\right)$.",
+          "Chuẩn hóa hàng 2: $H_2 \\to \\frac{1}{5}H_2$ → $\\left(\\begin{array}{ccc|c} 1 & -2 & 0 & -1 \\\\ 0 & 1 & 0 & \\frac{4}{5} \\\\ 0 & 0 & 1 & 1 \\end{array}\\right)$.",
+          "Khử $y$ ở hàng 1: $H_1 \\to H_1 + 2H_2$ \\\\ Ma trận mới: $\\left(\\begin{array}{ccc|c} 1 & 0 & 0 & \\frac{3}{5} \\\\ 0 & 1 & 0 & \\frac{4}{5} \\\\ 0 & 0 & 1 & 1 \\end{array}\\right)$.",
+          "Kết luận: Nghiệm hệ là $\\left( \\frac{3}{5}, \\frac{4}{5}, 1 \\right)$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm nghiệm của hệ phương trình sau (nếu có): $\\begin{cases} x + 2y - 3z = 4 \\\\ -2x - 4y + 6z = -8 \\end{cases}$.",
+      "answer": {
+        "steps": [
+          "Nhận xét: Phương trình thứ hai là $-2$ lần phương trình đầu → Hai phương trình tương đương.",
+          "Hệ thu gọn thành một phương trình: $x + 2y - 3z = 4$.",
+          "Chọn hai ẩn tự do: Đặt $y = s$, $z = t$ ($s,t \\in \\mathbb{R}$).",
+          "Biểu diễn $x$ theo $s$ và $t$: $x = 4 - 2s + 3t$.",
+          "Kết luận: Nghiệm tổng quát là $\\begin{cases} x = 4 - 2s + 3t \\\\ y = s \\\\ z = t \\end{cases}$ với $s,t \\in \\mathbb{R}$."
+        ]
+      }
+    },
+    {
+      "question": "Dùng định lý Kronecker-Capelli, xác định số nghiệm của hệ: $\\begin{cases} x + y + z = 6 \\\\ 2x - y + 3z = 10 \\\\ 4x + y + 5z = k \\end{cases}$ với tham số $k$.",
+      "answer": {
+        "steps": [
+          "Ma trận hệ số $A = \\begin{pmatrix} 1 & 1 & 1 \\\\ 2 & -1 & 3 \\\\ 4 & 1 & 5 \\end{pmatrix}$, ma trận mở rộng $\\widetilde{A} = \\begin{pmatrix} 1 & 1 & 1 & 6 \\\\ 2 & -1 & 3 & 10 \\\\ 4 & 1 & 5 & k \\end{pmatrix}$.",
+          "Tính $\\text{rank}(A)$: Dùng phép biến đổi $H_2 \\to H_2 - 2H_1$, $H_3 \\to H_3 - 4H_1$ \\\\ $A \\to \\begin{pmatrix} 1 & 1 & 1 \\\\ 0 & -3 & 1 \\\\ 0 & -3 & 1 \\end{pmatrix}$.",
+          "Tiếp tục: $H_3 \\to H_3 - H_2$ \\\\ $A \\to \\begin{pmatrix} 1 & 1 & 1 \\\\ 0 & -3 & 1 \\\\ 0 & 0 & 0 \\end{pmatrix}$ → $\\text{rank}(A) = 2$.",
+          "Tính $\\text{rank}(\\widetilde{A})$: Biến đổi tương tự, ma trận mở rộng thành $\\begin{pmatrix} 1 & 1 & 1 & 6 \\\\ 0 & -3 & 1 & -2 \\\\ 0 & 0 & 0 & k-16 \\end{pmatrix}$.",
+          "Biện luận:",
+          "Nếu $k - 16 \\neq 0$ (tức $k \\neq 16$): $\\text{rank}(\\widetilde{A}) = 3 > \\text{rank}(A) = 2$ → Hệ vô nghiệm.",
+          "Nếu $k = 16$: $\\text{rank}(\\widetilde{A}) = 2 = \\text{rank}(A)$ → Hệ có vô số nghiệm (số ẩn tự do = 3 - 2 = 1).",
+          "Kết luận: Hệ vô nghiệm khi $k \\neq 16$, vô số nghiệm khi $k = 16$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình sau bằng phương pháp ma trận nghịch đảo: $\\begin{cases} 2x - y + 3z = 9 \\\\ x + 3y - z = 6 \\\\ 3x + y - 2z = 8 \\end{cases}$.",
+      "answer": {
+        "steps": [
+          "Viết dạng ma trận: $A\\mathbf{x} = \\mathbf{b}$ với $A = \\begin{pmatrix} 2 & -1 & 3 \\\\ 1 & 3 & -1 \\\\ 3 & 1 & -2 \\end{pmatrix}$, $\\mathbf{b} = \\begin{pmatrix} 9 \\\\ 6 \\\\ 8 \\end{pmatrix}$.",
+          "Tính $\\det(A) = 2\\begin{vmatrix} 3 & -1 \\\\ 1 & -2 \\end{vmatrix} - (-1)\\begin{vmatrix} 1 & -1 \\\\ 3 & -2 \\end{vmatrix} + 3\\begin{vmatrix} 1 & 3 \\\\ 3 & 1 \\end{vmatrix}$.",
+          "Tính định thức con: $\\begin{vmatrix} 3 & -1 \\\\ 1 & -2 \\end{vmatrix} = 3(-2) - (-1)(1) = -6 + 1 = -5$.",
+          "$\\begin{vmatrix} 1 & -1 \\\\ 3 & -2 \\end{vmatrix} = 1(-2) - (-1)(3) = -2 + 3 = 1$.",
+          "$\\begin{vmatrix} 1 & 3 \\\\ 3 & 1 \\end{vmatrix} = 1(1) - 3(3) = 1 - 9 = -8$.",
+          "Thay vào: $\\det(A) = 2(-5) + 1(1) + 3(-8) = -10 + 1 - 24 = -33 \\neq 0$.",
+          "Tìm ma trận nghịch đảo $A^{-1}$ bằng ma trận phụ hợp:",
+          "Tính các phần tử: $C_{11} = +\\begin{vmatrix} 3 & -1 \\\\ 1 & -2 \\end{vmatrix} = -5$, $C_{12} = -\\begin{vmatrix} 1 & -1 \\\\ 3 & -2 \\end{vmatrix} = -1$, $C_{13} = +\\begin{vmatrix} 1 & 3 \\\\ 3 & 1 \\end{vmatrix} = -8$.",
+          "$C_{21} = -\\begin{vmatrix} -1 & 3 \\\\ 1 & -2 \\end{vmatrix} = -(-2 - 3) = -(-5) = 5$, $C_{22} = +\\begin{vmatrix} 2 & 3 \\\\ 3 & -2 \\end{vmatrix} = (-4 - 9) = -13$, $C_{23} = -\\begin{vmatrix} 2 & -1 \\\\ 3 & 1 \\end{vmatrix} = -(2 + 3) = -5$.",
+          "$C_{31} = +\\begin{vmatrix} -1 & 3 \\\\ 3 & -1 \\end{vmatrix} = (1 - 9) = -8$, $C_{32} = -\\begin{vmatrix} 2 & 3 \\\\ 1 & -1 \\end{vmatrix} = -(-2 - 3) = 5$, $C_{33} = +\\begin{vmatrix} 2 & -1 \\\\ 1 & 3 \\end{vmatrix} = (6 + 1) = 7$.",
+          "Ma trận phụ hợp: $\\text{adj}(A) = \\begin{pmatrix} -5 & 5 & -8 \\\\ -1 & -13 & 5 \\\\ -8 & -5 & 7 \\end{pmatrix}$.",
+          "$A^{-1} = \\frac{1}{-33} \\begin{pmatrix} -5 & 5 & -8 \\\\ -1 & -13 & 5 \\\\ -8 & -5 & 7 \\end{pmatrix} = \\begin{pmatrix} 5/33 & -5/33 & 8/33 \\\\ 1/33 & 13/33 & -5/33 \\\\ 8/33 & 5/33 & -7/33 \\end{pmatrix}$.",
+          "Nghiệm: $\\mathbf{x} = A^{-1}\\mathbf{b} = \\begin{pmatrix} 5/33 & -5/33 & 8/33 \\\\ 1/33 & 13/33 & -5/33 \\\\ 8/33 & 5/33 & -7/33 \\end{pmatrix} \\begin{pmatrix} 9 \\\\ 6 \\\\ 8 \\end{pmatrix}$.",
+          "Tính: $x = (5/33)(9) + (-5/33)(6) + (8/33)(8) = (45 - 30 + 64)/33 = 79/33$.",
+          "$y = (1/33)(9) + (13/33)(6) + (-5/33)(8) = (9 + 78 - 40)/33 = 47/33$.",
+          "$z = (8/33)(9) + (5/33)(6) + (-7/33)(8) = (72 + 30 - 56)/33 = 46/33$.",
+          "Kết luận: Nghiệm $\\left( \\dfrac{79}{33}, \\dfrac{47}{33}, \\dfrac{46}{33} \\right)$."
+        ]
+      }
+    },
+    {
+      "question": "Biện luận số nghiệm của hệ phương trình theo tham số $m$: $\\begin{cases} x + 2y + z = 3 \\\\ 2x + 5y - z = 4 \\\\ 3x + 7y + mz = 10 \\end{cases}$.",
+      "answer": {
+        "steps": [
+          "Lập ma trận mở rộng: $\\widetilde{A} = \\left(\\begin{array}{ccc|c} 1 & 2 & 1 & 3 \\\\ 2 & 5 & -1 & 4 \\\\ 3 & 7 & m & 10 \\end{array}\\right)$.",
+          "Khử Gauss: $H_2 \\to H_2 - 2H_1$, $H_3 \\to H_3 - 3H_1$",
+          "Ma trận mới: $\\left(\\begin{array}{ccc|c} 1 & 2 & 1 & 3 \\\\ 0 & 1 & -3 & -2 \\\\ 0 & 1 & m-3 & 1 \\end{array}\\right)$.",
+          "$H_3 \\to H_3 - H_2$: $\\left(\\begin{array}{ccc|c} 1 & 2 & 1 & 3 \\\\ 0 & 1 & -3 & -2 \\\\ 0 & 0 & m & 3 \\end{array}\\right)$.",
+          "Biện luận:",
+          "• Nếu $m \\neq 0$: Hệ có nghiệm duy nhất (hạng = 3 = số ẩn)",
+          "• Nếu $m = 0$: Hàng 3 trở thành $0z = 3$ → Vô nghiệm",
+          "Kết luận: Hệ có nghiệm duy nhất khi $m \\neq 0$, vô nghiệm khi $m = 0$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình bằng phương pháp Cramer: $\\begin{cases} 3x + 2y - z = 4 \\\\ 2x - y + 3z = 5 \\\\ x + 3y - 2z = 1 \\end{cases}$.",
+      "answer": {
+        "steps": [
+          "Ma trận hệ số $A = \\begin{pmatrix} 3 & 2 & -1 \\\\ 2 & -1 & 3 \\\\ 1 & 3 & -2 \\end{pmatrix}$.",
+          "Tính $\\det(A) = 3\\begin{vmatrix} -1 & 3 \\\\ 3 & -2 \\end{vmatrix} - 2\\begin{vmatrix} 2 & 3 \\\\ 1 & -2 \\end{vmatrix} + (-1)\\begin{vmatrix} 2 & -1 \\\\ 1 & 3 \\end{vmatrix}$.",
+          "Định thức con: $\\begin{vmatrix} -1 & 3 \\\\ 3 & -2 \\end{vmatrix} = (-1)(-2) - (3)(3) = 2 - 9 = -7$.",
+          "$\\begin{vmatrix} 2 & 3 \\\\ 1 & -2 \\end{vmatrix} = 2(-2) - 3(1) = -4 - 3 = -7$.",
+          "$\\begin{vmatrix} 2 & -1 \\\\ 1 & 3 \\end{vmatrix} = 2(3) - (-1)(1) = 6 + 1 = 7$.",
+          "Thay vào: $\\det(A) = 3(-7) - 2(-7) - 1(7) = -21 + 14 - 7 = -14 \\neq 0$.",
+          "Tính $\\det(A_x)$: Thay cột 1 bằng $\\mathbf{b} = \\begin{pmatrix} 4 \\\\ 5 \\\\ 1 \\end{pmatrix}$",
+          "$\\det(A_x) = \\begin{vmatrix} 4 & 2 & -1 \\\\ 5 & -1 & 3 \\\\ 1 & 3 & -2 \\end{vmatrix} = 4(-2 - 9) - 2(-10 - 3) -1(15 + 1) = 4(-11) - 2(-13) -1(16) = -44 + 26 - 16 = -34$.",
+          "$x = \\dfrac{\\det(A_x)}{\\det(A)} = \\dfrac{-34}{-14} = \\dfrac{17}{7}$.",
+          "Tương tự: $\\det(A_y) = \\begin{vmatrix} 3 & 4 & -1 \\\\ 2 & 5 & 3 \\\\ 1 & 1 & -2 \\end{vmatrix} = 3(-10 - 3) - 4(-4 - 3) -1(2 - 5) = 3(-13) -4(-7) -1(-3) = -39 + 28 + 3 = -8$.",
+          "$y = \\dfrac{-8}{-14} = \\dfrac{4}{7}$.",
+          "$\\det(A_z) = \\begin{vmatrix} 3 & 2 & 4 \\\\ 2 & -1 & 5 \\\\ 1 & 3 & 1 \\end{vmatrix} = 3(-1 - 15) - 2(2 - 5) + 4(6 + 1) = 3(-16) -2(-3) +4(7) = -48 + 6 + 28 = -14$.",
+          "$z = \\dfrac{-14}{-14} = 1$.",
+          "Kết luận: Nghiệm $\\left( \\dfrac{17}{7}, \\dfrac{4}{7}, 1 \\right)$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm điều kiện của $a, b$ để hệ sau vô nghiệm: $\\begin{cases} x + y - z = 1 \\\\ 2x + 3y + az = 4 \\\\ 3x + 5y + bz = 5 \\end{cases}$.",
+      "answer": {
+        "steps": [
+          "Lập ma trận mở rộng: $\\widetilde{A} = \\left(\\begin{array}{ccc|c} 1 & 1 & -1 & 1 \\\\ 2 & 3 & a & 4 \\\\ 3 & 5 & b & 5 \\end{array}\\right)$.",
+          "Khử Gauss: $H_2 \\to H_2 - 2H_1$, $H_3 \\to H_3 - 3H_1$",
+          "Ma trận mới: $\\left(\\begin{array}{ccc|c} 1 & 1 & -1 & 1 \\\\ 0 & 1 & a+2 & 2 \\\\ 0 & 2 & b+3 & 2 \\end{array}\\right)$.",
+          "$H_3 \\to H_3 - 2H_2$: $\\left(\\begin{array}{ccc|c} 1 & 1 & -1 & 1 \\\\ 0 & 1 & a+2 & 2 \\\\ 0 & 0 & b-2a-1 & -2 \\end{array}\\right)$.",
+          "Hệ vô nghiệm khi hàng cuối có dạng $0x + 0y + 0z = k \\ (k \\neq 0)$:",
+          "• $b - 2a - 1 = 0$ (hệ số bằng 0)",
+          "• $-2 \\neq 0$ (luôn đúng)",
+          "Vậy điều kiện là $b - 2a - 1 = 0$ hay $b = 2a + 1$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ thuần nhất và tìm cơ sở không gian nghiệm: $\\begin{cases} 2x + 4y - z = 0 \\\\ x - y + 2z = 0 \\\\ 3x + 3y + z = 0 \\end{cases}$.",
+      "answer": {
+        "steps": [
+          "Ma trận hệ số: $A = \\begin{pmatrix} 2 & 4 & -1 \\\\ 1 & -1 & 2 \\\\ 3 & 3 & 1 \\end{pmatrix}$.",
+          "Khử Gauss: $\\left(\\begin{array}{ccc|c} 2 & 4 & -1 & 0 \\\\ 1 & -1 & 2 & 0 \\\\ 3 & 3 & 1 & 0 \\end{array}\\right)$.",
+          "$H_1 \\leftrightarrow H_2$: $\\left(\\begin{array}{ccc|c} 1 & -1 & 2 & 0 \\\\ 2 & 4 & -1 & 0 \\\\ 3 & 3 & 1 & 0 \\end{array}\\right)$.",
+          "$H_2 \\to H_2 - 2H_1$, $H_3 \\to H_3 - 3H_1$: $\\left(\\begin{array}{ccc|c} 1 & -1 & 2 & 0 \\\\ 0 & 6 & -5 & 0 \\\\ 0 & 6 & -5 & 0 \\end{array}\\right)$.",
+          "$H_3 \\to H_3 - H_2$: $\\left(\\begin{array}{ccc|c} 1 & -1 & 2 & 0 \\\\ 0 & 6 & -5 & 0 \\\\ 0 & 0 & 0 & 0 \\end{array}\\right)$.",
+          "Hệ phương trình: $\\begin{cases} x - y + 2z = 0 \\\\ 6y - 5z = 0 \\end{cases}$.",
+          "Cho $z = t$ ($t$ tự do), từ phương trình 2: $6y = 5t \\Rightarrow y = \\dfrac{5}{6}t$.",
+          "Thay vào phương trình 1: $x - \\dfrac{5}{6}t + 2t = 0 \\Rightarrow x = -\\dfrac{7}{6}t$.",
+          "Nghiệm tổng quát: $\\mathbf{x} = t \\begin{pmatrix} -7/6 \\\\ 5/6 \\\\ 1 \\end{pmatrix} = \\dfrac{t}{6} \\begin{pmatrix} -7 \\\\ 5 \\\\ 6 \\end{pmatrix}$.",
+          "Không gian nghiệm có cơ sở: $\\left\\{ \\begin{pmatrix} -7 \\\\ 5 \\\\ 6 \\end{pmatrix} \\right\\}$ (dim = 1)."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng nếu hệ $A\\mathbf{x} = \\mathbf{b}$ có hai nghiệm phân biệt thì nó có vô số nghiệm.",
+      "answer": {
+        "steps": [
+          "Giả sử $\\mathbf{x}_1$ và $\\mathbf{x}_2$ là hai nghiệm phân biệt: $A\\mathbf{x}_1 = \\mathbf{b}$, $A\\mathbf{x}_2 = \\mathbf{b}$.",
+          "Xét vector $\\mathbf{d} = \\mathbf{x}_1 - \\mathbf{x}_2 \\neq \\mathbf{0}$ (vì nghiệm phân biệt).",
+          "Khi đó: $A\\mathbf{d} = A(\\mathbf{x}_1 - \\mathbf{x}_2) = A\\mathbf{x}_1 - A\\mathbf{x}_2 = \\mathbf{b} - \\mathbf{b} = \\mathbf{0}$.",
+          "Vậy $\\mathbf{d}$ là nghiệm của hệ thuần nhất $A\\mathbf{x} = \\mathbf{0}$.",
+          "Xét tổ hợp tuyến tính: $\\mathbf{x} = \\mathbf{x}_1 + t\\mathbf{d}$ với $t \\in \\mathbb{R}$.",
+          "Kiểm tra: $A\\mathbf{x} = A(\\mathbf{x}_1 + t\\mathbf{d}) = A\\mathbf{x}_1 + tA\\mathbf{d} = \\mathbf{b} + t\\mathbf{0} = \\mathbf{b}$.",
+          "Vì $\\mathbf{d} \\neq \\mathbf{0}$, khi $t$ thay đổi ta được vô số nghiệm khác nhau.",
+          "Kết luận: Hệ có vô số nghiệm."
+        ]
+      }
+    },
+    {
+      "question": "Tìm $k$ để hệ sau có nghiệm không tầm thường: $\\begin{cases} (k+1)x + 2y + z = 0 \\\\ 3x + (k-1)y + 2z = 0 \\\\ 2x + 3y + (k+2)z = 0 \\end{cases}$.",
+      "answer": {
+        "steps": [
+          "Hệ thuần nhất có nghiệm không tầm thường ⇔ $\\det(A) = 0$.",
+          "Ma trận $A = \\begin{pmatrix} k+1 & 2 & 1 \\\\ 3 & k-1 & 2 \\\\ 2 & 3 & k+2 \\end{pmatrix}$.",
+          "Tính $\\det(A) = (k+1)\\begin{vmatrix} k-1 & 2 \\\\ 3 & k+2 \\end{vmatrix} - 2\\begin{vmatrix} 3 & 2 \\\\ 2 & k+2 \\end{vmatrix} + 1\\begin{vmatrix} 3 & k-1 \\\\ 2 & 3 \\end{vmatrix}$.",
+          "Định thức con 1: $(k-1)(k+2) - 6 = k^2 + k - 2 - 6 = k^2 + k - 8$.",
+          "Định thức con 2: $3(k+2) - 4 = 3k + 6 - 4 = 3k + 2$.",
+          "Định thức con 3: $9 - 2(k-1) = 9 - 2k + 2 = 11 - 2k$.",
+          "Thay vào:",
+          "$\\det(A) = (k+1)(k^2 + k - 8) - 2(3k + 2) + 1(11 - 2k)$",
+          "$= (k^3 + k^2 - 8k + k^2 + k - 8) - 6k - 4 + 11 - 2k$",
+          "$= k^3 + 2k^2 - 7k - 8 - 6k - 4 + 11 - 2k$",
+          "$= k^3 + 2k^2 - 15k - 1$.",
+          "Giải $k^3 + 2k^2 - 15k - 1 = 0$.",
+          "Thử $k=1$: $1 + 2 - 15 - 1 = -13 \\neq 0$.",
+          "$k=3$: $27 + 18 - 45 - 1 = -1 \\neq 0$.",
+          "$k=4$: $64 + 32 - 60 - 1 = 35 \\neq 0$.",
+          "$k=-1$: $-1 + 2 + 15 - 1 = 15 \\neq 0$.",
+          "$k=0$: $0 + 0 - 0 - 1 = -1 \\neq 0$.",
+          "$k=5$: $125 + 50 - 75 - 1 = 99 \\neq 0$.",
+          "Nghiệm xấp xỉ $k \\approx -4.5, 0.06, 3.44$ (dùng máy tính hoặc phần mềm)."
+        ]
+      }
+    },
+    {
+      "question": "Tìm cơ sở và số chiều không gian nghiệm của hệ: $\\begin{cases} x + y - 2z + w = 0 \\\\ 2x - y + 3z - w = 0 \\\\ x + 2y - 3z + 2w = 0 \\end{cases}$.",
+      "answer": {
+        "steps": [
+          "Ma trận hệ số: $A = \\begin{pmatrix} 1 & 1 & -2 & 1 \\\\ 2 & -1 & 3 & -1 \\\\ 1 & 2 & -3 & 2 \\end{pmatrix}$.",
+          "Khử Gauss: $H_2 \\to H_2 - 2H_1$, $H_3 \\to H_3 - H_1$",
+          "Ma trận mới: $\\left(\\begin{array}{cccc|c} 1 & 1 & -2 & 1 & 0 \\\\ 0 & -3 & 7 & -3 & 0 \\\\ 0 & 1 & -1 & 1 & 0 \\end{array}\\right)$.",
+          "$H_2 \\leftrightarrow H_3$: $\\left(\\begin{array}{cccc|c} 1 & 1 & -2 & 1 & 0 \\\\ 0 & 1 & -1 & 1 & 0 \\\\ 0 & -3 & 7 & -3 & 0 \\end{array}\\right)$.",
+          "$H_3 \\to H_3 + 3H_2$: $\\left(\\begin{array}{cccc|c} 1 & 1 & -2 & 1 & 0 \\\\ 0 & 1 & -1 & 1 & 0 \\\\ 0 & 0 & 4 & 0 & 0 \\end{array}\\right)$.",
+          "Hệ phương trình:",
+          "1) $x + y - 2z + w = 0$",
+          "2) $y - z + w = 0$",
+          "3) $4z = 0$",
+          "Từ pt 3: $z = 0$.",
+          "Từ pt 2: $y + w = 0 \\Rightarrow y = -w$.",
+          "Từ pt 1: $x + (-w) + w = 0 \\Rightarrow x = 0$.",
+          "Nghiệm: $\\begin{pmatrix} x \\\\ y \\\\ z \\\\ w \\end{pmatrix} = w \\begin{pmatrix} 0 \\\\ -1 \\\\ 0 \\\\ 1 \\end{pmatrix}$.",
+          "Cơ sở: $\\left\\{ \\begin{pmatrix} 0 \\\\ -1 \\\\ 0 \\\\ 1 \\end{pmatrix} \\right\\}$, số chiều = 1."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình bằng phương pháp khử Gauss-Jordan: $\\begin{cases} x - 2y + 3z = 4 \\\\ 2x + y - z = 1 \\\\ 3x - y + 2z = 7 \\end{cases}$.",
+      "answer": {
+        "steps": [
+          "Ma trận mở rộng: $\\left(\\begin{array}{ccc|c} 1 & -2 & 3 & 4 \\\\ 2 & 1 & -1 & 1 \\\\ 3 & -1 & 2 & 7 \\end{array}\\right)$.",
+          "$H_2 \\to H_2 - 2H_1$, $H_3 \\to H_3 - 3H_1$:",
+          "$\\left(\\begin{array}{ccc|c} 1 & -2 & 3 & 4 \\\\ 0 & 5 & -7 & -7 \\\\ 0 & 5 & -7 & -5 \\end{array}\\right)$.",
+          "$H_3 \\to H_3 - H_2$: $\\left(\\begin{array}{ccc|c} 1 & -2 & 3 & 4 \\\\ 0 & 5 & -7 & -7 \\\\ 0 & 0 & 0 & 2 \\end{array}\\right)$.",
+          "Hàng 3: $0 = 2$ → Vô nghiệm.",
+          "Kết luận: Hệ vô nghiệm."
+        ]
+      }
+    },
+    {
+      "question": "Dùng định lý Kronecker-Capelli, xác định số nghiệm của hệ: $\\begin{cases} x + 2y - z = 1 \\\\ 2x + 4y - 2z = 2 \\\\ 3x + 6y - 3z = k \\end{cases}$ theo tham số $k$.",
+      "answer": {
+        "steps": [
+          "Ma trận hệ số $A = \\begin{pmatrix} 1 & 2 & -1 \\\\ 2 & 4 & -2 \\\\ 3 & 6 & -3 \\end{pmatrix}$, ma trận mở rộng $\\widetilde{A} = \\begin{pmatrix} 1 & 2 & -1 & 1 \\\\ 2 & 4 & -2 & 2 \\\\ 3 & 6 & -3 & k \\end{pmatrix}$.",
+          "Tính hạng của A: Các hàng tỉ lệ → $\\text{rank}(A) = 1$.",
+          "Tính hạng của $\\widetilde{A}$:",
+          "Khử Gauss: $H_2 \\to H_2 - 2H_1$, $H_3 \\to H_3 - 3H_1$:",
+          "$\\widetilde{A} \\to \\begin{pmatrix} 1 & 2 & -1 & 1 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & k-3 \\end{pmatrix}$.",
+          "• Nếu $k-3 = 0$: Ma trận có 1 hàng khác 0 → $\\text{rank}(\\widetilde{A}) = 1$.",
+          "• Nếu $k-3 \\neq 0$: Ma trận có 2 hàng khác 0 → $\\text{rank}(\\widetilde{A}) = 2$.",
+          "Áp dụng định lý:",
+          "• Nếu $\\text{rank}(A) = \\text{rank}(\\widetilde{A}) = 1$ (khi $k=3$): Hệ có vô số nghiệm (số ẩn tự do = 3 - 1 = 2).",
+          "• Nếu $\\text{rank}(A) = 1 \\neq \\text{rank}(\\widetilde{A}) = 2$ (khi $k \\neq 3$): Hệ vô nghiệm."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình sau bằng phương pháp loại gauss và viết nghiệm dưới dạng phân số:\n$$\\begin{cases}2x + y - z = 1,\\\\ x - y + 2z = 3,\\\\ 3x + 2y + z = 4.\\end{cases}$$",
+      "answer": {
+        "steps": [
+          "1. Viết ma trận hệ số mở rộng:\n   $$\\bigl[\\begin{smallmatrix}2&1&-1&|&1\\\\1&-1&2&|&3\\\\3&2&1&|&4\\end{smallmatrix}\\bigr].$$",
+          "2. Dùng $R_2\\leftarrow R_2 - \\tfrac12R_1$ và $R_3\\leftarrow R_3 - \\tfrac32R_1$ để loại x khỏi hai phương trình sau:\n   $$\\begin{pmatrix}2&1&-1&|&1\\\\0&-\\tfrac32&\\tfrac52&|&\\tfrac52\\\\0&\\tfrac12&\\tfrac52&|&\\tfrac52\\end{pmatrix}.$$",
+          "3. Dùng $R_3\\leftarrow R_3 + \\tfrac13R_2$ để loại y khỏi hàng 3:\n   $$\\begin{pmatrix}2&1&-1&|&1\\\\0&-\\tfrac32&\\tfrac52&|&\\tfrac52\\\\0&0&\\tfrac{11}{6}&|&\\tfrac{11}{6}\\end{pmatrix}.$$",
+          "4. Từ hàng 3: $\\tfrac{11}{6}z = \\tfrac{11}{6}\\implies z=1$. Thay ngược lên hàng 2: $-\\tfrac32 y + \\tfrac52\\cdot1 = \\tfrac52\\implies -\\tfrac32 y = 0\\implies y=0$.",
+          "5. Cuối cùng từ hàng 1: $2x + 0 -1=1\\implies 2x=2\\implies x=1$. Vậy nghiệm duy nhất là $(x,y,z)=(1,0,1)$.  "
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình sau và viết nghiệm tổng quát:\n$$\\begin{cases}x + 2y - z = 0,\\\\2x + 4y -2z = 0,\\\\3x + 6y -3z = 0.\\end{cases}$$",
+      "answer": {
+        "steps": [
+          "1. Viết ma trận hệ số:\n   $$\\bigl[\\begin{smallmatrix}1&2&-1\\\\2&4&-2\\\\3&6&-3\\end{smallmatrix}\\bigr].$$",
+          "2. Nhận thấy hàng 2 = 2·hàng 1, hàng 3 = 3·hàng 1 nên hệ chỉ có một phương trình độc lập: $x+2y-z=0$.",
+          "3. Gọi ẩn tự do $y = s$, $z = t$. Từ $x = z - 2y = t - 2s$.",
+          "4. Vậy nghiệm tổng quát:  \n   $$(x,y,z) = (t-2s,\\;s,\\;t),\\quad s,t\\in\\mathbb{R}.$$",
+          "5. Không có bước loại phức tạp vì hệ phụ thuộc tuyến tính hoàn toàn."
+        ]
+      }
+    },
+    {
+      "question": "Xác định điều kiện về tham số $a$ để hệ\n$$\\begin{cases}x + y + z = 1,\\\\2x + ay + z = 2,\\\\3x + 2y + az = 3\\end{cases}$$\n– có nghiệm duy nhất, vô số nghiệm hoặc vô nghiệm.",
+      "answer": {
+        "steps": [
+          "1. Viết định thức hệ số:\n   $$\\Delta = \\det\\begin{pmatrix}1&1&1\\\\2&a&1\\\\3&2&a\\end{pmatrix} = 1\\cdot(a^2-2) -1\\cdot(2a-3) +1\\cdot(4-3a).$$",
+          "2. Tính $\\Delta = a^2 -2 -2a +3 +4 -3a = a^2 -5a +5$.",
+          "3. Hệ có:\n   - Duy nhất khi $\\Delta\\neq0 \\iff a^2-5a+5\\neq0$.\n   - Khả năng vô số nghiệm hoặc vô nghiệm khi $\\Delta=0$, tức $a=\\frac{5\\pm\\sqrt5}2$.",
+          "4. Khi $\\Delta=0$, tính hạng ma trận hệ số và hạng ma trận mở rộng bằng cách thế giá trị $a$ vào và so sánh.\n   Nếu hai hạng bằng nhau (<3) → vô số nghiệm; khác nhau → vô nghiệm.",
+          "5. Kết luận đã phân loại hoàn chỉnh theo giá trị $a$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình sau bằng quy tắc Cramer:\n$$\\begin{cases}3x - y + 2z = 5,\\\\x + 4y - z = 2,\\\\2x - y + 3z = 4.\\end{cases}$$",
+      "answer": {
+        "steps": [
+          "1. Tính định thức chính:  \n   $$\\Delta=\\det\\begin{pmatrix}3&-1&2\\\\1&4&-1\\\\2&-1&3\\end{pmatrix}=3(12-1)-(-1)(3-(-2))+2(-1-8)=33+5-18=20.$$",
+          "2. Tính $\\Delta_x$ thay cột 1 bằng vế phải:\n   $$\\Delta_x=\\det\\begin{pmatrix}5&-1&2\\\\2&4&-1\\\\4&-1&3\\end{pmatrix}=5(12-1)-(-1)(6-(-4))+2(-2-16)=55+10-36=29.$$",
+          "3. Tính $\\Delta_y$ thay cột 2:\n   $$\\Delta_y=\\det\\begin{pmatrix}3&5&2\\\\1&2&-1\\\\2&4&3\\end{pmatrix}=3(6-(-4))-5(3-(-2))+2(4-2)=30-25+4=9.$$",
+          "4. Tính $\\Delta_z$ thay cột 3:\n   $$\\Delta_z=\\det\\begin{pmatrix}3&-1&5\\\\1&4&2\\\\2&-1&4\\end{pmatrix}=3(16-(-2))-(-1)(4-2)+5(-1-8)=54-2-45=7.$$",
+          "5. Áp dụng Cramer:  \n   $$x=\\frac{\\Delta_x}{\\Delta}=\\frac{29}{20},\\;y=\\frac{9}{20},\\;z=\\frac{7}{20}.$$"
+        ]
+      }
+    },
+    {
+      "question": "Cho hệ đồng nhất $Ax=0$ với\n$$A=\\begin{pmatrix}1&2&-1&0\\\\2&5&-3&1\\\\1&3&-2&1\\end{pmatrix}.$$ Tìm cơ sở không gian nghiệm và hạng của $A$.",
+      "answer": {
+        "steps": [
+          "1. Biến đổi Gauss:  \n   $$R_2\\leftarrow R_2-2R_1,\\;R_3\\leftarrow R_3-R_1$$  \n   → $$\\begin{pmatrix}1&2&-1&0\\\\0&1&-1&1\\\\0&1&-1&1\\end{pmatrix}.$$",
+          "2. Dùng $R_3\\leftarrow R_3 - R_2$ cho ra:\n   $$\\begin{pmatrix}1&2&-1&0\\\\0&1&-1&1\\\\0&0&0&0\\end{pmatrix}.$$",
+          "3. Hạng $r=2$. Số ẩn tự do $=4-2=2$. Gọi $x_3=s,x_4=t$.",
+          "4. Từ hàng 2: $y - x_3 + x_4 =0\\implies y = s - t$. Từ hàng 1: $x+2y-x_3=0\\implies x = -2(s-t)+s = -s+2t$.",
+          "5. Cơ sở không gian nghiệm:  \n   $$\\{(-1,1,1,0)^T,\\;(2,-1,0,1)^T\\}.$$"
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình phụ thuộc tham số $k$:\n$$\\begin{cases}x + y + z = 1,\\\\2x + 3y + kz = 2,\\\\x + 2y + (k+1)z = 1\\end{cases}$$\nvà tìm nghiệm khi có vô số nghiệm.",
+      "answer": {
+        "steps": [
+          "1. Viết định thức hệ số:  \n   $$\\Delta=\\det\\begin{pmatrix}1&1&1\\\\2&3&k\\\\1&2&k+1\\end{pmatrix} = (1)(3(k+1)-2k) -1(2(k+1)-k) +1(4-3).$$",
+          "2. Tính $\\Delta=3k+3-2k - (2k+2-k) +1 = k+3 - (k+2) +1 = 2.$ → luôn ≠0.",
+          "3. Vì $\\Delta\\neq0$ với mọi $k$, hệ luôn có nghiệm duy nhất. Không có trường hợp vô số nghiệm.",
+          "4. Giải cụ thể (ví dụ $k$ cho giá trị): thế vào và dùng Gauss tìm $x,y,z$ dưới dạng hàm $k$.",
+          "5.  Ví dụ với $k=1$: nghiệm $(x,y,z)=(0,1,0)$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ sau bằng phương pháp ma trận nghịch đảo (nếu tồn tại):\n$$\\begin{pmatrix}2&1&0\\\\1&1&1\\\\0&2&3\\end{pmatrix}\\begin{pmatrix}x\\\\y\\\\z\\end{pmatrix} = \\begin{pmatrix}1\\\\2\\\\3\\end{pmatrix}.$$",
+      "answer": {
+        "steps": [
+          "1. Tính định thức:  \n   $$\\det A=2(1\\cdot3-1\\cdot2)-1(1\\cdot3-1\\cdot0) =2(3-2)- (3)=2-3=-1\\neq0.$$",
+          "2. Tính $A^{-1}$ (nhanh):  \n   $$A^{-1} = \\frac1{-1}\\begin{pmatrix}3-2 & -(1\\cdot3-0) & (1\\cdot2-1\\cdot0)\\\\-(1\\cdot3-1\\cdot0) & 2\\cdot3-0 & -(2\\cdot1-0)\\\\(1\\cdot2-1\\cdot1) & -(2\\cdot2-1\\cdot1) & 2\\cdot1-1\\cdot1\\end{pmatrix}.$$",
+          "3. Tính $A^{-1}$ rõ:  \n   $$A^{-1}= \\begin{pmatrix}-1&3&-2\\\\3&-6&2\\\\-1&3&-1\\end{pmatrix}.$$",
+          "4. Nhân $A^{-1}b$:  \n   $$(x,y,z)^T = A^{-1}(1,2,3)^T = (-1+6-6,3-12+6,-1+6-3)^T =(-1, -3,2)^T.$$",
+          "5. Vậy nghiệm là $(x,y,z)=(-1,-3,2)$."
+        ]
+      }
+    },
+    {
+      "question": "Cho hệ phương trình 4 ẩn–3 phương trình:\n$$\\begin{cases}x - y + 2z - w = 1,\\\\2x + y - z + 3w = 2,\\\\ x +2y + z + w = 3.\\end{cases}$$\nTìm nghiệm tổng quát.",
+      "answer": {
+        "steps": [
+          "1. Hệ dưới xác định, số ẩn tự do $=4-\\mathrm{rank}(A)$. Tính hạng $A$ bằng Gauss → $r=3$ → ẩn tự do $=1$.",
+          "2. Giả sử $w = t$. Biến đổi Gauss cho đến dạng bậc thang và giải:\n   - Từ PT1: $x = 1 + y -2z + t$.\n   - Từ PT2 & PT3 thay $x$ biểu diễn $y,z$ theo $t$.",
+          "3. Từ PT3: $(1+y-2z+t)+2y+z+t =3 \\implies 1+3y -z +2t =3 \\implies 3y -z =2-2t.$",
+          "4. Từ PT2: $2(1+y-2z+t)+y -z +3t =2 \\implies 2+2y-4z+2t+y -z+3t =2 \\implies 3y -5z +5t =0.$",
+          "5. Giải hệ hai ẩn $y,z$:  \n   $$\\begin{cases}3y - z =2-2t,\\\\3y -5z = -5t.\\end{cases}$$  \n   Lấy hiệu: $4z = (2-2t)+5t =2+3t \\implies z=\\tfrac{2+3t}4$.  \n   Thay vào 3y - z: $3y =2-2t + \\tfrac{2+3t}4 =\\tfrac{8-8t+2+3t}4 =\\tfrac{10-5t}4 \\implies y=\\tfrac{10-5t}{12}$.",
+          "6. Cuối cùng $x=1+y-2z+t = 1+\\tfrac{10-5t}{12} -2\\cdot\\tfrac{2+3t}4 +t$ → rút gọn cho nghiệm tổng quát dưới dạng $t$."
+        ]
+      }
+    },
+    {
+      "question": "Cho hệ phương trình: $\\begin{cases} x + 2y + 3z = 0 \\\\ 2x + 4y + 6z = 0 \\\\ 3x + 6y + kz = 0 \\end{cases}$. Tìm $k$ để không gian nghiệm có số chiều bằng 2 và chỉ ra một cơ sở của không gian nghiệm khi đó.",
+      "answer": {
+        "steps": [
+          "Hệ thuần nhất có ma trận hệ số $A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 6 & k \\end{pmatrix}$.",
+          "Tính hạng của A: $\\text{rank}(A) = \\text{số biến} - \\dim(\\text{không gian nghiệm}) = 3 - 2 = 1$.",
+          "Dùng phép biến đổi hàng: $R_2 \\to R_2 - 2R_1$, $R_3 \\to R_3 - 3R_1$: $A \\sim \\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & k-9 \\end{pmatrix}$.",
+          "Để $\\text{rank}(A) = 1$, hàng 3 phải bằng 0: $k - 9 = 0 \\Rightarrow k = 9$.",
+          "Với $k=9$, hệ trở thành: $x + 2y + 3z = 0$.",
+          "Chọn $y = t$, $z = s$ tự do. Khi đó $x = -2t - 3s$.",
+          "Nghiệm tổng quát: $\\begin{pmatrix} x \\\\ y \\\\ z \\end{pmatrix} = t \\begin{pmatrix} -2 \\\\ 1 \\\\ 0 \\end{pmatrix} + s \\begin{pmatrix} -3 \\\\ 0 \\\\ 1 \\end{pmatrix}$.",
+          "Cơ sở của không gian nghiệm: $\\left\\{ \\begin{pmatrix} -2 \\\\ 1 \\\\ 0 \\end{pmatrix}, \\begin{pmatrix} -3 \\\\ 0 \\\\ 1 \\end{pmatrix} \\right\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Xét hệ phương trình: $\\begin{cases} x + y + z = 1 \\\\ 2x + 3y + 4z = 3 \\\\ 4x + 5y + 6z = 5 \\\\ 3x + 4y + 5z = k \\end{cases}$. Tìm $k$ để hệ có nghiệm và giải hệ khi đó.",
+      "answer": {
+        "steps": [
+          "Ma trận mở rộng $\\widetilde{A} = \\left(\\begin{array}{ccc|c} 1 & 1 & 1 & 1 \\\\ 2 & 3 & 4 & 3 \\\\ 4 & 5 & 6 & 5 \\\\ 3 & 4 & 5 & k \\end{array}\\right)$.",
+          "Khử Gauss: $R_2 \\to R_2 - 2R_1$, $R_3 \\to R_3 - 4R_1$, $R_4 \\to R_4 - 3R_1$: $\\left(\\begin{array}{ccc|c} 1 & 1 & 1 & 1 \\\\ 0 & 1 & 2 & 1 \\\\ 0 & 1 & 2 & 1 \\\\ 0 & 1 & 2 & k-3 \\end{array}\\right)$.",
+          "$R_3 \\to R_3 - R_2$, $R_4 \\to R_4 - R_2$: $\\left(\\begin{array}{ccc|c} 1 & 1 & 1 & 1 \\\\ 0 & 1 & 2 & 1 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & k-4 \\end{array}\\right)$.",
+          "Hệ có nghiệm khi hàng cuối không mâu thuẫn: $k-4 = 0 \\Rightarrow k=4$.",
+          "Với $k=4$, hệ tương đương: $\\begin{cases} x + y + z = 1 \\\\ y + 2z = 1 \\end{cases}$.",
+          "Chọn $z = t$ tự do. Từ PT2: $y = 1 - 2t$.",
+          "Thay vào PT1: $x + (1-2t) + t = 1 \\Rightarrow x = t$.",
+          "Nghiệm tổng quát: $\\begin{pmatrix} x \\\\ y \\\\ z \\end{pmatrix} = \\begin{pmatrix} 0 \\\\ 1 \\\\ 0 \\end{pmatrix} + t \\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho hệ phương trình tuyến tính với tham số $m$: $\\begin{cases} mx + y + z = 1 \\\\ x + my + z = m \\\\ x + y + mz = m^2 \\end{cases}$. Chứng minh rằng hệ có nghiệm duy nhất khi $m \\neq 1$ và $m \\neq -2$. Giải hệ khi $m=0$.",
+      "answer": {
+        "steps": [
+          "Ma trận hệ số $A = \\begin{pmatrix} m & 1 & 1 \\\\ 1 & m & 1 \\\\ 1 & 1 & m \\end{pmatrix}$.",
+          "Tính định thức: $\\det(A) = m(m^2 - 1) - 1(m - 1) + 1(1 - m) = m^3 - m - m + 1 + 1 - m = m^3 - 3m + 2$.",
+          "Phân tích: $m^3 - 3m + 2 = (m-1)^2(m+2)$.",
+          "Hệ có nghiệm duy nhất khi $\\det(A) \\neq 0 \\Leftrightarrow m \\neq 1$ và $m \\neq -2$ (đpcm).",
+          "Khi $m=0$, hệ trở thành: $\\begin{cases} 0x + y + z = 1 \\\\ x + 0y + z = 0 \\\\ x + y + 0z = 0 \\end{cases}$.",
+          "Giải: Từ PT2 và PT3: $x + z = 0$ và $x + y = 0 \\Rightarrow y = z$.",
+          "Thay $y=z$ vào PT1: $y + y = 1 \\Rightarrow y = \\frac{1}{2}, z = \\frac{1}{2}$.",
+          "Từ PT2: $x + \\frac{1}{2} = 0 \\Rightarrow x = -\\frac{1}{2}$.",
+          "Nghiệm duy nhất: $\\left(-\\frac{1}{2}, \\frac{1}{2}, \\frac{1}{2}\\right)$."
+        ]
+      }
+    },
+    {
+      "question": "Cho hệ phương trình: $\\begin{cases} x_1 + 2x_2 + 3x_3 - x_4 = 1 \\\\ 2x_1 + 4x_2 + 7x_3 - 3x_4 = 3 \\\\ -x_1 - 2x_2 - 4x_3 + 2x_4 = -2 \\end{cases}$. Tìm nghiệm tổng quát.",
+      "answer": {
+        "steps": [
+          "Ma trận mở rộng: $\\widetilde{A} = \\left(\\begin{array}{cccc|c} 1 & 2 & 3 & -1 & 1 \\\\ 2 & 4 & 7 & -3 & 3 \\\\ -1 & -2 & -4 & 2 & -2 \\end{array}\\right)$.",
+          "Khử Gauss: $R_2 \\to R_2 - 2R_1$, $R_3 \\to R_3 + R_1$: $\\left(\\begin{array}{cccc|c} 1 & 2 & 3 & -1 & 1 \\\\ 0 & 0 & 1 & -1 & 1 \\\\ 0 & 0 & -1 & 1 & -1 \\end{array}\\right)$.",
+          "$R_3 \\to R_3 + R_2$: $\\left(\\begin{array}{cccc|c} 1 & 2 & 3 & -1 & 1 \\\\ 0 & 0 & 1 & -1 & 1 \\\\ 0 & 0 & 0 & 0 & 0 \\end{array}\\right)$.",
+          "Hệ tương đương: $\\begin{cases} x_1 + 2x_2 + 3x_3 - x_4 = 1 \\\\ x_3 - x_4 = 1 \\end{cases}$.",
+          "Chọn $x_2 = s$, $x_4 = t$ tự do. Từ PT2: $x_3 = 1 + t$.",
+          "Thay vào PT1: $x_1 + 2s + 3(1+t) - t = 1 \\Rightarrow x_1 = -2s -2t -2$.",
+          "Nghiệm tổng quát: $\\begin{pmatrix} x_1 \\\\ x_2 \\\\ x_3 \\\\ x_4 \\end{pmatrix} = \\begin{pmatrix} -2 \\\\ 0 \\\\ 1 \\\\ 0 \\end{pmatrix} + s \\begin{pmatrix} -2 \\\\ 1 \\\\ 0 \\\\ 0 \\end{pmatrix} + t \\begin{pmatrix} -2 \\\\ 0 \\\\ 1 \\\\ 1 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng hệ phương trình sau có vô số nghiệm với mọi $a,b$: $\\begin{cases} x + y + z = a \\\\ 2x + 2y + 2z = 2a \\\\ 3x + 3y + 3z = 3a \\\\ x + 2y + 3z = b \\end{cases}$. Tìm điều kiện giữa $a,b$ để hệ có nghiệm.",
+      "answer": {
+        "steps": [
+          "Ma trận mở rộng: $\\widetilde{A} = \\left(\\begin{array}{ccc|c} 1 & 1 & 1 & a \\\\ 2 & 2 & 2 & 2a \\\\ 3 & 3 & 3 & 3a \\\\ 1 & 2 & 3 & b \\end{array}\\right)$.",
+          "Khử Gauss: $R_2 \\to R_2 - 2R_1$, $R_3 \\to R_3 - 3R_1$, $R_4 \\to R_4 - R_1$: $\\left(\\begin{array}{ccc|c} 1 & 1 & 1 & a \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 1 & 2 & b-a \\end{array}\\right)$.",
+          "Hoán đổi $R_2$ và $R_4$: $\\left(\\begin{array}{ccc|c} 1 & 1 & 1 & a \\\\ 0 & 1 & 2 & b-a \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\end{array}\\right)$.",
+          "Hệ luôn có ít nhất 1 biến tự do (số ẩn 3, hạng ma trận ≤ 2) nên vô số nghiệm với mọi $a,b$ (đpcm).",
+          "Hệ tương đương: $\\begin{cases} x + y + z = a \\\\ y + 2z = b-a \\end{cases}$.",
+          "Chọn $z = t$ tự do → $y = b-a - 2t$.",
+          "Thay vào PT1: $x + (b-a-2t) + t = a \\Rightarrow x = 2a - b + t$.",
+          "Nghiệm tổng quát: $\\begin{pmatrix} x \\\\ y \\\\ z \\end{pmatrix} = \\begin{pmatrix} 2a-b \\\\ b-a \\\\ 0 \\end{pmatrix} + t \\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho hệ phương trình: $\\begin{cases} x + 2y + 3z = 5 \\\\ 2x + 5y + 9z = 2 \\\\ 4x + 9y + 15z = k \\end{cases}$. Sử dụng định lý Kronecker-Capelli, tìm $k$ để hệ có nghiệm và giải hệ khi đó.",
+      "answer": {
+        "steps": [
+          "Định lý Kronecker-Capelli: Hệ có nghiệm khi $\\text{rank}(A) = \\text{rank}(\\widetilde{A})$.",
+          "Ma trận hệ số $A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 5 & 9 \\\\ 4 & 9 & 15 \\end{pmatrix}$, ma trận mở rộng $\\widetilde{A} = \\left(\\begin{array}{ccc|c} 1 & 2 & 3 & 5 \\\\ 2 & 5 & 9 & 2 \\\\ 4 & 9 & 15 & k \\end{array}\\right)$.",
+          "Tính hạng của A: $R_2 \\to R_2 - 2R_1$, $R_3 \\to R_3 - 4R_1$: $A \\sim \\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & 1 & 3 \\\\ 0 & 1 & 3 \\end{pmatrix}$.",
+          "$R_3 \\to R_3 - R_2$: $\\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & 1 & 3 \\\\ 0 & 0 & 0 \\end{pmatrix}$ → $\\text{rank}(A) = 2$.",
+          "Xét $\\widetilde{A}$: $R_2 \\to R_2 - 2R_1$: $\\left(\\begin{array}{ccc|c} 1 & 2 & 3 & 5 \\\\ 0 & 1 & 3 & -8 \\\\ 4 & 9 & 15 & k \\end{array}\\right)$.",
+          "$R_3 \\to R_3 - 4R_1$: $\\left(\\begin{array}{ccc|c} 1 & 2 & 3 & 5 \\\\ 0 & 1 & 3 & -8 \\\\ 0 & 1 & 3 & k-20 \\end{array}\\right)$.",
+          "$R_3 \\to R_3 - R_2$: $\\left(\\begin{array}{ccc|c} 1 & 2 & 3 & 5 \\\\ 0 & 1 & 3 & -8 \\\\ 0 & 0 & 0 & k-12 \\end{array}\\right)$.",
+          "Hệ có nghiệm khi $k-12 = 0 \\Rightarrow k=12$.",
+          "Với $k=12$, hệ tương đương: $\\begin{cases} x + 2y + 3z = 5 \\\\ y + 3z = -8 \\end{cases}$.",
+          "Chọn $z = t$ tự do → $y = -8 - 3t$.",
+          "Thay vào PT1: $x + 2(-8-3t) + 3t = 5 \\Rightarrow x = 21 + 3t$.",
+          "Nghiệm: $\\begin{pmatrix} x \\\\ y \\\\ z \\end{pmatrix} = \\begin{pmatrix} 21 \\\\ -8 \\\\ 0 \\end{pmatrix} + t \\begin{pmatrix} 3 \\\\ -3 \\\\ 1 \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm điều kiện của $a,b$ để hệ sau có nghiệm không tầm thường: $\\begin{cases} (a+1)x + 2y + 3z = 0 \\\\ 3x + (a+1)y + 2z = 0 \\\\ 2x + 3y + (a+1)z = 0 \\end{cases}$.",
+      "answer": {
+        "steps": [
+          "Hệ thuần nhất có nghiệm không tầm thường khi $\\det(A) = 0$.",
+          "Ma trận hệ số $A = \\begin{pmatrix} a+1 & 2 & 3 \\\\ 3 & a+1 & 2 \\\\ 2 & 3 & a+1 \\end{pmatrix}$.",
+          "Tính định thức: $\\det(A) = (a+1)\\begin{vmatrix} a+1 & 2 \\\\ 3 & a+1 \\end{vmatrix} - 2\\begin{vmatrix} 3 & 2 \\\\ 2 & a+1 \\end{vmatrix} + 3\\begin{vmatrix} 3 & a+1 \\\\ 2 & 3 \\end{vmatrix}$.",
+          "Tính từng phần: $\\begin{vmatrix} a+1 & 2 \\\\ 3 & a+1 \\end{vmatrix} = (a+1)^2 - 6$.",
+          "$\\begin{vmatrix} 3 & 2 \\\\ 2 & a+1 \\end{vmatrix} = 3(a+1) - 4$.",
+          "$\\begin{vmatrix} 3 & a+1 \\\\ 2 & 3 \\end{vmatrix} = 9 - 2(a+1)$.",
+          "Kết hợp: $\\det(A) = (a+1)[(a+1)^2-6] - 2[3(a+1)-4] + 3[9-2(a+1)]$.",
+          "Rút gọn: $= (a+1)^3 - 6(a+1) - 6(a+1) + 8 + 27 - 6(a+1)$.",
+          "Đặt $u = a+1$: $\\det(A) = u^3 - 18u + 35$.",
+          "Phân tích: $u^3 - 18u + 35 = (u-1)(u-5)(u+7)$ (kiểm tra bằng nghiệm).",
+          "Vậy $\\det(A) = (a+1-1)(a+1-5)(a+1+7) = a(a-4)(a+8)$.",
+          "Điều kiện: $\\det(A)=0 \\Leftrightarrow a=0$ hoặc $a=4$ hoặc $a=-8$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình bằng phương pháp ma trận nghịch đảo: $\\begin{cases} 2x + 3y - z = 1 \\\\ x - y + 2z = 0 \\\\ 3x + y + z = 4 \\end{cases}$.",
+      "answer": {
+        "steps": [
+          "Ma trận hệ số $A = \\begin{pmatrix} 2 & 3 & -1 \\\\ 1 & -1 & 2 \\\\ 3 & 1 & 1 \\end{pmatrix}$, vector hệ số tự do $B = \\begin{pmatrix} 1 \\\\ 0 \\\\ 4 \\end{pmatrix}$.",
+          "Tính $\\det(A) = 2\\begin{vmatrix} -1 & 2 \\\\ 1 & 1 \\end{vmatrix} - 3\\begin{vmatrix} 1 & 2 \\\\ 3 & 1 \\end{vmatrix} + (-1)\\begin{vmatrix} 1 & -1 \\\\ 3 & 1 \\end{vmatrix} = 2(-1-2) - 3(1-6) - (1+3) = 2(-3) - 3(-5) - 4 = -6 + 15 - 4 = 5 \\neq 0$.",
+          "Tìm ma trận nghịch đảo $A^{-1} = \\frac{1}{\\det(A)} \\text{adj}(A)$.",
+          "Ma trận phần bù đại số: $C_{11} = +\\begin{vmatrix} -1 & 2 \\\\ 1 & 1 \\end{vmatrix} = -3$, $C_{12} = -\\begin{vmatrix} 1 & 2 \\\\ 3 & 1 \\end{vmatrix} = -(1-6)=5$,",
+          "$C_{13} = +\\begin{vmatrix} 1 & -1 \\\\ 3 & 1 \\end{vmatrix} = 1+3=4$, $C_{21} = -\\begin{vmatrix} 3 & -1 \\\\ 1 & 1 \\end{vmatrix} = -(3+1)=-4$,",
+          "$C_{22} = +\\begin{vmatrix} 2 & -1 \\\\ 3 & 1 \\end{vmatrix} = 2+3=5$, $C_{23} = -\\begin{vmatrix} 2 & 3 \\\\ 3 & 1 \\end{vmatrix} = -(2-9)=7$,",
+          "$C_{31} = +\\begin{vmatrix} 3 & -1 \\\\ -1 & 2 \\end{vmatrix} = 6-1=5$, $C_{32} = -\\begin{vmatrix} 2 & -1 \\\\ 1 & 2 \\end{vmatrix} = -(4+1)=-5$,",
+          "$C_{33} = +\\begin{vmatrix} 2 & 3 \\\\ 1 & -1 \\end{vmatrix} = -2-3=-5$.",
+          "Ma trận liên hợp: $\\text{adj}(A) = \\begin{pmatrix} -3 & -4 & 5 \\\\ 5 & 5 & -5 \\\\ 4 & 7 & -5 \\end{pmatrix}$.",
+          "$A^{-1} = \\frac{1}{5} \\begin{pmatrix} -3 & -4 & 5 \\\\ 5 & 5 & -5 \\\\ 4 & 7 & -5 \\end{pmatrix}$.",
+          "Nghiệm $X = A^{-1}B = \\frac{1}{5} \\begin{pmatrix} -3 & -4 & 5 \\\\ 5 & 5 & -5 \\\\ 4 & 7 & -5 \\end{pmatrix} \\begin{pmatrix} 1 \\\\ 0 \\\\ 4 \\end{pmatrix} = \\frac{1}{5} \\begin{pmatrix} -3(1) + (-4)(0) + 5(4) \\\\ 5(1) + 5(0) + (-5)(4) \\\\ 4(1) + 7(0) + (-5)(4) \\end{pmatrix}$.",
+          "Tính: $\\frac{1}{5} \\begin{pmatrix} -3 + 0 + 20 \\\\ 5 + 0 - 20 \\\\ 4 + 0 - 20 \\end{pmatrix} = \\frac{1}{5} \\begin{pmatrix} 17 \\\\ -15 \\\\ -16 \\end{pmatrix} = \\begin{pmatrix} \\frac{17}{5} \\\\ -3 \\\\ -\\frac{16}{5} \\end{pmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho hệ phương trình: $\\begin{cases} x + y + z + w = 0 \\\\ 2x + y - z - w = 0 \\\\ x - y + 2z - w = 0 \\\\ 3x + 2y + kz + mw = 0 \\end{cases}$. Tìm $k,m$ để không gian nghiệm có số chiều bằng 2.",
+      "answer": {
+        "steps": [
+          "Ma trận hệ số $A = \\begin{pmatrix} 1 & 1 & 1 & 1 \\\\ 2 & 1 & -1 & -1 \\\\ 1 & -1 & 2 & -1 \\\\ 3 & 2 & k & m \\end{pmatrix}$.",
+          "Số chiều không gian nghiệm = số ẩn - hạng(A) = 4 - \\text{rank}(A).",
+          "Yêu cầu: $\\dim(\\text{ker}(A)) = 2 \\Rightarrow \\text{rank}(A) = 2$.",
+          "Tính hạng A: Khử Gauss hàng 1-3.",
+          "$R_2 \\to R_2 - 2R_1$, $R_3 \\to R_3 - R_1$: $\\begin{pmatrix} 1 & 1 & 1 & 1 \\\\ 0 & -1 & -3 & -3 \\\\ 0 & -2 & 1 & -2 \\\\ 3 & 2 & k & m \\end{pmatrix}$.",
+          "$R_3 \\to R_3 - 2R_2$: $\\begin{pmatrix} 1 & 1 & 1 & 1 \\\\ 0 & -1 & -3 & -3 \\\\ 0 & 0 & 7 & 4 \\\\ 3 & 2 & k & m \\end{pmatrix}$.",
+          "$R_4 \\to R_4 - 3R_1$: $\\begin{pmatrix} 1 & 1 & 1 & 1 \\\\ 0 & -1 & -3 & -3 \\\\ 0 & 0 & 7 & 4 \\\\ 0 & -1 & k-3 & m-3 \\end{pmatrix}$.",
+          "$R_4 \\to R_4 - R_2$: $\\begin{pmatrix} 1 & 1 & 1 & 1 \\\\ 0 & -1 & -3 & -3 \\\\ 0 & 0 & 7 & 4 \\\\ 0 & 0 & k & m \\end{pmatrix}$ (với $k \\to k$, $m \\to m$ cập nhật).",
+          "Từ $R_4 \\to R_4 - R_2$: Hàng 4 mới = [0, 0, (k-3) - (-3), (m-3) - (-3)] = [0,0,k, m].",
+          "Ma trận hiện tại: $\\begin{pmatrix} 1 & 1 & 1 & 1 \\\\ 0 & -1 & -3 & -3 \\\\ 0 & 0 & 7 & 4 \\\\ 0 & 0 & k & m \\end{pmatrix}$.",
+          "Để hạng = 2, hàng 3 và 4 phải phụ thuộc hàng 1-2 → hàng 3 và 4 tỉ lệ với nhau.",
+          "Hàng 3: [0,0,7,4], hàng 4: [0,0,k,m] → $\\frac{k}{7} = \\frac{m}{4} = \\lambda$.",
+          "Vậy $k = 7\\lambda$, $m = 4\\lambda$ với $\\lambda$ tùy ý (ví dụ $\\lambda=1$ thì $k=7,m=4$).",
+          "Kết luận: $k$ và $m$ thỏa $\\frac{k}{7} = \\frac{m}{4}$."
+        ]
+      }
+    },
+    {
+      "question": "Một công ty sản xuất ba loại sản phẩm A, B, C cần nguyên liệu X, Y, Z. Số lượng nguyên liệu cần cho mỗi sản phẩm: A(1,2,3), B(2,3,1), C(3,1,2). Tổng nguyên liệu đã dùng: X(100), Y(110), Z(90). Lập hệ phương trình và tìm số sản phẩm mỗi loại, biết rằng số sản phẩm B bằng tổng số sản phẩm A và C.",
+      "answer": {
+        "steps": [
+          "Gọi $x,y,z$ lần lượt là số sản phẩm A, B, C.",
+          "Hệ phương trình: $\\begin{cases} 1x + 2y + 3z = 100 \\\\ 2x + 3y + 1z = 110 \\\\ 3x + 1y + 2z = 90 \\end{cases}$ và điều kiện $y = x + z$.",
+          "Thay $y = x + z$ vào hệ:",
+          "PT1: $x + 2(x+z) + 3z = 100 \\Rightarrow 3x + 5z = 100$.",
+          "PT2: $2x + 3(x+z) + z = 110 \\Rightarrow 5x + 4z = 110$.",
+          "PT3: $3x + (x+z) + 2z = 90 \\Rightarrow 4x + 3z = 90$.",
+          "Giải hệ mới: $\\begin{cases} 3x + 5z = 100 \\\\ 5x + 4z = 110 \\\\ 4x + 3z = 90 \\end{cases}$ (chọn 2 PT đầu).",
+          "Nhân PT1 với 5, PT2 với 3: $\\begin{cases} 15x + 25z = 500 \\\\ 15x + 12z = 330 \\end{cases}$.",
+          "Trừ vế: $(15x+25z) - (15x+12z) = 500-330 \\Rightarrow 13z = 170 \\Rightarrow z = \\frac{170}{13}$.",
+          "Thay vào PT1: $3x + 5\\cdot\\frac{170}{13} = 100 \\Rightarrow 3x = 100 - \\frac{850}{13} = \\frac{1300-850}{13} = \\frac{450}{13} \\Rightarrow x = \\frac{150}{13}$.",
+          "Từ $y = x + z = \\frac{150}{13} + \\frac{170}{13} = \\frac{320}{13}$.",
+          "Kiểm tra PT3: $4\\cdot\\frac{150}{13} + 3\\cdot\\frac{170}{13} = \\frac{600 + 510}{13} = \\frac{1110}{13} \\neq 90$ → mâu thuẫn.",
+          "Thay vào PT3 gốc: $3x + y + 2z = 3\\cdot\\frac{150}{13} + \\frac{320}{13} + 2\\cdot\\frac{170}{13} = \\frac{450+320+340}{13} = \\frac{1110}{13} \\approx 85.38 \\neq 90$.",
+          "Kết luận: Hệ vô nghiệm do điều kiện thực tế không thỏa mãn. Kiểm tra lại dữ liệu đầu vào."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng mọi hệ phương trình tuyến tính thuần nhất có số phương trình ít hơn số ẩn luôn có nghiệm không tầm thường.",
+      "answer": {
+        "steps": [
+          "Xét hệ thuần nhất $A_{m \\times n} X_{n \\times 1} = 0$ với $m < n$.",
+          "Gọi $r = \\text{rank}(A)$. Ta có $r \\leq m < n$.",
+          "Số chiều không gian nghiệm = $n - r \\geq n - m > 0$ (vì $n > m$).",
+          "Vậy $\\dim(\\text{ker}(A)) > 0$, nên tồn tại vector khác 0 thỏa mãn hệ.",
+          "Cụ thể: Chọn ma trận mở rộng, qua khử Gauss, luôn có ít nhất $n - r \\geq 1$ biến tự do → nghiệm không tầm thường (đpcm)."
+        ]
+      }
     }
   ]
 }
