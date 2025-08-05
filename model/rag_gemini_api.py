@@ -65,7 +65,10 @@ def rewrite_query(query, k=5):
 def promt_text(context, question):
     return f"""
     "Dựa trên thông tin sau, hãy trả lời câu hỏi, 
-    Khi trả lời, hãy định dạng các công thức toán học bằng LaTeX giữa hai dấu $$ hoặc trong `code block`. Mỗi bước xuống dòng rõ ràng.\n"
+    Khi trả lời, hãy tuân thủ nghiêm ngặt các quy định sau:
+    - Nếu có sử dụng công thức toán học, hãy đặt công thức trong khối LaTeX dùng `$$` (hoặc trong code block Markdown nếu cần).
+    - Không cần nói "Dựa trên thông tin được cung cấp"
+    - Mỗi bước xuống dòng riêng.\n"
     Thông tin \n{context}\n
     Câu hỏi: \n{question}\n"
     Trả lời:
