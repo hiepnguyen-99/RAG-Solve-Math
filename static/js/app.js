@@ -289,6 +289,20 @@ class ChatApp {
         const kDocuments = parseInt(this.kSelect.value);
         const rerankEnabled = this.rerankToggle.checked;
 
+        // Tạo user message ngay lập tức để hiển thị
+        const userMessage = {
+            id: Date.now() + '_user',
+            type: 'user',
+            content: message,
+            timestamp: new Date().toISOString(),
+            model: selectedModel,
+            k_documents: kDocuments,
+            rerank_enabled: rerankEnabled
+        };
+
+        // Hiển thị user message ngay lập tức
+        this.addMessage(userMessage);
+
         // Clear input and disable controls
         this.userInput.value = '';
         this.handleInputChange();
@@ -311,9 +325,7 @@ class ChatApp {
             const data = await response.json();
 
             if (data.success) {
-                // Add user message
-                this.addMessage(data.user_message);
-                // Add bot response
+                // Chỉ add bot response (user message đã được add rồi)
                 this.addMessage(data.message);
             } else {
                 this.showToast(data.error || 'Đã xảy ra lỗi', 'error');
