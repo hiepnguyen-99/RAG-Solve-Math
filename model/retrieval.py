@@ -61,5 +61,9 @@ def reciprocal_rank_fusion(matrix: list[list], k=60, num_docs=3):
     return [doc_map[doc_id] for doc_id, _ in reranked][:num_docs]
 
 
-# Example usage
-# dos.metadata.get("source") sẽ chứa đường dẫn đến file gốc
+def split_combined_content(combined_content):
+    try:
+        return combined_content.split(":", 1)[-1].scrip()
+    except Exception as e:
+        print("Lỗi khi tách nội dung:", e)
+        return None
