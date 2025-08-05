@@ -275,13 +275,13 @@ def get_system_info():
 
 @app.route('/api/documents')
 def get_documents():
-    """Lấy danh sách tài liệu từ folder TEST"""
+    """Lấy danh sách tài liệu từ folder data/extracted"""
     try:
-        test_folder = './TEST'
+        documents_folder = './data/extracted'
         documents = []
         
-        if os.path.exists(test_folder):
-            for filename in os.listdir(test_folder):
+        if os.path.exists(documents_folder):
+            for filename in os.listdir(documents_folder):
                 if filename.endswith('.md'):
                     # Tạo tên hiển thị đẹp hơn
                     display_name = filename.replace('.md', '').replace('_', ' ').title()
@@ -290,7 +290,7 @@ def get_documents():
                     documents.append({
                         'name': filename,
                         'display_name': display_name,
-                        'path': f'TEST/{filename}'
+                        'path': f'data/extracted/{filename}'
                     })
         
         return jsonify({
@@ -305,7 +305,7 @@ def get_documents():
 def get_document(filename):
     """Lấy nội dung của một tài liệu"""
     try:
-        file_path = os.path.join('./TEST', filename)
+        file_path = os.path.join('./data/extracted', filename)
         
         if not os.path.exists(file_path) or not filename.endswith('.md'):
             return jsonify({'error': 'Tài liệu không tồn tại'}), 404
