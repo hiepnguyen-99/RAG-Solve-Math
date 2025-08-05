@@ -124,7 +124,7 @@ def solve_question_api(question: str, k: int = 3, rerank: bool = False, rewrite:
         docs = reciprocal_rank_fusion([all_docs], num_docs=k)
 
         # Tạo context
-        context = "\n".join([doc.metadata.get("original_content", "") if doc.metadata else "" for doc in docs]).strip()
+        context = "\n".join([split_combined_content(doc.page_content) if doc.page_content else "" for doc in docs]).strip()
 
         if not context:
             print("Không tìm thấy tài liệu liên quan. Chuyển sang trả lời bằng kiến thức mô hình.")
@@ -144,7 +144,7 @@ def solve_question_api(question: str, k: int = 3, rerank: bool = False, rewrite:
             fallback_prompt = f"Câu hỏi: {question}\nTrả lời ngắn gọn:"
             answer = call_qwen_api(fallback_prompt)
 
-        source_docs = [{"page_content": doc.metadata.get("original_content"), "metadata": doc.metadata} for doc in docs]
+        source_docs = [{"page_content": split_combined_content(doc.page_content), "metadata": doc.metadata} for doc in docs]
         return answer, source_docs
 
     except Exception as e:

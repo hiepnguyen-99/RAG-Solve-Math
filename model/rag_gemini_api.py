@@ -95,7 +95,7 @@ def solve_question_api_gemini(question: str, k: int = 3, rerank: bool = False, r
             docs.extend([doc])
 
         docs = reciprocal_rank_fusion(docs, num_docs=k)
-        context = "\n".join([doc.metadata.get("original_content") for doc in docs]) if docs else "Không tìm thấy tài liệu liên quan."
+        context = "\n".join([split_combined_content(doc.page_content) for doc in docs]) if docs else "Không tìm thấy tài liệu liên quan."
         
         # Gọi API Gemini
         response = model.generate_content(promt_text(context, question),
@@ -117,7 +117,7 @@ def solve_question_api_gemini(question: str, k: int = 3, rerank: bool = False, r
             answer = fallback_response.text if hasattr(fallback_response, 'text') else str(fallback_response)
 
         # Tạo source documents
-        source_docs = [{"page_content": doc.metadata.get("original_content"), "metadata": doc.metadata} for doc in docs]
+        source_docs = [{"page_content": split_combined_content(doc.page_content), "metadata": doc.metadata} for doc in docs]
         return answer.strip(), source_docs
     
     except Exception as e:
