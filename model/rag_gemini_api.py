@@ -39,7 +39,7 @@ db = Chroma(
 
 # Gọi API mô hình
 api_key = os.getenv("GEMINI_API_KEY")
-model = genai.GenerativeModel("gemini-2.5-pro")
+model = genai.GenerativeModel("gemini-2.5-flash")
 
 
 def rewrite_query(query, k=5):
