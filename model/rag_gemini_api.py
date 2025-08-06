@@ -44,13 +44,21 @@ model = genai.GenerativeModel("gemini-2.5-flash")
 
 def rewrite_query(query, k=5):
     query_rewrite_prompt = f"""
-    Tạo {k} truy vấn tìm kiếm khác nhau từ truy vấn sau theo nhiều góc nhìn ngữ nghĩa. 
+    Với truy vấn sau:
+    "{query}"
+    Hãy phân tích và liệt kê **các thành phần kiến thức toán học cần thiết** để có thể trả lời truy vấn này một cách đầy đủ và chính xác. Bao gồm:
+    - Các định nghĩa cần thiết
+    - Các định lý hoặc mệnh đề liên quan
+    - Ký hiệu hoặc biểu thức cần làm rõ
+    - Quy trình hoặc phương pháp giải
+    - Các ví dụ minh họa tiêu biểu
+    - Các nhánh toán học liên quan (nếu có)
     Yêu cầu:
-    - Mỗi truy vấn phải rõ ràng, dễ hiểu.
-    - Ngắn gọn, không lan man.
-    - Mỗi truy vấn trên một dòng.
-
-    Câu gốc: {query}
+    - Chỉ in ra {k} câu truy vấn thay thế, mỗi câu liên quan đến một thành phần kiến thức cụ thể.
+    - Mỗi câu hỏi phải rõ ràng, dễ hiểu.
+    - Không viết dài dòng; ngắn gọn, súc tích, không lan man.
+    - Chỉ hiển thị danh sách các câu hỏi, mỗi câu trên một dòng mới.
+    Câu hỏi gốc: {query}
     """
     response = model.generate_content(query_rewrite_prompt,
                                       generation_config={
