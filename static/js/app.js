@@ -26,6 +26,10 @@ class ChatApp {
         this.sendButton = document.getElementById('send-button');
         this.loadingIndicator = document.getElementById('loading-indicator');
         
+        // Image upload elements
+        this.imageInput = document.getElementById('image-input');
+        this.imageButton = document.getElementById('image-button');
+        
         // Controls
         this.modelSelect = document.getElementById('model-select');
         this.kSelect = document.getElementById('k-select');
@@ -65,7 +69,14 @@ class ChatApp {
         // Input events
         this.userInput.addEventListener('input', () => this.handleInputChange());
         this.userInput.addEventListener('keydown', (e) => this.handleKeyDown(e));
+        this.userInput.addEventListener('paste', (e) => this.handlePaste(e));
+        this.userInput.addEventListener('focus', () => this.handleInputFocus());
+        this.userInput.addEventListener('blur', () => this.handleInputBlur());
         this.sendButton.addEventListener('click', () => this.handleSendMessage());
+        
+        // Image upload events
+        this.imageButton.addEventListener('click', () => this.imageInput.click());
+        this.imageInput.addEventListener('change', (e) => this.handleImageUpload(e));
         
         // Control events
         this.modelSelect.addEventListener('change', () => this.handleModelChange());
@@ -1116,7 +1127,7 @@ class ChatApp {
                 <div class="welcome-icon">
                     <span class="material-icons">psychology</span>
                 </div>
-                <h2>Chào mừng đến với Trợ lý Toán học!</h2>
+                <h2>Chào mừng đến với Gia sư Toán học!</h2>
                 <p>Tôi có thể giúp bạn giải quyết các bài toán 1 cách nhanh chóng và chính xác. Hãy đặt câu hỏi về toán học!</p>
                 <div class="feature-highlights">
                     <div class="feature">
@@ -1181,6 +1192,213 @@ class ChatApp {
         if (savedK) {
             this.kSelect.value = savedK;
         }
+    }
+
+    // ===== Input Focus Handlers =====
+    handleInputFocus() {
+        this.checkClipboardForImages();
+    }
+
+    handleInputBlur() {
+        this.hidePasteIndicator();
+    }
+
+    async checkClipboardForImages() {
+        try {
+            // Kiểm tra xem có quyền truy cập clipboard không
+            if (navigator.clipboard && navigator.clipboard.read) {
+                const items = await navigator.clipboard.read();
+                let hasImage = false;
+                
+                for (const item of items) {
+                    if (item.types.some(type => type.startsWith('image/'))) {
+                        hasImage = true;
+                        break;
+                    }
+                }
+                
+                if (hasImage) {
+                    this.showPasteIndicator();
+                }
+            }
+        } catch (error) {
+            // Không thể truy cập clipboard, bỏ qua
+            console.log('Cannot access clipboard:', error);
+        }
+    }
+
+    showPasteIndicator() {
+        // Kiểm tra xem indicator đã tồn tại chưa
+        if (document.getElementById('pasteIndicator')) return;
+        
+        const indicator = document.createElement('div');
+        indicator.id = 'pasteIndicator';
+        indicator.className = 'paste-indicator';
+        indicator.innerHTML = '📋 Ctrl+V để dán ảnh từ clipboard';
+        
+        const inputWrapper = this.userInput.closest('.input-wrapper');
+        inputWrapper.appendChild(indicator);
+        inputWrapper.classList.add('paste-ready');
+        
+        // Auto hide after 3 seconds
+        setTimeout(() => {
+            this.hidePasteIndicator();
+        }, 3000);
+    }
+
+    hidePasteIndicator() {
+        const indicator = document.getElementById('pasteIndicator');
+        const inputWrapper = this.userInput.closest('.input-wrapper');
+        
+        if (indicator) {
+            indicator.remove();
+        }
+        
+        if (inputWrapper) {
+            inputWrapper.classList.remove('paste-ready');
+        }
+    }
+
+    // ===== Paste Handler =====
+    async handlePaste(event) {
+        const items = event.clipboardData?.items;
+        if (!items) return;
+
+        // Tìm file ảnh trong clipboard
+        for (let i = 0; i < items.length; i++) {
+            const item = items[i];
+            
+            // Kiểm tra nếu là file ảnh
+            if (item.type.startsWith('image/')) {
+                event.preventDefault(); // Ngăn paste text mặc định
+                
+                // Ẩn paste indicator
+                this.hidePasteIndicator();
+                
+                const file = item.getAsFile();
+                if (file) {
+                    // Hiển thị thông báo paste detected
+                    this.showToast('📋 Đã phát hiện ảnh từ clipboard, đang xử lý...', 'info');
+                    
+                    // Xử lý file như upload bình thường
+                    await this.processImageFile(file);
+                }
+                break;
+            }
+        }
+    }
+
+    // ===== Image Upload Handlers =====
+    async handleImageUpload(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        
+        await this.processImageFile(file);
+        
+        // Reset input để có thể upload cùng file lần nữa
+        this.imageInput.value = '';
+    }
+
+    async processImageFile(file) {
+        // Kiểm tra kích thước file (max 10MB)
+        if (file.size > 10 * 1024 * 1024) {
+            this.showToast('File ảnh quá lớn. Vui lòng chọn file nhỏ hơn 10MB.', 'error');
+            return;
+        }
+        
+        // Hiển thị loading
+        this.showImageProcessing();
+        
+        try {
+            const formData = new FormData();
+            formData.append('image', file);
+            
+            const response = await fetch('/api/upload-image', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                // Điền text đã trích xuất vào input
+                this.userInput.value = result.extracted_text;
+                this.handleInputChange();
+                this.userInput.focus();
+                
+                // Hiển thị preview ảnh
+                this.showImagePreview(file, result.extracted_text);
+                
+                this.showToast('Đã trích xuất nội dung từ ảnh thành công!', 'success');
+            } else {
+                throw new Error(result.error || 'Không thể xử lý ảnh');
+            }
+        } catch (error) {
+            console.error('Error uploading image:', error);
+            this.showToast(`Lỗi khi xử lý ảnh: ${error.message}`, 'error');
+        } finally {
+            this.hideImageProcessing();
+        }
+    }
+
+    showImageProcessing() {
+        const processingHtml = `
+            <div id="imageProcessing" class="image-processing">
+                <div class="spinner-border-sm" role="status"></div>
+                <span>Đang xử lý ảnh và trích xuất nội dung...</span>
+            </div>
+        `;
+        this.chatMessages.insertAdjacentHTML('beforeend', processingHtml);
+        this.scrollToBottom();
+    }
+
+    hideImageProcessing() {
+        const processing = document.getElementById('imageProcessing');
+        if (processing) {
+            processing.remove();
+        }
+    }
+
+    showImagePreview(file, extractedText) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const previewHtml = `
+                <div class="message message-user" id="imagePreview">
+                    <div class="message-content">
+                        <div class="image-upload-preview">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                                <strong>📷 Ảnh đã tải lên:</strong>
+                                <button type="button" style="background: #dc3545; color: white; border: none; border-radius: 4px; padding: 4px 8px; cursor: pointer;" onclick="window.app.removeImagePreview()">
+                                    ✕ Xóa
+                                </button>
+                            </div>
+                            <img src="${e.target.result}" alt="Uploaded image">
+                            <div class="extracted-text">
+                                <small style="color: var(--text-muted);">Nội dung đã trích xuất:</small>
+                                <div style="margin-top: 8px;">${this.escapeHtml(extractedText).replace(/\n/g, '<br>')}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message-meta">
+                        <span class="material-icons">schedule</span>
+                        <span>${new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' })}</span>
+                    </div>
+                </div>
+            `;
+            this.chatMessages.insertAdjacentHTML('beforeend', previewHtml);
+            this.scrollToBottom();
+        };
+        reader.readAsDataURL(file);
+    }
+
+    removeImagePreview() {
+        const preview = document.getElementById('imagePreview');
+        if (preview) {
+            preview.remove();
+        }
+        this.userInput.value = '';
+        this.handleInputChange();
+        this.userInput.focus();
     }
 }
 

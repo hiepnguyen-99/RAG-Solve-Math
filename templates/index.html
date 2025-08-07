@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trợ lý Toán học</title>
+    <title>Gia sư Toán học</title>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -35,7 +35,7 @@
                     <div class="logo-icon">
                         <span class="material-icons">psychology</span>
                     </div>
-                    <h1 class="app-title">Trợ lý Toán học</h1>
+                    <h1 class="app-title">Gia sư Toán học</h1>
                 </div>
                 
                 <div class="header-controls">
@@ -247,7 +247,7 @@
                         <div class="welcome-icon">
                             <span class="material-icons">psychology</span>
                         </div>
-                        <h2>Chào mừng đến với Trợ lý Toán học!</h2>
+                        <h2>Chào mừng đến với Gia sư Toán học!</h2>
                         <p>Tôi có thể giúp bạn giải quyết các bài toán mà bạn đưa ra 1 cách chi tiết và dễ hiểu. Hãy đặt câu hỏi về toán học!</p>
                         <div class="feature-highlights">
                             <div class="feature">
@@ -283,10 +283,14 @@
                     <div class="input-wrapper">
                         <textarea 
                             id="user-input" 
-                            placeholder="Đặt câu hỏi về toán học..."
+                            placeholder="Đặt câu hỏi về toán học, tải ảnh đề bài hoặc paste ảnh (Ctrl+V)..."
                             rows="1"
                             maxlength="2000"
                         ></textarea>
+                        <input type="file" id="image-input" accept="image/*" style="display: none;">
+                        <button class="image-button" id="image-button" title="Tải ảnh đề bài">
+                            <span class="material-icons">photo_camera</span>
+                        </button>
                         <button class="send-button" id="send-button" disabled>
                             <span class="material-icons">send</span>
                         </button>

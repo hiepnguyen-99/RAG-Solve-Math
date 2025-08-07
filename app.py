@@ -8,6 +8,10 @@ import markdown
 import re
 import json
 from dotenv import load_dotenv
+import base64
+from PIL import Image
+import io
+import google.generativeai as genai
 
 # Load .env
 load_dotenv()
@@ -174,6 +178,68 @@ def chat():
         
     except Exception as e:
         return jsonify({'error': f'Đã xảy ra lỗi: {str(e)}'}), 500
+
+@app.route('/api/upload-image', methods=['POST'])
+def upload_image():
+    """API endpoint để xử lý ảnh và trích xuất text toán học"""
+    try:
+        if 'image' not in request.files:
+            return jsonify({'error': 'Không tìm thấy file ảnh'}), 400
+        
+        file = request.files['image']
+        if file.filename == '':
+            return jsonify({'error': 'Không có file được chọn'}), 400
+        
+        # Kiểm tra định dạng file
+        allowed_extensions = {'png', 'jpg', 'jpeg', 'gif', 'bmp', 'webp'}
+        if not ('.' in file.filename and file.filename.rsplit('.', 1)[1].lower() in allowed_extensions):
+            return jsonify({'error': 'Định dạng file không được hỗ trợ'}), 400
+        
+        # Đọc ảnh
+        image_data = file.read()
+        image = Image.open(io.BytesIO(image_data))
+        
+        # Chuyển đổi thành RGB nếu cần
+        if image.mode != 'RGB':
+            image = image.convert('RGB')
+        
+        # Sử dụng Gemini Vision để đọc text từ ảnh
+        api_key = os.getenv("GEMINI_API_KEY")
+        if not api_key:
+            return jsonify({'error': 'GEMINI_API_KEY không được cấu hình'}), 500
+        
+        genai.configure(api_key=api_key)
+        model = genai.GenerativeModel("gemini-2.0-flash-exp")
+        
+        # Prompt để trích xuất đề bài toán
+        prompt = """
+        Hãy đọc và trích xuất CHÍNH XÁC toàn bộ nội dung văn bản từ hình ảnh này, đặc biệt chú ý đến:
+        1. Các công thức toán học
+        2. Số liệu, phân số, căn thức
+        3. Ký hiệu toán học đặc biệt
+        4. Cấu trúc câu hỏi
+        
+        Yêu cầu:
+        - Viết lại đề bài một cách rõ ràng, đầy đủ
+        - Với công thức phức tạp, hãy mô tả bằng ký hiệu toán học chuẩn
+        - Không thêm giải thích hay phân tích, chỉ trích xuất nội dung gốc
+        - Nếu có nhiều câu hỏi, hãy tách riêng từng câu
+        
+        Nội dung đề bài:
+        """
+        
+        # Gửi ảnh và prompt tới Gemini
+        response = model.generate_content([prompt, image])
+        extracted_text = response.text.strip()
+        
+        return jsonify({
+            'success': True,
+            'extracted_text': extracted_text,
+            'message': 'Đã trích xuất thành công nội dung từ ảnh'
+        })
+        
+    except Exception as e:
+        return jsonify({'error': f'Lỗi khi xử lý ảnh: {str(e)}'}), 500
 
 @app.route('/api/clear', methods=['POST'])
 def clear_chat():
