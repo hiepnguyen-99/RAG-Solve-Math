@@ -74,10 +74,9 @@ def rewrite_query_4b(query, k=5):
     - Các ví dụ minh họa tiêu biểu
     - Các nhánh toán học liên quan (nếu có)
     Yêu cầu:
-    - Chỉ in ra {k} câu truy vấn thay thế, mỗi câu liên quan đến một thành phần kiến thức cụ thể.
-    - Mỗi câu hỏi phải rõ ràng, dễ hiểu.
-    - Không viết dài dòng; ngắn gọn, súc tích, không lan man.
-    - Chỉ hiển thị danh sách các câu hỏi, mỗi câu trên một dòng mới.
+    - Chỉ in ra {k} câu truy vấn thay thế, mỗi câu liên quan đến một thành phần kiến thức khác nhau.
+    - Mỗi câu phải rõ ràng, ngắn gọn, đi thẳng vào vấn đề không lan man để tránh gây nhiễu khi truy vấn.
+    - Chỉ hiển thị danh sách các câu, mỗi câu trên một dòng mới.
     Câu hỏi gốc: {query}
     """
     
