@@ -123,22 +123,23 @@ def chat():
         try:
             if selected_model == 'qwen-4b':
                 # Qwen 4B có thể cần ngrok_url parameter
-                answer, source_docs = model_function(
+                ngrok_url = os.getenv("NGROK_URL", "")
+                answer, source_docs, rewrite_queries = model_function(
                     question=user_message, 
                     k=k_documents, 
                     rerank=rerank_enabled,
-                    ngrok_url=""  # Có thể được config từ environment
+                    ngrok_url=ngrok_url
                 )
             elif selected_model == 'gemini-api':
                 # Gemini có parameter rewrite
-                answer, source_docs = model_function(
+                answer, source_docs, rewrite_queries = model_function(
                     question=user_message,
                     k=k_documents,
                     rerank=rerank_enabled,
                     rewrite=True  # Có thể được config từ UI
                 )
             else:
-                answer, source_docs = model_function(
+                answer, source_docs, rewrite_queries = model_function(
                     question=user_message, 
                     k=k_documents, 
                     rerank=rerank_enabled
@@ -155,6 +156,7 @@ def chat():
             'content': answer,
             'timestamp': datetime.now().isoformat(),
             'source_documents': source_docs,
+            'rewrite_queries': rewrite_queries if 'rewrite_queries' in locals() else [],
             'model': selected_model,
             'k_documents': k_documents,
             'processing_time': processing_time

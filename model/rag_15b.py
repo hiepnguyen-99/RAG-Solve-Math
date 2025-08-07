@@ -70,26 +70,61 @@ prompt_template = PromptTemplate(
     )
 )
 
+def rewrite_query_15b(query, k=5):
+    query_rewrite_prompt = f"""
+    Với truy vấn sau:
+    "{query}"
+    Hãy phân tích và liệt kê **các thành phần kiến thức toán học cần thiết** để có thể trả lời truy vấn này một cách đầy đủ và chính xác. Bao gồm:
+    - Các định nghĩa cần thiết
+    - Các định lý hoặc mệnh đề liên quan
+    - Ký hiệu hoặc biểu thức cần làm rõ
+    - Quy trình hoặc phương pháp giải
+    - Các ví dụ minh họa tiêu biểu
+    - Các nhánh toán học liên quan (nếu có)
+    Yêu cầu:
+    - Chỉ in ra {k} câu truy vấn thay thế, mỗi câu liên quan đến một thành phần kiến thức cụ thể.
+    - Mỗi câu hỏi phải rõ ràng, dễ hiểu.
+    - Không viết dài dòng; ngắn gọn, súc tích, không lan man.
+    - Chỉ hiển thị danh sách các câu hỏi, mỗi câu trên một dòng mới.
+    Câu hỏi gốc: {query}
+    """
+    response = llm.invoke(query_rewrite_prompt).strip()
+    return response.split('\n') if response else [query]
+
 # 8. Hàm giải đáp
-def solve_question_15b(question: str, k: int = 3, rerank: bool = False):
-    # Tạo retriever mới với k tài liệu gần nhất
-    custom_retriever = db.as_retriever(search_kwargs={"k": k})
-    docs = custom_retriever.get_relevant_documents(question)
-    
-    # Apply reranking if enabled
-    if rerank and docs and RERANK_AVAILABLE:
-        try:
-            reranker = FlagReranker(RERANK_MODEL, use_fp16=True)
-            docs = rerank_docs_with_model(question, docs, reranker)
-            print(f"Reranking applied to {len(docs)} documents")
-        except Exception as e:
-            print(f"Reranking failed: {e}, continuing without reranking...")
-    elif rerank and not RERANK_AVAILABLE:
-        print("Reranking requested but FlagEmbedding not available")
+def solve_question_15b(question: str, k: int = 3, rerank: bool = False, rewrite: bool = True):
+    # Tạo queries với rewrite
+    if rewrite:
+        queries = rewrite_query_15b(question, 3)
+        queries.append(question)  # Thêm câu hỏi gốc vào cuối
+    else:
+        queries = [question]
+
+    # Collect documents từ tất cả queries
+    docs = []
+    for query in queries:
+        custom_retriever = db.as_retriever(search_kwargs={"k": k})
+        doc = custom_retriever.get_relevant_documents(query)
+        
+        # Apply reranking if enabled
+        if rerank and doc and RERANK_AVAILABLE:
+            try:
+                reranker = FlagReranker(RERANK_MODEL, use_fp16=True)
+                doc = rerank_docs_with_model(query, doc, reranker)
+                print(f"Reranking applied to {len(doc)} documents")
+            except Exception as e:
+                print(f"Reranking failed: {e}, continuing without reranking...")
+        elif rerank and not RERANK_AVAILABLE:
+            print("Reranking requested but FlagEmbedding not available")
+        
+        docs.extend([doc])
+
+    # Sử dụng reciprocal rank fusion để kết hợp kết quả
+    docs = reciprocal_rank_fusion(docs, num_docs=k)
 
     temp_qa_chain = RetrievalQA.from_chain_type(
         llm=llm,
-        retriever=custom_retriever,
+        retriever=db.as_retriever(search_kwargs={"k": k}),
         chain_type="stuff",
         chain_type_kwargs={"prompt": prompt_template},
         return_source_documents=True
@@ -102,16 +137,6 @@ def solve_question_15b(question: str, k: int = 3, rerank: bool = False):
     if question in answer:
         answer = answer.split(question)[-1].strip(": \n")
 
-    # Use reranked docs if available, otherwise use original
-    source_docs = docs if rerank else result.get("source_documents", [])
-    
-    docs = [
-    {
-        "page_content": split_combined_content(doc.page_content),
-        "metadata": doc.metadata
-    }
-    for doc in source_docs
-]
     # fallback nếu không có kết quả
     if not answer:
         fallback_prompt = f"Câu hỏi: {question}\nTrả lời ngắn gọn:"
@@ -121,4 +146,79 @@ def solve_question_15b(question: str, k: int = 3, rerank: bool = False):
         else:
             answer = raw_output.strip()
 
-    return answer, docs
+    # Tạo source documents
+    source_docs = []
+    for doc in docs:
+        source_docs.append({
+            "page_content": split_combined_content(doc.page_content),
+            "metadata": doc.metadata
+        })
+    
+    # Tạo thông tin về rewrite queries riêng biệt
+    rewrite_queries = []
+    if rewrite and len(queries) > 1:
+        rewrite_queries = queries[:-1]  # Loại bỏ câu hỏi gốc
+
+    return answer, source_docs, rewrite_queries
+
+# Thêm hàm giải toán chuyên biệt cho Qwen 1.5B với LaTeX
+from langchain.prompts import PromptTemplate as MathPromptTemplate
+
+def solve_math_question_15b(question: str, k: int = 3, rerank: bool = False, rewrite: bool = True):
+    """
+    Giải toán chi tiết từng bước, sử dụng LaTeX cho công thức.
+    Trả về (answer, source_docs).
+    """
+    # Tạo queries với rewrite
+    if rewrite:
+        queries = rewrite_query_15b(question, 3)
+        queries.append(question)  # Thêm câu hỏi gốc vào cuối
+    else:
+        queries = [question]
+
+    # Collect documents từ tất cả queries
+    docs = []
+    for query in queries:
+        custom_retriever = db.as_retriever(search_kwargs={"k": k})
+        doc = custom_retriever.get_relevant_documents(query)
+        
+        if rerank and RERANK_AVAILABLE:
+            try:
+                reranker = FlagReranker(RERANK_MODEL, use_fp16=True)
+                doc = rerank_docs_with_model(query, doc, reranker)
+            except Exception:
+                pass
+        
+        docs.extend([doc])
+
+    # Sử dụng reciprocal rank fusion để kết hợp kết quả
+    docs = reciprocal_rank_fusion(docs, num_docs=k)
+    
+    context = "\n".join([split_combined_content(doc.page_content) for doc in docs])
+    math_template = MathPromptTemplate(
+        input_variables=["context", "question"],
+        template=(
+            "Bạn là trợ lý AI chuyên giải toán. Dựa vào thông tin:\n{context}\n"
+            "Giải từng bước rõ ràng, biểu diễn công thức trong LaTeX (đặt giữa $$).\n"
+            "Câu hỏi: {question}\n"
+            "Trả lời:\n1. Phân tích.\n2. Giải chi tiết.\n3. Kết luận."
+        )
+    )
+    prompt_text = math_template.format(context=context, question=question)
+    result = llm.invoke(prompt_text).strip()
+    answer = result
+    
+    # Tạo source documents
+    source_docs = []
+    for doc in docs:
+        source_docs.append({
+            "page_content": split_combined_content(doc.page_content),
+            "metadata": doc.metadata
+        })
+    
+    # Tạo thông tin về rewrite queries riêng biệt
+    rewrite_queries = []
+    if rewrite and len(queries) > 1:
+        rewrite_queries = queries[:-1]  # Loại bỏ câu hỏi gốc
+    
+    return answer, source_docs, rewrite_queries

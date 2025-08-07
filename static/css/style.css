@@ -981,6 +981,71 @@ body {
     line-height: 1.5;
 }
 
+/* ===== Rewrite Queries ===== */
+.rewrite-queries {
+    margin-top: 16px;
+    padding: 16px;
+    background: var(--surface-hover);
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.rewrite-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.rewrite-header .material-icons {
+    font-size: 18px;
+    color: var(--primary-color);
+    transition: transform 0.2s ease;
+}
+
+.rewrite-queries.collapsed .rewrite-header .material-icons {
+    transform: rotate(-90deg);
+}
+
+.rewrite-list {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.rewrite-queries.collapsed .rewrite-list {
+    display: none;
+}
+
+.rewrite-query-item {
+    display: flex;
+    gap: 8px;
+    padding: 10px 12px;
+    margin-bottom: 6px;
+    background: var(--background-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.rewrite-query-item:last-child {
+    margin-bottom: 0;
+}
+
+.query-number {
+    color: var(--primary-color);
+    font-weight: 600;
+    min-width: 20px;
+}
+
+.query-text {
+    color: var(--text-secondary);
+    flex: 1;
+}
+
 /* ===== Loading Indicator ===== */
 .loading-indicator {
     display: none;

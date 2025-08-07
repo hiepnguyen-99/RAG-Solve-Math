@@ -351,8 +351,8 @@ class ChatApp {
         
         this.chatMessages.appendChild(messageElement);
         
-        // Add source documents toggle functionality for bot messages
-        if (message.type === 'bot' && message.source_documents) {
+        // Add toggle functionality for bot messages (source docs and rewrite queries)
+        if (message.type === 'bot' && (message.source_documents || message.rewrite_queries)) {
             this.initSourceToggle(messageElement);
         }
         
@@ -387,10 +387,15 @@ class ChatApp {
             const sourceDocsHTML = message.source_documents && message.source_documents.length > 0
                 ? this.createSourceDocumentsHTML(message.source_documents)
                 : '';
+            
+            const rewriteQueriesHTML = message.rewrite_queries && message.rewrite_queries.length > 0
+                ? this.createRewriteQueriesHTML(message.rewrite_queries)
+                : '';
 
             return `
                 <div class="message-content">
                     ${this.escapeHtml(message.content)}
+                    ${rewriteQueriesHTML}
                     ${sourceDocsHTML}
                 </div>
                 <div class="message-meta">
@@ -448,13 +453,47 @@ class ChatApp {
         `;
     }
 
+    createRewriteQueriesHTML(rewriteQueries) {
+        if (!rewriteQueries || rewriteQueries.length === 0) return '';
+
+        const queriesHTML = rewriteQueries.map((query, index) => `
+            <div class="rewrite-query-item">
+                <span class="query-number">${index + 1}.</span>
+                <span class="query-text">${this.escapeHtml(query)}</span>
+            </div>
+        `).join('');
+
+        return `
+            <div class="rewrite-queries collapsed">
+                <div class="rewrite-header">
+                    <span class="material-icons">expand_more</span>
+                    <span>Câu hỏi được mở rộng (${rewriteQueries.length})</span>
+                </div>
+                <div class="rewrite-list">
+                    ${queriesHTML}
+                </div>
+            </div>
+        `;
+    }
+
     initSourceToggle(messageElement) {
+        // Handle source documents toggle
         const sourceHeader = messageElement.querySelector('.source-header');
         const sourceContainer = messageElement.querySelector('.source-documents');
         
         if (sourceHeader && sourceContainer) {
             sourceHeader.addEventListener('click', () => {
                 sourceContainer.classList.toggle('collapsed');
+            });
+        }
+        
+        // Handle rewrite queries toggle
+        const rewriteHeader = messageElement.querySelector('.rewrite-header');
+        const rewriteContainer = messageElement.querySelector('.rewrite-queries');
+        
+        if (rewriteHeader && rewriteContainer) {
+            rewriteHeader.addEventListener('click', () => {
+                rewriteContainer.classList.toggle('collapsed');
             });
         }
         

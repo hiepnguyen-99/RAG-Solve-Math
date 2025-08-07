@@ -3,6 +3,7 @@ import os
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 from langchain.prompts import PromptTemplate
+from langchain.prompts import PromptTemplate as MathPromptTemplate
 import google.generativeai as genai
 from retrieval import *
 from dotenv import load_dotenv
@@ -81,10 +82,26 @@ def promt_text(context, question):
     Câu hỏi: \n{question}\n"
     Trả lời:
     """
+# template cho giải toán step-by-step với LaTeX
+math_template = MathPromptTemplate(
+    input_variables=["context", "question"],
+    template="""
+Bạn là trợ lý AI chuyên giải các bài toán. Dựa vào thông tin sau:
+{context}
+Hãy giải bài toán sau đây từng bước một, hiển thị các công thức trong khối LaTeX (đặt giữa $$):
+Câu hỏi: {question}
+1. Phân tích.
+2. Giải chi tiết.
+3. Kết luận.
+"""
+)
 
 
-# Hàm chính giải toán qua API
-def solve_question_api_gemini(question: str, k: int = 3, rerank: bool = False, rewrite: bool = True):
+def solve_question_api_gemini(question: str, k: int = 3, rerank: bool = False, rewrite: bool = True, math: bool = False):
+    """
+    Hàm giải toán hoặc chat chung qua Gemini API.
+    Nếu math=True thì sử dụng LaTeX step-by-step.
+    """
     try:
         # Tạo queries
         if rewrite:
@@ -108,15 +125,15 @@ def solve_question_api_gemini(question: str, k: int = 3, rerank: bool = False, r
         docs = reciprocal_rank_fusion(docs, num_docs=k)
         context = "\n".join([split_combined_content(doc.page_content) for doc in docs]) if docs else "Không tìm thấy tài liệu liên quan."
         
-        # Gọi API Gemini
-        response = model.generate_content(promt_text(context, question),
-                                          generation_config={
-                                                "temperature": 0.9,        
-                                                "top_p": 0.8,              
-                                                "top_k": 40,   
-                                                }
-                                          )
-        answer = response.text if hasattr(response, 'text') else str(response)
+        # Gọi API Gemini với chế độ chung hoặc toán
+        if math:
+            prompt = math_template.format(context=context, question=question)
+            gen_config = {"temperature": 0.9, "top_p": 0.8, "top_k": 40}
+        else:
+            prompt = promt_text(context, question)
+            gen_config = {"temperature": 0.9, "top_p": 0.8, "top_k": 40}
+        response = model.generate_content(prompt, generation_config=gen_config)
+        answer = response.text.strip() if hasattr(response, 'text') else str(response)
 
         # Xử lý câu trả lời
         if question in answer:
@@ -128,9 +145,27 @@ def solve_question_api_gemini(question: str, k: int = 3, rerank: bool = False, r
             answer = fallback_response.text if hasattr(fallback_response, 'text') else str(fallback_response)
 
         # Tạo source documents
-        source_docs = [{"page_content": split_combined_content(doc.page_content), "metadata": doc.metadata} for doc in docs]
-        return answer.strip(), source_docs
+        source_docs = []
+        for doc in docs:
+            source_docs.append({
+                "page_content": split_combined_content(doc.page_content),
+                "metadata": doc.metadata
+            })
+        
+        # Tạo thông tin về rewrite queries riêng biệt
+        rewrite_queries = []
+        if rewrite and len(queries) > 1:
+            rewrite_queries = queries[:-1]  # Loại bỏ câu hỏi gốc
+
+        return answer.strip(), source_docs, rewrite_queries
     
     except Exception as e:
-        return f"Lỗi khi xử lý câu hỏi với Gemini: {str(e)}", []
-    
+        return f"Lỗi khi xử lý câu hỏi với Gemini: {str(e)}", [], []
+
+
+# Alias cho math-gemini-api: chỉ gọi solve_question_api_gemini với math=True
+def solve_math_question_api_gemini(question: str, k: int = 3, rerank: bool = False, rewrite: bool = True):
+    """
+    Alias chế độ toán dành cho math-gemini-api
+    """
+    return solve_question_api_gemini(question, k=k, rerank=rerank, rewrite=rewrite, math=True)
