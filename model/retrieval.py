@@ -63,7 +63,7 @@ def reciprocal_rank_fusion(matrix: list[list], k=60, num_docs=3):
 
 def split_combined_content(combined_content):
     try:
-        return combined_content.split(":", 1)[-1]
+        return combined_content.split("|||", 1)[-1]
     except Exception as e:
         print("Lỗi khi tách nội dung:", e)
         return None
