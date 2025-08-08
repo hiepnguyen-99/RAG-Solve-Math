@@ -45,19 +45,14 @@ model = genai.GenerativeModel("gemini-2.5-flash")
 
 def rewrite_query(query, k=5):
     query_rewrite_prompt = f"""
-    Với truy vấn sau:
+    Từ truy vấn:
     "{query}"
-    Hãy phân tích và liệt kê **các thành phần kiến thức toán học cần thiết** để có thể trả lời truy vấn này một cách đầy đủ và chính xác. Bao gồm:
-    - Các định nghĩa cần thiết
-    - Các định lý hoặc mệnh đề liên quan
-    - Ký hiệu hoặc biểu thức cần làm rõ
-    - Quy trình hoặc phương pháp giải
-    - Các ví dụ minh họa tiêu biểu
-    - Các nhánh toán học liên quan (nếu có)
+    Hãy tạo {k} truy vấn chuyên biệt,
+    Mỗi truy vấn tập trung vào một khía cạnh kiến thức toán học cần thiết để trả lời đầy đủ câu gốc, bao gồm : định nghĩa, định lý, ký hiệu, phương pháp, ví dụ, hoặc lĩnh vực liên quan.
     Yêu cầu:
-    - Chỉ in ra {k} câu truy vấn thay thế, mỗi câu liên quan đến một thành phần kiến thức khác nhau.
-    - Mỗi câu phải rõ ràng, ngắn gọn, đi thẳng vào vấn đề không lan man để tránh gây nhiễu khi truy vấn.
-    - Chỉ hiển thị danh sách các câu, mỗi câu trên một dòng mới.
+    - Mỗi truy vấn ngắn gọn, rõ ràng, trực tiếp, không lan man, tránh gây nhiễu khi truy vấn.
+    - Mỗi truy vấn thể hiện một mục tiêu tra cứu riêng biệt.
+    - Chỉ in danh sách truy vấn, mỗi truy vấn một dòng.
     Câu hỏi gốc: {query}
     """
     response = model.generate_content(query_rewrite_prompt,
