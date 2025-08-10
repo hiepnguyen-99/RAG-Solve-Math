@@ -125,30 +125,59 @@ def chat():
         
         # Gọi function với các tham số phù hợp
         try:
+            print(f"DEBUG: Calling model function for {selected_model}")
+            
+            # Chuẩn bị conversation history (chỉ lấy các tin nhắn trước đó, không bao gồm user message mới nhất)
+            conversation_history = session['messages'][:-1] if len(session['messages']) > 0 else []
+            
             if selected_model == 'qwen-4b':
                 # Qwen 4B có thể cần ngrok_url parameter
                 ngrok_url = os.getenv("NGROK_URL", "")
-                answer, source_docs, rewrite_queries = model_function(
+                result = model_function(
                     question=user_message, 
                     k=k_documents, 
                     rerank=rerank_enabled,
-                    ngrok_url=ngrok_url
+                    ngrok_url=ngrok_url,
+                    conversation_history=conversation_history
                 )
+                print(f"DEBUG: Model function returned {len(result)} values: {type(result)}")
+                answer, source_docs, rewrite_queries = result
             elif selected_model == 'gemini-api':
-                # Gemini có parameter rewrite
-                answer, source_docs, rewrite_queries = model_function(
+                # Gemini có parameter rewrite và conversation_history
+                result = model_function(
                     question=user_message,
                     k=k_documents,
                     rerank=rerank_enabled,
-                    rewrite=True  # Có thể được config từ UI
+                    rewrite=True,  # Có thể được config từ UI
+                    conversation_history=conversation_history
                 )
+                print(f"DEBUG: Model function returned {len(result)} values: {type(result)}")
+                answer, source_docs, rewrite_queries = result
             else:
-                answer, source_docs, rewrite_queries = model_function(
-                    question=user_message, 
-                    k=k_documents, 
-                    rerank=rerank_enabled
-                )
+                # Các model khác - thêm conversation_history nếu function hỗ trợ
+                try:
+                    result = model_function(
+                        question=user_message, 
+                        k=k_documents, 
+                        rerank=rerank_enabled,
+                        rewrite=True,
+                        conversation_history=conversation_history
+                    )
+                except TypeError:
+                    # Fallback nếu function không hỗ trợ conversation_history
+                    print(f"DEBUG: {selected_model} không hỗ trợ conversation_history, sử dụng mode cũ")
+                    result = model_function(
+                        question=user_message, 
+                        k=k_documents, 
+                        rerank=rerank_enabled,
+                        rewrite=True
+                    )
+                print(f"DEBUG: Model function returned {len(result)} values: {type(result)}")
+                answer, source_docs, rewrite_queries = result
         except Exception as e:
+            print(f"DEBUG: Exception in model function call: {str(e)}")
+            import traceback
+            traceback.print_exc()
             return jsonify({'error': f'Lỗi khi xử lý với model {selected_model}: {str(e)}'}), 500
         
         processing_time = round(time.time() - start_time, 2)
@@ -163,7 +192,8 @@ def chat():
             'rewrite_queries': rewrite_queries if 'rewrite_queries' in locals() else [],
             'model': selected_model,
             'k_documents': k_documents,
-            'processing_time': processing_time
+            'processing_time': processing_time,
+            'used_context': len(conversation_history) > 0  # Thêm thông tin này
         }
         session['messages'].append(bot_msg)
         
@@ -567,4 +597,4 @@ def save_current_chat():
     save_chat_history(history)
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=False, host='0.0.0.0', port=5000, use_reloader=False)

@@ -8,6 +8,7 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 from langchain_huggingface import HuggingFacePipeline
 from retrieval import *
+from conversation_manager import conversation_manager
 
 # Optional import for reranking
 try:
@@ -64,21 +65,10 @@ def call_qwen_4b(prompt: str, ngrok_url: str):
 
 def rewrite_query_4b(query, k=5):
     query_rewrite_prompt = f"""
-    Với truy vấn sau:
-    "{query}"
-    Hãy phân tích và liệt kê **các thành phần kiến thức toán học cần thiết** để có thể trả lời truy vấn này một cách đầy đủ và chính xác. Bao gồm:
-    - Các định nghĩa cần thiết
-    - Các định lý hoặc mệnh đề liên quan
-    - Ký hiệu hoặc biểu thức cần làm rõ
-    - Quy trình hoặc phương pháp giải
-    - Các ví dụ minh họa tiêu biểu
-    - Các nhánh toán học liên quan (nếu có)
-    Yêu cầu:
-    - Chỉ in ra {k} câu truy vấn thay thế, mỗi câu liên quan đến một thành phần kiến thức khác nhau.
-    - Mỗi câu phải rõ ràng, ngắn gọn, đi thẳng vào vấn đề không lan man để tránh gây nhiễu khi truy vấn.
-    - Chỉ hiển thị danh sách các câu, mỗi câu trên một dòng mới.
-    Câu hỏi gốc: {query}
-    """
+Tạo {k} câu hỏi ngắn để tìm kiếm thông tin trả lời: "{query}"
+
+Chỉ liệt kê {k} câu hỏi, mỗi câu một dòng:
+"""
     
     if not NGROK_URL:
         print("Warning: NGROK_URL not configured, returning original query")
@@ -87,7 +77,30 @@ def rewrite_query_4b(query, k=5):
     response = call_qwen_4b(query_rewrite_prompt, NGROK_URL)
     
     if response and not response.startswith("Lỗi:"):
-        queries = [q.strip() for q in response.split('\n') if q.strip()]
+        # Tách các dòng và làm sạch
+        lines = response.split('\n')
+        queries = []
+        
+        for line in lines:
+            line = line.strip()
+            if not line:
+                continue
+            
+            # Bỏ qua các dòng không phải câu hỏi (tiếng Anh, số thứ tự, etc.)
+            if any(word.lower() in line.lower() for word in ['okay', 'let\'s', 'first', 'user', 'think', 'wait', 'the']):
+                continue
+                
+            # Loại bỏ số thứ tự ở đầu dòng (1., 2., -, •, etc.)
+            import re
+            line = re.sub(r'^\d+\.?\s*', '', line)  # Loại bỏ "1. " hoặc "1 "
+            line = re.sub(r'^[-•*]\s*', '', line)   # Loại bỏ "- " hoặc "• "
+            line = line.strip()
+            
+            if line and len(line) > 10 and not line.lower().startswith(('vui lòng', 'okay', 'first')):  # Loại bỏ các dòng không hợp lệ
+                queries.append(line)
+        
+        # Giới hạn số lượng câu hỏi theo k
+        queries = queries[:k] if len(queries) > k else queries
         return queries if queries else [query]
     else:
         print(f"Rewrite failed: {response}")
@@ -96,20 +109,46 @@ def rewrite_query_4b(query, k=5):
 
 # PromptTemplate cần được khởi tạo với mẫu cụ thể
 prompt_template = PromptTemplate(
-    input_variables=["context", "question"],
+    input_variables=["context", "question", "conversation_context"],
     template="""
-Bạn là một trợ lý AI thông minh, chỉ trả lời câu hỏi dựa trên thông tin đã cho:
+{conversation_context}
+
+Chỉ dựa vào thông tin sau, hãy trả lời câu hỏi sau một cách ngắn gọn, không hiện suy nghĩ:
 {context}
-Dựa vào thông tin trên, hãy trả lời câu hỏi sau một chính xác:
 Câu hỏi: {question}
 Trả lời:
 """
 )
 
-def solve_question_4b(question: str, k: int = 3, ngrok_url: str = NGROK_URL, rerank: bool = False, rewrite: bool = True):
+def solve_question_4b(question: str, k: int = 3, ngrok_url: str = NGROK_URL, rerank: bool = False, rewrite: bool = True, conversation_history: list = None):
+    """
+    Giải câu hỏi với hỗ trợ conversation context
+    
+    Args:
+        question: Câu hỏi hiện tại
+        k: Số lượng tài liệu retrieve
+        ngrok_url: URL của ngrok server
+        rerank: Có sử dụng reranking không
+        rewrite: Có rewrite query không
+        conversation_history: Lịch sử trò chuyện (danh sách messages)
+    """
+    # Xây dựng conversation context
+    conversation_context = ""
+    if conversation_history and conversation_manager.should_use_context(question, conversation_history):
+        conversation_context = conversation_manager.build_conversation_context(conversation_history, question)
+        print(f"🔄 Sử dụng conversation context: {len(conversation_context)} ký tự")
+    
     # Tạo queries với rewrite
     if rewrite:
-        queries = rewrite_query_4b(question, 3)
+        # Nếu có context, có thể cải thiện query
+        if conversation_context:
+            topics = conversation_manager.extract_key_topics(conversation_history)
+            enhanced_question = question
+            if topics:
+                enhanced_question = f"{question} (Liên quan: {', '.join(topics)})"
+            queries = rewrite_query_4b(enhanced_question, 3)
+        else:
+            queries = rewrite_query_4b(question, 3)
         queries.append(question)  # Thêm câu hỏi gốc vào cuối
     else:
         queries = [question]
@@ -118,7 +157,7 @@ def solve_question_4b(question: str, k: int = 3, ngrok_url: str = NGROK_URL, rer
     docs = []
     for query in queries:
         custom_retriever = db.as_retriever(search_kwargs={"k": k})
-        doc = custom_retriever.get_relevant_documents(query)
+        doc = custom_retriever.invoke(query)
         
         # Apply reranking if enabled
         if rerank and doc and RERANK_AVAILABLE:
@@ -140,7 +179,11 @@ def solve_question_4b(question: str, k: int = 3, ngrok_url: str = NGROK_URL, rer
     context = "\n".join([split_combined_content(doc.page_content) for doc in docs])
 
     # Áp dụng PromptTemplate để tạo prompt hoàn chỉnh
-    prompt_text = prompt_template.format(context=context, question=question)
+    prompt_text = prompt_template.format(
+        context=context, 
+        question=question, 
+        conversation_context=conversation_context
+    )
 
     # Gửi prompt tới mô hình qua ngrok
     answer = call_qwen_4b(prompt_text, ngrok_url)
@@ -171,14 +214,27 @@ def solve_question_4b(question: str, k: int = 3, ngrok_url: str = NGROK_URL, rer
 
 from langchain.prompts import PromptTemplate as MathPromptTemplate
 
-def solve_math_question_4b(question: str, k: int = 3, ngrok_url: str = NGROK_URL, rerank: bool = False, rewrite: bool = True):
+def solve_math_question_4b(question: str, k: int = 3, ngrok_url: str = NGROK_URL, rerank: bool = False, rewrite: bool = True, conversation_history: list = None):
     """
     Giải toán bước-by-step, sử dụng biểu diễn LaTeX cho công thức.
     Trả về answer và source_docs.
     """
+    # Xây dựng conversation context
+    conversation_context = ""
+    if conversation_history and conversation_manager.should_use_context(question, conversation_history):
+        conversation_context = conversation_manager.build_conversation_context(conversation_history, question)
+        print(f"🔄 Sử dụng conversation context: {len(conversation_context)} ký tự")
+        
     # Tạo queries với rewrite
     if rewrite:
-        queries = rewrite_query_4b(question, 3)
+        if conversation_context:
+            topics = conversation_manager.extract_key_topics(conversation_history)
+            enhanced_question = question
+            if topics:
+                enhanced_question = f"{question} (Liên quan: {', '.join(topics)})"
+            queries = rewrite_query_4b(enhanced_question, 3)
+        else:
+            queries = rewrite_query_4b(question, 3)
         queries.append(question)  # Thêm câu hỏi gốc vào cuối
     else:
         queries = [question]
@@ -187,7 +243,7 @@ def solve_math_question_4b(question: str, k: int = 3, ngrok_url: str = NGROK_URL
     docs = []
     for query in queries:
         custom_retriever = db.as_retriever(search_kwargs={"k": k})
-        doc = custom_retriever.get_relevant_documents(query)
+        doc = custom_retriever.invoke(query)
         
         # Rerank nếu cần
         if rerank and RERANK_AVAILABLE:
@@ -207,11 +263,15 @@ def solve_math_question_4b(question: str, k: int = 3, ngrok_url: str = NGROK_URL
     
     # Math prompt template
     math_template = MathPromptTemplate(
-        input_variables=["context", "question"],
+        input_variables=["context", "question", "conversation_context"],
         template="""
-Bạn là trợ lý AI chuyên giải các bài toán. Dựa vào thông tin sau:
+Bạn là trợ lý AI chuyên giải các bài toán.
+
+{conversation_context}
+
+Dựa vào thông tin sau:
 {context}
-Hãy giải bài toán sau đây từng bước một, hiển thị các công thức trong khối LaTeX (dùng $$):
+Hãy giải bài toán sau đây từng bước một, không nhắc lại, không hiện suy nghĩ, hiển thị các công thức trong khối LaTeX (dùng $$):
 Câu hỏi: {question}
 Đầu ra:
 1. Phân tích bài toán.
@@ -219,7 +279,11 @@ Câu hỏi: {question}
 3. Kết luận câu trả lời cuối cùng.
 """
     )
-    prompt_text = math_template.format(context=context, question=question)
+    prompt_text = math_template.format(
+        context=context, 
+        question=question, 
+        conversation_context=conversation_context
+    )
     
     # Gọi API
     raw = call_qwen_4b(prompt_text, ngrok_url)

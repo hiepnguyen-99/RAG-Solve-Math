@@ -6,6 +6,7 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 from langchain_huggingface import HuggingFacePipeline
 from retrieval import *
+from conversation_manager import conversation_manager
 
 # Optional import for reranking
 try:
@@ -59,10 +60,11 @@ generation_pipe = pipeline(
 )
 llm = HuggingFacePipeline(pipeline=generation_pipe)
 
-# 6. Prompt rút gọn
+# 6. Prompt rút gọn với conversation context
 prompt_template = PromptTemplate(
-    input_variables=["context", "question"],
+    input_variables=["context", "question", "conversation_context"],
     template=(
+        "{conversation_context}\n\n"
         "Dựa trên thông tin sau, hãy trả lời ngắn gọn, đúng trọng tâm câu hỏi, chỉ sử dụng tài liệu liên quan đến câu hỏi nhất để trả lời, tài liệu không liên quan vui lòng bỏ qua, chỉ trả lời 1 lần không cần tóm lại và không lặp lại câu hỏi:\n"
         "{context}\n"
         "Câu hỏi: {question}\n"
@@ -90,11 +92,34 @@ def rewrite_query_15b(query, k=5):
     response = llm.invoke(query_rewrite_prompt).strip()
     return response.split('\n') if response else [query]
 
-# 8. Hàm giải đáp
-def solve_question_15b(question: str, k: int = 3, rerank: bool = False, rewrite: bool = True):
+# 8. Hàm giải đáp với conversation context
+def solve_question_15b(question: str, k: int = 3, rerank: bool = False, rewrite: bool = True, conversation_history: list = None):
+    """
+    Giải câu hỏi với hỗ trợ conversation context
+    
+    Args:
+        question: Câu hỏi hiện tại
+        k: Số lượng tài liệu retrieve
+        rerank: Có sử dụng reranking không
+        rewrite: Có rewrite query không
+        conversation_history: Lịch sử trò chuyện (danh sách messages)
+    """
+    # Xây dựng conversation context
+    conversation_context = ""
+    if conversation_history and conversation_manager.should_use_context(question, conversation_history):
+        conversation_context = conversation_manager.build_conversation_context(conversation_history, question)
+        print(f"🔄 Sử dụng conversation context: {len(conversation_context)} ký tự")
+    
     # Tạo queries với rewrite
     if rewrite:
-        queries = rewrite_query_15b(question, 3)
+        if conversation_context:
+            topics = conversation_manager.extract_key_topics(conversation_history)
+            enhanced_question = question
+            if topics:
+                enhanced_question = f"{question} (Liên quan: {', '.join(topics)})"
+            queries = rewrite_query_15b(enhanced_question, 3)
+        else:
+            queries = rewrite_query_15b(question, 3)
         queries.append(question)  # Thêm câu hỏi gốc vào cuối
     else:
         queries = [question]
@@ -121,16 +146,16 @@ def solve_question_15b(question: str, k: int = 3, rerank: bool = False, rewrite:
     # Sử dụng reciprocal rank fusion để kết hợp kết quả
     docs = reciprocal_rank_fusion(docs, num_docs=k)
 
-    temp_qa_chain = RetrievalQA.from_chain_type(
-        llm=llm,
-        retriever=db.as_retriever(search_kwargs={"k": k}),
-        chain_type="stuff",
-        chain_type_kwargs={"prompt": prompt_template},
-        return_source_documents=True
+    # Tạo prompt với conversation context
+    context = "\n".join([split_combined_content(doc.page_content) for doc in docs])
+    prompt_text = prompt_template.format(
+        context=context, 
+        question=question, 
+        conversation_context=conversation_context
     )
-
-    result = temp_qa_chain.invoke({"query": question})
-    answer = result["result"].strip()
+    
+    # Gọi model
+    answer = llm.invoke(prompt_text).strip()
 
     # Xử lý lặp lại prompt trong câu trả lời
     if question in answer:
@@ -163,14 +188,27 @@ def solve_question_15b(question: str, k: int = 3, rerank: bool = False, rewrite:
 # Thêm hàm giải toán chuyên biệt cho Qwen 1.5B với LaTeX
 from langchain.prompts import PromptTemplate as MathPromptTemplate
 
-def solve_math_question_15b(question: str, k: int = 3, rerank: bool = False, rewrite: bool = True):
+def solve_math_question_15b(question: str, k: int = 3, rerank: bool = False, rewrite: bool = True, conversation_history: list = None):
     """
     Giải toán chi tiết từng bước, sử dụng LaTeX cho công thức.
     Trả về (answer, source_docs).
     """
+    # Xây dựng conversation context
+    conversation_context = ""
+    if conversation_history and conversation_manager.should_use_context(question, conversation_history):
+        conversation_context = conversation_manager.build_conversation_context(conversation_history, question)
+        print(f"🔄 Sử dụng conversation context: {len(conversation_context)} ký tự")
+        
     # Tạo queries với rewrite
     if rewrite:
-        queries = rewrite_query_15b(question, 3)
+        if conversation_context:
+            topics = conversation_manager.extract_key_topics(conversation_history)
+            enhanced_question = question
+            if topics:
+                enhanced_question = f"{question} (Liên quan: {', '.join(topics)})"
+            queries = rewrite_query_15b(enhanced_question, 3)
+        else:
+            queries = rewrite_query_15b(question, 3)
         queries.append(question)  # Thêm câu hỏi gốc vào cuối
     else:
         queries = [question]
@@ -195,15 +233,21 @@ def solve_math_question_15b(question: str, k: int = 3, rerank: bool = False, rew
     
     context = "\n".join([split_combined_content(doc.page_content) for doc in docs])
     math_template = MathPromptTemplate(
-        input_variables=["context", "question"],
+        input_variables=["context", "question", "conversation_context"],
         template=(
-            "Bạn là trợ lý AI chuyên giải toán. Dựa vào thông tin:\n{context}\n"
+            "Bạn là trợ lý AI chuyên giải toán.\n\n"
+            "{conversation_context}\n\n"
+            "Dựa vào thông tin:\n{context}\n"
             "Giải từng bước rõ ràng, biểu diễn công thức trong LaTeX (đặt giữa $$).\n"
             "Câu hỏi: {question}\n"
             "Trả lời:\n1. Phân tích.\n2. Giải chi tiết.\n3. Kết luận."
         )
     )
-    prompt_text = math_template.format(context=context, question=question)
+    prompt_text = math_template.format(
+        context=context, 
+        question=question, 
+        conversation_context=conversation_context
+    )
     result = llm.invoke(prompt_text).strip()
     answer = result
     

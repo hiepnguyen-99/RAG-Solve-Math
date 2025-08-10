@@ -403,9 +403,17 @@ class ChatApp {
                 ? this.createRewriteQueriesHTML(message.rewrite_queries)
                 : '';
 
+            // Context indicator
+            const contextIndicator = message.used_context ? 
+                `<div class="context-indicator">
+                    <span class="material-icons">memory</span>
+                    <span>Sử dụng ngữ cảnh trò chuyện</span>
+                </div>` : '';
+
             return `
                 <div class="message-content">
                     ${this.escapeHtml(message.content)}
+                    ${contextIndicator}
                     ${rewriteQueriesHTML}
                     ${sourceDocsHTML}
                 </div>
@@ -417,6 +425,7 @@ class ChatApp {
                     <span>•</span>
                     <span>${message.k_documents} tài liệu</span>
                     ${message.processing_time ? `<span>•</span><span>${message.processing_time}s</span>` : ''}
+                    ${message.used_context ? `<span>•</span><span class="context-badge">Context</span>` : ''}
                 </div>
             `;
         }

@@ -6,6 +6,7 @@ from transformers import pipeline
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 from retrieval import *
+from conversation_manager import conversation_manager
 
 # Load .env
 load_dotenv()
@@ -93,10 +94,14 @@ def rewrite_query_api(query, k=5):
     questions = [q.strip("-•* \n") for q in output.split("\n") if q.strip()]
     return [query] + questions[:k]
 
-# Tạo prompt
-def prompt_text(context, question):
-    return f"""
-Bạn là một trợ lý AI thông minh. Hãy ưu tiên trả lời dựa vào thông tin sau nếu có:
+# Tạo prompt với conversation context
+def prompt_text(context, question, conversation_context=""):
+    base_prompt = f"""
+Bạn là một trợ lý AI thông minh. 
+
+{conversation_context}
+
+Hãy ưu tiên trả lời dựa vào thông tin sau nếu có:
 {context}
 
 Nếu không đủ thông tin, bạn có thể sử dụng kiến thức của mình để đưa ra câu trả lời chính xác nhất.
@@ -104,13 +109,38 @@ Nếu không đủ thông tin, bạn có thể sử dụng kiến thức của m
 Câu hỏi: {question}
 Trả lời:
 """.strip()
+    return base_prompt
 
 # Hàm chính giải toán
-def solve_question_api(question: str, k: int = 3, rerank: bool = False, rewrite: bool = True):
+def solve_question_api(question: str, k: int = 3, rerank: bool = False, rewrite: bool = True, conversation_history: list = None):
+    """
+    Giải câu hỏi với hỗ trợ conversation context
+    
+    Args:
+        question: Câu hỏi hiện tại
+        k: Số lượng tài liệu retrieve
+        rerank: Có sử dụng reranking không
+        rewrite: Có rewrite query không
+        conversation_history: Lịch sử trò chuyện (danh sách messages)
+    """
     try:
+        # Xây dựng conversation context
+        conversation_context = ""
+        if conversation_history and conversation_manager.should_use_context(question, conversation_history):
+            conversation_context = conversation_manager.build_conversation_context(conversation_history, question)
+            print(f"🔄 Sử dụng conversation context: {len(conversation_context)} ký tự")
+        
         # Tạo queries với rewrite
         if rewrite:
-            queries = rewrite_query_api(question, 3)
+            # Cải thiện query bằng context nếu có
+            if conversation_context:
+                topics = conversation_manager.extract_key_topics(conversation_history)
+                enhanced_question = question
+                if topics:
+                    enhanced_question = f"{question} (Liên quan: {', '.join(topics)})"
+                queries = rewrite_query_api(enhanced_question, 3)
+            else:
+                queries = rewrite_query_api(question, 3)
             queries.append(question)  # Thêm câu hỏi gốc vào cuối
         else:
             queries = [question]
@@ -138,10 +168,10 @@ def solve_question_api(question: str, k: int = 3, rerank: bool = False, rewrite:
             print("Không tìm thấy tài liệu liên quan. Chuyển sang trả lời bằng kiến thức mô hình.")
             fallback_prompt = f"Câu hỏi: {question}\nTrả lời ngắn gọn:"
             answer = call_qwen_api(fallback_prompt)
-            return answer, []
+            return answer, [], []
 
         # Gọi API
-        answer = call_qwen_api(prompt_text(context, question))
+        answer = call_qwen_api(prompt_text(context, question, conversation_context))
 
         # Xử lý lặp lại
         if question in answer:
@@ -172,14 +202,27 @@ def solve_question_api(question: str, k: int = 3, rerank: bool = False, rewrite:
 
 # Hàm giải toán chuyên sâu sử dụng API của Qwen với LaTeX
 
-def solve_math_question_api(question: str, k: int = 3, rerank: bool = False, rewrite: bool = True):
+def solve_math_question_api(question: str, k: int = 3, rerank: bool = False, rewrite: bool = True, conversation_history: list = None):
     """
     Giải toán chi tiết từng bước, sử dụng LaTeX cho công thức.
     Trả về (answer, source_docs).
     """
+    # Xây dựng conversation context
+    conversation_context = ""
+    if conversation_history and conversation_manager.should_use_context(question, conversation_history):
+        conversation_context = conversation_manager.build_conversation_context(conversation_history, question)
+        print(f"🔄 Sử dụng conversation context: {len(conversation_context)} ký tự")
+        
     # Tạo queries với rewrite
     if rewrite:
-        queries = rewrite_query_api(question, 3)
+        if conversation_context:
+            topics = conversation_manager.extract_key_topics(conversation_history)
+            enhanced_question = question
+            if topics:
+                enhanced_question = f"{question} (Liên quan: {', '.join(topics)})"
+            queries = rewrite_query_api(enhanced_question, 3)
+        else:
+            queries = rewrite_query_api(question, 3)
         queries.append(question)  # Thêm câu hỏi gốc vào cuối
     else:
         queries = [question]
@@ -205,9 +248,13 @@ def solve_math_question_api(question: str, k: int = 3, rerank: bool = False, rew
     # Chuẩn bị context
     context = "\n".join([split_combined_content(doc.page_content) for doc in docs]).strip()
     
-    # Toán prompt
+    # Toán prompt với conversation context
     math_prompt = f"""
-Bạn là trợ lý AI chuyên giải toán. Dựa vào thông tin sau:
+Bạn là trợ lý AI chuyên giải toán.
+
+{conversation_context}
+
+Dựa vào thông tin sau:
 {context}
 Hãy giải toán sau đây từng bước, biểu diễn công thức trong LaTeX (đặt giữa $$):
 Câu hỏi: {question}
