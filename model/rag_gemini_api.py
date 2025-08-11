@@ -1,48 +1,15 @@
 import torch
 import os
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_chroma import Chroma
-from langchain.prompts import PromptTemplate
-from langchain.prompts import PromptTemplate as MathPromptTemplate
 import google.generativeai as genai
-from retrieval import *
 from dotenv import load_dotenv
-from conversation_manager import conversation_manager
+from rag_utils import *
 
 # Load environment variables first
 load_dotenv()
 
-load_dotenv()
-
-
-RERANK_MODEL = "BAAI/bge-reranker-base"
-device = "cuda" if torch.cuda.is_available() else "cpu"
-
-# Nếu có FlagEmbedding để rerank
-try:
-    from FlagEmbedding import FlagReranker
-    RERANK_AVAILABLE = True
-except ImportError:
-    print("⚠️ FlagEmbedding không có, bỏ qua reranking.")
-    RERANK_AVAILABLE = False
-    FlagReranker = None
-
-
-# Embedding
-embedding_model = HuggingFaceEmbeddings(
-    model_name="Qwen/Qwen3-Embedding-0.6B",
-    model_kwargs={"device": device},
-    encode_kwargs={"normalize_embeddings": True}
-)
-
-# Chroma
-chroma_path = "./chroma_db"
-db = Chroma(
-    persist_directory=chroma_path,
-    embedding_function=embedding_model,
-    collection_name="math_vectors"
-)
-
+# Sử dụng các utility functions
+embedding_model = get_embedding_model()
+db = get_chroma_db()
 
 # Gọi API mô hình
 api_key = os.getenv("GEMINI_API_KEY")
@@ -58,145 +25,72 @@ else:
 
 
 def rewrite_query(query, k=5):
+    """Rewrite query sử dụng Gemini API"""
     if not model:
         print("⚠️ Gemini model không khả dụng, trả về query gốc")
         return [query]
         
-    query_rewrite_prompt = f"""
-    Từ truy vấn:
-    "{query}"
-    Hãy tạo {k} truy vấn chuyên biệt,
-    Mỗi truy vấn tập trung vào một khía cạnh kiến thức toán học cần thiết để trả lời đầy đủ câu gốc, bao gồm : định nghĩa, định lý, ký hiệu, phương pháp, ví dụ, hoặc lĩnh vực liên quan.
-    Yêu cầu:
-    - Mỗi truy vấn ngắn gọn, rõ ràng, trực tiếp, không lan man, tránh gây nhiễu khi truy vấn.
-    - Mỗi truy vấn thể hiện một mục tiêu tra cứu riêng biệt.
-    - Chỉ in danh sách truy vấn, mỗi truy vấn một dòng.
-    Câu hỏi gốc: {query}
-    """
+    prompt = REWRITE_QUERY_PROMPT_TEMPLATE.format(query=query, k=k)
     try:
-        response = model.generate_content(query_rewrite_prompt,
+        response = model.generate_content(prompt,
                                           generation_config={
                                             "temperature": 0.9,        
                                             "top_p": 0.8,              
                                             "top_k": 40,   
                                             }
                                           )
-        return response.text.strip().split('\n')
+        return clean_rewrite_queries(response.text.strip().split('\n'), query, k)
     except Exception as e:
         print(f"⚠️ Lỗi khi rewrite query: {e}")
         return [query]
-
-
-def promt_text(context, question, conversation_context=""):
-    base_prompt = f"""
-    "Dựa trên thông tin sau, hãy trả lời câu hỏi, 
-    Khi trả lời, hãy tuân thủ nghiêm ngặt các quy định sau:
-    - Nếu có sử dụng công thức toán học, hãy đặt công thức trong khối LaTeX dùng `$$` (hoặc trong code block Markdown nếu cần).
-    - Không cần nói "Dựa trên thông tin được cung cấp"
-    - Mỗi bước xuống dòng riêng.\n"
-    
-    {conversation_context}
-    
-    Thông tin \n{context}\n
-    Câu hỏi: \n{question}\n"
-    Trả lời:
-    """
-    return base_prompt
-# template cho giải toán step-by-step với LaTeX
-math_template = MathPromptTemplate(
-    input_variables=["context", "question", "conversation_context"],
-    template="""
-Bạn là trợ lý AI chuyên giải các bài toán. 
-
-{conversation_context}
-
-Dựa vào thông tin sau:
-{context}
-Hãy giải bài toán sau đây từng bước một, hiển thị các công thức trong khối LaTeX (đặt giữa $$):
-Câu hỏi: {question}
-1. Phân tích.
-2. Giải chi tiết.
-3. Kết luận.
-"""
-)
 
 
 def solve_question_api_gemini(question: str, k: int = 3, rerank: bool = False, rewrite: bool = True, math: bool = False, conversation_history: list = None):
     """
     Hàm giải toán hoặc chat chung qua Gemini API.
     Nếu math=True thì sử dụng LaTeX step-by-step.
-    
-    Args:
-        question: Câu hỏi hiện tại
-        k: Số lượng tài liệu retrieve
-        rerank: Có sử dụng reranking không
-        rewrite: Có rewrite query không
-        math: Chế độ giải toán với LaTeX
-        conversation_history: Lịch sử trò chuyện (danh sách messages)
     """
     try:
         # Kiểm tra model khả dụng
         if not model:
             return "Lỗi: GEMINI_API_KEY không được cấu hình. Vui lòng thiết lập biến môi trường GEMINI_API_KEY.", [], []
         
-        # Xây dựng conversation context
-        conversation_context = ""
-        if conversation_history and conversation_manager.should_use_context(question, conversation_history):
-            conversation_context = conversation_manager.build_conversation_context(conversation_history, question)
-            print(f"🔄 Sử dụng conversation context: {len(conversation_context)} ký tự")
+        # Xây dựng conversation context sử dụng utility function
+        conversation_context = build_conversation_context(conversation_history, question)
         
-        # Tạo queries (có thể cải thiện bằng context)
+        # Tạo queries với rewrite
         if rewrite:
-            # Nếu có context, có thể sử dụng để tạo query tốt hơn
-            if conversation_context:
-                # Trích xuất topics chính từ cuộc trò chuyện
-                topics = conversation_manager.extract_key_topics(conversation_history)
-                enhanced_question = question
-                if topics:
-                    enhanced_question = f"{question} (Liên quan: {', '.join(topics)})"
-                queries = rewrite_query(enhanced_question, 3)
-            else:
-                queries = rewrite_query(question, 3)
-            queries.append(question)  # Thêm câu hỏi gốc vào cuối
+            enhanced_question = enhance_question_with_context(question, conversation_history)
+            queries = rewrite_query(enhanced_question, 3)
+            queries.append(question)  # Thêm câu hỏi gốc
         else:
             queries = [question]
 
-        docs = []
-        for query in queries:
-            retriever = db.as_retriever(search_kwargs={"k": k})
-            doc = retriever.get_relevant_documents(query)
-            if rerank and RERANK_AVAILABLE:
-                try:
-                    reranker = FlagReranker(RERANK_MODEL, use_fp16=True)
-                    doc = rerank_docs_with_model(query, doc, reranker, num_doc=k)
-                except Exception as e:
-                    print(f"Lỗi khi rerank với FlagReranker: {str(e)}")
-            docs.extend([doc])
-
-        docs = reciprocal_rank_fusion(docs, num_docs=k)
-        context = "\n".join([split_combined_content(doc.page_content) for doc in docs]) if docs else "Không tìm thấy tài liệu liên quan."
+        # Xử lý documents sử dụng utility function
+        docs = process_retrieved_docs(queries, db, k, rerank)
         
-        # Gọi API Gemini với chế độ chung hoặc toán
+        # Tạo context
+        context = create_context_from_docs(docs)
+        if not context:
+            context = "Không tìm thấy tài liệu liên quan."
+        
+        # Gọi API Gemini với prompt phù hợp
         if math:
-            prompt = math_template.format(
-                context=context, 
-                question=question, 
-                conversation_context=conversation_context
-            )
-            gen_config = {"temperature": 0.9, "top_p": 0.8, "top_k": 40}
+            prompt = create_base_prompt_template(context, question, conversation_context, "math")
+            prompt += "\n1. Phân tích.\n2. Giải chi tiết.\n3. Kết luận."
         else:
-            prompt = promt_text(context, question, conversation_context)
-            gen_config = {"temperature": 0.9, "top_p": 0.8, "top_k": 40}
+            prompt = create_base_prompt_template(context, question, conversation_context, "default")
         
         try:
-            response = model.generate_content(prompt, generation_config=gen_config)
+            response = model.generate_content(prompt, generation_config={
+                "temperature": 0.9, "top_p": 0.8, "top_k": 40
+            })
             answer = response.text.strip() if hasattr(response, 'text') else str(response)
         except Exception as e:
             return f"Lỗi khi gọi Gemini API: {str(e)}", [], []
 
-        # Xử lý câu trả lời
-        if question in answer:
-            answer = answer.split(question)[-1].strip(": \n")
+        # Làm sạch câu trả lời
+        answer = clean_answer_response(answer, question)
 
         if not answer.strip():
             fallback_prompt = f"Câu hỏi: {question}\nTrả lời ngắn gọn:"
@@ -206,18 +100,9 @@ def solve_question_api_gemini(question: str, k: int = 3, rerank: bool = False, r
             except Exception as e:
                 answer = f"Không thể tạo câu trả lời: {str(e)}"
 
-        # Tạo source documents
-        source_docs = []
-        for doc in docs:
-            source_docs.append({
-                "page_content": split_combined_content(doc.page_content),
-                "metadata": doc.metadata
-            })
-        
-        # Tạo thông tin về rewrite queries riêng biệt
-        rewrite_queries = []
-        if rewrite and len(queries) > 1:
-            rewrite_queries = queries[:-1]  # Loại bỏ câu hỏi gốc
+        # Tạo source documents và rewrite queries
+        source_docs = create_source_documents(docs)
+        rewrite_queries = extract_rewrite_queries(queries, include_original=False)
 
         return answer.strip(), source_docs, rewrite_queries
     

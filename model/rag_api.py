@@ -3,43 +3,14 @@ import torch
 import requests
 from dotenv import load_dotenv
 from transformers import pipeline
-from langchain_chroma import Chroma
-from langchain_huggingface import HuggingFaceEmbeddings
-from retrieval import *
-from conversation_manager import conversation_manager
+from rag_utils import *
 
 # Load .env
 load_dotenv()
 
-# Thiết bị
-device = "cuda" if torch.cuda.is_available() else "cpu"
-
-# Embedding
-embedding_model = HuggingFaceEmbeddings(
-    model_name="Qwen/Qwen3-Embedding-0.6B",
-    model_kwargs={"device": device},
-    encode_kwargs={"normalize_embeddings": True}
-)
-
-# Chroma
-chroma_path = "./chroma_db"
-db = Chroma(
-    persist_directory=chroma_path,
-    embedding_function=embedding_model,
-    collection_name="math_vectors"
-)
-
-# Rerank config
-RERANK_MODEL = "BAAI/bge-reranker-base"
-
-# Kiểm tra FlagEmbedding
-try:
-    from FlagEmbedding import FlagReranker
-    RERANK_AVAILABLE = True
-except ImportError:
-    print("⚠️ FlagEmbedding không có, bỏ qua reranking.")
-    RERANK_AVAILABLE = False
-    FlagReranker = None
+# Sử dụng các utility functions
+embedding_model = get_embedding_model()
+db = get_chroma_db()
 
 # Gọi API mô hình
 def call_qwen_api(prompt: str):
@@ -70,134 +41,58 @@ def call_qwen_api(prompt: str):
     return None
 
 def rewrite_query_api(query, k=5):
-    query_rewrite_prompt = f"""
-    Với truy vấn sau:
-    "{query}"
-    Hãy phân tích và liệt kê **các thành phần kiến thức toán học cần thiết** để có thể trả lời truy vấn này một cách đầy đủ và chính xác. Bao gồm:
-    - Các định nghĩa cần thiết
-    - Các định lý hoặc mệnh đề liên quan
-    - Ký hiệu hoặc biểu thức cần làm rõ
-    - Quy trình hoặc phương pháp giải
-    - Các ví dụ minh họa tiêu biểu
-    - Các nhánh toán học liên quan (nếu có)
-    Yêu cầu:
-    - Chỉ in ra {k} câu truy vấn thay thế, mỗi câu liên quan đến một thành phần kiến thức khác nhau.
-    - Mỗi câu phải rõ ràng, ngắn gọn, đi thẳng vào vấn đề không lan man để tránh gây nhiễu khi truy vấn.
-    - Chỉ hiển thị danh sách các câu, mỗi câu trên một dòng mới.
-    Câu hỏi gốc: {query}
-    """
-    output = call_qwen_api(query_rewrite_prompt)
-
-    if not output:
-        return [query]
-
-    questions = [q.strip("-•* \n") for q in output.split("\n") if q.strip()]
-    return [query] + questions[:k]
-
-# Tạo prompt với conversation context
-def prompt_text(context, question, conversation_context=""):
-    base_prompt = f"""
-Bạn là một trợ lý AI thông minh. 
-
-{conversation_context}
-
-Hãy ưu tiên trả lời dựa vào thông tin sau nếu có:
-{context}
-
-Nếu không đủ thông tin, bạn có thể sử dụng kiến thức của mình để đưa ra câu trả lời chính xác nhất.
-
-Câu hỏi: {question}
-Trả lời:
-""".strip()
-    return base_prompt
+    """Rewrite query sử dụng template chung"""
+    prompt = REWRITE_QUERY_PROMPT_TEMPLATE.format(query=query, k=k)
+    output = call_qwen_api(prompt)
+    return clean_rewrite_queries(output, query, k)
 
 # Hàm chính giải toán
 def solve_question_api(question: str, k: int = 3, rerank: bool = False, rewrite: bool = True, conversation_history: list = None):
     """
     Giải câu hỏi với hỗ trợ conversation context
-    
-    Args:
-        question: Câu hỏi hiện tại
-        k: Số lượng tài liệu retrieve
-        rerank: Có sử dụng reranking không
-        rewrite: Có rewrite query không
-        conversation_history: Lịch sử trò chuyện (danh sách messages)
     """
     try:
-        # Xây dựng conversation context
-        conversation_context = ""
-        if conversation_history and conversation_manager.should_use_context(question, conversation_history):
-            conversation_context = conversation_manager.build_conversation_context(conversation_history, question)
-            print(f"🔄 Sử dụng conversation context: {len(conversation_context)} ký tự")
+        # Xây dựng conversation context sử dụng utility function
+        conversation_context = build_conversation_context(conversation_history, question)
         
         # Tạo queries với rewrite
         if rewrite:
-            # Cải thiện query bằng context nếu có
-            if conversation_context:
-                topics = conversation_manager.extract_key_topics(conversation_history)
-                enhanced_question = question
-                if topics:
-                    enhanced_question = f"{question} (Liên quan: {', '.join(topics)})"
-                queries = rewrite_query_api(enhanced_question, 3)
-            else:
-                queries = rewrite_query_api(question, 3)
-            queries.append(question)  # Thêm câu hỏi gốc vào cuối
+            enhanced_question = enhance_question_with_context(question, conversation_history)
+            queries = rewrite_query_api(enhanced_question, 3)
+            queries.append(question)  # Thêm câu hỏi gốc
         else:
             queries = [question]
 
-        docs = []
-        for query in queries:
-            retriever = db.as_retriever(search_kwargs={"k": k})
-            doc = retriever.get_relevant_documents(query)
-
-            if rerank and RERANK_AVAILABLE:
-                try:
-                    reranker = FlagReranker(RERANK_MODEL, use_fp16=True)
-                    doc = rerank_docs_with_model(query, doc, reranker, num_doc=k)
-                except Exception as e:
-                    print(f"Lỗi khi rerank với FlagReranker: {str(e)}")
-            docs.append(doc)
-
-        all_docs = [doc for sublist in docs for doc in sublist]
-        docs = reciprocal_rank_fusion([all_docs], num_docs=k)
-
+        # Xử lý documents sử dụng utility function
+        docs = process_retrieved_docs(queries, db, k, rerank)
+        
         # Tạo context
-        context = "\n".join([split_combined_content(doc.page_content) if doc.page_content else "" for doc in docs]).strip()
+        context = create_context_from_docs(docs)
 
         if not context:
-            print("Không tìm thấy tài liệu liên quan. Chuyển sang trả lời bằng kiến thức mô hình.")
-            fallback_prompt = f"Câu hỏi: {question}\nTrả lời ngắn gọn:"
-            answer = call_qwen_api(fallback_prompt)
+            answer = handle_empty_context(question, call_qwen_api)
             return answer, [], []
 
-        # Gọi API
-        answer = call_qwen_api(prompt_text(context, question, conversation_context))
+        # Gọi API với prompt template chung
+        prompt = create_base_prompt_template(context, question, conversation_context, "math")
+        answer = call_qwen_api(prompt)
 
-        # Xử lý lặp lại
-        if question in answer:
-            answer = answer.split(question)[-1].strip(": \n")
+        # Làm sạch câu trả lời
+        answer = clean_answer_response(answer, question)
 
         # Nếu rỗng, gọi lại
         if not answer.strip():
-            fallback_prompt = f"Câu hỏi: {question}\nTrả lời ngắn gọn:"
-            answer = call_qwen_api(fallback_prompt)
+            answer = handle_empty_context(question, call_qwen_api)
 
-        # Tạo source documents
-        source_docs = []
-        for doc in docs:
-            source_docs.append({
-                "page_content": split_combined_content(doc.page_content),
-                "metadata": doc.metadata
-            })
-        
-        # Tạo thông tin về rewrite queries riêng biệt
-        rewrite_queries = []
-        if rewrite and len(queries) > 1:
-            rewrite_queries = queries[:-1]  # Loại bỏ câu hỏi gốc
+        # Tạo source documents và rewrite queries
+        source_docs = create_source_documents(docs)
+        rewrite_queries = extract_rewrite_queries(queries, include_original=False)
 
         return answer, source_docs, rewrite_queries
 
     except Exception as e:
+        print(f"Lỗi trong solve_question_api: {str(e)}")
+        return f"Lỗi: {str(e)}", [], []
         return f"Lỗi trong quá trình xử lý: {str(e)}", [], []
 
 # Hàm giải toán chuyên sâu sử dụng API của Qwen với LaTeX
