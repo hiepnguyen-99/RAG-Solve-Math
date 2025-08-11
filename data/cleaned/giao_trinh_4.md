@@ -96,8 +96,8 @@ Ma trận đơn vị là ma trận chéo với các phần từ trên đường 
 ### Ma trận đối xứng
 Ma trận đối xứng thỏa mãn $A^T = A$
 
-### Ma trận đối xứng
-Ma trận đối xứng thỏa $A^T = -A$
+### Ma trận phản đối xứng
+Ma trận phản đối xứng thỏa mãn $A^T = -A$
 
 Vi dụ
 
@@ -203,7 +203,7 @@ Chú ý: Nhìn chung $AB \neq BA$; $AB = AC \nRightarrow B = C, AB = 0 \nRightar
 ### Nâng lũy thừa
 Quy ước: $A^0 = I \qquad A^n=A.A...A.A(n \text{ n ma trận } A)$
 
-Ví dụ $ Cho A = \begin{pmatrix} 2 & -1 \\ 3 & 4 \end{pmatrix}$ và $f(x) = 2x^2 - 4x + 3$. Tính f(A).
+Ví dụ Cho $A = \begin{pmatrix} 2 & -1 \\ 3 & 4 \end{pmatrix}$ và $f(x) = 2x^2 - 4x + 3$. Tính f(A).
 
 Ta có
 
