@@ -852,7 +852,8 @@ body {
 
 .message-bot {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
 }
 
 .message-content {
@@ -872,10 +873,15 @@ body {
 }
 
 .message-bot .message-content {
-    background: var(--surface-color);
+    background: transparent;
     color: var(--text-primary);
-    border-bottom-left-radius: 6px;
-    border: 1px solid var(--border-color);
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 8px 0;
 }
 
 .message-meta {
@@ -885,6 +891,11 @@ body {
     margin-top: 8px;
     font-size: 12px;
     color: var(--text-muted);
+}
+
+.message-bot .message-meta {
+    justify-content: center;
+    margin-top: 16px;
 }
 
 .message-meta .material-icons {
