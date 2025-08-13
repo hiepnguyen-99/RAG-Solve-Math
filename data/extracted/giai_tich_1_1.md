@@ -1,8 +1,8 @@
-CHƯƠNG
+# CHƯƠNG
 
 HÀM SỐ MỘT BIẾN SỐ (13LT+13BT)
 
-§1. SƠ LƯỢC VỀ CÁC YẾU TỔ LÔGIC; CÁC TẬP SỐ:
+## §1. SƠ LƯỢC VỀ CÁC YẾU TỔ LÔGIC; CÁC TẬP SỐ:
 
 $\mathbb{N}$, $\mathbb{Z}$, $\mathbb{Q}$, $\mathbb{R}$
 
@@ -12,63 +12,31 @@ phép suy luận cơ bản thông qua bài giảng các nội dung khác nếu t
 
 2. Giới thiệu các tập số; cần nói rõ tập $\mathbb{Q}$ tuy đã rộng hơn $\mathbb{Z}$ nhưng vẫn chưa lấp đầy
 
-trục số còn tập $\mathbb{R}$ đã lấp đầy trục số và chứa tất cả các giới hạn của các dãy số hội tu,
+trục số còn tập $\mathbb$ R đã lấp đầy trục số và chứa tất cả các giới hạn của các dãy số hội tu,
 
 ta có bao hàm thức
 
 $\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}$.
 
-$\S2$. TRỊ TUYỆT ĐỔI VÀ TÍNH CHẤT
+## §2. TRỊ TUYỆT ĐỔI VÀ TÍNH CHẤT
 
 Nhắc lại định nghĩa và nêu các tính chất sau
 
 • |x| $\ge$ 0, |x| $=$ 0 $\iff$ x $=$ 0, |x + y| $\le$ |x| + |y|;
 
-• |x-y| $\ge$ ||x|-|y||, |x| $\ge$ A $\iff$ x $\ge$ A hoặc x $\le$ -A
+• |x-y| $\geq$ ||x|-|y||, |x| $\geq$ A $\iff$ x $\geq$ A hoặc x $\leq$ -A
 
 $\bullet \$ |x| $\leq$ B $\Longleftrightarrow$ -B $\leq$ x $\leq$ B.
 
 
 
-CHƯƠNG
+## §3. HÀM SÔ
 
-HÀM SỐ MỘT BIẾN SỐ (13LT+13BT)
+### 3.1 Đinh nghĩa hàm số
 
-§1. SƠ LƯỢC VỀ CÁC YẾU TỔ LÔGIC; CÁC TẬP SỐ:
+#### Định nghĩa 1.1. Một hàm số đi từ tập X vào tập Y là một quy tắc cho tương ứng mỗi
 
-$\mathbb{N}$, $\mathbb{Z}$, $\mathbb{Q}$, $\mathbb{R}$
-
-1. Phần Lôgic không dạy trực tiếp (phần này Đại số đã dạy) mà chỉ nhắc lại những
-
-phép suy luận cơ bản thông qua bài giảng các nội dung khác nếu thấy cần thiết.
-
-2. Giới thiệu các tập số; cần nói rõ tập $\mathbb{Q}$ tuy đã rộng hơn $\mathbb{Z}$ nhưng vẫn chưa lấp đầy
-
-trục số còn tập $\mathbb{R}$ đã lấp đầy trục số và chứa tất cả các giới hạn của các dãy số hội tu,
-
-ta có bao hàm thức
-
-$\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}$.
-
-$\S2$. TRỊ TUYỆT ĐỔI VÀ TÍNH CHẤT
-
-Nhắc lại định nghĩa và nêu các tính chất sau
-
-• |x| $\ge$ 0, |x| $=$ 0 $\iff$ x $=$ 0, |x + y| $\le$ |x| + |y|;
-
-• |x-y| $\ge$ ||x|-|y||, |x| $\ge$ A $\iff$ x $\ge$ A hoặc x $\le$ -A
-
-$\bullet \$ |x| $\leq$ B $\Longleftrightarrow$ -B $\leq$ x $\leq$ B.
-
-
-
-$\S$ 3. $\mathbf{H} \mathbf{\hat{A}} \mathbf{M} \mathbf{S} \mathbf{\hat{O}}$
-
-## 3.1 Đinh nghĩa hàm số <math display="block">\S 3. \mathbf{H} \mathbf{\hat{A}} \mathbf{M} \mathbf{S} \mathbf{\hat{O}}</math>
-
-### Định nghĩa 1.1. Một hàm số đi từ tập X vào tập Y là một quy tắc cho tương ứng mỗi
-
-phần tử x $\in$ X với một và chỉ một phần tử y $\in$ Y.
+$ph\n\hat{a}n \n\nt\hat{u}$ x $\in$ X $\n\nt\vec{v}n \n\hat{b}t \n\nt\hat{u}$ y $\in$ Y.
 
 Một hàm số có thể được cho dưới dạng biểu thức giải tích y $=$ f(x), chẳng hạn như hàm số
 
@@ -82,17 +50,17 @@ Ví dụ 3.1 (Giữa kì, K61). Tìm tập xác định và tập giá trị c�
 
 a) y $= \arcsin(\cos$ 2x).
 
-d) y $= \arccos(2 \sin$ x).
+d) y $= \arccos(2\sin$ x).
 
-b) y $= \arcsin(2 \cos$ x).
+b) y $= \arcsin(2\cos$ x).
 
 e) y $= \sin(\pi \cos$ 3x).
 
-f) y $= \cos(\pi \sin$ 3x).
+$f\!y = \cos(\pi \sin$ 3x).
 
 c) y $= \arccos(\sin$ 2x).
 
-## 3.2 Hàm số đơn điêu c) <math>y = \arccos(\sin 2x)</math>.
+### 3.2 Hàm số đơn điêu
 
 • Một hàm số f(x) được gọi là đơn điệu tăng trên khoảng (a, b) nếu:
 
@@ -106,27 +74,27 @@ Chú ý 1.1. Trong Bài giảng này chúng ta chỉ quan tâm đến tính đơ
 
 trên mỗi khoảng mà hàm số đó xác định. Chẳng hạn như, hàm số f(x) $= \frac{1}{x}$ có f'(x) $=$
 
-$-\frac{1}{x^2} <$ 0 $\ \forall$ x $\in \text{TXD} = \mathbb{R} \setminus \{0\}$ nhưng nếu nói f(x) đơn điệu giảm trên $\mathbb{R} \setminus \{0\}$ thì sẽ dẫn
+$-\frac{1}{x^2} <$ 0 $\ \forall$ x $\in \textit{TXD} = \mathbb{R} \setminus \{0\} \ \textit{nhưng$ nếu $nói} \$ f(x) $\ \textit{đơn$ điệu giảm $trên} \ \mathbb{R} \setminus \{0\} \ \textit{thì$ sẽ $dẫn}$
 
 đến nghịch lý là -1 $<$ 1 nhưng -1 $=$ f(-1) $<$ f(1) $=$ 1. Thay vì đó, ta nói hàm số f(x)
 
 đơn điệu giảm trên mỗi khoảng $(-\infty,0)$ và $(0,+\infty)$.
 
-## 3.3 Hàm số bị chặn đơn điệu giảm trên mỗi khoảng <math>(-\infty,0)</math> và <math>(0,+\infty)</math>.
+### 3.3 Hàm số bị chặn
 
 • Một hàm số f(x) được gọi là bị chặn trên nếu tồn tại số M $\in \mathbb{R}$ sao cho f(x) $\leq$ M với
 
-moi x $\in$ TXĐ.
+$\text{moi }$ x $\in \text{TXD}$.
 
 
 
 • Một hàm số f(x) được gọi là bị chặn dưới nếu tồn tại số m $\in \mathbb{R}$ sao cho f(x) $\geq$ M với
 
-moi x $\in$ TXĐ.
+$\text{moi }$ x $\in \text{TXD}$.
 
 • Một hàm số f(x) được gọi là bị chặn nếu nó vừa bị chặn trên, vừa bị chặn dưới.
 
-## 3.4 Hàm số chẵn, hàm số lẻ • Một hàm số <math>f(x)</math> được gọi là bị chặn nếu nó vừa bị chặn trên, vừa bị chặn dưới.
+### 3.4 Hàm số chẵn, hàm số lẻ
 
 $ • Một hàm số f(x) được gọi là chẵn nếu \begin{cases} x \in \text{TXD} \Rightarrow -x \in \text{TXD} \\ f(-x) = f(x). \end{cases} $
 
@@ -138,7 +106,7 @@ $ • Một hàm số f(x) được gọi là lẻ nếu \begin{cases} x \in \te
 
 Ví dụ 3.2. Chứng minh rằng bất kì hàm số f(x) nào xác định trong một khoảng đối xứng
 
-(-a, a) cũng đều biểu diễn được duy nhất dưới dạng tổng của một hàm số chẵn và một
+(-a,a) cũng đều biểu diễn được duy nhất dưới dạng tổng của một hàm số chẵn và một
 
 hàm số lẻ.
 
@@ -154,21 +122,21 @@ trong đó g(x) là một hàm số chẵn, còn h(x) là một hàm số lẻ. 
 
 khích tự chứng minh tính duy nhất của phân tích này.
 
-## 3.5 Hàm số tuần hoàn khích tự chứng minh tính duy nhất của phân tích này.
+### 3.5 Hàm số tuần hoàn
 
-Định nghĩa 1.2. Một hàm số f(x) được gọi là tuần hoàn nếu như tồn tại số thực T $>$ 0
+#### Định nghĩa 1.2. Một hàm số f(x) được gọi là tuần hoàn nếu như tồn tại số thực T > 0
 
 sao cho
 
-f(x) $=$ f(x + T) $\ \forall$ x $\in \textit{TXD}$.
+f(x) $=$ f(x+T) $\ \forall$ x $\in \textit{T}\textit{X}\textit{D}$.
 
 Ví du như các hàm số lượng giác y $= \sin$ x, y $= \cos$ x, y $= \tan$ x, y $= \cot$ x đã học ở phổ thông
 
 là các hàm số tuần hoàn. Trong phạm vi Bài giảng này, chúng ta quan tâm chủ yếu là
 
-xem có số T $>$ 0 nào đó thỏa mãn f(x + T) $=$ f(x) mà không đi sâu vào việc tìm chu kỳ
+xem có số T $>$ 0 nào đó thỏa mãn f(x+T) $=$ f(x) mà không đi sâu vào việc tìm chu kỳ
 
-(số T $>$ 0 bé nhất).
+$(\text{s\'o }$ T $>$ 0 $\text{$ bé $nh\'at})$.
 
 Các câu hỏi sau đây tuy phát biểu đơn giản (và tưởng chừng như dễ trả lời) nhưng câu
 
@@ -190,7 +158,7 @@ hoàn không? Nói cách khác, nếu f(x) là một hàm số tuần hoàn thì
 
 có tuần hoàn không?
 
-3.6 Hàm hợp
+### 3.6 Hàm hợp
 
 Cho hai hàm số f, g. Hàm hợp của f và g, kí hiệu là f $\circ$ g, là hàm số được định nghĩa
 
@@ -198,25 +166,25 @@ bởi
 
 (f $\circ$ g)(x) $=$ f[g(x)].
 
-3.7 Ham ngươc
+### 3.7 Hàm ngược
 
-Định nghĩa 1.3. Một hàm số f : X $\rightarrow$ Y được gọi là ánh xạ 1 - 1 (hay còn gọi là đơn ánh)
+#### Định nghĩa 1.3. Một hàm số f: X \rightarrow Y được gọi là ánh xạ 1 - 1 (hay còn gọi là đơn ánh)
 
 nếu:
 
 $x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2)$.
 
-### Định nghĩa 1.4. <i>Cho f là một đơn ánh với miền xác định A và miền giá trị B. Khi đó hàm</i>
+#### Định nghĩa 1.4. Cho f là một đơn ánh với miền xác định A và miền giá trị B. Khi đó hàm
 
-ngược $f^{-1}$, có miền xác định B và miền giá trị A, được định nghĩa bởi
+$ngu\phi$ c $f^{-1}$, có miền xác định B và miền giá trị A, được định nghĩa bởi
 
 $f^{-1}(y) =$ x $\Leftrightarrow$ f(x) $=$ y.
 
 Miền xác định của f $=$ Miền giá trị của $f^{-1}$
 
-Miền giá trị của f $=$ Miền xác định của $f^{-1}$
+Miền giá trị của f $= \text{Miền$ xác định của $} f^{-1}$
 
-Chú ý 1.2. $\overrightarrow{D}$ thị của hàm ngược đối xứng với đồ thị của hàm y $=$ f(x) qua đường phân
+Chú ý 1.2. $\hat{D}$ thị của hàm ngược đối xứng với đồ thị của hàm y $=$ f(x) qua đường phân
 
 giác của góc phần tư thứ nhất.
 
@@ -234,15 +202,15 @@ Ví dụ, tìm hàm ngược của hàm số y $=$ 2x + 3, ta rút x theo y thì
 
 đổi vai trò của x và y để được hàm ngược là y $= \frac{x-3}{2}$. Tuy nhiên, cũng có nhiều khi hàm
 
-số không phải là đơn ánh trên toàn trục số $\mathbb{R}$, khi đó chúng ta phải xét hàm số trên các
+$\hat{\text{sg}}$ không phải là đơn ánh trên toàn trục $\hat{\text{sg}} \mathbb{R}$, khi đó chúng ta phải xét hàm $\hat{\text{sg}}$ trên các
 
 khoảng mà hàm số đó là đơn ánh và tìm hàm ngược trên các khoảng tương ứng.
 
-Định lý 1.1. Nếu hàm số f(x) đơn điệu tăng (hoặc giảm) trên khoảng (a,b) thì tồn tại
+#### Định lý 1.1. Nếu hàm số f(x) đơn điệu tăng (hoặc giảm) trên khoảng (a,b) thì tồn tại
 
 hàm số ngược $f^{-1}$ của f trên khoảng đó.
 
-## 3.8 Hàm số sơ cấp hàm số ngược <math>f^{-1}</math> của <math>f</math> trên khoảng đó.
+### 3.8 Hàm số sơ cấp
 
 Năm loại hàm số sơ cấp cơ bản
 
@@ -250,9 +218,9 @@ Năm loại hàm số sơ cấp cơ bản
 
 • Nếu $\alpha$ nguyên dương, ví dụ hàm y $= x^2$, hàm số xác định với mọi x $\in \mathbb{R}$,
 
-• Nếu $\alpha$ nguyên âm, ví dụ hàm y $= x^{-2} = \frac{1}{x^2}$, hàm số y $= y^{\alpha} = \frac{1}{x^{-\alpha}}$ xác định với
+• Nếu $\alpha$ nguyên âm, ví dụ hàm y $= x^{-2} = \frac{1}{r^2}$, hàm số y $= y^{\alpha} = \frac{1}{r^{-\alpha}}$ xác định với
 
-moi x $\in \mathbb{R} \setminus \{0\},\$
+$\text{moi }$ x $\in \mathbb{R} \setminus \{0\},\$
 
 • Nếu $\alpha = \frac{1}{p}$, p nguyên dương chẵn, ví dụ y $= x^{1/2} = \sqrt{x}$, thì hàm số xác định trên
 
@@ -268,21 +236,19 @@ $\mathbb{R}_{>0}$,
 
 3. Làm số logarit y $= \log_a(x)$ (0 $<$ a $\neq$ 1), ngược với hàm số mũ, hàm số này có TXĐ
 
-là $\mathbb{R}_{>0}$ và tập giá trị là $\mathbb{R}$. Hàm số này đồng biến nếu a $>$ 1 và nghịch biến nếu
+là $\mathbb{R}_{>0}$ và tập giá trị là $\mathbb{R}$. Hàm số này đồng biến nếu $a\,>\,1$ và nghịch biến nếu
 
 0 $<$ a $<$ 1. Nó là hàm số ngược của hàm số mũ, do đó đồ thị của nó đối xứng với đồ
 
 thị của hàm số y $= a^x$ qua đường phân giác của góc phần tư thứ nhất. Logarit cơ số
 
-10 của x được kí hiệu là lg x. Logarit cơ số e của x được kí hiệu là ln x.
+10 của x được kí hiệu là $\lg$ x. Logarit cơ số e của x được kí hiệu là $\ln$ x.
 
 4. Các hàm lượng giác:
 
 • Hàm số y $= \sin$ x xác định $\forall$ x $\in \mathbb{R}$, là hàm số lẻ, tuần hoàn chu kì $2\pi$.
 
-
-
-![](graphs/graph_10_0.png)
+y $= \sin$ x
 
 
 
@@ -290,43 +256,25 @@ thị của hàm số y $= a^x$ qua đường phân giác của góc phần tư 
 
 y $= \cos$ x, 0 $\le$ x $\le \pi$
 
-$\overleftarrow{\mathcal{X}}$
+$\chi$
 
 $\bigcap$
 
-• Hàm số y $= \tan$ x xác định $\forall$ x $\in \mathbb{R} \setminus \{(2k+1)\frac{\pi}{2}$, k $\in \mathbb{Z}\}$, $\text{$ là hàm số lẻ, tuần $hoàn}$
-
-
-
-![](graphs/graph_11_1.png)
-
-
-
-![](graphs/graph_11_0.png)
-
-
-
-![](graphs/graph_11_2.png)
+• Hàm số y $= \tan$ x xác định $\forall$ x $\in \mathbb{R} \setminus \{(2k+1)\frac{\pi}{2}$, k $\in \mathbb{Z}\}$, là hàm số lẻ, tuần hoàn
 
 chu kì $\pi$.
 
-$\mathop{\mathcal{X}_{}}\nolimits$
+( )
+
+$\mathcal{X}$
+
+$\frac{\pi}{2}$
 
 • Hàm số y $= \cot$ x xác định $\forall$ x $\in \mathbb{R} \setminus \{k\pi$, k $\in \mathbb{Z}\}$, là hàm số lẻ, tuần hoàn chu kì
 
 $\pi$.
 
-
-
-![](graphs/graph_11_5.png)
-
-
-
-![](graphs/graph_11_3.png)
-
-
-
-![](graphs/graph_11_4.png)
+Y
 
 
 
@@ -337,8 +285,6 @@ Chúng minh. Ta có
 $\cos^2$ x $=$ 1 - $\sin^2$ x $\Rightarrow \cos$ x $= \sqrt{1$ - $\sin^2 x} \Rightarrow$ 1 + $\cos$ x $=$ 1 + $\sqrt{1$ - $\sin^2 x}$.
 
 Thay x $= \pi$ vào đẳng thức 1 + $\cos$ x $=$ 1 + $\sqrt{1$ - $\sin^2 x}$ ta được 0 $=$ 2.
-
-$\qquad \qquad \blacksquare$
 
 5. Các hàm lượng giác ngược:
 
@@ -356,25 +302,25 @@ y $= \sin$ x, $-\frac{\pi}{2} \le$ x $\le \frac{\pi}{2}$
 
 $-\frac{\pi}{2}$
 
-$rac{\pi}{2}$
+$\frac{\pi}{2}$
 
 • Hàm số ngược của hàm số y $= \sin$ x, kí hiệu là arcsin x, xác định như sau:
 
-arcsin : [0,1] $\rightarrow \left[-\frac{\pi}{2},\frac{\pi}{2}\right]$
+$\arcsin:$ [0,1] $\rightarrow \left[-\frac{\pi}{2}$, $\frac{\pi}{2}\right]$
 
 x $\mapsto$ y $= \arcsin$ x $\Leftrightarrow$ x $= \sin$ y
 
-Hàm số y $= \arcsin$ x xác định trên [-1,1], nhận giá trị trên $\left[-\frac{\pi}{2}$, $\frac{\pi}{2}\right]$ và là một
+Hàm số y $= \arcsin$ x xác định trên [-1, 1], nhận giá trị trên $\left[-\frac{\pi}{2}$, $\frac{\pi}{2}\right]$ và là một
 
 hàm số đơn điệu tăng.
 
-$rac{\pi}{2}$
+$\frac{\pi}{2}$
 
 $\sin$ x
 
-$\arcsin$ x
+arcsin x
 
-$\mathop{\mathcal{X}_{}}\nolimits$
+$\mathcal{X}$
 
 
 
@@ -390,17 +336,17 @@ Hàm số y $= \arccos$ x xác định trên [-1, 1], nhận giá trị trên [0
 
 số đơn điệu giảm.
 
-$rac{\pi}{2}$
+$\frac{\pi}{2}$
 
-arccos x
+$\arccos$ x
 
 $\pi$
 
-O
+0
 
 $\cos$ x
 
-$\mathop{\mathcal{X}_{}}\nolimits$
+$\mathcal{X}$
 
 $\frac{\pi}{2}$
 
@@ -408,7 +354,7 @@ $\frac{\pi}{2}$
 
 sau:
 
-arctan : $(-\infty$, $+\infty) \rightarrow \left(-\frac{\pi}{2}$, $\frac{\pi}{2}\right)$
+$\arctan: (-\infty$, $+\infty) \rightarrow \left(-\frac{\pi}{2}$, $\frac{\pi}{2}\right)$
 
 x $\mapsto$ y $= \arctan$ x $\Leftrightarrow$ x $= \tan$ y
 
@@ -416,13 +362,13 @@ Hàm số y $= \arctan$ x xác định trên $\mathbb{R}$, nhận giá trị tr�
 
 số đơn điệu tăng.
 
-$rac{\pi}{2}$
+$\frac{\pi}{2}$
 
 tan x
 
 arctan x
 
-$\mathop{\mathcal{X}_{}}$
+$\mathcal{X}$
 
 $-\frac{\pi}{2}$
 
@@ -430,7 +376,7 @@ $-\frac{\pi}{2}$
 
 sau:
 
-arccot : $(-\infty$, $+\infty) \rightarrow$ (0, $\pi)$
+$\operatorname{arccot}$ : $(-\infty$, $+\infty) \to$ (0, $\pi)$
 
 x $\mapsto$ y $= \operatorname{arccot}$ x $\Leftrightarrow$ x $= \cot$ y
 
@@ -440,11 +386,11 @@ Hàm số y $= \operatorname{arccot}$ x xác định trên $\mathbb{R}$, nhận 
 
 đơn điệu giảm.
 
-$rac{\pi}{2}$
+$\frac{\pi}{2}$
 
 $\cot$ x
 
-$\mathop \chi \nolimits$
+$\mathcal{X}$
 
 $\operatorname{arccot}$ x
 
@@ -470,7 +416,7 @@ hữu hạn các phép toán cộng, trừ, nhân, chia và lũy thừa với s�
 
 y $= \ln$ x, y $= \sin$ x, $\dots$
 
-## 3.9 Bài tập <math display="block">y = \ln x, y = \sin x, \dots</math>
+### 3.9 Bài tập
 
 Tìm TXĐ, MGT của hàm số
 
@@ -484,15 +430,15 @@ b) y $= \arcsin \frac{2x}{1+x}$,
 
 d) y $= \arccos(2\sin$ x).
 
-$[\text{Đáp}\text{ số}]$
+[Đáp số]
 
-c) $\{x \ge$ 0, x $\notin \mathbb{Z}\},\$
+c) $\ \{x \ge$ 0, x $\notin \mathbb{Z}\},\$
 
 a) $\{\pi/4$ + $k\pi <$ x $< \pi/2$ + $k\pi$, k $\in \mathbb{Z}\},\$
 
-b) $\{-1/3 \leq$ x $\leq 1\}$,
+b) $\{-1/3 \le$ x $\le 1\},\$
 
-d) $\{-\frac{\pi}{6}$ + $k\pi \leq$ x $\leq \frac{\pi}{6}$ + $k\pi$, k $\in \mathbb{Z}\}$.
+d) $\{-\frac{\pi}{6}$ + $k\pi \le$ x $\le \frac{\pi}{6}$ + $k\pi$, k $\in \mathbb{Z}\}$.
 
 Bài tập 1.2. Tìm miền giá trị của hàm số
 
@@ -504,9 +450,9 @@ a) y $= \lg(1$ - $2\cos$ x)
 
 $[\text{Đáp}\text{ số}]$
 
-a) $\{-\infty <$ y $\leq \lg 3\}$
+a) $\{-\infty <$ y $\le \lg 3\}$
 
-b) $\{-\pi/2 \leq$ y $\leq \pi/2\}$
+b) $\{-\pi/2 \le$ y $\le \pi/2\}$
 
 Tìm hàm ngược.
 
@@ -518,7 +464,7 @@ c) y $= \frac{1}{2}(e^x$ + $e^{-x})$.
 
 a) y $=$ 2x + 3,
 
-$[\text{Đáp}\text{ s}\hat{\text{o}}]$
+$[\text{Đáp}\text{ số}]$
 
 a) y $= \frac{1}{2}x$ - $\frac{3}{2}$.
 
@@ -534,7 +480,7 @@ Ta phải xét trên 2 miền:
 
 • Trên miền x $>$ 0, ta có song ánh:
 
-$(0,+\infty)\to(1,+\infty)$
+(0, $+\infty) \rightarrow$ (1, $+\infty)$
 
 x $\mapsto$ y $= \frac{1}{2}(e^x$ + $e^{-x})$
 
@@ -556,7 +502,7 @@ Bài tập 1.4. Xét tính chẵn lẻ của hàm số
 
 
 
-a) f(x) $= a^x$ + $a^{-x}$ (a $>$ 0) b) f(x) $= \ln(x$ + $\sqrt{1$ - $x^2})$ c) f(x) $= \sin$ x + $\cos$ x
+a) f(x) $= a^x$ + $a^{-x}(a >$ 0) b) f(x) $= \ln(x$ + $\sqrt{1$ - $x^2})$ c) f(x) $= \sin$ x + $\cos$ x
 
 $[\text{Đáp}\text{ số}]$
 
@@ -594,11 +540,11 @@ a) Giả sử T $>$ 0 là một chu kì của hàm số đã cho. Khi đó
 
 Chứng minh.
 
-f(x+T) $= f(x)\forall$ x $\in \mathbb{R}$
+f(x+T) $=$ f(x) $\forall$ x $\in \mathbb{R}$
 
 $\Leftrightarrow A\cos\lambda(x+T)$ + $B\sin\lambda(x+T) = A\cos\lambda$ x + $B\sin\lambda$ x $\quad \forall$ x $\in \mathbb{R}$
 
-$\Leftrightarrow A[\cos \lambda$ x - $\cos \lambda$ (x + T)] + $B[\sin \lambda$ x - $\sin \lambda$ (x + T)] $=$ 0 $\quad \forall$ x $\in \mathbb{R}$
+$\Leftrightarrow A[\cos\lambda$ x - $\cos\lambda(x+T)]$ + $B[\sin\lambda$ x - $\sin\lambda(x+T)] =$ 0 $\quad \forall$ x $\in \mathbb{R}$
 
 $\Leftrightarrow 2\sin\frac{-\lambda T}{2}[A\sin(\lambda$ x + $\frac{\lambda T}{2})$ + $B\cos(\lambda$ x + $\frac{\lambda T}{2})] =$ 0 $\quad \forall$ x $\in \mathbb{R}$
 
@@ -608,9 +554,9 @@ $\Leftrightarrow$ T $= \left| \frac{2k\pi}{\lambda} \right|$.
 
 Vậy hàm số đã cho tuần hoàn với chu kì T $= \frac{2\pi}{|\lambda|}$.
 
-b) Theo câu a) thì hàm số sin x tuần hoàn với chu kì $2\pi$, hàm số sin 2x tuần hoàn với chu kì $\pi$, hàm số sin 3x tuần hoàn với chu kì $\frac{2\pi}{3}$. Vậy f(x) $= \sin$ x + $\frac{1}{2} \sin$ 2x + $\frac{1}{3} \sin$ 3x
+b) Theo câu a) thì hàm số sin x tuần hoàn với chu kì $2\pi$, hàm số sin 2x tuần hoàn với chu kì $\pi$, hàm số sin 3x tuần hoàn với chu kì $\frac{2\pi}{3}$. Vậy f(x) $= \sin$ x + $\frac{1}{2}\sin$ 2x + $\frac{1}{3}\sin$ 3x
 
-tuần hoàn với chu kì T $= 2\pi$
+tuần hoàn với chu kì $T=2\pi$
 
 
 
@@ -628,8 +574,6 @@ $\sin(x+T)^2 = \sin(x^2)\forall$ x.
 
 Vậy hàm số đã cho không tuần hoàn.
 
-
-
 Nhận xét: Muốn chứng minh một hàm số không tuần hoàn, chúng ta có thể sử dụng
 
 phương pháp phản chứng như đã trình bày ở trên. Giả sử hàm số đó tuần hoàn với chu kì
@@ -642,7 +586,7 @@ pháp phản chứng thì chúng ta cũng có thể sử dụng một số tính
 
 • một hàm số tuần hoàn và liên tục thì bị chặn (tại sao?),
 
-• một hàm số tuần hoàn và không phải là hàm hằng thì không tồn tại $\lim_{x\to\infty}$ f(x) (tại
+• một hàm số tuần hoàn và không phải là hàm hằng thì không tồn tại $\lim_{x\to\infty}f(x)$ (tại
 
 sao?),
 
@@ -668,11 +612,11 @@ Chứng minh.
 
 $\cos$ x + $\cos x\sqrt{2} = \cos(x+T)$ + $\cos(x+T)\sqrt{2} \ \forall$ x $\in \mathbb{R}$.
 
-Cho x $=$ 0 ta được 2 $= \cos$ T + $\cos$ T $\sqrt{2}$. Vì cos T $\le$ 1, cos $T\sqrt{2} \le$ 1 nên
+Cho x $=$ 0 ta được 2 $= \cos$ T + $\cos$ T $\sqrt{2}$. Vì $\cos$ T $\le$ 1, $\cos$ T $\sqrt{2} \le$ 1 nên
 
 $ 2 = \cos T + \cos T\sqrt{2} \Leftrightarrow \begin{cases} \cos T = 1, \\ \cos T\sqrt{2} = 1. \end{cases} \Rightarrow \begin{cases} T = k2\pi, 0 \neq k \in \mathbb{N} \\ T\sqrt{2} = l2\pi, 0 \neq l \in \mathbb{N}. \end{cases} $
 
-Khi $đó\sqrt{2} = \frac{l}{k} \in \mathbb{Q}$, điều này là vô lý $vì\sqrt{2}$ là một số vô tỉ. Như vậy, chúng ta đã trả lời
+Khi $đó\sqrt{2}=\frac{l}{k}\in\mathbb{Q}$, điều này là vô lý $vì\sqrt{2}$ là một số vô tỉ. Như vậy, chúng ta đã trả lời
 
 một câu hỏi trong Mục 3.5, rằng tổng của hai hàm số tuần hoàn có thể không phải là
 
@@ -685,8 +629,6 @@ một hàm số tuần hoàn. Hàm số f(x) $= \cos$ x + $\cos x\sqrt{2}$ là m
 là một hàm số tuần hoàn, vì
 
 $2\cos\frac{1+\sqrt{2}}{2}x\cos\frac{1-\sqrt{2}}{2}x = \cos$ x + $\cos x\sqrt{2}$.
-
-$\blacksquare$
 
 Bài tập 1.7. [Giữa kì, K61] Cho f(x), g(x) là các hàm số xác định trên $\mathbb{R}$ và tuần hoàn
 
@@ -734,31 +676,31 @@ $[\text{Đáp}\text{ số}]$
 
 
 
-c) z $= \frac{xy}{x$ + $y},d)$ z $= \frac{x$ + $y}{1$ + $xy}$.
+c) z $= \frac{xy}{x+y},d)$ z $= \frac{x+y}{1+xy}$.
 
 a) z $=$ x + y,
 
-b) z $= \frac{x+y}{1-xy}$,
+$\text{b)} \ \$ z $= \frac{x+y}{1-xy}$,
 
 
 
-$\S4$. DÃY SỐ
+$\S4$. $D\tilde{\mathbf{A}}\mathbf{Y} \mathbf{S}\hat{\mathbf{O}}$
 
-## 4.1 Dãy số và giới han của dãy số <math>\S</math><b>4.</b> DÃY SỐ
+### 4.1 Dãy số và giới han của dãy số
 
-Định nghĩa 1.5. Một dãy số là một hàm số $\mathbb{N} \to \mathbb{R}$, n $\mapsto a_n$. Kí hiệu $\{a_n\}_{n \in \mathbb{N}}$.
+#### Định nghĩa 1.5. Một dãy số là một hàm số \mathbb{N} \to \mathbb{R}, n \mapsto a_n. Kí hiệu \{a_n\}_{n \in \mathbb{N}}.
 
 Một dãy số được gọi là:
 
 • đơn điệu tăng nếu $a_n < a_{n+1} \forall$ n, đơn điệu giảm nếu $a_n > a_{n+1} \forall$ n.
 
-• bị chặn trên nếu tồn tại số M sao cho $a_n \leq$ M $\forall$ n, bị chặn dưới nếu tồn tại số m sao
+• bị chặn trên nếu tồn tại số M sao cho $a_n \leq$ M $\ \forall$ n, bị chặn dưới nếu tồn tại số m sao
 
-cho $a_n \geq$ m $\ \forall$ n.
+$\text{cho } a_n \geq$ m $\; \forall$ n.
 
-Định nghĩa 1.6. Một dãy số $\{a_n\}$ được gọi là có giới hạn là L và viết
+#### Định nghĩa 1.6. Một dãy số \{a_n\} được gọi là có giới hạn là L và viết
 
-$\lim_{n\to\infty} a_n =$ L $\; \textit{hay } a_n \to$ L $\; \textit{khi }$ n $\to \infty$,
+$\lim_{n\to\infty} a_n =$ L $\; \textit{hay} \; a_n \to$ L $\; \textit{khi} \;$ n $\to \infty$,
 
 nếu
 
@@ -768,11 +710,11 @@ cách chọn n đủ lớn.
 
 • (nói một cách chính xác) với mọi $\epsilon >$ 0, tồn tại số tự nhiên N sao cho
 
-$n\hat{e}u$ n $>$ N thì $|a_n$ - L| $< \epsilon$.
+$n\acute{e}u \$, n $>$ N $\$, $th\grave{a} \$, $|a_n$ - L| $< \epsilon$.
 
-Hình dung rằng $\lim_{n\to+\infty} a_n =$ L nghĩa là với mọi $\epsilon >$ 0 thì từ một lúc nào đó toàn bộ số hạng
+Hình dung rằng $\lim_{n\to+\infty}a_n=L$ nghĩa là với mọi $\epsilon>0$ thì từ một lúc nào đó toàn bộ số hạng
 
-của dãy $\{a_n\}_{n>N}$ sẽ chui vào trong khoảng (L - $\epsilon$, L + $\epsilon)$.
+của dãy $\{a_n\}_{n>N}$ sẽ chui vào trong khoảng $(L-\epsilon$, $L+\epsilon)$.
 
 $a_n$, $\forall$ n $>$ N
 
@@ -780,13 +722,13 @@ Hình 1.6
 
 Một dãy số $\{a_n\}$ có $\lim_{n\to+\infty} a_n =$ L hữu hạn được gọi là hội tụ. Ngược lại, nó được gọi là phân
 
-kì (nghĩa là lim $a_n = \infty$ hoặc là không tồn tại).
+kì (nghĩa là $\lim a_n = \infty$ hoặc là không tồn tại).
 
-Định nghĩa 1.7 (Giới hạn vô cùng). Ta nói $\lim_{n\to\infty} a_n = +\infty$ nếu với mọi số thực dương M,
+#### Định nghĩa 1.7 (Giới hạn vô cùng). Ta nói \lim_{n\to\infty} a_n = +\infty nếu với mọi số thực dương M,
 
-$t\hat{0}n$ tại số tự nhiên N sao cho
+tồn tại số tự nhiên N sao cho
 
-$n\acute{e}u$ n $>$ N thì $a_n >$ M.
+$n\acute{e}u \$, n $>$ N $\$, $th\grave{a}_n >$ M.
 
 Hãy phát biểu cho trường hợp $\lim_{n\to\infty} a_n = -\infty$
 
@@ -798,7 +740,7 @@ Hãy phát biểu cho trường hợp $\lim_{n\to\infty} a_n = -\infty$
 
 • Mọi dãy số hội tụ đều bị chặn.
 
-Định lý 1.3 (Các phép toán trên giới hạn). Giả sử $\lim_{n\to+\infty} a_n =$ A, $\lim_{n\to+\infty} b_n =$ b, ở đó a, b
+#### Định lý 1.3 (Các phép toán trên giới hạn). Gi\!{a} s\!{\dot{u}} \lim_{n \to +\infty} a_n = A, \lim_{n \to +\infty} b_n = b, \, \mathring{a} \, \mathring{d} \mathring{o} \, a, b
 
 là các số thực hữu hạn. Khi đó:
 
@@ -808,7 +750,7 @@ là các số thực hữu hạn. Khi đó:
 
 • Tích: $\lim_{n\to+\infty}(a_n.b_n)=AB$,
 
-• Thương: $\lim_{n\to+\infty} \frac{a_n}{b_n} = \frac{A}{B}$ n $\hat{e}$ u B $\neq$ 0.
+• Thương: $\lim_{n \to +\infty} \frac{a_n}{b_n} = \frac{A}{B} \;$ n $\hat{e}$ u $\;$ B $\neq$ 0.
 
 Chú ý 1.3. Các phép toán trên giới hạn sau không thực hiện được, chúng còn được gọi là
 
@@ -816,67 +758,67 @@ các dạng vô định:
 
 $\infty$ - $\infty$, 0 $\times \infty$, $\frac{\infty}{\infty}$, $\frac{0}{0}$.
 
-## 4.2 Các tiêu chuẩn tồn tại giới hạn <math>\infty - \infty, 0 \times \infty, \frac{\infty}{\infty}, \frac{0}{0}.</math>
+### 4.2 Các tiêu chuẩn tồn tại giới hạn
 
-### Định lý 1.4 (Tiêu chuẩn kẹp). Giả sử
+#### Định lý 1.4 (Tiêu chuẩn kẹp). Giả sử
 
-i) $a_n \le b_n \le c_n$ với mọi n $\in \mathbb{N}$ hoặc với mọi n $\ge$ K nào đó,
+i) $a_n \leq b_n \leq c_n$ với mọi n $\in \mathbb{N}$ hoặc với mọi n $\geq$ K nào đó,
 
-ii) $\lim_{n\to+\infty} a_n = \lim_{n\to+\infty} c_n =$ L.
+ii) $\lim_{n \to +\infty} a_n = \lim_{n \to +\infty} c_n =$ L.
 
-Khi đó, $\lim_{n\to+\infty} b_n =$ L.
+Khi đó, $\lim_{n \to +\infty} b_n =$ L.
 
 Đinh lý 1.5 (Tiêu chuẩn đơn điệu bị chặn). Mọi dãy số đơn điệu tăng (đơn điệu giảm)
 
 và bị chặn trên (tương ứng, bị chặn dưới) đều hội tụ.
 
-Ví dụ 4.1. Xét $u_n = \left(1$ + $\frac{1}{n}\right)^n$. Chứng minh rằng $\{u_n\}$ là một dãy số tăng và bị chặn.
+Ví dụ 4.1. Xét $u_n = \left(1$ + $\frac{1}{n}\right)^n.Chứng$ minh rằng $\{u_n\}$ là một dãy số tăng và bị chặn.
 
-Chứng minh. Áp dụng bất đẳng thức Cauchy ta có :
+$Ch\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$
 
 $1+\left(1+\frac{1}{n}\right)+\ldots+\left(1+\frac{1}{n}\right)\geq (n+1)\sqrt[n+1]{\left(1+\frac{1}{n}\right)^n}$.
 
-n số hang
+n $\text{$ số $hang}$
 
 
 
-$\Rightarrow \left(1+\frac{1}{n+1}\right)^{n+1} \ge \left(1+\frac{1}{n}\right)^n$.
+$\Rightarrow \left(1$ + $\frac{1}{n+1}\right)^{n+1} \ge \left(1$ + $\frac{1}{n}\right)^n$.
 
 Hơn nữa ta có
 
 $u_n = \left(1$ + $\frac{1}{n}\right)^n = \sum_{k=0}^n C_n^k \cdot \frac{1}{n^k}$
 
-k! $=$ 1.2 $\ldots$ k $> 2^{k-1} \forall$ k $>$ 2
+k! $=$ 1.2 $\ldots$ k $> 2^{k-1} \ \forall$ k $>$ 2
 
-$\Rightarrow C_n^k \cdot \frac{1}{n^k} = \frac{n.(n-1)...(n-k+1)}{k!} \cdot \frac{1}{n^k} < \frac{1}{k!} \leq \frac{1}{2^{k-1}}$
+$\Rightarrow C_n^k.\frac{1}{n^k} = \frac{n.(n-1)\dots(n-k+1)}{k!}.\frac{1}{n^k} < \frac{1}{k!} \le \frac{1}{2^{k-1}}$
 
 $\Rightarrow u_n <$ 1 + 1 + $\frac{1}{2}$ + $\frac{1}{2^2}$ + $\ldots$ + $\frac{1}{2^{k-1}} <$ 3.
 
-Chú ý 1.4. Giới hạn $\lim_{n\to+\infty} \left(1+\frac{1}{n}\right)^n$ là một số vô tỉ, được kí hiệu là e. Nó có giá trị xấp xỉ
+$\mathbf{Ch\acute{u}\acute{y}\ 1.4.}\;\;Gi\acute{o}i\;h\acute{a}n\lim_{n\rightarrow+\infty}\left(1+\frac{1}{n}\right)^{n}\;l\grave{a}\;m\acute{\rho}t\;s\acute{o}\;v\hat{o}\;t\acute{i},\;d\!u\acute{\rho}c\;k\acute{i}\;hi\acute{\rho}u\;l\grave{a}\;e.\;N\acute{o}\;c\acute{o}\;gi\acute{a}\;tr\acute{i}\;x\acute{\hat{a}}p\;x\acute{i}$
 
-2.71.
+### 2.71.
 
-Ví du 4.2 (Giữa kì, 20173). Xét sự hội tụ và tìm giới hạn (nếu có) của dãy số
+Ví dụ 4.2 (Giữa kì, 20173). Xét sự hội tụ và tìm giới hạn (nếu có) của dãy số
 
-$\{x_n\}: x_1 >$ 0, $x_{n+1} = \frac{1}{2} \left( x_n$ + $\frac{1}{x_n} \right)$, n $\ge$ 1.
+$\{x_n\}: x_1 >$ 0, $x_{n+1} = \frac{1}{2}\left(x_n$ + $\frac{1}{x_n}\right)$, n $\ge$ 1.
 
 [Lời giải] Từ $x_1 >$ 0 ta có $x_n >$ 0 với mọi n.
 
 $x_n = \frac{1}{2} \left( x_{n-1}$ + $\frac{1}{x_{n-1}} \right) \ge$ 1.
 
-Do đó, $x_{n+1} = \frac{1}{2} \left( x_n$ + $\frac{1}{x_n} \right) \leq x_n$ với mọi n. Như vậy, $\{x_n\}$ là một dãy số giảm và bị chặn
+Do đó, $x_{n+1}=\frac{1}{2}\left(x_n+\frac{1}{x_n}\right)\leq x_n$ với mọi n. Như vậy, $\{x_n\}$ là một dãy số giảm và bị chặn
 
 dưới nên tồn tại $\lim_{n \to +\infty} x_n =$ a.
 
 $x_{n+1} = \frac{1}{2} \left( x_n$ + $\frac{1}{x_n} \right) \Rightarrow$ a $= \frac{1}{2} \left($ a + $\frac{1}{a} \right) \Rightarrow$ a $=$ 1.
 
-$\text{Vây } \lim_{n \to +\infty} x_n =$ 1.
+Vậy $\lim_{n \to +\infty} x_n =$ 1.
 
-Định nghĩa 1.8. Dãy số $\{a_n\}$ được gọi là dãy số Cauchy nếu với mọi $\epsilon >$ 0, tồn tại số tự
+#### Định nghĩa 1.8. D\tilde{a}y \, s\hat{o} \, \{a_n\} được gọi là dãy số Cauchy nếu với mọi \epsilon > 0, tồn tại số tự
 
-nhiên N sao cho $|a_n$ - $a_m| < \epsilon$ với mọi m, n $>$ N.
+$n\text{hi\^{e}n} \$ N $\ \text{so \ \textit{cho} \ } |a_n$ - $a_m| < \epsilon \ \text{v\^{o}i \ \textit{mo}i \$ m, n $> N.}$
 
-### Định lý 1.6 (Tiêu chuẩn Cauchy). Dãy số <math>\{a_n\}</math> là hội tụ khi và chỉ khi nó là dãy số
+#### Định lý 1.6 (Tiêu chuẩn Cauchy). D\tilde{a}y \, s\hat{o} \, \{a_n\} là hội tụ khi và chỉ khi nó là dãy số
 
 Cauchy.
 
@@ -890,21 +832,21 @@ là một dãy số phân kỳ.
 
 Ví dụ 4.4 (Ngụy biện toán học). Cho x là một số thực và L $= \lim_{n \to +\infty} x^n$. Đổi biến số
 
-n $=$ m + 1 $\text{$ ta $c} \acute{o}$
+n $=$ m + 1 $\text{$ ta $có}$
 
-L $= \lim_{m+1 \to +\infty} x^{m+1} = \lim_{m \to +\infty} x.x^m =$ x. $\lim_{m \to +\infty} x^m =$ xL.
+L $= \lim_{m+1 \to +\infty} x^{m+1} = \lim_{m \to +\infty}$ x $\cdot x^m =$ x. $\lim_{m \to +\infty} x^m =$ xL.
 
-$V_{\hat{a}y}$ L $=$ xL $\Rightarrow$ L(x-1) $=$ 0. Nếu x $\neq$ 1 thì L $=$ 0. Nói cách khác,
+$V\hat{a}y$ L $=$ xL $\Rightarrow$ L(x-1) $=$ 0. Nếu x $\neq$ 1 thì L $=$ 0. Nói cách khác,
 
-$\n\lim_{n \to +\infty} x^n =$ 0 $\ \forall$ x $\neq 1.\n$
+$\lim_{n \to +\infty} x^n =$ 0 $\; \forall$ x $\neq$ 1.
 
 Điều này dẫn đến, chẳng hạn,
 
-$\lim_{n\to+\infty} 2^n =$ 0 thật vô lý!.
+$\lim_{n\to+\infty}2^n=0\,\,t\!h\!{\hat a}t\,\,v\!{\hat o}\,l\!{\hat y}\!$.
 
 Giải thích tại sao lại dẫn đến mâu thuẫn trên?
 
-## 4.3 Bài tâp Giải thích tại sao lại dẫn đến mâu thuẫn trên?
+### 4.3 Bài tâp
 
 Về bài tập tìm giới hạn của dãy số, về cơ bản cho đến thời điểm hiện tại chúng ta chưa
 
@@ -920,17 +862,17 @@ Bài tập 1.13. Tìm giới hạn của các dãy số sau:
 
 a) $x_n =$ n - $\sqrt{n^2$ - $n}$, c) $x_n =$ n + $\sqrt[3]{1$ - $n^3}$,
 
-e) $x_n = \frac{\sin^2$ n - $\cos^3 n}{n}$.
+$\text{e)} \ x_n = \frac{\sin^2$ n - $\cos^3 n}{n}$.
 
 b) $x_n = \sqrt{n(n+a)}$ - n, d) $x_n = \frac{n}{2} \sin \frac{n\pi}{2}$,
 
-$[\text{Đáp}\ \text{s}\hat{\text{o}}]$
+[Đáp số]
 
 b) $\frac{u}{2}$
 
 a) $\frac{1}{2}$
 
-$\mathbf{c}) \ \$ 0
+c) 0
 
 d) phân kì
 
@@ -942,17 +884,17 @@ a) Chứng minh rằng dãy $\{x_n\}$ không có giới hạn hữu hạn.
 
 b) Chứng minh rằng $\lim_{n\to\infty} x_n = +\infty$.
 
-Bài tập 1.15. Cho $s_n =$ 1 + $\frac{1}{1!}$ + ... + $\frac{1}{n!}$. Chứng minh rằng $\{s_n\}$ tăng và bị chặn.
+Bài tập 1.15. Cho $s_n =$ 1 + $\frac{1}{1!}$ + $\ldots$ + $\frac{1}{n!}.Chứng$ minh rằng $\{s_n\}$ tăng và bị chặn.
 
-Chú ý: $\lim_{n\to+\infty} s_n =$ e.
+$\mathbf{Ch\acute{u}\acute{y}}:\lim_{n\to+\infty}s_n=e$.
 
 
 
-Bài tập 1.16. Tính $\lim_{n\to+\infty} \frac{1+a+\ldots+a^n}{1+b+\ldots+b^n}$, |a| $<$ 1, |b| $<$ 1.
+Bài tập 1.16. Tính $\lim_{n \to +\infty} \frac{1+a+\ldots+a^n}{1+b+\ldots+b^n}$, |a| $<$ 1, |b| $<$ 1.
 
 Chứng minh.
 
-$\n\lim_{n \to +\infty} \frac{1$ + a + $\ldots$ + $a^n}{1$ + b + $\ldots$ + $b^n} = \lim_{n \to +\infty} \frac{1$ - $a^{n+1}}{1$ - $a} \cdot \frac{1$ - $b}{1$ - $b^{n+1}} = \frac{1$ - $b}{1$ - $a}\n$
+$\lim_{n \to +\infty} \frac{1+a+\ldots+a^n}{1+b+\ldots+b^n} = \lim_{n \to +\infty} \frac{1-a^{n+1}}{1-a} \cdot \frac{1-b}{1-b^{n+1}} = \frac{1-b}{1-a}$
 
 Bài tập 1.17. Tính $\lim_{n \to +\infty} \sqrt{2$ + $\sqrt{2$ + $\ldots$ + $\sqrt{2}}}$ (n dấu căn).
 
@@ -966,7 +908,7 @@ n $\rightarrow \infty$ ta có
 
 $a^2 =$ a + 2
 
-Vậy a $=$ 2 hay $\lim_{n \to +\infty} \sqrt{2$ + $\sqrt{2$ + ... + $\sqrt{2}}} =$ 2
+Vậy a $=$ 2 hay $\lim_{n \to +\infty} \sqrt{2$ + $\sqrt{2$ + $\ldots$ + $\sqrt{2}}} =$ 2
 
 Bài tập 1.18. Tính $\lim_{n\to+\infty}(n-\sqrt{n^2-1})\sin$ n.
 
@@ -974,23 +916,21 @@ Bài tập 1.18. Tính $\lim_{n\to+\infty}(n-\sqrt{n^2-1})\sin$ n.
 
 Bài tập 1.19. Tính $\lim_{n\to+\infty} [\cos(\ln$ n) - $\cos(\ln(n+1))]$.
 
-Chúng minh. Ta có
+Chứng minh. Ta có
 
 $\cos(\ln$ n) - $\cos(\ln(n+1)) = -2\sin\left(\frac{\ln$ n + $\ln(n+1)}{2}\right) \cdot \sin\left(\frac{\ln$ n - $\ln(n+1)}{2}\right)$
 
-$\blacksquare$
-
 $= -2\sin\frac{\ln n(n+1)}{2}\sin\frac{\ln\frac{n}{n+1}}{2}$
 
-$n\hat{e}n$
+nên
 
 0 $\leq |\cos(\ln$ n) - $\cos(\ln(n+1))| \leq$ 2 $\left| \sin \frac{\ln \frac{n}{n+1}}{2} \right|$
 
-Mặt khác $\lim_{n\to\infty} \sin\frac{\ln\frac{n}{n+1}}{2}=0nên$ theo nguyên lý giới hạn kẹp
+Mặt khác $\lim_{n\to\infty} \sin\frac{\ln\frac{n}{n+1}}{2} =$ 0 nên theo nguyên lý giới hạn kẹp
 
 $\lim_{n \to +\infty} [\cos(\ln$ n) - $\cos(\ln(n+1))] =$ 0
 
-Bài tập 1.20. Chứng minh rằng $\lim_{n\to+\infty}\frac{n}{2^n}=0$.
+Bài tập 1.20. Chứng minh rằng $\lim_{n \to +\infty} \frac{n}{2^n} =$ 0.
 
 
 
@@ -1000,9 +940,9 @@ $2^{n} = (1+1)^{n} > \frac{n(n-1)}{2} \Rightarrow$ 0 $< \frac{n}{2^{n}} < \frac{
 
 Dùng nguyên lý kẹp ta có điều phải chứng minh.
 
-Bài tập 1.21. Chứng minh rằng $\lim_{n\to+\infty}\frac{2^n}{n!}=0$.
+Bài tập 1.21. Chứng minh rằng $\lim_{n \to +\infty} \frac{2^n}{n!} =$ 0.
 
-[Gơi $\circ]$ Ta có
+[Gơi ý] Ta có
 
 0 $< \frac{2^n}{n!} = \frac{2}{1} \cdot \frac{2}{2} \cdot \frac{2}{3} \dots \frac{2}{n} <$ 2 $\cdot \frac{2}{n} \ \forall$ n $\ge$ 2.
 
@@ -1018,15 +958,15 @@ a. Tính $S_n$ - $\frac{1}{2}S_n \Rightarrow \lim_{n \to +\infty} S_n =$ 2.
 
 b. Tính $S_n$ - $\frac{1}{3}S_n \Rightarrow \lim_{n \to +\infty} S_n = \frac{3}{4}$.
 
-Bài tập 1.23. Chứng minh rằng $\lim_{n\to+\infty} \sqrt[n]{n} =$ 1, $\lim_{n\to+\infty} \sqrt[n]{a} =$ 1 với mọi a $>$ 0.
+Bài tập 1.23. Chứng minh rằng $\lim_{n \to +\infty} \sqrt[n]{n} =$ 1, $\lim_{n \to +\infty} \sqrt[n]{a} =$ 1 với mọi a $>$ 0.
 
-$[G\phi$ i $\acute{y}]$
+[Gợi ý]
 
 a) Đặt $\alpha_n = \sqrt[n]{n}$ - 1 $\Rightarrow$ n $=$ (1 + $\alpha_n)^n > \frac{n(n-1)}{2} \alpha_n^2 \Rightarrow \alpha_n^2 < \frac{2}{n-1}$. Áp dụng nguyên lý giới
 
 hạn kẹp ta có $\lim_{n\to\infty} \alpha_n =$ 0. Vậy $\lim_{n\to\infty} \sqrt[n]{n} =$ 1.
 
-b) Xét $\lim_{n\to+\infty} \sqrt[n]{a}$.
+b) Xét $\lim_{n \to +\infty} \sqrt[n]{a}$.
 
 • Nếu a $=$ 1, xong.
 
@@ -1034,7 +974,7 @@ b) Xét $\lim_{n\to+\infty} \sqrt[n]{a}$.
 
 • Nếu a $<$ 1, đặt a' $= \frac{1}{a} \Rightarrow \lim \sqrt[n]{a'} =$ 1 $\Rightarrow \lim_{n \to +\infty} \sqrt[n]{a} =$ 1.
 
-Bài tập 1.24. Tính $\lim_{n \to +\infty} x_n$, ở đó $x_n = \frac{1}{2$ + $\frac{1}{2$ + $\dots$ + $\frac{1}{2}}}$ (n phép chia).
+Bài tập 1.24. Tính $\lim_{n\to+\infty}x_n$, ở đó $x_n=\frac{1}{2+\frac{1}{2+\cdots+\frac{1}{2}}}$ (n phép chia).
 
 [Lời giải]
 
@@ -1048,39 +988,39 @@ Nếu $x_n <$ -1 + $\sqrt{2}$ thì $x_{n+1} = \frac{1}{2$ + $x_n} > \frac{1}{2$ 
 
 Như vậy, dãy $\{x_n\}$ này có quy luật là, cứ một số hạng nào đó nhỏ hơn -1 + $\sqrt{2}$ thì số
 
-hạng đứng ngay sau nó lớn hơn $-1+\sqrt{2}$, và ngược lại. Do đó,
+hạng đứng ngay sau nó lớn hơn -1 + $\sqrt{2}$, và ngược lại. Do đó,
 
 $x_1 = \frac{1}{2} >$ -1 + $\sqrt{2} \Rightarrow x_2 <$ -1 + $\sqrt{2} \Rightarrow x_3 >$ -1 + $\sqrt{2} \Rightarrow \cdots$
 
-$ dẫn đến việc \begin{cases} 0 < x_{2n} < -1 + \sqrt{2}, \\ x_{2n+1} > -1 + \sqrt{2}. \end{cases} $
+$ dẫn đến việc \left\{ \begin{aligned} 0 < x_{2n} < -1 + \sqrt{2}, \ x_{2n+1} > -1 + \sqrt{2}. \end{aligned} \right. $
 
-2) Tiếp theo, ta đi chứng minh dãy $\{x_{2n}\}\$ là một dãy số tăng, thật vậy,
+2) Tiếp theo, ta đi chứng minh dãy $\{x_{2n}\}$ là một dãy số tăng, thật vậy,
 
-$x_{2n+2}=\frac{1}{2+x_{2n+1}}=\frac{1}{2+\frac{1}{2+\cdots}}=\frac{2+x_{2n}}{5+2x_{2n}}$.
+$x_{2n+2} = \frac{1}{2$ + $x_{2n+1}} = \frac{1}{2$ + $\frac{1}{2$ + $\frac{1}{2}}} = \frac{2$ + $x_{2n}}{5$ + $2x_{2n}}$.
 
 $x_{2n+2} > x_{2n} \Leftrightarrow \frac{z$ + $x_{2n}}{5$ + $2x_{2n}} > x_{2n} \Leftrightarrow 2x_{2n}^2$ + $4x_{2n}$ - 2 $<$ 0 $\Leftrightarrow$ -1 - $\sqrt{2} < x_{2n} <$ -1 + $\sqrt{2}$
 
 Điều này luôn đúng, vì ta đã chứng minh ở trên, rằng dãy các số hạng chẵn thỏa
 
-mãn $x_{2n} <$ -1 + $\sqrt{2}$.
+$\text{m}{\tilde{\text{a}}\text{n}}\ x_{2n} <$ -1 + $\sqrt{2}$.
 
-Dãy số này tăng và bị chặn trên bởi -1 + $\sqrt{2}$ nên tồn tại $\lim_{n \to \infty} x_{2n} =$ a. Phương trình
+Dãy số này tăng và bị chặn trên bởi -1 + $\sqrt{2}$ nên tồn tại $\lim_{a \to \infty} x_{2n} =$ a. Phương trình
 
-$x_{2n+2} = \frac{2+x_{2n}}{5+2x_{2n}}$ dẫn đến a $= \frac{2+a}{5+a} \Rightarrow$ a $=$ -1 + $\sqrt{2}$.
+$x_{2n+2} = \frac{2+x_{2n}}{5+2x_{2n}} \text{$ dẫn đến $}$ a $= \frac{2+a}{5+a} \Rightarrow$ a $=$ -1 + $\sqrt{2}$.
 
 3) Tương tự như vậy, dãy $\{x_{2n+1}\}$ sẽ là một dãy số giảm. Thật vậy,
 
 $x_{2n+3} = \frac{1}{2$ + $x_{2n+2}} = \frac{1}{2$ + $\frac{1}{2$ + $\cdots}} = \frac{2$ + $x_{2n+1}}{5$ + $2x_{2n+1}}$.
 
-$x_{2n+3} < x_{2n+1} \Leftrightarrow 2x_{2n+1}^2$ + $4x_{2n+1}$ - 2 $>$ 0 $\Leftrightarrow x_{2n+1} >$ -1 + $\sqrt{2}$ hoặc $x_{2n+1} <$ -1 - $\sqrt{2}$
+$x_{2n+3} < x_{2n+1} \Leftrightarrow 2x_{2n+1}^2$ + $4x_{2n+1}$ - 2 $>$ 0 $\Leftrightarrow x_{2n+1} >$ -1 + $\sqrt{2} \text{$ hoặc $} x_{2n+1} <$ -1 - $\sqrt{2}$
 
 Điều này luôn đúng, vì ta đã chứng minh ở trên, rằng dãy các số hạng lẻ thỏa mãn
 
 $x_{2n+1} >$ -1 + $\sqrt{2}$.
 
-Dãy số này giảm và bị chặn dưới, nên tồn tại giới hạn $\lim_{n\to+\infty} x_{2n+1} =$ b. Phương trình
+Dãy số này giảm và bị chặn dưới, nên tồn tại giới hạn $\lim_{n\to+\infty}x_{2n+1}=b$. Phương trình
 
-$x_{2n+3} = \frac{2+x_{2n+1}}{5+2x_{2n+1}}$ dẫn đến b $= \frac{2+b}{5+2b} \Rightarrow$ b $=$ -1 + $\sqrt{2}$.
+$x_{2n+3} = \frac{2+x_{2n+1}}{5+2x_{2n+1}} \text{$ dẫn đến $}$ b $= \frac{2+b}{5+2b} \Rightarrow$ b $=$ -1 + $\sqrt{2}$.
 
 Kết luận: $\lim_{n \to +\infty} x_n =$ -1 + $\sqrt{2}$.
 
@@ -1090,21 +1030,21 @@ Bài tập 1.25. Dùng tiêu chuẩn Cauchy chứng minh rằng dãy số $u_n =
 
 phân kì.
 
-Bài tập 1.26. Chứng minh rằng nếu $\lim_{n\to+\infty} a_n =$ a thì $\lim_{n\to+\infty} \frac{a_1$ + $a_2$ + $\cdots$ + $a_n}{n} =$ a.
+Bài tập 1.26. Chứng minh rằng nếu $\lim_{n \to +\infty} a_n =$ a thì $\lim_{n \to +\infty} \frac{a_1$ + $a_2$ + $\cdots$ + $a_n}{n} =$ a.
 
 Bài tập 1.27. Chứng minh rằng nếu $\lim_{n\to+\infty} a_n =$ a, $a_n >$ 0 $\forall$ n thì $\lim_{n\to+\infty} \sqrt[n]{a_1 a_2 \dots a_n} =$ a.
 
 
 
-$\S$ 5. $\ \textbf{GI\^OI} \ \textbf{HAN} \ \textbf{H\^A} \ \textbf{S\^O}$
+## §5. GIỚI HẠN HÀM SỐ
 
-## 5.1 Đinh nghĩa <math display="block">\S 5. \ \textbf{GI\^OI} \ \textbf{HAN} \ \textbf{H\^A} \ \textbf{S\^O}</math>
+### 5.1 Đinh nghĩa
 
-Định nghĩa 1.9. Giả sử rằng hàm số f(x) được xác định tại mọi điểm x $\in$ (a, b) $\setminus \{x_0\}$. Ta
+#### Định nghĩa 1.9. Giả sử rằng hàm số f(x) được xác định tại mọi điểm x \in (a,b) \setminus \{x_0\}. Ta
 
 nói giới hạn của hàm số f(x) khi x tiến đến $x_0$ bằng L và viết
 
-$\n\lim_{x \to x_0}$ f(x) $= L\n$
+$\lim_{x \to x_0}$ f(x) $=$ L
 
 • (nói một cách nôm na) nếu ta có thể làm cho giá trị của hàm số f(x) gần L với một
 
@@ -1112,47 +1052,47 @@ giá trị tùy ý bằng cách chọn x đủ gần $x_0$.
 
 • (nói một cách chính xác) nếu với mọi $\epsilon >$ 0, tồn tại số thực $\delta >$ 0 sao cho
 
-$\|\hat{u}x$ - $x_0\| < \delta \text{thi}$ |f(x) - L| $< \epsilon$.
+$n\hat{e}u |x-x_0| < \delta \$, $th\hat{i}$ |f(x)-L| $< \epsilon$.
 
-Hình dung rằng $\lim_{x\to x_0}f(x)=Lnghĩa$ là với $mọi\epsilon>0,tồn$ tại $số\delta>0sao$ cho đồ thị của
+Hình dung rằng $\lim_{x\to x_0}f(x)=L$ nghĩa là với mọi $\epsilon>0$, tồn tại số $\delta>0$ sao cho đồ thị của
 
 hàm số trong khoảng $(x_0$ - $\delta$, $x_0$ + $\delta)$ sẽ nằm hoàn toàn trong dải (L - $\epsilon$, L + $\epsilon)$.
 
-$L+\epsilon$
+L + $\epsilon$
 
-$-L-\epsilon$
+L - $\epsilon$
 
-$x_0 \\$
+$x_0$
 
-$\chi_{\parallel}$
+$\chi$
 
-$\mathcal{O}$
+О
 
 Hình 1.9
 
-Các giới hạn một phía $\lim_{x\to x_0^+} =$ L, $\lim_{x\to x_0^-} =$ L và giới hạn $\lim_{x\to\infty}$ f(x) $=$ L được định nghĩa một
+Các giới hạn một phía $<math display="inline">\lim_{x\to x_0^+}=L$, $\lim_{x\to x_0^-}=L$ và giới hạn $<math display="inline">\lim_{x\to\infty}f(x)=Lđược$ định nghĩa một
 
 cách tương tự.
 
-### Định lý 1.7 (Tính duy nhất của giới hạn). <i>Giới hạn của hàm số</i> <math>\lim_{x\to x_0} f(x)</math>, nếu tồn tại,
+#### Định lý 1.7 (Tính duy nhất của giới hạn). Giới hạn của hàm số \lim_{x\to x_0} f(x), nếu tồn tại,
 
 là duy nhất.
 
-## 5.2 Các phép toán trên giới han là duy nhất.
+### 5.2 Các phép toán trên giới han
 
-### Định lý 1.8 (Các phép toán trên giới hạn). <i>Giả sử</i> <math>\lim_{x\to x_0} f(x) = a</math>, <math>\lim_{x\to x_0} g(x) = b</math>, <i>ở đó</i>
+#### Định lý 1.8 (Các phép toán trên giới hạn). Giả sử \lim_{x\to x_0} f(x) = a, \lim_{x\to x_0} g(x) = b, ở đó
 
 a, b là các số thực hữu hạn. Khi đó,
 
-• Tống: $\lim_{x \to x_0}$ [f(x) + g(x)] $=$ a + b,
+• Tổng: $\lim_{x \to x_0}$ [f(x) + g(x)] $=$ a + b,
 
 
 
 • Hiệu: $\lim_{x \to x_0}$ [f(x) - g(x)] $=$ a - b,
 
-• Tích: $\lim_{x\to x_0}[f(x)g(x)] =$ ab,
+• Tích: $\lim_{x \to x_0}$ [f(x)g(x)] $=$ ab,
 
-• Thương: $\lim_{x\to x_0} \frac{f(x)}{g(x)} = \frac{a}{b}$, nếu b $\neq$ 0.
+• Thương: $\lim_{x \to x_0} \frac{f(x)}{g(x)} = \frac{a}{b}$, nếu b $\neq$ 0.
 
 Chú ý 1.5. Các phép toán trên giới hạn sau không thực hiện được, chúng còn được gọi là
 
@@ -1160,35 +1100,35 @@ các dạng vô định:
 
 $\infty$ - $\infty$, 0 $\times \infty$, $\frac{\infty}{\infty}$, $\frac{0}{0}$.
 
-## 5.3 Giới han của hàm hợp <math>\infty - \infty, 0 \times \infty, \frac{\infty}{\infty}, \frac{0}{0}.</math>
+### 5.3 Giới han của hàm hợp
 
 Nếu có $\lim_{x\to x_0}$ u(x) $= u_0$, $\lim_{u\to u_0}$ f(u) $= f(u_0)$ và có hàm hợp f(u(x)) thì
 
-$\n\lim_{x \to x_0}$ f(u(x)) $= f(u_0).\n$
+$\lim_{x \to x_0}$ f(u(x)) $= f(u_0)$.
 
 Áp dụng $\lim_{x\to x_0} A(x)^{B(x)} = e^{\lim_{x\to x_0}$ B(x) $\ln A(x)}$.
 
-## 5.4 Giới han vô cùng Áp dụng <math>\lim_{x\to x_0} A(x)^{B(x)} = e^{\lim_{x\to x_0} B(x) \ln A(x)}</math>.
+### 5.4 Giới han vô cùng
 
-Định nghĩa 1.10. Giả sử rằng hàm số f(x) được xác định tại mọi điểm x $\in$ (a, b) $\setminus \{x_0\}$.
+#### Định nghĩa 1.10. Giả sử rằng hàm số f(x) được xác định tại mọi điểm x \in (a,b) \setminus \{x_0\}.
 
 Ta nói giới hạn của hàm số f(x) khi x tiến đến $x_0$ bằng vô cùng và viết
 
-$\n\lim_{x \to x_0}$ f(x) $= \infty\n$
+$\lim_{x \to x_0}$ f(x) $= \infty$
 
-nếu với mọi số M $>$ 0, tồn tại số thực $\delta >$ 0 sao cho
+$n\acute{e}u$ với mọi số M $>$ 0, tồn tại số thực $\delta >$ 0 sao cho
 
-$n\hat{e}u$ |x - $x_0| < \delta$ thi |f(x)| $>$ M.
+$n\hat{e}u |x-x_0| < \delta \$, $th\hat{i}$ |f(x)| $>$ M.
 
-Các giới hạn một phía $\lim_{x\to x_0^+} = \infty$, $\lim_{x\to x_0^-} = \infty$ và giới hạn $\lim_{x\to\infty}$ f(x) $= \infty$ được định nghĩa một
+Các giới hạn một phía $\lim_{x \to x_0^+} = \infty$, $\lim_{x \to x_0^-} = \infty$ và giới hạn $\lim_{x \to \infty}$ f(x) $= \infty$ được định nghĩa một
 
 cách tương tự.
 
-## 5.5 Các tiêu chuẩn tồn tại giới hạn cách tương tự.
+### 5.5 Các tiêu chuẩn tồn tại giới hạn
 
-Định lý 1.9. Nếu f(x) $\le$ g(x) với mọi x trong một lân cận nào đó của a, và tồn tại các giới
+#### Định lý 1.9. Nếu f(x) \le g(x) với mọi x trong một lân cận nào đó của a, và tồn tại các giới
 
-hạn $\lim_{x\to a}$ f(x), $\lim_{x\to a}$ g(x) thì
+hạn $\lim_{x \to a}$ f(x), $\lim_{x \to a}$ g(x) thì
 
 $\n\lim_{x \to a}$ f(x) $\le \lim_{x \to a} g(x).\n$
 
@@ -1200,7 +1140,7 @@ $\n\lim_{x \to a}$ f(x) $= \lim_{x \to a} g(x).\n$
 
 
 
-## 5.6 Mối liên hệ giữa giới hạn của dãy số và giới han None
+### 5.6 Mối liên hệ giữa giới hạn của dãy số và giới han
 
 của hàm số
 
@@ -1210,69 +1150,69 @@ dụng các công cụ của giới hạn của hàm số để tính toán mộ
 
 qua mối liên hê sau.
 
-Định lý 1.10. $\lim_{x\to x_0}$ f(x) $=$ L khi và chỉ khi với mọi dãy số $\{x_n\}$ sao cho $\lim_{n\to+\infty} x_n = x_0$ thì
+#### Định lý 1.10. \lim_{x\to x_0} f(x) = L khi và chỉ khi với mọi dãy số \{x_n\} sao cho \lim_{n\to+\infty} x_n = x_0 thì
 
-$\lim_{n\to+\infty} f(x_n) =$ L, ở đó (chỉ riêng trong Định lý này) $x_0$ và L có thể là một số thực hữu hạn
+$\lim_{n\to+\infty} f(x_n) =$ L, $\$, $\r{d} \$, $\r{d} \r{o} \$, $(ch\r{i} \$, $ri\r{e}ng \$, trong $\$, $\r{D}inh \$, $l\rlap/v \$, $n\grave{a}y) \$, $x_0 \$, $v\grave{a} \$, L $\$, $c\acute{o} \$, $th\r{e}^{\prime} \$, $l\grave{a} \$, $m\r{o}t \$, $s\acute{o} \$, $th\rlap/v \$, $h\rlap/v \$, $h\rlap/v \$, $h\rlap/v \$, $h\rlap/v \$, $h\rlap/v \$, $h\rlap/v \$, $h\rlap/v \$, $h\rlap/v \$, $h\rlap/v \$, $h\rlap/v \$, $h\rl$
 
 hoặc bằng vô cùng.
 
 Chẳng hạn như, muốn chứng minh $\lim_{n \to +\infty} \frac{\ln n}{n} =$ 0 ta có thể đưa về $\lim_{x \to \infty} \frac{\ln x}{x} =$ 0.
 
-## 5.7 Bài tâp Chẳng hạn như, muốn chứng minh <math>\lim_{n \to +\infty} \frac{\ln n}{n} = 0</math> ta có thể đưa về <math>\lim_{x \to \infty} \frac{\ln x}{x} = 0</math>.
+### 5.7 Bài tâp
 
 Bài tập 1.28. Tính
 
-a) $\lim_{x \to 1} \frac{x^{100}$ - 2x + $1}{x^{50}$ - 2x + $1} \left(\frac{0}{0}\right)$
+$ a) \lim_{x \to 1} \frac{x^{100} - 2x + 1}{x^{50} - 2x + 1} \begin{pmatrix} 0 \\ \overline{0} \end{pmatrix} $
 
-b) $\lim_{x \to a} \frac{(x^n$ - $a^n)$ - $na^{n-1}(x$ - $a)}{(x$ - $a)^2} \left(\frac{0}{0}\right)$
+b) $\lim_{x \to a} \frac{(x^n$ - $a^n)$ - $na^{n-1}(x-a)}{(x-a)^2} \left(\frac{0}{0}\right)$
 
 Phương pháp phân tích đa thức thành nhân tử. Nếu $P_n(x_0) = Q_m(x_0) =$ 0 thì
 
-$\n\lim_{x \to x_0} \frac{P_n(x)}{O_m(x)} = \lim_{x \to x_0} \frac{(x$ - $x_0) \cdot P_{n-1}(x)}{(x$ - $x_0) \cdot O_{m-1}(x)} = \lim_{x \to x_0} \frac{P_{n-1}(x)}{O_{m-1}(x)}.\n$
+$\lim_{x \to x_0} \frac{P_n(x)}{O_m(x)} = \lim_{x \to x_0} \frac{(x$ - $x_0)$ . $P_{n-1}(x)}{(x$ - $x_0)$ . $O_{m-1}(x)} = \lim_{x \to x_0} \frac{P_{n-1}(x)}{O_{m-1}(x)}$.
 
-$[\text{Đáp}\text{ s\^0}]$
+$[\text{Đáp}\text{ s\^o}]$
 
 a) $\frac{49}{24}$
 
-b) $\frac{n(n-1)}{2}a^{n-2}$
+b) $\frac{n(n-1)}{2}.a^{n-2}$
 
 Bài tập 1.29. Tìm giới hạn
 
-b) $\lim_{x \to +\infty} (\sqrt[3]{x^3$ + $x^2$ - $1}$ - x) $(\infty$ - $\infty)$.
+b) $\lim_{x \to +\infty} (\sqrt[3]{x^3$ + $x^2$ - 1 - $x}) \ (\infty$ - $\infty)$.
 
-a) $\lim_{x \to +\infty} \frac{\sqrt{x$ + $\sqrt{x$ + $\sqrt{x}}}}{\sqrt{x$ + $1}} \left(\frac{\infty}{\sim}\right)$.
+a) $\lim_{x \to +\infty} \frac{\sqrt{x$ + $\sqrt{x$ + $\sqrt{x}}}}{\sqrt{x$ + $1}} \left(\frac{\infty}{\infty}\right)$.
 
 Chứng minh. a) Chia cả tử và mẫu cho $\sqrt{x}$ ta được
 
-$\n\lim_{x \to +\infty} \frac{\sqrt{x$ + $\sqrt{x$ + $\sqrt{x}}}}{\sqrt{x$ + $1}} = \lim_{x \to \infty} \frac{\sqrt{1$ + $\sqrt{1/x$ + $\sqrt{1/x^3}}}}{\sqrt{1$ + $1/x}} = 1.\n$
+$\lim_{x \to +\infty} \frac{\sqrt{x$ + $\sqrt{x$ + $\sqrt{x}}}}{\sqrt{x$ + $1}} = \lim_{x \to \infty} \frac{\sqrt{1$ + $\sqrt{1/x$ + $\sqrt{1/x^3}}}}{\sqrt{1$ + $1/x}} =$ 1.
 
 b) Sử dụng phương pháp nhân liên hợp ta được
 
-$\n\lim_{x \to +\infty} (\sqrt[3]{x^3$ + $x^2$ - $1}$ - x) $= \lim_{x \to \infty} \frac{x^2$ - $1}{\sqrt[3]{(x^3$ + $x^2$ - $1)^2}$ + $x\sqrt[3]{x^3$ + $x^2$ - $1}$ + $x^2} = \frac{1}{3}.\n$
+$\lim_{x \to +\infty} (\sqrt[3]{x^3$ + $x^2$ - $1}$ - x) $= \lim_{x \to \infty} \frac{x^2$ - $1}{\sqrt[3]{(x^3$ + $x^2$ - $1)^2}$ + $x\sqrt[3]{x^3$ + $x^2$ - $1}$ + $x^2} = \frac{1}{3}$.
 
 
 
-§6. VÔ CÙNG LỚN, VÔ CÙNG BÉ
+## §6. VÔ CÙNG LỚN, VÔ CÙNG BÉ
 
-## 6.1 Vô cùng bé (VCB) §6. VÔ CÙNG LỚN, VÔ CÙNG BÉ
+### 6.1 Vô cùng bé (VCB)
 
-Định nghĩa 1.11. Hàm số f(x) được gọi là một vô cùng bé (viết tắt là VCB) khi x $\rightarrow$ a
+#### Định nghĩa 1.11. Hàm số f(x) được gọi là một vô cùng bé (viết tắt là VCB) khi x \rightarrow a
 
-$n\hat{e}u$
+nếu
 
 $\n\lim_{x \to a}$ f(x) $= 0.\n$
 
 Mối liên hệ giữa giới hạn và VCB
 
-$\n\lim_{x \to a}$ f(x) $= \ell \Longleftrightarrow$ f(x) $= \ell$ + $\alpha(x);\n$
+$\lim_{x \to a}$ f(x) $= \ell \Longleftrightarrow$ f(x) $= \ell$ + $\alpha(x);$
 
-trong đó $\alpha(x)$ là một VCB trong quá trình x $\rightarrow$ a.
+trong đó $\alpha(x)$ là một VCB trong quá trình x $\to$ a.
 
 Môt số tính chất của VCB
 
 1. Tổng hai VCB (đối với một VCB người ta không quan tâm đến dấu của nó) là một
 
-VCB.
+$\text{VCB.}$
 
 2. Tích của VCB với một đại lượng bị chặn là một VCB.
 
@@ -1282,7 +1222,7 @@ Chú ý: Thương của hai VCB là một dạng vô định $\frac{0}{0}$.
 
 So sánh các VCB
 
-### Định nghĩa 1.12 (VCB cùng bậc, tương đương). Giả sử <math>\alpha(x)</math> và <math>\beta(x)</math> là các VCB khi
+#### Định nghĩa 1.12 (VCB cùng bậc, tương đương). Giả sử \alpha(x) và \beta(x) là các VCB khi
 
 x $\rightarrow$ a.
 
@@ -1296,17 +1236,17 @@ Môt số VCB tương đương hay dùng trong quá trình x $\rightarrow$ 0
 
 • x $\sim \sin$ x $\sim \tan$ x $\sim \arcsin$ x $\sim \arctan$ x $\sim e^x$ - 1 $\sim \frac{a^x$ - $1}{\ln a} \sim \ln(1$ + x),
 
-• $(1+x)^a$ - 1 $\sim$ ax. Đặc biệt, $\sqrt[m]{1$ + $\alpha x}$ - 1 $\sim \frac{\alpha x}{m}$,
+• $(1+x)^a$ - 1 $\sim$ ax. Đặc biệt, $\sqrt[m]{1+\alpha x}$ - 1 $\sim \frac{\alpha x}{m}$,
 
 
 
-• 1 - $\cos$ x $\sim \frac{x^2}{2}$.
+$\bullet \$ 1 - $\cos$ x $\sim \frac{x^2}{2}$.
 
-### Định nghĩa 1.13 (VCB bậc cao). Nếu <math>\lim_{x\to a} \frac{\alpha(x)}{\beta(x)} = 0</math>, ta nói rằng <math>\alpha(x)</math> là VCB bậc cao hơn
+#### Định nghĩa 1.13 (VCB bậc cao). Nếu \lim_{x\to a} \frac{\alpha(x)}{\beta(x)} = 0, ta nói rằng \alpha(x) là VCB bậc cao hơn
 
 $\beta(x)$ và kí hiệu $\alpha(x) = o(\beta(x))$.
 
-Định lý 1.11.
+#### Định lý 1.11.
 
 a) Hiệu hai VCB tương đương là một VCB bậc cao hơn VCB đó.
 
@@ -1314,21 +1254,21 @@ b) Tích hai VCB là một VCB bậc cao hơn cả hai VCB đó.
 
 Ứng dụng của VCB để tìm giới hạn
 
-### Định lý 1.12 (Quy tắc thay tương đương). <i>Nếu</i> <math>\alpha_1(x) \sim \alpha_2(x)</math>, <math>\beta_1(x) \sim \beta_2(x)</math> khi <math>x \to a</math>
+#### Định lý 1.12 (Quy tắc thay tương đương). N\acute{e}u\,\alpha_1(x) \sim \alpha_2(x), \beta_1(x) \sim \beta_2(x) khi x \to a
 
 thì
 
-$\n\lim_{x \to a} \frac{\alpha_1(x)}{\beta_1(x)} = \lim_{x \to a} \frac{\alpha_2(x)}{\beta_2(x)}$, $\quad \lim_{x \to a} \alpha_1(x)\gamma(x) = \lim_{x \to a} \alpha_2(x)\gamma(x).\n$
+$\lim_{x \to a} \frac{\alpha_1(x)}{\beta_1(x)} = \lim_{x \to a} \frac{\alpha_2(x)}{\beta_2(x)}$, $\quad \lim_{x \to a} \alpha_1(x)\gamma(x) = \lim_{x \to a} \alpha_2(x)\gamma(x)$.
 
-### Định lý 1.13 (Quy tắc ngắt bỏ VCB bậc cao). Nếu <math>\alpha_1(x) = o(\alpha_2(x))</math>, <math>\beta_1(x) = o(\beta_2(x))</math>
+#### Định lý 1.13 (Quy tắc ngắt bỏ VCB bậc cao). Nếu \alpha_1(x) = o(\alpha_2(x)), \beta_1(x) = o(\beta_2(x))
 
-khi x $\rightarrow$ a thì
+khi x $\rightarrow$ a thi
 
-$\alpha_1(x)$ + $\alpha_2(x) \sim \alpha_2(x)$ và $\lim_{x \to a} \frac{\alpha_1(x)$ + $\alpha_2(x)}{\beta_1(x)$ + $\beta_2(x)} = \lim_{x \to a} \frac{\alpha_2(x)}{\beta_2(x)}$.
+$\alpha_1(x)$ + $\alpha_2(x) \sim \alpha_2(x) \text{$ via $} \lim_{x \to a} \frac{\alpha_1(x)$ + $\alpha_2(x)}{\beta_1(x)$ + $\beta_2(x)} = \lim_{x \to a} \frac{\alpha_2(x)}{\beta_2(x)}$.
 
 Chú ý 1.6. Sai lầm hay mắc: Thay tương đương khi có hiệu hai VCB. Chẳng hạn như, với
 
-VCB $\alpha(x) = \sin$ x - $\tan$ x + $x^3$ khi x $\rightarrow$ 0 ta có
+VCB $\alpha(x) = \sin$ x - $\tan$ x + $x^3$ khi x $\rightarrow$ 0 $\text{$ ta $có}$
 
 ii) Thực tế, $\alpha(x) \sim \frac{x^3}{2}$.
 
@@ -1336,7 +1276,7 @@ i) Thay tương đương $\alpha(x) \sim x^3$,
 
 Thật vậy,
 
-$\lim_{x\to 0} \frac{\sin$ x - $\tan$ x + $x^3}{x^3} =$ 1 + $\lim_{x\to 0} \frac{\sin$ x $\left(1$ - $\frac{1}{\cos x}\right)}{x^3} =$ 1 + $\lim_{x\to 0} \frac{-\sin$ x (1 - $\cos x)}{x^3 \cos x} = \frac{1}{2}$.
+$\lim_{x \to 0} \frac{\sin$ x - $\tan$ x + $x^3}{x^3} =$ 1 + $\lim_{x \to 0} \frac{\sin$ x $\left(1$ - $\frac{1}{\cos x}\right)}{x^3} =$ 1 + $\lim_{x \to 0} \frac{-\sin$ x (1 - $\cos x)}{x^3 \cos x} = \frac{1}{2}$.
 
 Ví du 6.1 (Giữa kì, K61). So sánh cặp vô cùng bé sau đây khi x $\rightarrow$ 0
 
@@ -1354,19 +1294,19 @@ f) $\alpha(x) = e^{x^2}$ - 1, $\beta(x) = x^2$ + $x^3$.
 
 
 
-6.2 Vô cùng lớn (VCL)
+### 6.2 Vô cùng lớn (VCL)
 
-Định nghĩa 1.14. Hàm số f(x) được gọi là một vô cùng lớn (viết tắt là VCL) khi x $\rightarrow$ a
+#### Định nghĩa 1.14. Hàm số f(x) được gọi là một vô cùng lớn (viết tắt là VCL) khi x \rightarrow a
 
-$n\hat{e}u$
+nều
 
-$\n\lim_{x \to a}$ |f(x)| $= \infty.\n$
+$\lim_{x \to a}$ |f(x)| $= \infty$.
 
 Nghich đảo của một VCB là một VCL, và ngược lại.
 
 So sánh các VCL
 
-### Định nghĩa 1.15 (VCL cùng bậc, tương đương). Giả sử <math>\alpha(x)</math> và <math>\beta(x)</math> là các VCL khi
+#### Định nghĩa 1.15 (VCL cùng bậc, tương đương). Giả sử \alpha(x) và \beta(x) là các VCL khi
 
 x $\rightarrow$ a.
 
@@ -1376,29 +1316,29 @@ ii) Đặc biệt, nếu $\lim_{x\to a} \frac{\alpha(x)}{\beta(x)} =$ 1 thì ta 
 
 $\alpha(x) \sim \beta(x)$.
 
-Định nghĩa 1.16 (VCL bậc cao). Nếu $\lim_{x\to a} \frac{\alpha(x)}{\beta(x)} = \infty$, ta nói rằng $\alpha(x)$ là VCL bậc cao hơn
+#### Định nghĩa 1.16 (VCL bậc cao). N\acute{e}u \lim_{x\to a} \frac{\alpha(x)}{\beta(x)} = \infty, ta nói rằng \alpha(x) là VCL bậc cao hơn
 
 $\beta(x)$.
 
 Ứng dụng VCL khử dạng $\left(\frac{\infty}{\infty}\right)$
 
-Định lý 1.14 (Quy tắc thay tương đương). Nếu $\alpha_1(x) \sim \alpha_2(x)$, $\beta_1(x) \sim \beta_2(x)$ là các
+#### Định lý 1.14 (Quy tắc thay tương đương). N\! \hat{e}u \; \alpha_1(x) \sim \alpha_2(x), \beta_1(x) \sim \beta_2(x) \; là các
 
-VCL khi x $\rightarrow$ a thì
+VCL khi x $\rightarrow$ a thi
 
-$\n\lim_{x \to a} \frac{\alpha_1(x)}{\beta_1(x)} = \lim_{x \to a} \frac{\alpha_2(x)}{\beta_2(x)}$, $\quad \lim_{x \to a} \alpha_1(x) \gamma(x) = \lim_{x \to a} \alpha_2(x) \gamma(x).\n$
+$\lim_{x \to a} \frac{\alpha_1(x)}{\beta_1(x)} = \lim_{x \to a} \frac{\alpha_2(x)}{\beta_2(x)}$, $\quad \lim_{x \to a} \alpha_1(x)\gamma(x) = \lim_{x \to a} \alpha_2(x)\gamma(x)$.
 
 Đinh lý 1.15 (Quy tắc ngắt bỏ VCL bậc thấp). Nếu $\alpha_1(x)$ là VCL bậc cao hơn $\alpha_2(x)$ và
 
 $\beta_1(x)$ là VCL bậc cao hơn $\beta_2(x)$ khi x $\rightarrow$ a thì
 
-$\alpha_1(x)$ + $\alpha_2(x) \sim \alpha_1(x)$ và $\lim_{x \to a} \frac{\alpha_1(x)$ + $\alpha_2(x)}{\beta_1(x)$ + $\beta_2(x)} = \lim_{x \to a} \frac{\alpha_1(x)}{\beta_1(x)}$.
+$\alpha_1(x)$ + $\alpha_2(x) \sim \alpha_1(x) \text{$ via $} \lim_{x \to a} \frac{\alpha_1(x)$ + $\alpha_2(x)}{\beta_1(x)$ + $\beta_2(x)} = \lim_{x \to a} \frac{\alpha_1(x)}{\beta_1(x)}$.
 
 Chú ý 1.7. Còn tồn đọng một số dạng vô định mà phương pháp sử dụng các VCB-VCL
 
-chua xử lý được, ví du
+chưa xử lý được, ví dụ
 
-$\n\lim_{x\to 0}\frac{x-\sin x}{x^3},\quad \lim_{x\to 0^+}x^{\sin x},\ldots\n$
+$\lim_{x \to 0} \frac{x$ - $\sin x}{x^3}$, $\quad \lim_{x \to 0^+} x^{\sin x}$, $\dots$
 
 Các giới hạn này sẽ được xử lý khi chúng ta học đến công thức L'Hospital và khai triển
 
@@ -1410,13 +1350,13 @@ Ví dụ 6.2 (Giữa kì, K61). Tính giới hạn
 
 a) $\lim_{x\to 0^+} \frac{e^{x^2}-1}{x^2+x^3}$.
 
-c) $\lim_{x\to 0} \frac{1-\cos x}{\ln(1+x^2)}$.
+c) $\lim_{x \to 0} \frac{1$ - $\cos x}{\ln(1$ + $x^2)}$.
 
 b) $\lim_{x\to 0^+} \frac{e^{\sqrt{x}}-1}{\sqrt{x+x^2}}$.
 
 d) $\lim_{x\to 0} \frac{e^{2x}-1}{\ln(1-3x)}$.
 
-## 6.3 Bài tập <i>d</i>) <math display="block">\lim_{x\to 0} \frac{e^{2x}-1}{\ln(1-3x)}</math>.
+### 6.3 Bài tập
 
 Như vậy ngoài các phương pháp phân tích đa thức thành nhân tử và nhân liên
 
@@ -1428,27 +1368,27 @@ trong những công cụ rất tốt của Giải tích để tính giới hạn
 
 Bài tập 1.30. Tìm giới hạn
 
-b. $\lim_{x \to 0} \frac{\sqrt[n]{1$ + $\alpha x} \cdot \sqrt[n]{1$ + $\beta$ x - $1}}{x} \left( \frac{0}{0} \right)$
+b. $\lim_{x\to 0} \frac{\sqrt[n]{1+\alpha x} \cdot \sqrt[n]{1+\beta x-1}}{x} \ \left(\frac{0}{0}\right)$
 
-a. $\lim_{x\to 0} \frac{\sqrt[m]{1+\alpha x}$ - $\sqrt[n]{1+\beta x}}{x} \left(\frac{0}{0}\right)$
+a. $\lim_{x\to 0}\frac{\sqrt[m]{1+\alpha}x-\sqrt[n]{1+\beta}x}{x} \left(\frac{0}{0}\right)$
 
 Chứng minh.
 
-a.
+а.
 
-$\frac{\sqrt[m]{1+\alpha x}$ - $\sqrt[n]{1+\beta x}}{\sqrt[m]{1+\alpha x}$ - $1} = \frac{\sqrt[m]{1+\alpha x}$ - $1}{\sqrt[n]{1+\beta x}$ - $1}$
+$\sqrt[m]{1+\alpha x}-\sqrt[n]{1+\beta x}=\sqrt[m]{1+\alpha x}-1-\sqrt[n]{1+\beta x}-1$
 
-Vì $\sqrt[m]{1+\alpha x}-1 \sim \frac{\alpha}{m}x$, $\sqrt[n]{1+\beta x}-1 \sim \frac{\beta}{n}x$, nên
+$\text{Vi }\sqrt[m]{1+\alpha x}-1\sim\frac{\alpha}{m}x,\sqrt[n]{1+\beta x}-1\sim\frac{\beta}{n}x,\text{ nên}$
 
-$\n\lim_{x\to 0}\frac{\sqrt[m]{1+\alpha x}-\sqrt[n]{1+\beta x}}{x}=\frac{\alpha}{m}-\frac{\beta}{n}\n$
+$\lim_{x\to 0}\frac{\sqrt[m]{1+\alpha x}-\sqrt[n]{1+\beta x}}{x}=\frac{\alpha}{m}-\frac{\beta}{n}$
 
-$\mathbf{b}$.
+b.
 
-$\n\lim_{x\to 0}\frac{\sqrt[m]{1+\alpha x}.\sqrt[n]{1+\beta x-1}}{x}=\lim_{x\to 0}\left(\sqrt[m]{1+\alpha x}.\frac{\sqrt[n]{1+\beta x}-1}{x}+\frac{\sqrt[m]{1+\alpha x}-1}{x}\right)=\frac{\alpha}{m}+\frac{\beta}{n}.\n$
+$\lim_{x\to 0}\frac{\sqrt[m]{1+\alpha x}.\sqrt[n]{1+\beta x-1}}{x}=\lim_{x\to 0}\left(\sqrt[m]{1+\alpha x}.\frac{\sqrt[n]{1+\beta x}-1}{x}+\frac{\sqrt[m]{1+\alpha x}-1}{x}\right)=\frac{\alpha}{m}+\frac{\beta}{n}$.
 
 Chú ý 1.8.
 
-i) Lưu ý kĩ thuật thêm bớt 1 ở trong các biểu thức có chứa cos $\alpha(x)$, $e^{\alpha(x)}$ và $\ln(\alpha(x))$, $\sqrt[m]{1$ + $\alpha(x)}$.
+i) Lưu ý kĩ thuật thêm bớt 1 ở trong các biểu thức có chứa $\cos \alpha(x)$, $e^{\alpha(x)}$ và $\ln(\alpha(x))$, $\sqrt[m]{1$ + $\alpha(x)}$.
 
 ii) Với nhiều bài toán nhìn qua tưởng rất phức tạp vì công thức rất cồng kềnh, thực chất
 
@@ -1458,9 +1398,9 @@ giản. Ví dụ, tính
 
 $\lim_{x \to 0} \frac{\sin$ 2x + $\arcsin^2$ x - $\arctan^2 x}{3x}$.
 
-Với tử số ta có sin 2x ~ 2x, $arcsin<sup>2</sup>$ x ~ $x<sup>2</sup>$, $arctan<sup>2</sup>$ x ~ $x<sup>2</sup>$. Như vậy giới hạn đã cho
+Với tử số ta có sin 2x $\sim$ 2x, $arcsin<sup>2</sup>$ x $\sim x<sup>2</sup>$, $arctan<sup>2</sup>$ x $\sim x<sup>2</sup>$. Như vậy giới hạn đã cho
 
-bằng $\frac{2}{3}$. Hoặc ví dụ như tính
+$\mathring{bang} \frac{2}{3}$. Hoặc ví dụ như tính
 
 $\lim_{x \to 0} \frac{1$ - $\cos$ x + $2\sin$ x - $\sin^3$ x - $x^2$ + $3x^4}{\tan^3$ x - $6\sin^2$ x + x - $5x^3}$.
 
@@ -1496,15 +1436,15 @@ Bài tập 1.32. Tìm giới han
 
 c) $\lim_{x \to \infty} [\sin(\ln(x+1))$ - $\sin(\ln$ x)]
 
-a) $\lim_{x \to \infty} \left( \frac{x^2$ - $1}{x^2$ + $1} \right)^{\frac{x$ - $1}{x$ + $1}}$
+a) $\lim_{x \to \infty} \left(\frac{x^2$ - $1}{x^2$ + $1}\right)^{\frac{x$ - $1}{x$ + $1}}$
 
 b) $\lim_{x \to 0^+} (\cos \sqrt{x})^{\frac{1}{x}} (1^{\infty})$
 
 d) $\lim_{n\to\infty} n^2(\sqrt[n]{x}$ - $\sqrt[n+1]{x})$, x $>$ 0.
 
-Chứng minh. a) Đây không phải là dạng vô định, $\lim_{x\to\infty} \left(\frac{x^2-1}{x^2+1}\right)^{\frac{x-1}{x+1}} =$ 1.
+$Ch\'{u}ng\$ minh. a) Đây không phải là dạng vô định, $\lim_{x\to\infty}\left(\frac{x^2-1}{x^2+1}\right)^{\frac{x-1}{x+1}}=1$.
 
-b) Áp dụng công thức $\left| \lim_{x \to x_0} A(x)^{B(x)} \right| = e^{\lim_{x \to x_0}$ B(x) $\ln A(x)}$. Vì
+b) Áp dụng công thức $\left| \lim_{x \to x_0} A(x)^{B(x)} = e^{\lim_{x \to x_0}$ B(x) $\ln A(x)} \right|$ Vì
 
 $\lim_{x \to 0^+} \ln \left( \cos \sqrt{x} \right)^{\frac{1}{x}} = \lim_{x \to 0^+} \frac{\ln \cos \sqrt{x}}{x} = \lim_{x \to 0^+} \frac{-\sin \sqrt{x}}{2\sqrt{x}} = -\frac{1}{2}$
 
@@ -1518,21 +1458,19 @@ c) Đáp số: 0.
 
 d)
 
-$\lim_{n\to\infty} n^2(\sqrt[n]{x}$ - $\sqrt[n+1]{x})$, x $>$ 0
+$\lim_{n\to\infty}n^2(\sqrt[n]{x}-\sqrt[n+1]{x})$, $x>0$
 
 $= \lim_{n \to \infty} n^2 (x^{\frac{1}{n}}$ - $x^{\frac{1}{n+1}})$
 
-$= \lim_{n \to \infty} n^2 x^{\frac{1}{n+1}} \left( x^{\frac{1}{n(n+1)}}$ - 1 $\right)$
+$= \lim_{n \to \infty} n^2 x^{\frac{1}{n+1}} (x^{\frac{1}{n(n+1)}}$ - 1)
 
-$= \lim_{n \to \infty} n^2 x^{\frac{1}{n+1}} \cdot \frac{x^{\frac{1}{n(n+1)}}$ - $1}{\frac{1}{n(n+1)}} \cdot \frac{1}{n(n+1)}$
+$= \lim_{n \to \infty} n^{2} x^{\frac{1}{n+1}} \cdot \frac{x^{\frac{1}{n(n+1)}}$ - $1}{\frac{1}{n(n+1)}} \cdot \frac{1}{n(n+1)}$
 
-$\qquad \qquad \blacksquare$
+$= \lim_{n \to \infty} \frac{n}{n+1} \cdot x^{\frac{1}{n+1}} \cdot \frac{x^{\frac{1}{n(n+1)}}$ - $1}{1}$
 
-$= \lim_{n \to \infty} \frac{n}{n+1} x^{\frac{1}{n+1}} \frac{x^{\frac{1}{n(n+1)}}$ - $1}{1}$
+$\overline{n(n+1)}$
 
-$\frac{\overline{n(n+1)}}{n(n+1)}$
-
-$=$ ln x
+$=\ln$ x
 
 So sánh các VCB-VCL.
 
@@ -1550,17 +1488,17 @@ xét trong quá trình x $\rightarrow \infty$ thì nó là VCL nên theo quy t�
 
 $\alpha(x) \sim \sqrt{x}$.
 
-Bài tập 1.33. Khi $x\rightarrow$ 0 cặp VCB sau có tương đương không ?
+Bài tâp 1.33. Khi x $\rightarrow$ 0 cặp VCB sau có tương đương không ?
 
 $\alpha(x) = \sqrt{x$ + $\sqrt{x}} \text{$ và $} \beta(x) = e^{\sin x}$ - $\cos$ x
 
-[Đáp số] $\beta(x) = o(\alpha(x))$
+$[\text{Đáp}\text{ số}] \beta(x) = o(\alpha(x))$
 
 Bài tập 1.34. Tìm giới hạn
 
 a) $\lim_{x\to 0^+} (1-2x)^{\frac{1}{x}} (1^{\infty})$,
 
-c) $\lim_{x\to 0} \left(\frac{1+\tan x}{1+\sin x}\right)^{\frac{1}{\sin x}} (1^{\infty})$,
+c) $\lim_{x \to 0} \left( \frac{1$ + $\tan x}{1$ + $\sin x} \right)^{\frac{1}{\sin x}} \ (1^{\infty})$,
 
 d) $\lim_{x\to 0} \left(\frac{\sin x}{x}\right)^{\frac{\sin x}{x-\sin x}} (1^{\infty})$,
 
@@ -1570,7 +1508,7 @@ b) $\lim_{x \to \frac{\pi}{2}} (\sin x)^{\tan x} (1^{\infty})$,
 
 [Gợi ý] Áp dụng $\left| \lim_{x \to x_0} A(x)^{B(x)} \right| = e^{\lim_{x \to x_0}$ B(x) $\ln A(x)}$
 
-$[\text{Đáp}\ \text{s}\text{\^{o}}]$
+[Đáp số]
 
 a) $e^{-2}$
 
@@ -1582,11 +1520,11 @@ c) 1
 
 Bài tập 1.35. Tìm giới hạn
 
-a) $\lim_{x\to 0} \frac{e^{\alpha x}$ - $e^{\beta x}}{x} \left(\frac{0}{0}\right)$, b) $\lim_{x\to 0} \frac{e^{\alpha x}$ - $e^{\beta x}}{\sin \alpha$ x - $\sin \beta x} \left(\frac{0}{0}\right)$, c) $\lim_{x\to a} \frac{a^x$ - $x^a}{x$ - $a} \left(\frac{0}{0}\right)$.
+$\text{a) } \lim_{x \to 0} \frac{e^{\alpha x}$ - $e^{\beta x}}{x} \ \left(\frac{0}{0}\right)$, $\qquad \qquad \text{b) } \lim_{x \to 0} \frac{e^{\alpha x}$ - $e^{\beta x}}{\sin \alpha$ x - $\sin \beta x} \ \left(\frac{0}{0}\right)$, $\qquad \text{c) } \lim_{x \to a} \frac{a^x$ - $x^a}{x$ - $a} \ \left(\frac{0}{0}\right)$.
 
-[Gợi $\acute{y}]$ Sử dụng phương pháp thay tương đương.
+[Goi $\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$
 
-$[\text{Đáp}\ \text{s}\hat{\text{o}}]$
+[Đáp số]
 
 a) $\alpha$ - $\beta$
 
@@ -1596,21 +1534,21 @@ c) $a^a(\ln$ a - 1)
 
 
 
-$\S7$. HÀM SỐ LIÊN TỤC
+## §7. HÀM SỐ LIÊN TỤC
 
-## 7.1 Đinh nghĩa <math>\S</math><b>7. HÀM SỐ LIÊN TỤC</b>
+### 7.1 Đinh nghĩa
 
-Định nghĩa 1.17. Cho hàm số f(x) xác định trong một lân cận nào đó của $x_0$. Nó được
+#### Định nghĩa 1.17. Cho hàm số f(x) xác định trong một lân cận nào đó của x_0. Nó được
 
 gọi là
 
 i) liên tục phải tại $x_0$ nếu $\lim_{x \to x_0^+} f(x_0)$,
 
-ii) liên tục trái tại $x_0$ nếu $\lim_{x\to x_0^-} f(x_0)$,
+ii) liên tục trái tại $x_0$ nếu $\lim_{x \to x_0^-} f(x_0)$,
 
-iii) liên tục tại $x_0$ nếu $\lim_{x\to x_0} = f(x_0)$. Nói cách khác,
+iii) liên tục tại $x_0$ nếu $\lim_{x \to x_0} = f(x_0)$. Nói cách khác,
 
-$\forall \varepsilon >$ 0, $\exists \delta(\varepsilon$, $x_0) >$ 0 : $\forall$ x, |x - $x_0| < \delta$ ta có|f(x) - $f(x_0)| < \varepsilon$.
+$\forall \varepsilon >$ 0, $\exists \delta(\varepsilon$, $x_0) >$ 0 : $\forall$ x, |x - $x_0| < \delta \text{$ ta $} c\delta$ |f(x) - $f(x_0)| < \varepsilon$.
 
 Từ định nghĩa suy ra hàm số f(x) liên tục tại $x_0$ khi và chỉ khi nó liên tục phải và liên tục
 
@@ -1618,21 +1556,21 @@ trái tại $x_0$.
 
 Ví dụ 7.1. Tất cả các hàm số sơ cấp đều liên tục trên tập xác định của chúng.
 
-Ví du 7.2 (Giữa kì, K61). Tìm m để hàm số sau liên tục tại x $=$ 1:
+Ví dụ 7.2 (Giữa kì, K61). Tìm m để hàm số sau liên tục tại x $=$ 1:
 
-$ a) f(x) = \begin{cases} (x - m)(x^2 + x + 1), & \text{n\'{e}}u \ x \neq 1, \\ 1 + m, & \text{n\'{e}}u \ x = 1. \end{cases} $
+$ a) f(x) = \begin{cases} (x - m)(x^2 + x + 1), & n \neq 1, \\ 1 + m, & n \neq 1. \end{cases} $
 
-$ b) f(x) = \begin{cases} (x+m)(x^2+x+1), & n \neq 1, \\ 1-m, & n \neq 1. \end{cases} $
+$ b) f(x) = \begin{cases} (x+m)(x^2+x+1), & n\hat{e}u \ x \neq 1, \\ 1-m, & n\hat{e}u \ x = 1. \end{cases} $
 
-Định nghĩa 1.18. Hàm số f(x) được gọi là liên tục trên khoảng (a, b) nếu nó liên tục tại
+#### Định nghĩa 1.18. Hàm số f(x) được gọi là liên tục trên khoảng (a, b) nếu nó liên tục tại
 
 mọi điểm $x_0 \in$ (a, b). Nó được gọi là liên tục trên đoạn [a, b] nếu nó liên tục tại mọi điểm
 
 $x_0 \in$ (a,b), đồng thời liên tục phải tại a và liên tục trái tại b.
 
-## 7.2 Các phép toán số học đối với hàm số liên tục <math>x_0 \in (a,b)</math>, đồng thời liên tục phải tại a và liên tục trái tại b.
+### 7.2 Các phép toán số học đối với hàm số liên tục
 
-Định lý 1.16. Giả thiết các hàm số f(x) và g(x) liên tục tại $x_0$ nào đó. Khi đó các hàm số
+#### Định lý 1.16. Giả thiết các hàm số f(x) và g(x) liên tục tại x_0 nào đó. Khi đó các hàm số
 
 f(x) $\pm$ g(x), f(x)g(x) cũng liên tục tại $x_0$. Hàm số $\frac{f(x)}{g(x)}$ cũng liên tục tại $x_0$ nếu $g(x_0) \neq$ 0.
 
@@ -1640,27 +1578,27 @@ f(x) $\pm$ g(x), f(x)g(x) cũng liên tục tại $x_0$. Hàm số $\frac{f(x)}{
 
 
 
-## 7.3 Sự liên tục của hàm ngược None
+### 7.3 Sự liên tục của hàm ngược
 
-Định lý 1.17. (Sự liên tục của hàm ngược)
+#### Định lý 1.17. (Sự liên tục của hàm ngược)
 
-Nếu X là một khoảng, y $=$ f(x) đồng biến (nghịch biến) liên tục trên X. Khi đó có hàm
+$N\hat{e}u \times l\hat{a}$ một khoảng, y $=$ f(x) đồng biến (nghịch biến) liên tục trên X. Khi đó có hàm
 
 ngược y $=$ g(x) cũng đồng biến (nghịch biến) và liên tục trên f(X).
 
-Ví du: Các hàm số lượng giác ngược là liên tục trên tập xác định của chúng.
+Ví dụ: Các hàm số lượng giác ngược là liên tục trên tập xác định của chúng.
 
-## 7.4 Sự liên tục của hàm hợp <b>Ví du</b>: Các hàm số lượng giác ngược là liên tục trên tập xác định của chúng.
+### 7.4 Sự liên tục của hàm hợp
 
-Định lý 1.18. Nếu hàm số f(x) liên tục tại b và $\lim_{x\to a}$ g(x) $=$ b thì $\lim_{x\to a}$ f(g(x)) $=$ b. Nói cách
+#### Định lý 1.18. Nếu hàm số f(x) liên tục tại b và \lim_{x\to a} g(x) = b thì \lim_{x\to a} f(g(x)) = b. Nói cách
 
 khác,
 
-$\n\lim_{x \to a}$ f(g(x)) $= f(\lim_{x \to a} g(x))\n$
+$\lim_{x \to a}$ f(g(x)) $= f(\lim_{x \to a}$ g(x))
 
 Hệ quả 1.2. Nếu g(x) liên tục tại a và f(x) liên tục tại g(a) thì hàm số f $\circ$ g liên tục tại a.
 
-## 7.5 Các định lý về hàm liên tục <b>Hệ quả 1.2.</b> <i>Nếu</i> <math>g(x)</math> <i>liên tục tại a và</i> <math>f(x)</math> <i>liên tục tại</i> <math>g(a)</math> <i>thì hàm số</i> <math>f \circ g</math> <i>liên tục tại a.</i>
+### 7.5 Các định lý về hàm liên tục
 
 Đinh lý 1.19. Nếu f(x) liên tục trên khoảng (a,b) mà giá trị $f(x_0)$, $x_0 \in$ (a,b) dương (hay
 
@@ -1668,29 +1606,29 @@ Hệ quả 1.2. Nếu g(x) liên tục tại a và f(x) liên tục tại g(a) t
 
 hình học.
 
-Đinh lý 1.20. Nếu f(x) liên tục trên đoạn [a,b] thì nó bị chặn trên đoạn đó. Hình ảnh
+$\mathbf{Binh}\ \mathbf{Iý}\ \mathbf{1.20.}\ \mathbf{N\acute{e}u}\ f(x)\ \mathbf{I\acute{e}n}\ \mathbf{tuc}\ \mathbf{tr\acute{e}n}\ \mathbf{doan}\ [a,b]\ \mathbf{th}\ \mathbf{n\acute{o}}\ \mathbf{b}\mathbf{j}\ \mathbf{ch\acute{a}n}\ \mathbf{tr\acute{e}n}\ \mathbf{doan}\ \mathbf{d\acute{o}}.\ \mathbf{H\`{n}h}\ \mathbf{d}nh$
 
-hình hoc.
+hình học.
 
-Định lý 1.21. Nếu f(x) liên tục trên đoạn [a, b] thì nó đạt được GTLN, NN trên đoạn này.
+#### Định lý 1.21. Nếu f(x) liên tục trên đoạn [a, b] thì nó đạt được GTLN, NN trên đoạn này.
 
 Hình ảnh hình học.
 
 * Liên tục đều, hình ảnh hình học của liên tục đều.
 
-Định lý 1.22. (Định lý Cantor)
+#### Định lý 1.22. (Định lý Cantor)
 
-Nếu f(x) liên tục trên [a, b] thì nó liên tục đều trên đó (thay [a, b] bằng khoảng (a, b) thì
+$N\hat{e}u\$ f(x) liên tục trên [a,b] thì nó liên tục đều trên đó (thay [a,b] bằng khoảng (a,b) thì
 
 định lý không còn đúng). Mô tả hình học.
 
-Định lý 1.23. (Định lý Cauchy)
+#### Định lý 1.23. (Định lý Cauchy)
 
-Nếu f(x) liên tục trên đoạn [a,b] và có f(a). f(b) $<$ 0 thì $\exists \alpha \in$ (a,b) để $f(\alpha) =$ 0.
+$N\acute{e}u$ f(x) liên tục trên đoạn [a,b] và có f(a).f(b) $<$ 0 thì $\exists \alpha \in$ (a,b) để $f(\alpha) =$ 0.
 
 Ví dụ 7.3 (Giữa kì, 20173). Cho hàm số f : [1,3] $\rightarrow$ [1,3] liên tục. Chứng minh rằng tồn
 
-tai $x_0 \in$ [1,3] sao cho $f(x_0) = x_0$.
+$tai\ x_0 \in$ [1,3] sao cho $f(x_0) = x_0$.
 
 
 
@@ -1702,15 +1640,15 @@ Hệ quả 1.3. Nếu f(x) liên tục trên đoạn [a,b], A $=$ f(a) $\neq$ B 
 
 tri trung gian giữa A và B.
 
-Hệ quả 1.4. Cho f(x) liên tục trên [a, b], m, M lần lượt là các GTNN, LN của hàm số trên
+$\mathbf{H}\hat{\mathbf{e}}$ quả 1.4. Cho f(x) liên tục trên [a, b], m, M lần lượt là các GTNN, LN của hàm số trên
 
-đoạn này thì [m; M] là tập giá trị của hàm số.
+$\text{d}o\text{an} \text{ n\grave{a}y \text{ }th\grave{a}} \text{ }$ [m;M] $\text{ } \text{ } \text{ } \text{ } \text{ } \text{ } \text{ } \text{ } \text{ } \text{ }$
 
-## 7.6 Điểm gián đoạn và phân loại điểm gián đoạn của đoạn này thì <math>[m; M]</math> là tập giá trị của hàm số.
+### 7.6 Điểm gián đoạn và phân loại điểm gián đoạn của
 
 hàm số
 
-Định nghĩa 1.19. Nếu hàm số không liên tục tại điểm $x_0$ thì ta nói nó gián đoạn tại $x_0$.
+#### Định nghĩa 1.19. Nếu hàm số không liên tục tại điểm x_0 thì ta nói nó gián đoạn tại x_0.
 
 Hình ảnh hình học: đồ thị không liền nét tại điểm gián đoạn.
 
@@ -1718,21 +1656,21 @@ Theo định nghĩa, hàm số f(x) liên tục tại $x_0$ nếu ba điều ki�
 
 • f(x) xác định tại $x_0$,
 
-• tồn tại $\lim_{x\to x_0}$ f(x),
+• tồn tại $\lim_{x \to x_0}$ f(x),
 
-$\bullet \lim_{x \to x_0}$ f(x) $= f(x_0)$.
+$\bullet \ \lim_{x \to x_0}$ f(x) $= f(x_0)$.
 
 Như vậy nếu $x_0$ là điểm gián đoạn của f(x) thì
 
-• hoặc $x_0 \notin$ TXĐ,
+• hoặc $x_0 \notin \text{TXD}$,
 
-• hoặc $x_0 \in \text{TXD}$ và $\exists \lim_{x \to x_0}$ f(x),
+• hoặc $x_0 \in \text{TXD$ và $} \not\exists \lim_{x \to x_0}$ f(x),
 
 • hoặc $x_0 \in \text{TXD}$ và $\exists \lim_{x \to x_0}$ f(x) nhưng $\lim_{x \to x_0}$ f(x) $\neq f(x_0)$, ở đây x $\to x_0$ theo nghĩa cả
 
 hai phía hay một phía.
 
-Nếu $x_0 \notin$ TXĐ của f(x) thì có thể có rất nhiều điểm gián đoạn, nên ta chỉ quan tâm
+Nếu $x_0 \notin \text{TXD}$ của f(x) thì có thể có rất nhiều điểm gián đoạn, nên ta chỉ quan tâm
 
 đến những điểm gián đoạn thuộc tập xác định hay là những điểm đầu mút của khoảng
 
@@ -1746,13 +1684,13 @@ Giả sử $x_0$ là điểm gián đoạn của f(x).
 
 1. Điểm gián đoạn loại 1:
 
-Nếu $\exists \lim_{x \to x_0^+}$ f(x) $= f(x_0^+)$ và $\lim_{x \to x_0^-}$ f(x) $= f(x_0^-)$ thì $x_0$ được gọi là điểm gián đoạn
+Nếu $\exists \lim_{x \to x_0^+}$ f(x) $= f\left(x_0^+\right)$ và $\lim_{x \to x_0^-}$ f(x) $= f\left(x_0^-\right)$ thì $x_0$ được gọi là điểm gián đoạn
 
 loại 1 của hàm số f(x). Khi đó, có thể xảy ra hai trường hợp:
 
 • Nếu $f(x_0^+) \neq f(x_0^-)$ thì giá trị $|f(x_0^+)$ - $f(x_0^-)|$ gọi là bước nhảy của hàm số.
 
-• Đặc biệt: nếu $f(x_0^+) = f(x_0^-)$ thì $x_0$ được gọi là điểm gián đoạn bỏ được của
+• Đặc biệt: nếu $f\left(x_{0}^{+}\right) = f\left(x_{0}^{-}\right)$ thì $x_{0}$ được gọi là điểm gián đoạn bỏ được của
 
 hàm số. Khi đó nếu hàm số chưa xác định tại $x_0$ thì ta có thể bổ sung thêm giá
 
@@ -1770,7 +1708,7 @@ Chú ý 1.10. Với quan điểm xem điểm gián đoạn bỏ được là tr�
 
 gián đoạn loại 1, nếu $x_0$ là điểm đầu mút của khoảng hay đoạn xác định của f(x), mà có
 
-lim f(x) hoặc lim f(x) hữu hạn thì ta cũng xem $x_0$ là điểm gián đoạn bỏ được của hàm
+$\lim_{x \to 0}$ f(x) hoặc $\lim_{x \to 0}$ f(x) hữu hạn thì ta cũng xem $x_0$ là điểm gián đoạn bỏ được của hàm
 
 x $\rightarrow x_0^+$
 
@@ -1780,17 +1718,17 @@ $S\acute{\hat{O}}$.
 
 Ví du 7.4 (Giữa kì, K61).
 
-a) Điểm x $= \frac{\pi}{2}$ là điểm gián đoạn loại gì của hàm số f(x) $= \frac{1}{1-2^{\tan x}}$.
+a) Điểm x $= \frac{\pi}{2}$ là điểm gián đoạn loại gì của hàm số f(x) $= \frac{1}{1$ - $2^{\tan x}}$.
 
 b) Điểm x $= -\frac{\pi}{2}$ là điểm gián đoạn loại gì của hàm số f(x) $= \frac{1}{1-2^{\tan x}}$.
 
-Ví du 7.5 (Cuối kì, K61-Viện ĐTQT). Điểm x $=$ 0 là điểm gián đoạn loại gì của hàm số
+Ví du 7.5 (Cuối kì, K61-Viện ĐTQT). $Đi\mathring{e}m\$ x $=$ 0 là điểm gián đoạn loại gì của hàm số
 
 a) y $= e^{\frac{\pi}{2}$ - $\arctan \frac{1}{x}}$.
 
 b) y $= e^{\frac{\pi}{2}$ - $\operatorname{arccot} \frac{1}{x}}$.
 
-## 7.7 Bài tập <b>b)</b> <math>y = e^{\frac{\pi}{2} - \operatorname{arccot} \frac{1}{x}}</math>.
+### 7.7 Bài tập
 
 Xét tính liên tục của hàm số. Muốn kiểm tra xem f(x) có liên tục tại $x_0$ hay không
 
@@ -1812,9 +1750,9 @@ Bài tập 1.36. Tìm a để hàm số liên tục tại x $=$ 0
 
 
 
-$ a) f(x) = \begin{cases} \frac{1-\cos x}{x}, & \text{n\'{e}u } x \neq 0 \\ a, & \text{n\'{e}u } x = 0. \end{cases} $
+$ a) f(x) = \begin{cases} \frac{1-\cos x}{x}, & \text{n\'{e}u } x \neq 0 \ a, & \text{n\'{e}u } x = 0. \end{cases} $
 
-$ b) g(x) = \begin{cases} ax^2 + bx + 1, & \text{n\'{e}u } x \ge 0 \\ a \cos x + b \sin x, & \text{n\'{e}u } x < 0. \end{cases} $
+$ b) g(x) = \begin{cases} ax^2 + bx + 1, & \text{n\'{e}u } x \ge 0\\ a\cos x + b\sin x, & \text{n\'{e}u } x < 0. \end{cases} $
 
 $[\text{Đáp}\text{ số}]$
 
@@ -1828,9 +1766,9 @@ a) y $= \frac{8}{1$ - $2^{\cot x}}$, b) y $= \frac{\sin \frac{1}{x}}{\frac{1}{1$
 
 c) y $= \frac{e^{ax}$ - $e^{bx}}{x}$ (a $\neq$ b).
 
-$[\text{Đáp}\text{ s}\hat{\text{o}}]$
+$[\text{Đáp}\text{ số}]$
 
-c) $B<sub>o</sub>$ duoc
+c) Bỏ được
 
 a) Loai I
 
@@ -1838,13 +1776,13 @@ b) Loai II
 
 Bài tập 1.38. Xét sự liên tục của các hàm số sau
 
-$ a) f(x) = \begin{cases} x \sin \frac{1}{x}, & \text{n\'{e}u } x \neq 0 \\ 0, & \text{n\'{e}u } x = 0 \end{cases} $
+$ a) f(x) = \begin{cases} x \sin \frac{1}{x}, & \text{n\'{e}}u \ x \neq 0 \\ 0, & \text{n\'{e}}u \ x = 0 \end{cases} $
 
-$ c) f(x) = \begin{cases} \sin \pi x, & \text{néu x vô ti} \\ 0, & \text{néu x hŭu ti} \end{cases} $
+$ c) f(x) = \begin{cases} \sin \pi x, & \text{n\{e}u x v\{o} t\{i} \\ 0, & \text{n\{e}u x h\{u} t\{i} \end{cases} $
 
 $ b) f(x) = \begin{cases} e^{-\frac{1}{x^2}}, & \text{n\'{e}u } x \neq 0 \\ 0, & \text{n\'{e}u } x = 0 \end{cases} $
 
-$[\text{Đáp}\text{ s}\hat{\text{o}}]$
+$[\text{Đáp}\text{ số}]$
 
 a) liên tuc
 
@@ -1858,13 +1796,13 @@ g(x) với mọi x là số hữu tỉ trong đoạn [a, b] thì f(x) $=$ g(x) $
 
 Bài tập 1.40. Chứng minh rằng phương trình $x^5$ - 3x - 1 có ít nhất một nghiệm trong
 
-khoảng (1,2).
+$\text{khoång}(1,2)$.
 
 Bài tập 1.41. Cho f(x) $= ax^2$ + bx + c, biết 2a + 3b + 6c $=$ 0. Chứng minh rằng f(x) có ít
 
-nhất một nghiệm trong khoảng (0, 1).
+$nh\text{ất$ một nghiệm trong khoảng $}$ (0,1).
 
-Bài tập 1.42. Chứng minh rằng nếu f : [0,1] $\rightarrow$ [0,1] liên tục thì tồn tại $x_0 \in$ [0,1] sao cho
+Bài tập 1.42. Chứng minh rằng nếu f:[0,1] $\rightarrow$ [0,1] liên tục thì tồn tại $x_0 \in$ [0,1] sao cho
 
 $f(x_0) = x_0$.
 
@@ -1874,9 +1812,9 @@ nghiêm thực.
 
 
 
-$\S8$. ĐAO HÀM VÀ VI PHÂN
+## §8. ĐẠO HÀM VÀ VI PHÂN
 
-## 8.1 Đinh nghĩa <math>\S</math><b>8.</b> <b>Đ</b>AO HÀM VÀ VI PHÂN
+### 8.1 Đinh nghĩa
 
 Đinh nghĩa 1.20. Giới hạn, nếu có, của tỉ số
 
@@ -1906,49 +1844,49 @@ hạn như hàm số f(x) $=$ |x| liên tục tại 0 nhưng không có đạo h
 
 Ví dụ 8.1 (Giữa kì, K61). Tính f'(0), biết
 
-$ a) f(x) = \begin{cases} \sin x, & n \hat{e}u \ x \ge 0, \\ x^2 + x, & n \hat{e}u \ x < 0. \end{cases} $
+$ a) f(x) = \begin{cases} \sin x, & n \hat{e} u \ x \ge 0, \\ x^2 + x, & n \hat{e} u \ x < 0. \end{cases} $
 
-$ b) f(x) = \begin{cases} \tan x, & n\hat{e}u \ge 0, \\ -x^2 + x, & n\hat{e}u \le 0. \end{cases} $
+$ b) f(x) = \begin{cases} \tan x, & n \hat{e}u \ x \ge 0, \\ -x^2 + x, & n \hat{e}u \ x < 0. \end{cases} $
 
 Ví dụ 8.2 (Giữa kì, K61). Hãy chỉ ra một hàm số f(x) xác định trên $\mathbb{R}$, liên tục tại các
 
-điểm $x_0 =$ 1, $x_1 =$ 2 nhưng không có đạo hàm tại các điểm này.
+$di\acute{e}m\ x_0 =$ 1, $x_1 = 2\ nhung\ kh\hat{o}ng\ c\acute{o}\ d\!ao\ h\grave{a}m\ t\!ai\ c\acute{a}c\ d\acute{i}\acute{e}m\ n\grave{a}y$.
 
 Ví dụ 8.3 (Giữa kì, K59). Cho hàm số f(x) khả vi tại 1 và biết rằng
 
-$\n\lim_{x \to 0} \frac{f(1$ + 7x) - f(1 + $2x)}{x} = 2.\n$
+$\lim_{x \to 0} \frac{f(1$ + 7x) - f(1 + $2x)}{x} =$ 2.
 
-Tính f'(1).
+T $\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$
 
 [Lời giải] Ta có
 
-$\n\lim_{x \to 0} \frac{f(1+7x)$ - $f(1+2x)}{x} = \lim_{x \to 0} \left[$ 7 $\cdot \frac{f(1+7x)$ - $f(1)}{7x}$ - 2 $\cdot \frac{f(1+2x)$ - $f(1)}{2x} \right]\n$
+$\lim_{x \to 0} \frac{f(1+7x)$ - $f(1+2x)}{x} = \lim_{x \to 0} \left[$ 7 $\cdot \frac{f(1+7x)$ - $f(1)}{7x}$ - 2 $\cdot \frac{f(1+2x)$ - $f(1)}{2x} \right]$
 
-$=$ 7f'(1) - 2f'(1) $\Rightarrow$ f'(1) $= \frac{2}{5}$.
+$=7f'(1)-2f'(1) \Rightarrow f'(1)=\frac{2}{5}$.
 
 
 
 $ Ví dụ 8.4 (Giữa kì, 20173). Cho hàm số f(x) = \begin{cases} e^{-\frac{1}{x}}, & \text{nếu } x > 0, \\ 0, & \text{nếu } x = 0. \end{cases} $
 
-Tính $f'_{+}(0)$.
+T $\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$
 
 [Lời giải] Ta có
 
 $f'_{+}(0) = \lim_{x \to 0^{+}} \frac{f(x)$ - $f(0)}{x$ - $0} = \lim_{x \to 0^{+}} \frac{e^{-\frac{1}{x}}}{x}$.
 
-$\text{Đặt }$ t $= \frac{1}{x} \Rightarrow f'_{+}(0) = \lim_{t \to +\infty} \frac{t}{e^t} = \lim_{t \to +\infty} \frac{1}{e^t} =$ 0 $\quad \text{(L'Hospital)}$
+$\text{Đặt }$ t $= \frac{1}{x} \Rightarrow f'_{+}(0) = \lim_{t \to +\infty} \frac{t}{e^{t}} = \lim_{t \to +\infty} \frac{1}{e^{t}} =$ 0 $\quad \text{(L'Hospital)}$
 
-## 8.2 Các phép toán trên đao hàm <math display="block">\text{Đặt } t = \frac{1}{x} \Rightarrow f'_{+}(0) = \lim_{t \to +\infty} \frac{t}{e^t} = \lim_{t \to +\infty} \frac{1}{e^t} = 0 \quad \text{(L'Hospital)}</math>
+### 8.2 Các phép toán trên đao hàm
 
-Định lý 1.24. Cho u(x) và v(x) là các hàm số có đạo hàm tại $x_0$. Khi đó,
+#### Định lý 1.24. Cho u(x) và v(x) là các hàm số có đạo hàm tại x_0. Khi đó,
 
 i) (u $\pm v)'(x_0) = u'(x_0) \pm v'(x_0)$,
 
 ii) $(uv)'(x_0) = u'(x_0)v(x_0)$ + $u(x_0)v'(x_0)$,
 
-iii) $\left(\frac{u}{v}\right)(x_0) = \frac{u'(x_0)v(x_0)-u(x_0)v'(x_0)}{v^2(x_0)} n\hat{e}u v(x_0) \neq$ 0.
+iii) $\left(\frac{u}{v}\right)(x_0) = \frac{u'(x_0)v(x_0)-u(x_0)v'(x_0)}{v^2(x_0)} \; n\acute{e}u \; v(x_0) \neq$ 0.
 
-Ví du 8.5 (Giữa kì, K61-Viện ĐTQT). Tính đạo hàm của hàm số
+Ví dụ 8.5 (Giữa kì, K61-Viện ĐTQT). Tính đạo hàm của hàm số
 
 a) f(x) $= x^{\sin x}$, 0 $<$ x $< \frac{\pi}{2}$.
 
@@ -1962,27 +1900,27 @@ f) f(x) $= (\sin x)^{\cos x}$, 0 $<$ x $< \frac{\pi}{2}$.
 
 c) f(x) $= x^{\cos x}$, 0 $<$ x $< \frac{\pi}{2}$.
 
-## 8.3 Đao hàm của hàm hợp c) <math>f(x) = x^{\cos x}, 0 < x < \frac{\pi}{2}</math>.
+### 8.3 Đao hàm của hàm hợp
 
-Định lý 1.25. Nếu u có đạo hàm tại x và f có đạo hàm tại u(x) thì hàm số hợp F $=$ f $\circ$ u
+#### Định lý 1.25. Nếu u có đạo hàm tại x và f có đạo hàm tại u(x) thì hàm số hợp F = f \circ u
 
 có đạo hàm tại x và
 
 F'(x) $=$ f'(u(x)).u'(x).
 
-$\acute{Y}$ tưởng chứng minh: ta có
+$\acute{\text{Y}}$ tưởng chứng minh: ta có
 
 $u(x_0$ + $\Delta$ x) $= u(x_0)$ + $u'(x_0) \Delta$ x + $o(\Delta$ x)
 
-$f[u(x_0$ + $\Delta$ x)] - $f[u(x_0)] = f\left[u_0$ + $\underbrace{u'(x_0)\Delta$ x + $o(\Delta x)}_{\delta_u}\right]$ - $f(x_0) = f'_u(u_0).\delta_y$ + $o(\delta_y)$
+$f\left[u\left(x_{0}+\Delta x\right)\right]-f\left[u\left(x_{0}\right)\right]=f\left[u_{o}+\underbrace{u^{'}(x_{0})\Delta x+o\left(\Delta x\right)}_{\delta_{u}}\right]-f\left(x_{0}\right)=f_{u}^{'}\left(u_{o}\right).\delta_{y}+o\left(\delta_{y}\right)$
 
-$\implies \lim_{\Delta$ x $\to 0} \frac{f[u(x_0$ + $\Delta$ x)] - $f[u(x_0)]}{\Delta x}$
+$\Longrightarrow \lim_{\Delta$ x $\to 0} \frac{f\left[u\left(x_{0}$ + $\Delta x\right)\right]$ - $f\left[u\left(x_{0}\right)\right]}{\Delta x}$
 
 
 
-## 8.4 Đao hàm của hàm ngược None
+### 8.4 Đao hàm của hàm ngược
 
-Định lý 1.26. $Gi\acute{a}$ thiết
+#### Định lý 1.26. Giả thiết
 
 i) x $= \varphi(y)$ có đạo hàm tại $y_0$ và $\varphi'(y_0) \neq$ 0,
 
@@ -1990,7 +1928,7 @@ ii) x $= \varphi(y)$ có hàm ngược y $=$ f(x) liên tục tại $x_0 = \varp
 
 Khi đó hàm ngược này có đạo hàm tại điểm $x_0$ và $f'(x_0) = \frac{1}{\varphi'(y_0)}$.
 
-Định lý 1.27. $Gi\acute{a}$ thiết
+#### Định lý 1.27. Giả thiết
 
 i) x $= \varphi(y)$ có đạo hàm tại $y_0$ và $\varphi'(y_0) \neq$ 0,
 
@@ -2002,7 +1940,7 @@ $f'(x_0) = \frac{1}{\varphi'(y_0)}$.
 
 Từ đó xây dựng công thức đạo hàm của các hàm số lượng giác ngược.
 
-## 8.5 Đạo hàm của các hàm số sơ cấp cơ bản Từ đó xây dựng công thức đạo hàm của các hàm số lượng giác ngược.
+### 8.5 Đạo hàm của các hàm số sơ cấp cơ bản
 
 1. $(x^{\alpha})' = \alpha x^{\alpha-1}$
 
@@ -2028,7 +1966,7 @@ Từ đó xây dựng công thức đạo hàm của các hàm số lượng gi�
 
 6. $(\cos$ x)' $= -\sin$ x
 
-## 8.6 Vi phân của hàm số 6. <math>(\cos x)' = -\sin x</math>
+### 8.6 Vi phân của hàm số
 
 Cho hàm số y $=$ f(x) có đạo hàm tại x. Theo định nghĩa của đạo hàm,
 
@@ -2038,15 +1976,15 @@ f'(x) $= \lim_{\Delta$ x $\to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta$ x $\t
 
 Do đó, $\frac{\Delta y}{\Delta x} =$ f'(x) + $\alpha(\Delta$ x), trong đó $\alpha(\Delta$ x) là một VCB khi $\Delta$ x $\to$ 0. Vậy
 
-$\Delta$ y $=$ f(x + $\Delta$ x) - f(x) $= f'(x)\Delta$ x + $\alpha \Delta$ x.
+$\Delta$ y $=$ f(x + $\Delta$ x) - f(x) $= f'(x)\Delta$ x + $\alpha.\Delta$ x.
 
 Số hạng $\alpha.\Delta$ x là một VCB bậc cao hơn $\Delta$ x. Do đó, $\Delta$ y và $f'(x)\Delta$ x là hai VCB tương đương.
 
-Định nghĩa 1.21. Cho hàm số f(x) xác định trong một lân cận $U_{\epsilon}(x_0)$. Nếu có
+#### Định nghĩa 1.21. Cho hàm số f(x) xác định trong một lân cận U_{\epsilon}(x_0). Nếu có
 
 $\Delta$ f $=$ A $\Delta$ x + $o(\Delta$ x),
 
-$\partial$ đó A chỉ phụ thuộc vào $x<sub>0</sub>$ chứ không phụ thuộc vào $\Delta$ x thì ta nói hàm số f(x) khả vi tại
+$\mathring{o}$ đó A chỉ phụ thuộc vào $x_0$ chứ không phụ thuộc vào $\Delta$ x thì ta nói hàm số f(x) khả vi tại
 
 $x_0$ và biểu thức
 
@@ -2056,7 +1994,7 @@ df $= A\Delta$ x
 
 Mối liên hệ giữa đạo hàm và vi phân
 
-Định lý 1.28. Hàm số f(x) có đạo hàm tại $x_0$ khi và chỉ khi nó khả vi tại $x_0$ và
+#### Định lý 1.28. Hàm số f(x) có đạo hàm tại x_0 khi và chỉ khi nó khả vi tại x_0 và
 
 $df(x_0) = f'(x_0) \Delta$ x.
 
@@ -2080,7 +2018,7 @@ Cho y $=$ f(x) là một hàm số khả vi. Khi đó, ta đã biết nếu x l�
 
 df(x) $=$ f'(x)dx.
 
-Định lý 1.29. Nếu x không phải là một biến số độc lập mà x $=$ x(t) là một hàm số phụ
+#### Định lý 1.29. Nếu x không phải là một biến số độc lập mà x = x(t) là một hàm số phụ
 
 thuộc vào biến số t thì công thức
 
@@ -2100,21 +2038,24 @@ Chính vì vậy, tính chất này còn được gọi là tính bất biến c
 
 một. Chú ý rằng tính chất này không còn đúng đối với các dạng thức vi phân cấp cao.
 
-Ví dụ 8.6. Tính $\frac{d}{d(x^3)}(x^3-2x^6-x^9)$.
-
-
-
-![](graphs/graph_47_0.png)
+Ví dụ 8.6. Tính $\frac{d}{d(x^3)}(x^3$ - $2x^6$ - $x^9)$.
 
 Ý nghĩa hình học của vi phân
 
+$ y_o + \Delta y \begin{array}{|c|}\ny_o + \Delta y \begin{array}{|c|}\ny & \text{if } y = f(x) \\
+\hline\n\end{array}\n\end{array} $
+
+$\Delta$ y
+
 $df(x_0) = \overline{MT}$
+
+$M_{o}$
 
 $x_0$ + $\Delta$ x $\overrightarrow{x}$
 
 $x_0$
 
-$\mathcal{O}$
+О
 
 Khi x thay đổi từ $x_0$ đến $x_0$ + $\Delta$ x thì
 
@@ -2148,35 +2089,35 @@ a) $\sqrt[3]{7,97}$.
 
 b) $\sqrt[3]{8,03}$.
 
-## 8.7 Đạo hàm cấp cao b) <math>\sqrt[3]{8,03}</math>.
+### 8.7 Đạo hàm cấp cao
 
-Định nghĩa 1.22. Nếu hàm số y $=$ f(x) có đạo hàm thì $y<sup>'</sup> =$ f'(x) gọi là đạo hàm cấp một
+#### Định nghĩa 1.22. Nếu hàm số y = f(x) có đạo hàm thì y' = f'(x) gọi là đạo hàm cấp một
 
-$c\n\mathbf{u}\mathbf{a}$ f(x).
+$c\n\mathring{u}\na$ f(x).
 
 i) Đạo hàm, nếu có, của đạo hàm cấp một được gọi là đạo hàm cấp hai, kí hiệu là f''(x).
 
-ii) Đạo hàm, nếu có, của đạo hàm cấp n - 1 được gọi là đạo hàm cấp n, kí hiệu là $f^{(n)}(x)$.
+ii) Đạo hàm, nếu có, của đạo hàm cấp n-1 được gọi là đạo hàm cấp n, kí hiệu là $f^{(n)}(x)$.
 
 Các phép toán trên đạo hàm cấp cao
 
-### Định lý 1.30. Cho u, v là các hàm số khả vi đến cấp n. Khi đó,
+#### Định lý 1.30. Cho u, v là các hàm số khả vi đến cấp n. Khi đó,
 
 i) (u $\pm v)^{(n)} = u^{(n)} \pm v^{(n)}$,
 
-ii) (Công thức Leibniz) $(u.v)^{(n)} = \sum_{k=0}^{n} C_n^k u^{(n-k)} v^{(k)}$.
+ii) (Công thức Leibniz) $(u.v)^{(n)} = \sum_{k=0}^{n} C_{n}^{k} u^{(n-k)} v^{(k)}$.
 
 Ví dụ 8.9. Tính đạo hàm cấp cao của các hàm số sau
 
-y $= x^{\alpha}$, y $= \frac{1}{x$ + $a}$, y $= \sin(ax$ + b),
+y $= x^{\alpha}$, $\ \$ y $= \frac{1}{x+a'}$, $\ \$ y $= \sin{(ax+b)}$,
 
-y $= \cos(ax$ + b), y $= e^{ax}$, y $= (x^2$ + 1) $e^x$, y $= e^x \sin$ x.
+y $= \cos(ax$ + b), $\$ y $= e^{ax}$, $\$ y $= \left(x^2$ + $1\right)e^x$, $\$ y $= e^x \sin$ x.
 
 Đạo hàm cấp cao của một số hàm số cơ bản
 
-1. $(x^{\alpha})^{(n)} = \alpha(\alpha$ - 1) $\dots (\alpha$ - n + 1) $x^{\alpha$ - $n}$
+1. $(x^{\alpha})^{(n)} = \alpha(\alpha-1)\ldots(\alpha-n+1)x^{\alpha-n}$
 
-2. $[(1+x)^{\alpha}]^{(n)} = \alpha(\alpha-1)...(\alpha-n+1).(1+x)^{\alpha-n}$
+2. $[(1+x)^{\alpha}]^{(n)} = \alpha(\alpha-1)\dots(\alpha-n+1).(1+x)^{\alpha-n}$
 
 3. $\left(\frac{1}{1+x}\right)^{(n)} = (-1)^{(n)} \cdot \frac{n!}{(1+x)^{n+1}}$
 
@@ -2184,7 +2125,7 @@ y $= \cos(ax$ + b), y $= e^{ax}$, y $= (x^2$ + 1) $e^x$, y $= e^x \sin$ x.
 
 
 
-5. $(\sin x)^{(n)} = \sin$ (x + $\frac{n\pi}{2})$
+5. $(\sin x)^{(n)} = \sin \left(x$ + $\frac{n\pi}{2}\right)$
 
 6. $(\cos x)^{(n)} = \cos$ (x + $\frac{n\pi}{2})$
 
@@ -2204,7 +2145,7 @@ d) y(x) $= \operatorname{arccot}$ x.
 
 [Lời giải]
 
-a) Ta có y'(x) $= 2xe^{x^2} =$ 2xy. Lấy đạo hàm cấp n hai về ta được
+a) Ta có y'(x) $= 2xe^{x^2} =$ 2xy. Lấy đạo hàm cấp n hai vế ta được
 
 $y^{(n+1)}(x) = (2xy)^{(n)} = 2xy^{(n)}(x)$ + $2ny^{(n-1)}(x)$. (Công thức Leibniz)
 
@@ -2214,11 +2155,11 @@ $y^{(n+1)}(0) = 2ny^{(n-1)}(0)$.
 
 Do đó,
 
-$y^{(10)}(0) = 2.9y^{(8)}(0) = (2.9)(2.7)y^{(6)}(0) = \cdots = (2.9)(2.7)(2.5)(2.3)(2.1)y^{(0)}(0) =$ 30240.
+$y^{(10)}(0) = 2.9y^{(8)}(0) = (2.9).(2.7)y^{(6)}(0) = \dots = (2.9)(2.7)(2.5)(2.3)(2.1)y^{(0)}(0) =$ 30240.
 
 b) Tương tự câu a).
 
-c) Ta có y' $= \frac{1}{1+x^2} \Rightarrow (1+x^2)y' =$ 1. Lấy đạo hàm cấp n hai về ta được
+c) Ta có y' $= \frac{1}{1+x^2} \Rightarrow (1+x^2)y' =$ 1. Lấy đạo hàm cấp n hai vế ta được
 
 $(1+x^2)y^{(n+1)}(x)$ + $n.2x.y^{(n)}(x)$ + $\frac{n(n-1)}{2}.2.y^{(n-1)}(x) =$ 0. (Công thức Leibniz)
 
@@ -2228,7 +2169,7 @@ $y^{(n+1)}(0) = -n(n-1)y^{(n-1)}(0)$.
 
 Do đó,
 
-$y^{(10)}(0) = -9.8y^{(8)}(0) = (-9.8)(-7.6)y^{(6)}(0) = \cdots =$ (-9.8)(-7.6)(-5.4)(-3.2)y''(0) $=$ 0
+$y^{(10)}(0) = -9.8y^{(8)}(0) = (-9.8)(-7.6)y^{(6)}(0) = \dots =$ (-9.8)(-7.6)(-5.4)(-3.2)y''(0) $=$ 0
 
 bởi vì, y' $= \frac{1}{1+x^2} \Rightarrow$ y''(x) $= \frac{-2x}{(1+x^2)^2} \Rightarrow$ y''(0) $=$ 0.
 
@@ -2246,15 +2187,15 @@ b) y $= \arccos$ x.
 
 a) Ta có
 
-y' $= \frac{1}{\sqrt{1-x^2}} \Rightarrow (1-x^2)y' = \sqrt{1-x^2} \Rightarrow (1-x^2)y''$ - 2xy' $= \frac{-x}{\sqrt{1-x^2}} \Rightarrow (1-x^2)y''$ - xy' $=$ 0.
+y' $= \frac{1}{\sqrt{1$ - $x^2}} \Rightarrow$ (1 - $x^2)y' = \sqrt{1$ - $x^2} \Rightarrow$ (1 - $x^2)y''$ - 2xy' $= \frac{-x}{\sqrt{1$ - $x^2}} \Rightarrow$ (1 - $x^2)y''$ - xy' $=$ 0.
 
-Đạo hàm cấp n hai về ta được
+$\text{Đạo$ hàm cấp $}$ n $\text{$ hai về ta $được}$
 
-$[(1-x^2)y''$ - $xy']^{(n)} =$ 0 $\Rightarrow (1-x^2)y^{(n+2)}$ - $2nxy^{(n+1)}$ - $n(n-1)y^{(n)}$ - $xy^{(n+1)}$ - $ny^{(n)} =$ 0.
+$[(1-x^2)y''$ - $xy']^{(n)} =$ 0 $\Rightarrow (1-x^2)y^{(n+2)}$ - $2nxy^{(n+1)}$ - $n(n-1)y^{(n)}$ - $xy^{(n+1)}$ - $n(y^{(n)}) =$ 0.
 
 Thay x $=$ 0 vào ta được công thức truy hồi
 
-$y^{(n+2)}(0) = n^2 y^{(n)}(0) \Rightarrow y^{(19)}(0) = 17^2 y^{(17)}(0) = \cdots = (17!!)^2$ y'(0) $= (17!!)^2$.
+$\nu^{(n+2)}(0) = n^2 \nu^{(n)}(0) \Rightarrow \nu^{(19)}(0) = 17^2 \nu^{(17)}(0) = \dots = (17!!)^2 \nu'(0) = (17!!)^2.\n$
 
 b) Tương tự câu a).
 
@@ -2268,25 +2209,25 @@ ii) g''(x) $= n(n-1)x^{n-1} \left( \ln$ x + $\frac{1}{n-1}$ + $\frac{1}{n} \righ
 
 Do đó,
 
-$g^{(n)}(x) =$ n! $\left( \ln$ x + $\frac{1}{1}$ + $\frac{1}{2}$ + $\cdots$ + $\frac{1}{n} \right)$
+$g^{(n)}(x) =$ n! $\left( \ln$ x + $\frac{1}{1}$ + $\frac{1}{2}$ + $\dots$ + $\frac{1}{n} \right)$
 
 $g^{(n+1)}(x) = \frac{n!}{x} \Rightarrow f^{(10)}(x) = \frac{10!}{x} \Rightarrow f^{(10)}(1) =$ 10!.
 
 Ví dụ 8.13 (Cuối kì, 20152). Cho hàm số f(x) $= \frac{x}{1+x^3}$. Tính $d^{10}f(0)$.
 
-[Lời giải] Ta có (1 + $x^3)f(x) =$ x. Lấy đạo hàm cấp n hai về ta được
+[Lời giải] Ta có $(1+x^3)f(x) =$ x. Lấy đạo hàm cấp n hai về ta được
 
 $(1+x^3)f^{(n)}(x)$ + $n.3x^2 \cdot f^{(n-1)}(x)$ + $\frac{n(n-1)}{2} \cdot$ 6x $\cdot f^{(n-2)}(x)$ + $\frac{n(n-1)(n-2)}{6} \cdot$ 6x $\cdot f^{(n-3)}(x) =$ 0.
 
-Cho x $=$ 0 ta được công thức truy hồi
+$\text{Cho }$ x $=$ 0 $\text{$ ta được công thức truy $hồi}$
 
 $f^{(n)}(0) = -n(n-1)(n-2)f^{n-3}(0)$.
 
 Do đó,
 
-$f^{(10)}(0) =$ -10.9.8, $f^{(7)}(0) = (-10.9.8)(-7.6.5)(-4.3.2)f^{(1)}(0) =$ -10! $\Rightarrow d^{10}f(0) = -10!dx^{10}$.
+$f^{(10)}(0) =$ -10.9.8 $\cdot f^{(7)}(0) =$ (-10.9.8)(-7.6.5)(-4.3.2) $\cdot f^{(1)}(0) =$ -10! $\Rightarrow d^{10}f(0) =$ -10! $dx^{10}$.
 
-Ví du 8.14 (Giữa kì, K61). Tính đạo hàm cấp cao
+Ví dụ 8.14 (Giữa kì, K61). Tính đạo hàm cấp cao
 
 
 
@@ -2298,11 +2239,11 @@ b) $\left(\frac{1}{x^2+x}\right)^{(50)}$.
 
 d) $(x^2 \cos 2x)^{(60)}$.
 
-## 8.8 Vi phân cấp cao <i>d)</i> <math>(x^2 \cos 2x)^{(60)}</math>.
+### 8.8 Vi phân cấp cao
 
-Định nghĩa 1.23. Nếu hàm số y $=$ f(x) khả vi thì dy $=$ f'(x)dx gọi là vi phân cấp một
+#### Định nghĩa 1.23. Nếu hàm số y = f(x) khả vi thì dy = f'(x)dx gọi là vi phân cấp một
 
-$c\n\mathring{a}$ f(x).
+$c\n\mathring{u}\na$ f(x).
 
 i) Vi phân, nếu có, của vi phân cấp một được gọi là vi phân cấp hai, kí hiệu là $d^2$ f(x).
 
@@ -2316,7 +2257,7 @@ $d^n$ f(x) $= f^{(n)}(x) dx^n$.
 
 Vi phân cấp cao không có tính chất bất biến đối với hàm hợp
 
-Ta có df(x) $=$ f'(x)dx nên
+$\text{Ta\ co\ }df(x) =$ f'(x)dx $\text{ nên}$
 
 $d^2$ f(x) $=$ df'(x)dx + $f'(x)d^2x = f''(x)dx^2$ + $f'(x)d^2x$.
 
@@ -2324,11 +2265,11 @@ Ví dụ 8.15. Chứng minh rằng nếu y $= x^3$, x $= t^2$ thì
 
 $d^2y \neq y^{(2)}dx^2$.
 
-## 8.9 Bài tâp <math display="block">d^2y \neq y^{(2)}dx^2.</math>
+### 8.9 Bài tâp
 
 Bài tập 1.44. Tìm đạo hàm của hàm số
 
-$\int$ 1-x,
+1-x,
 
 khi x $<$ 1
 
@@ -2344,7 +2285,7 @@ c) có đạo hàm liên tục tại
 
 x $=$ 0.
 
-$[\text{Đáp}\text{ s}\hat{\text{o}}]$
+$[\text{Đáp}\text{ số}]$
 
 b) n $>$ 1,
 
@@ -2356,7 +2297,7 @@ Bài tập 1.46. Chứng minh rằng hàm số f(x) $=$ |x - a| $\cdot \varphi(x
 
 liên tục và $\varphi(a) \neq$ 0, không khả vi tại điểm x $=$ a.
 
-[Gợi $\acute{y}]$
+[Gợi ý]
 
 $f'_{+}(a) = \varphi(a) \neq f'_{-}(a) = -\varphi(a)$
 
@@ -2364,17 +2305,17 @@ Bài tập 1.47. Tìm vi phân của hàm số
 
 a) y $= \frac{1}{a} \arctan \frac{x}{a} \mid$ (a $\neq$ 0)
 
-c) y $= \frac{1}{2a} \ln \left| \frac{x$ - $a}{x$ + $a} \right|$ (a $\neq$ 0)
+c) y $= \frac{1}{2a} \ln \left| \frac{x-a}{x+a} \right| \quad$ (a $\neq$ 0)
 
 d) y $= \ln$ |x + $\sqrt{x^2$ + $a}|$
 
 b) y $= \arcsin \frac{x}{a}$ (a $\neq$ 0)
 
-$[\text{Đáp}\text{ s}\hat{\text{o}}]$
+$[\text{Đáp}\text{ số}]$
 
 a) dy $= \frac{dx}{a^2$ + $x^2}$
 
-c) dy $= \frac{dx}{x^2$ - $a^2}$
+c) $\$, dy $= \frac{dx}{x^2$ - $a^2}$
 
 d) dy $= \frac{dx}{\sqrt{x^2$ + $a}}$
 
@@ -2388,7 +2329,7 @@ c) K $= \frac{d(\sin x)}{d(\cos x)}$.
 
 b) J $= \frac{d}{d(x^2)}(\frac{\sin x}{x})$,
 
-$[\text{Đáp}\text{ số}]$
+[Đáp số]
 
 a) I $= -3x^6$ - $4x^3$ + 1, x $\neq$ 0,
 
@@ -2402,31 +2343,31 @@ Bài tập 1.49. Tính gần đúng giá trị của biểu thức
 
 b) $\sqrt[7]{\frac{2-0.02}{2+0.02}}$
 
-a) $\lg$ 11
+a) lg 11
 
-[Goi $\dot{y}]$
+[Gợi ý]
 
 a) Xét f(x) $= \lg$ x, $x_0 =$ 10, $\triangle$ x $=$ 1, ta có $\lg$ 11 $\approx \lg$ 10 + $\frac{1}{10 \ln 10} =$ 1,043
 
-b) Cách 1. $\sqrt[7]{\frac{2-0.02}{2+0.02}} = \sqrt[7]{\frac{4}{2+0.02}}$ - 1. Xét f(x) $= \sqrt[7]{\frac{4}{x}}$ - 1, $x_0 =$ 2, $\triangle$ x $=$ 0.02
+b) Cách 1. $\sqrt[7]{\frac{2-0,02}{2+0,02}} = \sqrt[7]{\frac{4}{2+0,02}}$ - 1. Xét f(x) $= \sqrt[7]{\frac{4}{x}}$ - 1, $x_0 =$ 2, $\triangle$ x $=$ 0,02
 
 Ta có
 
-f(x + $\triangle$ x) $= \sqrt[7]{\frac{4}{2}}$ - 1 + 0.02 $\cdot \frac{1}{7} \cdot (\frac{4}{2}$ - $1)^{\frac{-6}{7}} \cdot \frac{-4}{2} =$ 1 - 0.02 $\cdot \frac{1}{7}$.
+$f(x+\triangle x)=\sqrt[7]{\frac{4}{2}-1}+0.02.\frac{1}{7}.(\frac{4}{2}-1)^{\frac{-6}{7}}.\frac{-4}{2}=1-0.02.\frac{1}{7}$.
 
 Cách 2. Xét hàm số f(x) $= \sqrt[7]{\frac{2-x}{2+x}}$, với $x_0 =$ 0, $\Delta$ x $=$ 0, 02.
 
 Bài tập 1.50. Tìm đạo hàm cấp cao của các hàm số
 
-(c) y $= x^2 e^{2x}$, tinh $y^{(10)}$.
+(c) y $= x^2 e^{2x}$, tính $y^{(10)}$.
 
-(a) y $= \frac{x^2}{1-x}$, tinh $y^{(8)}$.
+(a) y $= \frac{x^2}{1-x}$, tính $y^{(8)}$.
 
-(b) y $= \frac{1+x}{\sqrt{1-x}}$, tinh $y^{(100)}$.
+(b) y $= \frac{1+x}{\sqrt{1-x}}$, tính $y^{(100)}$.
 
-(d) y $= x^2 \sin$ x, tinh $y^{(50)}$.
+(d) y $= x^2 \sin$ x, tính $y^{(50)}$.
 
-$[\text{Đáp}\text{ s}\hat{\text{o}}]$
+$[\text{Đáp}\text{ số}]$
 
 (a) $y^{(8)} = \frac{8!}{(1-x)^9}$, x $\neq$ 1.
 
@@ -2446,7 +2387,7 @@ b) y $= \frac{1}{x^2$ - 3x + $2}$
 
 d) y $= e^{ax} \sin(bx$ + c).
 
-$[\text{Đáp}\text{ s}\hat{\text{o}}]$
+$[\text{Đáp}\text{ số}]$
 
 a) $y^{(n)} = \frac{(-1)^n}{2}$ n! $\left[ \frac{1}{(x-1)^{n+1}}$ + $\frac{1}{(x+1)^{n+1}} \right]$.
 
@@ -2458,7 +2399,7 @@ c) $y^{(n)} = \frac{(-1)^{n-1}}{3^n}$ (1.4 $\dots$ (3n-5)) $\frac{3n+2x}{(1+x)^{
 
 d) Tính y' rồi dự đoán và chứng minh bằng quy nạp
 
-$y^{(n)} = (a^2$ + $b^2)^{\frac{n}{2}} e^{ax} \sin(bx$ + c + $n\varphi)$, $\delta \sin \varphi = \frac{b}{\sqrt{a^2$ + $b^2}}$, $\cos \varphi = \frac{a}{\sqrt{a^2$ + $b^2}}$.
+$y^{(n)} = (a^2$ + $b^2)^{\frac{n}{2}} e^{ax} \sin(bx$ + c + $n\varphi)$, $\text{ \& } \sin\varphi = \frac{b}{\sqrt{a^2$ + $b^2}}$, $\cos\varphi = \frac{a}{\sqrt{a^2$ + $b^2}}$.
 
 Bài tập 1.52. Tính đạo hàm cấp n của các hàm số
 
@@ -2474,57 +2415,57 @@ b) y $= \frac{1}{\sqrt{a$ + $h\gamma}}$,
 
 k) y $= x^2 \cos$ ax,
 
-g) y $= \sin$ ax $\cdot \sin$ bx,
+g) y $= \sin$ ax. $\sin$ bx,
 
-c) y $= \frac{1}{x^2$ - $a^2}$,
+c) y $= \frac{1}{r^2$ - $a^2}$,
 
 1) y $= x^2 \sin$ ax,
 
 h) y $= \sin^2$ ax $\cdot \cos$ bx,
 
-d) y $= \frac{ax$ + $b}{cx$ + $a}$,
+$\mathbf{d}) \ \$ y $= \frac{ax+b}{cx+d}$,
 
 m) y $= \ln \frac{a$ + $bx}{a$ + $bx}$.
 
 i) y $= \sin^4$ x + $\cos^4$ x,
 
-$[\text{Đáp}\ \text{s}\text{\^{o}}]$
+$[\text{Đáp}\text{ số}]$
 
-a) $y^{(n)} = \frac{(-1)^n \cdot$ n! $b^n}{(a$ + $bx)^{n+1}}$.
+a) $y^{(n)} = \frac{(-1)^n \cdot$ n! $b^n}{(a$ + $hx)^{n+1}}$.
 
-b) $y^{(n)} = \frac{(-1)^n (2n-1)!!b^n}{2^n \sqrt[n]{a+bx}}$.
+b) $y^{(n)} = \frac{(-1)^n.(2n-1)!!b^n}{2^n \sqrt[n]{a+bx}}$.
 
-c) y $= \frac{1}{x^2$ - $a^2} = \frac{1}{2a} \left( \frac{1}{x$ - $a}$ - $\frac{1}{x$ + $a} \right)$ nên $y^{(n)} = \frac{(-1)^n \cdot n!}{2a} \left| \left( \frac{1}{x$ - $a} \right)^{n+1}$ - $\left( \frac{1}{x$ + $a} \right)^{n+1} \right|$.
+$\text{c) }$ y $= \frac{1}{x^2$ - $a^2} = \frac{1}{2a} \left( \frac{1}{x$ - $a}$ - $\frac{1}{x$ + $a} \right) \text{$ nên $} y^{(n)} = \frac{(-1)^n \cdot n!}{2a} \left| \left( \frac{1}{x$ - $a} \right)^{n+1}$ - $\left( \frac{1}{x$ + $a} \right)^{n+1} \right|$.
 
-d) y $= \frac{ax$ + $b}{cx$ + $d} = \frac{a}{c}$ + $\frac{1}{c} \left($ b - $\frac{ad}{c} \right) \frac{1}{x$ + $\frac{d}{c}}$ nên $y^{(n)} = \frac{1}{c} \left($ b - $\frac{ad}{c} \right) \frac{(-1)^n \cdot n!}{\left($ x + $\frac{d}{c} \right)^{n+1}}$.
+d) y $= \frac{ax+b}{cx+d} = \frac{a}{c}$ + $\frac{1}{c} \left(b$ - $\frac{ad}{c}\right) \frac{1}{x$ + $\frac{d}{c}} \text{$ nên $} y^{(n)} = \frac{1}{c} \left(b$ - $\frac{ad}{c}\right) \frac{(-1)^n \cdot n!}{\left(x$ + $\frac{d}{c}\right)^{n+1}}$.
 
-e) y $= \sin^2$ x $= \frac{1}{2}$ - $\frac{1}{2} \cos$ 2x nên $y^{(n)} = -2^{n-1} \cos$ (2x + $\frac{n\pi}{2})$.
+e) y $= \sin^2$ x $= \frac{1}{2}$ - $\frac{1}{2} \cos$ 2x nên $y^{(n)} = -2^{n-1} \cos \left(2x$ + $\frac{n\pi}{2}\right)$.
 
-f) y $= \sin^3$ x $= \frac{3}{4} \sin$ x - $\frac{1}{4} \sin$ 3x nên $y^{(n)} = \frac{3}{4} \sin$ (x + $\frac{n\pi}{2})$ - $\frac{1}{4} 3^n \sin$ (3x + $\frac{n\pi}{2})$.
+f) y $= \sin^3$ x $= \frac{3}{4} \sin$ x - $\frac{1}{4} \sin$ 3x nên $y^{(n)} = \frac{3}{4} \sin \left(x$ + $\frac{n\pi}{2}\right)$ - $\frac{1}{4} 3^n \sin \left(3x$ + $\frac{n\pi}{2}\right)$.
 
-g) y $= \sin$ ax $\cdot \sin$ bx $= \frac{1}{2} [\cos(a$ - b)x - $\cos(a$ + b)x] nên
+g) y $= \sin$ ax. $\sin$ bx $= \frac{1}{2} [\cos(a$ - b)x - $\cos(a$ + b)x] nên
 
 $y^{(n)} = \frac{1}{2}(a-b)^n \cos\left[$ (a-b)x + $\frac{n\pi}{2} \right]$ - $\frac{1}{2}(a+b)^n \cos\left[$ (a+b)x + $\frac{n\pi}{2} \right]$.
 
-h) y $= \sin^2$ ax $\cdot \cos$ bx $= \frac{\cos bx}{2}$ - $\frac{1}{4}[\cos(2a+b)x$ + $\cos(2a-b)x]$ nên
+h) y $= \sin^2$ ax $\cdot \cos$ bx $= \frac{\cos bx}{2}$ - $\frac{1}{4} [\cos(2a+b)x$ + $\cos(2a-b)x]$ nên
 
-$y^{(n)} = \frac{1}{2}b^n \cos \left(bx$ + $\frac{n\pi}{2}\right)$ - $\frac{1}{4}(2a$ + $b)^n \cos \left[(2a$ + b)x + $\frac{n\pi}{2}\right]$
+$y^{(n)} = \frac{1}{2}b^n \cos\left(bx$ + $\frac{n\pi}{2}\right)$ - $\frac{1}{4}(2a+b)^n \cos\left[(2a+b)x$ + $\frac{n\pi}{2}\right]$
 
 $-\frac{1}{4}(2a-b)^n\cos\left[(2a-b)x+\frac{n\pi}{2}\right]$.
 
 
 
-i) y $= \sin^4$ x + $\cos^4$ x $= \frac{3}{4}$ + $\frac{1}{4} \cos$ 4x nên $y^{(n)} = 4^{n-1} \cos$ (4x + $\frac{n\pi}{2})$.
+i) y $= \sin^4$ x + $\cos^4$ x $= \frac{3}{4}$ + $\frac{1}{4} \cos$ 4x nên $y^{(n)} = 4^{n-1} \cos \left(4x$ + $\frac{n\pi}{2}\right)$.
 
 j) $y^{(n)} = a^n$ x $\cos \left(ax$ + $\frac{n\pi}{2}\right)$ + $na^{n-1} \cos \left(ax$ + $\frac{(n-1)\pi}{2}\right)$.
 
-k) $y^{(n)} = a^n x^2 \sin \left(ax$ + $\frac{n\pi}{2}\right)$ + $2na^{n-1}x \sin \left(ax$ + $\frac{(n-1)\pi}{2}\right)$ + $n(n-1)a^{n-2} \sin \left(ax$ + $\frac{(n-2)\pi}{2}\right)$.
+k) $y^{(n)} = a^n x^2 \sin\left(ax$ + $\frac{n\pi}{2}\right)$ + $2na^{n-1}x \sin\left(ax$ + $\frac{(n-1)\pi}{2}\right)$ + $n(n-1)a^{n-2} \sin\left(ax$ + $\frac{(n-2)\pi}{2}\right)$.
 
-1) $y^{(n)} = a^n x^2 \cos \left(ax$ + $\frac{n\pi}{2}\right)$ + $2na^{n-1}x \cos \left(ax$ + $\frac{(n-1)\pi}{2}\right)$ + $n(n-1)a^{n-2} \cos \left(ax$ + $\frac{(n-2)\pi}{2}\right)$.
+1) $y^{(n)} = a^n x^2 \cos\left(ax$ + $\frac{n\pi}{2}\right)$ + $2na^{n-1}x \cos\left(ax$ + $\frac{(n-1)\pi}{2}\right)$ + $n(n-1)a^{n-2} \cos\left(ax$ + $\frac{(n-2)\pi}{2}\right)$.
 
-m) $y^{(n)} = \frac{(n-1)!b^n}{(a^2$ - $b^2x^2)^n} \cdot$ [(a + $bx)^n$ + $(-1)^n(a$ - $bx)^n]$.
+m) $y^{(n)} = \frac{(n-1)!b^n}{(a^2$ - $b^2x^2)^n} \cdot [(a+bx)^n$ + $(-1)^n(a-bx)^n]$.
 
-## 8.10 Đọc thêm: Về khái niệm vi phân m) <math>y^{(n)} = \frac{(n-1)!b^n}{(a^2 - b^2x^2)^n} \cdot [(a + bx)^n + (-1)^n(a - bx)^n].</math>
+### 8.10 Đọc thêm: Về khái niệm vi phân
 
 Vi phân có lẽ là một khái niệm trừu tượng và dễ gây hiểu nhầm nhất trong môn Giải
 
@@ -2566,7 +2507,7 @@ tùy ý, không nhất thiết phải là một đại lượng VCB như trong k
 
 
 
-Định nghĩa 1.24. Cho hàm số f(x) có đạo hàm tại $x_0$. Ta gọi ánh xạ, kí hiệu là $d_{x_0}f$,
+#### Định nghĩa 1.24. Cho hàm số f(x) có đạo hàm tại x_0. Ta gọi ánh xạ, kí hiệu là d_{x_0}f,
 
 xác định bởi
 
@@ -2584,13 +2525,13 @@ $x_0$ và h cho bởi
 
 $d_{x_0}f(h) = f'(x_0)h$,
 
-$\mathring{\sigma}$ đó h là một biến số mới có thể nhận giá trị tùy ý.
+$\mathring{\text{o}}$ đó h là một biến số mới có thể nhận giá trị tùy ý.
 
-ii) Kí hiệu Id là ánh xạ đồng nhất, khi đó, $d_{x_0}(Id)(h) =$ h, hay là $d_{x_0}(Id) =$ Id.
+ii) Kí hiệu Id là ánh xạ đồng nhất, khi đó, $d_{x_0}(\text{Id})(h) =$ h, hay là $d_{x_0}(\text{Id}) = \text{Id}$.
 
-iii) Một cách lạm dụng kí hiệu, ta kí hiệu x là ánh xạ đồng nhất x $:= \text{Id}$. Khi đó,
+iii) Một cách lạm dụng kí hiệu, ta kí hiệu x là ánh xạ đồng nhất x $:= \text{Id.}$ Khi đó,
 
-$d_{x_0}x = \text{Id}$ là ánh xạ đồng nhất và không phụ thuộc vào $x_0$ nên ta kí hiệu nó là
+$d_{x_0}x = \text{Id$ là ánh xạ đồng nhất và không phụ thuộc vào $} x_0$ nên ta kí hiệu nó là
 
 dx. Điều này dẫn đến $d_{x_0}f = f'(x_0)dx$. Đôi khi, người ta bỏ $x_0$ trong $d_{x_0}f$ và, một
 
@@ -2600,13 +2541,13 @@ df $=$ f'(x)dx.
 
 
 
-§9. CÁC ĐỊNH LÝ VỀ HÀM KHẢ VI VÀ ỨNG DỤNG
+## §9. CÁC ĐỊNH LÝ VỀ HÀM KHẢ VI VÀ ỨNG DỤNG
 
-## 9.1 Các định lý về hàm khả vi §9. CÁC ĐỊNH LÝ VỀ HÀM KHẢ VI VÀ ỨNG DỤNG
+### 9.1 Các định lý về hàm khả vi
 
-Định nghĩa 1.25 (Cực trị của hàm số). Cho hàm số f(x) liên tục trên (a, b), ta nói hàm
+#### Định nghĩa 1.25 (Cực trị của hàm số). Cho hàm số f(x) liên tục trên (a,b), ta nói hàm
 
-số đạt cực trị tại điểm $x_0 \in$ (a, b) nếu $\exists U(x_0) \subset$ (a, b) sao cho f(x) - $f(x_0)$ không đổi dấu
+$s\hat{o}$ đạt cực trị tại điểm $x_0 \in$ (a,b) nếu $\exists U(x_0) \subset$ (a,b) sao cho f(x) - $f(x_0)$ không đổi dấu
 
 $\forall$ x $\in U(x_0) \setminus \{x_0\}$.
 
@@ -2614,11 +2555,11 @@ $\forall$ x $\in U(x_0) \setminus \{x_0\}$.
 
 • Nếu f(x) - $f(x_0) <$ 0 thì ta nói hàm số đạt cực đại tại $x_0$.
 
-Định lý 1.31 (Định lý Fermat). Cho f(x) liên tục trên khoảng (a,b), nếu hàm số đạt cực
+#### Định lý 1.31 (Định lý Fermat). Cho f(x) liên tục trên khoảng (a,b), nếu hàm số đạt cực
 
-trị tại điểm $x_0 \in$ (a, b) và có đạo hàm tại $x_0$ thì $f'(x_0) =$ 0.
+trị tại điểm $x_0 \in$ (a,b) và có đạo hàm tại $x_0$ thì $f'(x_0) =$ 0.
 
-Chứng minh. Nếu hàm số đạt cực đại tại $x_0$ thì theo định nghĩa tồn tại một lân cận $U(x_0)$
+$Ch\acute{u}ng\$ minh. Nếu hàm số đạt cực đại tại $x_0$ thì theo định nghĩa tồn tại một lân cận $U(x_0)$
 
 sao cho f(x) - $f(x_0) <$ 0 $\forall$ x $\in U(x_0)$. Do đó, với h đủ nhỏ sao cho $f(x_0$ + h) $\in U(x_0)$ thì
 
@@ -2626,9 +2567,7 @@ $f(x_0$ + h) - $f(x_0) <$ 0.
 
 • $f'(x_0^+) = \lim_{h \to 0^+} \frac{f(x_0+h)$ - $f(x_0)}{h} \le$ 0.
 
-• $f'(x_0^-) = \lim_{h \to 0^-} \frac{f(x_0+h)-f(x_0)}{h} \ge$ 0.
-
-$\mathbf{r}$
+• $f'(x_0^-) = \lim_{h \to 0^-} \frac{f(x_0+h)$ - $f(x_0)}{h} \ge$ 0.
 
 Do giả thiết tồn tại $f'(x_0)$ nên $f'(x_0^+) = f'(x_0^-)$. Điều này chỉ xảy ra khi
 
@@ -2640,7 +2579,7 @@ a) y $= \frac{\cos x}{2$ + $\sin x}$ trong khoảng (0, $2\pi).b)$ y $= \frac{\s
 
 Ví dụ 9.2 (Cuối kì, K61-Viện ĐTQT). Cho f(x) là một hàm số khả vi trên $\mathbb{R}$ và thỏa
 
-mãn f'(2) $< \lambda <$ f'(3). Chứng minh rằng tồn tại $x_0 \in$ (2,3) sao cho $f'(x_0) = \lambda$.
+$\text{m}{\tilde{a}}\text{n}$ f'(2) $< \lambda <$ f'(3). Chứng minh rằng tồn tại $x_0 \in$ (2,3) sao cho $f'(x_0) = \lambda$.
 
 [Lời giải] Xét hàm số g(x) $=$ f(x) - $\lambda$ x. Khi đó,
 
@@ -2658,7 +2597,7 @@ $g'_{-}(3) = \lim_{x \to 3^{-}} \frac{g(x)$ - $g(2)}{x$ - $3} \le$ 0.
 
 iii) Do đó, g(x) đạt cực tiểu tại điểm $x_0 \in$ (2,3) $\Rightarrow g'(x_0) =$ 0 $\Rightarrow f'(x_0) = \lambda$.
 
-Định lý 1.32 (Định lý Rolle). Nếu hàm số f(x) :
+#### Định lý 1.32 (Định lý Rolle). Nếu hàm số f(x):
 
 i) Liên tục trong khoảng đóng [a, b],
 
@@ -2676,21 +2615,19 @@ chia làm các trường hợp sau:
 
 • Nếu có số x $\in$ (a, b) sao cho f(x) $>$ f(a) $=$ f(b) thì GTLN của f(x) sẽ phải đạt được
 
-tại một điểm c nào đó thuộc (a, b) (do nó không đạt GTLN tại hai đầu mút). Khi đó,
+tại một điểm c nào đó thuộc (a,b) (do nó không đạt GTLN tại hai đầu mút). Khi đó,
 
 theo Định lý Fermat, f'(c) $=$ 0.
 
-• Nếu có số x $\in$ (a, b) sao cho f(x) $<$ f(a) $=$ f(b) thì GTNN của f(x) sẽ phải đạt được
+• Nếu có số x $\in$ (a,b) sao cho f(x) $<$ f(a) $=$ f(b) thì GTNN của f(x) sẽ phải đạt được
 
 tại một điểm c nào đó thuộc (a, b) (do nó không đạt GTNN tại hai đầu mút). Khi đó,
 
 theo Định lý Fermat, f'(c) $=$ 0.
 
-$\mathbf{r}^{\prime}$
-
 Ví dụ 9.3 (Học kì 20163). Cho hàm số f(x) $=$ (x - $1)(x^2$ - $2)(x^2$ - 3). Phương trình
 
-f'(x) $=$ 0 có bao nhiều nghiệm thực? Giải thích.
+f'(x) $=$ 0 có bao nhiêu nghiệm thực? Giải thích.
 
 [Lời giải] Phương trình f(x) $=$ 0 có 5 nghiệm là x $= -\sqrt{3}$, x $= -\sqrt{2}$, x $=$ 1, x $= \sqrt{2}$ và
 
@@ -2732,7 +2669,7 @@ Vậy phương trình $3ax^2$ + 4bx + 5c $=$ 0 có nghiệm $\frac{1}{x_0} \in$ 
 
 b) Xét hàm số f(x) $= cx^4$ + $bx^3$ + $ax^3$ thỏa mãn các điều kiện của Định lý Rolle trong
 
-khoảng [0,1]. Do đó,
+khoảng [0, 1]. Do đó,
 
 $\exists x_0 \in$ (0,1) | $f'(x_0) = 4cx_0^3$ + $3bx_0^2$ + $2ax_0 =$ 0 $\Rightarrow 2a\left(\frac{1}{x_0}\right)^2$ + $3b\left(\frac{1}{x_0}\right)$ + 4c $=$ 0.
 
@@ -2740,11 +2677,11 @@ Vậy phương trình $2ax^2$ + 3bc + 4c $=$ 0 có nghiệm $\frac{1}{x_0} \in$ 
 
 Ví dụ 9.5 (Cuối kì, K62). Cho f liên tục trên [a,b] và thỏa mãn $\int$ f(x)dx $=$ 0. Chứng
 
-minh rằng $\exists$ c $\in$ (a, b) sao cho 2017 $\int_{c}^{c}$ f(x) dx $=$ f(c).
+minh rằng $\exists$ c $\in$ (a,b) sao cho 2017 $\int^{c}$ f(x) dx $=$ f(c).
 
 [Lời giải]
 
-Xét hàm số g(x) $= \int_a^x$ f(t)dt, là một hàm số liên tục trên [a, b], khả vi trên (a, b) và
+Xét hàm số g(x) $= \int_{a}^{x}$ f(t)dt, là một hàm số liên tục trên [a, b], khả vi trên (a, b) và
 
 g(a) $=$ g(b) $=$ 0. Do đó, hàm số h(x) $= e^{-2017x}g(x)$ cũng là một hàm số liên tục trên [a, b],
 
@@ -2758,7 +2695,7 @@ $\Leftrightarrow$ g'(c) - 2017g(c) $=$ 0
 
 $\Leftrightarrow$ f(c) $=$ 2017 $\int_{c}^{c}$ f(t)dt $=$ 2017 $\int_{a}^{c}$ f(x)dx.
 
-Ví dụ 9.6 (Olympic Toán học sinh viên Toàn quốc 2018 - Bảng B). $Gi\!{a}$ sử $f:[0,1]\rightarrow$
+Ví dụ 9.6 (Olympic Toán học sinh viên Toàn quốc 2018 - Bảng B). $\emph{Gi\^a\textit{s\^u\!f}}:[0,1]\rightarrow$
 
 $\mathbb{R}$ là một hàm số khả vi sao cho $\int_{0}^{1}$ f(x)dx $= \int_{0}^{1}$ xf(x)dx. Chứng minh rằng tồn tại số
 
@@ -2778,7 +2715,7 @@ $G(x_0) =$ 0. Theo Định lý Rolle, tồn tại c $\in$ (0, $x_0)$ sao cho
 
 G'(c) $=$ 0 $\Leftrightarrow$ f(c) $=$ 2018 $\int_{c}^{c}$ f(x) dx.
 
-Ví dụ 9.7 (Olympic Toán học sinh viên Toàn quốc 2018 - Bảng A). Giả sử f : [0,1] $\rightarrow$
+Ví dụ 9.7 (Olympic Toán học sinh viên Toàn quốc 2018 - Bảng A). $Gi\aa\,s\aa\,f:[0,1]\rightarrow$
 
 $\mathbb{R}$ là một hàm số khả vi sao cho $\int_{0}^{1}$ f(x)dx $= \int_{0}^{1}$ xf(x)dx. Chứng minh rằng tồn tại số
 
@@ -2788,17 +2725,17 @@ f(c) $=$ 2018f'(c) $\int_{0}^{c}$ f(x)dx.
 
 Chứng minh. i) Xét hàm số F(x) $=$ x $\int_{0}^{x}$ f(t)dt - $\int_{0}^{x}$ tf(t)dt khả vi trên [0,1] và F(0) $=$
 
-F(1) $=$ 0. Theo Định lý Rolle, tồn tại $x_0 \in$ (0,1) sao cho $F'(x_0) =$ 0 $\Leftrightarrow \int_0^{\infty}$ f(t) dt $=$ 0.
+$F(1)=0$. Theo Định lý Rolle, tồn tại $x_0\in$ (0,1) sao cho $F'(x_0)=0 \Leftrightarrow \int_0^\infty f(t)dt=0$.
 
-ii) Đặt G(x) $= e^{-2018f(x)} \int_{x}^{x}$ f(t)dt thì G(x) là một hàm số khả vi trên [0, 1] với G(0) $=$
+ii) Đặt G(x) $= e^{-2018f(x)} \int_{-x}^{x}$ f(t) dt thì G(x) là một hàm số khả vi trên [0,1] với G(0) $=$
 
 $G(x_0) =$ 0. Theo Định lý Rolle, tồn tại c $\in$ (0, $x_0)$ sao cho
 
 G'(c) $=$ 0 $\Leftrightarrow$ f(c) $=$ 2018f'(c) $\int_{c}^{c}$ f(x) dx.
 
-$\mathbf{U}$
+U
 
-Định lý 1.33 (Định lý Lagrange). Nếu hàm số f(x) :
+#### Định lý 1.33 (Định lý Lagrange). Nếu hàm số f(x):
 
 i) Liên tục trong khoảng đóng [a, b],
 
@@ -2806,7 +2743,7 @@ ii) Có đạo hàm trong khoảng mở (a,b),
 
 
 
-thì tồn tại ít nhất một điểm c $\in$ (a, b) sao cho f'(c) $= \frac{f(b)-f(a)}{b-a}$.
+thì tồn tại ít nhất một điểm c $\in$ (a, b) sao cho f'(c) $= \frac{f(b)$ - $f(a)}{b$ - $a}$.
 
 Chứng minh. Xét hàm số
 
@@ -2814,17 +2751,15 @@ h(x) $=$ f(x) - f(a) - $\frac{f(b)$ - $f(a)}{b$ - $a}(x$ - a).
 
 Có thể dễ dàng kiểm chứng h(x) thỏa mãn các điều kiện của Định lý Rolle, do đó tồn tại
 
-c $\in$ (a, b) sao cho h'(c) $=$ f'(c) - $\frac{f(b)-f(a)}{b-a} =$ 0.
-
-$\mathbf{r}$
+c $\in$ (a, b) sao cho h'(c) $=$ f'(c) - $\frac{f(b)$ - $f(a)}{b$ - $a} =$ 0.
 
 Ví du 9.8 (Giữa kì, K61). Chứng minh các bất đẳng thức sau với 0 $<$ a $<$ b.
 
-a) $\frac{a-b}{1+a^2} <$ arctan b - arctan a $< \frac{b-a}{1+a^2}$.
+a) $\frac{a-b}{1+a^2} < \operatorname{arccot}$ b - $\operatorname{arccot}$ a $< \frac{a-b}{1+b^2}$. b) $\frac{b-a}{1+b^2} < \operatorname{arctan}$ b - $\operatorname{arctan}$ a $< \frac{b-a}{1+a^2}$.
 
 [Lời giải]
 
-a) Áp dụng Định lý Lagrange với hàm số f(x) $= \operatorname{arccot}$ x trong khoảng [a, b] ta có
+a) Áp dụng Định lý Lagrange với hàm số f(x) $= \operatorname{arccot}$ x $\operatorname{trong}$ khoảng [a, b] ta có
 
 $\frac{\operatorname{arccot}$ b - $\operatorname{arccot} a}{b$ - $a} =$ f'(c) $= -\frac{1}{1$ + $c^2}$
 
@@ -2836,9 +2771,9 @@ dẫn đến điều phải chứng minh.
 
 b) Tương tự câu a).
 
-Ví dụ 9.9 (Giữa kì, K59). Cho hàm số $f:(0,+\infty) \to \mathbb{R}$ thỏa mãn f(x) $\le$ 1 và f''(x) $\ge$ 0
+Ví dụ 9.9 (Giữa kì, K59). Cho hàm số $f:(0,+\infty)\to\mathbb{R}$ thỏa mãn $f(x)\leq$ 1 và $f''(x)\geq$ 0
 
-với mọi x $>$ 0. Chứng minh rằng f'(x) $\leq$ 0 với mọi x $>$ 0.
+với mọi x $>$ 0. Chứng minh rằng f'(x) $\le$ 0 với mọi x $>$ 0.
 
 [Lời giải]
 
@@ -2856,7 +2791,7 @@ trái với giả thiết f(x) $\le$ 1 với mọi x $>$ 0.
 
 Mâu thuẫn này chứng tỏ f'(x) $\leq$ 0 với mọi x $>$ 0.
 
-### Định lý 1.34 (Định lý Cauchy). Nếu các hàm số <math>f(x)</math>, <math>g(x)</math> thỏa mãn các điều kiện:
+#### Định lý 1.34 (Định lý Cauchy). Nếu các hàm số f(x), g(x) thỏa mãn các điều kiện:
 
 
 
@@ -2864,7 +2799,7 @@ i) Liên tục trong khoảng đóng [a, b],
 
 ii) Có đạo hàm trong khoảng mở (a,b),
 
-iii) g'(x) không triệt tiêu trong khoảng mở (a, b)
+iii) g'(x) không triệt tiêu trong khoảng mở (a,b)
 
 thì tồn tại ít nhất một điểm c $\in$ (a, b) sao cho
 
@@ -2880,29 +2815,29 @@ b) Định lý Lagrange còn có một dạng khác, đó là công thức số 
 
 $\Delta$ f $= f'(x_0$ + $\theta \Delta$ x), $\ \theta \in$ (0,1).
 
-## 9.2 Các công thức khai triển Taylor, Maclaurin <math>\Delta f = f'(x_0 + \theta \Delta x), \ \theta \in (0,1).</math>
+### 9.2 Các công thức khai triển Taylor, Maclaurin
 
-Định lý 1.35. Nếu hàm số f(x)
+#### Định lý 1.35. Nếu hàm số f(x)
 
 (i) Có đạo hàm đến cấp n trong khoảng đóng liên tục tại $x_0$,
 
-(ii) Có đạo hàm đến cấp n + 1 trong lân cận $U_{\epsilon}(x_0)$,
+(ii) Có đạo hàm đến cấp n+1 trong lân cận $U_{\epsilon}(x_0)$,
 
-thì f(x) có thể biểu diễn dưới dạng
+f(x) có thể biểu diễn dưới dạng
 
-f(x) $= f(x_0)$ + $\frac{f'(x_0)}{1!}(x$ - $x_0)$ + $\cdots$ + $\frac{f^{(n)}(x_0)}{n!}(x$ - $x_0)^n$ + $\frac{f^{(n+1)}(c)}{(n+1)!}(x$ - $x_0)^{n+1}$,
+f(x) $= f(x_0)$ + $\frac{f'(x_0)}{1!}(x$ - $x_0)$ + $\dots$ + $\frac{f^{(n)}(x_0)}{n!}(x$ - $x_0)^n$ + $\frac{f^{(n+1)}(c)}{(n+1)!}(x$ - $x_0)^{n+1}$,
 
-$\partial$ đó c là một số thực nằm giữa x và $x<sub>0</sub>$ nào đó.
+$\mathring{o}$ đó c là một số thực nằm giữa x và $x_0$ nào đó.
 
 Nếu $x_0 =$ 0 thì công thức sau còn được gọi là công thức Maclaurin:
 
-f(x) $=$ f(0) + $\frac{f'(0)}{1!}x$ + $\cdots$ + $\frac{f^{(n)}(0)}{n!}x^{n}$ + $\frac{f^{(n+1)}(c)}{(n+1)!}x^{n+1}$
+f(x) $=$ f(0) + $\frac{f'(0)}{1!}x$ + $\dots$ + $\frac{f^{(n)}(0)}{n!}x^n$ + $\frac{f^{(n+1)}(c)}{(n+1)!}x^{n+1}$
 
 (1.1)
 
 hay
 
-f(x) $=$ f(0) + $\frac{f'(0)}{1!}x$ + $\cdots$ + $\frac{f^{(n)}(0)}{n!}x^{n}$ + $o(x^{n})$,
+f(x) $=$ f(0) + $\frac{f'(0)}{1!}x$ + $\dots$ + $\frac{f^{(n)}(0)}{n!}x^n$ + $o(x^n)$,
 
 (1.2)
 
@@ -2912,7 +2847,7 @@ f(x) $=$ f(0) + $\frac{f'(0)}{1!}x$ + $\cdots$ + $\frac{f^{(n)}(0)}{n!}x^{n}$ + 
 
 Môt số khai triển Maclaurin quan trong
 
-(1) (1 + $x)^{\alpha} =$ 1 + $\alpha$ x + $\frac{\alpha(\alpha$ - $1)}{2}x^2$ + $\cdots$ + $\frac{\alpha(\alpha$ - $1)\cdots(\alpha$ - n + $1)}{n!}x^n$ + $o(x^n)$
+(1) $(1+x)^{\alpha} =$ 1 + $\alpha$ x + $\frac{\alpha(\alpha-1)}{2}x^2$ + $\cdots$ + $\frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}x^n$ + $o(x^n)$
 
 (2) $\frac{1}{1+x} =$ 1 - x + $x^2$ - $\cdots$ + $(-1)^n x^n$ + $o(x^n)$
 
@@ -2932,23 +2867,23 @@ Trên khai triển Maclaurin chúng ta có thể thực hiện các phép toán 
 
 trù, nhân, chia, hàm hợp, đạo hàm và tích phân. Các phép toán cộng, trù, nhân, chia được
 
-thực hiện hệt như cộng, trừ, nhân, chia các đa thức. Cho f(x) $= a_0$ + $a_1x$ + $a_2x^2$ + $a_3x^3$ +
+thực hiện hệt như cộng, trừ, nhân, chia các đa thức. Cho f(x) $= a_0$ + $a_1x$ + $a_2x^2$ + $a_3x^3$ + $a_1x$ + $a_2x^2$ + $a_3x^3$ + $a_1x$ + $a_2x^2$ + $a_3x^3$ + $a_1x$ + $a_2x^2$ + $a_3x^3$ + $a_1x$ + $a_2x^2$ + $a_3x^3$ + $a_1x$ + $a_2x^2$ + $a_3x^3$ + $a_1x$ + $a_2x^2$ + $a_3x^3$ + $a_1x$ + $a_2x^2$ + $a_3x^3$ + $a_1$
 
 $\cdots$ + $a_n x^n$ + $\cdots$ và g(x) $= b_0$ + $b_1$ x + $b_2 x^2$ + $b_3 x^3$ + $\cdots$ + $b_n x^n$ + $\cdots$ là các chuỗi Maclaurin
 
 hình thức. Khi đó
 
-1. Phép cộng $(tr\grave{u})$
+1. Phép cộng (trừ)
 
-f(x) $\pm$ g(x) $= (a_0 \pm b_0)$ + $(a_1 \pm b_1)x$ + $(a_2 \pm b_2)x^2$ + $(a_3 \pm b_3)x^3$ + $\cdots$ + $(a_n \pm b_n)x^n$ + $\cdots$
+f(x) $\pm$ g(x) $= (a_0 \pm b_0)$ + $(a_1 \pm b_1)x$ + $(a_2 \pm b_2)x^2$ + $(a_3 \pm b_3)x^3$ + $\dots$ + $(a_n \pm b_n)x^n$ + $\dots$
 
 2. Phép nhân
 
 f(x)g(x) $= c_0$ + $c_1x$ + $c_2x^2$ + $c_3x^3$ + $\cdots$ + $c_nx^n$ + $\cdots$,
 
-ở đó $c_n = \sum_{i=0}^n a_i b_{n-i}$. Chuỗi $\sum_{n=0}^{+\infty} c_n x^n$ còn được gọi là tích chập của hai chuỗi $\sum_{n=0}^{+\infty} a_n x^n$ và
+ở đó $c_n = \sum\limits_{i=0}^n a_i b_{n-i}$. Chuỗi $\sum\limits_{n=0}^{+\infty} c_n x^n$ còn được gọi là tích chập của hai chuỗi $\sum\limits_{n=0}^{+\infty} a_n x^n$ và
 
-$\sum_{n=1}^{+\infty} b_n x^n$.
+$\sum_{n}^{+\infty} b_n x^n$.
 
 $n=0$
 
@@ -2956,11 +2891,11 @@ Ví dụ 9.10. Tìm khai triển Maclaurin của hàm số f(x) $= e^x \sin$ x.
 
 [Lời giải] Xuất phát từ khai triển Maclaurin của hàm số g(x) $= e^x$
 
-$e^x =$ 1 + x + $\frac{x^2}{2!}$ + $\cdots$ + $\frac{x^n}{n!}$ + $o(x^n)$
+$e^x =$ 1 + x + $\frac{x^2}{2!}$ + $\dots$ + $\frac{x^n}{n!}$ + $o(x^n)$
 
-$\mathrm{v\grave{a}}\,h(x)=\sin$ x
+$\mathrm{v\grave{a}}\$ h(x) $= \sin$ x
 
-$\sin$ x $=$ x - $\frac{x^3}{3!}$ + $\frac{x^5}{5!}$ + $\cdots$ + $(-1)^n \frac{x^{2n+1}}{(2n+1)!}$ + $o(x^{2n+1})$
+$\sin$ x $=$ x - $\frac{x^3}{3!}$ + $\frac{x^5}{5!}$ + $\dots$ + $(-1)^n \frac{x^{2n+1}}{(2n+1)!}$ + $o(x^{2n+1})$
 
 
 
@@ -2968,19 +2903,19 @@ ta có
 
 $e^x \sin$ x $=$ x + $x^2$ + $\left(\frac{1}{2!}$ - $\frac{1}{3!}\right)x^3$ + $\cdots$
 
-Ví dụ 9.11 (Giữa kì, 20173). Cho y $= e^x \sin$ x. Tính đạo hàm cấp cao $y<sup>(6)</sup>(0)$.
+Ví dụ 9.11 (Giữa kì, 20173). Cho y $= e^x \sin$ x. Tính đạo hàm cấp cao $y^{(6)}(0)$.
 
 [Lời giải] Số hạng chứa $x^6$ trong khai triển Maclaurin của y $= e^x \sin$ x là
 
-$x.(-1)^2 \frac{x^5}{5!}$ + $\frac{x^3}{3!}(-1)^1 \frac{x^3}{3!}$ + $\frac{x^5}{5!}x = -\frac{1}{90}x^6$.
+$x.(-1)^2 \frac{x^5}{5!}$ + $\frac{x^3}{3!}(-1)^1 \frac{x^3}{3!}$ + $\frac{x^5}{5!}x = -\frac{1}{99}x^6$.
 
 Do đó,
 
-$\frac{y^{(6)}(0)}{6!} = -\frac{1}{90} \Rightarrow y^{(6)}(0) =$ -8.
+$\frac{y^{(6)}(0)}{6!} = -\frac{1}{99} \Rightarrow y^{(6)}(0) =$ -8.
 
 • Như vậy, nếu chỉ cần tìm một số số hạng đầu tiên trong khai triển Maclarin của
 
-hàm số $e^x$ sin x thì có thể dùng phương pháp thực hiện phép nhân này.
+hàm số $e^x \sin$ x thì có thể dùng phương pháp thực hiện phép nhân này.
 
 • Tuy nhiên, để tìm được số hạng tổng quát thì phương pháp này lại không hiệu
 
@@ -2988,11 +2923,11 @@ quả. Thay vào đó, ta sẽ đi tính $f^{(n)}(x)$ bằng phương pháp quy 
 
 tập 1.51d. Từ công thức
 
-f'(x) $= e^x(\sin$ x + $\cos$ x) $= \sqrt{2}e^x \sin$ (x + $\frac{\pi}{4})$,
+f'(x) $= e^x(\sin$ x + $\cos$ x) $= \sqrt{2}e^x \sin\left(x$ + $\frac{\pi}{4}\right)$,
 
 và
 
-f''(x) $= \sqrt{2}e^x \left[\sin\left(x$ + $\frac{\pi}{4}\right)$ + $\cos\left(x$ + $\frac{\pi}{4}\right)\right] = (\sqrt{2})^2 e^x \sin\left(x$ + 2 $\cdot \frac{\pi}{4}\right)$
+f''(x) $= \sqrt{2}e^x \left[ \sin\left(x$ + $\frac{\pi}{4}\right)$ + $\cos\left(x$ + $\frac{\pi}{4}\right) \right] = (\sqrt{2})^2 e^x \sin\left(x$ + 2 $\cdot \frac{\pi}{4}\right)$
 
 suy ra
 
@@ -3014,7 +2949,7 @@ f(x) $=$ f(0) + $\frac{f'(0)}{1!}x$ + $\cdots$ + $\frac{f^{(n)}(0)}{n!}x^{n}$ + 
 
 Bằng cách tính các đạo hàm cấp một và cấp hai của f(x):
 
-• f'(x) $=$ 2x $\cos x^2$,
+$\bullet \$ f'(x) $=$ 2x $\cos x^2$,
 
 
 
@@ -3026,11 +2961,11 @@ khác. Đó là thực hiện phép đổi biến số, thay x bằng $x^2$ tron
 
 của hàm số
 
-$\sin$ x $=$ x - $\frac{x^3}{3!}$ + $\frac{x^5}{5!}$ + $\cdots$ + $(-1)^n \frac{x^{2n+1}}{(2n+1)!}$ + $\cdots$
+$\sin$ x $=$ x - $\frac{x^3}{3!}$ + $\frac{x^5}{5!}$ + $\dots$ + $(-1)^n \frac{x^{2n+1}}{(2n+1)!}$ + $\dots$
 
-$\mathbf{d}\mathbf{\hat{e}} \mathbf{d} \mathbf{u} \mathbf{c}$
+để được
 
-$\sin x^2 = x^2$ - $\frac{x^6}{3!}$ + $\frac{x^{10}}{5!}$ + $\cdots$ + $(-1)^n \frac{x^{2(2n+1)}}{(2n+1)!}$ + $\cdots$
+$\sin x^2 = x^2$ - $\frac{x^6}{3!}$ + $\frac{x^{10}}{5!}$ + $\dots$ + $(-1)^n \frac{x^{2(2n+1)}}{(2n+1)!}$ + $\dots$
 
 Bản chất của vấn đề ở đây là chúng ta cần đi tìm khai triển Maclaurin của hàm
 
@@ -3040,11 +2975,11 @@ Bruno sau đây giúp chúng ta tính đạo hàm cấp cao của hàm hợp.
 
 Đinh lý 1.36 (Công thức Faà di Bruno).
 
-$f(g(x))^{(n)} = \sum \frac{n!}{m_1! \$, $1!^{m_1} \$, $m_2! \$, $2!^{m_2} \cdots m_n! \$, $n!^{m_n}} \cdot f^{(m_1$ + $\cdots$ + $m_n)}(g(x)) \cdot \prod_{j=1}^n \left( g^{(j)}(x) \right)^{m_j}$,
+$f(g(x))^{(n)} = \sum \frac{n!}{m_1! \$, $1!^{m_1} \$, $m_2! \$, $2!^{m_2} \$, $\cdots \$, $m_n! \$, $n!^{m_n}} \cdot f^{(m_1$ + $\cdots$ + $m_n)}(g(x)) \cdot \prod_{j=1}^n \left( g^{(j)}(x) \right)^{m_j}$,
 
-$i=1$
+$j=1$
 
-ở đó tổng được lấy trên tất cả các bộ số không âm $(m_1$, $\ldots$, $m_n)$ thỏa mãn
+$\mathcal{S}$ đó tổng được lấy trên tất cả các bộ số không âm $(m_1,\ldots,m_n)$ thỏa mãn
 
 1 $\cdot m_1$ + 2 $\cdot m_2$ + 3 $\cdot m_3$ + $\cdots$ + n $\cdot m_n =$ n.
 
@@ -3052,13 +2987,13 @@ Hệ quả 1.5. Cho f(x) $= \sum_{n=0}^{\infty} a_n x^n$ và g(x) $= \sum_{n=0}^
 
 $\sum_{n=0}^{\infty} c_n x^n$,
 
-$\partial$ do $c_0 = a_0$ và
+$\mathbf{\mathring{d}} \mathbf{\mathring{d}} \mathbf{\mathring{c}}_0 = a_0 \mathbf{\mathring{v}} \mathbf{\mathring{a}}$
 
-$c_n = \sum_{\mathbf{i} \in C_n} a_k b_{i_1} b_{i_2} \cdots b_{i_k}$
+$c_n = \sum_{\mathbf{i} \in \mathcal{C}_n} a_k b_{i_1} b_{i_2} \cdots b_{i_k}$
 
 và
 
-$C_n = \{(i_1$, $i_2$, $\ldots$, $i_k)$ : 1 $\leq$ k $\leq$ n, $i_1$ + $i_2$ + $\cdots$ + $i_k = n\}$.
+$\mathcal{C}_n = \{(i_1$, $i_2$, $\ldots$, $i_k)$ : 1 $\leq$ k $\leq$ n, $i_1$ + $i_2$ + $\cdots$ + $i_k = n\}$.
 
 Trường hợp đơn giản nhất, g(x) $= x^k$ thì chỉ việc thay x bằng $x^k$ trong khai triển
 
@@ -3068,11 +3003,11 @@ f(x) $= \sin(x^2)$ đã nêu ở trên.
 
 5. Phép lấy đạo hàm. Giả sử hàm số f(x) có khai triển Maclaurin là
 
-f(x) $= a_0$ + $a_1$ x + $a_2 x^2$ + $a_3 x^3$ + $\cdots$ + $a_n x^n$ + $\cdots$
+f(x) $= a_0$ + $a_1$ x + $a_2 x^2$ + $a_3 x^3$ + $\dots$ + $a_n x^n$ + $\dots$
 
 
 
-Khi đó hàm số $f^{\prime}(x)có$ khai triển Maclaurin là
+Khi đó hàm số f'(x) có khai triển Maclaurin là
 
 f'(x) $= a_1$ + $2a_2x$ + $3a_3x^2$ + $\cdots$ + $na_nx^{n-1}$ + $\cdots$
 
@@ -3080,15 +3015,15 @@ f'(x) $= a_1$ + $2a_2x$ + $3a_3x^2$ + $\cdots$ + $na_nx^{n-1}$ + $\cdots$
 
 của hàm f(x). Bạn đọc có thể tự kiểm tra bằng cách lấy đạo hàm chuỗi Maclaurin
 
-của hàm sin x để ra chuỗi Maclaurin của hàm số cos x, hoặc lấy đạo hàm của chuỗi
+của hàm sin x để ra chuỗi Maclaurin của hàm số $\cos$ x, hoặc lấy đạo hàm của chuỗi
 
-Maclaurin của hàm số ln(1 + x) để ra chuỗi Maclaurin của hàm số $\frac{1}{1+x}$.
+Maclaurin của hàm số $\ln(1+x)$ để ra chuỗi Maclaurin của hàm số $\frac{1}{1+x}$.
 
 6. Phép lấy tích phân. Cũng tương tự như vậy, giả sử hàm số f(x) có khai triển Maclau-
 
 rin là
 
-f(x) $= a_0$ + $a_1$ x + $a_2 x^2$ + $a_3 x^3$ + $\cdots$ + $a_n x^n$
+f(x) $= a_0$ + $a_1$ x + $a_2 x^2$ + $a_3 x^3$ + $\dots$ + $a_n x^n$
 
 Khi đó hàm số $\int_0^x$ f(t)dt có khai triển Maclaurin là
 
@@ -3096,11 +3031,11 @@ $\int_{0}^{x}$ f(t)dt $= a_0x$ + $a_1\frac{x^2}{2}$ + $a_2\frac{x^3}{3}$ + $\dot
 
 được thực hiện bằng cách lấy tích phân của từng thành phần của chuỗi Maclau-
 
-rin của hàm f(x). Chẳng hạn, muốn tìm khai triển Maclaurin của hàm số f(x) $=$
+rin của hàm f(x). Chẳng hạn, muốn tìm khai triển Maclaurin của hàm số f(x)
 
-arctan x, đầu tiên ta tìm chuỗi Maclaurin của hàm số
+$\arctan$ x, đầu tiên ta tìm chuỗi Maclaurin của hàm số
 
-$\frac{1}{1+x^2}=1-x^2+x^4-\cdots+(-1)^nx^{2n}+\cdots$,
+$\frac{1}{1+x^2}=1-x^2+x^4-\cdots+(-1)^n x^{2n}+\cdots$,
 
 sau đó ta lấy tích phân hai về thì được
 
@@ -3122,7 +3057,7 @@ với sai số mong muốn $\frac{c^{n+1}}{(n+1)!} < \frac{1}{(n+1)!} <$ 0,0001.
 
 n $>$ 6. Nói cách khác,
 
-e $\approx$ 1 + 1 + $\frac{1}{2!}$ + $\frac{1}{3!}$ + $\frac{1}{4!}$ + $\frac{1}{5!}$ + $\frac{1}{6!}$
+e $\approx$ 1 + 1 + $\frac{1}{2!}$ + $\frac{1}{3!}$ + $\frac{1}{4!}$ + $\frac{1}{5!}$ + $\frac{1}{6!}$.
 
 
 
@@ -3130,7 +3065,7 @@ e $\approx$ 1 + 1 + $\frac{1}{2!}$ + $\frac{1}{3!}$ + $\frac{1}{4!}$ + $\frac{1}
 
 Ví dụ 9.13. Tính
 
-$\lim_{x\to 0}\frac{x-\sin x}{x^3}$.
+$\lim_{x \to 0} \frac{x$ - $\sin x}{x^3}$.
 
 Chứng minh. Dựa vào khai triên Maclaurin của hàm f(x) $= \sin$ x ta có
 
@@ -3140,33 +3075,31 @@ nên
 
 x - $\sin$ x $= \frac{x^3}{6}$ + $o(x^3) \sim \frac{x^3}{6}$ + $o(x^3)$
 
-(theo quy tắc ngắt bỏ VCB bậc cao).
+(theo quy tắc ngắt bỏ VCB bâc cao).
 
 Do đó
 
-$\n\lim_{x \to 0} \frac{x$ - $\sin x}{x^3} = \frac{1}{2}.\n$
-
-
+$\lim_{x \to 0} \frac{x$ - $\sin x}{r^3} = \frac{1}{2}$.
 
 Chú ý 1.13. Khi sử dụng khai triển Maclaurin để tính giới hạn, có thể khai triển
 
 hàm số đến số hạng thích hợp. Chẳng hạn như ở Ví dụ bên trên, mẫu số là $x^3$ nên ta
 
-chỉ khai triển tử số đến số hạng $x^3$, còn phần VCB bậc cao ở phía sau sẽ được ngắt
+$\text{ch}^{\text{i}}$ khai triển tử số đến số hạng $x^3$, còn phần VCB bậc cao ở phía sau sẽ được ngắt
 
-$b\r{o}$.
+bỏ.
 
 Ví dụ 9.14 (Giữa kì, K61). Tính giới hạn
 
 b) $\lim_{x\to 0}\frac{e^x-\sin x-\cos x}{x^2}$.
 
-a) $\lim_{x\to 0}\frac{e^{x}-\frac{1}{1-x}}{x^{2}}$.
+a) $\lim_{x\to 0} \frac{e^x$ - $\frac{1}{1-x}}{x^2}$.
 
-Ví du 9.15 (Giữa kì, K62). Tìm a, b $\in \mathbb{R}$ sao cho
+Ví dụ 9.15 (Giữa kì, K62). Tìm a, b $\in \mathbb{R}$ sao cho
 
-a) $\lim_{x\to 0} \frac{ax^2$ + b $\ln(\cos x)}{x^4} =$ 1.
+a) $\lim_{x \to 0} \frac{ax^2$ + b $\ln(\cos x)}{x^4} =$ 1.
 
-b) $\lim_{x \to 0} \frac{ax$ + b $\sin(\sin x)}{x^3} =$ 1.
+b) $\lim_{x\to 0} \frac{ax+b\sin(\sin x)}{x^3} =$ 1.
 
 [Lời giải]
 
@@ -3180,7 +3113,7 @@ $= -\frac{x^2}{2}$ - $\frac{x^4}{12}$ + $o(x^4)$.
 
 Do đó,
 
-1 $= \lim_{x \to 0} \frac{ax^2$ + b $\ln(\cos x)}{x^4} = \lim_{x \to 0} \frac{\left(a$ - $\frac{b}{2}\right) x^2$ - $\frac{b}{12} x^4$ + $o(x^4)}{x^4} \Rightarrow$ a $=$ -6, b $=$ -12.
+1 $= \lim_{x \to 0} \frac{ax^2$ + $b\ln(\cos x)}{x^4} = \lim_{x \to 0} \frac{\left(a$ - $\frac{b}{2}\right)x^2$ - $\frac{b}{12}x^4$ + $o(x^4)}{x^4} \Rightarrow$ a $=$ -6, b $=$ -12.
 
 
 
@@ -3194,7 +3127,7 @@ $=$ x - $\frac{x^3}{2}$ + $o(x^4)$.
 
 Do đó,
 
-1 $= \lim_{x \to 0} \frac{ax$ + b $\sin(\sin x)}{x^3} = \lim_{x \to 0} \frac{(a+b)x$ - $b\frac{x^3}{3}$ + $o(x^4)}{x^3} \Rightarrow$ a $=$ 3, b $=$ -3.
+1 $= \lim_{x \to 0} \frac{ax$ + $b\sin(\sin x)}{x^3} = \lim_{x \to 0} \frac{(a+b)x$ - $b\frac{x^3}{3}$ + $o(x^4)}{x^3} \Rightarrow$ a $=$ 3, b $=$ -3.
 
 3. Tính đạo hàm cấp cao $f^{(n)}(0)$.
 
@@ -3204,7 +3137,7 @@ a) y(x) $= e^{x^2}$,
 
 c) y(x) $= \arctan$ x,
 
-b) y(x) $= e^{-x^2}$,
+b) y(x) $= e^{-x^2}$
 
 d) y(x) $= \operatorname{arccot}$ x.
 
@@ -3214,7 +3147,7 @@ dựa vào khai triển Maclaurin.
 
 a) Thay x bởi $x^2$ trong công thức khai triển Maclaurin của $e^x$ ta có
 
-$e^{x^2} =$ 1 + $x^2$ + $\frac{(x^2)^2}{2!}$ + $\frac{(x^2)^3}{3!}$ + $\cdots$ + $\frac{(x^2)^n}{n!}$ + $\cdots = \sum_{n=1}^{+\infty} \frac{y^{(n)}(0)}{n!} x^n$.
+$e^{x^2} =$ 1 + $x^2$ + $\frac{(x^2)^2}{2!}$ + $\frac{(x^2)^3}{3!}$ + $\dots$ + $\frac{(x^2)^n}{n!}$ + $\dots = \sum_{n=1}^{+\infty} \frac{y^{(n)}(0)}{n!} x^n$.
 
 So sánh hệ số của $x^{10}$ ta được
 
@@ -3230,7 +3163,7 @@ $\frac{1}{1+x^2}=1-x^2+x^4-\cdots+(-1)^nx^{2n}+\cdots$,
 
 Lấy tích phân hai về ta được
 
-$\arctan$ x $= \int_{0}^{t} \frac{1}{1+t^2}$ dt $=$ x - $\frac{x^3}{3}$ + $\frac{x^5}{5}$ + $\dots$ + $(-1)^n \frac{x^{2n+1}}{2n+1}$ + $\dots = \sum_{n=0}^{+\infty} \frac{y^{(n)}(0)}{n!} x^n$
+$\arctan$ x $= \int_{0}^{t} \frac{1}{1+t^{2}}$ dt $=$ x - $\frac{x^{3}}{3}$ + $\frac{x^{5}}{5}$ + $\dots$ + $(-1)^{n} \frac{x^{2n+1}}{2n+1}$ + $\dots = \sum_{n=0}^{+\infty} \frac{y^{(n)}(0)}{n!} x^{n}$
 
 So sánh hệ số của $x^{10}$ hai vế ta được $y^{(10)}(0) =$ 0.
 
@@ -3240,7 +3173,7 @@ Ví dụ 9.17 (Cuối kì, K62). Tính đạo hàm cấp cao $y^{(10)}(0)$ với
 
 a) y(x) $= \sin(x^2)$.
 
-b) y(x) $= cos(x^2)$.
+b) y(x) $= \cos(x^2)$.
 
 [Lời giải]
 
@@ -3248,11 +3181,11 @@ a) Thay x bằng $x^2$ trong khai triển Maclaurin của sin x
 
 $\sin$ x $= \sum_{n=0}^{+\infty} (-1)^n \frac{x^{2n+1}}{(2n+1)!}$
 
-ta dược
+ta được
 
 $\sin(x^2) = \sum_{n=0}^{+\infty} (-1)^n \frac{x^{2(2n+1)}}{(2n+1)!} = \sum_{n=0}^{+\infty} \frac{y^{(n)}(0)}{n!} x^n$.
 
-So sánh hệ số của $x^{10}$ hai về ta được
+So sánh hệ số của $x^{10}$ hai vế ta được
 
 $\frac{y^{(10)}(0)}{10!} = (-1)^2 \cdot \frac{1}{5!} \Rightarrow y^{(10)}(0) = \frac{10!}{5!} =$ 30240.
 
@@ -3282,7 +3215,7 @@ b) Tương tự câu a).
 
 Ví dụ 9.19. a) Tìm khai triển Maclaurin của hàm số f(x) $= \arcsin$ x.
 
-b) Tính đạo hàm cấp cao $arcsin<sup>(n)</sup>(0)$ (Giữa kì, K59).
+b) Tính đạo hàm cấp cao $arcsin^{(n)}(0)$ (Giữa kì, K59).
 
 [Lời giải]
 
@@ -3290,15 +3223,15 @@ b) Tính đạo hàm cấp cao $arcsin<sup>(n)</sup>(0)$ (Giữa kì, K59).
 
 a) Nhận xét (arcsin x)' $= \frac{1}{\sqrt{1-x^2}}$. Trong trường hợp này có lẽ "không có" hoặc "rất
 
-khó" để tìm ra công thức tính đạo hàm cấp cao của hàm số arcsin x. Vì vậy, ta
+$\mathbf{k}hó"$ để tìm ra công thức tính đạo hàm cấp cao của hàm số arcsin x. Vì vậy, ta
 
-xuất phát từ công thức khai triển Maclaurin của hàm số (1 + $x)^{\alpha}$
+xuất phát từ công thức khai triển Maclaurin của hàm số $(1+x)^{\alpha}$
 
-$(1+x)^{\alpha} = \sum_{n=1}^{\infty} \frac{\alpha(\alpha-1)\dots(\alpha-n+1)}{n!}x^n$.
+$(1+x)^{\alpha} = \sum_{n=1}^{\infty} \frac{\alpha(\alpha-1)\dots(\alpha-n+1)}{n!} x^n$.
 
 Thay $\alpha = -\frac{1}{2}$ ta được
 
-$\frac{1}{\sqrt{1+x}} = \sum_{n=0}^{\infty} \frac{-\frac{1}{2} \left(-\frac{1}{2}$ - $1\right) \cdots \left(-\frac{1}{2}$ - $(n-1)\right)}{n!} x^n = \sum_{n=0}^{\infty} \frac{(-1)^n (2n-1)!!}{2^n n!} x^n$.
+$\frac{1}{\sqrt{1+x}} = \sum_{n=0}^{\infty} \frac{-\frac{1}{2} \left(-\frac{1}{2}-1\right) \dots \left(-\frac{1}{2}-(n-1)\right)}{n!} x^n = \sum_{n=0}^{\infty} \frac{(-1)^n (2n-1)!!}{2^n n!} x^n$.
 
 Thay x bằng $-x^2$ ta được
 
@@ -3318,7 +3251,7 @@ Ví dụ 9.20 (Cuối kì, 20152). Cho hàm số f(x) $= \frac{x}{1+x^3}$. Tính
 
 $f^{(n)}(x) =$ x $\cdot \left(\frac{1}{1+x^3}\right)^{(n)}$ + n $\cdot \left(\frac{1}{1+x^3}\right)^{(n-1)}$.
 
-Thay x $=$ 0, n $=$ 10 vào ta có $f^{(10)}(0) = 10g^{(9)}(0)$, với g(x) $= \frac{1}{1$ + $x^3}$.
+Thay x $=$ 0, n $=$ 10 vào ta có $f^{(10)}(0) = 10g^{(9)}(0)$, với g(x) $= \frac{1}{1$ + $r^3}$.
 
 Ta có
 
@@ -3336,15 +3269,15 @@ rin của hàm số f(x) $= \arccos$ x.
 
 
 
-## 9.3 Quy tắc L'Hospital None
+### 9.3 Quy tắc L'Hospital
 
-### Định lý 1.37 (Quy tắc L'Hospital). Giả thiết
+#### Định lý 1.37 (Quy tắc L'Hospital). Giả thiết
 
 i) Các hàm số f(x), g(x) khả vi trong một lân cận nào đó của điểm $x_0$ (có thể trừ tại
 
-điểm $x_0)$ đồng thời g'(x) $\neq$ 0 trong lân cân ấy,
+$\text{di\^em} x_0) \text{d\^og} t\text{h\^og}$ (x) $\neq$ 0 trong lân cân ấy,
 
-ii) $\lim_{x \to x_0}$ f(x) $= \lim_{x \to x_0}$ g(x) $=$ 0 $\left($ kh $\dot{u} \$, $\text{dang} \$, $\frac{0}{0} \right)$.
+ii) $\lim_{x \to x_0}$ f(x) $= \lim_{x \to x_0}$ g(x) $=$ 0 $\left($ kh $\mathring{u} \operatorname{dang} \frac{0}{0} \right)$.
 
 Khi đó nếu tồn tại $\lim_{x \to x_0} \frac{f'(x)}{g'(x)} =$ A (có thể hữu hạn hoặc vô hạn) thì $\lim_{x \to x_0} \frac{f(x)}{g(x)} =$ A.
 
@@ -3356,7 +3289,7 @@ x $\to x_0^+$, x $\to x_0^-$, x $\to +\infty$ hoặc x $\to -\infty$.
 
 • thay điều kiện $\lim_{x \to x_0}$ f(x) $= \lim_{x \to x_0}$ g(x) $=$ 0 bởi
 
-$\lim_{x \to x_0}$ f(x) $= \infty$, $\lim_{x \to x_0}$ g(x) $= \infty \left($ kh $\mathring{u} \$, $\operatorname{dang} \frac{\infty}{\infty} \right)$
+$\lim_{x \to x_0}$ f(x) $= \infty$, $\lim_{x \to x_0}$ g(x) $= \infty \left($ kh $\mathring{u} \operatorname{dang} \frac{\infty}{\infty} \right)$
 
 $\acute{Y}$ tưởng chứng minh: Chúng ta chứng minh quy tắc L'Hospital cho trường hợp đơn giản,
 
@@ -3368,9 +3301,9 @@ $\frac{f(x)}{g(x)} = \frac{f(x)$ - $f(x_0)}{g(x)$ - $g(x_0)} \stackrel{(Cauchy)}
 
 c nằm giữa x và $x_0$.
 
-Khi x $\to x_0$ thì c $\to x_0$. Do $\lim_{x \to x_0} \frac{f'(x)}{g'(x)} =$ A, suy ra
+Khi x $\to x_0$ thì c $\to x_0$. Do $\lim_{x \to x_0} \frac{f'(x)}{\varphi'(x)} =$ A, suy ra
 
-$\n\lim_{x \to x_0} \frac{f(x)}{g(x)} = \lim_{c \to x_0} \frac{f'(c)}{g'(c)} = A.\n$
+$\lim_{x\to x_0}\frac{f(x)}{\varphi(x)}=\lim_{c\to x_0}\frac{f^{'}(c)}{\varphi^{'}(c)}=A$.
 
 2. Nếu chỉ có $\lim_{x\to x_0}$ f(x) $= \lim_{x\to x_0}$ g(x) $=$ 0 mà các hàm số chưa chắc đã xác định tại $x_0$. Ta
 
@@ -3380,19 +3313,19 @@ $ F(x) = \begin{cases} 0, & x = x_0 \\ f(x), & x \neq x_0, \end{cases} \quad G(x
 
 3. Nếu x $\to \infty$, đặt y $= \frac{1}{x}$.
 
-Ví du 9.21 (Giữa kì, K61). Tính giới hạn
+Ví dụ 9.21 (Giữa kì, K61). Tính giới hạn
 
 
 
-a) $\lim_{x\to 0} \frac{\ln(1+x)$ - $\sin x}{x^2}$.
+a) $\lim_{x\to 0}\frac{\ln(1+x)-\sin x}{x^2}$.
 
-b) $\lim_{x\to 0} \frac{e^{2x}$ - $\sin 2x}{x^2}$.
+b) $\lim_{x\to 0}\frac{e^{2x}-\sin 2x}{x^2}$.
 
 Ví du 9.22. Tính các giới hạn sau:
 
 a) $\lim_{x\to 0} \frac{x$ - $\sin x}{\arcsin^3 x}$,
 
-c) $\lim_{x\to 0^+} x^{\alpha} \ln$ x,
+c) $\lim_{x \to 0^+} x^{\alpha} \ln$ x,
 
 d) $\lim_{x\to\infty}\frac{a^x}{x}$.
 
@@ -3400,11 +3333,11 @@ b) $\lim_{x\to 0^+} x^x$,
 
 Chú ý 1.15.
 
-• Hai qui tắc trên chỉ là điều kiện đủ để tìm lim $\frac{f(x)}{g(x)}$.
+• Hai qui tắc trên chỉ là điều kiện đủ để tìm $\lim \frac{f(x)}{g(x)}$.
 
 $x^2 \sin \frac{1}{x}$
 
-Ví dụ như $\lim_{x\to 0} \frac{x}{\sin x} =$ 0 theo nguyên lý giới hạn kẹp, nhưng nếu áp dụng quy tắc
+$V\!i\,d\mu\,nhu\lim_{x\to 0}\frac{x}{\sin x}=0\,\,theo\,\,nguy\hat{e}n\,\,l\acute{y}\,\,gi\acute{o}i\,\,han\,\,kep,\,nhung\,\,n\acute{e}u\,\,áp\,\,d\mu ng\,\,quy\,\,t\acute{a}c$
 
 L'Hospital thì sẽ dẫn đến kết quả sai.
 
@@ -3446,19 +3379,19 @@ here to Mr. Varignon or to others any copies of the writings you have left with 
 
 are published, I will not be at all pleased. Answer me regarding all this ..."
 
-## 9.4 Về một số dạng vô định are published, I will not be at all pleased. Answer me regarding all this ..."
+### 9.4 Về một số dạng vô định
 
 Quy tắc L'Hospital, ngoài việc được áp dụng để khử dạng vô định $\frac{0}{0}$, $\frac{\infty}{\infty}$, còn có thể được
 
-dùng để khử các dang vô định sau:
+dùng để khử các dang vô đinh sau:
 
 
 
-1. Dạng vô định 0 $\times \infty$. Chẳng hạn như muốn tính giới hạn $\lim_{x\to x_0}$ f(x)g(x) ta có thể viết
+1. Dạng vô định 0 $\times \infty$. Chẳng hạn như muốn tính giới hạn $\lim_{x \to x_0}$ f(x)g(x) ta có thể viết
 
 nó dưới dạng
 
-$\n\lim_{x \to x_0} \frac{f(x)}{1/\varphi(x)}\n$
+$\lim_{x \to x_0} \frac{f(x)}{1/\varphi(x)}$
 
 để áp dụng công thức L'Hospital.
 
@@ -3478,13 +3411,13 @@ bằng cách áp dụng công thức L'Hospital.
 
 • Nếu $\lim_{x\to x_0} \frac{\ln A(x)}{1/B(x)}$ có dạng $\frac{0}{0}$, nghĩa là
 
-$\n\lim_{x \to x_0} \ln$ A(x) $=$ 0, $\lim_{x \to x_0}$ 1/B(x) $= 0.\n$
+$\lim_{x \to x_0} \ln$ A(x) $=$ 0, $\lim_{x \to x_0}$ 1/B(x) $=$ 0.
 
-Khi đó, $\lim_{x\to x_0}$ A(x) $=$ 1, $\lim_{x\to x_0}$ B(x) $= \infty$ ta có dạng vô định $1^{\infty}$.
+Khi đó, $\lim_{x \to x_0}$ A(x) $=$ 1, $\lim_{x \to x_0}$ B(x) $= \infty$ ta có dạng vô định $1^{\infty}$.
 
 • Nếu $\lim_{x\to x_0} \frac{\ln A(x)}{1/B(x)}$ có dạng $\frac{\infty}{\infty}$, nghĩa là
 
-$\n\lim_{x \to x_0} \ln$ A(x) $= \infty$, $\lim_{x \to x_0}$ 1/B(x) $= \infty.\n$
+$\lim_{x\to x_0}\ln A(x)=\infty$, $\lim_{x\to x_0}1/B(x)=\infty$.
 
 Khi đó,
 
@@ -3498,11 +3431,11 @@ Các trường hợp khác hay bị nhầm lẫn sau đây đều không phải 
 
 và có thể tính trực tiếp dựa vào các quy tắc tính giới hạn:
 
-$0^1 =$ 0, $0^{+\infty} =$ 0, $0^{-\infty} = +\infty$, $1^0 =$ 1, $1^1 =$ 1, $\infty^1 = \infty$, $\infty^{\infty} = \infty$.
+$0^1 =$ 0, $\quad 0^{+\infty} =$ 0, $\qquad 0^{-\infty} = +\infty$, $\quad 1^0 =$ 1, $\quad 1^1 =$ 1, $\quad \infty^1 = \infty$, $\quad \infty^{\infty} = \infty$.
 
 
 
-## 9.5 Thay tương đương khi có hiệu hai VCB? None
+### 9.5 Thay tương đương khi có hiệu hai VCB?
 
 Đây có lẽ là một câu hỏi thú vị và được rất nhiều ban đọc quan tâm. Chúng ta bắt đầu
 
@@ -3510,7 +3443,7 @@ với một ví du sau đây.
 
 Ví du 9.25 (Câu 6, Đề 4, Giữa kì K61). Tính
 
-$\n\lim_{x\to 0}\frac{e^x-\sin x-\cos x}{r^2}.\n$
+$\lim_{x\to 0}\frac{e^x-\sin x-\cos x}{r^2}$.
 
 [Lời giải]
 
@@ -3520,21 +3453,21 @@ Cách 1: Thay tương đương
 
 $\lim_{x \to 0} \frac{e^x$ - $\sin$ x - $\cos x}{x^2}$
 
-$\n\lim_{x \to 0} \frac{e^x$ - $\sin$ x - $\cos x}{x^2}\n$
+$\lim_{x \to 0} \frac{e^x$ - $\sin$ x - $\cos x}{x^2}$
 
-$= \lim_{x \to 0} \frac{(e^x$ - 1) - $\sin$ x + (1 - $\cos x)}{x^2}$
+$= \lim_{x \to 0} \frac{(e^x$ - 1) - $\sin$ x + (1 - $\cos x)}{r^2}$
 
 $= \lim_{x \to 0} \frac{e^x$ - $\cos$ x + $\sin x}{2x}$
 
-$= \lim \frac{x$ - x + $\frac{x^2}{2}}{2}$
+$=\lim \frac{x-x+\frac{x^2}{2}}{2}$
 
-$= \lim_{x \to 0} \frac{e^x$ + $\sin$ x + $\cos x}{2}$
+$=\lim_{x\to 0}\frac{e^x+\sin x+\cos x}{2}$
 
-$\chi^2$
+$\chi^{\angle}$
 
-$x\rightarrow$ 0
+x $\rightarrow$ 0
 
-$x\rightarrow$ 0
+x $\rightarrow$ 0
 
 $=\frac{1}{2}$
 
@@ -3544,19 +3477,19 @@ Trong hai cách giải trên chắc chắn có một cách giải sai, và sai l
 
 nhiều người hay mắc phải khi thay tương đương trong các biểu thức có chứa dấu $\pm$.
 
-Chú ý 1.17. Nếu $\alpha_1(x)$, $\alpha_2(x)$, $\beta_1(x)$, $\beta_2(x)$ là các VCB khi x $\rightarrow x_0$ và $\alpha_1(x) \sim \alpha_2(x)$, $\beta_1(x) \sim$
+Chú ý 1.17. Nếu $\alpha_1(x)$, $\alpha_2(x)$, $\beta_1(x)$, $\beta_2(x)$ là các VCB khi x $\to x_0$ và $\alpha_1(x) \sim \alpha_2(x)$, $\beta_1(x) \sim$
 
 $\beta_2(x)$ thì
 
 • $\alpha_1(x)\beta_1(x) \sim \alpha_2(x)\beta_2(x)$
 
-• $\lim_{x \to r_0} \frac{\alpha_1(x)}{\beta_1(x)} = \lim_{x \to r_0} \frac{\alpha_2(x)}{\beta_2(x)}$
+$\bullet \ \lim_{x \to x_0} \frac{\alpha_1(x)}{\beta_1(x)} = \lim_{x \to x_0} \frac{\alpha_2(x)}{\beta_2(x)}$
 
 nhưng chưa chắc $\alpha_1(x) \pm \beta_1(x) \sim \alpha_2(x) \pm \beta_2(x)$. Chẳng hạn, sin x $\sim$ x, tan x $\sim$ x khi x $\to$ 0,
 
 nhưng tan x - $\sin$ x $\sim \frac{1}{2}x^3$.
 
-Vậy có thay tương $đượ<br/>c$ trong biểu thức có dấu $\pm$ hay không không? Đây là một
+Vậy có thay tương được trong biểu thức có dấu $\pm$ hay không không? Đây là một
 
 câu hỏi rất thú vị. Muốn biết biểu thức $\alpha_1(x)$ - $\beta_1(x)$ có tương đương với $\alpha_2(x)$ - $\beta_2(x)$ hay
 
@@ -3564,7 +3497,7 @@ không thì chúng ta quay về Định nghĩa, đi tính $\lim_{x\to a} \frac{\
 
 như sau:
 
-1. Nếu $\alpha_1(x)$ là VCB bậc cao hơn $\beta_1(x)$ thì $\lim_{x\to a} \frac{\alpha_1(x)}{\beta_1(x)} = \lim_{x\to a} \frac{\alpha_2(x)}{\beta_2(x)} =$ 0 (theo định nghĩa của VCB bậc cao). Khi đó $\lim_{x\to a} \frac{\alpha_1(x)$ - $\beta_1(x)}{\alpha_2(x)$ - $\beta_2(x)} = \lim_{x\to a} \frac{\frac{\alpha_1(x)}{\beta_1(x)}$ - $1}{\frac{\alpha_2(x)}{\beta_2(x)}$
+1. Nếu $\alpha_1(x)$ là VCB bậc cao hơn $\beta_1(x)$ thì $\lim_{x \to a} \frac{\alpha_1(x)}{\beta_1(x)} = \lim_{x \to a} \frac{\alpha_2(x)}{\beta_2(x)} =$ 0 (theo định nghĩa của VCB bậc cao). Khi đó $\lim_{x \to a} \frac{\alpha_1(x)$ - $\beta_1(x)}{\alpha_2(x)$ - $\beta_2(x)} = \lim_{x \to a} \frac{\frac{\alpha_1(x)}{\beta_1(x)}$ - $1}{\frac{\alpha_2(x)}{\beta_2(x)}$
 
 tương đương với $\alpha_2(x)$ - $\beta_2(x)$.
 
@@ -3572,19 +3505,19 @@ tương đương với $\alpha_2(x)$ - $\beta_2(x)$.
 
 2. Nếu $\beta_1(x)$ là VCB bậc cao hơn $\alpha_1(x)$ thì $\lim_{x\to a} \frac{\beta_1(x)}{\alpha_1(x)} = \lim_{x\to a} \frac{\beta_2(x)}{\alpha_2(x)} =$ 0 (theo định nghĩa của
 
-VCB bậc cao). Khi đó $\lim_{x\to a} \frac{\alpha_1(x)-\beta_1(x)}{\alpha_2(x)-\beta_2(x)} = \lim_{x\to a} \frac{\frac{\beta_1(x)}{\alpha_1(x)}-1}{\frac{\beta_2(x)}{\alpha_2(x)}-1} \cdot \frac{\alpha_1(x)}{\alpha_2(x)} = \frac{0-1}{0-1} =$ 1. Vậy $\alpha_1(x)$ - $\beta_1(x)$
+VCB bậc cao). Khi đó $\lim_{x \to a} \frac{\alpha_1(x)$ - $\beta_1(x)}{\alpha_2(x)$ - $\beta_2(x)} = \lim_{x \to a} \frac{\frac{\beta_1(x)}{\alpha_1(x)}$ - $1}{\frac{\beta_2(x)}{\alpha_2(x)}$ - $1} \cdot \frac{\alpha_1(x)}{\alpha_2(x)} = \frac{0$ - $1}{0$ - $1} =$ 1. Vậy $\alpha_1(x)$ - $\beta_1(x)$
 
 tương đương với $\alpha_2(x)$ - $\beta_2(x)$.
 
 3. Nếu $\alpha_1(x)$ và $\beta_1(x)$ là các VCB cùng bậc nhưng không tương đương thì $\lim_{x\to a} \frac{\alpha_1(x)}{\beta_1(x)} =$
 
-A $\neq$ 1. Khi đó $\lim_{x \to a} \frac{\alpha_1(x)$ - $\beta_1(x)}{\alpha_2(x)$ - $\beta_2(x)} = \lim_{x \to a} \frac{\frac{\alpha_1(x)}{\beta_1(x)}$ - $1}{\frac{\alpha_2(x)}{\beta_2(x)}$ - $1} \cdot \frac{\beta_1(x)}{\beta_2(x)} = \frac{A-1}{A-1} =$ 1. Vậy $\alpha_1(x)$ - $\beta_1(x)$ tương
+A $\neq$ 1. $\text{ Khi\ \text{\text{\textit{d}}\acute{o}}}\ \lim_{x \to a} \frac{\alpha_1(x)$ - $\beta_1(x)}{\alpha_2(x)$ - $\beta_2(x)} = \lim_{x \to a} \frac{\frac{\alpha_1(x)}{\beta_1(x)}$ - $1}{\frac{\alpha_2(x)}{\alpha_2(x)}$ - $1} \cdot \frac{\beta_1(x)}{\beta_2(x)} = \frac{A$ - $1}{A$ - $1} =$ 1. $\text{ V\^{a}\!y} \ \alpha_1(x)$ - $\beta_1(x) \text{ tương}$
 
 đương với $\alpha_2(x)$ - $\beta_2(x)$.
 
-4. Nếu $\alpha_1(x)$ và $\beta_1(x)$ là các VCB tương đương thì $\lim_{x \to a} \frac{\alpha_1(x)}{\beta_1(x)} =$ 1. Khi đó $\lim_{x \to a} \frac{\alpha_1(x)$ - $\beta_1(x)}{\alpha_2(x)$ - $\beta_2(x)} =$
+4. Nếu $\alpha_1(x)$ và $\beta_1(x)$ là các VCB tương đương thì $\lim_{x\to a} \frac{\alpha_1(x)}{\beta_1(x)} =$ 1. Khi đó $\lim_{x\to a} \frac{\alpha_1(x)$ - $\beta_1(x)}{\alpha_2(x)$ - $\beta_2(x)} =$ 1
 
-$\lim_{x\to a} \frac{\frac{\alpha_1(x)}{\beta_1(x)}-1}{\frac{\alpha_2(x)}{\beta_2(x)}-1} \cdot \frac{\beta_1(x)}{\beta_2(x)} = \frac{1-1}{1-1}$ là dạng vô định $\frac{0}{0}$ nên không xác định được giới hạn của nó.
+$\lim_{x\to a}\frac{\frac{\alpha_1(x)}{\beta_1(x)}-1}{\frac{\alpha_2(x)}{\beta_2(x)}-1}.\frac{\beta_1(x)}{\beta_2(x)}=\tfrac{1-1}{1-1}\text{$ là dạng vô định $} \tfrac{0}{0}\text{$ nên không xác định được giới hạn của $nó.}$
 
 5. Nếu $\alpha_1(x)$ và $\beta_1(x)$ là các VCB không so sánh được với nhau, thì $\alpha_1(x)$ - $\beta_1(x)$ và
 
@@ -3598,7 +3531,7 @@ VCB tương đương hoặc không so sánh được với nhau. Ví dụ, khôn
 
 đương được trong biểu thức tan x - $\sin$ x vì tan x $\sim \sin$ x, nhưng vẫn thay tương đương
 
-được trong biểu thức tan 2x - $\sin$ x $\sim$ 2x - x $=$ x hoặc sin x - $\tan^2$ x $\sim$ x - $x^2 \sim$ x. Bạn đọc
+được trong biểu thức tan2x - $\sin$ x $\sim$ 2x - x $=$ x hoặc $\sin$ x - $\tan^2$ x $\sim$ x - $x^2 \sim$ x. Bạn đọc
 
 cần nắm vững điều này, và trong trường hợp không chắc chắn thì tốt nhất nên
 
@@ -3606,7 +3539,7 @@ tránh thay tương đương trong các biểu thức có chứa dấu cộng v�
 
 Trường hợp $\alpha_1(x)$ + $\beta_1(x)$ có tương đương với $\alpha_2(x)$ + $\beta_2(x)$ hay không chúng ta lập luận
 
-tương tự. Vẫn thay tương đượng được bình thường ngoại trừ trường hợp $\alpha_1(x)$ và $-\beta_1(x)$
+tương tự. Vẫn thay tương đương được bình thường ngoại trừ trường hợp $\alpha_1(x)$ và $-\beta_1(x)$
 
 là các VCB tương đương hoặc không so sánh được với nhau.
 
@@ -3614,7 +3547,7 @@ Quay trở lại Ví dụ 9.25 nêu trên thì sai lầm là ở chỗ chúng ta
 
 $(e^x$ - 1) - $\sin$ x $\sim$ x - x $=$ 0 để dẫn đến $(e^x$ - 1) - $\sin$ x + (1 - $\cos$ x) $\sim \frac{x^2}{2}$. Chúng ta không
 
-thực hiện được điều này bởi vì $e^x$ - 1 $\sim \sin$ x. Thực tế thì $(e^x$ - 1) - $\sin$ x là một VCB khi
+thực hiện được điều này bởi vì $e^x-1 \sim \sin$ x. Thực tế thì $(e^x-1)$ - $\sin$ x là một VCB khi
 
 x $\rightarrow$ 0 và nếu nhìn vào khai triển Maclaurin của các hàm số $e^x$ và sin x thì ta thấy
 
@@ -3626,7 +3559,7 @@ nên
 
 $(e^x$ - 1) - $\sin$ x $= \frac{x^2}{2}$ + $o(x^2) \sim \frac{x^2}{2}$.
 
-Cho nên khi thay $(e^x$ - 1) - $\sin$ x $\sim$ x - x $=$ 0 nghiễm nhiên chúng ta đã làm mất đi số
+Cho nên khi thay $(e^x-1)-\sin x\sim x-x=0$ nghiễm nhiên chúng ta đã làm mất đi số
 
 hạng $\frac{x^2}{2}$.
 
@@ -3634,15 +3567,15 @@ hạng $\frac{x^2}{2}$.
 
 Ví dụ 9.26 (Câu 5, Đề 1, Giữa kì K61). Tính
 
-$\n\lim_{x\to 0}\frac{e^x-\cos x-\ln(1+x)}{r^2}.\n$
+$\lim_{x\to 0}\frac{e^x-\cos x-\ln(1+x)}{r^2}$.
 
 [Gợi ý] Một cách tương tự, hãy chỉ ra rằng với bài tập trên nếu
 
 • thay tương đương ta được kết quả bằng $\frac{1}{2}$ (SAI)
 
-• dùng công thức L'Hospital hoặc khai triển Maclaurin ta được kết quả bằng $\frac{3}{2}$ (ĐÚNG).
+• dùng công thức L'Hospital hoặc khai triển Maclaurin ta được kết quả bằng $\frac{3}{2} (\mathbf{D\hat{U}NG})$.
 
-## 9.6 Hiêu hai VCB tương đương • dùng công thức L'Hospital hoặc khai triển Maclaurin ta được kết quả bằng <math>\frac{3}{2}</math> (<b>ĐÚNG</b>).
+### 9.6 Hiêu hai VCB tương đương
 
 Trong mục trước, chúng ta biết rằng không thay tương đượng được trong biểu thức
 
@@ -3654,11 +3587,9 @@ Bổ đề 1.1. Hiệu của hai VCB tương đương là một VCB bậc cao h�
 
 Chứng minh. Giả sử $\alpha(x) \sim \beta(x)$ khi x $\rightarrow x_0$. Khi đó,
 
-$\n\lim_{x \to x_0} \frac{\alpha(x)$ - $\beta(x)}{\alpha(x)} =$ 1 - $\lim_{x \to x_0} \frac{\beta(x)}{\alpha(x)} =$ 1 - 1 $= 0.\n$
+$\lim_{x\to x_0}\frac{\alpha(x)-\beta(x)}{\alpha(x)}=1-\lim_{x\to x_0}\frac{\beta(x)}{\alpha(x)}=1-1=0$.
 
 Vậy theo định nghĩa, $\alpha(x)$ - $\beta(x)$ là một VCB bậc cao hơn $\alpha(x)$.
-
-$\blacksquare$
 
 Ví dụ 9.27 (Một số ví dụ về hiệu hai VCB tương đương).
 
@@ -3668,11 +3599,11 @@ a) x - $\sin$ x $\sim \frac{x^3}{6}$
 
 b) x - $\tan$ x $\sim -\frac{x^3}{3}$
 
-i) tan x – arctan x $\sim \frac{2x^3}{3}$
+i) tan x - $\arctan$ x $\sim \frac{2x^3}{3}$
 
 c) x - $\arcsin$ x $\sim -\frac{x^3}{6}$
 
-j) arcsin x – arctan x $\sim \frac{x^3}{2}$
+j) arcsin x - $\arctan$ x $\sim \frac{x^3}{2}$
 
 d) x - $\arctan$ x $\sim \frac{x^3}{3}$
 
@@ -3682,7 +3613,7 @@ e) $\sin$ x - $\tan$ x $\sim -\frac{x^3}{2}$
 
 1) x - $\ln(1+x) \sim \frac{x^2}{2}$
 
-f) sin x – arcsin x ~ $-\frac{x^3}{3}$
+f) $\sin$ x - $\arcsin$ x $\sim -\frac{x^3}{3}$
 
 g) sin x – arctan x $\sim \frac{x^3}{6}$
 
@@ -3704,7 +3635,7 @@ x $\sim$ x - $x^{2017}$ (ngắt bỏ VCB bâc cao), và x - (x - $x^{2017}) = x^
 
 
 
-## 9.7 Ba phương pháp (mới) để tính giới hạn None
+### 9.7 Ba phương pháp (mới) để tính giới hạn
 
 Như vậy đến thời điểm hiện tại chúng ta đã học được ba phương pháp mới để tính giới
 
@@ -3720,51 +3651,53 @@ Mỗi một phương pháp đều có các ưu, nhược điểm riêng và tư�
 
 thù. Để so sánh các phương pháp này với nhau, ta minh họa bằng vẽ và 6 Ví dụ sau đây.
 
+$\rm{VD}$ 4
 
+$\text{VCB}$
 
-![](graphs/graph_77_1.png)
+$\text{VD }$ 2
 
+$\text{VD }1$
 
+$\text{VD }$ 3
 
-![](graphs/graph_77_2.png)
+$\text{VD }$ 5
 
+$\text{VD }$ 6
 
-
-![](graphs/graph_77_0.png)
-
-VCB
+L'Hospital
 
 Maclaurin
 
 Ví dụ 1 (Cả ba phương pháp đều áp dụng được).
 
-$\n\lim_{x \to 0} \frac{1$ - $\cos x}{\ln(1$ + $x^2)}\n$
+$\lim_{x \to 0} \frac{1$ - $\cos x}{\ln(1$ + $x^2)}$
 
-Ví du 2 (Sử dụng VCB hoặc khai triển Maclaurin. Không nên dùng L'Hospital).
+Ví dụ 2 (Sử dụng VCB hoặc khai triển Maclaurin. Không nên dùng L'Hospital).
 
 $\lim_{x \to 0} \frac{1$ - $\cos$ x + $x^2$ - $\sin x}{x$ + $\sin^2$ x + $\arcsin^3$ x + $\arctan^4 x}$
 
 Ví du 3 (Sử dụng khai triển Maclaurin hoặc L'Hospital. Không thay tương đương).
 
-$\n\lim_{x \to 0} \frac{x$ - $\sin$ x + $x^3}{x^3}.\n$
+$\lim_{x \to 0} \frac{x$ - $\sin$ x + $x^3}{r^3}$.
 
 
 
 Ví du 4 (Khai triển Maclaurin. Không thay tương đương (tử số) và L'Hospital).
 
-$\n\lim_{x\to 0} \frac{x$ - $\sin$ x - $x^3}{\arcsin(\arctan^3 x)}.\n$
+$\lim_{x \to 0} \frac{x$ - $\sin$ x - $x^3}{\arcsin(\arctan^3 x)}$.
 
 Ví du 5 (Sử dụng L'Hospital. Không dùng VCB, Maclaurin).
 
-$\lim_{x\to 0^+}\frac{\ln x}{x},\ \text{ho\n\check{a}c}\ \lim_{x\to 0^+}x^x$.
+$\lim_{x\to 0^+} \frac{\ln x}{x}$, hoặc $\lim_{x\to 0^+} x^x$.
 
 Ví du 6 (Không dùng cả ba phương pháp trên).
 
-$\n\lim_{x \to +\infty} \frac{x$ - $\sin x}{x$ + $\cos x}.\n$
+$\lim_{x \to +\infty} \frac{x$ - $\sin x}{x$ + $\cos x}$.
 
 [Lời giải]
 
-$\n\lim_{x \to \infty} \frac{x$ - $\sin x}{x$ + $\cos x} = \lim_{x \to \infty} \frac{1$ - $\frac{\sin x}{x}}{1$ + $\frac{\cos x}{x}} = 1.\n$
+$\lim_{x \to \infty} \frac{x$ - $\sin x}{x$ + $\cos x} = \lim_{x \to \infty} \frac{1$ - $\frac{\sin x}{x}}{1$ + $\frac{\cos x}{x}} =$ 1.
 
 Chú ý 1.18. Trong quá trình tìm giới hạn của các dạng vô định, nên linh hoạt trong cách
 
@@ -3772,11 +3705,11 @@ xử lý, có thể kết hợp nhiều phương pháp với nhau để đạt h
 
 như trong Ví dụ (4) nêu trên,
 
-$\n\lim_{x\to 0} \frac{x$ - $\sin$ x - $x^3}{\arcsin(\arctan^3 x)}\n$
+$\lim_{x \to 0} \frac{x$ - $\sin$ x - $x^3}{\arcsin(\arctan^3 x)}$
 
 nên sử dụng khai triển Maclaurin ở tử số và thay tương đương ở mẫu số.
 
-## 9.8 Về các VCL tiêu biểu nên sử dụng khai triển Maclaurin ở tử số và thay tương đương ở mẫu số.
+### 9.8 Về các VCL tiêu biểu
 
 Chúng ta đã học về các VCB, VCL, các quy tắc thay tương đương, các quy tắc ngắt bỏ
 
@@ -3804,23 +3737,23 @@ với tốc độ nhanh nhất), sau đó đến các hàm số đa thức, và 
 
 
 
-Hàm số mũ $\succ$ Hàm số đa thức $\succ$
+Hàm số $mũ\mid \succ \midHàm$ số đa $thức\mid \succ \mid$
 
-$\overline{\mathbf{H}}àm$ số logarit
+Hàm số logarit
 
 Cụ thể, bạn đọc có thể tự chứng minh dễ dàng hai giới hạn sau (bằng cách dùng quy
 
 tắc L'Hospital):
 
-$\n\lim_{x \to +\infty} \frac{a^x}{x^a} = \infty$, $\lim_{x \to +\infty} \frac{x^a}{\log_{\alpha} x} = \infty$, $\ \forall$ a $>$ 1, $\alpha > 0.\n$
+$\lim_{x\to+\infty}\frac{a^{x}}{x^{\alpha}}=\infty$, $\lim_{x\to+\infty}\frac{x^{u}}{\log_{+}x}=\infty$, $\ \forall a>1$, $\alpha>0$.
 
 Ví du 9.28. Tính
 
 $\lim_{x \to +\infty} \frac{\ln$ x + $x^{2016}$ + $e^x}{\log_2$ x + $x^{2017}$ + $2e^x}$.
 
-$ Áp dụng quy tắc ngắt bỏ VCL bậc thấp ta được, \begin{cases} \ln x + x^{2016} + e^x \sim e^x, \\ \log_2 x + x^{2017} + 2e^x \sim 2e^x \end{cases} khi x \to +\infty. $
+$ \acute{A}p\,d\mu ng\,quy\,t\acute{a}c\,ng\acute{a}t\,b\acute{o}\,VCL\,b\hat{a}c\,th\acute{a}p\,ta\,d\mu\emph{oc}, \begin{cases} \ln x+x^{2016}+e^x\sim e^x, \ \ \ \ khi\,x\rightarrow +\infty. \ \log_2 x+x^{2017}+2e^x\sim 2e^x \end{cases} $
 
-Do $d\acute{o}$,
+Do đó,
 
 $\lim_{x \to +\infty} \frac{\ln$ x + $x^{2016}$ + $e^x}{\log_2$ x + $x^{2017}$ + $2e^x} = \frac{1}{2}$.
 
@@ -3828,7 +3761,7 @@ Bạn đọc sẽ thường xuyên gặp lại các VCL này khi học về Tíc
 
 phần Giải tích I này) và Chuỗi số (trong học phần Giải tích III, học kì 2).
 
-## 9.9 Bài tập ôn tập phần Giải tích I này) và Chuỗi số (trong học phần Giải tích III, học kì 2).
+### 9.9 Bài tập ôn tập
 
 Bài tập 1.54. Chứng minh rằng phương trình $x^n$ + px + q với n nguyên dương không thể
 
@@ -3846,9 +3779,7 @@ Rolle, phương trình $x^{n-1}$ + $\frac{p}{n} =$ 0 có 3 nghiệm thực, tron
 
 thì nó không thể có quá 2 nghiệm thực do n-1 chẵn.
 
-
-
-Bài tập 1.55. Giải thích tại sao công thức Cauchy dạng $\frac{f(b)-f(a)}{g(b)-g(a)} = \frac{f'(c)}{g'(c)}$ không áp
+Bài tập 1.55. Giải thích tại sao công thức Cauchy dạng $\frac{f(b)$ - $f(a)}{g(b)$ - $g(a)} = \frac{f'(c)}{g'(c)}$ không áp
 
 dụng được với các hàm số f(x) $= x^2$, g(x) $= x^3$, -1 $\le$ x $\le$ 1
 
@@ -3866,11 +3797,11 @@ Chứng minh.
 
 trong khoảng [x, y] bất kì. Khi đó $\exists$ c $\in$ [x, y] sao cho
 
-$\sin$ x - $\sin$ y $=$ f'(c)(x - y) $= \cos$ c(x - y) $\Rightarrow |\sin$ x - $\sin$ y| $\le$ |x - y|
+$\sin$ x - $\sin$ y $=$ f'(c)(x - y) $= \cos$ c((x - y)) $\Rightarrow |\sin$ x - $\sin$ y| $\le$ |x - y|
 
 b) Xét hàm số f(x) $= \ln$ x, thoả mãn điều kiện của định lý Lagrange trong khoảng [b, a]
 
-$n\hat{e}n$
+nên
 
 $\ln$ a - $\ln$ b $=$ f'(c)(a - b) $\Rightarrow \ln \frac{b}{a} = \frac{1}{c}(b$ - a) $\Rightarrow \ln \frac{a}{b} = \frac{a$ - $b}{c}$
 
@@ -3882,13 +3813,13 @@ Bài tập 1.57. Tìm giới hạn
 
 (a) $\lim_{x \to +\infty} \sqrt{x$ + $\sqrt{x}$ + $\sqrt{x}}$ - x $\ (\infty$ - $\infty)$,
 
-(f) $\lim_{x\to 1^-} \frac{\tan \frac{\pi x}{2}}{\ln(1-x)} \left(\frac{\infty}{\infty}\right)$
+(f) $\lim_{x\to 1^-} \frac{\tan\frac{\pi x}{2}}{\ln(1-x)} \left(\frac{\infty}{\infty}\right)$,
 
-(b) $\lim_{x\to 1}\left(\frac{x}{x-1}-\frac{1}{\ln x}\right) \;(\infty-\infty)$,
+(b) $\lim_{x\to 1} \left(\frac{x}{x-1}$ - $\frac{1}{\ln x}\right) \; (\infty$ - $\infty)$,
 
 (g) $\lim_{x\to 0^+} x^{\sin x} (0<sup>0</sup>)$,
 
-(c) $\lim_{x \to \infty} \frac{e^{\frac{1}{x}}$ - $\cos \frac{1}{x}}{1$ - $\sqrt{1$ - $\frac{1}{x^2}}} \left( \frac{0}{0} \right)$,
+(c) $\lim_{x \to \infty} \frac{e^{\frac{1}{x}}$ - $\cos \frac{1}{x}}{1$ - $\sqrt{1$ - $\frac{1}{x^2}}} \left(\frac{0}{0}\right)$,
 
 (h) $\lim_{x\to 0}$ (1 - a $\tan^2 x)^{\frac{1}{x \sin x}} (1^{\infty})$,
 
@@ -3898,71 +3829,71 @@ Bài tập 1.57. Tìm giới hạn
 
 (j) $\lim_{x \to \frac{\pi}{2}} (\sin x)^{\tan x} (1^{\infty})$.
 
-(e) $\lim_{x\to 1} \tan \frac{\pi x}{2} \ln(2-x) (\infty.0)$,
+(e) $\lim_{x \to 1} \tan \frac{\pi x}{2} \ln(2-x) (\infty.0)$,
 
-[Gợi $\acute{y}]$
+[Gợi ý]
 
 (a) Sử dụng phương pháp nhân liên hợp, đáp số: $\frac{1}{2}$.
 
 (b) Quy đồng mẫu số rồi sử dụng công thức L'Hospital, đáp số: $\frac{1}{2}$.
 
-(c) Đặt t $= \frac{1}{x}$, sau đó độc giả có thể dùng khai triển Maclaurin hoặc công thức L'Hospital,
+(c) Đặt $t=\frac{1}{x}$, sau đó độc giả có thể dùng khai triển Maclaurin hoặc công thức L'Hospital,
 
 đáp số: $\infty$.
 
 (d) Sử dụng khai triển Maclaurin hoặc công thức L'Hospital, đáp số: $\frac{1}{3}$.
 
-(e) Sử dụng trực tiếp công thức L'Hospital (đưa tan $\frac{\pi x}{2}$ xuống mẫu số), hoặc đặt t $=$ 1 - x
+(e) Sử dụng trực tiếp công thức L'Hospital (đưa tan $\frac{\pi x}{2}$ xuống mẫu số), hoặc đặt $t=1-x$
 
 và dùng công thức thay tương đương. đáp số: $\frac{2}{\pi}$.
 
 (f) Sử dụng công thức L'Hospital, đáp số: $-\infty$.
 
-(g) Sử dụng công thức lim $A(x)^{B(x)} = e^{\lim$ B(x) $\ln A(x)}$, đáp số: 1.
+(g) Sử dụng công thức $\lim A(x)^{B(x)} = e^{\lim$ B(x) $\ln A(x)}$, đáp số: 1.
 
 
 
-(h) Sử dụng công thức lim $A(x)^{B(x)} = e^{\lim$ B(x) $\ln A(x)}$, đáp số: $e^{-a}$.
+(h) Sử dụng công thức $\lim A(x)^{B(x)} = e^{\lim$ B(x) $\ln A(x)}$, đáp số: $e^{-a}$.
 
-(i) Sử dụng công thức lim $A(x)^{B(x)} = e^{\lim$ B(x) $\ln A(x)}$, đáp số: 1.
+(i) Sử dụng công thức $\lim A(x)^{B(x)} = e^{\lim$ B(x) $\ln A(x)}$, đáp số: 1.
 
-(j) Sử dụng công thức lim $A(x)^{B(x)} = e^{\lim$ B(x) $\ln A(x)}$, đáp số: 1.
+(j) Sử dụng công thức $\lim A(x)^{B(x)} = e^{\lim$ B(x) $\ln A(x)}$, đáp số: 1.
 
 Bài tập 1.58. Tính các giới hạn sau
 
 (a) $\lim_{x\to\infty} \left|$ x - $x^2 \ln \left($ 1 + $\frac{1}{x} \right) \right|$,
 
-(i) $\lim_{x\to 0} \left( \frac{1-\cos^2 x}{x \sin 2x} \right)$,
+(i) $\lim_{x\to 0} \left(\frac{1-\cos^2 x}{x\sin 2x}\right)$,
 
 (b) $\lim_{x \to 0} \frac{1}{x} \left( \frac{1}{x}$ - $\cot$ x $\right) = \frac{\sin$ x - x $\cos x}{x^2 \sin x}$,
 
-(j) $\lim_{x\to 0} \left( \frac{1}{x}$ - $\frac{1}{e^x$ - $1} \right)$,
+(j) $\lim_{x\to 0} \left(\frac{1}{x}$ - $\frac{1}{e^x$ - $1}\right)$,
 
-(c) $\lim_{x\to 0} x^{-5} [\sin(\sin$ x) - x $\sqrt[3]{1$ - $x^2}]$,
+(c) $\lim_{x\to 0} x^{-5} [\sin(\sin$ x) - x $\sqrt[3]{1-x^2}]$,
 
 (k) $\lim_{x \to +\infty} (\frac{2}{\pi} \arctan x)^x$,
 
-(d) $\lim_{x\to 0} [\ln(1+x)^{\frac{1}{x^2}}$ - $\frac{e^x}{x}]$,
+(d) $\lim_{x\to 0} [\ln(1+x)^{\frac{1}{x^2}}$ - $\frac{e^x}{r}]$,
 
 (l) $\lim_{x\to 0} \frac{\arctan x}{\sin$ x - $x}$,
 
-(e) $\lim_{x \to 0} \frac{\cos$ x - $e^{-\frac{x^2}{2}}}{x^4}$,
+(e) $\lim_{x\to 0} \frac{\cos$ x - $e^{-\frac{x^2}{2}}}{x^4}$,
 
-(m) $\lim_{x\to 0^+} \frac{\ln x}{1$ + 2 $\ln(\sin x)}$,
+(m) $\lim_{x\to 0^+} \frac{\ln x}{1+2\ln(\sin x)}$,
 
-(f) $\lim_{x \to 0} \frac{x$ - $\ln(1$ + $x)}{x^2}$,
+(f) $\lim_{x \to 0} \frac{x$ - $\ln(1+x)}{x^2}$,
 
-(n) $\lim_{x\to 0} \frac{\sin$ x - x $\cos x}{x^3}$,
+(n) $\lim_{x \to 0} \frac{\sin$ x - x $\cos x}{x^3}$,
 
 (o) $\lim_{x \to 0} \frac{x^2}{\sqrt{1$ + x $\sin x}$ - $\sqrt{\cos x}}$,
 
-(g) $\lim_{x\to 0} \left( \frac{1}{x}$ - $\frac{1}{\sin x} \right) = \frac{\sin$ x - $x}{x \sin x}$,
+(g) $\lim_{x \to 0} \left( \frac{1}{x}$ - $\frac{1}{\sin x} \right) = \frac{\sin$ x - $x}{x \sin x}$,
 
 (p) $\lim_{x\to 0} \frac{\ln(\cos ax)}{\ln(\cos bx)}$, a $\neq$ 0, b $\neq$ 0.
 
-(h) $\lim_{x\to 0} \left( \frac{\tan$ x - $x}{x$ - $\sin x} \right)$,
+(h) $\lim_{x\to 0} \left(\frac{\tan$ x - $x}{x$ - $\sin x}\right)$,
 
-[Goi $\hat{y}]$
+[Gợi ý]
 
 (a) Đáp số: $\frac{1}{2}$.
 
@@ -3974,13 +3905,13 @@ Bài tập 1.58. Tính các giới hạn sau
 
 (j) Quy đồng mẫu số và L'Hospital, đáp
 
-(c) DS: $\frac{7}{45}$.
+(c) $\text{DS: } \frac{7}{45}$.
 
 $\hat{\text{so}}: \frac{1}{2}$.
 
 (d) Khai triển Taylor, đáp số: $-\frac{3}{2}$.
 
-(k) BS: $e^{-\frac{2}{\pi}}$.
+(k) DS: $e^{-\frac{2}{\pi}}$.
 
 (e) Khai triển Taylor, đáp số: $-\frac{1}{12}$.
 
@@ -3990,7 +3921,7 @@ $\hat{\text{so}}: \frac{1}{2}$.
 
 (m) L'Hospital, đáp số: $\frac{1}{2}$.
 
-$\hat{\text{so}}: \frac{1}{2}$.
+số: $\frac{1}{2}$.
 
 (n) L'Hospital, đáp số: $\frac{1}{3}$.
 
@@ -3998,35 +3929,33 @@ $\hat{\text{so}}: \frac{1}{2}$.
 
 (o) Nhân liên hợp, đáp số: $\frac{4}{3}$.
 
-$\hat{\textbf{so}}:$ 0.
+số: 0.
 
 
 
-$rac{a^2}{h^2}$.
+$\frac{a^2}{h^2}$.
 
 (p) L'Hospital, thay tương đương, đáp số:
 
-Bài tập 1.59. Chứng minh rằng $\lim_{x\to\infty} \frac{x-\sin x}{x+\cos x}$ tồn tại và bằng 1 nhưng không tính được
+Bài tập 1.59. Chứng minh rằng $\lim_{x\to\infty}\frac{x-\sin x}{x+\cos x}$ tồn tại và bằng 1 nhưng không tính được
 
 bằng quy tắc L'Hospital.
 
 Chứng minh.
 
-$\n\lim_{x \to \infty} \frac{x$ - $\sin x}{x$ + $\cos x} = \lim_{x \to \infty} \frac{1$ - $\frac{\sin x}{x}}{1$ + $\frac{\cos x}{x}} = 1.\n$
+$\lim_{x \to \infty} \frac{x$ - $\sin x}{x$ + $\cos x} = \lim_{x \to \infty} \frac{1$ - $\frac{\sin x}{x}}{1$ + $\frac{\cos x}{x}} =$ 1.
 
 Nếu áp dụng quy tắc L'Hospital một cách hình thức thì ta có
 
-$\n\lim_{x \to \infty} \frac{x$ - $\sin x}{x$ + $\cos x} = \lim_{x \to \infty} \frac{1$ - $\cos x}{1$ - $\sin x}\n$
+$\lim_{x \to \infty} \frac{x$ - $\sin x}{x$ + $\cos x} = \lim_{x \to \infty} \frac{1$ - $\cos x}{1$ - $\sin x}$
 
 Tuy nhiên giới hạn ở về phải không tồn tại, có thể kiểm tra bằng cách chọn 2 dãy $x_k =$
 
-$2k\pi \text{$ và $} y_k = \frac{\pi}{2} = 2k\pi$
-
-$\blacksquare$
+$2k\pi$ và $y_k = \frac{\pi}{2} = 2k\pi$
 
 Bài tập 1.60. Tính các giới hạn sau:
 
-a) $\lim_{x \to \infty} \left( \frac{2}{\pi} \arctan$ x $\right)^x$,
+a) $\lim_{x \to \infty} \left(\frac{2}{\pi} \arctan x\right)^x$,
 
 b) $\lim_{x \to \infty} \left( \frac{a^{1/x}$ + $b^{1/x}}{2} \right)^x$, a, b $>$ 0.
 
@@ -4036,11 +3965,11 @@ b) $\lim_{x \to 0} \frac{(\cosh$ x - 1) $\ln(1$ + x) - $x^3/2}{x(\sin$ x - $\arc
 
 a) $\lim_{x \to 0} \frac{1$ - $\sqrt{1$ + $x^2 \cos x}}{x(\tan$ x - $\sinh x)}$, (1)
 
-Bài tập 1.62. Xác định a, b sao cho biểu thức sau đây có giới hạn hữu hạn khi $x\rightarrow$ 0
+Bài tập 1.62. Xác định a, b sao cho biểu thức sau đây có giới hạn hữu hạn khi x $\rightarrow$ 0
 
 f(x) $= \frac{1}{\sin^3 x}$ - $\frac{1}{x^3}$ - $\frac{a}{x^2}$ - $\frac{b}{x} = \frac{x^3$ - $\sin^3$ x (1 + ax + $bx^2)}{x^3 \sin^3 x}$
 
-Chứng minh. Tại lân cận của x $=$ 0, ta có thể viết
+$Ch\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$
 
 $\sin$ x $=$ x - $\frac{x^3}{3!}$ + $o(x^3)$
 
@@ -4050,17 +3979,15 @@ Mẫu số $= x^3[x$ - $\frac{x^3}{3!}$ + $o(x^3)]^3 = x^6$ + $o(x^6)$
 
 và
 
-Tử số $= x^3$ - $\sin^3$ x(1 + ax + $bx^2) = x^3$ - $[x^3$ + $ax^4$ + (b - $\frac{1}{2})x^5$ + $cx^6$ + $o(x^6)]$
+$\text{T} \mathbf{\dot{u}} \ \mathbf{s} \mathbf{\dot{\hat{o}}} = x^3$ - $\sin^3$ x (1 + ax + $bx^2) = x^3$ - $[x^3$ + $ax^4$ + (b - $\frac{1}{2})x^5$ + $cx^6$ + $o(x^6)]$
 
 $\Rightarrow$ f(x) $= -\frac{ax^4$ + (b - $\frac{1}{2})x^5$ + $cx^6$ + $o(x^6)}{x^6$ + $o(x^6)}$
 
-Do đó để tồn tại giới hạn hữu hạn của f(x) khi $x\rightarrow$ 0, ta phải có a $=$ 0, b $= \frac{1}{2}$
+Do đó để tồn tại giới hạn hữu hạn của f(x) khi $x\rightarrow$ 0, ta phải có $a=0$, $b=\frac{1}{2}$
 
-$\qquad \qquad \blacksquare$
+$^{(1)}\sinh$ x $= \frac{e^x$ - $e^{-x}}{2}$
 
-(1) sinh x $= \frac{e^x$ - $e^{-x}}{2}$
-
-(2) cosh x $= \frac{e^x$ + $e^{-x}}{2}$
+$^{(2)}\cosh$ x $= \frac{e^x$ + $e^{-x}}{2}$
 
 
 
@@ -4068,15 +3995,15 @@ Bài tập 1.63. Cho f là một hàm số thực, khả vi trên [a, b] và có
 
 chứng minh rằng $\forall$ x $\in$ (a, b) có thể tìm được ít nhất 1 điểm c $\in$ (a, b) sao cho
 
-f(x) - f(a) - $\frac{f(b)$ - $f(a)}{h}$ (x - a) $= \frac{(x$ - a)(x - $b)}{2}$ f''(c)
+f(x) - f(a) - $\frac{f(b)$ - $f(a)}{b}$ (x - a) $= \frac{(x$ - a)(x - $b)}{2}$ f''(c)
 
 Chứng minh. Lấy $x_0 \in$ (a, b) bất kì.
 
-$\mathbf{D} \mathbf{\check{a}} \mathbf{t} \ \varphi(x) :=$ f(x) - f(a) - $\frac{f(b)$ - $f(a)}{b-a}(x-a)$ - $\frac{(x-a)(x-b)}{2}.\lambda$
+$\text{Đặt }\varphi(x):=f(x)-f(a)-\frac{f(b)-f(a)}{b-a}(x-a)-\frac{(x-a)(x-b)}{2}.\lambda$
 
 Trong đó $\lambda$ được xác định bởi điều kiên :
 
-$\varphi(x_0) = f(x_0)$ - f(a) - $\frac{f(b)$ - $f(a)}{h} (x_0$ - a) - $\frac{(x_0$ - $a)(x_0$ - $b)}{h} \cdot \lambda =$ 0
+$\varphi(x_0) = f(x_0)$ - f(a) - $\frac{f(b)$ - $f(a)}{b} (x_0$ - a) - $\frac{(x_0$ - $a)(x_0$ - $b)}{2} \cdot \lambda =$ 0
 
 Khi đó ta có $\varphi(x_0) = \varphi(a) = \varphi(b) =$ 0
 
@@ -4086,7 +4013,7 @@ Rolle, suy ra tồn tại $c_1 \in$ (a, $x_0)$ sao cho $\varphi'(c_1) =$ 0. Tư�
 
 sao cho $\varphi'(c_2) =$ 0. Mặt khác,
 
-$\varphi'(x) =$ f'(x) - $\frac{f(b)$ - $f(a)}{b$ - $a}$ - $\lambda(x$ - $\frac{a$ + $b}{2})$
+$\varphi'(x) =$ f'(x) - $\frac{f(b)$ - $f(a)}{b-a}$ - $\lambda(x$ - $\frac{a+b}{2})$
 
 Theo giả thiết, f có đạo hàm cấp 2, do đó $\varphi$ cũng có đạo hàm cấp 2, và $\varphi''(c_1) = \varphi''(c_2) =$ 0,
 
@@ -4100,7 +4027,7 @@ f(x) - f(a) - $\frac{f(b)$ - $f(a)}{b$ - $a}(x$ - a) $= \frac{(x$ - a)(x - $b)}{
 
 $\S$ 10. CÁC LƯỢC ĐỒ KHẢO SÁT HÀM SỐ
 
-## 10.1 Khảo sát và vẽ đồ thị của hàm số <math>y = f(x)</math> <math display="inline">\S 10.</math> CÁC LƯỢC ĐỒ KHẢO SÁT HÀM SỐ
+### 10.1 Khảo sát và vẽ đồ thị của hàm số y = f(x)
 
 Mục này học sinh đã được nghiên cứu tương đối kĩ trong chương trình phổ thông nên
 
@@ -4128,7 +4055,7 @@ Sơ đồ khảo sát
 
 Ví du 10.1 (Giữa kì, K61). Tìm các cực trị của hàm số sau
 
-a) y $= \frac{2x}{x^2+2}$.
+a) y $= \frac{2x}{x^2$ + $2}$.
 
 b) y $= \frac{2x}{x^2+1}$.
 
@@ -4136,17 +4063,17 @@ Ví dụ 10.2 (Giữa kì, K59). Tìm các đường tiệm cận của đườn
 
 [Lời giải] TXĐ $= \mathbb{R} \setminus \{0\}$.
 
-0 $\le \left| x^2 \sin \frac{1}{x} \right| \le x^2 \Rightarrow \lim_{x \to 0} x^2 \sin \frac{1}{x} =$ 0 $\quad \text{(gi\'oi$ hạn $kep)}$.
+0 $\le \left| x^2 \sin \frac{1}{x} \right| \le x^2 \Rightarrow \lim_{x \to 0} x^2 \sin \frac{1}{x} =$ 0 $\quad \text{(gi\'oi$ hạn $kẹp)}$.
 
 Đường cong không có tiệm cận đứng.
 
-$\n\lim_{x \to \infty} x^2 \sin \frac{1}{x} = \lim_{x \to \infty}$ x $\cdot \frac{\sin \frac{1}{x}}{1} = \infty\n$
+$\lim_{x \to \infty} x^2 \sin \frac{1}{x} = \lim_{x \to \infty}$ x $\cdot \frac{\sin \frac{1}{x}}{1} = \infty$
 
 Đường cong không có tiệm cận ngang.
 
-$\n\lim_{x \to \infty} \frac{y}{x} = \lim_{x \to \infty} \frac{\sin \frac{1}{x}}{\frac{1}{x}} = 1.\n$
+$\lim_{x \to \infty} \frac{y}{x} = \lim_{x \to \infty} \frac{\sin \frac{1}{x}}{\frac{1}{x}} =$ 1.
 
-$\n\lim_{x \to \infty}$ (y - x) $= \lim_{x \to \infty}$ x $\left($ x $\sin \frac{1}{x}$ - 1 $\right) = \lim_{t \to 0} \frac{1}{t} \left( \frac{\sin t}{t}$ - 1 $\right) = \lim_{t \to 0} \frac{\sin$ t - $t}{t^2} =$ 0 $\quad \left($ d $\geq$ t $= \frac{1}{x} \right).\n$
+$\lim_{x \to \infty}$ (y - x) $= \lim_{x \to \infty}$ x $\left($ x $\sin \frac{1}{x}$ - 1 $\right) = \lim_{t \to 0} \frac{1}{t} \left( \frac{\sin t}{t}$ - 1 $\right) = \lim_{t \to 0} \frac{\sin$ t - $t}{t^2} =$ 0 $\quad \left( \text{d\"at }$ t $= \frac{1}{x} \right)$.
 
 Đường cong có một tiệm cận xiên là y $=$ x.
 
@@ -4156,7 +4083,7 @@ Ví dụ 10.3. Tìm các tiệm cận xiên của đường cong y $= \ln(1$ + $
 
 [Lời giải] Ta có
 
-$\n\lim_{x \to +\infty} \frac{y}{x} =$ 0, $\quad$ a $= \lim_{x \to -\infty} \frac{y}{x} = \lim_{x \to -\infty} \frac{\ln(1$ + $e^{-2x})}{x} = \lim_{x \to -\infty} \frac{-2e^{-2x}}{1$ + $e^{-2x}} =$ -2, $\quad \text{(L'Hospital)}.\n$
+$\lim_{x \to +\infty} \frac{y}{x} =$ 0, $\quad$ a $= \lim_{x \to -\infty} \frac{y}{x} = \lim_{x \to -\infty} \frac{\ln(1$ + $e^{-2x})}{x} = \lim_{x \to -\infty} \frac{-2e^{-2x}}{1$ + $e^{-2x}} =$ -2, $\quad \text{(L'Hospital)}$.
 
 b $= \lim_{x \to -\infty}$ (y + 2x) $= \lim_{x \to -\infty} \ln(1$ + $e^{-2x})$ + 2x $= \lim_{x \to -\infty} \ln[(1$ + $e^{-2x})e^{2x}] = \lim_{x \to -\infty} \ln(1$ + $e^{2x}) =$ 0.
 
@@ -4164,15 +4091,17 @@ Kết luận: y $=$ -2x là tiệm cận xiên của đường cong.
 
 Bài tập 1.64. Khảo sát và vẽ đường cong y $= \frac{2-x^2}{1+x^4}$.
 
+$\mathcal{X}$
 
-
-![](graphs/graph_85_0.png)
+О
 
 Hình 1.64
 
+Bài tập 1.65. Khảo sát và vẽ đường cong y $= \sqrt[3]{x^3$ - $x^2$ - x + $1}$.
 
+$\chi$
 
-![](graphs/graph_85_1.png)
+О
 
 Hình 1.65
 
@@ -4182,13 +4111,13 @@ Bài tập 1.66. Khảo sát và vẽ đường cong y $= \frac{x-2}{\sqrt{x^2+1
 
 Y
 
+$\chi$
 
-
-![](graphs/graph_86_0.png)
+$\bigcap$
 
 Hình 1.66
 
-## 10.2 Khảo sát và vẽ đường cong cho dưới dạng tham sô Hình 1.66
+### 10.2 Khảo sát và vẽ đường cong cho dưới dạng tham sô
 
 $ Giả sử cần khảo sát và vẽ đường cong cho dưới dạng tham số \begin{cases} x = x(t) \\ y = y(t) \end{cases} $
 
@@ -4200,15 +4129,15 @@ $ Giả sử cần khảo sát và vẽ đường cong cho dưới dạng tham s
 
 3. Tìm các tiệm cận của đường cong
 
-(a) Tiệm cận đứng: Nếu $\lim_{t\to t_0(\infty)}$ y(t) $= \infty$ và $\lim_{t\to t_0(\infty)}$ x(t) $= x_0$ thì x $= x_0$ là một tiệm
+(a) Tiệm cận đứng: Nếu $\lim_{t\to t_0(\infty)}y(t)=\infty$ và $\lim_{t\to t_0(\infty)}x(t)=x_0$ thì $x=x_0$ là một tiệm
 
 cận đứng của đường cong.
 
-(b) Tiệm cận ngang: Nếu $\lim_{t\to t_0(\infty)}$ x(t) $= \infty$ và $\lim_{t\to t_0(\infty)}$ y(t) $= y_0$ thì y $= y_0$ là một tiệm
+(b) Tiệm cận ngang: Nếu $\lim_{t\to t_0(\infty)}x(t)=\infty$ và $\lim_{t\to t_0(\infty)}y(t)=y_0$ thì $y=y_0$ là một tiệm
 
 cận ngang của đường cong.
 
-(c) Tiệm cận xiên: Nếu $\lim_{t\to t_0(\infty)}$ y(t) $= \infty$ và $\lim_{t\to t_0(\infty)}$ x(t) $= \infty$ thì đường cong có thể có
+(c) Tiệm cận xiên: Nếu $\lim_{t\to t_0(\infty)}y(t)=\infty$ và $\lim_{t\to t_0(\infty)}x(t)=\infty$ thì đường cong có thể có
 
 tiệm cận xiên. Nếu
 
@@ -4228,47 +4157,51 @@ Ngoài ra có thể khảo sát tính lồi lõm và điểm uốn (nếu cần 
 
 đạo hàm cấp hai
 
-$\frac{d^2y}{dx^2} = \frac{d\left(\frac{y'_t}{x'_t}\right)}{dx} = \frac{y_{tt}"x'_t$ - $y'_t x_{t}"}{\gamma'^3}$
+$\frac{d^2y}{dx^2} = \frac{d\left(\frac{y'_t}{x'_t}\right)}{dx} = \frac{y_{tt}"x'_t$ - $y'_tx_t''}{\gamma'^3}$
 
 5. Xác định một số điểm đặc biệt mà đồ thị hàm số đi qua và vẽ đồ thị hàm số.
 
 Ví dụ 10.4 (Giữa kì, K61). Tìm các tiệm cận của đường cong cho bởi phương trình tham
 
-$S\acute{\hat{O}}$
+$S\!\hat{o}$
 
-$ b) \begin{cases} x = \frac{2016t}{1+t^3} \\ y = \frac{2016t^2}{1+t^3} \end{cases} $
+$ b) \begin{cases} x = \frac{2016t}{1+t^3} \\ y = \frac{2016t^2}{1+t^3}.\end{cases} $
 
-$ a) \begin{cases} x = \frac{2016t}{1-t^3} \\ y = \frac{2016t^2}{1-t^3} \end{cases} $
+$ a) \begin{cases} x = \frac{2016t}{1-t^3} \\ y = \frac{2016t^2}{1-t^3}.\end{cases} $
 
 $ \begin{cases} x = 2t - t^2 \\ y = 3t - t^3. \end{cases} $
 
 Bài tập 1.67. Khảo sát và vẽ đường cong
 
+О
 
+$\chi$
 
-![](graphs/graph_87_0.png)
+Hình 1.67
 
-$\mathop{\mathcal{X}_{}}\nolimits$
-
-## 10.3 Khảo sát và vẽ đường cong trong hệ toạ độ cực <math display="block">\mathop{\mathcal{X}_{}}\nolimits</math>
+### 10.3 Khảo sát và vẽ đường cong trong hệ toạ độ cực
 
 Bài tập 1.68. Khảo sát và vẽ đường cong r $=$ a + b $\cos \varphi$, (0 $<$ a $\le$ b).
 
 
 
+$\mathcal{Y}$
 
+r $=$ a + b $\cos \varphi$
 
-![](graphs/graph_88_0.png)
+O
 
-$Hình\$ 1.68
+$\chi$
+
+Hình 1.68
 
 Bài tập 1.69. Khảo sát và vẽ đường cong r $=$ a (1 + $\cos \varphi)$ (a $>$ 0), (đường Cardioid hay
 
 đường hình tim, trường hợp đặc biệt của đường cong trong Bài tập 1.68 với a $=$ b)
 
-$\mathbf{A}^{\mathcal{Y}}$
+$\mathcal{Y}$
 
-$\mathcal{A}$
+а
 
 $\mathcal{X}$
 
@@ -4284,9 +4217,9 @@ Bài tập 1.70. Khảo sát và vẽ đường cong r $= \frac{a}{\sqrt{\cos 3\
 
 $\sqrt{\cos 3\varphi}$
 
-O
+0
 
-$\mathop{\mathcal{X}_{}}\nolimits$
+$\mathcal{X}$
 
 Hình 1.70
 
@@ -4294,17 +4227,17 @@ Bài tập 1.71. Khảo sát và vẽ đường cong Lemniscate
 
 (x2 + y2)2 $=$ 2a2(x2 - y2) (a $>$ 0).
 
-Phương trình của đường Lemniscate trong tọa độ cực là r $= a\sqrt{2 \cos 2\varphi}$.
+Phương trình của đường Lemniscate trong tọa độ cực là r $= a\sqrt{2\cos 2\varphi}$.
 
-$\int^{y}$ r $=$ a $\sqrt{2 \cos 2\varphi}$
+r $= a\sqrt{2\cos 2\varphi}$
 
-$\mathop{\mathcal{X}_{}}\nolimits$
+$\mathcal{X}$
 
 Hình 1.71
 
 Bài tập 1.72. Khảo sát và vẽ đường cong $(x^2$ + $y^2)^2 = 2a^2xy$ (a $>$ 0).
 
-$ Tham số hoá đường cong đã cho, đặt \begin{cases} x = r \cos \varphi \\ y = r \sin \varphi \end{cases}, phương trình đường cong tương đương $
+$ Tham số hoá đường cong đã cho, đặt \left\{ \begin{array}{l} x=r\cos\varphi \ y=r\sin\varphi \end{array} \right., phương trình đường cong tương đương $
 
 với $r^2 = a^2 \sin 2\varphi$.
 
@@ -4312,7 +4245,7 @@ với $r^2 = a^2 \sin 2\varphi$.
 
 r $= a\sqrt{\sin 2\varphi}$
 
-O
+0
 
 $\chi$
 
@@ -4320,21 +4253,31 @@ Hình 1.72
 
 Bài tập 1.73. Khảo sát và vẽ đường cong $x^3$ + $y^3 =$ axy (a $>$ 0)
 
-(Lá Descartes)
+$(L\text{á Descartes})$
 
-$ Tham số hoá đường cong đã cho, đặt \begin{cases} x = r \cos \varphi \\ \vdots \end{cases}, phương trình đường cong tương đương $
+$ Tham số hoá đường cong đã cho, đặt \left\{\begin{array}{c} x=r\cos\varphi \ \ \ , \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ $
 
 y $=$ r $\sin \varphi$
 
 với
 
-r $= \frac{a \sin \varphi \cos \varphi}{\sin^3 \varphi$ + $\cos^3 \varphi}$
+r $= \frac{a\sin\varphi\cos\varphi}{\sin^3\varphi$ + $\cos^3\varphi}$
 
+V
 
+$\frac{1}{2}$
 
-![](graphs/graph_90_0.png)
+$\chi$
 
-## 10.4 Bài tập <math display="block">r = \frac{a \sin \varphi \cos \varphi}{\sin^3 \varphi + \cos^3 \varphi}</math>
+2
+
+$\bigcirc$
+
+TCX: y $=$ -x - $\frac{1}{3}$
+
+Hình 1.73
+
+### 10.4 Bài tập
 
 Bài tập 1.74. Khảo sát tính đơn điệu của hàm số
 
@@ -4352,15 +4295,13 @@ b) hàm số giảm với mọi x
 
 Bài tập 1.75. Chứng minh các bất đẳng thức
 
-a. 2x $\arctan$ x $\ge \ln(1$ + $x^2) \forall$ x $\in \mathbb{R}$ b. x - $\frac{x^2}{2} \le \ln(1$ + x) $<$ x $\quad \forall$ x $>$ 0
+a. 2x $\arctan$ x $\ge \ln(1+x^2) \quad \forall$ x $\in \mathbb{R}$ b. x - $\frac{x^2}{2} \le \ln(1+x) <$ x $\quad \forall$ x $>$ 0
 
-Chứng minh. a) Xét hàm số f(x) $=$ 2x arctan x - $\ln(1$ + $x^2) \Rightarrow$ f'(x) $=$ 2 arctan x.
+Chứng minh. a) Xét hàm số f(x) $=$ 2x $\arctan$ x - $\ln(1$ + $x^2) \Rightarrow$ f'(x) $=$ 2 $\arctan$ x.
 
 • Nếu x $\ge$ 0, f'(x) $\ge$ 0 $\Rightarrow$ f(x) $\ge$ f(0) $=$ 0
 
 • Nếu x $<$ 0, f'(x) $<$ 0 $\Rightarrow$ f(x) $<$ f(0) $=$ 0
-
-$\blacksquare$
 
 b) Tương tự, xét g(x) $=$ x - $\frac{x^2}{2}$ - $\ln(1+x)$, h(x) $= \ln(1+x)$ - x
 
@@ -4368,9 +4309,9 @@ g'(x) $= -\frac{x^2}{1+x} <$ 0, h'(x) $= -\frac{x}{1+x} <$ 0 $\Rightarrow$ g(x) 
 
 Bài tập 1.76. Tìm cực tri của hàm số
 
-a) y $= \frac{3x^2$ + 4x + $4}{x^2$ + x + $1}b)$ y $=$ x - $\ln(1$ + x)c) y $= \sqrt[3]{(1$ - x)(x - $2)^2}$
+a) y $= \frac{3x^2$ + 4x + $4}{x^2$ + x + $1}$ b) y $=$ x - $\ln(1$ + x) c) y $= \sqrt[3]{(1$ - x)(x - $2)^2}$
 
-Chứng minh. a) y' $= \frac{-x(x+2)}{(x^2+x+1)^2}$, $y_{\text{min}} =$ y(-2) $= \frac{8}{3}$, $y_{\text{max}} =$ y(0) $=$ 4.
+Chứng minh. a) y' $= \frac{-x(x+2)}{(x^2+x+1)^2}$, $y_{\min} =$ y(-2) $= \frac{8}{3}$, $y_{\max} =$ y(0) $=$ 4.
 
 b) y' $= \frac{x}{1+x}$, $y_{\min} =$ y(0) $=$ 0.
 
@@ -4382,11 +4323,9 @@ c) y' $= -\frac{1}{3} \frac{\sqrt[3]{(x-2)^2}}{\sqrt[3]{(1-x)^2}}$ + $\frac{2}{3
 
 • Xét $x_3 =$ 2, ta có $y_{\text{max}} =$ y(2) $=$ 0
 
-$\blacksquare$
-
 Bài tập 1.77. Chứng minh các bất đẳng thức sau
 
-c) $\tan$ x $>$ x + $\frac{x^3}{3} \forall$ 0 $<$ x $< \frac{\pi}{2}$
+c) $\tan$ x $>$ x + $\frac{x^3}{3} \quad \forall$ 0 $<$ x $< \frac{\pi}{2}$
 
 a) $e^x >$ 1 + x $\quad \forall$ x $\neq$ 0
 
@@ -4400,25 +4339,25 @@ Bài tập 1.79. Tính các giới hạn sau
 
 
 
-(c) $\lim_{x\to 0} x^{-5} \left[ \sin(\sin$ x) - x $\sqrt[3]{1$ - $x^2} \right]$,
+(c) $\lim_{x\to 0} x^{-5} \left[ \sin(\sin$ x) - x $\sqrt[3]{1-x^2} \right]$,
 
-(a) $\lim_{x\to\infty} \left[x$ - $x^2 \ln(1+\frac{1}{x})\right]$,
+(a) $\lim_{x\to\infty} \left[$ x - $x^2 \ln(1+\frac{1}{x}) \right]$,
 
 (d) $\lim_{x\to 0} \left[ \ln(1+x)^{\frac{1}{x^2}}$ - $\frac{e^x}{x} \right]$.
 
-(b) $\lim_{x\to 0}\frac{1}{x}\left(\frac{1}{x}-\cot x\right)$,
+(b) $\lim_{x \to 0} \frac{1}{x} \left( \frac{1}{x}$ - $\cot$ x $\right)$,
 
 
 
 
 
-CHƯƠNG Z
+# CHƯƠNG Z
 
 PHÉP TÍNH TÍCH PHÂN MỘT BIÊN SÔ
 
-$\S1$. TÍCH PHÂN BẤT ĐỊNH
+## §1. TÍCH PHÂN BẤT ĐỊNH
 
-## 1.1 Nguyên hàm của hàm số <math>\S</math>1. TÍCH PHÂN BẤT ĐỊNH
+### 1.1 Nguyên hàm của hàm số
 
 # Chương này trình bày về phép tính tích phân, đây là phép toán ngược của phép tính
 
@@ -4428,11 +4367,11 @@ một hàm số F(x) có đạo hàm bằng f(x)? Nếu tồn tại, hãy tìm t
 
 vậy.
 
-Định nghĩa 2.26. Hàm số F(x) được gọi là một nguyên hàm của hàm số f(x) trên khoảng
+#### Định nghĩa 2.26. Hàm số F(x) được gọi là một nguyên hàm của hàm số f(x) trên khoảng
 
-D $\$, $n\hat{e}u$ F'(x) $=$ f(x), $\forall$ x $\in$ D $\$, hay dF(x) $=$ f(x)dx.
+D $\$, $n\hat{e}u \$, F'(x) $=$ f(x), $\$, $\forall$ x $\in$ D $\$, hay $\$, dF(x) $=$ f(x)dx.
 
-### Định lý sau đây nói rằng nguyên hàm của một hàm số cho trước không phải là duy nhất,
+#### Định lý sau đây nói rằng nguyên hàm của một hàm số cho trước không phải là duy nhất,
 
 nếu biết một nguyên hàm thì ta có thể miêu tả được tất cả các nguyên hàm khác của hàm
 
@@ -4442,7 +4381,7 @@ số đó.
 
 • Hàm số F(x) + C cũng là một nguyên hàm của hàm số f(x), với C là một hằng số bất
 
-$k\hat{y}$.
+Кỳ.
 
 • Ngược lại, mọi nguyên hàm của hàm số f(x) đều viết được dưới dạng F(x) + C, trong
 
@@ -4454,19 +4393,19 @@ số C tương ứng cho ta một nguyên hàm.
 
 
 
-Định nghĩa 2.27. Tích phân bất định của một hàm số f(x) là họ các nguyên hàm F(x) +
+#### Định nghĩa 2.27. Tích phân bất định của một hàm số f(x) là họ các nguyên hàm F(x) +
 
 C, với x $\in$ D, trong đó C là một nguyên hàm của hàm số f(x) và C là một hằng số bất
 
 kỳ. Tích phân bất định của f(x)dx được ký hiệu là $\int$ f(x)dx. Biểu thức f(x)dx được gọi là
 
-biểu thức dưới dấu tích phân và hàm số f(x) được gọi là hàm số dưới dấu tích phân.
+$\text{biểu$ thức dưới dấu tích phân và hàm số $}$ f(x) $\text{$ được gọi là hàm số dưới dấu tích $phân.}$
 
 Vậy $\int$ f(x)dx $=$ F(x) + C, với F(x) là nguyên hàm của f(x).
 
 Các tính chất của tích phân bất định
 
-• $\left[ \int$ f(x) dx $\right]' =$ f(x) hay d $\int$ f(x) dx $=$ f(x) dx
+• $\left[ \int$ f(x) dx $\right]' =$ f(x) $\text{$ hay $}$ d $\int$ f(x) dx $=$ f(x) dx
 
 • $\int$ F'(x)dx $=$ F(x) + C $\text{$ hay $} \int$ dF(x) $=$ F(x) + C
 
@@ -4478,7 +4417,7 @@ Hai tính chất cuối cùng là tính chất tuyến tính của tích phân b
 
 chung
 
-$\int [\alpha$ f(x) + $\beta$ g(x)] dx $= \alpha \int$ f(x) dx + $\beta \int$ g(x) dx
+$\int \left[\alpha$ f(x) + $\beta g(x)\right]$ dx $= \alpha \int$ f(x) dx + $\beta \int$ g(x) dx
 
 trong đó $\alpha$, $\beta$ là các hằng số không đồng thời bằng 0.
 
@@ -4488,9 +4427,9 @@ Các công thức tích phân dạng đơn giản
 
 7) $\int e^x$ dx $= e^x$ + C
 
-2) $\int \frac{dx}{x} = \ln$ |x| + C
+2) $\int \frac{dx}{x} = \ln|x|$ + C
 
-8) $\int \frac{dx}{a^2-x^2} = \frac{1}{2a} \ln \left| \frac{a+x}{a-x} \right|$ + C
+8) $\int \frac{dx}{a^2$ - $x^2} = \frac{1}{2a} \ln \left| \frac{a$ + $x}{a$ - $x} \right|$ + C
 
 3) $\int \sin$ x dx $= -\cos$ x + C $\int \cos$ x dx
 
@@ -4504,15 +4443,15 @@ $\sin$ x + C
 
 5) $\int \frac{dx}{\cos^2 x} = \tan$ x + C
 
-6) $\int a^x$ dx $= \frac{a^x}{\ln a}$ + C, (a $>$ 0, a $\neq$ 1)11) $\int \frac{dx}{\sqrt{a^2$ - $x^2}} = \arcsin \frac{x}{a}$ + C
+6) $\int a^x$ dx $= \frac{a^x}{\ln a}$ + C, (a $>$ 0, a $\neq$ 1) 11) $\int \frac{dx}{\sqrt{a^2$ - $x^2}} = \arcsin \frac{x}{a}$ + C
 
-12) $\int \sqrt{a^2$ - $x^2}$ dx $= \frac{1}{2}x\sqrt{a^2$ - $x^2}$ + $\frac{a^2}{2} \arcsin \frac{x}{a}$ + C
+12) $\int \sqrt{a^2$ - $x^2}$ dx $= \frac{1}{2}x\sqrt{a^2$ - $x^2}$ + $\frac{a^2}{2}\arcsin\frac{x}{a}$ + C
 
 13) $\int \sqrt{x^2$ + $a}$ dx $= \frac{1}{2} \left[$ x $\sqrt{x^2$ + $a}$ + a $\ln \left|$ x + $\sqrt{x^2$ + $a} \right| \right]$ + C
 
 
 
-## 1.2 Các phương pháp tính tích phân bất định None
+### 1.2 Các phương pháp tính tích phân bất định
 
 1. Phương pháp khai triển
 
@@ -4524,7 +4463,7 @@ pháp đơn giản là phương pháp khai triển. Phương pháp này dựa tr
 
 tính của tích phân bất định:
 
-$\int [\alpha$ f(x) + $\beta$ g(x)] dx $= \alpha \int$ f(x) dx + $\beta \int$ g(x) dx
+$\int \left[\alpha$ f(x) + $\beta g(x)\right]$ dx $= \alpha \int$ f(x) dx + $\beta \int$ g(x) dx
 
 Ta phân tích hàm số dưới dấu tích phân thành tổng (hiệu) của các hàm số đơn giản
 
@@ -4532,15 +4471,15 @@ mà đã biết được nguyên hàm của chúng, các hằng số được đ
 
 phân.
 
-Ví dụ 1.1. • $\int (2x\sqrt{x}$ - $3x^2)dx =$ 2 $\int x^{\frac{3}{2}}$ dx - 3 $\int x^2$ dx $= \frac{4}{5}x^{\frac{5}{2}}$ - $x^3$ + C
+Ví dụ 1.1. • $\int (2x\sqrt{x}$ - $3x^2)dx = 2\int x^{\frac{3}{2}}dx$ - $3\int x^2dx = \frac{4}{5}x^{\frac{5}{2}}$ - $x^3$ + C
 
-• $\int \left(2\sin$ x + $x^3$ - $\frac{1}{x}\right)$ dx $=$ 2 $\int \sin$ x dx + $\int x^3$ dx - $\int \frac{dx}{x} = -2\cos$ x + $\frac{x^4}{4}$ - $\ln|x|$ + C
+$\bullet \ \int \left(2\sin$ x + $x^3$ - $\frac{1}{x}\right)$ dx $=$ 2 $\int \sin$ x dx + $\int x^3$ dx - $\int \frac{dx}{x} = -2\cos$ x + $\frac{x^4}{4}$ - $\ln|x|$ + C
 
 • $\int \frac{dx}{x^2(1+x^2)} = \int \left(\frac{1}{x^2}$ - $\frac{1}{1+x^2}\right)$ dx $= -\frac{1}{x}$ + $\arctan$ x + C
 
 2. Phương pháp biến đổi biểu thức vi phân
 
-Nhận xét: nếu $\int$ f(x)dx $=$ F(x) + C thì $\int$ f(u)du $=$ F(u) + C, trong đó u $=$ u(x) là
+Nhận xét: nếu $\int$ f(x)dx $=$ F(x) + C thì $\int$ f(u)du $=$ F(u) + C , trong đó u $=$ u(x) là
 
 một hàm số khả vi liên tục. Ta có thể kiểm tra lại bằng cách đạo hàm hai về theo x.
 
@@ -4570,11 +4509,11 @@ Ví dụ 1.2. (a) $\int \sin$ ax dx $= -\frac{1}{a} \cos$ ax + C
 
 (d) $\int \frac{dx}{\cos^4 x} = \int$ (1 + $\tan^2$ x) $d(\tan$ x) $= \frac{\tan^3 x}{3}$ + $\tan$ x + C
 
-(e) $\int x\sqrt{1+3x^2}dx = \frac{1}{6}\int \sqrt{1+3x^2}d(1+3x^2) = \frac{1}{9}(\sqrt{1+3x^2})^3$ + C
+(e) $\int x\sqrt{1+3x^2}dx = \frac{1}{6}\int \sqrt{1+3x^2}d(1+3x^2) = \frac{1}{9}\left(\sqrt{1+3x^2}\right)^3$ + C
 
 (f)
 
-I $= \int \frac{\arccos$ x $\arcsin x}{\sqrt{1-x^2}}$ dx $= \int \left(\frac{\pi}{2}$ - $\arcsin x\right) \arcsin$ x $d(\arcsin$ x)
+I $= \int \frac{\arccos$ x $\arcsin x}{\sqrt{1$ - $x^2}}$ dx $= \int \left(\frac{\pi}{2}$ - $\arcsin x\right) \arcsin$ x $d(\arcsin$ x)
 
 nên
 
@@ -4582,7 +4521,7 @@ $\Rightarrow$ I $= \frac{\pi}{4} \arcsin^2$ x - $\frac{1}{3} \arcsin^3$ x + C
 
 3. Phương pháp đổi biến
 
-Xét tích phân I $= \int$ f(x)dx, trong đó f(x)là một hàm số liên tục. Để tính tích phân
+Xét tích phân I $= \int$ f(x) dx, trong đó f(x)là một hàm số liên tục. Để tính tích phân
 
 này, ta tìm cách chuyển sang tính tích phân khác của một hàm số khác bằng một
 
@@ -4596,7 +4535,7 @@ Phép đổi biến thứ nhất:
 
 ta có
 
-I $= \int$ f(x)dx $= \int f[\varphi(t)] \varphi'(t)dt$
+I $= \int$ f(x)dx $= \int f[\varphi(t)]\varphi'(t)dt$
 
 Giả sử hàm số g(t) $= f[\varphi(t)] \varphi'(t)$ có nguyên hàm là hàm G(t), và t $=$ h(x) là hàm
 
@@ -4610,11 +4549,11 @@ Phép đổi biến thứ hai:
 
 f(x) $= g[\psi(x)] \psi'(x)$. Khi đó ta có
 
-I $= \int$ f(x)dx $= \int g[\psi(x)]\psi'(x)dx$
+I $= \int$ f(x)dx $= \int g\left[\psi(x)\right]\psi'(x)dx$
 
 Giả sử hàm số g(t) có nguyên hàm là hàm số G(t), ta có
 
-I $= G[\psi(x)]$ + C
+I $= G\left[\psi(x)\right]$ + C
 
 Chú ý: Khi tính tích phân bất định bằng phương pháp đổi biến số, sau khi tìm được
 
@@ -4624,9 +4563,9 @@ nguyên hàm theo biến số mới, phải đổi lai thành hàm số của bi
 
 Ví dụ 1.3. (a) Tính tích phân $I_1 = \int \sqrt{\frac{x}{2-x}}$ dx
 
-$D\check{a}t$ x $= 2\sin^2$ t, t $\in$ [0, $\frac{\pi}{2}]$, ta $\$ tinh $\$ ducoc
+$D\check{a}t$ x $= 2\sin^2$ t, t $\in \left[0$, $\frac{\pi}{2}\right]$, $\text{$ ta tính $được}$
 
-dx $=$ 4 $\sin$ t $\cos$ t dt, $\sqrt{\frac{x}{2-x}} = \sqrt{\frac{2 \sin^2 t}{2(1$ - $\sin^2 t)}} = \tan$ t
+dx $= 4\sin$ t $\cos$ t dt, $\sqrt{\frac{x}{2-x}} = \sqrt{\frac{2\sin^2 t}{2(1-\sin^2 t)}} = \tan$ t
 
 Suy ra
 
@@ -4638,7 +4577,7 @@ $I_1 = \int \sqrt{\frac{x}{2-x}}$ dx $=$ 2 $\arcsin \sqrt{\frac{x}{2}$ - $\sqrt{
 
 (b) Tính tích phân $I_2 = \int \frac{e^{2x}}{e^x$ + $1}$ dx
 
-$\mathbf{D}\breve{\mathbf{a}}\mathbf{t} e^x =$ t $\Rightarrow e^x$ dx $=$ dt, ta có
+$\text{D\"at} e^x =$ t $\Rightarrow e^x$ dx $=$ dt, ta có
 
 $I_2 = \int \frac{t}{t+1}$ dt $= \int \left(1$ - $\frac{1}{t+1}\right)$ dt $=$ t - $\ln|t+1|$ + C
 
@@ -4646,9 +4585,9 @@ $I_2 = \int \frac{t}{t+1}$ dt $= \int \left(1$ - $\frac{1}{t+1}\right)$ dt $=$ t
 
 (c) Tính tích phân $I_3 = \int \frac{dx}{\sqrt{1+4x}}$
 
-$\mathbf{D}\mathbf{a}t$ t $= 2^{-x} \Rightarrow$ dt $= -2^{-x} \ln$ 2dx, tích phân trở thành
+$\textit{Dăt }$ t $= 2^{-x} \Rightarrow$ dt $= -2^{-x} \ln$ 2dx, tích phân trở thành
 
-$I_3 = \int \frac{-at}{t \ln 2\sqrt{1+t^{-2}}} = -\frac{1}{\ln 2} \int \frac{dt}{\sqrt{t^2+1}} = -\frac{1}{\ln 2} \ln(t$ + $\sqrt{t^2+1})$ + C
+$I_3 = \int \frac{-dt}{t \ln 2\sqrt{1+t^{-2}}} = -\frac{1}{\ln 2} \int \frac{dt}{\sqrt{t^2+1}} = -\frac{1}{\ln 2} \ln(t+\sqrt{t^2+1})$ + C
 
 Đổi lại biến x, ta có:
 
@@ -4676,7 +4615,7 @@ $\int$ udv $=$ uv - $\int$ vdu
 
 Xét tích phân I $= \int$ f(x) dx. Ta cần biểu diễn
 
-f(x)dx $=$ [g(x)h(x)] dx $=$ g(x) [h(x)dx $=$ udv
+f(x)dx $=$ [g(x)h(x)] dx $=$ g(x) [h(x)dx] $=$ u dv
 
 và áp dụng công thức tích phân từng phần với các hàm số u $=$ g(x), v $= \int$ h(x) dx. Ta
 
@@ -4690,9 +4629,9 @@ thường chọn u $= x^n$.
 
 • Trong các tích phân $\int x^{\alpha} \ln^{n}$ x dx, $\alpha \neq$ -1 và n nguyên dương, ta thường chọn
 
-$u=\ln^n$ x.
+u $= \ln^n$ x.
 
-• Trong tích phân $\int x^n$ arctan kxdx; $\int x^n$ arcsin kxdx, n nguyên dương, ta thường
+• Trong tích phân $\int x^n \arctan$ kx dx; $\int x^n \arcsin$ kx dx, n nguyên dương, ta thường
 
 chọn u $= \arctan$ kx hoặc u $= \arcsin$ kx; dv $= x^n$ dx.
 
@@ -4702,47 +4641,47 @@ Ví dụ 1.5. Tính các tích phân bất định
 
 (b) $I_2 = \int x^2 \sin$ x dx
 
-$\mathbf{D}\mathbf{a}t$ u $= x^2$, dv $= \sin$ x dx $\Rightarrow$ v $= -\cos$ x, ta duoc
+$\mathbf{D}\mathbf{a}t\,u = x^2$, dv $= \sin$ x dx $\Rightarrow$ v $= -\cos$ x, ta duoc
 
 $I_2 = -x^2 \cos$ x + 2 $\int$ x $\cos$ x dx
 
-$\mathbf{D}\breve{\mathbf{a}}\mathbf{t}$ u $=$ x, dv $= \cos$ x dx $\Rightarrow$ v $= \sin$ x, $\mathbf{t}\mathbf{a} \mathbf{d} \mathbf{u} \mathbf{c}$
+$\textit{D\~at}$ u $=$ x, dv $= \cos$ x dx $\Rightarrow$ v $= \sin$ x, $\textit{ta duc}$
 
-$I_2 = -x^2 \cos$ x + 2(x $\sin$ x - $\int \sin$ x dx) $= -x^2 \cos$ x + 2x $\sin$ x + 2 $\cos$ x + C
+$I_2 = -x^2 \cos$ x + $2\left(x \sin$ x - $\int \sin$ x $dx\right) = -x^2 \cos$ x + 2x $\sin$ x + $2\cos$ x + C
 
 (c) $I_3 = \int \frac{xe^x dx}{(x+1)^2}$
 
-$\mathbf{D}\mathbf{a}$ t u $= xe^{x};$ dv $= \frac{dx}{(x+1)^{2}} \Rightarrow$ v $= -\frac{1}{x+1};$ du $= (x+1)e^{x}$ dx, ta dugc
+$\textit{Đ\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$
 
 $I_3 = -\frac{xe^x}{x+1}$ + $\int e^x$ dx $= -\frac{xe^x}{x+1}$ + $e^x$ + C $= \frac{e^x}{x+1}$ + C
 
 (d) $I_4 = \int \frac{xe^x dx}{\sqrt{1+e^x}}$
 
-$D\check{a}t \sqrt{1+e^x} =$ t $\Rightarrow \frac{e^x dx}{\sqrt{1+e^x}} =$ 2dt, ta có $I_4 =$ 2 $\int$ [ln(t-1) + ln(t+1)] dt $=$ 2(t-1)
+$\boldsymbol{D}\boldsymbol{\breve{a}}t\,\sqrt{1+e^x}=\,t\Rightarrow\frac{e^xdx}{\sqrt{1+e^x}}=2dt$, ta có $I_4=2\,\int\,\left[\ln(t-1)+\ln(t+1)\right]dt\,=\,2(t-1)$
 
-1) $\ln(t-1)$ + $2(t+1)\ln(t+1)$ - 4t + C Đổi lại biến x ta có
+1) $\ln(t-1)$ + 2(t+1) $\ln(t+1)$ - 4t + C $\hat{D} \vec{o}i \hat{la} \vec{h} \vec{a} \vec{b} \vec{h} \vec{a} \vec{b}$
 
-$\int \frac{xe^{x} dx}{\sqrt{1+e^{x}}} = 2(x-2)\sqrt{1+e^{x}}$ + $4\ln\left(1+\sqrt{1+e^{x}}\right)$ - 2x + C
+$\int \frac{xe^{x}dx}{\sqrt{1+e^{x}}} = 2(x-2)\sqrt{1+e^{x}}$ + $4\ln\left(1+\sqrt{1+e^{x}}\right)$ - 2x + C
 
 
 
 (e) $I_5 = \int \frac{x \arcsin x}{\sqrt{1-x^2}}$ dx
 
-$\mathbf{D}\mathbf{a}$ t u $= \arcsin$ x; dv $= \frac{xdx}{\sqrt{1-x^2}} \Rightarrow$ du $= \frac{dx}{\sqrt{1-x^2}};$ v $= -\sqrt{1-x^2}$, ta duc
+$\textit{Đ\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$
 
 $I_5 = -\sqrt{1-x^2} \arcsin$ x + $\int$ dx $= -\sqrt{1-x^2} \arcsin$ x + x + C
 
 (f) $I_6 = \int e^x \cos$ 2x dx
 
-$\mathbf{D}\mathbf{a}$ t u $= \cos$ 2x; dv $= e^x$ dx $\Rightarrow$ v $= e^x;$ du $=$ -2 $\sin$ 2x dx, ta duoc
+$\mathbf{D}\mathbf{a}t \$, u $= \cos$ 2x; dv $= e^x$ dx $\Rightarrow$ v $= e^x;$ du $= -2\sin$ 2x dx, $\$, ta $\$, $d\mathbf{u}c$
 
 $I_6 = e^x \cos$ 2x + 2 $\int e^x \sin$ 2x dx
 
-$\mathbf{D}\mathbf{a}$ t u $= \sin$ 2x; dv $= e^x$ dx $\Rightarrow$ v $= e^x;$ du $=$ 2 $\cos$ 2x dx, ta duoc
+$\mathbf{D}\mathbf{a}t \$, u $= \sin$ 2x; dv $= e^x$ dx $\Rightarrow$ v $= e^x;$ du $= 2\cos$ 2x dx, $\$, ta $\$, $d\mathbf{u}c$
 
-$I_6 = e^x \cos$ 2x + 2 $\left( e^x \sin$ 2x - 2 $\int e^x \cos$ 2x dx $\right) = e^x \cos$ 2x + $2e^x \sin$ 2x - $4I_6$ + 5C
+$I_6 = e^x \cos$ 2x + $2\left(e^x \sin$ 2x - $2\int e^x \cos$ 2x $dx\right) = e^x \cos$ 2x + $2e^x \sin$ 2x - $4I_6$ + 5C
 
-$V_{\hat{a}y} I_6 = \frac{e^x}{5} (\cos$ 2x + 2 $\sin$ 2x) + C.
+$V\hat{a}y I_6 = \frac{e^x}{5} (\cos$ 2x + 2 $\sin$ 2x) + C.
 
 Ví dụ 1.6 (Giữa kì, K61). Tính tích phân
 
@@ -4758,9 +4697,9 @@ Ví dụ 1.7 (Ngụy biện toán học). Chứng minh rằng 0 $=$ 1.
 
 Chứng minh. Xét tích phân
 
-I $= \int \frac{dx}{x \ln x} = \int \frac{1}{\ln x}$ d $\ln$ x
+I $= \int \frac{dx}{x \ln x} = \int \frac{1}{\ln x} d\ln$ x
 
-$= \frac{1}{\ln x} \cdot \ln$ x - $\int \ln$ x $d\left(\frac{1}{\ln x}\right)$ (tích phân từng phần)
+$= \frac{1}{\ln x} \cdot \ln$ x - $\int \ln$ x $d\left(\frac{1}{\ln x}\right) \quad \text{(tích$ phân từng $phần)}$
 
 $=$ 1 - $\int \ln$ x $\cdot \frac{-1}{\ln^2 x} \cdot \frac{1}{x}$ dx
 
@@ -4770,8 +4709,6 @@ $=$ 1 + I.
 
 Phương trình I $=$ 1 + I dẫn đến 0 $=$ 1. Sai lầm ở đâu?
 
-$\qquad \qquad \blacksquare$
-
 Trong các mục sau đây chúng ta sẽ xét tích phân bất định của một số dạng hàm cơ
 
 bản: hàm phân thức hữu tỷ, hàm lượng giác, hàm chứa căn thức; và trình bày một
@@ -4780,11 +4717,11 @@ số phương pháp giải chung đối với tích phân các hàm này.
 
 
 
-## 1.3 Tích phân hàm phân thức hữu tỷ None
+### 1.3 Tích phân hàm phân thức hữu tỷ
 
-Định nghĩa 2.28. Một hàm phân thức hữu tỷ là một hàm số có dạng f(x) $= \frac{P(x)}{O(x)}$, trong
+#### Định nghĩa 2.28. Một hàm phân thức hữu tỷ là một hàm số có dạng f(x) = \frac{P(x)}{O(x)}, trong
 
-đó P(x), Q(x) là các đa thức của x. Một phân thức hữu tỷ có bậc của đa thức ở tử số nhỏ
+$d\acute{o}$ P(x), Q(x) là các đa thức của x. Một phân thức hữu tỷ có bậc của đa thức ở tử số nhỏ
 
 hơn bậc của đa thức ở mẫu số là một phân thức hữu tỷ thực sự.
 
@@ -4816,7 +4753,7 @@ ta phân tích đa thức ở mẫu số Q(x) thành tích của các đa thức
 
 nghiệm
 
-Q(x) $=$ (x - $\alpha_1)^{a_1}...(x$ - $\alpha_m)^{a_m}(x^2$ + $p_1x$ + $q_1)^{b_1}...(x^2$ + $p_nx$ + $q_n)^{b_n}$
+Q(x) $=$ (x - $\alpha_1)^{a_1} \dots$ (x - $\alpha_m)^{a_m} (x^2$ + $p_1$ x + $q_1)^{b_1} \dots (x^2$ + $p_n$ x + $q_n)^{b_n}$
 
 trong đó $\alpha_i$, $p_j$, $q_j$ là các hằng số, $a_i$, $b_j$ là các số nguyên dương, 1 $\le$ i $\le$ m; 1 $\le$ j $\le$ n.
 
@@ -4842,47 +4779,47 @@ I. $\int \frac{A dx}{x-a}$
 
 II. $\int \frac{Adx}{(x-a)^k} \$ (k $\ge$ 2)
 
-III. $\int \frac{(Mx$ + $N)dx}{x^2$ + nx + $a}$
+III. $\int \frac{(Mx+N)dx}{x^2+nx+a}$
 
-IV. $\int \frac{(Mx$ + $N)dx}{(x^2$ + px + $a)^m} \$ (m $\ge$ 2)
+IV. $\int \frac{(Mx+N)dx}{(x^2+px+a)^m} \ (m\geq$ 2)
 
 trong đó
 
 
 
-1. $\int \frac{Adx}{x-a} =$ A $\ln$ |x-a| + C
+1. $\int \frac{A dx}{x-a} =$ A $\ln|x-a|$ + C
 
 2. $\int \frac{A dx}{(x-a)^k} = \int A(x-a)^{-k}$ dx $= \frac{-A}{(k-1)(x-a)^{k-1}}$ + C
 
 3.
 
-$\int \frac{(Mx$ + $N)dx}{x^2$ + px + $a} = \int \frac{Mt$ + (N - $Mp/2)}{t^2$ + $a^2}$ dt $\quad$ (a $= \sqrt{q$ - $p^2/4}$, $\text{$ đối biến $}$ t $=$ x + p/2)
+$\int \frac{(Mx$ + $N)dx}{x^2$ + px + $a} = \int \frac{Mt$ + (N - $Mp/2)}{t^2$ + $a^2}$ dt $\quad$ (a $= \sqrt{q$ - $p^2/4}$, $\text{ d\n{o}\n{i} bi\n{e}\nn{n}$ t $=$ x + p/2)
 
-$=\int \frac{Mtdt}{t^2$ + $a^2}$ + $\int \frac{(N$ - $Mp/2)dt}{t^2$ + $a^2}$
+$= \int \frac{Mtdt}{t^2$ + $a^2}$ + $\int \frac{(N$ - $Mp/2)dt}{t^2$ + $a^2}$
 
-$=\frac{M}{2}\ln(t^2+a^2)+\frac{1}{2}(N-Mp/2)\arctan\frac{t}{a}+C$
+$=\frac{M}{2}\ln(t^2+a^2)+\frac{1}{a}(N-Mp/2)\arctan\frac{t}{a}+C$
 
-$= \frac{M}{2}\ln(x^2$ + px + q) + $\frac{2N$ - $Mp}{\sqrt{4a$ - $p^2}} \arctan \frac{2x$ + $p}{\sqrt{4a$ - $p^2}}$ + C.
+$= \frac{M}{2}\ln(x^2$ + px + q) + $\frac{2N$ - $Mp}{\sqrt{4a$ - $p^2}}\arctan\frac{2x$ + $p}{\sqrt{4a$ - $p^2}}$ + C.
 
 4.
 
-$\int \frac{(Mx+N)dx}{(x^2+px+q)^m} = \int \frac{Mt$ + $(N-Mp/2)}{(t^2+a^2)^m}$ dt $\quad$ (a $= \sqrt{q-p^2/4}$, $\text{ d\text{o}i bi\text{\'en }$ t $= x+p/2})$
+$\int \frac{(Mx+N)dx}{(x^2+px+q)^m} = \int \frac{Mt$ + $(N-Mp/2)}{(t^2+a^2)^m}$ dt $\quad (a=\sqrt{q-p^2/4}$, $\text{ d\n{0}i bi\n{e}\nn{f}\n{e} =$ x+p/2)
 
-$= \int \frac{Mt dt}{(t^2$ + $a^2)^m}$ + $\int \frac{(N$ - $Mp/2)dt}{(t^2$ + $a^2)^m}$
+$= \int \frac{Mtdt}{(t^2$ + $a^2)^m}$ + $\int \frac{(N$ - $Mp/2)dt}{(t^2$ + $a^2)^m}$
 
 • Tích phân thứ nhất $\int \frac{Mtdt}{(t^2+a^2)^m} = -\frac{M}{2(m-1)(t^2+a^2)^{m-1}}$ + C.
 
 • Muốn xử lý tích phân thứ hai ta thực hiện phép đổi biến số lượng giác t $=$ a $\tan$ z,
 
-$ khi đó \begin{cases} t^2 + a^2 = \frac{a^2}{\cos^2 z}, \\ dt = \frac{a}{\cos^2 z} dz. \end{cases} $
+$ khi đó \begin{cases} t^2 + a^2 = \frac{a^2}{\cos^2 z}, \ dt = \frac{a}{\cos^2 z} dz. \end{cases} $
 
 Ta có
 
-$\int \frac{dt}{(t^2 \pm a^2)^m} = a^{2m-1} \int \cos^{2m-2}$ z dz.
+$\int \frac{dt}{(t^2 \perp a^2)^m} = a^{2m-1} \int \cos^{2m-2}$ z dz.
 
 Tích phân của hàm lượng giác này sẽ được nghiên cứu kĩ ở phần sau.
 
-Ví du 1.8. Tính các tích phân bất định
+Ví dụ 1.8. Tính các tích phân bất định
 
 a. $I_1 = \int \frac{x^4$ - $x^3$ + $2x^2$ - 2x + $1}{(x^2$ + 2)(x - $1)}$ dx
 
@@ -4896,7 +4833,7 @@ Quy đồng mẫu số ở hai vế
 
 
 
-$ Đồng nhất hệ số của x<sup>2</sup>, x và hệ số tự do, ta được \begin{cases} A + B = 0 \\ C - B + 2 = 0 \end{cases} \Rightarrow \begin{cases} A = 1 \\ B = -1 \\ C = -1 \end{cases} $
+$ \textit{Đồng nhất hệ số của }x^2, x \textit{ và hệ số tự do, ta được }\begin{cases} A+B=0\\ C-B+2=0 \end{cases} \Rightarrow \begin{cases} A=1\\ B=-1\\ C=-1 \end{cases} $
 
 Suy ra
 
@@ -4918,13 +4855,13 @@ I $=$ 2x + $2\ln|x+1|$ + $\frac{1}{x+1}$ - $2\sqrt{2}\arctan\frac{x+1}{\sqrt{2}}
 
 Ví dụ 1.9 (Giữa kì, K61). Tính các tích phân sau
 
-a) $\int \frac{1}{x^2+2016x}$ dx.
+a) $\int \frac{1}{x^2$ + $2016x}$ dx.
 
 c) $\int \frac{xdx}{(x^2+1)(x^2+2)}$.
 
 d) $\int \frac{xdx}{(x^2+2)(x^2+3)}$.
 
-b) $\int \frac{1}{x^2-2016x}$ dx.
+b) $\int \frac{1}{x^2$ - $2016x}$ dx.
 
 Ví dụ 1.10 (Giữa kì, K61). Tính tích phân
 
@@ -4932,7 +4869,7 @@ a) $\int$ x $\ln(x^2$ + x + 1) dx.
 
 b) $\int$ x $\ln(x^2$ - x + 1) dx.
 
-## 1.4 Tích phân hàm lượng giác b) <math display="block">\int x \ln(x^2 - x + 1) dx.</math>
+### 1.4 Tích phân hàm lượng giác
 
 1. Phương pháp chung
 
@@ -4952,9 +4889,9 @@ Ta viết
 
 $\int \frac{\sin$ x - $\cos$ x + $2}{1$ + $\sin$ x + $\cos x}$ dx $= -\int \frac{d(1$ + $\sin$ x + $\cos x)}{1$ + $\sin$ x + $\cos x}$ + $2\int \frac{dx}{1$ + $\sin$ x + $\cos x}$
 
-$\tilde{B}at$ t $= \tan \frac{x}{2}$, suy ra
+$\widetilde{D}ăt$ t $= \tan \frac{x}{2}$, suy ra
 
-$\int \frac{dx}{1$ + $\sin$ x + $\cos x} = \int \frac{dt}{1$ + $t} = \ln|1$ + t| + C
+$\int \frac{dx}{1+\sin x+\cos x} = \int \frac{dt}{1+t} = \ln|1+t|$ + C
 
 Thay lai biến cũ, ta được
 
@@ -4976,7 +4913,7 @@ Ví dụ 1.12. Tính các tích phân bất định
 
 $I_1 = \int \sin^3$ x $\cos^2$ x dx
 
-$D\breve{a}t\cos$ x $=$ t $\Rightarrow -\sin$ x dx $=$ dt ta có
+$\textit{D\~at} \cos$ x $=$ t $\Rightarrow -\sin$ x dx $=$ dt $\textit{ta c\'o}$
 
 $\int \sin^3$ x $\cos^2$ x dx $= \int$ (1 - $t^2)t^2(-dt) = \frac{t^5}{5}$ - $\frac{t^3}{3}$ + C $= \frac{\cos^5 x}{5}$ - $\frac{\cos^3 x}{3}$ + C
 
@@ -4988,7 +4925,7 @@ $I_2 = \int \frac{(1$ - $\cos 2x)^2}{4} \frac{1$ + $\cos 2x}{2}$ dx $= \frac{1}{
 
 $\Rightarrow I_2 = \frac{1}{8} \left($ x - $\frac{\sin 2x}{2}$ - $\int \frac{1$ + $\cos 4x}{2}$ dx + $\frac{1}{2} \int$ (1 - $\sin^2$ 2x) $d(\sin$ 2x) $\right)$
 
-Vây
+Vậy
 
 $\Rightarrow I_2 = \frac{1}{8} \left( \frac{x}{2}$ - $\frac{\sin 2x}{2}$ - $\frac{\sin 4x}{8}$ + $\frac{\sin 2x}{2}$ - $\frac{\sin^3 2x}{6} \right)$ + C
 
@@ -4998,7 +4935,7 @@ $\hat{D}ói$ với tích phân $I_2$ sau khi sử dụng công thức hạ bậc
 
 thể tiếp tục hạ bậc của biểu thức lượng giác dưới dấu tích phân bởi công thức
 
-$\sin^3$ x $= \frac{3 \sin$ x - $\sin 3x}{4}; \cos^3$ x $= \frac{3 \cos$ x + $\cos 3x}{4}$
+$\sin^3$ x $= \frac{3\sin$ x - $\sin 3x}{4}; \cos^3$ x $= \frac{3\cos$ x + $\cos 3x}{4}$
 
 $\acute{A}p$ dụng vào tích phân $I_2$, ta có:
 
@@ -5016,25 +4953,25 @@ $=\frac{1}{8}\left(\frac{x}{2}-\frac{\sin 2x}{8}-\frac{\sin 4x}{8}+\frac{\sin 6x
 
 Ví dụ 1.13. Tính tích phân $\int \frac{dx}{\sin$ x $\cos^4 x}$
 
-$\mathbf{D}\mathbf{\breve{a}}t$ t $= \cos$ x $\Rightarrow$ dt $= -\sin$ x dx, $\mathbf{t}\mathbf{a} \mathbf{c}\mathbf{\breve{o}}$
+$\textit{D\~at}$ t $= \cos$ x $\Rightarrow$ dt $= -\sin$ x $\$, dx, $\$, $\textit{ta\ co}$
 
 $\int \frac{dx}{\sin$ x $\cos^4 x} = \int \frac{-dt}{(1-t^2)t^4} = \int \left| \frac{1}{t^4}$ + $\frac{1}{t^2}$ + $\frac{1}{2(t-1)}$ - $\frac{1}{2(t+1)} \right|$ dt
 
-$= -\frac{1}{3t^3}$ - $\frac{1}{t}$ + $\frac{1}{2} \ln \left| \frac{t-1}{t+1} \right|$ + C
+$=-\frac{1}{3t^3}-\frac{1}{t}+\frac{1}{2}\ln\left|\frac{t-1}{t+1}\right|+C$
 
 nên
 
 $\int \frac{dx}{\sin$ x $\cos^4 x} = -\frac{1}{3 \cos x^3}$ - $\frac{1}{\cos x}$ + $\frac{1}{2} \ln \frac{1$ - $\cos x}{1$ + $\cos x}$ + C
 
-## 1.5 Tích phân các biểu thức vô tỷ <math display="block">\int \frac{dx}{\sin x \cos^4 x} = -\frac{1}{3 \cos x^3} - \frac{1}{\cos x} + \frac{1}{2} \ln \frac{1 - \cos x}{1 + \cos x} + C</math>
+### 1.5 Tích phân các biểu thức vô tỷ
 
 Xét các tích phân có dang
 
-$\bullet \int R(x,\sqrt{x^2+\alpha^2})dx$,
+$\bullet \ \int R(x,\sqrt{x^2+\alpha^2})dx$,
 
-$\bullet \int R(x,\sqrt{x^2-\alpha^2})dx$,
+$\bullet \ \int R(x,\sqrt{x^2-\alpha^2})dx$,
 
-$\bullet \int R(x,\sqrt{\alpha^2-x^2})dx$,
+$\bullet \ \int R(x,\sqrt{\alpha^2-x^2})dx$,
 
 trong đó R(u, v) là các hàm số hữu tỷ.
 
@@ -5058,15 +4995,15 @@ Phép thế lượng giác
 
 • Đặt x $= \alpha \sin$ t hoặc x $= \alpha \cos$ t đối với tích phân $\int$ R(x, $\sqrt{\alpha^2$ - $x^2})$ dx.
 
-Ví dụ 1.14. Tính $\int \frac{dx}{\sqrt{a^2-x^2}}$.
+Ví dụ 1.14. Tính $\int \frac{dx}{\sqrt{\alpha^2-x^2}}$.
 
-$ [Lời giải] Đặt x = \alpha \sin t, -\frac{\pi}{2} < t < \frac{\pi}{2} ta có \begin{cases} t = \arcsin \frac{x}{\alpha}, \\ dx = \alpha \cos t dt, \\ \frac{1}{\sqrt{\alpha^2 - x^2}} = \frac{1}{\alpha \cos t}. \end{cases} $
+$ \text{[Lời giải] Đặt } x = \alpha \sin t, -\frac{\pi}{2} < t < \frac{\pi}{2} \text{ ta có } \begin{cases} t = \arcsin \frac{x}{\alpha}, \\ dx = \alpha \cos t dt, \\ \frac{1}{\sqrt{\alpha^2 - x^2}} = \frac{1}{\alpha \cos t}. \end{cases} $
 
-I $= \int$ dt $=$ t + C $= \arcsin \frac{x}{\alpha}$ + C
+I $= \int$ dt $=$ t + C $= \arcsin\frac{x}{\alpha}$ + C
 
 Ví dụ 1.15. Tính $\int \sqrt{\alpha^2$ - $x^2}$ dx.
 
-$ [Lời giải] Đặt x = \alpha \sin t, -\frac{\pi}{2} \le t \le \frac{\pi}{2} ta có \begin{cases} t = \arcsin \frac{x}{\alpha}, \\ dx = \alpha \cos t dt, \\ \sqrt{\alpha^2 - x^2} = \alpha \cos t. \end{cases} $
+$ \text{[L\text{o}i gi\text{\'{a}i}]} \ \text{Đặt } x = \alpha \sin t, -\frac{\pi}{2} \leq t \leq \frac{\pi}{2} \text{ ta có } \begin{cases} t = \arcsin \frac{x}{\alpha}, \\ dx = \alpha \cos t dt, \\ \sqrt{\alpha^2 - x^2} = \alpha \cos t. \end{cases} $
 
 I $= \alpha^2 \int \cos^2$ t dt $= \alpha^2 \int \frac{1$ + $\cos 2t}{2}$ dt $= \frac{\alpha^2}{2}$ t + $\frac{\alpha^2}{4} \sin$ 2t $= \frac{1}{2}$ x $\sqrt{\alpha^2$ - $x^2}$ + $\frac{\alpha^2}{2} \arcsin \frac{x}{\alpha}$ + C.
 
@@ -5076,13 +5013,13 @@ Phép thế Euler
 
 nghĩa là a $= \pm \alpha^2$ đều áp dụng được. Khi đó,
 
-dt $=$ 1 + $\frac{x}{\sqrt{x^2$ + $a}} = \frac{x$ + $\sqrt{x^2$ + $a}}{\sqrt{x^2$ + $a}}$ dx $\Rightarrow \frac{dt}{t} = \frac{dx}{\sqrt{x^2$ + $a}}$
+dt $=$ 1 + $\frac{x}{\sqrt{x^2$ + $a}} = \frac{x$ + $\sqrt{x^2$ + $a}}{\sqrt{x^2$ + $a}}$ dx $\Rightarrow \frac{dt}{t} = \frac{dx}{\sqrt{x^2$ + $a}}$,
 
 và tích phân đã cho được đưa về tích phân của phân thức hữu tỉ.
 
 
 
-• $Đặt\sqrt{\alpha^2$ - $x^2} =$ xt + $\alpha$ đối với tích phân $\int R(x,\sqrt{\alpha^2$ - $x^2})dx$. Khi đó,
+• $Đặt\sqrt{\alpha^2$ - $x^2} =$ xt + $\alpha$ đối với tích phân $\int$ R(x, $\sqrt{\alpha^2$ - $x^2})$ dx,. Khi đó,
 
 $\alpha^2$ - $x^2 =$ (xt + $\alpha)^2 \Leftrightarrow \alpha^2$ - $x^2 = x^2t^2$ + $2\alpha$ xt + $\alpha^2 \Leftrightarrow$ x $= -\frac{2\alpha t}{1$ + $t^2}$,
 
@@ -5100,11 +5037,11 @@ Ví dụ 1.17. Tính $\int \sqrt{x^2$ + $a}$ dx.
 
 I $= x\sqrt{x^2$ + $a}$ - $\int \frac{x^2}{\sqrt{x^2$ + $a}}$ dx
 
-$= x\sqrt{x^2$ + $a}$ - $\int \frac{(x^2$ + a) - $a}{\sqrt{x^2$ + $a}}$ dx
+$=x\sqrt{x^2+a}-\int \frac{(x^2+a)-a}{\sqrt{x^2+a}}dx$
 
 (2.1)
 
-$= x\sqrt{x^2$ + $a}$ + a $\int \frac{1}{\sqrt{x^2$ + $a}}$ dx - I.
+$= x\sqrt{x^2+a}$ + a $\int \frac{1}{\sqrt{x^2+a}}$ dx - I.
 
 Do đó,
 
@@ -5118,7 +5055,7 @@ tính bốn loại tích phân cơ bản sau
 
 2. $\int \sqrt{\alpha^2$ - $x^2}$ dx $= \frac{1}{2}x\sqrt{\alpha^2$ - $x^2}$ + $\frac{\alpha^2}{2} \arcsin \frac{x}{\alpha}$ + C.
 
-3. $\int \frac{dx}{\sqrt{x^2+a}} = \ln$ |x + $\sqrt{x^2+a}|$ + C.
+3. $\int \frac{dx}{\sqrt{x^2+a}} = \ln|x+\sqrt{x^2+a}|$ + C.
 
 4. $\int \sqrt{x^2$ + $a}$ dx $= \frac{1}{2} \left[$ x $\sqrt{x^2$ + $a}$ + a $\ln \left|$ x + $\sqrt{x^2$ + $a} \right| \right]$ + C.
 
@@ -5126,21 +5063,21 @@ Ví du 1.18. Tính các tích phân sau
 
 a) $\int (1-x^2)^{-\frac{3}{2}}$ dx
 
-$\tilde{B} \tilde{a} \tilde{t}$ x $= \sin$ t, t $\in \left[-\frac{\pi}{2}$, $\frac{\pi}{2}\right] \Rightarrow$ dx $= \cos$ t dt, $\sqrt{1$ - $x^2} = \cos$ t, thi
+$\textit{Đặt }$ x $= \sin$ t, t $\in \left[-\frac{\pi}{2}$, $\frac{\pi}{2}\right] \Rightarrow$ dx $= \cos$ t dt, $\sqrt{1$ - $x^2} = \cos$ t, $\textit{thi}$
 
 $\int$ (1 - $x^2)^{-\frac{3}{2}}$ dx $= \int \frac{dt}{\cos^2 t} = \tan$ t + C $= \tan(\arcsin$ x) + C
 
 
 
-b) $\int \frac{dx}{x^2 \sqrt{1+x^2}}$
+b) $\int \frac{dx}{x^2\sqrt{1+x^2}}$
 
-$D\check{a}t$ x $= \tan$ t $\Rightarrow$ dx $= \frac{dt}{\cos^2 t}$, ta có
+$\textit{Đặt }$ x $= \tan$ t $\Rightarrow$ dx $= \frac{dt}{\cos^2 t}$, $\textit{$ ta $có}$
 
-$\int \frac{dx}{x^2 \sqrt{1$ + $x^2}} = \int \frac{\cos$ t $dt}{\sin^2 t} = -\frac{1}{\sin t}$ + C $= -\frac{1}{\sin(\arctan x)}$ + C.
+$\int \frac{dx}{x^2\sqrt{1+x^2}} = \int \frac{\cos$ t $dt}{\sin^2 t} = -\frac{1}{\sin t}$ + C $= -\frac{1}{\sin(\arctan x)}$ + C.
 
 c) $\int \frac{dx}{\sqrt{x^2+x+1}}$.
 
-Ta $\ c\acute{o}$
+Ta có
 
 I $= \int \frac{d\left(x$ + $\frac{1}{2}\right)}{\sqrt{\left(x$ + $\frac{1}{2}\right)^2$ + $\frac{3}{4}}} = \ln\left|x$ + $\frac{1}{2}$ + $\sqrt{x^2$ + x + $1}\right|$ + C.
 
@@ -5148,7 +5085,7 @@ Tích phân có dạng $\int \frac{px+q}{\sqrt{ax^2+bx+c}}$ dx
 
 Viết
 
-$\int \frac{px+q}{\sqrt{ax^2+bx+c}}dx = \frac{p}{2a}\int \frac{d(ax^2+bx+c)}{\sqrt{ax^2+bx+c}}$ + $\left(q-\frac{pb}{2a}\right)\int \frac{1}{\sqrt{ax^2+bx+c}}dx$
+$\int \frac{px+q}{\sqrt{ax^2+bx+c}}$ dx $= \frac{p}{2a} \int \frac{d(ax^2+bx+c)}{\sqrt{ax^2+bx+c}}$ + $\left(q$ - $\frac{pb}{2a}\right) \int \frac{1}{\sqrt{ax^2+bx+c}}$ dx
 
 để đưa về việc tính tích phân của hàm vô tỉ cơ bản.
 
@@ -5162,7 +5099,7 @@ Ví dụ 1.20. Tính $\int \frac{dx}{(1+x)\sqrt{3+6x+x^2}}$.
 
 Tính các tích phân có dạng $\int R\left(x$, $\left(\frac{ax+b}{cx+d}\right)^{m_1/n_1}$, ..., $\left(\frac{ax+b}{cx+d}\right)^{m_p/n_p}\right)$ dx
 
-Đặt $\sqrt[k]{\frac{ax+b}{cx+d}} =$ t, với k là bội chung nhỏ nhất của $n_1$, $n_2$, ..., $n_p$, để đưa tích phân đã
+Đặt $\sqrt[k]{\frac{ax+b}{cx+d}} =$ t, với k là bội chung nhỏ nhất của $n_1$, $n_2$, $\ldots$, $n_p$, để đưa tích phân đã
 
 cho về tích phân của phân thức hữu tỉ với biến t.
 
@@ -5172,15 +5109,15 @@ Ví dụ 1.21. Tính $\int \sqrt{\frac{x+1}{x+2}}$ dx.
 
 [Lời giải] Đặt t $= \sqrt{\frac{x+1}{x+2}}$ ta có x $= -\frac{2t^2-1}{t^2-1}$, dx $= \frac{2t}{(t^2-1)^2}dt$ và
 
-$I=2\int \frac{t^2}{(t^2-1)^2}dt$
+I $=$ 2 $\int \frac{t^2}{(t^2$ - $1)^2}$ dt
 
-$= \frac{1}{2} \int \left| \frac{1}{t-1}$ - $\frac{1}{t+1}$ + $\frac{1}{(t-1)^2}$ + $\frac{1}{(t+1)^2} \right|$ dt
+$\frac{1}{2}\int \left|\frac{1}{t-1}-\frac{1}{t+1}+\frac{1}{(t-1)^2}+\frac{1}{(t+1)^2}\right|$ dt
 
 (2.2)
 
 $=\frac{1}{2}\ln\frac{t-1}{t+1}-\frac{1}{2}\left(\frac{1}{t-1}-\frac{1}{t+1}\right)+C$
 
-$= \frac{1}{2} \ln \frac{\sqrt{\frac{x+1}{x+2}}$ - $1}{\sqrt{\frac{x+1}{x+2}}$ + $1}$ + x + 2 + C.
+$=\frac{1}{2}\ln\frac{\sqrt{\frac{x+1}{x+2}}-1}{\sqrt{\frac{x+1}{x+2}}+1}+x+2+C$.
 
 Ví dụ 1.22. Tính $\int \frac{dx}{\sqrt{x}$ + $\sqrt[3]{x}}$.
 
@@ -5190,13 +5127,13 @@ Bài tập 2.1. Tính các tích phân sau
 
 a) $\int \frac{\sqrt{x+9}}{x}$ dx,
 
-g) $\ \bigg/ \sqrt{e^x+1}$ dx,
+g) $\ \Big/ \sqrt{e^x$ + $1}$ dx,
 
 d) $\frac{dx}{\sqrt[5]{x}-1}$,
 
 h) $\int \frac{dx}{\sqrt{x}$ + $\sqrt[3]{x}}$,
 
-e) $\frac{dx}{\sqrt[3]{x}$ - $\sqrt[4]{x}}$,
+e) $\frac{dx}{\sqrt[3]{x}-\sqrt[4]{x}}$,
 
 b) $\int \frac{\sqrt{x}-1}{\sqrt{x}+1}$ dx,
 
@@ -5206,9 +5143,9 @@ c) $\int \frac{dx}{x+\sqrt[3]{x}}$,
 
 i) $\int \frac{3x+2}{\sqrt{x-9}}$ dx.
 
-$[\text{Đáp}\text{ s}\hat{\text{o}}]$
+[Đáp số]
 
-a) Đặt u $= \sqrt{x+9}$, I $= 2\sqrt{x+9}$ + 3 $\ln \left| \frac{\sqrt{x+9}-3}{\sqrt{x+9}+3} \right|$ + C.
+a) Đặt u $= \sqrt{x+9}$, I $= 2\sqrt{x+9}$ + $3\ln\left|\frac{\sqrt{x+9}-3}{\sqrt{x+9}+3}\right|$ + C.
 
 b) Đặt u $= \sqrt{x}$, I $=$ x - $4\sqrt{x}$ + $4\ln(\sqrt{x}$ + 1) + C.
 
@@ -5218,53 +5155,53 @@ d) Đặt $\sqrt[5]{x} =$ u, I $= 5\left(\frac{\sqrt[5]{x^4}}{4}$ + $\frac{\sqrt
 
 e) Đặt $\sqrt[12]{x} =$ u,
 
-I $= \frac{3}{2}\sqrt[3]{x^2}$ + $\frac{12}{7}\sqrt[12]{x^7}$ + $2\sqrt{x}$ + $\frac{12}{5}\sqrt[12]{x^5}$ + $3\sqrt[3]{x}$ + $4\sqrt[4]{x}$ + $6\sqrt[6]{x}$ + $12\sqrt[12]{x}$ + $12\ln|\sqrt[12]{x} \cdot$ 1| + C.
+I $= \frac{3}{2}\sqrt[3]{x^2}$ + $\frac{12}{7}\sqrt[12]{x^7}$ + $2\sqrt{x}$ + $\frac{12}{5}\sqrt[12]{x^5}$ + $3\sqrt[3]{x}$ + $4\sqrt[4]{x}$ + $6\sqrt[6]{x}$ + $12\sqrt[12]{x}$ + $12\ln\left|\sqrt[12]{x^5}1\right|$ + C.
 
-f) $\text{Đặt}\sqrt{\sqrt{x}-2} =$ u, I $= \frac{4}{3}\sqrt{(\sqrt{x^2})^3$ + $8\sqrt{\sqrt{x^2}}$ + $C}$.
+f) $\text{D\~at}_{\sqrt{x-2}} =$ u, I $= \frac{4}{3}\sqrt{(\sqrt{x^2})^3$ + $8\sqrt{\sqrt{x^2}}$ + $C}$.
 
 g) $\text{Đặt}\sqrt{e^x+1} =$ u, I $= 2\sqrt{e^x+1}$ - $\ln\left|\frac{1+\sqrt{e^x+1}}{1\sqrt{e^x+1}}\right|$ + C.
 
 h) Đặt $\sqrt[6]{x} =$ t, I $= 2\sqrt{x}$ - $3\sqrt[3]{x}$ + $6\sqrt[6]{x}$ - $6\ln(1$ + $\sqrt[6]{x})$ + C.
 
-i) $\text{Đặt}\sqrt{x-9} =$ u, I $= 2(x-9)^{3/2}$ + $58\sqrt{x-9}$ + C
+i) $\text{D}\nabla$ x - 9 $=$ u, I $=$ 2(x - $9)^{3/2}$ + $58\sqrt{x$ - $9}$ + C
 
 
 
-$\S2$. TÍCH PHÂN XÁC ĐINH
+## §2. TÍCH PHÂN XÁC ĐINH
 
-## 2.1 Đinh nghĩa tích phân xác định <math>\S</math><b>2.</b> TÍCH PHÂN XÁC ĐINH
+### 2.1 Đinh nghĩa tích phân xác định
 
-Định nghĩa 2.29. Giả sử hàm số f(x) xác định và bị chặn trên [a,b]. Chia [a,b] thành n
+#### Định nghĩa 2.29. Giả sử hàm số f(x) xác định và bị chặn trên [a,b]. Chia [a,b] thành n
 
-khoảng nhỏ $[x_i$, $x_{i+1}]$ bởi phân hoạch a $= x_0 < x_1 <$ ... $< x_n =$ b. Trong mỗi đoạn $[x_i$, $x_{i+1}]$
+$kho\textit{ång} \space n\textit{h\o} \left[x_i$, $x_{i+1}\right] \textit{b\o} \textit{h\o} \textit{h\o} \textit{h\o} \textit{h\o} \textit{h\o} \textit{h\o} = x_0 < x_1 < \ldots < x_n =$ b. $\textit{Trong} \space m\tilde{o} \textit{i \o} \textit{h\o} \textit{h\o} \textit{h\o} \textit{h\o} \textit{h\o} \textit{h\o} \textit{h\o} \textit{h\o} \textit{h\o} \textit{h\o} \textit{h\o} \textit$
 
-ta chọn điểm $\xi_i \in [x_i$, $x_{i+1}]$ và thành lập biểu thức
+$\mathbf{t}a$ chọn điểm $\xi_i \in [x_i$, $x_{i+1}]$ và thành lập biểu thức
 
-$S_n = \sum_{i=0}^{n-1} f(\xi_i) \triangle x_i \text{ v\'{o}i } \triangle x_i = x_{i+1}$ - $x_i$
+$S_n = \sum_{i=0}^{n-1} f(\xi_i) \bigtriangleup x_i \; \textit{v\'oi} \; \bigtriangleup x_i = x_{i+1}$ - $x_i$
 
 (2.3)
 
 Biểu thức $S_n$ được gọi là tổng tích phân. Gọi $\lambda = \max_{1 \leq$ i $\leq n} \triangle x_i$. Nếu tồn tại giới hạn hữu
 
-hạn I $= \lim_{\lambda \to 0} S_n$ không phụ thuộc vào cách chia đoạn [a, b] và không phụ thuộc vào cách
+hạn I $= \lim_{\lambda \to 0} S_n$ không phụ thuộc vào cách chia đoạn[a, b] và không phụ thuộc vào cách
 
 chọn điểm $\xi_i$ thì I được gọi là tích phân xác định của hàm số f(x) trên [a,b] và kí hiệu là
 
-$\int_a^b$ f(x)dx. Trong trường hợp đó ta nói hàm số f(x) khả tích trên [a, b].
+$\int_{a}^{b}$ f(x)dx. Trong trường hợp đó ta nói hàm số f(x) khả tích trên [a, b].
 
 Chú ý 2.19. Trong định nghĩa trên ta đã xét hàm số f(x) trong khoảng đóng [a, b] tức là
 
-đã giả thiết a $<$ b. Bây giờ nếu b $<$ a ta định nghĩa $\int_a^b$ f(x)dx $:=$ - $\int_a^a$ f(x)dx và khi a $=$ b
+đã giả thiết a $<$ b. Bây giờ nếu b $<$ a ta định nghĩa $\int_{a}^{b}$ f(x) dx $:=$ - $\int_{b}^{a}$ f(x) dx và khi a $=$ b
 
-ta định nghĩa $\int_{a}^{b}$ f(x)dx $=$ 0.
+ta định nghĩa $\int_{a}^{b}$ f(x) dx $=$ 0.
 
-## 2.2 Các tiêu chuẩn khả tích ta định nghĩa <math>\int_{a}^{b} f(x)dx = 0.</math>
+### 2.2 Các tiêu chuẩn khả tích
 
-Định lý 2.39. Điều kiện cần và đủ để hàm số bị chặn f(x) khả tích trên [a,b] là $\lim_{\lambda \to 0}$ (S -
+#### Định lý 2.39. Điều kiện cần và đủ để hàm số bị chặn f(x) khả tích trên [a,b] là \lim_{\lambda \to 0} (S - \frac{1}{\lambda})
 
 s) $=$ 0, trong đó:
 
-S $= \sum_{i=1}^{n+1} M_i \triangle x_i$, s $= \sum_{i=1}^{n+1} m_i \triangle x_i$
+S $= \sum_{i=1}^{n+1} M_i \bigtriangleup x_i$, s $= \sum_{i=1}^{n+1} m_i \bigtriangleup x_i$
 
 $M_i = \sup_{x \in [x_i$, $x_{i+1}]}$ f(x), $m_i = \inf_{x \in [x_i$, $x_{i+1}]}$ f(x)
 
@@ -5272,25 +5209,25 @@ $M_i = \sup_{x \in [x_i$, $x_{i+1}]}$ f(x), $m_i = \inf_{x \in [x_i$, $x_{i+1}]}
 
 Đinh lý 2.40. Nếu f(x) liên tục trên [a,b] thì f(x) khả tích trên [a,b].
 
-Định lý 2.41. Nếu f(x) bị chặn trên [a, b] và có một số điểm gián đoạn trên [a, b] thì f(x)
+#### Định lý 2.41. Nếu f(x) bị chặn trên [a,b] và có một số điểm gián đoạn trên [a,b] thì f(x)
 
-khả tích trên [a, b].
+$kh\acute{a}$ tích trên [a, b].
 
-Định lý 2.42. Nếu f(x) bị chặn và đơn điệu trên [a, b] thì f(x) khả tích trên [a, b].
+#### Định lý 2.42. Nếu f(x) bị chặn và đơn điệu trên [a, b] thì f(x) khả tích trên [a, b].
 
 
 
-## 2.3 Các tính chất của tích phân xác định None
+### 2.3 Các tính chất của tích phân xác định
 
-Trong các phần tiếp theo sau đây, nếu không có chú thích gì thì khi viết $\int_{v}^{v}$ f(x) dx ta
+Trong các phần tiếp theo sau đây, nếu không có chú thích gì thì khi viết $\int^v$ f(x) dx ta
 
 hiểu là f(x) được giả thiết là khả tích trên [a, b].
 
-• Tinh chất 1.
+• Tính chất 1.
 
 $\int_{a}^{b} [\alpha$ f(x) + $\beta$ g(x)] dx $= \alpha \int_{a}^{b}$ f(x) dx + $\beta \int_{a}^{b}$ g(x) dx
 
-• Tinh chất 2.
+• Tính chất 2.
 
 Cho 3 khoảng đóng [a, b], [a, c], [b, c], nếu f(x) khả tích trên khoảng có độ dài lớn nhất
 
@@ -5300,9 +5237,9 @@ $\int_{a}^{b}$ f(x)dx $= \int_{a}^{c}$ f(x)dx + $\int_{a}^{b}$ f(x)dx
 
 • Tính chất 3. Giả thiết a $<$ b. Khi đó:
 
-(i) Nếu f(x) $\ge$ 0, $\forall$ x $\in$ [a, b] thì $\int_a^b$ f(x) dx $\ge$ 0
+(i) Nếu f(x) $\ge$ 0, $\forall$ x $\in$ [a, b] thì $\int_{a}^{b}$ f(x) dx $\ge$ 0
 
-(ii) Nếu f(x) $\ge$ g(x) $\forall$ x $\in$ [a, b] thì $\int_a^b$ f(x) dx $\ge \int_a^b$ g(x) dx
+(ii) Nếu f(x) $\ge$ g(x) $\forall$ x $\in$ [a, b] thì $\int_{a}^{b}$ f(x) dx $\ge \int_{a}^{b}$ g(x) dx
 
 (iii) Nếu f(x) khả tích trên [a, b] thì |f(x)| khả tích trên [a, b] và:
 
@@ -5310,9 +5247,9 @@ $\left|\int_{a}^{b} f(x)dx\right| \leq \int_{a}^{b}$ |f(x)|dx
 
 (iv) Nếu m $\le$ f(x) $\le$ M, $\forall$ x $\in$ [a, b] thì
 
-m(b-a) $\le \int_{a}^{b}$ f(x) dx $\le$ M(b-a)
+m(b-a) $\le \int_{b}^{b}$ f(x) dx $\le$ M(b-a)
 
-• Tinh $\$, $ch\hat{at}$ 4.(Định lý trung bình thứ nhất)
+• $Tinh\ ch\hat{at}\$ 4.(Định lý trung bình thứ nhất)
 
 Giả sử f(x) khả tích trên [a, b] và m $\le$ f(x) $\le$ M, $\forall$ x $\in$ [a, b], khi đó tồn tại $\mu$ sao cho:
 
@@ -5320,11 +5257,11 @@ $\int_{a}$ f(x)dx $= \mu(b-a)$, m $\le \mu \le$ M.
 
 Đặc biệt, nếu f(x) liên tục trên [a, b] thì tồn tại c $\in$ [a, b] sao cho:
 
-$\int_{a}^{b}$ f(x)dx $=$ f(c)(b - a).
+$\int_{a}^{b}$ f(x)dx $=$ f(c)(b-a).
 
 
 
-• Tính chất 5.(Định lý trung bình thứ hai)
+• $Tinh\,\textit{ch}\,\hat{a}t\,\textit{5}.(Định$ lý trung bình thứ hai)
 
 Giả thiết
 
@@ -5344,39 +5281,40 @@ $\int_{a}^{b}$ f(x)g(x)dx $=$ f(c) $\int_{a}^{b}$ g(x)dx.
 
 Ví dụ 2.1 (Cuối kì, K61-Viện ĐTQT). Chứng minh rằng nếu f(x) là một hàm số liên
 
-tục trên [3,4] sao cho f(x) $\ge$ 0 với mọi x $\in$ [3,4] và $\int_{2}^{4}$ f(x)dx $=$ 0 thì f(x) $=$ 0 với mọi
+tục trên [3,4] sao cho f(x) $\ge$ 0 với mọi x $\in$ [3,4] và $\int_{2}^{\pi}$ f(x)dx $=$ 0 thì f(x) $=$ 0 với mọi
 
 x $\in$ [3, 4].
 
-## 2.4 Tích phân với cận trên thay đổi (hàm tích phân) <math display="inline">x \in [3, 4]</math>.
+### 2.4 Tích phân với cận trên thay đổi (hàm tích phân)
 
 Giả sử f(x) là một hàm khả tích trên [a, b], khi đó với mỗi x $\in$ [a, b] thì f cũng khả tích
 
 trên [a, x]. Ta xác định hàm số F(x) $= \int_{x}^{x}$ f(t) dt.
 
-Định lý 2.43. (1) Nếu f(t) khả tích trên [a, b] thì F(x) liên tục trên [a, b].
+#### Định lý 2.43. (1) Nếu f(t) khả tích trên [a, b] thì F(x) liên tục trên [a, b].
 
 (2) Nếu f liên tục tại $x_0 \in$ [a, b] thì F(x) có đạo hàm tại $x_0$ và $F'(x_0) = f(x_0)$.
 
-Định lý 2.44 (Công thức Newton-Leibniz). Nếu f(x) liên tục trong khoảng đóng [a, b]
+#### Định lý 2.44 (Công thức Newton-Leibniz). Nếu f(x) liên tục trong khoảng đóng [a, b]
 
-và F(x) là một nguyên hàm của f(x) thì
+$\mathbf{v}\hat{\mathbf{a}}$ F(x) là một nguyên hàm của f(x) thì
 
 $\int_{a}^{b}$ f(x)dx $=$ F(b) - F(a).
 
 
 
-## 2.5 Các phương pháp tính tích phân xác đinh None
+### 2.5 Các phương pháp tính tích phân xác đinh
 
 1. Sử dụng công thức tích phân từng phần.
 
 Giả sử u(x), v(x) là các hàm số có đạo hàm liên tục trong [a, b]. Khi đó:
 
-$\int_{a}^{b}$ u dv $=$ uv $\Big|_{a}^{b}$ - $\int_{a}^{b}$ v du
+$\int\limits_{a}^{b}udv=uv|_{a}^{b}-\int\limits_{a}^{b}vdu$
 
 2. Sử dụng các phép đổi biến số.
 
-Định lý 2.45 (Đổi biến x $:= \varphi(t))$. Xét I $= \int_{a}^{b}$ f(x)dx với f(x) liên tục trong [a, b]. Thực hiện phép đổi biến x $= \varphi(t)$ thoả
+#### Định lý 2.45 (Đổi biến x := \varphi(t)).
+Xét I = \int_{a}^{b} f(x)dx với f(x) liên tục trong [a, b]. Thực hiện phép đổi biến x = \varphi(t) thoả
 
 mãn 3 điều kiên sau:
 
@@ -5384,15 +5322,15 @@ mãn 3 điều kiên sau:
 
 (2) $\varphi(a) = \alpha; \varphi(b) = \beta$.
 
-(3) Khi t biến thiên trong $[\alpha$, $\beta]$ từ $\alpha$ đến $\beta$ thì x $= \varphi(t)$ biến thiên liên tục từ $\alpha$ đến
+(3) Khi t biến thiên trong $[\alpha$, $\beta]$ từ $\alpha$ đến $\beta$ thì x $= \varphi(t)$ biến thiên liên tục từ a đến
 
 b.
 
 Khi đó ta có công thức:
 
-$\int_{0}^{b}$ f(x)dx $= \int_{0}^{b} f[\varphi(t)]\varphi'(t)dt$.
+$\int_{0}^{b}$ f(x) dx $= \int_{0}^{b} f[\varphi(t)] \varphi'(t)$ dt.
 
-Định lý 2.46 (Đổi biến t $:= \varphi(x)).Giả$ sử tích phân cần tính có dạng I $= \int_{b}^{b} f[\varphi(x)].\varphi'(x)dx$. Trong đó $\varphi(x)$ biến thiên
+#### Định lý 2.46 (Đổi biến t := \varphi(x)).Giả sử tích phân cần tính có dạng I = \int_{b}^{b} f[\varphi(x)].\varphi'(x)dx. Trong đó \varphi(x) biến thiên
 
 đơn điệu ngặt và có đạo hàm liên tục trên [a, b]. Khi đó:
 
@@ -5404,7 +5342,7 @@ $\int_{a}^{b} f[\varphi(x)].\varphi'(x)dx = \int_{\varphi(a)}$ f(t)dt.
 
 
 
-## 2.6 Hệ thống bài tập None
+### 2.6 Hệ thống bài tập
 
 Dạng 1. Tính đạo hàm của hàm tích phân.
 
@@ -5414,7 +5352,7 @@ $\left| \left( \int$ f(t) dt $\right)_{x} =$ f(x) $\right|$
 
 (2.4)
 
-$\left| \left( \int_{x}^{g(x)}$ f(t) dt $\right) \right|_{x} =$ f(g(x)).g'(x)
+$\left| \left( \int_{x}^{g(x)}$ f(t) dt $\right)_{x}^{\prime} =$ f(g(x)).g'(x) $\right|$
 
 (2.5)
 
@@ -5426,17 +5364,15 @@ Bài tập 2.1. Tính các đao hàm:
 
 b) $\frac{d}{dy} \int_{x}^{y} e^{t^2}$ dt
 
-a) $\frac{d}{dx}\int_{a}^{y}e^{t^{2}}dt$
+a) $\frac{d}{dx} \int_{a}^{y} e^{t^2}$ dt
 
-c) $\frac{d}{dx} \int_{x^2}^{x^3} \frac{dt}{\sqrt{1+x^4}}$
+c) $\frac{d}{dx} \int_{x^2}^{x^2} \frac{dt}{\sqrt{1+x^4}}$
 
-Chứng minh. a) $\frac{d}{dx} \int_{0}^{y} e^{t^2}$ dt $= -\frac{d}{dx} \int_{0}^{x} e^{t^2}$ dt $= -e^{x^2} (\text{$ do $}$ y $\text{$ là hằng $số})$
+Chứng minh. a) $\frac{d}{dx}\int_{y}^{y}e^{t^{2}}dt = -\frac{d}{dx}\int_{x}^{x}e^{t^{2}}dt = -e^{x^{2}}(\text{$ do $}y\text{$ là hằng $số})$
 
-b) $\frac{d}{dy} \int^{y} e^{t^2}$ dt $= e^{y^2} (\text{$ do $}$ x $\text{$ là hằng $số})$
+b) $\frac{d}{dy} \int_{y}^{y} e^{t^2}$ dt $= e^{y^2} (\text{$ do $}$ x $\text{$ là hằng $số})$
 
-c) $\frac{d}{dx} \int_{1}^{x^3} \frac{dt}{\sqrt{1+x^4}} = -\frac{d}{dx} \int_{1}^{x^2} \frac{dt}{\sqrt{1+x^4}}$ + $\frac{d}{dx} \int_{1}^{x^3} \frac{dt}{\sqrt{1+x^4}} = \frac{-2x}{\sqrt{1+x^8}}$ + $\frac{3x^2}{\sqrt{1+12x^2}}$
-
-$\qquad \qquad \blacksquare$
+$\text{c)} \quad \frac{d}{dx} \int_{1}^{x^5} \frac{dt}{\sqrt{1+x^4}} = -\frac{d}{dx} \int_{1}^{x^2} \frac{dt}{\sqrt{1+x^4}}$ + $\frac{d}{dx} \int_{1}^{x^5} \frac{dt}{\sqrt{1+x^4}} = \frac{-2x}{\sqrt{1+x^8}}$ + $\frac{3x^2}{\sqrt{1+12x^2}}$
 
 Dạng 2. Tính giới hạn của hàm số dựa vào công thức L'Hospital và đạo hàm của
 
@@ -5454,13 +5390,13 @@ Chứng minh. a) Nhận xét: $\lim_{x\to 0^+} \int_{0}^{\sin x} \sqrt{\tan t}$ 
 
 tắc L'Hospital ta có:
 
-$\lim_{x \to 0^+} \frac{\left(\int_0^{\sin x} \sqrt{\tan t} dt\right)}{\left(\int_0^{\tan x} \sqrt{\sin t} dt\right)} = \lim_{x \to 0^+} \frac{\sqrt{\tan(\sin x)} \cdot \cos x}{\sqrt{\sin(\tan x)} \cdot \frac{1}{\cos^2 x}} =$ 1 $\Rightarrow$ A $=$ 1
+$\lim_{x \to 0^+} \frac{\left(\int\limits_{0}^{\sin x} \sqrt{\tan t} dt\right)}{\left(\int\limits_{0}^{\tan x} \sqrt{\sin t} dt\right)'} = \lim_{x \to 0^+} \frac{\sqrt{\tan(\sin x)} \cdot \cos x}{\sqrt{\sin(\tan x)} \cdot \frac{1}{\cos^2 x}} =$ 1 $\Rightarrow$ A $=$ 1
 
-b) Nhận xét: $\lim_{x \to +\infty} \int_{0}^{\infty} (\arctan t)^2$ dt $= \lim_{x \to +\infty} \sqrt{x^2$ + $1} = \infty$ nên áp dụng quy tắc L'Hospital
+b) Nhận xét: $\lim_{x \to +\infty} \int_{0}^{\infty} (\arctan t)^{2}$ dt $= \lim_{x \to +\infty} \sqrt{x^{2}$ + $1} = \infty$ nên áp dụng quy tắc L'Hospital
 
 ta có:
 
-$\lim_{x \to +\infty} \frac{\left(\int_0^x (\arctan t)^2 dt\right)'}{\left(\sqrt{x^2$ + $1}\right)'} = \lim_{x \to +\infty} \frac{(\arctan x)^2}{\frac{x}{\sqrt{x^2$ + $1}}} = \frac{\pi^2}{4} \Rightarrow$ B $= \frac{\pi^2}{4}$
+$\lim_{x \to +\infty} \frac{\left(\int_{0}^{x} (\arctan t)^{2} dt\right)^{\prime}}{\left(\sqrt{x^{2}+1}\right)^{\prime}} = \lim_{x \to +\infty} \frac{(\arctan x)^{2}}{\frac{x}{\sqrt{x^{2}+1}}} = \frac{\pi^{2}}{4} \Rightarrow$ B $= \frac{\pi^{2}}{4}$
 
 Dạng 3. Sử dụng công thức tổng tích phân để tính giới han của một số dãy số
 
@@ -5468,9 +5404,9 @@ Dạng 3. Sử dụng công thức tổng tích phân để tính giới han c�
 
 Xuất phát từ công thức tính tổng tích phân 2.3
 
-$S_n = \sum_{i=0}^{n-1} f(\xi_i) \triangle x_i \text{ v\'oi } \triangle x_i = x_{i+1}$ - $x_i$
+$S_n = \sum_{i=0}^{n-1} f(\xi_i) \bigtriangleup x_i \text{ v\'oi } \bigtriangleup x_i = x_{i+1}$ - $x_i$
 
-Nếu chúng ta chia đoạn [a, b] thành n khoảng có độ dài bằng nhau bởi phân hoạch a $=$
+Nếu chúng ta chia đoạn [a,b] thành n khoảng có độ dài bằng nhau bởi phân hoạch a $=$
 
 $x_0 < x_1 < \ldots < x_n =$ b, trong đó $x_i =$ a + (b - $a)^{\frac{i}{n}}$ thì:
 
@@ -5478,13 +5414,13 @@ $S_n = \frac{b-a}{n} \sum_{i=0}^{n-1} f(\xi_i) \text{$ với $} \xi_i \in [x_i$,
 
 Khi đó nếu hàm f(x) khả tích trên [a, b], và chọn $\xi_i = x_i$ ta được công thức:
 
-$\left|\lim_{n\to\infty}\frac{b-a}{n}\right|\sum_{i=0}^{n-1}f\left(a+\frac{b-a}{n}.i\right)\right|=\int_{0}^{b}f(x)dx$
+$\left|\lim_{n\to\infty}\frac{b-a}{n}\left|\sum_{i=0}^{n-1}f\left(a+\frac{b-a}{n}.i\right)\right|=\int_{0}^{b}f(x)dx\right|$
 
 (2.6)
 
 Còn nếu chọn $\xi_i = x_{i+1}$ ta được công thức:
 
-$\left|\lim_{n\to\infty}\frac{b-a}{n}\left[\sum_{i=1}^n f\left(a+\frac{b-a}{n}.\overline{i}\right)\right]\right|=\int_0^b$ f(x)dx
+$\left|\lim_{n\to\infty}\frac{b-a}{n}\left[\sum_{i=1}^n f\left(a+\frac{b-a}{n}.i\right)\right] = \int_{0}^{b} f(x)dx\right|$
 
 (2.7)
 
@@ -5508,7 +5444,7 @@ A $= \int_{\alpha}^{1} \frac{1}{\alpha$ + $\beta x}$ dx $= \frac{1}{\beta} \ln \
 
 Nếu áp dụng công thức 2.7 với a $=$ 0, b $=$ 1, f(x) $= \frac{1}{\alpha$ + $\beta x}$ ta được:
 
-A' $= \lim_{n \to \infty} \left[ \frac{1}{n\alpha$ + $\beta}$ + $\frac{1}{n\alpha$ + $2\beta}$ + $\cdots$ + $\frac{1}{n\alpha$ + $n\beta} \right] =$ A $= \frac{1}{\beta} \ln \frac{\alpha$ + $\beta}{\alpha}$
+A' $= \lim_{n \to \infty} \left[ \frac{1}{n\alpha$ + $\beta}$ + $\frac{1}{n\alpha$ + $2\beta}$ + $\dots$ + $\frac{1}{n\alpha$ + $n\beta} \right] =$ A $= \frac{1}{\beta} \ln \frac{\alpha$ + $\beta}{\alpha}$
 
 b) Áp dụng công thức 2.7 với a $=$ 0, b $=$ 1, f(x) $= \sqrt{1$ + $x}$ ta được:
 
@@ -5516,15 +5452,15 @@ B $= \int_{1}^{1} \sqrt{1$ + $x}$ dx $= \frac{2}{3} (2\sqrt{2}$ - 1)
 
 Nếu áp dụng công thức 2.6 với a $=$ 0, b $=$ 1, f(x) $= \sqrt{1$ + $x}$ ta được:
 
-B' $= \lim_{n \to \infty} \frac{1}{n} \left($ 1 + $\sqrt{1$ + $\frac{1}{n}}$ + $\cdots$ + $\sqrt{1$ + $\frac{n-1}{n}} \right) =$ B $= \frac{2}{3} (2\sqrt{2}$ - 1)
+B' $= \lim_{n \to \infty} \frac{1}{n} \left($ 1 + $\sqrt{1$ + $\frac{1}{n}}$ + $\dots$ + $\sqrt{1$ + $\frac{n-1}{n}} \right) =$ B $= \frac{2}{3} (2\sqrt{2}$ - 1)
 
-Bài tập 2.4. Tính $\lim_{n\to\infty} \left(\frac{1}{n} \sqrt[n]{\frac{(2n)!}{n!}}\right)$
+Bài tập 2.4. Tính $\lim_{n\to\infty} \left(\frac{1}{n}\sqrt[n]{\frac{(2n)!}{n!}}\right)$
 
-[Gợi ý] Tính $\lim_{n\to\infty} \ln\left(\frac{1}{n}\sqrt[n]{\frac{(2n)!}{n!}}\right)$ bằng cách viết biểu thức trong giới hạn dưới dạng tổng
+[Gợi ý] Tính $\lim_{n\to\infty}\ln\left(\frac{1}{n}\sqrt[n]{\frac{(2n)!}{n!}}\right)$ bằng cách viết biểu thức trong giới hạn dưới dạng tổng
 
 tích phân.
 
-Dang 4. Tính tích phân xác định (xem mục 2.5)
+Dạng 4. Tính tích phân xác định (xem mục 2.5)
 
 Bài tập 2.5. Tính các tích phân
 
@@ -5542,19 +5478,19 @@ f) $\int_0^{\frac{\pi}{2}} \cos^n$ x $\cos$ nx dx
 
 c) $\int_0^1 (x^3$ - 2x + $5)e^{-\frac{x}{2}}$ dx
 
-[Gợi $\acute{y}]$
+[Gợi ý]
 
 a) $I_a = \frac{e^2$ + $5}{4}$
 
-b) $I_b = \frac{5e^3-2}{27}$
+b) $I_b = \frac{5e^3$ - $2}{27}$
 
 c) $I_c =$ 98 - $\frac{144}{\sqrt{e}}$
 
 d)
 
-$I_d = \int\limits_0^2 \frac{\sin^2$ x $\cos x}{(1$ + $\tan^2 x)^2}$ dx
+$I_d = \int_0^2 \frac{\sin^2$ x $\cos x}{(1$ + $\tan^2 x)^2}$ dx
 
-$= \int_{0}^{2} \sin^2$ x $\cdot \cos$ x $\cdot \cos^4$ x dx
+$= \int_{0}^{2} \sin^{2}$ x $\cdot \cos$ x $\cdot \cos^{4}$ x dx
 
 $= \int_{0}^{2} \sin^{2}$ x $\cdot$ (1 - $\sin^{2}$ x) $d(\sin x)= \frac{\sin^{3}(2)}{3}$ - $\frac{2 \sin^{5}(2)}{5}$ + $\frac{\sin^{7}(2)}{7}$
 
@@ -5566,19 +5502,19 @@ $I_e = \int_{0}^{3} \arcsin \sqrt{\frac{x}{1+x}}$ dx
 
 $=$ x $\arcsin \sqrt{\frac{x}{1+x}} \bigg|_0^3$ - $\int_0^3$ x $\cdot \frac{1}{\sqrt{1-\frac{x}{1+x}}} \cdot \frac{1}{2\sqrt{\frac{x}{x+1}}} \cdot \frac{1}{(x+1)^2}$ dx
 
-$= \pi$ - $\frac{1}{2} \int_{0}^{3} \frac{\sqrt{x}}{x+1}$ dx
+$=\pi-\frac{1}{2}\int_{0}^{3}\frac{\sqrt{x}}{x+1}dx$
 
-$= \pi$ - $\frac{1}{2} \int_{0}^{\sqrt{3}} \frac{t}{t^2$ + $1}$ .2t dt $\$, $(d\ddot{a}t \sqrt{x} =$ t)
+$\tau = \pi$ - $\frac{1}{2} \int_{-\sqrt{3}}^{\sqrt{3}} \frac{t}{t^2$ + $1}$ . 2t dt $\; (\text{d}\n\check{\text{a}}\text{t} \; \sqrt{x} =$ t)
 
 $= \pi$ - $\int_{0}^{\sqrt{3}} \left(1$ - $\frac{1}{t^2$ + $1}\right)$ dt
 
 $= \pi$ - $\left[$ (t - $\arctan$ t) $\Big|_0^{\sqrt{3}} \right]= \frac{4\pi}{3}$ - $\sqrt{3}$
 
-$\mathbf{f})$
+f)
 
 $I_n = \int_{0}^{\frac{\pi}{2}} \cos^n$ x $\cos$ nx dx
 
-$= \frac{1}{n} \int_{1}^{\frac{\pi}{2}} \cos^n$ x d $\sin$ nx
+$=\frac{1}{n}\int_{0}^{\frac{\pi}{2}}\cos^{n}xd\sin$ nx
 
 $= \frac{1}{n} \cos^{n}$ x $\sin$ nx $\Big|_{0}^{\frac{\pi}{2}}$ + $\frac{1}{n} \int_{0}^{\frac{\pi}{2}} \sin$ nx $\cdot$ n $\cdot \cos^{n-1}$ x $\cdot \sin$ x dx
 
@@ -5600,77 +5536,75 @@ Bài tập 2.6. Tính
 
 a) $I_n = \int_{1}^{\frac{\pi}{2}} \sin^n$ x dx
 
-b) $J_n = \int_{\frac{1}{2}}^{\frac{1}{2}} \cos^n$ x dx
+b) $J_n = \int_{-\infty}^{\frac{\pi}{2}} \cos^n$ x dx
 
 Dạng 5. Chứng minh các đẳng thức tích phân
 
 Bài tập 2.7. Chứng minh rằng nếu f(x) liên tục trên [0,1] thì:
 
-a) $\int_0^{\frac{\pi}{2}} f(\sin$ x) dx $= \int_0^{\frac{\pi}{2}} f(\sin$ x) dx b) $\int_0^{\pi}$ x $f(\sin$ x) dx $= \frac{\pi}{2} \int_0^{\pi} f(\cos$ x) dx.
+a) $\int_0^{\frac{\pi}{2}} f(\sin$ x) dx $= \int_0^{\frac{\pi}{2}} f(\sin$ x) dx b) $\int_0^{\pi} xf(\sin$ x) dx $= \frac{\pi}{2} \int_0^{\pi} f(\cos$ x) dx.
 
 [Gợi ý] Đây là bài tập dễ, câu a) đặt t $= \frac{\pi}{2}$ - x, còn câu b) đặt t $= \pi$ - x.
 
 Bài tập 2.8. Áp dụng kết quả của bài tập 2.7 hãy chứng minh
 
-$\int_{1}^{2} \frac{\sqrt{\sin x}}{\sqrt{\sin x}$ + $\sqrt{\cos x}}$ dx $= \int_{1}^{2} \frac{\sqrt{\cos x}}{\sqrt{\sin x}$ + $\sqrt{\cos x}}$ dx $= \frac{\pi}{4}$
+$\int_{0}^{2} \frac{\sqrt{\sin x}}{\sqrt{\sin x}$ + $\sqrt{\cos x}}$ dx $= \int_{0}^{2} \frac{\sqrt{\cos x}}{\sqrt{\sin x}$ + $\sqrt{\cos x}}$ dx $= \frac{\pi}{4}$
 
 Bài tập 2.9. Giả sử f(x) liên tục trên [-a, a](a $>$ 0), hãy chứng minh
 
-$ I = \int_{-a}^{a} f(x)dx = \begin{cases} 0 & \text{n\'{e}u } f(x) \text{ là hàm số lẻ trên } [-a, a] \\ 2 \int_{0}^{a} f(x)dx & \text{n\'{e}u } f(x) \text{ là hàm số chẵn trên } [-a, a] \end{cases} $
+$ I = \int_{-a}^{a} f(x)dx = \begin{cases} 0 & \textit{n\^e}u\,f(x)\,\textit{l\`a}\,\textit{h\`a}m\,\textit{s\^o}\,\textit{l\`e}\,\textit{tr\`e}n\,[-a,a] \\ 2\int_{0}^{a} f(x)dx & \textit{n\^e}u\,f(x)\,\textit{l\`a}\,\textit{h\`a}m\,\textit{s\^o}\,\textit{ch\{a}\`m}\,\textit{tr\`e}n\,[-a,a] \end{cases} $
 
 Bài tập 2.10. Cho f(x) liên tục, chẵn trên [-a, a], chứng minh
 
-$\int_{-a}^{a} \frac{f(x)dx}{1+b^x} = \int_{0}^{a}$ f(x)dx $\text{ } \text{v\'oi }$ 0 $\leq$ b $\neq$ 1
+$\int_{-a}^{a} \frac{f(x)dx}{1+b^x} = \int_{0}^{a}$ f(x)dx $\text{ } \textit{v\'oi }$ 0 $\le$ b $\ne$ 1
 
 Áp dụng tính
 
-$I_1 = \int_{-1}^{1} \frac{1}{(x^2+1)(e^x+1)}$ dx, $\quad I_2 = \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \frac{2^x \cos 2x}{2002^x+2^x}$ dx, $\quad I_3 = \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \frac{x^2 |\sin x|}{1+2^x}$ dx
+$I_1 = \int\limits_{-1}^{1} \frac{1}{(x^2+1)(e^x+1)}$ dx, $\quad I_2 = \int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \frac{2^x \cos 2x}{2002^x+2^x}$ dx, $\quad I_3 = \int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \frac{x^2 \mid \sin$ x $\mid}{1+2^x}$ dx
 
 
 
 Bài tập 2.11. Chứng minh $\int_{a}^{b} x^{m}(a+b-x)^{n}$ dx $= \int_{a}^{b} x^{n}(a+b-x)^{m}$ dx
 
-Áp dụng tính $I_n = \int_1^1 x^2 (1-x)^n$ dx và chứng minh
+$\acute{A}p\;d\!ung\;t\acute{m}h\;I_n=\int\limits^1 x^2(1-x)^n dx\;v\grave{a}\;ch\acute{m}ng\;m\acute{m}h$
 
-$\sum_{k=0}^{n}(-1)^{k}C_{n}^{k}\cdot\frac{1}{k+3}=\frac{1}{n+1}-\frac{2}{n+2}+\frac{1}{n+3}$
+$\sum_{k=0}^{n} (-1)^{k} C_{n}^{k} \cdot \frac{1}{k+3} = \frac{1}{n+1}$ - $\frac{2}{n+2}$ + $\frac{1}{n+3}$
 
-Dang 6. Chứng minh các bất đẳng thức tích phân
+Dạng 6. Chứng minh các bất đẳng thức tích phân
 
 Bài tập 2.12. Cho f(x), g(x) là hai hàm số khả tích trên [a, b]. Khi đó $f^2(x)$, $g^2(x)$ cũng
 
 khả tích trên [a, b]. Chứng minh bất đẳng thức sau (a $<$ b)
 
-$\left(\int_{a}^{b} f(x)g(x)dx\right)^{2} \leq \left(\int_{a}^{b} f^{2}(x)dx\right)\left(\int_{a}^{b} g^{2}(x)dx\right)$
+$\left(\int_{a}^{b} f(x)g(x)dx\right)^{2} \leq \left(\int_{a}^{b} f^{2}(x)dx\right) \cdot \left(\int_{a}^{b} g^{2}(x)dx\right)$
 
 (Bất đẳng thức Cauchy-Schwarzt)
 
-Chúng minh. Xét 2 trường hợp:
+$Ch\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$
 
-TH1. Nếu $\int_{b}^{b} f^{2}(x)$ dx $= \int_{b}^{b} g^{2}(x)$ dx $=$ 0 thì:
+TH1. Nếu $\int_{b}^{b} f^{2}(x)dx = \int_{b}^{b} g^{2}(x)dx =$ 0 thì:
 
-0 $\leq \Big| \int_{b}^{b}$ f(x)g(x) dx $\Big| \leq \int_{a}^{b}$ |f(x)g(x)| dx $\leq \int_{a}^{b} \frac{f^{2}(x)$ + $g^{2}(x)}{2}$ dx $=$ 0
+0 $\leq \Big| \int_{b}^{b}$ f(x)g(x) dx $\Big| \leq \int_{b}^{b}$ |f(x)g(x)| dx $\leq \int_{a}^{b} \frac{f^{2}(x)$ + $g^{2}(x)}{2}$ dx $=$ 0
 
 Khi đó ta có dấu " $=$ " xảy ra.
 
-TH2. Nếu ít nhất một trong hai tích phân $\int_{0}^{b} f^{2}(x)dx$, $\int g^{2}(x)dx$ khác 0, không mất tính
+TH2. Nếu ít nhất một trong hai tích phân $\int_{0}^{b} f^{2}(x)dx$, $\int_{0}^{b} g^{2}(x)dx$ khác 0, không mất tính
 
-tổng quát ta giả sử $\int_{0}^{v} f^{2}(x)$ dx $\neq$ 0
+tổng quát ta giả sử $\int\limits^{\upsilon}f^{2}(x)dx\neq0$
 
 Khi đó $[\alpha$ f(x) + $g(x)]^2 \ge$ 0 $\Rightarrow \int_a^b [\alpha$ f(x) + $g(x)]^2 \ge$ 0. Suy ra
 
-$\left(\int_{0}^{b} f^{2}(x)dx\right).\alpha^{2}$ + $\left(2\int_{0}^{b} f(x)g(x)dx\right).\alpha$ + $\int_{0}^{b} g^{2}(x)dx \geq$ 0 $\forall \alpha \in \mathbb{R}$
+$\left(\int_{0}^{b} f^{2}(x)dx\right).\alpha^{2}$ + $\left(2\int_{0}^{b} f(x)g(x)dx\right).\alpha$ + $\int_{0}^{b} g^{2}(x)dx \ge$ 0 $\forall \alpha \in \mathbb{R}$
 
 (2.8)
 
 
 
-Biểu thức ở về trái là tam thức bậc 2 đối với $\alpha$ nên 2.8 đúng với mọi $\alpha \in \mathbb{R}$ khi và chỉ
+Biểu thức ở vế trái là tam thức bậc 2 đối với $\alpha$ nên $\$ 2.8 đúng với mọi $\alpha \in \mathbb{R}$ khi và chỉ
 
 khi
 
-$\triangle' = \left( \int_{a}^{b}$ f(x)g(x)dx $\right)^2$ - $\left( \int_{a}^{b} f^2(x)dx \right) \cdot \left( \int_{a}^{b} g^2(x)dx \right) \leq$ 0.
-
-$\blacksquare$
+$\triangle' = \left(\int_{a}^{b} f(x)g(x)dx\right)^{2}$ - $\left(\int_{a}^{b} f^{2}(x)dx\right) \cdot \left(\int_{a}^{b} g^{2}(x)dx\right) \leq$ 0.
 
 Bài tập 2.13 (Cuối kì, K62). Cho hàm số f(x) khả vi liên tục đến cấp hai trên [a,b] và
 
@@ -5678,21 +5612,19 @@ f(a) $=$ f(b) $=$ 0. Chứng minh rằng
 
 $\left(\int_{a}^{b} [f'(x)]^2 dx\right)^2 \leq \int_{a}^{b} [f(x)]^2$ dx $\int_{a}^{b} [f''(x)]^2$ dx.
 
-Chúng minh. Ta có
+Chứng minh. Ta có
 
 $\int_{a}^{b} [f'(x)]^{2}$ dx $= \int_{a}^{b}$ f'(x) df(x) $=$ f(x) f'(x) $\Big|_{a}^{b}$ - $\int_{a}^{b}$ f(x) f''(x) dx $=$ - $\int_{a}^{b}$ f(x) f''(x) dx.
 
 Áp dụng bất đẳng thức Cauchy - Schwartz ta có
 
-$\left(\int_a^b [f'(x)]^2 dx\right)^2 = \left(-\int_a^b f(x)f''(x)dx\right)^2 \leq \int_a^b [f(x)]^2$ dx $\int_a^b [f''(x)]^2$ dx.
-
-$\blacksquare$
+$\left(\int_{a}^{b} [f'(x)]^2 dx\right)^2 = \left(-\int_{a}^{b} f(x)f''(x)dx\right)^2 \leq \int_{a}^{b} [f(x)]^2$ dx $\int_{a}^{b} [f''(x)]^2$ dx.
 
 Bài tập 2.14 (Cuối kì, K60). Cho hàm số f(x) khả vi liên tục trên [0,1] và f(0) $=$ 0.
 
 Chứng minh rằng $\int [f(x)]^2$ dx $\leq \frac{1}{2} \int [f'(x)]^2$ dx.
 
-Chúng minh. Ta có
+Chứng minh. Ta có
 
 $f(x)^{2} =$ [f(x) - $f(0)]^{2} = \left(\int_{0}^{x} f'(t)dt\right)^{2} \leq \int_{0}^{x} [f'(t)]^{2}$ dt $\cdot \int_{0}^{x} 1^{2}$ dt
 
@@ -5716,7 +5648,7 @@ Bài tập 2.16. Cho f là một hàm số khả vi liên tục trên [a,b] và 
 
 rằng
 
-$\frac{1}{b-a}\int_{0}^{b}|f(x)|dx\leq \int_{0}^{b}|f'(x)|dx$.
+$\frac{1}{b-a}\int\limits_{b}^{b}|f(x)|dx\leq\int\limits_{a}^{b}|f'(x)|dx$.
 
 [Lời giải] Thật vậy,
 
@@ -5730,7 +5662,7 @@ Bài tập 2.17. Cho f là một hàm số khả vi liên tục trên [a,b] và 
 
 rằng
 
-$\int_{b}^{b}$ |f(x)f'(x)| dx $\leq \frac{b-a}{2} \int_{b}^{b} [f'(x)]^2$ dx.
+$\int\limits_{b}^{b}|f(x)f'(x)|dx\leq \frac{b-a}{2}\int\limits_{b}^{b}[f'(x)]^{2}dx$.
 
 [Lời giải] Ta có f(x) $=$ f(x) - f(a) $= \int$ f(t)dt nên
 
@@ -5738,29 +5670,29 @@ $\int_{b}^{b}$ |f(x)f'(x)| dx $\leq \frac{b-a}{2} \int_{b}^{b} [f'(x)]^2$ dx.
 
 Suy ra
 
-$\int_{a}^{b}$ |f(x)f'(x)| dx $\leq \int_{a}^{b} \left($ |f'(x)| $\int_{a}^{x}$ |f'(t)| dt $\right)$ dx
+$\int_{a}^{b}$ |f(x)f'(x)| dx $\leq \int_{a}^{b} \left($ |f'(x)| $\int_{a}^{x}$ |f'(t)dt| $\right)$ dx
 
 (2.9)
 
 
 
-$\text{Vi}\left(\int\limits_a^x |f'(t)|dt\right)' =$ |f'(x)| $\text{$ nên $}\left|\left(\int\limits_a^x |f'(t)|dt\right)^2\right| =$ 2|f'(x)| $\int\limits_a^x$ |f'(t)|dt|. $\text{$ Do $đó,}$
+$\text{Vi}\left(\int\limits_a^x|f'(t)|dt\right)'=|f'(x)|\text{$ nên $}\left|\left(\int\limits_a^x|f'(t)|dt\right)^2\right|=2|f'(x)|\int\limits_a^x|f'(t)dt|\text{$. Do $đó,}$
 
-$\int_{a}^{b} \left($ |f'(x)| $\int_{a}^{x}$ |f'(t)dt| $\right)$ dx $= \frac{1}{2} \left( \int_{a}^{x}$ |f'(t)| dt $\right)^{2} \Big|_{x=a}^{x=b}$
+$\int_{a}^{b} \left($ |f'(x)| $\int_{a}^{x}$ |f'(t)dt| $\right)$ dx $= \frac{1}{2} \left( \int_{a}^{x}$ |f'(t)|dt $\right)^{2} \Big|_{x=a}^{x=b}$
 
 (2.10)
 
-$=\frac{1}{2}\left(\int\limits_{a}^{b}|f'(x)|dx\right)^{2}\leq\frac{b-a}{2}\int\limits_{a}^{b}|f'(x)|^{2}dx$.
+$=\frac{1}{2}\left(\int\limits_{b}^{b}|f'(x)|dx\right)^{2}\leq\frac{b-a}{2}\int\limits_{b}^{b}|f'(x)|^{2}dx$.
 
 Từ (2.9) và (2.10) ta có điều phải chứng minh.
 
 Bài tập 2.18. Cho f là một hàm số khả vi liên tục trên [a, b], f(a) $=$ 0 và 0 $\le$ f'(x) $\le$ 1 với
 
-mọi x $\in$ [a, b]. Chứng minh rằng
+$m\phi$ i $\$ x $\in$ [a, b]. Chứng minh rằng
 
-a) $\int_{v}^{b}$ f(x) dx $\geq \frac{1}{2} [f(b)^2$ - $f(a)^2]$,
+a) $\int_{v}^{v}$ f(x) dx $\geq \frac{1}{2} \left[ f(b)^2$ - $f(a)^2 \right]$,
 
-b) $\int_{a}^{b} [f(x)]^3$ dx $\leq \left( \int_{a}^{b}$ f(x) dx $\right)^2$.
+b) $\int_{a}^{b} [f(x)]^{3}$ dx $\leq \left( \int_{a}^{b}$ f(x) dx $\right)^{2}$.
 
 a) Từ giả thiết ta có f(x) là một hàm số đơn điệu không giảm và f(x) $\ge$
 
@@ -5768,19 +5700,19 @@ Chứng minh.
 
 f(a) $=$ 0, $\forall$ x $\in$ [a, b]. Do đó,
 
-f(x) $>$ f(x)f'(x), $\forall$ x $\in$ [a, b].
+f(x) $>$ f(x)f'(x), $\forall$ x $\in$ [a,b].
 
 Suy ra
 
-$\int_{0}^{b}$ f(x)dx $\ge \int_{0}^{b}$ f(x)f'(x)dx $= \frac{1}{2}[f(x)]^{2}\Big|_{a}^{b} = \frac{1}{2}[f(b)^{2}$ - $f(a)^{2}]$.
+$\int_{0}^{b}$ f(x)dx $\geq \int_{0}^{b}$ f(x)f'(x)dx $= \frac{1}{2}[f(x)]^{2}\Big|_{a}^{b} = \frac{1}{2}\left[f(b)^{2}$ - $f(a)^{2}\right]$.
 
 b) Xét hàm số
 
-F(x) $= \left(\int_{a}^{x} f(t)dt\right)^{2}$ - $\int_{a}^{x} [f(t)]^{3}$ dt, $\quad$ x $\in$ [a, b].
+F(x) $= \left(\int_{a}^{x} f(t)dt\right)^{2}$ - $\int_{a}^{x} [f(t)]^{3}$ dt, $\quad$ x $\in$ [a,b].
 
 Ta có
 
-F'(x) $=$ 2f(x) $\int_{-x}^{x}$ f(t)dt - $f(x)^3 =$ f(x) $\left[$ 2 $\int_{-x}^{x}$ f(t)dt - $[f(x)]^2 \right]$.
+F'(x) $=$ 2f(x) $\int_{-x}^{x}$ f(t)dt - $f(x)^{3} =$ f(x) $\left[$ 2 $\int_{-x}^{x}$ f(t)dt - $[f(x)]^{2} \right]$.
 
 Đặt G(x) $=$ 2 $\int_{a}^{x}$ f(t)dt - $[f(x)]^2$, ta có
 
@@ -5788,13 +5720,11 @@ G'(x) $=$ 2f(x) - 2f(x)f'(x) $=$ 2f(x)(1 - f'(x)) $\ge$ 0, $\forall$ x $\in$ [a,
 
 $\Rightarrow$ G(x) $\geq$ G(a) $=$ 0, $\forall$ x $\in$ [a, b].
 
-Từ đó suy ra F'(x) $\ge$ 0, $\forall$ x $\in$ [a, b] $\Rightarrow$ F(b) $\ge$ F(a) $=$ 0 $\Rightarrow \int_a^b [f(x)]^3$ dx $\le \left(\int_a^b$ f(x) $dx\right)^{-1}$.
-
-$\blacksquare$
+Từ đó suy ra F'(x) $\ge$ 0, $\forall$ x $\in$ [a,b] $\Rightarrow$ F(b) $\ge$ F(a) $=$ 0 $\Rightarrow \int_a^b [f(x)]^3$ dx $\le \left(\int_a^b$ f(x) $dx\right)^{-1}$.
 
 
 
-Bài tập 2.19 (Olympic Toán học Sinh viên Toàn quốc 2018 -Bảng A). Cho f : [a, b] $\rightarrow$
+Bài tập 2.19 (Olympic Toán học Sinh viên Toàn quốc 2018 -Bảng A). ${\it Chof}$ : [a,b] $\rightarrow$
 
 $\mathbb{R}$ là một hàm số khả vi liên tục sao cho $\int$ f(x)dx $=$ 0. Chứng minh rằng
 
@@ -5802,37 +5732,37 @@ $\max_{x\in[a,b]}\left|\int\limits_{a}^{x}f(t)dt\right|\leq\frac{(b-a)^{2}}{8}\m
 
 [Lời giải] Do f'(x) liên tục nên tồn tại M $= \max_{x \in [a,b]}$ f'(x).
 
-$\bullet$ Đặt
+• Đặt
 
-F(x) $= \int$ f(t)dt + M $\frac{(x-a)(x-b)}{2}$, $\quad$ x $\in$ [a,b].
+F(x) $= \int$ f(t)dt + $M\frac{(x-a)(x-b)}{2}$, $\quad$ x $\in$ [a,b].
 
 (2.11)
 
 Ta có F(a) $=$ F(b) $=$ 0 và F''(x) $=$ f'(x) + M $\ge$ 0, $\forall$ x $\in$ [a, b].
 
-• Vì F''(x) $\ge$ 0 nên F(x) là hàm lồi trên [a, b], hơn nữa F(a) $=$ F(b) $=$ 0 nên F(x) $\le$
+• Vì F''(x) $\geq$ 0 nên F(x) là hàm lồi trên [a, b], hơn nữa F(a) $=$ F(b) $=$ 0 nên F(x) $\leq$
 
 0, $\forall$ x $\in$ [a, b]. Từ (2.11) ta có
 
-$\int_{a}^{x}$ f(t)dt $\leq$ M $\frac{(x-a)(b-x)}{2} \leq \frac{M}{2} \left( \frac{(x-a)+(b-x)}{2} \right)^2 = \frac{(b-a)^2}{8}$ M, $\forall$ x $\in$ [a,b].
+$\int_{a}^{x}$ f(t)dt $\leq$ M $\frac{(x-a)(b-x)}{2} \leq \frac{M}{2} \left(\frac{(x-a)+(b-x)}{2}\right)^2 = \frac{(b-a)^2}{8}$ M, $\forall$ x $\in$ [a,b].
 
 • Một cách tương tự, đặt
 
-G(x) $= \int_{a}^{x}$ f(t)dt - M $\frac{(x-a)(x-b)}{2}$, $\quad$ x $\in$ [a,b]
+G(x) $= \int_{a}^{x}$ f(t)dt - $M\frac{(x-a)(x-b)}{2}$, $\quad$ x $\in$ [a,b]
 
 (2.12)
 
 sẽ dẫn đến G là một hàm lõm trên [a, b] và bất đẳng thức
 
-$\int_{a}^{x}$ f(t)dt $\geq -\frac{(b-a)^2}{8}M$, $\forall$ x $\in$ [a, b].
+$\int_{a}^{x}$ f(t)dt $\geq -\frac{(b-a)^2}{8}M$, $\forall$ x $\in$ [a,b].
 
 Kết luận:
 
-$\max_{x\in[a,b]} \left| \int_a^x$ f(t)dt $\right| \leq \frac{(b-a)^2}{8} \max_{x\in[a,b]}$ |f'(x)|.
+$\max_{x\in[a,b]}\left|\int\limits_a^x f(t)dt\right|\leq \frac{(b-a)^2}{8}\max_{x\in[a,b]}|f'(x)|$.
 
 
 
-§3. TÍCH PHÂN SUY RÔNG
+## §3. TÍCH PHÂN SUY RÔNG
 
 Khi định nghĩa tích phân xác định, chúng ta đã xét các hàm số xác định trên một đoạn
 
@@ -5842,13 +5772,13 @@ tích phân, từ đó đưa vào khái niệm tích phân suy rộng với cậ
 
 hàm số không bị chặn.
 
-## 3.1 Tích phân suy rộng với cận vô hạn hàm số không bị chặn.
+### 3.1 Tích phân suy rộng với cận vô hạn
 
 Giả sử f(x) là hàm số xác định trên khoảng [a, $+\infty)]$ và khả tích trên mọi đoạn hữu
 
-han [a, A], (a $\leq$ A $< +\infty)$.
+han [a, A], (a $\le$ A $< +\infty)$.
 
-Định nghĩa 2.30. Giới hạn của tích phân $\int_{a}^{\infty}$ f(x) dx khi A $\rightarrow +\infty$ được gọi là tích phân
+#### Định nghĩa 2.30. Giới hạn của tích phân \int_{-\infty}^{\infty} f(x)dx khi A \to +\infty được gọi là tích phân
 
 suy rộng của hàm số f(x) trên khoảng [a, $+\infty)$ và ký hiệu như sau
 
@@ -5864,7 +5794,7 @@ Tương tự ta định nghĩa tích phân của một hàm số f(x) trên các
 
 $(-\infty$, $+\infty)$ bởi các công thức sau
 
-$\int_{a}^{u}$ f(x)dx $= \lim_{A \to -\infty} \int_{A}^{u}$ f(x)dx $\text{$ và $} \int_{a}^{+\infty}$ f(x)dx $= \lim_{A \to +\infty$, A' $\to -\infty} \int_{A}^{A}$ f(x)dx
+$\int_{-a}^{a}$ f(x)dx $= \lim_{A \to -\infty} \int_{-a}^{a}$ f(x)dx $\text{$ và $} \int_{-a}^{+ \infty}$ f(x)dx $= \lim_{A \to +\infty$, A' $\to -\infty} \int_{-a}^{A}$ f(x)dx
 
 Ta có thể viết
 
@@ -5890,27 +5820,27 @@ thì có thể viết
 
 $\int_{a}$ f(x)dx $= F(+\infty)$ - F(a) $= F(x)|_{a}^{+\infty}$
 
-Ví dụ 3.1. a) Tính tích phân $\int_{a^2}^{b^2} \frac{dx}{x \ln$ x $(\ln \ln x)^2}$
+Ví dụ 3.1. a) Tính tích phân $\int_{a^2}^{a} \frac{dx}{x \ln$ x $(\ln \ln x)^2}$
 
 Ta có
 
-$\int_{a^{2}}^{A} \frac{dx}{x \ln$ x $(\ln \ln x)^{2}} = -\frac{1}{\ln \ln x}\Big|_{e^{2}}^{A} = \frac{1}{\ln 2}$ - $\frac{1}{\ln \ln A} \frac{n \hat{e} n}{n \hat{e} n} \Rightarrow \lim_{A \to +\infty} \int_{a^{2}}^{A} \frac{dx}{x \ln$ x $(\ln \ln x)^{2}} = \frac{1}{\ln 2}$
+$\int_{a^{2}}^{A} \frac{dx}{x \ln$ x $(\ln \ln x)^{2}} = -\frac{1}{\ln \ln x} \Big|_{e^{2}}^{A} = \frac{1}{\ln 2}$ - $\frac{1}{\ln \ln A} \; n\hat{e}n \; \Rightarrow \; \lim_{A \to +\infty} \int_{a^{2}}^{A} \frac{dx}{x \ln$ x $(\ln \ln x)^{2}} = \frac{1}{\ln 2}$
 
-Vây
+Vậy
 
 $\int \frac{dx}{x \ln$ x $(\ln \ln x)^2} = \frac{1}{\ln 2}$
 
 b) Tính tích phân $\int \frac{dx}{(x^2+1)^2}$
 
-Trước hết ta tính $\int_1^A \frac{dx}{(x^2+1)^2}$, đặt x $= \tan$ t $\Rightarrow \frac{dx}{(1+x^2)^2} = \frac{dt}{1+\tan^2 t} = \cos^2$ t dt,
+Trước hết ta tính $\int_{-1}^{A} \frac{dx}{(x^2+1)^2}$, đặt x $= \tan$ t $\Rightarrow \frac{dx}{(1+x^2)^2} = \frac{dt}{1+\tan^2 t} = \cos^2$ t dt,
 
-$\int_{A'}^{A} \frac{dx}{(x^2+1)^2} = \int_{\arctan A'}^{\arctan A} \frac{1+\cos 2t}{2}$ dt $= \left(\frac{t}{2}$ + $\frac{\sin 2t}{4}\right) \Big|_{\arctan A'}^{\arctan A'}$
+$\int_{A'}^{A} \frac{dx}{(x^2+1)^2} = \int_{\arctan A'}^{\arctan A} \frac{1+\cos 2t}{2}$ dt $= \left(\frac{t}{2}$ + $\frac{\sin 2t}{4}\right) \Big|_{\arctan A'}^{\arctan A}$
 
-Khi A $\to +\infty$, A' $\to -\infty$ thì arctan A $\to \frac{\pi}{2};$ arctan A' $\to -\frac{\pi}{2}$, suy ra
+$K\!hi\,A\to +\infty$, $A'\to -\infty\,t\!h\grave{i} arctanA\to \frac{\pi}{2}; arctanA'\to -\frac{\pi}{2}$ , $suy\,ra$
 
 $\int \frac{dx}{(x^2+1)^2} = \left(\frac{t}{2}$ + $\frac{\sin 2t}{4}\right)\bigg|_{-\frac{\pi}{2}}^{\frac{\pi}{2}} = \frac{\pi}{2}$
 
-c) $\int_{-\infty}^{0}$ x $\sin$ x dx $= \lim_{A \to -\infty} \int_{A}^{0}$ x $\sin$ x dx $= \lim_{A \to -\infty}$ (-x $\cos$ x + $\sin x)|_{A}^{0} = \lim_{A \to -\infty}$ (A $\cos$ A - $\sin$ A)
+$c)\int\limits_{-\infty}^0 x\sin$ x dx $= \lim\limits_{A \to -\infty} \int\limits_A^0 x\sin$ x dx $= \lim\limits_{A \to -\infty} \left( -x\cos$ x + $\sin$ x $\right) \Big|_A^0 = \lim\limits_{A \to -\infty} \left( A\cos$ A - $\sin$ A $\right)$
 
 Giới hạn này không tồn tại, do đó tích phân phân kỳ.
 
@@ -5922,7 +5852,7 @@ Tích phân suy rộng I hội tụ khi và chỉ khi $\alpha >$ 1, và phân k�
 
 
 
-## 3.2 Tích phân suy rộng của hàm số không bị chăn None
+### 3.2 Tích phân suy rộng của hàm số không bị chăn
 
 Giả sử f(x) là hàm số xác định trên khoảng [a, b) và khả tích trên mọi đoạn [a, t], (t $<$ b)
 
@@ -5930,7 +5860,7 @@ bất kỳ), và $\lim_{x\to b}$ f(x) $= \infty$. Điểm x $=$ b được gọi
 
 f(x).
 
-Định nghĩa 2.31. Giới hạn của tích phân $\int_{t}^{t}$ f(x) dx khi t $\rightarrow b^{-}$, được gọi là tích phân suy
+$\textbf{Dinh$ nghĩa 2.31. $} \textit{Giói$ hạn của tích $phân} \int\limits^t$ f(x) dx $\textit{$ khi $}$ t $\rightarrow b^-$, $\textit{được$ gọi là tích phân $suy}$
 
 rộng của hàm số f(x) trên khoảng [a,b) và được ký hiệu như sau:
 
@@ -5942,21 +5872,21 @@ tại giới hạn này hoặc giới hạn bằng vô cùng, ta nói tích phâ
 
 Tương tự ta định nghĩa tích phân suy rộng của hàm số f(x) không bị chặn trên khoảng
 
-(a, b] và (a, b) lần lượt nhận x $=$ a và x $=$ b làm điểm bất thường.
+(a,b] và (a,b) lần lượt nhận x $=$ a và x $=$ b làm điểm bất thường.
 
-$\int_{a}^{b}$ f(x)dx $= \lim_{t \to a^{+}} \int_{a}^{b}$ f(x)dx $\text{$ và $} \int_{a}^{b}$ f(x)dx $= \lim_{t \to a^{+}$, t' $\to b^{-}} \int_{a}^{b}$ f(x)dx
+$\int_{a}^{b}$ f(x)dx $= \lim_{t \to a^{+}} \int_{a}^{b}$ f(x)dx $\text{$ và $} \int_{a}^{b}$ f(x)dx $= \lim_{t \to a^{+}$, t' $\to b^{-}} \int_{a}^{t}$ f(x)dx
 
 Đối với tích phân có hai điểm bất thường x $=$ a, x $=$ b, ta có thể viết
 
-$\int_{c}^{b}$ f(x)dx $= \int_{c}^{c}$ f(x)dx + $\int_{c}^{b}$ f(x)dx
+$\int_{a}^{b}$ f(x)dx $= \int_{a}^{c}$ f(x)dx + $\int_{a}^{b}$ f(x)dx
 
 khi hai trong ba tích phân nói trên hội tụ.
 
 Ví dụ 3.2. a) Xét sự hội tụ của tích phân $\int_{1}^{1} \frac{dx}{\sqrt{1-x^2}}$
 
-$\int_{-1}^{0} \frac{dx}{\sqrt{1-x^2}} = \lim_{t \to -1} \int_{t}^{0} \frac{dx}{\sqrt{1-x^2}} = \lim_{t \to -1} \arcsin$ x $\Big|_{0}^{0} = \lim_{t \to -1} (-\arcsin$ t) $= \frac{\pi}{2}$
+$\int_{-1}^{0} \frac{dx}{\sqrt{1-x^2}} = \lim_{t \to -1} \int_{t}^{0} \frac{dx}{\sqrt{1-x^2}} = \lim_{t \to -1} \arcsin$ x $\Big|_{-1}^{0} = \lim_{t \to -1} \left( -\arcsin$ t $\right) = \frac{\pi}{2}$
 
-$\int_{0}^{1} \frac{dx}{\sqrt{1-x^2}} = \lim_{t \to 1} \int_{0}^{1} \frac{dx}{\sqrt{1-x^2}} = \lim_{t \to 1} \arcsin$ x $\bigg|_{0}^{1} = \lim_{t \to 1} \arcsin$ t $= \frac{\pi}{2}$
+$\int_{0}^{1} \frac{dx}{\sqrt{1-x^{2}}} = \lim_{t \to 1} \int_{0}^{1} \frac{dx}{\sqrt{1-x^{2}}} = \lim_{t \to 1} \arcsin$ x $\Big|_{0}^{1} = \lim_{t \to 1} \arcsin$ t $= \frac{\pi}{2}$
 
 nên
 
@@ -5964,13 +5894,13 @@ $\int_{1}^{1} \frac{dx}{\sqrt{1-x^2}} = \int_{1}^{0} \frac{dx}{\sqrt{1-x^2}}$ + 
 
 
 
-b) Xét sự hội tụ của tích phân I $= \int_{0}^{1} \frac{dx}{x^{\alpha}}$
+b) Xét sự hội tụ của tích phân I $=\int\limits_{0}^{1}\frac{dx}{x^{\alpha}}$
 
 Tích phân suy rộng I hội tụ khi và chỉ khi $\alpha <$ 1, phân kỳ khi và chỉ khi $\alpha \ge$ 1.
 
-## 3.3 Các tiêu chuẩn hội tu <i>Tích phân suy rộng I hội tụ khi và chỉ khi</i> <math>\alpha</math> < 1, <i>phân kỳ khi và chỉ khi</i> <math>\alpha \ge 1</math>.
+### 3.3 Các tiêu chuẩn hôi tu
 
-### Định lý 2.47 (Tiêu chuẩn so sánh).
+#### Định lý 2.47 (Tiêu chuẩn so sánh).
 
 1. Cho hai hàm số f(x) và g(x) khả tích trên mọi khoảng hữu hạn [a, A](a $\leq$ A) và
 
@@ -5978,13 +5908,13 @@ Tích phân suy rộng I hội tụ khi và chỉ khi $\alpha <$ 1, phân kỳ k
 
 Khi đó
 
-i) Nếu $\int_{a}^{+\infty}$ g(x)dx hội tụ thì $\int_{a}^{+\infty}$ f(x)dx hội tụ
+i) Nếu $\int_{a}^{+\infty}$ g(x) dx hội tụ thì $\int_{a}^{+\infty}$ f(x) dx hội tụ
 
 ii) Nếu $\int_{-\infty}^{+\infty}$ f(x)dx phân kỳ thì $\int_{-\infty}^{+\infty}$ g(x)dx phân kỳ.
 
 2. Giả sử f(x) và g(x) là hai hàm số khả tích trên mọi đoạn hữu hạn [a, A](a $\leq$ A) và
 
-$\lim_{x \to +\infty} \frac{f(x)}{g(x)} =$ k(0 $<$ k $< +\infty)$. Khi đó các tích phân $\int_{0}^{\infty}$ f(x) dx và $\int_{0}^{\infty}$ g(x) dx hoặc cùng
+$\lim_{x \to +\infty} \frac{f(x)}{g(x)} =$ k(0 $<$ k $< +\infty)$. $\textit{Khi$ đó các tích phân $} \int_{-\infty}^{\infty}$ f(x)dx $\textit{$ và $} \int_{-\infty}^{\infty}$ g(x)dx $\textit{$ hoặc $cùng}$
 
 hội tụ, hoặc cùng phân kỳ.
 
@@ -5998,9 +5928,9 @@ Tương tự chúng ta cũng có các tiêu chuẩn hội tụ cho trường h�
 
 hàm số không bị chặn.
 
-### Định lý 2.48 (Tiêu chuẩn so sánh).
+#### Định lý 2.48 (Tiêu chuẩn so sánh).
 
-1. Cho hai hàm số f(x) và g(x) khả tích trên (a, b] và có cùng điểm bất thường là x $=$ a
+1. Cho hai hàm số f(x) và g(x) khả tích trên (a,b] và có cùng điểm bất thường là x $=$ a
 
 sao cho
 
@@ -6012,39 +5942,39 @@ Khi đó
 
 i) Nếu $\int_{b}^{b}$ g(x) dx hội tụ thì $\int_{b}^{b}$ f(x) dx hội tụ
 
-ii) Nếu $\int_{a}^{b}$ f(x)dx phân kỳ thì $\int_{a}^{b}$ g(x)dx phân kỳ
+ii) Nếu $\int_{0}^{b}$ f(x)dx phân kỳ thì $\int_{0}^{b}$ g(x)dx phân kỳ
 
-2. Giả sử f(x) và g(x) là hai hàm số dương khả tích trên (a, b] và có cùng điểm bất
+2. Giả sử f(x) và g(x) là hai hàm số dương khả tích trên (a,b] và có cùng điểm bất
 
 thường x $=$ a. Nếu tồn tại giới hạn
 
-$\n\lim_{x \to a^+} \frac{f(x)}{g(x)} =$ k(0 $<$ k $< +\infty)\n$
+$\lim_{x \to a^+} \frac{f(x)}{\varphi(x)} =$ k(0 $<$ k $< +\infty)$
 
-Khi đó các tích phân $\int_{0}^{b}$ f(x)dx và $\int_{0}^{b}$ g(x)dx hoặc cùng hội tụ, hoặc cùng phân kỳ.
+Khi đó các tích phân $\int_{0}^{v}$ f(x)dx và $\int_{0}^{v}$ g(x)dx hoặc cùng hội tụ, hoặc cùng phân kỳ.
 
-Hệ quả 2.7. Cho f và g là hai hàm số dương khả tích trên (a,b] và có cùng điểm bất
+$\mathbf{H}\hat{\mathbf{e}}$ quả 2.7. Cho f và g là hai hàm số dương khả tích trên (a,b] và có cùng điểm bất
 
-thường x $=$ a. Khi đó
+$\text{thu\`{o}ng\$ x $= a.\ K\text{hi}\ \text{d}\acute{o}$
 
 1. Nếu $\lim_{x\to a^+} \frac{f(x)}{g(x)} =$ 0 và nếu $\int_{a}^{b}$ g(x) dx hội tụ thì $\int_{a}^{b}$ f(x) dx hội tụ.
 
-2. Nếu $\lim_{x\to a^+} \frac{f(x)}{g(x)} = +\infty$ và nếu $\int_a^b$ g(x) dx phân kì thì $\int_a^b$ f(x) dx phân kì.
+2. Nếu $\lim_{x\to a^+} \frac{f(x)}{g(x)} = +\infty$ và nếu $\int_{a}^{b}$ g(x)dx phân kì thì $\int_{a}^{b}$ f(x)dx phân kì.
 
 Chú ý:
 
 • Khi xét đến tính chất hội tụ hay phân kì của một tích phân suy rộng, nói chung
 
-chúng ta chỉ "quan tâm" tới dáng điệu của hàm số tại các điểm bất thường.
+$\text{chúng$ ta chỉ "quan tâm" tới $d\acute{a}ng\text{ đi\acute{e}u}$ của hàm số tại các điểm bất thường.
 
 • Khi sử dụng tiêu chuẩn so sánh chúng ta thường hay so sánh các tích phân suy rộng
 
 đã cho với hai loại tích phân suy rộng sau:
 
-$ a) I_1 = \int_a^{+\infty} \frac{dx}{x^{\alpha}} \begin{cases} \text{hội tụ nếu} & \alpha > 1 \\ \text{phân kì nếu} & \alpha \leq 1 \end{cases} $
+$ a) I_1 = \int_a^{+\infty} \frac{dx}{x^{\alpha}} \begin{cases} \text{hội tụ nếu} & \alpha > 1 \\\text{phân kì nếu} & \alpha \leq 1 \end{cases} $
 
-$\mathbf{b})$
+b)
 
-$ I_2 = \int_{a}^{b} \frac{dx}{(x-a)^{\alpha}} \begin{cases} \text{hội tụ nếu } \alpha < 1 \\ \text{phân kì nếu } \alpha \ge 1 \end{cases}, I'_2 = \int_{a}^{b} \frac{dx}{(b-x)^{\alpha}} \begin{cases} \text{hội tụ nếu } \alpha < 1 \\ \text{phân kì nếu } \alpha \ge 1 \end{cases} $
+$ I_2 = \int\limits_a^b \frac{dx}{(x-a)^\alpha} \begin{cases} \text{hội tụ nếu } \alpha < 1 \ \text{phân kì nếu } \alpha \ge 1 \end{cases} \text{, } I_2' = \int\limits_a^b \frac{dx}{(b-x)^\alpha} \begin{cases} \text{hội tụ nếu } \alpha < 1 \ \text{phân kì nếu } \alpha \ge 1 \end{cases} $
 
 Ví du 3.3 (Cuối kì, K61 Viện ĐTQT). Xét sự hội tụ, phân kỳ của tích phân
 
@@ -6054,17 +5984,17 @@ a) $\int \frac{(1-\cos 2x)dx}{x^2 \ln(1+3\sqrt{x})}$.
 
 b) $\int \frac{(1-\cos 3x)dx}{x^2 \ln(1+2\sqrt{x})}$.
 
-## 3.4 Tích phân suy rộng hội tụ tuyệt đối và bán hội tụ b) <math display="block">\int \frac{(1-\cos 3x)dx}{x^2 \ln(1+2\sqrt{x})}.</math>
+### 3.4 Tích phân suy rộng hội tụ tuyệt đối và bán hội tụ
 
-Định lý 2.49. 1. Nếu $\int_{-\infty}^{+\infty}$ |f(x)| dx hội tụ thì $\int_{-\infty}^{+\infty}$ f(x) dx hội tụ
+#### Định lý 2.49. 1. Nếu \int_{-\infty}^{+\infty} |f(x)| dx hội tụ thì \int_{-\infty}^{+\infty} f(x) dx hội tụ
 
 2. Nếu $\int_{a}^{b}$ |f(x)| dx (có điểm bất thường là a hoặc b) hội tụ thì $\int_{a}^{+\infty}$ f(x) dx cũng hội tụ
 
-### Định nghĩa 2.32.
+#### Định nghĩa 2.32.
 
 1. Nếu $\int_{a}^{+\infty}$ |f(x)| dx hội tụ thì ta nói $\int_{a}^{+\infty}$ f(x) dx hội tụ tuyệt đối, còn nếu $\int_{a}^{+\infty}$ f(x) dx hội tụ
 
-nhưng $\int_{-\infty}^{+\infty}$ |f(x)| dx phân kì thì ta nói $\int_{-\infty}^{+\infty}$ |f(x)| dx bán hội tụ.
+nhung $\int_{+\infty}^{+\infty}$ |f(x)| dx $\; ph\hat{a}n \; k\grave{a} \; th\grave{a} \;$ ta $\; n\acute{o}i \int_{-\infty}^{+\infty}$ |f(x)| dx $\; b\acute{a}n \; h\hat{\rho}i \; t\mu$.
 
 2. Nếu $\int_{a}^{b}$ |f(x)| dx (có điểm bất thường là a hoặc b) hội tụ thì ta nói $\int_{a}^{b}$ f(x) dx hội tụ
 
@@ -6080,8 +6010,6 @@ $\left|\frac{\cos x}{x^2}\right| \leq \frac{1}{x^2}$
 
 mà $\int_{1}^{+\infty} \frac{1}{x^2}$ hội tụ nên $\int_{1}^{+\infty} \frac{\cos x}{x^2}$ hội tụ tuyệt đối.
 
-$\blacksquare$
-
 Ví dụ 3.5 (Tích phân Dirichlet). Chứng minh rằng $\int_{0}^{+\infty} \frac{\sin x}{x}$ là bán hội tụ.
 
 Chứng minh. Ta có
@@ -6094,17 +6022,17 @@ $\int_0^1 \frac{\sin x}{x}$ thực chất là tích phân xác định vì $\lim
 
 chỉ ra rằng $\int_{1}^{+\infty} \frac{\sin x}{x}$ là hội tụ. Theo công thức tích phân từng phần,
 
-$\int_{1}^{M} \frac{\sin x}{x}$ dx $= -\frac{\cos x}{x} \Big|_{1}^{M}$ + $\int_{1}^{M} \frac{\cos x}{x^2}$ dx $= \cos$ 1 - $\frac{\cos M}{M}$ + $\int_{1}^{M} \frac{\cos x}{x^2}$ dx.
+$\int_{-M}^{M} \frac{\sin x}{x}$ dx $= -\frac{\cos x}{x} \Big|_{1}^{M}$ + $\int_{-M}^{M} \frac{\cos x}{x^2}$ dx $= \cos$ 1 - $\frac{\cos M}{M}$ + $\int_{-M}^{M} \frac{\cos x}{x^2}$ dx.
 
-Cho M $\to +\infty$ ta có
+$\mathrm{Cho}\;M\to+\infty\;\mathrm{ta}\;\mathrm{c\acute{o}}$
 
 $\int \frac{\sin x}{x}$ dx $= \cos$ 1 + $\int \frac{\cos x}{x^2}$ dx.
 
-Mà $\int_{1}^{+\infty} \frac{\cos x}{x^2}$ dx là hội tụ nên $\int_{1}^{+\infty} \frac{\sin x}{x}$ cũng hội tụ. Việc tiếp theo là chỉ ra $\int_{0}^{+\infty} \left|\frac{\sin x}{x}\right|$ dx
+Mà $\int_{1}^{+\infty} \frac{\cos x}{x^2}$ dx là hội tụ nên $\int_{1}^{+\infty} \frac{\sin x}{x}$ cũng hội tụ. Việc tiếp theo là chỉ ra $\int_{0}^{+\infty} \left| \frac{\sin x}{x} \right|$ dx
 
 là phần kì. Thật vậy,
 
-$\int_{-\infty}^{+\infty} \left| \frac{\sin x}{x} \right|$ dx $= \sum_{n=0}^{+\infty} \int_{-\infty}^{(n+1)\pi} \left| \frac{\sin x}{x} \right|$ dx $= \sum_{n=0}^{+\infty} \int_{-\infty}^{\pi} \frac{\sin v}{v$ + $n\pi}$ dv.
+$\int_{-\infty}^{+\infty} \left| \frac{\sin x}{x} \right|$ dx $= \sum_{n=0}^{+\infty} \int_{-\infty}^{+n+1/n} \left| \frac{\sin x}{x} \right|$ dx $= \sum_{n=0}^{+\infty} \int_{-\infty}^{n} \frac{\sin v}{v$ + $n\pi}$ dv.
 
 $\text{Vi } \frac{1}{v+n\pi} \geq \frac{1}{(n+1)\pi} \text{$ với $}$ 0 $\leq$ v $\leq \pi \text{ nên}$
 
@@ -6112,7 +6040,7 @@ $\int_{0}^{\pi} \frac{\sin v}{v$ + $n\pi}$ dv $\ge \frac{1}{(n+1)\pi} \int_{0}^{
 
 Mà $\sum_{n=0}^{+\infty} \frac{2}{(n+1)\pi}$ là phân kì nên $\int_{0}^{+\infty} \left| \frac{\sin x}{x} \right|$ dx là phân kì theo tiêu chuẩn so sánh.
 
-## 3.5 Bài tập Mà <math>\sum_{n=0}^{+\infty} \frac{2}{(n+1)\pi}</math> là phân kì nên <math>\int_{0}^{+\infty} \left| \frac{\sin x}{x} \right| dx</math> là phân kì theo tiêu chuẩn so sánh.
+### 3.5 Bài tâp
 
 Bài tập 2.1. Xét sự hội tụ và tính (trong trường hợp hội tụ) các tích phân sau:
 
@@ -6122,39 +6050,39 @@ c) $\int_{-\infty}^{+\infty} \frac{dx}{(x^2+1)^2}$
 
 d) $\int_0^1 \frac{dx}{\sqrt{x(1-x)}}$
 
-b) $\int_0^{+\infty} \cos$ x dx
+b) $\int_{0}^{+\infty} \cos$ x dx
 
 Chứng minh. a) $\int_{-\infty}^{\infty} xe^{x}$ dx $= e^{x}(x-1)\Big|_{-\infty} =$ 1
 
-b) $\int_{0}^{+\infty} \cos$ x dx $= \sin$ x $\Big|_{0}^{+\infty}$. Do không tồn tại giới hạn $\lim_{x \to +\infty} \sin$ x nên tích phân đã cho
+b) $\int_{0}^{+\infty} \cos$ x dx $= \sin$ x $\Bigg|_{0}^{-\infty}$. Do không tồn tại giới hạn $\lim_{x \to +\infty} \sin$ x nên tích phân đã cho
 
 phân kì.
 
 
 
-c) $\int_{-\infty}^{\infty} \frac{dx}{(x^2+1)^2} =$ 2 $\int_{0}^{+\infty} \frac{dx}{(x^2+1)^2}$. Đặt x $= \tan$ t thì I $=$ 2 $\int_{0}^{\frac{\pi}{2}} \cos^2$ t dt $= \frac{\pi}{2}$
+$\text{c)} \int_{-\infty}^{\infty} \frac{dx}{(x^2+1)^2} =$ 2 $\int_{0}^{+\infty} \frac{dx}{(x^2+1)^2}$. $\text{$ Đặt $}$ x $= \tan$ t $\text{$ thì $}$ I $=$ 2 $\int_{0}^{\frac{\pi}{2}} \cos^2$ t dt $= \frac{\pi}{2}$
 
-d) $\int_{0}^{1} \frac{dx}{\sqrt{x(1-x)}} = \int_{0}^{\frac{\pi}{2}} \frac{dx}{\sqrt{x(1-x)}}$ + $\int_{\frac{\pi}{2}}^{1} \frac{dx}{\sqrt{x(1-x)}}$
+d) $\int_{0}^{1} \frac{dx}{\sqrt{x(1-x)}} = \int_{0}^{\frac{\pi}{2}} \frac{dx}{\sqrt{x(1-x)}}$ + $\int_{\frac{\pi}{2}}^{\frac{\pi}{2}} \frac{dx}{\sqrt{x(1-x)}}$
 
 • Xét tích phân $I_1$ có điểm bất thường là x $=$ 0. Khi x $\to$ 0, $\frac{1}{\sqrt{x(1-x)}} \sim \frac{1}{\sqrt{x}}$. Mặt
 
-khác tích phân $\int_{1}^{1} \frac{dx}{\sqrt{x}}$ hội tụ nên $I_1$ hội tụ.
+khác tích phân $\int_{0}^{1} \frac{dx}{\sqrt{x}}$ hội tụ nên $I_1$ hội tụ.
 
-• Xét tích phân $I_2$ có điểm bất thường là x $=$ 1. Khi x $\to$ 1, $\frac{1}{\sqrt{x(1-x)}} \sim \frac{1}{\sqrt{1-x}}$.
+• Xét tích phân $I_2$ có điểm bất thường là $x=1$. Khi $x\to$ 1, $\frac{1}{\sqrt{x(1-x)}}\sim \frac{1}{\sqrt{1-x}}$.
 
-Mặt khác tích phân $\int_{0}^{1} \frac{dx}{\sqrt{1-x}}$ hội tụ nên $I_2$ hội tụ.
+Mặt khác tích phân $\int_{0}^{1} \frac{dx}{\sqrt{1-x}}$ hội tụ nên $I_{2}$ hội tụ.
 
-Vây I $= I_1$ + $I_2$ hôi tu.
+$\text{Vây }$ I $= I_1$ + $I_2 \text{$ hôi $tu.}$
 
-Trong trường hợp tổng quát, muốn tính I $= \int_{0}^{b} \frac{dx}{\sqrt{(x-a)(b-x)}}$ ta thực hiện phép đổi
+Trong trường hợp tổng quát, muốn tính I $= \int_{-\sqrt{(x-a)(b-x)}}^{v} \frac{dx}{\sqrt{(x-a)(b-x)}}$ ta thực hiện phép đổi
 
 biến
 
 x $= a\cos^2\varphi$ + $b\sin^2\varphi$
 
-sẽ chuyển I về tích phân xác định
+$\tilde{\text{se}}$ chuyển I về tích phân xác định
 
-$I=2\int_{0}^{\frac{\pi}{2}}d\varphi=\pi$
+$I=2\int\limits_{0}^{\frac{\pi}{2}}d\varphi=\pi$
 
 Bài tập 2.2. Xét sự hội tụ của các tích phân suy rộng sau
 
@@ -6182,15 +6110,15 @@ Mặc khác $\int \frac{dx}{x^3}$ phân kì nên $\int \frac{dx}{\tan$ x - $x}$ 
 
 b) Tích phân đã cho có điểm bất thường là x $=$ 0 và khi x $\to$ 0, $e^{\sin x}$ - 1 $\sim \sin$ x $\sim$ x nên
 
-$\frac{\sqrt{x}}{e^{\sin x}$ - $1} \sim \frac{1}{\sqrt{x}}$. Do $\int_1^1 \frac{dx}{\sqrt{x}}$ hội tụ nên $\int_1^1 \frac{\sqrt{x} dx}{e^{\sin x}$ - $1}$ cũng hội tụ.
+$\frac{\sqrt{x}}{e^{\sin x}-1} \sim \frac{1}{\sqrt{x}}$. Do $\int \frac{dx}{\sqrt{x}}$ hội tụ nên $\int \frac{\sqrt{x} dx}{e^{\sin x}-1}$ cũng hội tụ.
 
 c) Tích phân đã cho có điểm bất thường là x $=$ và khi x $\rightarrow$ 1 thì
 
 $\frac{\sqrt{x}}{\sqrt{1-x^4}} = \frac{\sqrt{x}}{\sqrt{(1-x)(1+x+x^2+x^3)}} \sim \frac{1}{2\sqrt{1-x}}$
 
-Do $\int \frac{dx}{\sqrt{1-x}}$ hội tụ nên $\int \frac{\sqrt{x} dx}{\sqrt{1-x^4}}$ cũng hội tụ.
+Do $\int \frac{dx}{\sqrt{1-x}}$ hội tụ nên $\int \frac{\sqrt{x}dx}{\sqrt{1-x^4}}$ cũng hội tụ.
 
-d) Ta có $\frac{\ln(1+x)}{x} > \frac{1}{x}$ với mọi x $>$ e - 1. Mà $\int_{1}^{+\infty} \frac{dx}{x}$ phân kì nên $\int_{1}^{\infty} \frac{\ln(1+x)dx}{x}$ cũng
+d) Ta có $\frac{\ln(1+x)}{x} > \frac{1}{x}$ với mọi x $>$ e-1. Mà $\int_{1}^{+\infty} \frac{dx}{x}$ phân kì nên $\int_{1}^{\infty} \frac{\ln(1+x)dx}{x}$ cũng
 
 phân kì.
 
@@ -6200,13 +6128,11 @@ $\int_{-\infty}^{+\infty} \frac{e^{-x^2}}{x^2}$ dx cũng hội tụ.
 
 f) Khi x $\to +\infty$ thì $\frac{x^2}{x^4$ - $x^2$ + $1} \sim \frac{1}{x^2}$ nên tích phân đã cho hội tụ.
 
-$\blacksquare$
-
 Bài tập 2.3. Nếu $\int$ f(x)dx hội tụ thì có suy ra được f(x) $\rightarrow$ 0 khi x $\rightarrow +\infty$ không?
 
-[Gợi ý] $\int_a$ f(x)dx hội tụ không suy ra được f(x) $\to$ 0 khi x $\to +\infty$.
+[Gợi ý] $\int\limits_{a}$ f(x)dx hội tụ không suy ra được $f(x)\rightarrow$ 0 khi $x\rightarrow +\infty$.
 
-Ví dụ như $\int_{0}^{\infty} \sin(x^2)$ dx hội tụ (xem bài tập 2.5) nhưng không tồn tại giới hạn $\lim_{x \to +\infty} \sin(x^2)$.
+Ví dụ như $\int \sin(x^2)$ dx hội tụ (xem bài tập 2.5) nhưng không tồn tại giới hạn $\lim_{x \to +\infty} \sin(x^2)$.
 
 Bài tập 2.4. Cho hàm số f(x) liên tục trên [a, $+\infty)$ và $\lim_{x \to +\infty}$ f(x) $=$ A $\neq$ 0. Hỏi $\int_{a}^{b}$ f(x) dx
 
@@ -6214,11 +6140,11 @@ có hội tụ không?
 
 
 
-[Gợi ý] Theo giả thiết $\lim_{x \to +\infty} \frac{f(x)}{A} =$ 1, mà $\int$ A dx phân kì nên $\int$ f(x) dx cũng phân
+[Gợi ý] Theo giả thiết $\lim_{x\to +\infty}\frac{f(x)}{A}=1$, mà $\int^{\infty}$ A dx phân kì nên $\int^{\infty}$ f(x) dx cũng phân
 
-$k\grave{\textit{\i}}$.
+kì.
 
-Bài tập 2.5. Xét sự hội tụ của các tích phân suy rộng sau
+Bài tâp 2.5. Xét sự hội tụ của các tích phân suy rộng sau
 
 g) $\int_{-\infty}^{+\infty} x^{p-1} e^{-x}$ dx
 
@@ -6226,7 +6152,7 @@ d) $\int_{1}^{1} \frac{x^2 dx}{\sqrt[3]{(1-x^2)^5}}$
 
 a) $\int_{0}^{\infty} \sin(x^2)$ dx
 
-b) $\int_0^{+\infty} e^{-x^2}$ dx
+b) $\int_{0}^{+\infty} e^{-x^2}$ dx
 
 e) $\int_0^{\frac{\pi}{2}} (\tan x)^p$ dx
 
@@ -6234,13 +6160,13 @@ h) $\int \frac{f(x)dx}{\sqrt{1-x^2}}$, (f liên tục)
 
 f) $\int_{0}^{1} x^{p-1} (1-x)^{q-1}$ dx
 
-c) $\int_{-\infty}^{+\infty} \left(1$ - $\cos \frac{2}{x}\right)$ dx
+c) $\int_{-\infty}^{+\infty} \left(1$ - $\cos\frac{2}{x}\right)$ dx
 
-a) Thực hiện phép đổi biến x $= \sqrt{t}$, dx $= \frac{dt}{2\sqrt{t}}$, đưa tích phân đã cho về
+a) Thực hiện phép đổi biến $x=\sqrt{t}$, $dx=\frac{dt}{2\sqrt{t}}$, đưa tích phân đã cho về
 
 Chứng minh.
 
-dang
+dạng
 
 I $= \frac{1}{2} \int_{-\infty}^{+\infty} \frac{\sin$ t $dt}{\sqrt{t}}$
 
@@ -6248,25 +6174,25 @@ Ta có thể viết
 
 $\int_{0}^{+\infty} \frac{\sin$ t $dt}{\sqrt{t}} = \int_{0}^{\frac{\pi}{2}} \frac{\sin$ t $dt}{\sqrt{t}}$ + $\int_{\frac{\pi}{2}}^{+\infty} \frac{\sin$ t $dt}{\sqrt{t}}$
 
-Vì lim $\frac{\sin t}{t \to 0} =$ 0 nên tích phân $I_1$ thực chất là tích phân xác định nên hội tụ, do đó chỉ
+Vì lim $\frac{\sin t}{t\rightarrow 0} =$ 0 nên tích phân $I_1$ thực chất là tích phân xác định nên hội tụ, do đó chỉ
 
-cần xét $I_2$.
+$\mathbf{c\hat{a}}\mathbf{n} \times \mathbf{t} I_2$.
 
-$I_2 = \int_{-\pi}^{+\infty} \frac{\sin t}{\sqrt{t}}$ dt $= -\int_{\pi}^{+\infty} \frac{d(\cos t)}{\sqrt{t}} = -\frac{\cos t}{\sqrt{t}} \Big|_{\frac{\pi}{2}}^{+\infty}$ - $\frac{1}{2} \int_{\pi}^{+\infty} \frac{\cos t}{t^{3/2}}$ dt $= -\frac{1}{2} \int_{\pi}^{+\infty} \frac{\cos t}{t^{3/2}}$ dt
+$I_{2} = \int_{-\pi}^{+\infty} \frac{\sin t}{\sqrt{t}}$ dt $= -\int_{\pi}^{+\infty} \frac{d(\cos t)}{\sqrt{t}} = -\frac{\cos t}{\sqrt{t}} \Big|_{\frac{\pi}{2}}^{+\infty}$ - $\frac{1}{2} \int_{\pi}^{+\infty} \frac{\cos t}{t^{3/2}}$ dt $= -\frac{1}{2} \int_{\pi}^{+\infty} \frac{\cos t}{t^{3/2}}$ dt
 
-Vì $\left|\frac{\cos t}{t^{3/2}}\right| \le \frac{1}{t^{3/2}}$ nên $\int_{\underline{\cdot}}^{\infty} \frac{\cos t}{t^{3/2}}$ dt hội tụ. Vậy ta có $I_2$ cũng hội tụ và tích phân đã cho
+$\text{Vi}\left|\frac{\cos t}{t^{3/2}}\right| \leq \frac{1}{t^{3/2}} \text{$ nên $} \int\limits_{-}^{\infty} \frac{\cos t}{t^{3/2}}$ dt $\text{$ hội tụ. Vậy ta có $} I_2 \text{$ cũng hội tụ và tích phân đã $cho}$
 
 hội tụ.
 
 b) Ta có với x $>$ 1 thì $e^{-x^2} < e^{-x}$ mà $\int_{1}^{+\infty} e^{-x}$ dx $= e^{-1}$ hội tụ nên $\int_{1}^{+\infty} e^{-x^2}$ dx cũng hội tụ.
 
-c) Khi x $\to +\infty$, 1 - $\cos \frac{2}{x} =$ 2 $\sin^2 \frac{1}{x} \sim \frac{2}{x^2}$ nên $\int_0^{\infty} \left(1$ - $\cos \frac{2}{x}\right)$ dx hội tụ.
+c) Khi x $\to +\infty$, 1 - $\cos\frac{2}{x} = 2\sin^2\frac{1}{x} \sim \frac{2}{x^2}$ nên $\int_0^\infty \left(1$ - $\cos\frac{2}{x}\right)$ dx hội tụ.
 
 
 
-d) Khi x $\to$ 1, $\frac{x^2}{\sqrt[3]{(1-x^2)^5}} = \frac{x^2}{\sqrt[3]{[(1-x)(1+x)]^5}} \sim \frac{1}{\sqrt[3]{32} \cdot \sqrt[3]{(1-x)^5}}$ nên $\int_0^1 \frac{x^2 dx}{\sqrt[3]{(1-x^2)^5}}$
+d) Khi x $\to$ 1, $\frac{x^2}{\sqrt[3]{(1-x^2)^5}} = \frac{x^2}{\sqrt[3]{[(1-x)(1+x)]^5}} \sim \frac{1}{\sqrt[3]{32} \cdot \sqrt[3]{(1-x)^5}}$ nên $\int_{2}^{1} \frac{x^2 dx}{\sqrt[3]{(1-x^2)^5}}$
 
-hội tu.
+hôi tu.
 
 e) Trước hết ta có nhận xét rằng I $= \int_{0}^{\frac{\pi}{2}} (\tan x)^p$ dx có điểm bất thường là x $=$ 0 khi
 
@@ -6276,11 +6202,11 @@ p $<$ 0 và x $= \frac{\pi}{2}$ khi p $>$ 0.
 
 p $<$ 0 và phân kì nếu p $\le$ -1.
 
-• Nếu p $>$ 0 thì khi x $\to \frac{\pi}{2}$, $(\tan x)^p = \left(\frac{\sin x}{\cos x}\right)^p = \left(\frac{\sin x}{\sin \left(\frac{\pi}{2}$ - $x\right)}\right)^r \sim \frac{1}{\left(\frac{\pi}{2}$ - $x\right)^p}$
+• Nếu p $>$ 0 thì khi x $\to \frac{\pi}{2}$, $(\tan x)^p = \left(\frac{\sin x}{\cos x}\right)^p = \left(\frac{\sin x}{\sin\left(\frac{\pi}{2}$ - $x\right)}\right)^r \sim \frac{1}{\left(\frac{\pi}{2}$ - $x\right)^p}$
 
 nên I hội tụ nếu 0 $<$ p $<$ 1 và phân kì nếu p $\ge$ 1.
 
-Kết luận: $\int_0^{\frac{\pi}{2}} (\tan x)^p$ dx hội tụ khi |p| $<$ 1 và phân kì khi |p| $\ge$ 1.
+Kết luận: $\int_0^{\frac{\pi}{2}} (\tan x)^p$ dx hội tụ khi |p| $<$ 1 và phân kì khi |p| $\geq$ 1.
 
 f) Trước hết ta có nhận xét rằng nếu p $<$ 1 thì x $=$ 0 là điểm bất thường, còn nếu q $<$ 1
 
@@ -6288,13 +6214,13 @@ thì x $=$ 1 là điểm bất thường. Phân tích
 
 I $= \int_{0}^{1} x^{p-1} (1-x)^{q-1}$ dx $= \int_{0}^{\frac{1}{2}} x^{p-1} (1-x)^{q-1}$ dx + $\int_{\frac{1}{2}}^{1} x^{p-1} (1-x)^{q-1}$ dx
 
-$I_1$ chỉ hội tụ khi 1 - p $<$ 1, nghĩa là p $>$ 0; còn $I_2$ chỉ hội tụ khi 1 - q $<$ 1, nghĩa là
+$I_1$ chỉ hội tụ khi 1-p $<$ 1, nghĩa là p $>$ 0; còn $I_2$ chỉ hội tụ khi 1-q $<$ 1, nghĩa là
 
 q $>$ 0. Vậy I chỉ hội tụ khi p $>$ 0, q $>$ 0.
 
 g) Nếu p $\ge$ 1 thì tích phân đã cho chỉ có điểm bất thường tại $+\infty$ và
 
-$\n\lim_{x \to +\infty} [x^{p-1}e^{-x}]$ : $\frac{1}{x^2} = \lim_{x \to +\infty} \frac{x^{p+1}}{e^x} = 0\n$
+$\lim_{x \to +\infty} [x^{p-1}e^{-x}]$ : $\frac{1}{x^2} = \lim_{x \to +\infty} \frac{x^{p+1}}{e^x} =$ 0
 
 nên $\int x^{p-1}e^{-x}dx$ hội tụ.
 
@@ -6302,7 +6228,7 @@ x $\rightarrow +\infty$
 
 Nếu p $<$ 1 thì x $=$ 0 cũng là một điểm bất thường. Ta có
 
-$\int_{0}^{+\infty} x^{p-1}e^{-x}dx = \int_{0}^{1} x^{p-1}e^{-x}dx$ + $\int_{1}^{+\infty} x^{p-1}e^{-x}dx$
+$\int_{0}^{+\infty} x^{p-1} e^{-x}$ dx $= \int_{0}^{1} x^{p-1} e^{-x}$ dx + $\int_{1}^{+\infty} x^{p-1} e^{-x}$ dx
 
 
 
@@ -6314,17 +6240,15 @@ h) Mặc dù tích phân đã cho là tích phân suy rộng có điểm bất t
 
 có thể đưa I về tích phân thường bằng cách đổi biến. Đặt x $= \sin \theta$, trên [0, c] ta có
 
-$\int_{0}^{1} \frac{f(x)dx}{\sqrt{1-x^2}} = \lim_{c \to 1^{-}} \int_{0}^{c} \frac{f(x)dx}{\sqrt{1-x^2}} = \lim_{c \to 1^{-}} \int_{0}^{\arcsin c} f(\sin \theta) d\theta = \int_{0}^{\frac{\pi}{2}} f(\sin \theta) d\theta$
+$\int_{0}^{1} \frac{f(x)dx}{\sqrt{1-x^2}} = \lim_{c \to 1^-} \int_{0}^{c} \frac{f(x)dx}{\sqrt{1-x^2}} = \lim_{c \to 1^-} \int_{0}^{\arcsin c} f(\sin\theta)d\theta = \int_{0}^{\frac{\pi}{2}} f(\sin\theta)d\theta$
 
-Vì f là một hàm số liên tục trên [0, 1] nên hàm hợp f(sin $\theta)$ là một hàm số liên tục và
+Vì f là một hàm số liên tục trên [0,1] nên hàm hợp $f(\sin \theta)$ là một hàm số liên tục và
 
-bị chặn trên $\left[0$, $\frac{\pi}{2}\right]$ và tích phân đã cho là tích phân xác định nên hội tụ.
-
-$\blacksquare$
+bị chặn trên $\left[0,\frac{\pi}{2}\right]$ và tích phân đã cho là tích phân xác định nên hội tụ.
 
 Bài tập 2.6. Tính các tích phân suy rộng sau
 
-a) $\int_{-\infty}^{+\infty} e^{-ax} \sin$ bx dx b) $\int_{-\infty}^{+\infty} e^{-ax} \cos$ bx dx c) $\int_{-\infty}^{+\infty} \frac{dx}{1+x^4}$
+a) $\int_{-\infty}^{+\infty} e^{-ax} \sin$ bx dx b) $\int_{-\infty}^{+\infty} e^{-ax} \cos$ bx dx c) $\int_{0}^{+\infty} \frac{dx}{1+x^4}$
 
 Chứng minh. a) $\int e^{-ax} \sin$ bx dx $= -\frac{a \sin$ bx + b $\cos bx}{a^2$ + $b^2} e^{-ax} \Big|_0^{+\infty} = \frac{b}{a^2$ + $b^2}$
 
@@ -6336,29 +6260,29 @@ I $= \int_{-\infty}^{+\infty} \frac{dx}{1+x^4} = \int_{-\infty}^{+\infty} \frac{
 
 Do đó
 
-2I $= \int_{0}^{+\infty} \frac{dx}{1+x^4}$ + $\int_{0}^{+\infty} \frac{x^2 dx}{1+x^4} = \int_{0}^{+\infty} \frac{(1+x^2) dx}{1+x^4} = \int_{0}^{+\infty} \frac{\left(1+\frac{1}{x^2}\right) dx}{x^2+\frac{1}{x^2}}$
+2I $= \int\limits_{0}^{+\infty} \frac{dx}{1+x^4}$ + $\int\limits_{0}^{+\infty} \frac{x^2 dx}{1+x^4} = \int\limits_{0}^{+\infty} \frac{(1+x^2) dx}{1+x^4} = \int\limits_{0}^{+\infty} \frac{\left(1+\frac{1}{x^2}\right) dx}{x^2+\frac{1}{2}}$
 
-Lại đặt z $=$ x - $\frac{1}{x}$ ta được
+Lại đặt z $=$ x - $\frac{1}{\chi}$ ta được
 
 I $= \frac{1}{2} \int_{-\infty}^{\infty} \frac{z}{z^2$ + $2} = \frac{1}{2\sqrt{2}} \arctan \frac{z}{\sqrt{2}} \Big|_{-\infty}^{+\infty} = \frac{\pi}{2\sqrt{2}}$
 
 
 
-§4. CÁC ỨNG DỤNG CỦA TÍCH PHẦN XÁC ĐỊNH
+## §4. CÁC ỨNG DỤNG CỦA TÍCH PHÂN XÁC ĐỊNH
 
-## 4.1 Tính diên tích hình phẳng <b>§4. CÁC ỨNG DỤNG CỦA TÍCH PHẦN XÁC ĐỊNH</b>
+### 4.1 Tính diên tích hình phẳng
 
 1. Trường hợp biên của hình phẳng cho trong hệ toạ độ Descartes (tính diện tích "hình
 
 thang cong")
 
-$ Nếu S giới hạn bởi \begin{cases} a \le x \le b \\ y = f(x) \\ y = g(x) \\ f, g \in C[a, b] \end{cases} thì S = \int_{a}^{b} |f(x) - g(x)| dx (2.13) $
+$ Nếu S giới hạn bởi \begin{cases} a \le x \le b \\ y = f(x) \\ y = g(x) \\ f, g \in C[a, b] \end{cases} \quad \text{thì} \quad \begin{array}{|c|} S = \int_{a}^{b} |f(x) - g(x)| \ dx \\ \hline \end{array} \tag{2.13} $
 
-$ Nếu S giới hạn bởi \begin{cases} c \le y \le d \\ x = \varphi(y) \\ x = \psi(y) \end{cases} thì S = \int_{c}^{d} |\varphi(y) - \psi(y)| dy (2.14) $
+$ Nếu S giới hạn bởi \begin{cases} c \leq y \leq d \ x = \varphi(y) \ x = \psi(y) \end{cases} thì S = \int\limits_{c}^{d} \mid \varphi(y) - \psi(y) \mid dy (2.14) $
 
 $\varphi$, $\psi \in$ [c, d]
 
-$ Nếu S giới hạn bởi \begin{cases} a \le x \le b \\ y = 0 \\ x = \varphi(t) \\ y = \psi(t) \end{cases} thì S = \int_{t_1}^{t_2} |\psi(t)\varphi'(t)| dt $
+$ Nếu S giới hạn bởi \begin{cases} a \leq x \leq b \\ y = 0 \\ \begin{cases} x = \varphi(t) \\ y = \psi(t) \end{cases} \end{cases} \text{thi} \begin{cases} S = \int\limits_{t_1}^{t_2} \mid \psi(t) \varphi'(t) \mid dt \end{cases} $
 
 (2.15)
 
@@ -6368,35 +6292,35 @@ $\varphi$, $\psi$, $\varphi' \in C[t_1$, $t_2]$.
 
 Ví dụ 4.1 (Cuối kì, K61-Viện ĐTQT). Tính diện tích của miền
 
-$ b) D: \begin{cases} x - y \geq 2 \\ x^2 + y^2 \leq 2x. \end{cases} $
+$ b) D: \begin{cases} x - y \ge 2 \\ x^2 + y^2 \le 2x. \end{cases} $
 
-$ a) D: \begin{cases} x + y \geq 2 \\ x^2 + y^2 < 2x. \end{cases} $
+$ a) D: \begin{cases} x + y \ge 2 \\ x^2 + y^2 < 2x. \end{cases} $
 
-Bài tập 2.1. Tính diện tích hình phẳng giới hạn bởi:
+Bài tâp 2.1. Tính diện tích hình phẳng giới hạn bởi:
 
-a) Dường parabol y $= x^2$ + 4 và đường thẳng x - y + 4 $=$ 0.
+a) Đường parabol y $= x^2$ + 4 và đường thẳng x - y + 4 $=$ 0.
 
 b) Parabol bậc ba y $= x^3$ và các đường y $=$ x, y $=$ 2x.
 
-c) Dường tròn $x^2$ + $y^2 =$ 2x và parabol $y^2 =$ x
+c) Đường tròn $x^2$ + $y^2 =$ 2x và parabol $y^2 =$ x
 
-d) Duờng $y^2 = x^2$ - $x^4$
+d) Đường $y^2 = x^2$ - $x^4$
 
 
 
-[Gợi $\acute{y}]$
+[Gợi ý]
 
 Các câu a), b), c) có thể vẽ hình và tính toán dễ dàng như sau:
 
-a) S $= \int_{0}^{1}$ [(x+4) - $(x^2+4)]$ dx $= \frac{1}{6}$
+a) S $= \int_{0}^{1} [(x+4)-(x^2+4)]dx = \frac{1}{6}$
 
 b) S $= \int_{0}^{1}$ (2x - $x^2)$ dx + $\int_{2}^{\sqrt{2}}$ (2x - $x^3)$ dx $= \frac{3}{4}$
 
-c) S $=$ 2 $\int_{0}^{2} (\sqrt{4x$ - $x^2})$ - $\sqrt{2x}$ dx $= 2\pi$ - $\frac{16}{3}$
+c) S $=$ 2 $\int_{0}^{2} (\sqrt{4x$ - $x^2})$ - $\sqrt{2x})$ dx $= 2\pi$ - $\frac{16}{3}$
 
-d) Trước hết ta có điều kiện 0 $\le$ x $\le$ 1, và nhận xét rằng nếu M(x, y) $\in$ C thì $M'(\pm$ x, $\pm$ y) $\in$
+d) Trước hết ta có điều kiện 0 $\le$ x $\le$ 1, và nhận xét rằng nếu M(x, y) $\in \mathcal{C}$ thì $M'(\pm$ x, $\pm$ y) $\in$
 
-$ C. Do đó S = 4S(D), trong đó D là miền giới hạn bởi: \begin{cases} 0 \le x \le 1 \\ y = \sqrt{x^2 - x^4} \end{cases} $
+$ \mathcal C . Do đó S=4S(D), trong đó D là miền giới hạn bởi: \left\{ \begin{aligned} 0 &\leq x \leq 1 \ y &= \sqrt{x^2-x^4}. \end{aligned} \right. $
 
 Do miền D nằm hoàn toàn trong hình vuông 0 $\le$ x $\le$ 1, 0 $\le$ y $\le$ 1, hơn nữa hàm số
 
@@ -6404,7 +6328,7 @@ y $= \sqrt{x^2$ - $x^4}$ liên tục, y(0) $=$ y(1) $=$ 0 nên đồ thị của
 
 như hình vẽ dưới đây:
 
-$\mathop{\mathcal{X}_{}}\nolimits$
+$\chi$
 
 Áp dụng công thức 2.13 ta có S(D) $= \int_{0}^{1} \sqrt{x^2$ - $x^4}$ dx $= \frac{1}{3} \Rightarrow$ S $= \frac{4}{3}$.
 
@@ -6412,7 +6336,7 @@ $\mathop{\mathcal{X}_{}}\nolimits$
 
 dạng hình quạt)
 
-$ Nếu S giới hạn bởi \begin{cases} \varphi = \alpha \\ \varphi = \beta \\ r = r(\varphi) \\ r(\varphi) \in C[\alpha, \beta] \end{cases} thì S = \frac{1}{2} \int_{\alpha}^{\beta} r^{2}(\varphi) d\varphi $
+$ Nếu S giới hạn bởi \begin{cases} \varphi = \alpha \\ \varphi = \beta \\ r = r(\varphi) \\ r(\varphi) \in C[\alpha, \beta] \end{cases} thì S = \frac{1}{2} \int_{\alpha}^{\beta} r^2(\varphi) d\varphi $
 
 (2.16)
 
@@ -6420,11 +6344,11 @@ $ Nếu S giới hạn bởi \begin{cases} \varphi = \alpha \\ \varphi = \beta \
 
 Bài tập 2.2. Tính diện tích hình phẳng giới hạn bởi đường hình tim $r^2 = a^2 \cos 2\varphi$
 
-[Gợi $\acute{y}]$
+[Gợi ý]
 
-$\int_{-\infty}^{g}$ r $=$ a $\sqrt{\cos 2\varphi}$
+r $= a\sqrt{\cos 2\varphi}$
 
-$\mathop{\mathcal{X}_{}}\nolimits$
+$\chi$
 
 Hình 2.2
 
@@ -6434,11 +6358,11 @@ hình vẽ ta có:
 
 S $=$ 4S(D) $= 4.\frac{1}{2} \int_{0}^{\frac{\pi}{4}} r^{2}(\varphi) d\varphi = a^{2}$.
 
-## 4.2 Tính độ dài đường cong phẳng <math display="block">S = 4S(D) = 4.\frac{1}{2} \int_{0}^{\frac{\pi}{4}} r^{2}(\varphi) d\varphi = a^{2}.</math>
+### 4.2 Tính độ dài đường cong phẳng
 
 Trường hợp đường cong AB cho bởi phương trình y $=$ f(x)
 
-$ AB\begin{cases}y = f(x) \\ a \le x \le b \\ f \in C^{1}[a, b]\end{cases} thi s = \int_{a}^{b} \sqrt{1 + [f'(x)]^{2}} $
+$ AB\begin{cases}y = f(x) \\ a \le x \le b \\ f \in C^{1}[a,b] \end{cases} \text{ } \text{ } \text{ } \text{ } \text{ } \text{ } \text{ } \text{ } \text{ } \text{ } $
 
 (2.17)
 
@@ -6446,13 +6370,13 @@ Trường hợp đường cong AB cho bởi phương trình tham số:
 
 $ AB\begin{cases} x = x(t) \\ y = y(t) \\ \alpha \le t \le \beta \\ x(t), y(t) \in C^{1}[a, b] \\ x'^{2}(t) + y'^{2}(t) > 0 \forall t \in [\alpha, \beta] \end{cases} $
 
-$\text{thi}\left|s=\int\limits_{\alpha}^{t}\sqrt{[x'(t)]^2+[y'(t)]^2}dt\right|$
+$\text{thi} \left|$ s $= \int\limits_{\alpha}^{\prime} \sqrt{[x'(t)]^2$ + $[y'(t)]^2}$ dt $\right|$
 
 (2.18)
 
-Trường hợp đường cong AB cho bởi phương trình trong toạ độ cực:
+$\text{Tru\`{o}ng\ hop\ d\u{v\`{o}ng\ }AB\ cho\ b\acute{o}i\ phu\acute{o}ng\ tr\`{in}h\ trong\ toa\ d\mathrm{o}\$ cyc.
 
-$ AB\begin{cases} r = r(\varphi) \\ \alpha \leq \varphi \leq \beta \\ r(\varphi) \in C^{1}[\alpha, \beta] \end{cases} \text{thi} \begin{cases} s = \int_{\alpha}^{\beta} \sqrt{r^{2}(\varphi) + r'^{2}(\varphi)} d\varphi \end{cases} $
+$ AB \begin{cases} r = r(\varphi) \ \alpha \leq \varphi \leq \beta \ \text{thi} \ \left| s = \int\limits_{\alpha}^{\beta} \sqrt{r^2(\varphi) + r'^2(\varphi)} d\varphi \right| \end{cases} $
 
 (2.19)
 
@@ -6460,23 +6384,23 @@ $ AB\begin{cases} r = r(\varphi) \\ \alpha \leq \varphi \leq \beta \\ r(\varphi)
 
 Bài tập 2.1. Tính độ dài đường cong
 
-a) y $= \ln \frac{e^x+1}{e^x-1}$ khi x biến thiên từ 1 đến 2.
+a) y $= \ln \frac{e^x$ + $1}{e^x$ - $1}$ khi x biến thiên từ 1 đến 2.
 
 $ b) \begin{cases} x = a(\cos t + \ln \tan \frac{t}{2}) \\ y = a \sin t \end{cases} khi t biến thiên từ \frac{\pi}{3} đến \frac{\pi}{2}. $
 
-$Ch\núng$ minh. a) Ta có
+$Ch\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$
 
-1 + $y'^2(x) =$ 1 + $\left(\frac{e^x}{e^x$ + $1}$ - $\frac{e^x}{e^x$ - $1}\right)^2 = \left(\frac{e^{2x}$ + $1}{e^{2x}$ - $1}\right)^2$
+1 + $y^{2}(x) =$ 1 + $\left(\frac{e^{x}}{e^{x}$ + $1}$ - $\frac{e^{x}}{e^{x}$ - $1}\right)^{2} = \left(\frac{e^{2x}$ + $1}{e^{2x}$ - $1}\right)^{2}$
 
 Nên áp dụng công thức 2.17 ta được:
 
-s $= \int_{1}^{2} \frac{e^{2x}$ + $1}{e^{2x}$ - $1}$ dx $\stackrel{(t=e^{2x})}{=} \int_{2}^{e^{2x}} \frac{t+1}{2t(t-1)} = \ln \frac{e^{2}$ + $1}{e^{2}}$
+s $= \int_{1}^{2} \frac{e^{2x}$ + $1}{e^{2x}$ - $1}$ dx $\stackrel{(t=e^{2x})}{=} \int_{2}^{e^{2x}} \frac{t+1}{2t(t-1)} = \ln \frac{e^{2x}$ + $1}{e^{2x}}$
 
-b) Ap dung công thức 2.18 ta có
+b) Ap dụng công thức 2.18 ta có
 
-$x^{2}(t)$ + $y^{2}(t) = a^{2} \cdot \frac{\cos^{2} t}{\sin^{2} t} \Rightarrow$ s $=$ a $\int_{\frac{\pi}{2}}^{\frac{\pi}{2}} \sqrt{\frac{\cos^{2} t}{\sin^{2} t}}$ dt $=$ a $\ln \sqrt{\frac{2}{\sqrt{3}}}$
+$x'^{2}(t)$ + $y'^{2}(t) = a^{2} \cdot \frac{\cos^{2} t}{\sin^{2} t} \Rightarrow$ s $=$ a $\int_{\underline{\pi}}^{\frac{\pi}{2}} \sqrt{\frac{\cos^{2} t}{\sin^{2} t}}$ dt $=$ a $\ln \sqrt{\frac{2}{\sqrt{3}}}$
 
-## 4.3 Tính thể tích vật thể <math display="block">x^{2}(t) + y^{2}(t) = a^{2} \cdot \frac{\cos^{2} t}{\sin^{2} t} \Rightarrow s = a \int_{\frac{\pi}{2}}^{\frac{\pi}{2}} \sqrt{\frac{\cos^{2} t}{\sin^{2} t}} dt = a \ln \sqrt{\frac{2}{\sqrt{3}}}</math>
+### 4.3 Tính thể tích vật thể
 
 Trường hợp vật thể được giới hạn bởi một mặt cong và hai mặt phẳng x $=$ a, x $=$ b. Giả
 
@@ -6490,13 +6414,13 @@ V $= \int_{a}^{b}$ S(x) dx
 
 Bài tập 2.1. Tính thể tích của vật thể là phần chung của hai hình trụ $x^2$ + $y^2 = a^2$ và
 
-$y^2$ + $z^2 = a^2$ (a $>$ 0).
+$y^2$ + $z^2 = a^2(a >$ 0).
 
 Lời giải: Do tính đối xứng nên V $=$ 8V' trong đó V' $=$ V $\cap \{x \ge$ 0, y $\ge$ 0, z $\ge 0\}$. Một
 
 điểm M(x,0,0) $\in$ Ox, qua M ta dựng thiết diện của V' vuông góc với Ox thì được một hình
 
-vuông có cạnh là $\sqrt{a^2$ - $x^2}$, do đó S(x) $= a^2$ - $x^2$. Áp dụng công thức 2.20 ta được
+vuông có cạnh là $\sqrt{a^2-x^2}$, do đó $S(x)=a^2-x^2$. Áp dụng công thức 2.20 ta được
 
 V $=$ 8 $\int_{0}^{u} (a^{2}$ - $x^{2})$ dx $= \frac{16}{3}a^{3}$
 
@@ -6506,29 +6430,25 @@ Bài tập 2.2. Tìm thể tích vật thể giới hạn bởi mặt paraboloit
 
 toạ độ và mặt phẳng x $=$ a.
 
-Chứng minh. Sau khi vẽ hình và áp dụng công thức 2.20 ta có:
+$Ch\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$
 
 V $= \int_{0}^{a}$ S(x)dx $\text{$ mà $}$ S(x) $= \int_{0}^{2}$ (4 - $y^{2})dy = \frac{16}{3} \text{$ nên $}$ V $= \frac{16}{3}a$
 
 Tính thể tích vật thể tròn xoay
 
-$ \n\begin{cases}\na \leq x \leq b \\
-y = 0 \quad \text{quanh truc } Ox, \text{ trong } d\acute{o} f \in C[a, b] \text{ thì} \\
-y = f(x)\n\end{cases}\n $
+$ \begin{cases} a \leq x \leq b \ y = 0 \qquad \qquad \text{quanh truc } Ox \text{, trong đó } f \in C[a,b] \text{ thì} \ y = f(x) \end{cases} $
 
 Trường hợp vật thể là vật thể tròn xoay được tạo thành khi quay hình thang cong
 
-V $= \pi \int_{0}^{x} f^{2}(x)$ dx
+V $= \pi \int_{0}^{\infty} f^{2}(x)$ dx
 
 (2.21)
 
-$\mathcal{A}$
+a
 
 Tương tự, nêú vật thể là vật thể tròn xoay được tạo thành khi quay hình thang cong
 
-$ \n\begin{cases}\nc \le y \le d \\
-x = 0 \quad \text{quanh truc } Oy, \text{ trong đó } \varphi \in C[c, d] \text{ thì} \\
-x = \varphi(y)\n\end{cases}\n $
+$ \begin{cases} c \leq y \leq d \ x = 0 \quad & \text{quanh truc Oy, trong đó } \varphi \in C[c,d] \text{ thì} \ x = \varphi(y) \end{cases} $
 
 V $= \pi \int_{c}^{\pi} \varphi^{2}(y)$ dy
 
@@ -6536,11 +6456,11 @@ V $= \pi \int_{c}^{\pi} \varphi^{2}(y)$ dy
 
 Bài tập 2.3. Tính thể tích khối tròn xoay tạo nên khi quay hình giới hạn bởi các đường
 
-y $=$ 2x - $x^2 \dot{u} \dot{u} =$ 0
+y $=$ 2x - $x^2 \dot{u} =$ 0
 
-a) quanh truc Ox một vòng
+a) quanh trục Ox một vòng
 
-b) quanh truc Oy một vòng.
+b) quanh trục Oy một vòng.
 
 [Gơi ý]
 
@@ -6548,15 +6468,15 @@ a) Áp dụng công thức 2.21:
 
 V $= \pi \int$ (2x - $x^2)$ dx $=$
 
-b) Ap dụng công thức 2.22:
+b) $\text{Ap}$ dụng công thức 2.22:
 
-V $= \pi \int$ (1 + $\sqrt{1$ - $y})^2$ dy - $\pi \int$ (1 - $\sqrt{1$ - $y})^2$ dy
+V $= \pi \int \left(1$ + $\sqrt{1$ - $y}\right)^2$ dy - $\pi \int \left(1$ - $\sqrt{1$ - $y}\right)^2$ dy
 
 
 
-## 4.4 Tính diên tích mặt tròn xoay None
+### 4.4 Tính diên tích mặt tròn xoay
 
-$ Cho hình thang cong giới hạn bởi \begin{cases} a \leq x \leq b \\ y = 0 \\ y = f(x) \end{cases} với f \in C^1[a, b]. Quay hình thang cong $
+$ Cho hình thang cong giới hạn bởi \begin{cases} a\leq x\leq b \ y=0 \qquad & \text{với } f\in C^1[a,b]. \text{ Quay hình thang cong} \ y=f(x) \end{cases} $
 
 này quanh trục Ox thì ta được một vật thể tròn xoay. Khi đó diện tích xung quanh của vật
 
@@ -6566,9 +6486,9 @@ S $= 2\pi \int_{a}^{b}$ |f(x)| $\sqrt{1$ + $f'^2(x)}$ dx
 
 (2.23)
 
-$ Tương tự nếu quay hình thang cong \begin{cases} c \le y \le d \\ x = 0 \\ x = \varphi(y) \end{cases} với \varphi \in C^1[c, d], quanh trục Oy thì: $
+$ Tương tự nếu quay hình thang cong\begin{cases} c \leq y \leq d \ x = 0 \ \text{với } \varphi \in C^1[c,d], \text{ quanh trục } Oy \text{ thì:} \ x = \varphi(y) \end{cases} $
 
-S $= 2\pi \int_{c}^{u} |\varphi(y)| \sqrt{1$ + $\varphi'^{2}(y)}$ dy
+S $= 2\pi \int_{c}^{u} \mid \varphi(y) \mid \sqrt{1$ + $\varphi'^{2}(y)}$ dy
 
 (2.24)
 
@@ -6590,49 +6510,11 @@ S $= 2\pi \int_{0}^{\frac{\pi}{4}} \tan$ x $\sqrt{1$ + (1 + $\tan^2 x)}$ dx
 
 $= 2\pi \int_{0}^{1}$ t $\sqrt{1$ + (1 + $t^{2})^{2}} \cdot \frac{dt}{1$ + $t^{2}} \quad (d\check{a}t \;$ t $= \tan$ x)
 
-$= \pi \int_{1}^{1} \frac{\sqrt{1$ + (1 + $t^2)^2}}{1$ + $t^2} d(t^2$ + 1)
+$=\pi\int_{1}^{1}\frac{\sqrt{1+(1+t^2)^2}}{1+t^2}.d(t^2+1)$
 
-$= \pi \int_{-\infty}^{\infty} \frac{\sqrt{1+s^2}}{s}$ ds $\quad (d\check{a}t \$ s $=$ 1 + $t^2)$
+$=\pi\int\limits^2\frac{\sqrt{1+s^2}}{s}ds\quad (\mathop{\mathrm{d\check{a}t}} s=1+t^2)$
 
-$= \pi \int_{0}^{\sqrt{5}} \left(1$ + $\frac{1}{u^2$ - $1}\right)$ du
-
-$= \pi \cdot \left\{ \sqrt{5}$ - $\sqrt{2}$ + $\frac{1}{2} \left[ \ln \frac{\sqrt{5}$ - $1}{\sqrt{2}$ - $1}$ - $\ln \frac{\sqrt{5}$ + $1}{\sqrt{2}$ + $1} \right] \right\}$
-
-b) Nhận xét tính đối xứng của miền và áp dụng công thức 2.24 ta có:
-
-S $= 2.2\pi \int_{0}^{b} \frac{a}{b} \sqrt{b^2$ - $y^2} \cdot \sqrt{1$ + $\left(\frac{a}{b} \cdot \frac{y}{\sqrt{b^2$ - $y^2}}\right)^2}$ dy
-
-$= 4\pi \frac{a}{b} \int_{0}^{b} \sqrt{b^4$ + $(a^2$ - $b^2)y^2}$ dy
-
-$=4\pi \frac{a}{b}\sqrt{a^2-b^2}\int_{b}^{b}\sqrt{y^2+\frac{b^4}{a^2-b^2}}dy$
-
-$= 4\pi \frac{a}{b} \sqrt{a^2$ - $b^2} \int_{0}^{b} \sqrt{y^2$ + $\beta}$ dy $(\text{ d\#t } \beta = \frac{b^4}{a^2$ - $b^2})$
-
-$= 4\pi \frac{a}{b} \sqrt{a^2$ - $b^2} \cdot \frac{1}{2} \left[$ y $\sqrt{y^2$ + $\beta}$ + $\beta \ln$ |y + $\sqrt{y^2$ + $\beta}| \right] \bigg|^{b}$
-
-$\left(\int \sqrt{y^2$ + $\beta}$ dy $= \frac{1}{2} \left[$ y $\sqrt{y^2$ + $\beta}$ + $\beta \ln$ |y + $\sqrt{y^2$ + $\beta}| \right] \right)$
-
-$\blacksquare$
-
-c) Trước hết
-
-$9y^2 = x(3-x)^2 \Rightarrow$ 18yy' $=$ 3(3-x)(1-x) $\Rightarrow$ y' $= \frac{(3-x)(1-x)}{6y} \Rightarrow y'^2 = \frac{(1-x)^2}{4x}$
-
-
-
-a) Áp dụng công thức 2.23 ta có:
-
-Chứng minh.
-
-S $= 2\pi \int_{0}^{\frac{\pi}{4}} \tan$ x $\sqrt{1$ + (1 + $\tan^2 x)}$ dx
-
-$= 2\pi \int_{0}^{1}$ t $\sqrt{1$ + (1 + $t^{2})^{2}} \cdot \frac{dt}{1$ + $t^{2}} \quad (d\check{a}t \;$ t $= \tan$ x)
-
-$= \pi \int_{1}^{1} \frac{\sqrt{1$ + (1 + $t^2)^2}}{1$ + $t^2} d(t^2$ + 1)
-
-$= \pi \int_{-\infty}^{\infty} \frac{\sqrt{1+s^2}}{s}$ ds $\quad (d\check{a}t \$ s $=$ 1 + $t^2)$
-
-$= \pi \int_{0}^{\sqrt{5}} \left(1$ + $\frac{1}{u^2$ - $1}\right)$ du
+$=\pi\int_{0}^{\sqrt{5}}\left(1+\frac{1}{u^2-1}\right)du$
 
 $= \pi \cdot \left\{ \sqrt{5}$ - $\sqrt{2}$ + $\frac{1}{2} \left[ \ln \frac{\sqrt{5}$ - $1}{\sqrt{2}$ - $1}$ - $\ln \frac{\sqrt{5}$ + $1}{\sqrt{2}$ + $1} \right] \right\}$
 
@@ -6640,17 +6522,15 @@ b) Nhận xét tính đối xứng của miền và áp dụng công thức 2.24
 
 S $= 2.2\pi \int_{0}^{b} \frac{a}{b} \sqrt{b^2$ - $y^2} \cdot \sqrt{1$ + $\left(\frac{a}{b} \cdot \frac{y}{\sqrt{b^2$ - $y^2}}\right)^2}$ dy
 
-$= 4\pi \frac{a}{b} \int_{0}^{b} \sqrt{b^4$ + $(a^2$ - $b^2)y^2}$ dy
+$=4\pi \frac{a}{b}\int_{0}^{b}\sqrt{b^{4}+(a^{2}-b^{2})y^{2}}dy$
 
-$=4\pi \frac{a}{b}\sqrt{a^2-b^2}\int_{b}^{b}\sqrt{y^2+\frac{b^4}{a^2-b^2}}dy$
+$=4\pi \frac{a}{b}\sqrt{a^{2}-b^{2}}\int_{0}^{b}\sqrt{y^{2}+\frac{b^{4}}{a^{2}-b^{2}}}dy$
 
-$= 4\pi \frac{a}{b} \sqrt{a^2$ - $b^2} \int_{0}^{b} \sqrt{y^2$ + $\beta}$ dy $(\text{ d\#t } \beta = \frac{b^4}{a^2$ - $b^2})$
+$=4\pi\frac{a}{b}\sqrt{a^2-b^2}\int\limits_{0}^{b}\sqrt{y^2+\beta}dy(\mathrm{~d}\mathrm{\breve{a}}\mathrm{t}~\beta=\frac{b^4}{a^2-b^2})$
 
-$= 4\pi \frac{a}{b} \sqrt{a^2$ - $b^2} \cdot \frac{1}{2} \left[$ y $\sqrt{y^2$ + $\beta}$ + $\beta \ln$ |y + $\sqrt{y^2$ + $\beta}| \right] \bigg|^{b}$
+$=4\pi \frac{a}{b}\sqrt{a^{2}-b^{2}}.\frac{1}{2}\Big[y\sqrt{y^{2}+\beta}+\beta\ln\mid y+\sqrt{y^{2}+\beta}\mid\Big]\Big|^{b}$
 
-$\left(\int \sqrt{y^2$ + $\beta}$ dy $= \frac{1}{2} \left[$ y $\sqrt{y^2$ + $\beta}$ + $\beta \ln$ |y + $\sqrt{y^2$ + $\beta}| \right] \right)$
-
-$\blacksquare$
+$\left(\int \sqrt{y^2$ + $\beta}$ dy $= \frac{1}{2} \Big[$ y $\sqrt{y^2$ + $\beta}$ + $\beta \ln$ |y + $\sqrt{y^2$ + $\beta}| \Big] \right)$
 
 c) Trước hết
 
@@ -6660,17 +6540,13 @@ $9y^2 = x(3-x)^2 \Rightarrow$ 18yy' $=$ 3(3-x)(1-x) $\Rightarrow$ y' $= \frac{(3
 
 Nên áp dụng công thức 2.23 ta có:
 
-S $= 2\pi \int_{0}^{3} \frac{\sqrt{x(3-x)}}{3} \cdot \sqrt{1$ + $\frac{(1-x)^2}{4x}}$ dx $= 2\pi \cdot \frac{1}{6} \int_{0}^{3}$ (3-x)(1+x) dx $= 3\pi$.
+S $= 2\pi \int_{-3}^{3} \frac{\sqrt{x}(3-x)}{3} \cdot \sqrt{1$ + $\frac{(1-x)^2}{4x}}$ dx $= 2\pi \cdot \frac{1}{6} \int_{0}^{3}$ (3-x)(1+x) dx $= 3\pi$.
 
 "Nghịch lý sừng Gabriel"
 
-$ Cho một vật thể tròn xoay tạo bởi khi xoay miền giới hạn bởi \begin{cases} 1 \leq x, \\ y = 0, \\ y = \frac{1}{x} \end{cases} quanh trục Ox. $
+$ Cho một vật thể tròn xoay tạo bởi khi xoay miền giới hạn bởi \begin{cases} 1 \leq x, \ y = 0, \quad \text{quanh trục } Ox. \end{cases} $
 
 Tính thể tích và diện tích mặt của nó.
-
-
-
-![](graphs/img_144_0.png)
 
 [Lời giải] Ta có
 
@@ -6698,35 +6574,35 @@ Một nghịch lý phải không?
 
 
 
-$\frac{3}{\text{CHƯƠNG}}$
+$\mathsf{CHU\texttt{ONG}}\,\mathbf{3}$
 
 HÀM SỐ NHIỀU BIẾN SỐ
 
-$\S1$. GIỚI HẠN CỦA HÀM SỐ NHIỀU BIẾN SỐ
+## §1. GIỚI HẠN CỦA HÀM SỐ NHIỀU BIẾN SỐ
 
-## 1.1 Giới hạn của hàm số nhiều biến số <math display="inline">\S1.</math> GIỚI HẠN CỦA HÀM SỐ NHIỀU BIẾN SỐ
+### 1.1 Giới hạn của hàm số nhiều biến số
 
-Ta nói rằng dãy điểm $\{M_n(x_n$, $y_n)\}\dần$ tới điểm $M_0(x_0$, $y_0)$ trong $\mathbb{R}^2$ và viết $M_n \to M_0$
+Ta nói rằng dãy điểm $\{M_n(x_n,y_n)\}$ dần tới điểm $M_0(x_0,y_0)$ trong $\mathbb{R}^2$ và viết $M_n \to M_0$
 
-khi n $\to +\infty$ nếu $\lim_{n \to +\infty} d(M_n$, $M_0) =$ 0 hay nếu $x_n \to x_0$, $y_n \to y_0$.
+$\text{khi }$ n $\rightarrow +\infty \text{ n\'{e}u } \lim_{n \rightarrow +\infty} d(M_n$, $M_0) =$ 0 $\text{$ hay $n\'{e}u } x_n \rightarrow x_0$, $y_n \rightarrow y_0$.
 
-Định nghĩa 3.33. Cho hàm số z $=$ f(M) $=$ f(x, y) xác định trong một lân cận V nào đó
+#### Định nghĩa 3.33. Cho hàm số z = f(M) = f(x, y) xác định trong một lân cận V nào đó
 
 của điểm $M_0(x_0$, $y_0)$, có thể trừ tại điểm $M_0$. Ta nói rằng hàm số f(x, y) có giới hạn là L
 
 khi M dần đến $M_0$ nếu
 
-$\forall \epsilon >$ 0, $\exists \delta >$ 0 : $\text{ n\'{e}u }$ d(M, $M_0) < \delta \text{ th\'{i}}$ | f(M) - L | $< \epsilon$.
+$\forall \epsilon >$ 0, $\exists \delta >$ 0: $\ \textit{n\^{e}u} \$ d(M, $M_0) < \delta \ \textit{th\`i} \$ |f(M) - L| $< \epsilon$.
 
-Một cách tương đương, với mọi dãy điểm $M_n(x_n$, $y_n)$ thuộc lân cận V dần đến $M_0$ ta đều có
+$M\hat{\rho}t$ cách tương đương, với mọi dãy điểm $M_n(x_n$, $y_n)$ thuộc lân cận V dần đến $M_0$ ta đều có
 
-$\n\lim_{n\to+\infty}f(x_n,y_n)=L.\n$
+$\lim_{n \to +\infty} f(x_n$, $y_n) =$ L.
 
 Khi đó ta viết
 
 $\lim_{(x,y)\to(x_0,y_0)}$ f(x,y) $=$ L $\; \text{hay} \; \lim_{M\to M_0}$ f(M) $=$ L.
 
-• Khái niệm giới hạn vô hạn cũng được định nghĩa tương tự như đối với hàm số một
+• Khái niệm giới hạn vô hạn cũng được định nghĩa tương tự như đối với hàm số môt
 
 biến số.
 
@@ -6740,11 +6616,11 @@ Nhận xét:
 
 • Theo định nghĩa trên, muốn chứng minh sự tồn tại của giới hạn của hàm số nhiều
 
-biến số là việc không dễ vì phải chỉ ra $\lim_{n\to+\infty} f(x_n$, $y_n) =$ l với mọi dãy số $\{x_n \to$
+biến số là việc không $d\tilde{e}$ vì phải chỉ ra $\lim_{n\to +\infty} f(x_n,y_n)~=~l$ với mọi dãy số $\{x_n~\to~$
 
 $x_0$, $\{y_n \rightarrow y_0\}$. Trong thực hành, muốn tìm giới hạn của hàm số nhiều biến số,
 
-phương pháp chứng minh chủ yếu là đánh giá hàm số, dùng nguyên lý giới hạn kẹp
+phương pháp chứng minh $ch\mathring{u}$ yếu là đánh giá hàm số, dùng nguyên lý giới hạn kẹp
 
 để đưa về giới hạn của hàm số một biến số.
 
@@ -6754,19 +6630,19 @@ biến số, ta chỉ cần chỉ ra tồn tại hai dãy $\{x_n \to x_0$, $y_n 
 
 sao cho
 
-$\lim_{n\to+\infty} f(x_n,y_n) \neq \lim_{n\to+\infty} f(x'_n,y'_n)$
+$\lim_{n \to +\infty} f(x_n$, $y_n) \neq \lim_{n \to +\infty} f(x'_n$, $y'_n)$
 
-hoặc chỉ ra tồn tại hai quá trình (x,y) $\rightarrow (x_0$, $y_0)$ khác nhau mà f(x, y) tiến tới hai
+hoặc chỉ ra tồn tại hai quá trình (x,y) $\rightarrow (x_0,y_0)$ khác nhau mà f(x,y) tiến tới hai
 
 giới hạn khác nhau.
 
-## 1.2 Tính liên tục của hàm số nhiều biến số giới hạn khác nhau.
+### 1.2 Tính liên tục của hàm số nhiều biến số
 
 • Giả sử hàm số f(M) xác định trong miền D, $M_0$ là một điểm thuộc D. Ta nói rằng
 
 hàm số f(M) liên tục tại điểm $M_0$ nếu
 
-$\n\lim_{M \to M_0}$ f(M) $= f(M_0)\n$
+$\lim_{M \to M_0}$ f(M) $= f(M_0)$
 
 Nếu miền D đóng và $M_0$ là điểm biên của D thì $\lim_{M\to M_0}$ f(M) được hiểu là giới hạn
 
@@ -6784,7 +6660,7 @@ nó liên tục đều, bị chặn trong miền ấy, đạt giá trị lớn n
 
 miền đó.
 
-## 1.3 Bài tập miền đó.
+### 1.3 Bài tập
 
 Bài tập 3.1. Tìm miền xác định của các hàm số sau
 
@@ -6802,39 +6678,37 @@ Bài tập 3.2. Tìm giới hạn (nếu có) của các hàm số sau
 
 b) f(x,y) $= \sin \frac{\pi x}{2x$ + $y}$ (x $\to \infty$, y $\to \infty)$
 
-a) f(x,y) $= \frac{x^2$ - $y^2}{x^2$ + $y^2}$ (x $\to$ 0, y $\to$ 0)
+a) f(x,y) $= \frac{x^2$ - $y^2}{x^2$ + $y^2}(x \to$ 0, y $\to$ 0)
 
 a) Nếu cho (x, y) $\rightarrow$ (0, 0) theo phương của đường thẳng y $=$ kx thì ta có
 
 Chứng minh.
 
-f(x,kx) $= \frac{x^2$ - $k^2x^2}{x^2$ + $k^2x^2} = \frac{1$ - $k^2}{1$ + $k^2} \rightarrow \frac{1$ - $k^2}{1$ + $k^2}$ khi x $\rightarrow$ 0
-
-Vậy khi (x, y) $\rightarrow$ (0, 0 theo những phương khác nhau thì f(x, y) dần tới những giới
-
-hạn khác nhau. Do đó không tồn tại $\lim_{(x,y)\to(0,0)}$ f(x,y).
-
-b) Nếu cho (x, y) $\rightarrow (\infty$, $\infty)$ theo phương của đường thẳng y $=$ kx thì ta có
-
-f(x,kx) $= \sin \frac{\pi x}{2x$ + $kx} = \sin \frac{\pi}{2$ + $k} \rightarrow \sin \frac{\pi}{2$ + $k}$ khi x $\rightarrow$ 0
+f(x,kx) $= \frac{x^2$ - $k^2x^2}{x^2$ + $k^2x^2} = \frac{1$ - $k^2}{1$ + $k^2} \rightarrow \frac{1$ - $k^2}{1$ + $k^2} \text{khi }$ x $\rightarrow$ 0
 
 Vậy khi (x,y) $\rightarrow$ (0,0 theo những phương khác nhau thì f(x,y) dần tới những giới
 
 hạn khác nhau. Do đó không tồn tại $\lim_{(x,y)\to(0,0)}$ f(x,y).
 
-$\blacksquare$
+b) Nếu cho (x, y) $\rightarrow (\infty$, $\infty)$ theo phương của đường thẳng y $=$ kx thì ta có
+
+f(x,kx) $= \sin\frac{\pi x}{2x+kx} = \sin\frac{\pi}{2+k} \rightarrow \sin\frac{\pi}{2+k} \text{$ khi $}$ x $\rightarrow$ 0
+
+Vậy khi (x,y) $\rightarrow$ (0,0 theo những phương khác nhau thì f(x,y) dần tới những giới
+
+hạn khác nhau. Do đó không tồn tại $\lim_{(x,y)\to(0,0)}$ f(x,y).
 
 Bài tập 3.3. [Cuối kì, K62, GT2, Nhóm ngành 2] Tính các giới hạn
 
-b) $\lim_{(x,y)\to(0,0)} \frac{x^4$ + $2y^4}{2x^2$ + $1/2}$.
+b) $\lim_{(x,y)\to(0,0)} \frac{x^4$ + $2y^4}{2x^2$ + $y^2}$.
 
-a) $\lim_{(x,y)\to(0,0)} \frac{2x^4$ + $y^4}{x^2$ + $2y^2}$.
+a) $\lim_{(x,y)\to(0,0)} \frac{2x^4+y^4}{x^2+2y^2}$.
 
 [Lời giải] Ta có
 
-$\mathbf{a})$
+a)
 
-$\n\lim_{(x,y)\to(0,0)}\frac{2x^2+y^2}{x^2+2y^2}=\lim_{(x,y)\to(0,0)}\frac{2x^4}{x^2+2y^2}+\lim_{(x,y)\to(0,0)}\frac{y^4}{x^2+2y^2}=0+0=0,\n$
+$\lim_{(x,y)\to(0,0)} \frac{2x^{\pm}$ + $y^{\pm}}{x^2$ + $2y^2} = \lim_{(x,y)\to(0,0)} \frac{2x^4}{x^2$ + $2y^2}$ + $\lim_{(x,y)\to(0,0)} \frac{y^4}{x^2$ + $2y^2} =$ 0 + 0 $=$ 0,
 
 do 0 $\le \frac{2x^4}{x^2$ + $2y^2} \le 2x^2$, 0 $\le \frac{y^4}{x^2$ + $2y^2} \le \frac{1}{2}y^2$ và nguyên lý giới hạn kẹp.
 
@@ -6842,11 +6716,11 @@ b)
 
 $\lim_{(x,y)\to(0,0)}\frac{x^4+2y^4}{2x^2+y^2}=\lim_{(x,y)\to(0,0)}\frac{x^4}{2x^2+y^2}+\lim_{(x,y)\to(0,0)}\frac{2y^4}{2x^2+y^2}=0+0=0$,
 
-do 0 $\le \frac{x^4}{2x^2$ + $y^2} \le \frac{1}{2}x^2$, 0 $\le \frac{2y^4}{2x^2$ + $y^2} \le 2y^2$ và nguyên lý giới hạn kẹp.
+$\text{do }$ 0 $\leq \frac{x^4}{2x^2$ + $y^2} \leq \frac{1}{2}x^2$, $\quad$ 0 $\leq \frac{2y^4}{2x^2$ + $y^2} \leq 2y^2 \text{$ và nguyên lý giới hạn $kẹp.}$
 
 Chú ý 3.20. Không nhầm lẫn $\lim_{(x,y)\to(x_0,y_0)}$ f(x,y) với các giới hạn lặp $\lim_{x\to x_0} \lim_{y\to y_0}$ f(x,y) và
 
-$\lim_{y\to y_0}\lim_{x\to x_0}$ f(x,y). Chẳng hạn như, bạn đọc có thể kiểm tra với hàm số f(x,y) $= \frac{x^2}{x^2$ + $y^2}$ ta có
+$\lim_{y\to y_0}\lim_{x\to x_0}f(x,y)$. Chẳng hạn như, bạn đọc có thể kiểm tra với hàm số $f(x,y)=\frac{x^2}{x^2+\nu^2}$ ta có
 
 i) $\lim_{(x,y)\to(0,0)} \frac{x^2}{x^2+y^2}$ không tồn tại.
 
@@ -6856,23 +6730,23 @@ iii) $\lim_{y \to 0} \lim_{x \to 0} \frac{x^2}{x^2$ + $y^2} =$ 0.
 
 
 
-$\S2$. ĐAO HÀM VÀ VI PHẦN
+$\S2$. $\mathbf{D}AO$ HÀM VÀ VI PHẦN
 
-## 2.1 Đao hàm riêng <math>\S</math><b>2.</b> <b>Đ</b>AO HÀM VÀ VI PHẦN
+### 2.1 Đao hàm riêng
 
-• Cho hàm số f(x, y) xác định trong một miền D, điểm $M(x_0$, $y_0) \in$ D. Nếu cho y $= y_0$,
+• Cho hàm số f(x,y) xác định trong một miền D, điểm $M(x_0,y_0) \in$ D. Nếu cho y $= y_0$,
 
-hàm số một biến số x $\mapsto$ f(x, $y_0)$ có đạo hàm tại điểm x $= x_0$ thì đạo hàm đó gọi là
+hàm số một biến số x $\mapsto f(x,y_0)$ có đạo hàm tại điểm x $= x_0$ thì đạo hàm đó gọi là
 
-đạo hàm riêng của f với biến x tại $M_0$ và được kí hiệu là $\frac{\partial f}{\partial x}$ hay $\frac{\partial}{\partial x}$ f(x, y).
+đạo hàm riêng của f với biến x tại $M_0$ và được kí hiệu là $\frac{\partial f}{\partial x}$ hay $\frac{\partial}{\partial x}f(x,y)$.
 
-$\frac{\partial f}{\partial x} = \lim_{\Delta$ x $\to 0} \frac{f(x_0$ + $\Delta$ x, $y_0)$ - $f(x_0$, $y_0)}{\Delta x}$
+$\frac{\partial f}{\partial x} = \lim_{\triangle$ x $\to 0} \frac{f(x_0$ + $\triangle$ x, $y_0)$ - $f(x_0$, $y_0)}{\triangle x}$
 
-• Cho hàm số f(x, y) xác định trong một miền D, điểm $M(x_0$, $y_0) \in$ D. Nếu cho x $= x_0$,
+• Cho hàm số f(x,y) xác định trong một miền D, điểm $M(x_0,y_0) \in$ D. Nếu cho x $= x_0$,
 
-hàm số một biến số x $\mapsto f(x_0$, y) có đạo hàm tại điểm y $= y_0$ thì đạo hàm đó gọi là
+hàm số một biến số x $\mapsto f(x_0,y)$ có đạo hàm tại điểm $y=y_0$ thì đạo hàm đó gọi là
 
-đạo hàm riêng của f với biến x tại $M_0$ và được kí hiệu là $\frac{\partial f}{\partial u}$ hay $\frac{\partial}{\partial u}$ f(x, y).
+đạo hàm riêng của f với biến x tại $M_0$ và được kí hiệu là $\frac{\partial f}{\partial u}$ hay $\frac{\partial}{\partial u}$ f(x,y).
 
 $\frac{\partial f}{\partial y} = \lim_{\triangle$ y $\to 0} \frac{f(x_0$, $y_0$ + $\triangle$ y) - $f(x_0$, $y_0)}{\triangle y}$
 
@@ -6884,11 +6758,11 @@ vào biến đó, còn các biến còn lại là các hằng số và áp dụn
 
 hàm số một biến số.
 
-## 2.2 Vi phân toàn phần hàm số một biến số.
+### 2.2 Vi phân toàn phần
 
-• Cho hàm số z $=$ f(x, y) xác định trong miền D. Lấy các điểm $M_0(x_0$, $y_0) \in$ D, $M(x_0$ +
+• Cho hàm số z $=$ f(x, y) xác định trong miền D. Lấy các điểm $M_0(x_0$, $y_0) \in$ D, $M(x_0$ + $y_0)$
 
-$\Delta x_0$, $y_0$ + $\Delta y_0 \in$ D. Biểu thức $\Delta$ f $= f(x_0$ + $\Delta x_0$, $y_0$ + $\Delta y_0)$ - $f(x_0$, $y_0)(x_0$, $y_0)$ được
+$\triangle x_0$, $y_0$ + $\triangle y_0) \in$ D. Biểu thức $\triangle$ f $= f(x_0$ + $\triangle x_0$, $y_0$ + $\triangle y_0)$ - $f(x_0$, $y_0)(x_0$, $y_0)$ được
 
 gọi là số gia toàn phần của f tại $M_0$. Nếu như có thể biểu diễn số gia toàn phần dưới
 
@@ -6896,9 +6770,9 @@ dạng
 
 $\triangle$ f $=$ A. $\triangle$ x + B $\triangle$ y + $\alpha \triangle$ y + $\beta \triangle$ y
 
-trong đó A, B là các hằng số chỉ phụ thuộc $x_0$, $y_0$ còn $\alpha$, $\beta \rightarrow$ 0 khi M $\rightarrow M_0$, thì ta nói
+trong đó A, B là các hằng số chỉ phụ thuộc $x_0$, $y_0$ còn $\alpha$, $\beta \to$ 0 khi M $\to M_0$, thì ta nói
 
-hàm số z khả vi tại $M_0$, còn biểu thức A. $\triangle$ x + B $\triangle$ y + $\alpha \triangle$ y được gọi là vi phân toàn
+hàm số $z\,kh\dot{a}\,vi$ tại $M_0$, còn biểu thức A. $\triangle$ x + B $\triangle$ y + $\alpha \triangle$ y được gọi là vi phân toàn
 
 phần của z $=$ f(x, y) tại $M_0$ và được kí hiệu là dz.
 
@@ -6916,11 +6790,11 @@ kiện đủ để hàm số z $=$ f(x, y) khả vi tại $M_0$.
 
 
 
-Định lý 3.50. Nếu hàm số f(x,y) có các đạo hàm riêng trong lân cận của $M_0$ và nếu các
+#### Định lý 3.50. Nếu hàm số f(x,y) có các đạo hàm riêng trong lân cận của M_0 và nếu các
 
-đạo hàm riêng đó liên tục tại $M_0$ thì f(x, y) khả vi tại $M_0$ và
+đạo hàm riêng đó liên tục tại $M_0$ thì f(x,y) khả vi tại $M_0$ và
 
-dz $= f'_x \triangle$ x + $f'_y \triangle$ y
+dz $= f'_x \bigtriangleup$ x + $f'_y \bigtriangleup$ y
 
 Ví du 2.1 (Cuối kì, K61 Viện ĐTQT). Sử dụng vi phân, tính gần đúng
 
@@ -6928,9 +6802,9 @@ b) $\sqrt{(6,05)^2$ + $(7,96)^2}$.
 
 a) $\sqrt{(8,05)^2$ + $(5,96)^2}$.
 
-## 2.3 Đao hàm của hàm số hợp a) <math>\sqrt{(8,05)^2 + (5,96)^2}</math>.
+### 2.3 Đạo hàm của hàm số hợp
 
-Cho D là một tập hợp trong $\mathbb{R}^2$ và các hàm số
+$\text{Cho }$ D $\text{$ là một tập hợp trong $} \mathbb{R}^2 \text{$ và các hàm $số}$
 
 D $\stackrel{\varphi}{\to} \varphi(D) \subset \mathbb{R}^2 \stackrel{f}{\to} \mathbb{R}$
 
@@ -6938,30 +6812,31 @@ và F $=$ f $\circ \varphi$ là hàm số hợp của hai hàm số f và $\varp
 
 F(x,y) $=$ f(u(x,y), v(x,y))
 
-Định lý 3.51. Nếu f có các đạo hàm riêng $\frac{\partial f}{\partial x}$, $\frac{\partial f}{\partial y}$ liên tục trong $\varphi(D)$ và nếu u, v có các
+#### Định lý 3.51. Nếu f có các đạo hàm riêng \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} liên tục trong \varphi(D) và nếu u, v có các
 
-đạo hàm riêng $\frac{\partial u}{\partial x}$, $\frac{\partial u}{\partial y}$, $\frac{\partial v}{\partial y}$, $\frac{\partial v}{\partial y}$ trong D thì tồn tại các đạo hàm riêng $\frac{\partial F}{\partial x}$, $\frac{\partial F}{\partial y}$ và
+đạo hàm riêng $\frac{\partial u}{\partial x}$, $\frac{\partial u}{\partial u}$, $\frac{\partial v}{\partial x}$, $\frac{\partial v}{\partial u}$ trong D thì tồn tại các đạo hàm riêng $\frac{\partial F}{\partial x}$, $\frac{\partial F}{\partial y}$ và
 
 $ \n\begin{cases}\n\frac{\partial F}{\partial x} = \frac{\partial f}{\partial u} \frac{\partial u}{\partial x} + \frac{\partial f}{\partial v} \frac{\partial v}{\partial x} \\
-\frac{\partial F}{\partial y} = \frac{\partial f}{\partial y} \frac{\partial u}{\partial y} + \frac{\partial f}{\partial z} \frac{\partial v}{\partial y}\n\end{cases}\n $
+\frac{\partial F}{\partial u} = \frac{\partial f}{\partial u} \frac{\partial u}{\partial u} + \frac{\partial f}{\partial v} \frac{\partial v}{\partial u}\n\end{cases}\n $
 
 (3.1)
 
 Công thức 3.1 có thể được viết dưới dạng ma trận như sau
 
-$ \begin{pmatrix} \frac{\partial F}{\partial x} & \frac{\partial F}{\partial y} \end{pmatrix} = \begin{pmatrix} \frac{\partial f}{\partial u} & \frac{\partial f}{\partial v} \end{pmatrix} \begin{pmatrix} \frac{\partial u}{\partial x} & \frac{\partial u}{\partial y} \\ \frac{\partial v}{\partial x} & \frac{\partial v}{\partial y} \end{pmatrix} $
+$ \begin{pmatrix} \frac{\partial F}{\partial x} & \frac{\partial F}{\partial y} \end{pmatrix} = \begin{pmatrix} \frac{\partial f}{\partial u} & \frac{\partial f}{\partial v} \end{pmatrix} \begin{pmatrix} \frac{\partial u}{\partial x} & \frac{\partial u}{\partial y} \\ \frac{\partial v}{\partial x} & \frac{\partial v}{\partial v} \end{pmatrix} $
 
 trong đó ma trận
 
-$ \begin{pmatrix} \frac{\partial u}{\partial x} & \frac{\partial u}{\partial y} \\ \frac{\partial v}{\partial y} & \frac{\partial v}{\partial z} \end{pmatrix} $
+$ \n\begin{pmatrix}\n\frac{\partial u}{\partial x} & \frac{\partial u}{\partial y} \\
+\frac{\partial v}{\partial v} & \frac{\partial v}{\partial v}\n\end{pmatrix}\n $
 
-được gọi là ma trận Jacobi của ánh xạ $\varphi$, định thức của ma trận ấy được gọi là định thức
+được gọi là ma trận Jacobi của ánh xạ $\varphi$, định thức của ma trận ấy được gọi là dinh thức
 
-Jacobi của u, v với x, y và được kí hiệu là $\frac{D(u,v)}{D(x-u)}$.
+Jacobi của u, v với x, y và được kí hiệu là $\frac{D(u$, $v)}{D(x$, $u)}$.
 
 
 
-## 2.4 Đạo hàm và vi phân cấp cao None
+### 2.4 Đạo hàm và vi phân cấp cao
 
 • Cho hàm số hai biến số z $=$ f(x, y). Các đạo hàm riêng $f'_x$, $f'_y$ là những đạo hàm riêng
 
@@ -6969,18 +6844,18 @@ cấp một. Các đạo hàm riêng của các đạo hàm riêng cấp một n
 
 những đạo hàm riêng cấp hai. Có bốn đạo hàm riêng cấp hai được kí hiệu như sau:
 
-$ \n\begin{cases}\n(f'_x)'_x = f''_{xx} = \frac{\partial}{\partial x} \left( \frac{\partial f}{\partial x} \right) = \frac{\partial^2 f}{\partial x^2} \\
-(f'_x)'_y = f''_{xy} = \frac{\partial}{\partial y} \left( \frac{\partial f}{\partial x} \right) = \frac{\partial^2 f}{\partial y \partial x} \\
-(f'_y)'_x = f''_{yx} = \frac{\partial}{\partial x} \left( \frac{\partial f}{\partial y} \right) = \frac{\partial^2 f}{\partial x \partial y} \\
-(f'_y)'_y = f''_{yy} = \frac{\partial}{\partial y} \left( \frac{\partial f}{\partial y} \right) = \frac{\partial^2 f}{\partial $
+$ \n\begin{cases}\n(f'_x)'_x = f''_{xx} = \frac{\partial}{\partial x} \left(\frac{\partial f}{\partial x}\right) = \frac{\partial^2 f}{\partial x^2} \\
+(f'_x)'_y = f''_{xy} = \frac{\partial}{\partial y} \left(\frac{\partial f}{\partial x}\right) = \frac{\partial^2 f}{\partial y \partial x} \\
+(f'_y)'_x = f''_{yx} = \frac{\partial}{\partial x} \left(\frac{\partial f}{\partial y}\right) = \frac{\partial^2 f}{\partial x \partial y} \\
+(f'_y)'_y = f''_{yy} = \frac{\partial}{\partial y} \left(\frac{\partial f}{\partial y}\right) = \frac{\partial^2 f}{\partial y^2}\n\end{ $
 
 Các đạo hàm riêng của các đạo hàm riêng cấp hai, nếu tồn tại, được gọi là các đạo
 
 hàm riêng cấp ba, ...
 
-Định lý 3.52 (Schwarz). Nếu trong một lân cận U nào đó của điểm $M_0(x_0$, $y_0)$ hàm
+#### Định lý 3.52 (Schwarz). Nếu trong một lân cận U nào đó của điểm M_0(x_0, y_0) hàm
 
-$s\hat{o}$ z $=$ f(x,y) có các đạo hàm riêng $f''_{xy}$, $f''_{yx}$ và nếu các đạo hàm riêng ấy liên tục tại
+$s\hat{o}$ z $=$ f(x,y) có các đạo hàm riêng $f_{xy}^{''}$, $f_{yx}^{''}$ và nếu các đạo hàm riêng ấy liên tục tại
 
 $M_0$ thì $f''_{xy} = f''_{yx}$ tại $M_0$.
 
@@ -6998,15 +6873,15 @@ $ riêng cấp một liên tục, ở đó \begin{cases} x = r \cos \varphi, \\ 
 
 Chứng minh rằng
 
-$\left(\frac{\partial z}{\partial x}\right)^2$ + $\left(\frac{\partial z}{\partial y}\right)^2 = \left(\frac{\partial z}{\partial r}\right)^2$ + $\frac{1}{r^2}\left(\frac{\partial z}{\partial \varphi}\right)^2$.
+$\left(\frac{\partial z}{\partial x}\right)^2$ + $\left(\frac{\partial z}{\partial u}\right)^2 = \left(\frac{\partial z}{\partial r}\right)^2$ + $\frac{1}{r^2}\left(\frac{\partial z}{\partial \varphi}\right)^2$.
 
-## 2.5 Đao hàm theo hướng - Gradient <math display="block">\left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y}\right)^2 = \left(\frac{\partial z}{\partial r}\right)^2 + \frac{1}{r^2}\left(\frac{\partial z}{\partial \varphi}\right)^2.</math>
+### 2.5 Đao hàm theo hướng - Gradient
 
-Định nghĩa 3.34. Cho f(x,y,z) là một hàm số xác định trong một miền D $\in \mathbb{R}^3$ và $\vec{l} =$
+#### Định nghĩa 3.34. Cho f(x,y,z) là một hàm số xác định trong một miền D \in \mathbb{R}^3 và \vec{l} =
 
 $(l_1$, $l_2$, $l_3)$ là một vécto đơn vị bất kì trong $\mathbb{R}^3$. Giới hạn, nếu có,
 
-$\n\lim_{t\to 0}\frac{f(M_0+t\vec{l})-f(M)}{t}\n$
+$\lim_{t\to 0}\frac{f(M_0+t\vec{l})-f(M)}{t}$
 
 (3.2)
 
@@ -7020,7 +6895,7 @@ bằng
 
 $\lim_{t\to 0}\frac{u(x_0+t\cos\alpha,y_0+t\cos\beta,z_0+t\cos\gamma)-u(x_0,y_0,z_0)}{t}$,
 
-trong đó cos $\alpha$, cos $\beta$, cos $\gamma$ là các cosin chỉ phương của $\vec{l}$.
+trong đó cos α, cos β, cos γ là các cosin chỉ phương của $\overrightarrow{l}$.
 
 • Nếu $\vec{l}$ trùng với véctơ đơn vị i của trục Ox thì đạo hàm theo hướng $\vec{l}$ chính là đạo hàm
 
@@ -7028,21 +6903,21 @@ riêng theo biến x của hàm f
 
 $\frac{\partial f}{\partial \vec{l}}(M_0) = \frac{\partial f}{\partial x}(M_0)$
 
-• Vậy đạo hàm riêng theo biến x chính là đạo hàm theo hướng của trục Ox, cũng như
+Vậy đạo hàm riêng theo biến x chính là đạo hàm theo hướng của trục Ox, cũng như
 
 vậy, $\frac{\partial f}{\partial y}$, $\frac{\partial f}{\partial z}$ là các đạo hàm của f theo hướng của trục Oy và Oz. Định lý sau đây cho
 
 ta mối liên hệ giữa đạo hàm theo hướng và đạo hàm riêng:
 
-Định lý 3.53. Nếu hàm số f(x,y,z) khả vi tại điểm $M_0(x_0,y_0,z_0)$ thì tại $M_0$ có đạo hàm
+#### Định lý 3.53. Nếu hàm số f(x,y,z) khả vi tại điểm M_0(x_0,y_0,z_0) thì tại M_0 có đạo hàm
 
 theo mọi hướng $\vec{l}$ và ta có
 
 $\frac{\partial f}{\partial \vec{l}}(M_0) = \frac{\partial f}{\partial \tau}(M_0) \cos \alpha$ + $\frac{\partial f}{\partial \mu}(M_0) \cos \beta$ + $\frac{\partial f}{\partial \tau}(M_0) \cos \gamma$
 
-trong đó (cos $\alpha$, cos $\beta$, cos $\gamma)$ là cosin chỉ phương của $\vec{l}$.
+trong đó $(\cos \alpha$, $\cos \beta$, $\cos \gamma)$ là cosin chỉ phương của $\vec{l}$.
 
-Cho f(x, y, z) là hàm số có các đạo hàm riêng tại $M_0(x_0$, $y_0$, $z_0)$. Người ta gọi gradient của
+Cho f(x,y,z) là hàm số có các đạo hàm riêng tại $M_0(x_0,y_0,z_0)$. Người ta gọi gradient của
 
 f tại $M_0$ là véctơ
 
@@ -7050,15 +6925,15 @@ $\left(\frac{\partial f}{\partial x}(M_0)$, $\frac{\partial f}{\partial y}(M_0)$
 
 và được kí hiệu là $\overrightarrow{\text{grad}} f(M_0)$.
 
-Định lý 3.54. Nếu $\overrightarrow{l}$ là một véctơ đơn vị và hàm số f(x,y,z) khả vi tại $M_0$ thì tại đó ta có
+#### Định lý 3.54. Nếu \overrightarrow{l} là một véctơ đơn vị và hàm số f(x,y,z) khả vi tại M_0 thì tại đó ta có
 
 $\frac{\partial f}{\partial \vec{l}}(M_0) = \overrightarrow{\text{grad}} f.\vec{l}$
 
 Chú ý: $\frac{\partial f}{\partial \vec{l}}(M_0)$ thể hiện tốc độ biến thiên của hàm số f tại $M_0$ theo hướng $\vec{l}$. Từ công
 
-thức $\frac{\partial f}{\partial \vec{l}}(M_0) = \overrightarrow{\text{grad}} f.\vec{l} = |\overrightarrow{\text{grad}}$ f| $|\vec{l}| \cdot \cos(\overrightarrow{\text{grad}} f.\vec{l})$ ta có $|\frac{\partial f}{\partial \vec{l}}(M_0)|$ đạt giá trị lớn nhất
+$\text{th\acute{u}c}\ \frac{\partial f}{\partial \vec{l}}(M_0) = \overrightarrow{\text{grad}} f.\vec{l} = \left|\overrightarrow{\text{grad}} f\right| \left|\vec{l}\right|.\cos\left(\overrightarrow{\text{grad}} f,\vec{l}\right) \text{$ ta $} \text{$ có $} \left|\frac{\partial f}{\partial \vec{l}}(M_0)\right| \text{$ đạt giá trị $l\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$
 
-bằng $|\overrightarrow{\text{grad}}$ f| $|\vec{l}|$ nếu $\vec{l}$ có cùng phương với $\overrightarrow{\text{grad } f}$. Cụ thể
+bằng $\left|\overrightarrow{\text{grad}}f\right|\left|\vec{l}\right|$ nếu $\vec{l}$ có cùng phương với $\overrightarrow{\text{grad}}f$. Cụ thể
 
 • Theo hướng $\vec{l}$, hàm số f tăng nhanh nhất tại $M_0$ nếu $\vec{l}$ có cùng phương, cùng hướng
 
@@ -7070,27 +6945,27 @@ với grad $\hat{f}$.
 
 
 
-## 2.6 Hàm ẩn - Đạo hàm của hàm số ẩn None
+### 2.6 Hàm ẩn - Đạo hàm của hàm số ẩn
 
-• Cho phương trình F(x, y) $=$ 0 trong đó F : U $\to \mathbb{R}$ là một hàm số có các đạo hàm
+• Cho phương trình F(x,y) $=$ 0 trong đó F: U $\rightarrow \mathbb{R}$ là một hàm số có các đạo hàm
 
-riêng liên tục trên tập mở U $\subset \mathbb{R}^2$ và $F'_y(x_0$, $y_0) \neq$ 0. Khi đó phương trình F(x, y) $=$ 0
+riêng liên tục trên tập mở $U\subset \mathbb{R}^2$ và $F'_y(x_0,y_0)\neq$ 0. Khi đó phương trình $F(x,y)=0$
 
 xác định một hàm số ẩn y $=$ y(x) trong một lân cận nào đó của $x_0$ và có đạo hàm
 
 y'(x) $= -\frac{F'_x}{F'_y}$
 
-• Tương tự, cho phương trình F(x,y,z) $=$ 0 trong đó F : U $\to \mathbb{R}$ là một hàm số có các
+• Tương tự, cho phương trình F(x,y,z) $=$ 0 trong đó F: U $\rightarrow \mathbb{R}$ là một hàm số có các
 
-đạo hàm riêng liên tục trên tập mở U $\subset \mathbb{R}^3$ và $F'_z(x_0$, $y_0$, $z_0) \neq$ 0. Khi đó phương trình
+đạo hàm riêng liên tục trên tập mở $U\subset \mathbb{R}^3$ và $F'_z(x_0,y_0,z_0)\neq$ 0. Khi đó phương trình
 
-F(x, y, z) $=$ 0 xác định một hàm số ẩn z $=$ z(x, y) trong một lân cận nào đó của $(x_0$, $y_0)$
+F(x,y,z) $=$ 0 xác định một hàm số ẩn z $=$ z(x,y) trong một lân cận nào đó của $(x_0,y_0)$
 
 và có đạo hàm
 
-$z'_x=-\frac{F'_x}{F'_z}$, $z'_y=-\frac{F'_y}{F'}$
+$z'_x = -\frac{F'_x}{F'_z}$, $z'_y = -\frac{F'_y}{F'}$
 
-## 2.7 Bài tập <math display="block">z'_x=-\frac{F'_x}{F'_z}, z'_y=-\frac{F'_y}{F'}</math>
+### 2.7 Bài tập
 
 Bài tập 3.4. Chứng minh rằng hàm số
 
@@ -7102,11 +6977,11 @@ có các đạo hàm riêng tại (0,0) nhưng không liên tục tại (0,0) v�
 
 Bài tập 3.5. Tính các đạo hàm riêng của hàm số sau
 
-a) z $= \ln$ (x + $\sqrt{x^2$ + $y^2})$ c) z $= x^{y^3}$
+a) z $= \ln(x$ + $\sqrt{x^2$ + $y^2})$ c) z $= x^{y^3}$
 
 e) u $= x^{y^z}$, (x, y, z $>$ 0)
 
-d) z $= \arctan \sqrt{\frac{x^2$ - $y^2}{x^2$ + $y^2}}f)$ u $= e^{\frac{1}{x^2$ + $y^2$ + $z^2}}$, (x, y, z $>$ 0)
+d) z $= \arctan \sqrt{\frac{x^2$ - $y^2}{x^2$ + $y^2}}$ f) u $= e^{\frac{1}{x^2$ + $y^2$ + $z^2}}$, (x, y, z $>$ 0)
 
 b) z $= y^2 \sin \frac{x}{y}$
 
@@ -7120,23 +6995,23 @@ $z'_x =$ y $\cos \frac{x}{y}; z'_y =$ 2y $\sin \frac{x}{y}$ - x $\cos \frac{x}{y
 
 
 
-$\mathbf{c})$
+c)
 
-$z'_x = y^3 x^{y^3-1}; z'_y = 3y^2 \ln$ x $\cdot x^{y^3}$
+$z'_x = y^3 x^{y^3$ - $1}; z'_y = 3y^2 \ln$ x $\cdot x^{y^3}$
 
 d)
 
-$z'_x = \frac{1}{\frac{x^2$ - $y^2}{2$ + $2}$ + $1} \frac{\partial}{\partial x} \left( \sqrt{\frac{x^2$ - $y^2}{x^2$ + $y^2}} \right) = \frac{y^2}{x \sqrt{x^4$ - $y^4}}$
+$z'_x = \frac{1}{\frac{x^2$ - $y^2}{2$ + $2}$ + $1} \frac{\partial}{\partial x} \left( \sqrt{\frac{x^2$ - $y^2}{x^2$ + $y^2}} \right) = \frac{y^2}{x\sqrt{x^4$ - $y^4}}$
 
-$z'_y = \frac{1}{\frac{x^2$ - $y^2}{x^2$ + $1} \frac{\partial}{\partial y}} \left( \sqrt{\frac{x^2$ - $y^2}{x^2$ + $y^2}} \right) = \frac{-y}{\sqrt{x^4$ - $y^4}}$
+$z'_y = \frac{1}{\frac{x^2$ - $y^2}{x^2$ + $1}} \frac{\partial}{\partial y} \left( \sqrt{\frac{x^2$ - $y^2}{x^2$ + $y^2}} \right) = \frac{-y}{\sqrt{x^4$ - $y^4}}$
 
 e)
 
-$u'_x = y^z x^{y^z-1}; u'_y = x^{y^z}$ z $y^{z-1} \cdot \ln$ x; $u'_z = x^{y^z} y^z \ln$ y $\ln$ x
+$u'_x = y^z x^{y^z$ - $1}; u'_y = x^{y^z}$ z $y^{z$ - $1} \cdot \ln$ x; $u'_z = x^{y^z} y^z \ln$ y $\ln$ x
 
 f)
 
-$u'_{x} = e^{\frac{1}{x^{2}+y^{2}+z^{2}}} \cdot \frac{-2x}{(x^{2}+u^{2}+z^{2})^{2}}; u'_{y} = e^{\frac{1}{x^{2}+y^{2}+z^{2}}} \frac{-2y}{(x^{2}+u^{2}+z^{2})^{2}}; u'_{z} = e^{\frac{1}{x^{2}+y^{2}+z^{2}}} \frac{-2z}{(x^{2}+u^{2}+z^{2})^{2}}$.
+$u'_x = e^{\frac{1}{x^2+y^2+z^2}} \cdot \frac{-2x}{\left(x^2$ + $u^2$ + $z^2\right)^2}; u'_y = e^{\frac{1}{x^2+y^2+z^2}} \frac{-2y}{\left(x^2$ + $u^2$ + $z^2\right)^2}; u'_z = e^{\frac{1}{x^2+y^2+z^2}} \frac{-2z}{\left(x^2$ + $u^2$ + $z^2\right)^2}$.
 
 Bài tập 3.6. Khảo sát sự liên tục và sự tồn tại, liên tục của các đạo hàm riêng của các
 
@@ -7146,33 +7021,31 @@ $ a) f(x,y) = \begin{cases} x \arctan\left(\frac{y}{x}\right)^2 & \text{n\'{e}u 
 
 $ b) f(x,y) = \begin{cases} \frac{x \sin y - y \sin x}{x^2 + y^2} & \text{n\'{e}u } (x,y) \neq (0,0) \\ 0 & \text{n\'{e}u } (x,y) = (0,0). \end{cases} $
 
-Chứng minh. a) Dễ thấy hàm số liên tục với mọi (x, y) $\neq$ (0, y).Xét x $=$ 0, vì $\left|$ x $\arctan \left( \frac{y}{x} \right)^2 \right| \leq \frac{\pi}{2}$ |x| nên $\lim_{x \to 0}$ x arctan $\left( \frac{y}{x} \right)^2 =$ 0 $=$ f(0, y). Vậy f(x, y)
+Chứng minh. a) Dễ thấy hàm số liên tục với mọi (x, y) $\neq$ (0, y). Xét x $=$ 0, vì $\left|$ x $\arctan \left(\frac{y}{x}\right)^2 \right| \leq \frac{\pi}{2}$ |x| nên $\lim_{x \to 0}$ x $\cdot \arctan \left(\frac{y}{x}\right)^2 =$ 0 $=$ f(0, y). Vậy f(x, y)
 
 liên tục trên $\mathbb{R}^2$.
 
 Với x $\neq$ 0 các đạo hàm riêng tồn tại và liên tục:
 
-$z'_x = \arctan\left(\frac{y}{x}\right)^2$ - $\frac{2x^2y^2}{x^4$ + $1t^4}$, $z'_y = \frac{2x^3y}{x^4$ + $1t^4}$
+$z'_x = \arctan\left(\frac{y}{x}\right)^2$ - $\frac{2x^2y^2}{x^4$ + $y^4}$, $z'_y = \frac{2x^3y}{x^4$ + $y^4}$
 
-Xét tai x $=$ 0,
+$X\acute{e}t \tan$ x $=$ 0,
 
-$ \begin{cases} f'_x(0,y) = \lim_{h \to 0} \frac{f(h,y) - f(0,y)}{h} = \arctan\left(\frac{h}{y}\right)^2 = \begin{bmatrix} 0, y = 0\\ \frac{\pi}{2}, y \neq 0 \end{bmatrix} \\ f'_y(0,y) = \lim_{k \to 0} \frac{f(0, y + k) - f(0, y)}{k} = \lim_{k \to 0} 0 = 0 \end{cases} $
+$ \begin{cases} f'_x(0,y) = \lim_{h \to 0} \frac{f(h,y) - f(0,y)}{h} = \arctan\left(\frac{h}{y}\right)^2 = \begin{bmatrix} 0, y = 0\\ \frac{\pi}{2}, y \neq 0 \end{bmatrix} \\ f'_y(0,y) = \lim_{k \to 0} \frac{f(0,y+k) - f(0,y)}{k} = \lim_{k \to 0} 0 = 0 \end{cases} $
 
-Vậy ta thấy $f'_x(x$, y) liên tục trên $\mathbb{R}^2 \setminus$ (0, 0); $f'_y(x$, y) liên tục trên $\mathbb{R}^2$.
+Vậy ta thấy $f'_x(x,y)$ liên tục trên $\mathbb{R}^2 \setminus$ (0,0); $f'_y(x,y)$ liên tục trên $\mathbb{R}^2$.
 
 
 
 b) Hàm số liên tục trên $\mathbb{R}^2 \setminus$ (0,0), còn tại (0,0) thì
 
-0 $\le \left| \frac{x \sin$ y - y $\sin x}{x^2$ + $y^2} \right| = \left| \frac{xy}{x^2$ + $y^2} \left( \frac{\sin y}{y}$ - $\frac{\sin x}{x} \right) \right| \le \frac{1}{2} \left| \frac{\sin y}{y}$ - $\frac{\sin x}{x} \right|$
+0 $\leq \left| \frac{x \sin$ y - y $\sin x}{x^2$ + $y^2} \right| = \left| \frac{xy}{x^2$ + $y^2} \left( \frac{\sin y}{y}$ - $\frac{\sin x}{x} \right) \right| \leq \frac{1}{2} \left| \frac{\sin y}{y}$ - $\frac{\sin x}{x} \right|$
 
 nên
 
-$\n\lim_{\substack{x \to$ 0 $\\$ y $\to 0}} \left| \frac{x \sin$ y - y $\sin x}{x^2$ + $y^2} \right| = 0\n$
+$\lim_{\substack{x \to$ 0 $\\$ y $\to 0}} \left| \frac{x \sin$ y - y $\sin x}{x^2$ + $y^2} \right| =$ 0
 
 Vậy f(x, y) liên tục trên $\mathbb{R}^2$.
-
-$\mathbf{r}$
 
 Bài tập 3.7. Giả sử z $=$ yf $(x^2$ - $y^2)$, ở đó f là hàm số khả vi. Chứng minh rằng đối với
 
@@ -7184,11 +7057,9 @@ Chúng minh. Ta có
 
 $z'_x = yf(x^2$ - $y^2) \cdot$ 2x, $z'_y = f(x^2$ - $y^2)$ + y $\cdot f(x^2$ - $y^2) \cdot$ (-2y)
 
-$n\hat{e}n$
+nên
 
-$\frac{1}{x}z'_x$ + $\frac{1}{1}z'_y = \frac{f(x^2$ - $y^2)}{1} = \frac{z}{1^2}$
-
-$\blacksquare$
+$\frac{1}{x}z'_x$ + $\frac{1}{1'}z'_y = \frac{f(x^2$ - $y^2)}{1'} = \frac{z}{1'}$
 
 Bài tập 3.8. Tìm đao hàm của hàm số hợp sau đây
 
@@ -7202,15 +7073,15 @@ Chứng minh.
 
 a) Ta có
 
-$ \begin{cases} u'_x = -\sin x \\ u'_y = 0 \end{cases} ; \begin{cases} v'_x = \frac{x}{\sqrt{x^2 + y^2}} \\ v'_y = \frac{y}{\sqrt{x^2 + y^2}} \end{cases} ; $
+$ \left\{\begin{array}{c} u'_x = -\sin x \\ u'_y = 0 \end{array}\right.; \left\{\begin{array}{c} v'_x = \frac{x}{\sqrt{x^2 + y^2}} \\ v'_y = \frac{y}{\sqrt{x^2 + y^2}} \end{array}\right.; $
 
 nên
 
-$ \begin{cases} z'_x = e^{\cos x^2 - 2(x^2 + y^2)} [-\sin 2x - 4x]. \\ z'_y = e^{\cos x^2 - 2(x^2 + y^2)} [-4y]. \end{cases} $
+$ \begin{cases} z'_x = e^{\cos x^2 - 2(x^2 + y^2)} \left[ -\sin 2x - 4x \right]. \\ z'_y = e^{\cos x^2 - 2(x^2 + y^2)} \left[ -4y \right]. \end{cases} $
 
 b) Ta có
 
-$ \begin{cases} u'_x = y \\ u'_y = x \end{cases} ; \begin{cases} v'_x = \frac{1}{y} \\ v'_y = \frac{-x}{y^2} \end{cases} $
+$ \left\{\begin{array}{c} u'_x = y \\ u'_y = x \end{array}\right\} ; \left\{\begin{array}{c} v'_x = \frac{1}{y} \\ v'_y = \frac{-x}{y^2} \end{array}\right. $
 
 nên
 
@@ -7220,14 +7091,12 @@ $z'_x = \frac{2}{x}$, $z'_y = \frac{2(y^4-1)}{y(y^4+1)}$
 
 c) Ta có
 
-$ \n\begin{cases}\n  x'_t = 3 \\
-  y'_t = 12t^2\n\end{cases}\n $
+$ \n\begin{cases}\n x'_t = 3 \\
+ y'_t = 12t^2\n\end{cases}\n $
 
 nên
 
-$z'_{t} = \frac{1}{\sqrt{1$ - (x - $y)^{2}}} \left(3$ - $12t^{2}\right)$
-
-$\blacksquare$
+$z'_t = \frac{1}{\sqrt{1$ - (x - $y)^2}} \left(3$ - $12t^2\right)$
 
 Bài tập 3.9. Tìm vi phân toàn phần của các hàm số
 
@@ -7241,37 +7110,35 @@ b) z $= \ln \tan \frac{y}{r}$
 
 Chứng minh.
 
-a
+a)
 
 dz $= \cos\left(x^2$ + $y^2\right)(2xdx$ + 2ydy)
 
-$\mathbf{b})$
+b)
 
-dz $= \frac{2}{\sin \frac{2y}{x}} \cdot \left( \frac{x$ dy - y $dx}{x^2} \right)$.
+dz $= \frac{2}{\sin \frac{2y}{x}} \cdot \left(\frac{xdy$ - $ydx}{x^2}\right)$.
 
-$\mathbf{c})$
+c)
 
-dz $= \frac{(x$ - y) dx + (x + y) $dy}{(x$ - $y)^2$ + (x + $y)^2}$.
+dz $= \frac{(x-y) \$, dx + (x+y) $\$, $dy}{(x-y)^2$ + $(x+y)^2}$.
 
 d)
 
 du $= x^{y^2 z} \left( \frac{y^2 z}{x}$ dx + 2yz $\ln$ x dy + $y^2 \ln$ x dz $\right)$.
 
-$\blacksquare$
-
 Bài tập 3.10. Tính gần đúng
 
-b) B $= \ln(\sqrt[3]{1.03}$ + $\sqrt[4]{0.98}$ - 1)
+b) B $= \ln \left( \sqrt[3]{1,03}$ + $\sqrt[4]{0,98}$ - 1 $\right)$
 
 a) A $= \sqrt[3]{(1,02)^2$ + $(0,05)^2}$
 
-Chứng minh. a) Xét hàm f(x, y) $= \sqrt[3]{x^2$ + $y^2}$, $\Delta$ x $=$ 0.02; $\Delta$ y $=$ 0.05; x $=$ 1; y $=$ 0. Ta có
+Chứng minh. a) Xét hàm f(x, y) $= \sqrt[3]{x^2$ + $y^2}$, $\Delta$ x $=$ 0, 02; $\Delta$ y $=$ 0, 05; x $=$ 1; y $=$ 0. Ta có
 
-$f'_x = \frac{1}{3(x^2$ + $y^2)^{2/3}}$ 2x; $f'_y = \frac{1}{3(x^2$ + $y^2)^{2/3}}$ 2y
+$f'_x = \frac{1}{3\left(x^2$ + $y^2\right)^{2/3}}$ 2x; $f'_y = \frac{1}{3\left(x^2$ + $y^2\right)^{2/3}}$ 2y
 
 Khi đó
 
-f(1 + $\Delta$ x, 0 + $\Delta$ y) $\approx$ f(1,0) + $f'_x(1,0) \Delta$ x + $f'_y(1,0) \Delta$ y $=$ 1 + $\frac{2}{3} \cdot$ 0,02 + 0.0,05 $=$ 1,013.
+$f\left(1+\Delta x,0+\Delta y\right)\approx f\left(1,0\right)+f_{x}'\left(1,0\right)\Delta x+f_{y}'\left(1,0\right)\Delta y=1+\frac{2}{3}.0,02+0.0,05=1,013$.
 
 
 
@@ -7281,15 +7148,13 @@ f(x, y) $= \ln(\sqrt[3]{x}$ + $\sqrt[4]{y}$ - 1); x $=$ 1; y $=$ 1; $\Delta$ x $
 
 Ta có
 
-$f'_x = \frac{1}{\sqrt[3]{x}$ + $\sqrt[4]{y}$ - $1} \cdot \frac{1}{3\gamma^{\frac{2}{3}}}; f'_y = \frac{1}{\sqrt[3]{x}$ + $\sqrt[4]{y}$ - $1} \cdot \frac{1}{3y^{\frac{3}{4}}}$
+$f'_x = \frac{1}{\sqrt[3]{x}$ + $\sqrt[4]{y}$ - $1} \cdot \frac{1}{3\gamma^{\frac{2}{3}}} \\; f'_y = \frac{1}{\sqrt[3]{x}$ + $\sqrt[4]{y}$ - $1} \cdot \frac{1}{3y^{\frac{3}{4}}}$
 
 Khi đó
 
-f(1 + $\Delta$ x, 1 + $\Delta$ y) $\approx$ f(1, 1) + $f'_x(1$, 1) $\Delta$ x + $f'_y(1$, 1) $\Delta$ y
+f(1 + $\Delta$ x, 1 + $\Delta$ y) $\approx$ f(1,1) + $f'_x(1,1) \Delta$ x + $f'_y(1,1) \Delta$ y
 
-$\mathbf{r} \in \mathbb{R}^{n \times n}$
-
-$=$ 0 + $\frac{1}{3} \cdot$ 0.03 + $\frac{1}{4}$ (-0.02) $=$ 0.005.
+$=$ 0 + $\frac{1}{3}.0,03$ + $\frac{1}{4}(-0,02) =$ 0,005.
 
 Bài tập 3.11. Tìm đạo hàm của các hàm số ẩn xác định bởi các phương trình sau
 
@@ -7297,11 +7162,11 @@ a) $x^3y$ - $y^3x = a^4;$ tính y'
 
 c) x + y + z $= e^z;$ tính $z'_x$, $z'_y$
 
-b) arctan $\frac{x+y}{a} = \frac{y}{a};$ tinh y'
+b) arctan $\frac{x+y}{a} = \frac{y}{a};$ tính y'
 
-d) $x^3$ + $y^3$ + $z^3$ - 3xyz $=$ 0, tinh $z'_x$, $z'_y$
+d) $x^3$ + $y^3$ + $z^3$ - 3xyz $=$ 0, tính $z'_x$, $z'_y$
 
-a) Xét hàm số ẩn F(x, y) $= x^3y$ - $y^3x$ - $a^4 =$ 0, có $F'_x = 3x^2y$ - $y^3; F'_y =$
+a) Xét hàm số ẩn F(x,y) $= x^3y$ - $y^3x$ - $a^4 =$ 0, có $F'_x = 3x^2y$ - $y^3; F'_y =$
 
 Chứng minh.
 
@@ -7309,21 +7174,19 @@ $x^3$ - $3y^2x$. Vây
 
 y' $= \frac{-F'_x}{F'_x} = -\frac{3x^2y$ - $y^3}{x^3$ - $3y^2x}$
 
-$ b) Xét hàm số ẩn F(x, y) = \arctan \frac{x+y}{a} - \frac{y}{a} có \begin{cases} F'_x = \frac{\frac{1}{a}}{1 + (\frac{x+y}{a})^2} = \frac{a}{a^2 + (x+y)^2} \\ F'_y = \frac{a}{a^2 + (x+y)^2} - \frac{1}{a} = \frac{a^2 - a^2 - (x+y)^2}{a(a^2 + (x+y)^2)} \end{cases}nên $
+$ b) Xét hàm số ẩn F(x,y) = \arctan\frac{x+y}{a} - \frac{y}{a} có \begin{cases} F'_x = \frac{\frac{1}{a}}{1 + \left(\frac{x+y}{a}\right)^2} = \frac{a}{a^2 + (x+y)^2} \\ F'_y = \frac{a}{a^2 + (x+y)^2} - \frac{1}{a} = \frac{a^2 - a^2 - (x+y)^2}{a(a^2 + (x+y)^2)} \end{cases} nên $
 
-y' $= \frac{u}{(x$ + $u)^2}$.
+y' $= \frac{u}{(x+u)^2}$.
 
 c) Xét hàm số ẩn F(x, y, z) $=$ x + y + z - $e^z$ có $F'_x =$ 1; $F'_y =$ 1; $F'_z =$ 1 - $e^z$ nên
 
-$z'_x = \frac{-1}{1-z^z}; z'_y = \frac{-1}{1-z^z}$
+$z'_x = \frac{-1}{1$ - $2^z}; z'_y = \frac{-1}{1$ - $2^z}$
 
-d) Xét hàm số ẩn F(x, y) $= x^3$ + $y^3$ + $z^3$ - 3xyz $=$ 0 có $F'_x = 3x^2$ - 3yz; $F'_y = 3y^2$ - 3xz; $F'_z =$
+d) Xét hàm số ẩn F(x, y) $= x^3$ + $y^3$ + $z^3$ - 3xyz $=$ 0 có $F'_x = 3x^2$ - 3yz; $F'_y = 3y^2$ - 3xz; $F'_z =$ 0
 
 $3z^2$ - 3xy nên
 
-$z'_x = \frac{3yz$ - $3x^2}{3z^2$ - $3xy}; z'_x = \frac{3xz$ - $3y^2}{3z^2$ - $3xy}$
-
-
+$z'_x = \frac{3yz$ - $3x^2}{3z^2$ - $3xu}; z'_x = \frac{3xz$ - $3y^2}{3z^2$ - $3xu}$
 
 Bài tập 3.12. Cho u $= \frac{x+z}{y+z}$, tính $u'_x$, $u'_y$ biết rằng z là hàm số ẩn của x, y xác định bởi
 
@@ -7331,42 +7194,35 @@ phương trình $z.e^z = x.e^x$ + $y.e^y$
 
 
 
-$ Chứng minh. Xét hàm số F(x, y, z) = ze^{z} - xe^{x} - ye^{y} = 0 có \begin{cases} F'_{x} = -(e^{x} + xe^{x}) \\ F'_{y} = -(e^{y} + ye^{y}) \\ F'_{z} = e^{z} + ze^{z} \end{cases} nên $
+$ \textit{Chúng minh. X\'{e}t hàm \textit{s\'o} } F\left(x,y,z\right) = ze^{z} - xe^{x} - ye^{y} = 0 \textit{ c\'o } \begin{cases} F'_x = -\left(e^{x} + xe^{x}\right) \\ F'_y = -\left(e^{y} + ye^{y}\right) \\ F'_z = e^{z} + ze^{z} \end{cases} \textit{n\'en} $
 
-$ \n\begin{cases}\n u'_{x} = \frac{(1 + z'_{x}) \cdot (y + z) - (x + z) (z'_{x})}{(y + z)^{2}} = \frac{\left(1 + \frac{e^{x} + xe^{x}}{e^{z} + ze^{z}}\right) - (x + z) \frac{e^{x} + xe^{x}}{e^{z} + ze^{z}}}{(y + z)^{2}} \\
- u'_{y} = \frac{(x + z) \cdot (1 + z'_{y}) - (y + z) (z'_{y})}{(y + z)^{2}} = \frac{(x + z) \cdot \left(1 + \frac{e^{y} + ye^{y}}{e^{z} + ze^{z}}\right) - (y + z) \left(\frac{e^{y $
-
-$\qquad \qquad \blacksquare$
+$ \n\begin{cases}\n u_{x}' = \frac{\left(1 + z_{x}'\right) \cdot \left(y + z\right) - \left(x + z\right) \left(z_{x}'\right)}{\left(y + z\right)^{2}} = \frac{\left(1 + \frac{e^{x} + xe^{x}}{e^{z} + ze^{z}}\right) - \left(x + z\right) \frac{e^{x} + xe^{x}}{e^{z} + ze^{z}}}{\left(y + z\right)^{2}} \\
+ u_{y}' = \frac{\left(x + z\right) \cdot \left(1 + z_{y}'\right) - \left(y + z\right) \left(z_{y}'\right)}{\left(y + z\right)^{2}} = \frac{\left(x + z\right) \cdot \left(1 + \frac $
 
 Bài tập 3.13. Tìm đạo hàm của các hàm số ẩn y(x), z(x) xác định bởi hệ
 
-$ \begin{cases} x + y + z = 0 \\ x^2 + y^2 + z^2 = 1 \end{cases} $
+$ \n\begin{cases}\nx + y + z &= 0 \\
+x^2 + y^2 + z^2 &= 1\n\end{cases}\n $
 
-Chứng minh. Lấy đạo hàm hai về của các phương trình của hệ ta có
+$Ch\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n$
 
-$ \n\begin{cases}\n1 + y'_x + z'_x = 0 \\
-2x + 2yy'_x + 2zz'_x = 0\n\end{cases}\n $
+$ \begin{cases} 1 + y'_x + z'_x = 0 \\ 2x + 2yy'_x + 2zz'_x = 0 \end{cases} $
 
-$n\hat{e}n$
+nên
 
-$ \n\begin{cases}\ny'_x = \frac{z - x}{y - z} \\
-z'_x = \frac{x - y}{y - z}\n\end{cases}\n $
-
-$\blacksquare$
+$y'_x = \frac{z}{y-z}z'_x = \frac{x-y}{y-z}$
 
 Bài tập 3.14. Phương trình $z^2$ + $\frac{2}{x} = \sqrt{y^2$ - $z^2}$, xác định hàm ẩn z $=$ z(x, y). Chứng minh
 
-$\mathring{\text{rand}} x^2 z'_x$ + $\frac{1}{y} z'_y = \frac{1}{z}$
+$\text{r\nang } x^2 z'_x$ + $\frac{1}{y} z'_y = \frac{1}{z}$
 
-$ \text{ing } x \leq_{x} y \leq_{z}Chứng minh. Xét hàm số F(x, y, z) = z^{2} + \frac{2}{x} - \sqrt{y^{2} - z^{2}} có \begin{cases} F'_{x} = -\frac{2}{x^{2}} \\ F'_{y} = \frac{-y}{\sqrt{y^{2} - z^{2}}} \\ F'_{z} = 2z + \frac{z}{\sqrt{y^{2} - z^{2}}} \end{cases}nên $
+$ Chúng minh. Xét hàm số F(x,y,z) = z^2 + \frac{2}{x} - \sqrt{y^2 - z^2} có \begin{cases} F'_x = -\frac{2}{x^2} \\ F'_y = \frac{-y}{\sqrt{y^2 - z^2}} \\ F'_z = 2z + \frac{z}{\sqrt{y^2 - z^2}} \end{cases} nên $
 
 $z'_x = \frac{\frac{z}{x^2}}{2z$ + $\frac{z}{\sqrt{y^2$ - $z^2}}}$
 
-$\int z'_y = \frac{\sqrt{y^2$ - $z^2}}{2z$ + $\frac{z}{\sqrt{y^2$ - $z^2}}}$
+$z'_y = \frac{\frac{z}{\sqrt{y^2$ - $z^2}}}{2z$ + $\frac{z}{\sqrt{z^2$ - $z^2}}}$
 
 Từ đó suy ra $x^2z'_x$ + $\frac{z'_y}{y} = \frac{1}{z}$.
-
-$\qquad \qquad \blacksquare$
 
 Bài tập 3.15. Tính các đạo hàm riêng cấp hai của các hàm số sau
 
@@ -7380,25 +7236,17 @@ Chứng minh.
 
 a) Ta có
 
-$ \begin{cases}\nz'_{x} = x\sqrt{x^{2} + y^{2}} \\
-z'_{y} = y\sqrt{x^{2} + y^{2}}\n\end{cases} \Rightarrow \begin{cases}\nz''_{xx} = \sqrt{x^{2} + y^{2}} + x\frac{2x}{2\sqrt{x^{2} + y^{2}}} = \frac{2x^{2} + y^{2}}{\sqrt{x^{2} + y^{2}}} \\
-z''_{yy} = \sqrt{x^{2} + y^{2}} + y\frac{2y}{2\sqrt{x^{2} + y^{2}}} = \frac{x^{2} + 2y^{2}}{\sqrt{x^{2} + y^{2}}} \\
-z''_{xy} = \frac{2xy}{2\sqrt{x^{2} + y^{2}}} = \frac{xy}{\sqrt{x^{2} + y $
+$ \begin{cases} z'_x = x\sqrt{x^2 + y^2} \\ z'_y = y\sqrt{x^2 + y^2} \end{cases} \Rightarrow \begin{cases} z''_{xx} = \sqrt{x^2 + y^2} + x\frac{2x}{2\sqrt{x^2 + y^2}} = \frac{2x^2 + y^2}{\sqrt{x^2 + y^2}} \\ z''_{yy} = \sqrt{x^2 + y^2} + y\frac{2y}{2\sqrt{x^2 + y^2}} = \frac{x^2 + 2y^2}{\sqrt{x^2 + y^2}} \\ z''_{xy} = \frac{2xy}{2\sqrt{x^2 + y^2}} = \frac{xy}{\sqrt{x^2 + y^2}} \end{cases} $
 
 b) Ta có
 
-$ \begin{cases}\nz'_{x} = 2x \ln (x + y) + \frac{x^{2}}{x + y} \\
-z'_{y} = \frac{x^{2}}{x + y}\n\end{cases} \Rightarrow \begin{cases}\nz''_{xx} = 2 \ln (x + y) + \frac{2x}{x + y} + \frac{2x (x + y) - x^{2}}{(x + y)^{2}} \\
-z''_{xy} = \frac{2x}{x + y} + \frac{-x^{2}}{(x + y)^{2}}\n\end{cases} $
+$ \begin{cases} z'_x = 2x\ln\left(x+y\right) + \frac{x^2}{x+y} \\ z'_y = \frac{x^2}{x+y} \end{cases} \Rightarrow \begin{cases} z''_{xx} = 2\ln\left(x+y\right) + \frac{2x}{x+y} + \frac{2x\left(x+y\right) - x^2}{\left(x+y\right)^2} \\ z''_{xy} = \frac{2x}{x+y} + \frac{-x^2}{\left(x+y\right)^2} \\ z''_{y} = \frac{2x}{x+y} \end{cases} $
 
-$z_{yy} = \frac{1}{(x+y)^2}$
+$Z_{yy} = \frac{1}{(x+y)^2}$
 
 c) Ta có
 
-$ \begin{cases}\nz'_x = \frac{1}{1 + \left(\frac{y}{x}\right)^2} \cdot \frac{-y}{x^2} = \frac{-y}{x^2 + y^2} \\
-z'_y = \frac{1}{1 + \left(\frac{y}{x}\right)^2} \cdot \frac{1}{x} = \frac{x}{x^2 + y^2}\n\end{cases} \Rightarrow \begin{cases}\nz''_{xx} = \frac{2xy}{(x^2 + y^2)^2} \\
-z''_{xy} = \frac{-(x^2 + y^2) + y \cdot 2y}{(x^2 + y^2)^2} = \frac{y^2 - x^2}{(x^2 + y^2)^2} \\
-z''_{yy} = \frac{-2xy}{(x^2 + y^2)^ $
+$ \begin{cases} z'_x = \frac{1}{1 + \left(\frac{y}{x}\right)^2} \cdot \frac{-y}{x^2} = \frac{-y}{x^2 + y^2} \\ z'_y = \frac{1}{1 + \left(\frac{y}{x}\right)^2} \cdot \frac{1}{x} = \frac{x}{x^2 + y^2} \end{cases} \Rightarrow \begin{cases} z''_{xx} = \frac{2xy}{\left(x^2 + y^2\right)^2} \\ z''_{xy} = \frac{-\left(x^2 + y^2\right) + y.2y}{\left(x^2 + y^2\right)^2} \\ z''_{yy} = \frac{-2xy}{\left(x^2 + y^2\right)^2} \end{cases} $
 
 Bài tập 3.16. Tính vi phân cấp hai của các hàm số sau
 
@@ -7410,43 +7258,43 @@ Chứng minh. a) Ta có dz $= (y^2$ - 2xy) dx + (2xy - $x^2)$ dy nên
 
 $d^{2}z =$ -2y $(dx)^{2}$ + 4 (y - x) dxdy + (2y) $(dy)^{2}$
 
-b) Ta có dz $= \frac{x}{2(x^2+y^2)^2}dx$ + $\frac{y}{2(x^2+y^2)^2}dy$ nên
+b) Ta có dz $= \frac{x}{2(x^2$ + $y^2)^2}$ dx + $\frac{y}{2(x^2$ + $y^2)^2}$ dy nên
 
 $d^{2}z = \frac{y^{2}$ - $3x^{2}}{(x^{2}$ + $y^{2})^{3}} (dx)^{2}$ - $\frac{4xy}{(x^{2}$ + $y^{2})^{3}}$ dxdy + $\frac{x^{2}$ - $3y^{2}}{(x^{2}$ + $y^{2})^{3}} (dy)^{2}$
 
 
 
-§3. CỤC TRỊ CỦA HÀM SỐ NHIỀU BIẾN SỐ
+## §3. CỰC TRỊ CỦA HÀM SỐ NHIỀU BIẾN SỐ
 
-## 3.1 Cuc tri tu do §3. CỤC TRỊ CỦA HÀM SỐ NHIỀU BIẾN SỐ
+### 3.1 Cưc tri tư do
 
-Định nghĩa 3.35. Cho hàm số z $=$ f(x, y) xác định trong một miền D và $M_0(x_0$, $y_0) \in$ D.
+#### Định nghĩa 3.35. Cho hàm số z = f(x, y) xác định trong một miền D và M_0(x_0, y_0) \in D.
 
-Ts nói rằng hàm số f(x, y) đạt cực trị tại $M_0$ nếu với mọi điểm M trong lân cận nào đó của
+Ts nói rằng hàm số f(x,y) đạt cực trị tại $M_0$ nếu với mọi điểm M trong lân cận nào đó của
 
 $M_0$ nhưng khác $M_0$, hiệu số f(M) - $f(M_0)$ có dấu không đổi.
 
-• Nếu f(M) - $f(M_0) >$ 0 trong một lân cận nào đó của $M_0$ thì $M_0$ được gọi là cực tiểu
+• $N\acute{e}u$ f(M) - $f(M_0) >$ 0 trong một lân cận nào đó của $M_0$ thì $M_0$ được gọi là cực tiểu
 
-của hàm số f tai $M_0$.
+$c\nủa$ hàm số f tai $M_0$.
 
-• Nếu f(M) - $f(M_0) <$ 0 trong một lân cận nào đó của $M_0$ thì $M_0$ được gọi là cực đại
+• $N\acute{e}u\$ f(M) - $f(M_0) <$ 0 trong một lân cận nào đó của $M_0$ thì $M_0$ được gọi là cực đại
 
-của hàm số f tại $M_0$.
+$c\nủa$ hàm số f tại $M_0$.
 
 Trong phần tiếp theo chúng ta sử dụng các kí hiệu sau:
 
 p $= f'_x(M)$, q $= f_y(M)$, r $= f_{xx}"(M)$, s $= f_{xy}"(M)$, t $= f_{yy}"(M)$
 
-Định lý 3.55. Nếu hàm số f(x,y) đạt cực trị tại M và tại đó các đạo hàm riêng p $=$
+#### Định lý 3.55. Nếu hàm số f(x,y) đạt cực trị tại M và tại đó các đạo hàm riêng p =
 
 $f'_x(M)$, q $= f_y(M)$ tồn tại thì các đạo hàm riêng ấy bằng không.
 
-Định lý 3.56. Giả sử hàm số z $=$ f(x, y) có các đạo hàm riêng đến cấp hai liên tục trong
+#### Định lý 3.56. Giả sử hàm số z = f(x, y) có các đạo hàm riêng đến cấp hai liên tục trong
 
 một lân cận nào đó của $M_0(x_0$, $y_0)$. Giả sử tại $M_0$ ta có p $=$ q $=$ 0, khi đó
 
-1. Nếu $s^2$ - rt $<$ 0 thì f(x, y) đạt cực trị tại $M_0$. Đó là cực tiểu nếu r $>$ 0, là cực đại nếu
+1. Nếu $s^2$ - rt $<$ 0 thì f(x,y) đạt cực trị tại $M_0$. Đó là cực tiểu nếu r $>$ 0, là cực đại nếu
 
 r $<$ 0.
 
@@ -7474,15 +7322,15 @@ c) z $= 2x^4$ + $y^4$ - $x^2$ - $2y^2$
 
 a) z $= x^2$ + xy + $y^2$ + x - y + 1
 
-d) z $= x^2$ + $y^2$ - $e^{-(x^2+y^2)}$
+d) z $= x^2$ + $y^2$ - $e^{-(x^2$ + $y^2)}$
 
-b) z $=$ x + y - $x.e^y$
+b) z $=$ x + y - $x.e^{y}$
 
 $ Chúng minh. a) Xét hệ phương trình \begin{cases} p = z'_x = 2x + y + 1 = 0 \\ q = z'_y = x + 2y - 1 = 0 \end{cases} \Leftrightarrow \begin{cases} x = -1 \\ y = 1 \end{cases}. Vậy $
 
 ta có M(-1,1) là điểm tới hạn duy nhất.
 
-Ta có A $= z''_{xx}(M) =$ 2; B $= z''_{xy}(M) =$ 1; C $= z''_{yy}(M) =$ 2 nên $B^2$ - AC $=$ 1 - 4 $=$ -3 $<$
+$\mathrm{Ta\;c\acute{o}\;}$ A $= z''_{xx}(M) =$ 2; B $= z''_{xy}(M) =$ 1; C $= z''_{yy}(M) = 2\;\mathrm{n\acute{e}n}\;B^2$ - AC $=$ 1 - 4 $=$ -3 $<$ 1
 
 0. Vậy hàm số đạt cực trị tại M và do A $>$ 0 nên M là điểm cực tiểu.
 
@@ -7492,20 +7340,17 @@ $ \begin{cases} p = 1 - e^y = 0 \\ q = 1 - xe^y = 0 \end{cases} \Leftrightarrow 
 
 Vậy hàm số có điểm tới hạn duy nhất M(1,0). Ta có A $= z''_{xx}(M) =$ 0; B $= z''_{xy}(M) =$ 0
 
-z $=$ 1; C $= z''_{yy}(M) =$ -1 nên $B^2$ - AC $=$ 1 $>$ 0. Hàm số đã cho không có cực trị.
+-1; C $= z''_{yy}(M) =$ -1 nên $B^2$ - AC $=$ 1 $>$ 0. Hàm số đã cho không có cực trị.
 
 c) Xét hệ phương trình
 
-$ \begin{cases}\nz'_{x} = 8x^{3} - 2x \\
-z'_{y} = 4y^{3} - 4y\n\end{cases} \Leftrightarrow \begin{cases}\nx (4x^{2} - 1) = 0 \\
-y (y^{2} - 1) = 0\n\end{cases} \Leftrightarrow \begin{cases}\nx = 0 \lor x = \frac{1}{2} \lor x = -\frac{1}{2} \\
-y = 0 \lor y = 1 \lor y = -1\n\end{cases} $
+$ \begin{cases} z'_x = 8x^3 - 2x \\ z'_y = 4y^3 - 4y \end{cases} \Leftrightarrow \begin{cases} x\left(4x^2 - 1\right) = 0 \\ y\left(y^2 - 1\right) = 0 \end{cases} \Leftrightarrow \begin{cases} x = 0 \lor x = \frac{1}{2} \lor x = -\frac{1}{2} \\ y = 0 \lor y = 1 \lor y = -1 \end{cases} $
 
 Vậy các điểm tới hạn của hàm số là
 
-$M_1(0,0); M_2(0,1); M_3(0,-1); M_4(\frac{1}{2},0); M_5(\frac{1}{2},1)$
+$M_{1}\left(0,0\right); \hspace{1cm} M_{2}\left(0,1\right); \hspace{1cm} M_{3}\left(0,-1\right); \hspace{1cm} M_{4}\left(\frac{1}{2},0\right); \hspace{1cm} M_{5}\left(\frac{1}{2},1\right)$
 
-$M_6\left(\frac{1}{2},-1\right); M_7\left(-\frac{1}{2},0\right); M_8\left(-\frac{1}{2},1\right); M_9\left(-\frac{1}{2},-1\right);$
+$M_{6}\left(\frac{1}{2},-1\right); \quad M_{7}\left(-\frac{1}{2},0\right); \quad M_{8}\left(-\frac{1}{2},1\right); \quad M_{9}\left(-\frac{1}{2},-1\right)$
 
 Ta có $z''_{xx} = 24x^2$ - 2; $z''_{xy} =$ 0; $z''_{yy} = 12y^2$ - 4.
 
@@ -7517,47 +7362,45 @@ với z $=$ 0.
 
 không phải là điểm cực đại với z $=$ 0.
 
-• Tại $M_4\left(\frac{1}{2},0\right); M_7\left(\frac{-1}{2},0\right);$ A $=$ 4; B $=$ 0; C $=$ -4; $B^2$ - AC $=$ 16 $>$ 0 nên $M_4$, $M_7$
+• Tại $M_4\left(\frac{1}{2},0\right)$ ; $M_7\left(\frac{-1}{2},0\right)$ ; $A=4$ ; $B=0$ ; $C=-4$ ; $B^2-AC=16>0$ nên $M_4$, $M_7$
 
-không phải là điểm cực đại với z $=$ 0.
+không phải là điểm cực đại với $z=0$.
 
-• Tại $M_5\left(\frac{1}{2},1\right); M_6\left(\frac{1}{2},-1\right); M_8\left(-\frac{1}{2},1\right); M_9\left(-\frac{1}{2},-1\right);$ A $=$ 4; B $=$ 0; C $=$ 8; $B^2$ -
+• Tại $M_5\left(\frac{1}{2},1\right); M_6\left(\frac{1}{2},-1\right); M_8\left(-\frac{1}{2},1\right); M_9\left(-\frac{1}{2},-1\right); A=4; B=0; C=8; B^2-$
 
 AC $=$ -32 $<$ 0 nên $M_5$, $M_6$, $M_8$, $M_9$ là các điểm cực tiểu với giá trị tại đó là
 
-$z=-\frac{9}{8}$.
+z $= -\frac{9}{8}$.
 
-$ d) Xét hệ phương trình \begin{cases} p = z'_x = 2x + e^{-(x^2 + y^2)} . 2x = 0 \\ q = z'_y = 2y + e^{-(x^2 + y^2)} . 2y = 0 \end{cases} \Leftrightarrow \begin{cases} x = 0 \\ y = 0 \end{cases} $
+$ d) Xét hệ phương trình \begin{cases} p = z'_x = 2x + e^{-(x^2 + y^2)}.2x = 0\\ q = z'_y = 2y + e^{-(x^2 + y^2)}.2y = 0 \end{cases} \Leftrightarrow \begin{cases} x = 0\\ y = 0 \end{cases} $
 
 
 
 Vậy M(0,0) là điểm tới hạn duy nhất. Xét
 
-$z_{xx}'' =$ 2 + 2 $\cdot e^{-(x^2$ + $y^2)}$ - $4x^2 \cdot e^{-(x^2$ + $y^2)}$
+$z_{xx}^{\prime\prime} =$ 2 + $2.e^{-(x^2+y^2)}$ - $4x^2.e^{-(x^2+y^2)}$
 
-$z''_{xy} =$ -4xy $\cdot e^{-(x^2+y^2)}$
+$z_{xy}^{\prime\prime} =$ -4xy $\cdot e^{-(x^2+y^2)}$
 
-$z''_{yy} =$ 2 + 2 $\cdot e^{-(x^2$ + $y^2)}$ - $4y^2 \cdot e^{-(x^2$ + $y^2)}$
+$z_{yy}^{\prime\prime} =$ 2 + $2.e^{-(x^2+y^2)}$ - $4y^2.e^{-(x^2+y^2)}$
 
 Tại M(0,0) có A $=$ 4; B $=$ 0; C $=$ 4; $B^2$ - AC $=$ -16 $<$ 0; A $>$ 0 nên tại M hàm số đạt
 
 cực tiểu.
 
-$\blacksquare$
+### 3.2 Cực trị có điều kiên
 
-## 3.2 Cực trị có điều kiên <math display="block">\blacksquare</math>
-
-Cho tập mở U $\subset \mathbb{R}^2$ và hàm số f: U $\to \mathbb{R}$. Xét bài toán tìm cực trị của hàm số f(x, y)
+Cho tập mở U $\subset \mathbb{R}^2$ và hàm số f: U $\to \mathbb{R}$. Xét bài toán tìm cực trị của hàm số f(x,y)
 
 khi các biến x, y thoả mãn phương trình
 
-$\varphi(x,y)=0$
+$\varphi(x,y) =$ 0
 
-Ta nói rằng tại điểm $(x_0$, $y_0) \in$ U thoả mãn điều kiện $\varphi(x_0$, $y_0) =$ 0 hàm f có cực đại tương
+Ta nói rằng tại điểm $(x_0,y_0)\in$ U thoả mãn điều kiện $\varphi(x_0,y_0)=0$ hàm f có cực đại tương
 
-$\hat{d}\delta$ i (tương ứng cực tiểu tương $\hat{d}\delta$ i) nếu tồn tại một lân cận V $\subset$ U sao cho f(x, y) $\leq f(x_0$, $y_0)$
+$\textit{d\'oi}$ (tương ứng cực tiểu tương $\textit{d\'oi})$ nếu tồn tại một lân cận V $\subset$ U sao cho f(x,y) $\leq f(x_0,y_0)$
 
-(tương ứng f(x, y) $\ge f(x_0$, $y_0))$ với mọi (x, y) $\in$ V thoả mãn điều kiện $\varphi(x$, y) $=$ 0. Điểm
+(tương ứng f(x,y) $\ge f(x_0,y_0))$ với mọi (x,y) $\in$ V thoả mãn điều kiện $\varphi(x,y) =$ 0. Điểm
 
 $(x_0$, $y_0)$ được gọi là cực trị có điều kiện của hàm số f(x, y), còn điều kiện $\varphi(x$, y) $=$ 0 được
 
@@ -7575,7 +7418,7 @@ Bài tập 3.18. Tìm cực trị có điều kiện
 
 a) z $= \frac{1}{x}$ + $\frac{1}{y}$ với điều kiện $\frac{1}{x^2}$ + $\frac{1}{y^2} = \frac{1}{a^2}$
 
-b) z $=$ x $\cdot$ y với điều kiện x + y $=$ 1
+b) z $=$ x.y với điều kiện x + y $=$ 1
 
 Chứng minh. a) Đặt x $= \frac{a}{\sin t};$ y $= \frac{a}{\cos t}$, ta có $\frac{1}{x^2}$ + $\frac{1}{y^2} = \frac{1}{a^2}$. Khi đó
 
@@ -7583,9 +7426,9 @@ z $= \frac{1}{x}$ + $\frac{1}{y} = \frac{\sin t}{a}$ + $\frac{\cos t}{a}$.
 
 Ta có
 
-$z'_t = \frac{\cos t}{a}$ - $\frac{\sin t}{a} = \frac{\sqrt{2}}{a} \sin \left( \frac{\pi}{4}$ - t $\right) =$ 0 $\Leftrightarrow$ t $= \frac{\pi}{4} \vee$ t $= \frac{5\pi}{4}$
+$z'_t = \frac{\cos t}{a}$ - $\frac{\sin t}{a} = \frac{\sqrt{2}}{a} \sin \left(\frac{\pi}{4}$ - $t\right) =$ 0 $\Leftrightarrow$ t $= \frac{\pi}{4} \vee$ t $= \frac{5\pi}{4}$
 
-Với t $= \frac{\pi}{4}$ ta có x $= \sqrt{2}a;$ y $= \sqrt{2}a$, hàm số đạt cực tiểu và $z_{CT} = -\frac{\sqrt{2}}{a}$.
+Với t $= \frac{\pi}{4}$ ta có x $= \sqrt{2}a;$ y $= \sqrt{2}a$, hàm số đạt cực tiểu và $z_{\text{CT}} = \frac{-\sqrt{2}}{a}$.
 
 Với t $= \frac{5\pi}{4}$ ta có x $= -\sqrt{2}a;$ y $= -\sqrt{2}a$, hàm số đạt cực đại và $z_{\text{CD}} = \frac{\sqrt{2}}{a}$.
 
@@ -7595,8 +7438,6 @@ b) Từ điều kiện x + y $=$ 1 ta suy ra y $=$ 1 - x. Vậy z $=$ xy $=$ x(1
 
 thấy hàm số x $=$ x(1-x) đạt cực đại tại x $= \frac{1}{2}$ và $z_{\text{CD}} = \frac{1}{4}$.
 
-$\blacksquare$
-
 Tuy nhiên không phải lúc nào cũng tìm được hàm số y $=$ y(x) từ điều kiện $\varphi(x$, y) $=$ 0. Do
 
 đó bài toán tìm cực trị điều kiện không phải lúc nào cũng đưa được về bài toán tìm cực trị
@@ -7605,11 +7446,11 @@ tự do. Trong trường hợp đó ta dùng phương pháp Lagrange được tr
 
 Đinh lý 3.57 (Điều kiện cần để hàm số đạt cực trị điều kiện). Giả sử U là một tập
 
-mở trong $\mathbb{R}^2$, f: U $\to \mathbb{R}$ và $(x_0$, $y_0)$ là điểm cực trị của hàm f với điều kiện $\varphi(x$, y) $=$ 0.
+$m\mathring{\sigma}$ trong $\mathbb{R}^2$, f: U $\to \mathbb{R}$ và $(x_0$, $y_0)$ là điểm cực trị của hàm f với điều kiện $\varphi(x$, y) $=$ 0.
 
 Hơn nữa giả thiết rằng:
 
-a. Các hàm f(x,y), $\varphi(x,y)$ có các đạo hàm riêng liên tục trong một lân cận của $(x_0$, $y_0)$.
+a. Các hàm f(x,y), $\varphi(x,y)$ có các đạo hàm riêng liên tục trong một lân cận của $(x_0,y_0)$.
 
 b. $\frac{\partial \varphi}{\partial y}(x_0$, $y_0) \neq$ 0.
 
@@ -7619,27 +7460,27 @@ $\lambda$, x, y)
 
 $\frac{\partial \phi}{\partial x} =$ 0 $\qquad \qquad \left( \frac{\partial f}{\partial x}(x$, y) + $\lambda \frac{\partial \varphi}{\partial x}(x$, y) $=$ 0 $\right)$
 
-$ \begin{cases} \frac{\partial \phi}{\partial y} = 0 \\ \frac{\partial \phi}{\partial y} = 0 \end{cases} \Leftrightarrow \begin{cases} \frac{\partial f}{\partial y}(x, y) + \lambda \frac{\partial \phi}{\partial y}(x, y) = 0 \\ \varphi(x, y) = 0 \end{cases} $
+$ \begin{cases} \frac{\partial \phi}{\partial y} = 0 & \Leftrightarrow \begin{cases} \frac{\partial f}{\partial y}(x, y) + \lambda \frac{\partial \varphi}{\partial y}(x, y) = 0 \\ \frac{\partial \phi}{\partial \lambda} = 0 \end{cases} \end{cases} $
 
 (3.3)
 
-$v\acute{o}i \phi(x,y,\lambda) =$ f(x,y) + $\lambda \phi(x,y)$ được gọi là hàm Lagrange.
+$v\acute{o}i \phi(x,y,\lambda) =$ f(x,y) + $\lambda \varphi(x,y) \$, $d\mu\phi$ c $\$, $g\phi$ i $\$, $l\grave{a} \$, $h\grave{a}m \$, Lagrange.
 
-### Định lý trên chính là điều kiện cần của cực trị có ràng buộc. Giải hệ phương trình 3.3 ta
+#### Định lý trên chính là điều kiện cần của cực trị có ràng buộc. Giải hệ phương trình 3.3 ta
 
 sẽ thu được các điểm tới hạn. Giả sử $M(x_0$, $y_0)$ là một điểm tới hạn ứng với giá trị $\lambda_0$. Ta
 
-$c\acute{o}$
+có
 
-$\phi(x$, y, $\lambda_0)$ - $\phi(x_0$, $y_0$, $\lambda_0) =$ f(x, y) + $\lambda_0 \varphi(x$, y) - $f(x_0$, $y_0)$ - $\lambda_0 \varphi(x_0$, $y_0) =$ f(x, y) - $f(x_0$, $y_0)$
+$\phi(x,y,\lambda_0)$ - $\phi(x_0,y_0,\lambda_0) =$ f(x,y) + $\lambda_0 \varphi(x,y)$ - $f(x_0,y_0)$ - $\lambda_0 \varphi(x_0,y_0) =$ f(x,y) - $f(x_0,y_0)$
 
-nên nếu M là một điểm cực trị của hàm số $\phi(x$, y, $\lambda_0)$ thì M cũng là điểm cực trị của hàm
+nên nếu M là một điểm cực trị của hàm số $\phi(x,y,\lambda_0)$ thì M cũng là điểm cực trị của hàm
 
 số f(x,y) với điều kiện $\varphi(x,y) =$ 0. Muốn xét xem M có phải là điểm cực trị của hàm số
 
-$\phi(x$, y, $\lambda_0)$ hay không ta có thể quay lại sử dụng định lý 3.56 hoặc đi tính vi phân cấp hai
+$\phi(x,y,\lambda_0)$ hay không ta có thể quay lại sử dụng định lý 3.56 hoặc đi tính vi phân cấp hai
 
-$d^2\phi(x_0$, $y_0$, $\lambda_0) = \frac{\partial^2 \phi}{\partial x^2}(x_0$, $y_0$, $\lambda_0)dx^2$ + $2\frac{\partial^2 \phi}{\partial$ x $\partial y}(x_0$, $y_0$, $\lambda_0)dxdy$ + $\frac{\partial^2 \phi}{\partial y^2}(x_0$, $y_0$, $\lambda_0)dy^2$
+$d^2\phi(x_0,y_0,\lambda_0) = \frac{\partial^2\phi}{\partial x^2}(x_0,y_0,\lambda_0)dx^2$ + $2\frac{\partial^2\phi}{\partial x\partial y}(x_0,y_0,\lambda_0)dxdy$ + $\frac{\partial^2\phi}{\partial y^2}(x_0,y_0,\lambda_0)dy^2$
 
 trong đó dx và dy liên hệ với nhau bởi hệ thức
 
@@ -7663,17 +7504,17 @@ Từ đó suy ra
 
 Bài tập 3.19. Tìm cực trị có điều kiện của hàm số z $= \frac{1}{x}$ + $\frac{1}{y}$ với điều kiện $\frac{1}{x^2}$ + $\frac{1}{y^2} = \frac{1}{a^2}$
 
-Chứng minh. Xét hàm số Lagrange $\phi(x$, y, $\lambda) = \frac{1}{x}$ + $\frac{1}{y}$ + $\lambda(\frac{1}{x^2}$ + $\frac{1}{y^2}$ - $\frac{1}{a^2})$. Từ hệ phương
+Chứng minh. Xét hàm số Lagrange $\phi(x,y,\lambda) = \frac{1}{x}$ + $\frac{1}{y}$ + $\lambda(\frac{1}{x^2}$ + $\frac{1}{y^2}$ - $\frac{1}{a^2})$. Từ hệ phương
 
 trình
 
 $ \begin{cases} \frac{\partial \phi}{\partial x} = -\frac{1}{x^2} - \frac{2\lambda}{x^3} \\ \frac{\partial \phi}{\partial y} = -\frac{1}{y^2} - \frac{2\lambda}{y^3} \\ \frac{\partial \phi}{\partial \lambda} = \frac{1}{x^2} + \frac{1}{y^2} - \frac{1}{a^2} = 0 \end{cases} $
 
-ta thu được các điểm tới hạn là $M_1(a\sqrt{2}$, $a\sqrt{2})$ ứng với $\lambda_1 = -\frac{a}{\sqrt{2}}$, $M_2(-a\sqrt{2}$, $-a\sqrt{2})$ ứng
+ta thu được các điểm tới hạn là $M_1(a\sqrt{2},a\sqrt{2})$ ứng với $\lambda_1=-\frac{a}{\sqrt{2}},\,M_2(-a\sqrt{2},-a\sqrt{2})$ ứng
 
 với $\lambda_2 = \frac{u}{\sqrt{2}}$. Ta có
 
-$d^2\phi = \frac{\partial^2 \phi}{\partial x^2} dx^2$ + 2 $\frac{\partial^2 \phi}{\partial$ x $\partial y}$ dxdy + $\frac{\partial^2 \phi}{\partial y^2} dy^2 = \left(\frac{2}{x^3}$ + $\frac{6\lambda}{x^4}\right) dx^2$ + $\left(\frac{2}{y^3}$ + $\frac{6\lambda}{y^4}\right) dy^2$
+$d^2\phi = \frac{\partial^2\phi}{\partial x^2}dx^2$ + $2\frac{\partial^2\phi}{\partial x\partial y}dxdy$ + $\frac{\partial^2\phi}{\partial y^2}dy^2 = \left(\frac{2}{x^3}$ + $\frac{6\lambda}{x^4}\right)dx^2$ + $\left(\frac{2}{y^3}$ + $\frac{6\lambda}{y^4}\right)dy^2$
 
 Từ điều kiện $\frac{1}{x^2}$ + $\frac{1}{y^2}$ - $\frac{1}{a^2} =$ 0 suy ra $-\frac{2}{x^3}dx$ - $\frac{2}{y^3}dy =$ 0 nên dy $= -\frac{y^3}{x^3}dx$, thay vào biểu thức
 
@@ -7687,15 +7528,13 @@ kiện.
 
 kiện.
 
-$\blacksquare$
+### 3.3 Giá trị lớn nhất - Giá trị nhỏ nhất
 
-## 3.3 Giá trị lớn nhất - Giá trị nhỏ nhất <math display="block">\blacksquare</math>
-
-Giả sử f : A $\to \mathbb{R}$ là hàm số liên tục trên tập hợp đóng A của $\mathbb{R}^2$. Khi đó, f đạt giá trị
+Giả sử f: A $\to \mathbb{R}$ là hàm số liên tục trên tập hợp đóng A của $\mathbb{R}^2$. Khi đó, f đạt giá trị
 
 lớn nhất và giá trị nhỏ nhất trên A. Để tìm các giá trị này ta hãy tìm giá trị của hàm số
 
-tại tất cả các điểm dừng trong miền A cũng như tại các điểm đạo hàm riêng không tồn tại,
+$\tautại$ tất cả các điểm dừng trong miền A cũng như tại các điểm đạo hàm riêng không tồn tại,
 
 sau đó so sánh các giá trị này với các giá trị của hàm trên biên $\partial$ A của A (tức là ta phải
 
@@ -7707,9 +7546,6 @@ Bài tập 3.20. Tìm giá trị lớn nhất và giá trị nhỏ nhất của 
 
 a) z $= x^2y(4$ - x - y) trong hình tam giác giới hạn bởi các đường x $=$ 0, y $=$ 0, x + y $=$ 6.
 
-b) z $= \sin$ x + $\sin$ y + $\sin(x$ + y) trong hình chữ nhật giới hạn bởi các đường x $=$ 0, x $=$
+b) z $= \sin$ x + $\sin$ y + $\sin(x$ + y) trong hình chữ nhật giới hạn bởi các đường x $=$ 0, x $=$ 0
 
 $\frac{\pi}{2}$, y $=$ 0, y $= \frac{\pi}{2}$.
-
-
-
