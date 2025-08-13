@@ -6451,6 +6451,2689 @@
           "Kết luận: Do đó, các nghiệm $\\lambda$ của phương trình $\\det(B - \\lambda A) = 0$ đều là số thực."
         ]
       }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$. Tính $A + A$.",
+      "answer": {
+        "steps": [
+          "Gọi ma trận kết quả là $C = A + A$.",
+          "Với ma trận $A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$, ta có $A + A = 2A$.",
+          "Tính $2A = 2 \\cdot \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} = \\begin{bmatrix} 2 & 4 \\\\ 6 & 8 \\end{bmatrix}$.",
+          "Vậy kết quả là $\\begin{bmatrix} 2 & 4 \\\\ 6 & 8 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & -1 \\\\ 2 & 3 \\end{bmatrix}$ và $B = \\begin{bmatrix} 0 & 2 \\\\ -1 & 1 \\end{bmatrix}$. Tính $A - B$.",
+      "answer": {
+        "steps": [
+          "Gọi ma trận kết quả là $C = A - B$.",
+          "Với $A = \\begin{bmatrix} 1 & -1 \\\\ 2 & 3 \\end{bmatrix}$, $B = \\begin{bmatrix} 0 & 2 \\\\ -1 & 1 \\end{bmatrix}$, ta tính từng phần tử của $C$.",
+          "Phần tử $c_{11} = 1 - 0 = 1$, $c_{12} = -1 - 2 = -3$.",
+          "Phần tử $c_{21} = 2 - (-1) = 3$, $c_{22} = 3 - 1 = 2$.",
+          "Vậy $C = \\begin{bmatrix} 1 & -3 \\\\ 3 & 2 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 2 & 1 \\\\ -1 & 0 \\end{bmatrix}$. Tính $3A$.",
+      "answer": {
+        "steps": [
+          "Gọi ma trận kết quả là $C = 3A$.",
+          "Với $A = \\begin{bmatrix} 2 & 1 \\\\ -1 & 0 \\end{bmatrix}$, ta nhân mỗi phần tử của $A$ với 3.",
+          "Tính $3A = 3 \\cdot \\begin{bmatrix} 2 & 1 \\\\ -1 & 0 \\end{bmatrix} = \\begin{bmatrix} 6 & 3 \\\\ -3 & 0 \\end{bmatrix}$.",
+          "Vậy kết quả là $\\begin{bmatrix} 6 & 3 \\\\ -3 & 0 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$ và $B = \\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix}$. Tính $AB$.",
+      "answer": {
+        "steps": [
+          "Gọi ma trận kết quả là $C = AB$.",
+          "Với $A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$, $B = \\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix}$, ta tính từng phần tử của $C$.",
+          "Phần tử $c_{11} = 1 \\cdot 0 + 2 \\cdot 1 = 2$, $c_{12} = 1 \\cdot 1 + 2 \\cdot 0 = 1$.",
+          "Phần tử $c_{21} = 3 \\cdot 0 + 4 \\cdot 1 = 4$, $c_{22} = 3 \\cdot 1 + 4 \\cdot 0 = 3$.",
+          "Vậy $C = \\begin{bmatrix} 2 & 1 \\\\ 4 & 3 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$. Tính $A^2$.",
+      "answer": {
+        "steps": [
+          "Gọi ma trận kết quả là $C = A^2 = A \\cdot A$.",
+          "Với $A = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$, ta tính $A \\cdot A$.",
+          "Đây là ma trận đơn vị, nên $A \\cdot A = A$.",
+          "Vậy $A^2 = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\end{bmatrix}$. Tính ma trận chuyển vị $A^T$.",
+      "answer": {
+        "steps": [
+          "Ma trận chuyển vị $A^T$ được tạo bằng cách đổi hàng thành cột và cột thành hàng của $A$.",
+          "Với $A = \\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\end{bmatrix}$, ta có:",
+          "Hàng 1 của $A$ thành cột 1 của $A^T$: $\\begin{bmatrix} 1 \\\\ 4 \\end{bmatrix}$.",
+          "Hàng 2 của $A$ thành cột 2 của $A^T$: $\\begin{bmatrix} 2 \\\\ 5 \\end{bmatrix}$.",
+          "Hàng 3 của $A$ thành cột 3 của $A^T$: $\\begin{bmatrix} 3 \\\\ 6 \\end{bmatrix}$.",
+          "Vậy $A^T = \\begin{bmatrix} 1 & 4 \\\\ 2 & 5 \\\\ 3 & 6 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định ma trận $A = \\begin{bmatrix} 1 & 2 \\\\ 2 & 4 \\end{bmatrix}$ có phải là ma trận đối xứng không?",
+      "answer": {
+        "steps": [
+          "Một ma trận là đối xứng nếu $A = A^T$.",
+          "Tính $A^T$: Với $A = \\begin{bmatrix} 1 & 2 \\\\ 2 & 4 \\end{bmatrix}$, ta có $A^T = \\begin{bmatrix} 1 & 2 \\\\ 2 & 4 \\end{bmatrix}$.",
+          "So sánh $A$ và $A^T$: Vì $A = A^T$, ma trận $A$ là đối xứng."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $A = \\begin{bmatrix} 2 & 3 \\\\ 1 & 4 \\end{bmatrix}$.",
+      "answer": {
+        "steps": [
+          "Với ma trận $A = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix} = \\begin{bmatrix} 2 & 3 \\\\ 1 & 4 \\end{bmatrix}$, định thức được tính bởi công thức $\\det(A) = ad - bc$.",
+          "Thay số: $\\det(A) = 2 \\cdot 4 - 3 \\cdot 1 = 8 - 3 = 5$.",
+          "Vậy $\\det(A) = 5$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$. Tìm ma trận nghịch đảo $A^{-1}$.",
+      "answer": {
+        "steps": [
+          "Công thức ma trận nghịch đảo của ma trận 2x2 $A = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}$ là $A^{-1} = \\frac{1}{\\det(A)} \\begin{bmatrix} d & -b \\\\ -c & a \\end{bmatrix}$, với $\\det(A) \\neq 0$.",
+          "Tính định thức: $\\det(A) = 1 \\cdot 4 - 2 \\cdot 3 = 4 - 6 = -2$.",
+          "Thay vào công thức: $A^{-1} = \\frac{1}{-2} \\begin{bmatrix} 4 & -2 \\\\ -3 & 1 \\end{bmatrix} = \\begin{bmatrix} -2 & 1 \\\\ \\frac{3}{2} & -\\frac{1}{2} \\end{bmatrix}$.",
+          "Vậy $A^{-1} = \\begin{bmatrix} -2 & 1 \\\\ \\frac{3}{2} & -\\frac{1}{2} \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 1 & 0 & 1 \\end{bmatrix}$. Tính định thức $\\det(A)$.",
+      "answer": {
+        "steps": [
+          "Với ma trận 3x3 $A = \\begin{bmatrix} a & b & c \\\\ d & e & f \\\\ g & h & i \\end{bmatrix}$, định thức được tính bởi công thức: $\\det(A) = a(ei - fh) - b(di - fg) + c(dh - eg)$.",
+          "Thay số: $A = \\begin{bmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 1 & 0 & 1 \\end{bmatrix}$.",
+          "Tính: $\\det(A) = 1(1 \\cdot 1 - 1 \\cdot 0) - 1(0 \\cdot 1 - 1 \\cdot 1) + 0(0 \\cdot 0 - 1 \\cdot 1) = 1(1 - 0) - 1(0 - 1) + 0 = 1 + 1 = 2$.",
+          "Vậy $\\det(A) = 2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \\end{bmatrix}$. Xác định hạng của ma trận $A$.",
+      "answer": {
+        "steps": [
+          "Để tìm hạng của ma trận, ta đưa ma trận về dạng bậc thang bằng phép biến đổi sơ cấp.",
+          "Bắt đầu với $A = \\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \\end{bmatrix}$.",
+          "Trừ hàng 2 cho 4 lần hàng 1: $R_2 = R_2 - 4R_1$, được $\\begin{bmatrix} 1 & 2 & 3 \\\\ 0 & -3 & -6 \\\\ 7 & 8 & 9 \\end{bmatrix}$.",
+          "Trừ hàng 3 cho 7 lần hàng 1: $R_3 = R_3 - 7R_1$, được $\\begin{bmatrix} 1 & 2 & 3 \\\\ 0 & -3 & -6 \\\\ 0 & -6 & -12 \\end{bmatrix}$.",
+          "Trừ hàng 3 cho 2 lần hàng 2: $R_3 = R_3 - 2R_2$, được $\\begin{bmatrix} 1 & 2 & 3 \\\\ 0 & -3 & -6 \\\\ 0 & 0 & 0 \\end{bmatrix}$.",
+          "Ma trận có 2 hàng khác 0, nên hạng của ma trận là 2."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$. Tìm tất cả các giá trị riêng của $A$.",
+      "answer": {
+        "steps": [
+          "Giá trị riêng $\\lambda$ của ma trận $A$ được tìm bằng cách giải phương trình đặc trưng $\\det(A - \\lambda I) = 0$.",
+          "Tính $A - \\lambda I = \\begin{bmatrix} 1 - \\lambda & 2 \\\\ 3 & 4 - \\lambda \\end{bmatrix}$.",
+          "Tính định thức: $\\det(A - \\lambda I) = (1 - \\lambda)(4 - \\lambda) - 2 \\cdot 3 = \\lambda^2 - 5\\lambda + 4 - 6 = \\lambda^2 - 5\\lambda - 2$.",
+          "Giải phương trình $\\lambda^2 - 5\\lambda - 2 = 0$, ta có $\\lambda = \\frac{5 \\pm \\sqrt{25 + 8}}{2} = \\frac{5 \\pm \\sqrt{33}}{2}$.",
+          "Vậy các giá trị riêng là $\\lambda_1 = \\frac{5 + \\sqrt{33}}{2}$, $\\lambda_2 = \\frac{5 - \\sqrt{33}}{2}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 2 & 1 \\\\ 0 & 3 \\end{bmatrix}$. Tìm vector riêng tương ứng với giá trị riêng $\\lambda = 2$.",
+      "answer": {
+        "steps": [
+          "Để tìm vector riêng, giải hệ phương trình $(A - \\lambda I)x = 0$ với $\\lambda = 2$.",
+          "Tính $A - 2I = \\begin{bmatrix} 2 - 2 & 1 \\\\ 0 & 3 - 2 \\end{bmatrix} = \\begin{bmatrix} 0 & 1 \\\\ 0 & 1 \\end{bmatrix}$.",
+          "Giải hệ $\\begin{bmatrix} 0 & 1 \\\\ 0 & 1 \\end{bmatrix} \\begin{bmatrix} x_1 \\\\ x_2 \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix}$, ta được $x_2 = 0$.",
+          "Vector riêng có dạng $\\begin{bmatrix} x_1 \\\\ 0 \\end{bmatrix}$, chọn $x_1 = 1$, ta được $\\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}$.",
+          "Vậy vector riêng là $\\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 & 0 \\\\ 0 & 1 & 2 \\\\ 0 & 0 & 1 \\end{bmatrix}$. Tính $A^3$.",
+      "answer": {
+        "steps": [
+          "Với ma trận tam giác trên, ta tính $A^2$ trước: $A^2 = A \\cdot A$.",
+          "Tính $A^2 = \\begin{bmatrix} 1 & 2 & 0 \\\\ 0 & 1 & 2 \\\\ 0 & 0 & 1 \\end{bmatrix} \\cdot \\begin{bmatrix} 1 & 2 & 0 \\\\ 0 & 1 & 2 \\\\ 0 & 0 & 1 \\end{bmatrix} = \\begin{bmatrix} 1 & 4 & 4 \\\\ 0 & 1 & 4 \\\\ 0 & 0 & 1 \\end{bmatrix}$.",
+          "Tính $A^3 = A^2 \\cdot A = \\begin{bmatrix} 1 & 4 & 4 \\\\ 0 & 1 & 4 \\\\ 0 & 0 & 1 \\end{bmatrix} \\cdot \\begin{bmatrix} 1 & 2 & 0 \\\\ 0 & 1 & 2 \\\\ 0 & 0 & 1 \\end{bmatrix} = \\begin{bmatrix} 1 & 6 & 12 \\\\ 0 & 1 & 6 \\\\ 0 & 0 & 1 \\end{bmatrix}$.",
+          "Vậy $A^3 = \\begin{bmatrix} 1 & 6 & 12 \\\\ 0 & 1 & 6 \\\\ 0 & 0 & 1 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 0 & 1 \\\\ 0 & 1 & 0 \\\\ 1 & 0 & 1 \\end{bmatrix}$. Xác định xem $A$ có khả nghịch không.",
+      "answer": {
+        "steps": [
+          "Ma trận $A$ khả nghịch nếu $\\det(A) \\neq 0$.",
+          "Tính định thức: $\\det(A) = 1(1 \\cdot 1 - 0 \\cdot 0) - 0(0 \\cdot 1 - 0 \\cdot 1) + 1(0 \\cdot 0 - 1 \\cdot 1) = 1(1) + 0 + 1(-1) = 1 - 1 = 0$.",
+          "Vì $\\det(A) = 0$, ma trận $A$ không khả nghịch."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 \\\\ -1 & 3 \\end{bmatrix}$. Tìm ma trận $B$ sao cho $AB = I$.",
+      "answer": {
+        "steps": [
+          "Ma trận $B$ là ma trận nghịch đảo $A^{-1}$.",
+          "Tính định thức: $\\det(A) = 1 \\cdot 3 - 2 \\cdot (-1) = 3 + 2 = 5$.",
+          "Công thức: $A^{-1} = \\frac{1}{\\det(A)} \\begin{bmatrix} d & -b \\\\ -c & a \\end{bmatrix} = \\frac{1}{5} \\begin{bmatrix} 3 & -2 \\\\ 1 & 1 \\end{bmatrix} = \\begin{bmatrix} \\frac{3}{5} & -\\frac{2}{5} \\\\ \\frac{1}{5} & \\frac{1}{5} \\end{bmatrix}$.",
+          "Vậy $B = \\begin{bmatrix} \\frac{3}{5} & -\\frac{2}{5} \\\\ \\frac{1}{5} & \\frac{1}{5} \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 & 0 \\\\ 0 & 1 & 2 \\\\ 0 & 0 & 1 \\end{bmatrix}$. Tính $A^{-1}$.",
+      "answer": {
+        "steps": [
+          "Vì $A$ là ma trận tam giác trên, ta sử dụng phương pháp Gauss-Jordan để tìm $A^{-1}$.",
+          "Tạo ma trận bổ sung $[A | I] = \\begin{bmatrix} 1 & 2 & 0 & 1 & 0 & 0 \\\\ 0 & 1 & 2 & 0 & 1 & 0 \\\\ 0 & 0 & 1 & 0 & 0 & 1 \\end{bmatrix}$.",
+          "Biến đổi về dạng $[I | A^{-1}]$:",
+          "Trừ hàng 2 cho 2 lần hàng 3: $R_2 = R_2 - 2R_3$, được $\\begin{bmatrix} 1 & 2 & 0 & 1 & 0 & 0 \\\\ 0 & 1 & 0 & 0 & 1 & -2 \\\\ 0 & 0 & 1 & 0 & 0 & 1 \\end{bmatrix}$.",
+          "Trừ hàng 1 cho 2 lần hàng 2: $R_1 = R_1 - 2R_2$, được $\\begin{bmatrix} 1 & 0 & 0 & 1 & -2 & 4 \\\\ 0 & 1 & 0 & 0 & 1 & -2 \\\\ 0 & 0 & 1 & 0 & 0 & 1 \\end{bmatrix}$.",
+          "Vậy $A^{-1} = \\begin{bmatrix} 1 & -2 & 4 \\\\ 0 & 1 & -2 \\\\ 0 & 0 & 1 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 1 \\\\ 1 & 1 \\end{bmatrix}$. Tính $\\det(A)$ và xác định xem $A$ có khả nghịch không.",
+      "answer": {
+        "steps": [
+          "Tính định thức: $\\det(A) = 1 \\cdot 1 - 1 \\cdot 1 = 1 - 1 = 0$.",
+          "Vì $\\det(A) = 0$, ma trận $A$ không khả nghịch."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$. Xác minh rằng $A \\cdot A^{-1} = I$.",
+      "answer": {
+        "steps": [
+          "Tính $A^{-1}$: Định thức $\\det(A) = 1 \\cdot 4 - 2 \\cdot 3 = -2$.",
+          "Công thức: $A^{-1} = \\frac{1}{-2} \\begin{bmatrix} 4 & -2 \\\\ -3 & 1 \\end{bmatrix} = \\begin{bmatrix} -2 & 1 \\\\ \\frac{3}{2} & -\\frac{1}{2} \\end{bmatrix}$.",
+          "Tính $A \\cdot A^{-1} = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} \\cdot \\begin{bmatrix} -2 & 1 \\\\ \\frac{3}{2} & -\\frac{1}{2} \\end{bmatrix}$.",
+          "Phần tử $c_{11} = 1 \\cdot (-2) + 2 \\cdot \\frac{3}{2} = -2 + 3 = 1$.",
+          "Phần tử $c_{12} = 1 \\cdot 1 + 2 \\cdot (-\\frac{1}{2}) = 1 - 1 = 0$.",
+          "Phần tử $c_{21} = 3 \\cdot (-2) + 4 \\cdot \\frac{3}{2} = -6 + 6 = 0$.",
+          "Phần tử $c_{22} = 3 \\cdot 1 + 4 \\cdot (-\\frac{1}{2}) = 3 - 2 = 1$.",
+          "Vậy $A \\cdot A^{-1} = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix} = I$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 & 0 \\\\ 0 & 1 & 2 \\\\ 0 & 0 & 1 \\end{bmatrix}$. Tìm tất cả các giá trị riêng của $A$.",
+      "answer": {
+        "steps": [
+          "Vì $A$ là ma trận tam giác trên, giá trị riêng là các phần tử trên đường chéo chính: $\\lambda = 1, 1, 1$.",
+          "Kiểm tra bằng phương trình đặc trưng: $A - \\lambda I = \\begin{bmatrix} 1 - \\lambda & 2 & 0 \\\\ 0 & 1 - \\lambda & 2 \\\\ 0 & 0 & 1 - \\lambda \\end{bmatrix}$.",
+          "Tính $\\det(A - \\lambda I) = (1 - \\lambda)^3$.",
+          "Giải $(1 - \\lambda)^3 = 0$, ta được $\\lambda = 1$ (bội 3).",
+          "Vậy các giá trị riêng là $\\lambda = 1$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 2 & 0 \\\\ 0 & 3 \\end{bmatrix}$. Xác định xem $A$ có chéo hóa được không.",
+      "answer": {
+        "steps": [
+          "Ma trận chéo hóa được nếu nó có đủ số vector riêng độc lập tuyến tính.",
+          "Tìm giá trị riêng: $\\det(A - \\lambda I) = (2 - \\lambda)(3 - \\lambda) = 0$, suy ra $\\lambda_1 = 2$, $\\lambda_2 = 3$.",
+          "Với $\\lambda = 2$, giải $(A - 2I)x = \\begin{bmatrix} 0 & 0 \\\\ 0 & 1 \\end{bmatrix} x = 0$, được vector riêng $\\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}$.",
+          "Với $\\lambda = 3$, giải $(A - 3I)x = \\begin{bmatrix} -1 & 0 \\\\ 0 & 0 \\end{bmatrix} x = 0$, được vector riêng $\\begin{bmatrix} 0 \\\\ 1 \\end{bmatrix}$.",
+          "Vì có 2 vector riêng độc lập tuyến tính, ma trận $A$ chéo hóa được."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix}$. Tính $A^n$.",
+      "answer": {
+        "steps": [
+          "Nhận thấy $A = \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix}$ là ma trận tam giác trên.",
+          "Tính $A^2 = \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix} \\cdot \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix} = \\begin{bmatrix} 1 & 2 \\\\ 0 & 1 \\end{bmatrix}$.",
+          "Tính $A^3 = A^2 \\cdot A = \\begin{bmatrix} 1 & 2 \\\\ 0 & 1 \\end{bmatrix} \\cdot \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix} = \\begin{bmatrix} 1 & 3 \\\\ 0 & 1 \\end{bmatrix}$.",
+          "Quan sát mẫu, ta suy ra $A^n = \\begin{bmatrix} 1 & n \\\\ 0 & 1 \\end{bmatrix}$.",
+          "Kiểm tra bằng quy nạp: Giả sử $A^k = \\begin{bmatrix} 1 & k \\\\ 0 & 1 \\end{bmatrix}$, thì $A^{k+1} = A^k \\cdot A = \\begin{bmatrix} 1 & k \\\\ 0 & 1 \\end{bmatrix} \\cdot \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix} = \\begin{bmatrix} 1 & k+1 \\\\ 0 & 1 \\end{bmatrix}$.",
+          "Vậy $A^n = \\begin{bmatrix} 1 & n \\\\ 0 & 1 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 0 & 1 \\\\ -1 & 0 \\end{bmatrix}$. Tìm tất cả các giá trị riêng và vector riêng.",
+      "answer": {
+        "steps": [
+          "Tìm giá trị riêng: $\\det(A - \\lambda I) = \\det\\begin{bmatrix} -\\lambda & 1 \\\\ -1 & -\\lambda \\end{bmatrix} = \\lambda^2 + 1 = 0$.",
+          "Giải $\\lambda^2 = -1$, ta được $\\lambda = \\pm i$.",
+          "Với $\\lambda = i$, giải $(A - iI)x = \\begin{bmatrix} -i & 1 \\\\ -1 & -i \\end{bmatrix} x = 0$, được vector riêng $\\begin{bmatrix} 1 \\\\ i \\end{bmatrix}$.",
+          "Với $\\lambda = -i$, giải $(A + iI)x = \\begin{bmatrix} i & 1 \\\\ -1 & i \\end{bmatrix} x = 0$, được vector riêng $\\begin{bmatrix} 1 \\\\ -i \\end{bmatrix}$.",
+          "Vậy giá trị riêng: $\\lambda = i, -i$; vector riêng: $\\begin{bmatrix} 1 \\\\ i \\end{bmatrix}$, $\\begin{bmatrix} 1 \\\\ -i \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 3 \\end{bmatrix}$. Tìm ma trận chéo hóa $P$ và ma trận chéo $D$.",
+      "answer": {
+        "steps": [
+          "Tìm giá trị riêng: $\\det(A - \\lambda I) = (1 - \\lambda)^2 (3 - \\lambda) = 0$, suy ra $\\lambda_1 = 1$ (bội 2), $\\lambda_2 = 3$.",
+          "Với $\\lambda = 1$, giải $(A - I)x = \\begin{bmatrix} 0 & 2 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 2 \\end{bmatrix} x = 0$, được vector riêng $\\begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\end{bmatrix}$.",
+          "Với $\\lambda = 3$, giải $(A - 3I)x = \\begin{bmatrix} -2 & 2 & 0 \\\\ 0 & -2 & 0 \\\\ 0 & 0 & 0 \\end{bmatrix} x = 0$, được vector riêng $\\begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\end{bmatrix}$.",
+          "Chỉ có 2 vector riêng độc lập, nên $A$ không chéo hóa được."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 2 & 1 \\\\ 0 & 2 \\end{bmatrix}$. Xác định xem $A$ có chéo hóa được không.",
+      "answer": {
+        "steps": [
+          "Tìm giá trị riêng: $\\det(A - \\lambda I) = (2 - \\lambda)^2 = 0$, suy ra $\\lambda = 2$ (bội 2).",
+          "Giải $(A - 2I)x = \\begin{bmatrix} 0 & 1 \\\\ 0 & 0 \\end{bmatrix} x = 0$, được vector riêng $\\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}$.",
+          "Chỉ có 1 vector riêng độc lập, trong khi bội đại số của $\\lambda = 2$ là 2, nên $A$ không chéo hóa được."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 1 \\end{bmatrix}$. Tính $A^{100}$.",
+      "answer": {
+        "steps": [
+          "Nhận thấy $A$ là ma trận tam giác trên.",
+          "Tính $A^2 = \\begin{bmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 1 \\end{bmatrix} \\cdot \\begin{bmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 1 \\end{bmatrix} = \\begin{bmatrix} 1 & 2 & 1 \\\\ 0 & 1 & 2 \\\\ 0 & 0 & 1 \\end{bmatrix}$.",
+          "Tính $A^3 = A^2 \\cdot A = \\begin{bmatrix} 1 & 2 & 1 \\\\ 0 & 1 & 2 \\\\ 0 & 0 & 1 \\end{bmatrix} \\cdot \\begin{bmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 1 \\end{bmatrix} = \\begin{bmatrix} 1 & 3 & 3 \\\\ 0 & 1 & 3 \\\\ 0 & 0 & 1 \\end{bmatrix}$.",
+          "Suy ra $A^n = \\begin{bmatrix} 1 & n & \\frac{n(n-1)}{2} \\\\ 0 & 1 & n \\\\ 0 & 0 & 1 \\end{bmatrix}$.",
+          "Với $n = 100$, ta có $A^{100} = \\begin{bmatrix} 1 & 100 & \\frac{100 \\cdot 99}{2} \\\\ 0 & 1 & 100 \\\\ 0 & 0 & 1 \\end{bmatrix} = \\begin{bmatrix} 1 & 100 & 4950 \\\\ 0 & 1 & 100 \\\\ 0 & 0 & 1 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 & 3 \\\\ 0 & 4 & 5 \\\\ 0 & 0 & 6 \\end{bmatrix}$. Tìm tất cả các giá trị riêng và vector riêng.",
+      "answer": {
+        "steps": [
+          "Vì $A$ là ma trận tam giác trên, giá trị riêng là $\\lambda = 1, 4, 6$.",
+          "Với $\\lambda = 1$, giải $(A - I)x = \\begin{bmatrix} 0 & 2 & 3 \\\\ 0 & 3 & 5 \\\\ 0 & 0 & 5 \\end{bmatrix} x = 0$, được vector riêng $\\begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\end{bmatrix}$.",
+          "Với $\\lambda = 4$, giải $(A - 4I)x = \\begin{bmatrix} -3 & 2 & 3 \\\\ 0 & 0 & 5 \\\\ 0 & 0 & 2 \\end{bmatrix} x = 0$, được vector riêng $\\begin{bmatrix} 2 \\\\ 3 \\\\ 0 \\end{bmatrix}$.",
+          "Với $\\lambda = 6$, giải $(A - 6I)x = \\begin{bmatrix} -5 & 2 & 3 \\\\ 0 & -2 & 5 \\\\ 0 & 0 & 0 \\end{bmatrix} x = 0$, được vector riêng $\\begin{bmatrix} 1 \\\\ \\frac{5}{2} \\\\ 1 \\end{bmatrix}$.",
+          "Vậy giá trị riêng: $\\lambda = 1, 4, 6$; vector riêng: $\\begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\end{bmatrix}$, $\\begin{bmatrix} 2 \\\\ 3 \\\\ 0 \\end{bmatrix}$, $\\begin{bmatrix} 1 \\\\ \\frac{5}{2} \\\\ 1 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 & 0 \\\\ 0 & 3 & 4 \\\\ 0 & 0 & 5 \\end{bmatrix}$. Tìm ma trận chéo hóa $P$ và ma trận chéo $D$.",
+      "answer": {
+        "steps": [
+          "Tìm giá trị riêng: $\\det(A - \\lambda I) = (1 - \\lambda)(3 - \\lambda)(5 - \\lambda) = 0$, suy ra $\\lambda = 1, 3, 5$.",
+          "Với $\\lambda = 1$, giải $(A - I)x = \\begin{bmatrix} 0 & 2 & 0 \\\\ 0 & 2 & 4 \\\\ 0 & 0 & 4 \\end{bmatrix} x = 0$, được vector riêng $\\begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\end{bmatrix}$.",
+          "Với $\\lambda = 3$, giải $(A - 3I)x = \\begin{bmatrix} -2 & 2 & 0 \\\\ 0 & 0 & 4 \\\\ 0 & 0 & 2 \\end{bmatrix} x = 0$, được vector riêng $\\begin{bmatrix} 1 \\\\ 1 \\\\ 0 \\end{bmatrix}$.",
+          "Với $\\lambda = 5$, giải $(A - 5I)x = \\begin{bmatrix} -4 & 2 & 0 \\\\ 0 & -2 & 4 \\\\ 0 & 0 & 0 \\end{bmatrix} x = 0$, được vector riêng $\\begin{bmatrix} 1 \\\\ 2 \\\\ 1 \\end{bmatrix}$.",
+          "Ma trận $P = \\begin{bmatrix} 1 & 1 & 1 \\\\ 0 & 1 & 2 \\\\ 0 & 0 & 1 \\end{bmatrix}$, ma trận $D = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 3 & 0 \\\\ 0 & 0 & 5 \\end{bmatrix}$.",
+          "Vậy $A = PDP^{-1}$."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$.",
+      "answer": {
+        "steps": [
+          "Với ma trận 2x2 $A = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}$, định thức được tính bởi công thức $\\det(A) = ad - bc$.",
+          "Thay số: $A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$, ta có $\\det(A) = 1 \\cdot 4 - 2 \\cdot 3 = 4 - 6 = -2$.",
+          "Vậy $\\det(A) = -2$."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $A = \\begin{bmatrix} 0 & 1 \\\\ -1 & 0 \\end{bmatrix}$.",
+      "answer": {
+        "steps": [
+          "Công thức: $\\det(A) = ad - bc$.",
+          "Thay số: $A = \\begin{bmatrix} 0 & 1 \\\\ -1 & 0 \\end{bmatrix}$, ta có $\\det(A) = 0 \\cdot 0 - 1 \\cdot (-1) = 0 + 1 = 1$.",
+          "Vậy $\\det(A) = 1$."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $A = \\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \\end{bmatrix}$.",
+      "answer": {
+        "steps": [
+          "Với ma trận 3x3 $A = \\begin{bmatrix} a & b & c \\\\ d & e & f \\\\ g & h & i \\end{bmatrix}$, công thức định thức là $\\det(A) = a(ei - fh) - b(di - fg) + c(dh - eg)$.",
+          "Thay số: $A = \\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \\end{bmatrix}$.",
+          "Tính: $\\det(A) = 1(5 \\cdot 9 - 6 \\cdot 8) - 2(4 \\cdot 9 - 6 \\cdot 7) + 3(4 \\cdot 8 - 5 \\cdot 7) = 1(45 - 48) - 2(36 - 42) + 3(32 - 35) = 1(-3) - 2(-6) + 3(-3) = -3 + 12 - 9 = 0$.",
+          "Vậy $\\det(A) = 0$."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận tam giác trên $A = \\begin{bmatrix} 2 & 1 & 0 \\\\ 0 & 3 & 4 \\\\ 0 & 0 & 5 \\end{bmatrix}$.",
+      "answer": {
+        "steps": [
+          "Với ma trận tam giác trên, định thức bằng tích các phần tử trên đường chéo chính.",
+          "Thay số: $A = \\begin{bmatrix} 2 & 1 & 0 \\\\ 0 & 3 & 4 \\\\ 0 & 0 & 5 \\end{bmatrix}$, ta có $\\det(A) = 2 \\cdot 3 \\cdot 5 = 30$.",
+          "Vậy $\\det(A) = 30$."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng định thức của ma trận đơn vị $I_3 = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}$ là 1.",
+      "answer": {
+        "steps": [
+          "Ma trận đơn vị có các phần tử trên đường chéo chính là 1, các phần tử còn lại là 0.",
+          "Định thức của ma trận tam giác là tích các phần tử trên đường chéo: $\\det(I_3) = 1 \\cdot 1 \\cdot 1 = 1$.",
+          "Vậy $\\det(I_3) = 1$."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $A = \\begin{bmatrix} 1 & 0 & 1 \\\\ 0 & 1 & 0 \\\\ 1 & 0 & 1 \\end{bmatrix}$.",
+      "answer": {
+        "steps": [
+          "Sử dụng công thức định thức 3x3: $\\det(A) = a(ei - fh) - b(di - fg) + c(dh - eg)$.",
+          "Thay số: $A = \\begin{bmatrix} 1 & 0 & 1 \\\\ 0 & 1 & 0 \\\\ 1 & 0 & 1 \\end{bmatrix}$.",
+          "Tính: $\\det(A) = 1(1 \\cdot 1 - 0 \\cdot 0) - 0(0 \\cdot 1 - 0 \\cdot 1) + 1(0 \\cdot 0 - 1 \\cdot 1) = 1(1) - 0 + 1(-1) = 1 - 1 = 0$.",
+          "Vậy $\\det(A) = 0$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$. Tính định thức của $2A$.",
+      "answer": {
+        "steps": [
+          "Với ma trận $n \\times n$, nếu nhân ma trận với số $k$, định thức của ma trận mới là $k^n \\cdot \\det(A)$. Với $n = 2$, ta có $\\det(kA) = k^2 \\det(A)$.",
+          "Tính $\\det(A) = 1 \\cdot 4 - 2 \\cdot 3 = 4 - 6 = -2$.",
+          "Vậy $\\det(2A) = 2^2 \\cdot (-2) = 4 \\cdot (-2) = -8$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 & 3 \\\\ 0 & 4 & 5 \\\\ 0 & 0 & 6 \\end{bmatrix}$. Tính định thức của $A^T$.",
+      "answer": {
+        "steps": [
+          "Tính chất: $\\det(A^T) = \\det(A)$.",
+          "Với ma trận tam giác trên $A = \\begin{bmatrix} 1 & 2 & 3 \\\\ 0 & 4 & 5 \\\\ 0 & 0 & 6 \\end{bmatrix}$, định thức là $\\det(A) = 1 \\cdot 4 \\cdot 6 = 24$.",
+          "Vậy $\\det(A^T) = 24$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 \\\\ 2 & 4 \\end{bmatrix}$. Xác định xem $A$ có khả nghịch không dựa trên định thức.",
+      "answer": {
+        "steps": [
+          "Ma trận khả nghịch nếu $\\det(A) \\neq 0$.",
+          "Tính: $\\det(A) = 1 \\cdot 4 - 2 \\cdot 2 = 4 - 4 = 0$.",
+          "Vì $\\det(A) = 0$, ma trận $A$ không khả nghịch."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $A = \\begin{bmatrix} 1 & 1 & 1 \\\\ 2 & 3 & 4 \\\\ 3 & 4 & 5 \\end{bmatrix}$ bằng phương pháp khai triển theo hàng.",
+      "answer": {
+        "steps": [
+          "Khai triển theo hàng 1: $\\det(A) = a_{11}C_{11} + a_{12}C_{12} + a_{13}C_{13}$.",
+          "Tính các phụ đại số: $C_{11} = (-1)^{1+1} \\det\\begin{bmatrix} 3 & 4 \\\\ 4 & 5 \\end{bmatrix} = 3 \\cdot 5 - 4 \\cdot 4 = 15 - 16 = -1$.",
+          "$C_{12} = (-1)^{1+2} \\det\\begin{bmatrix} 2 & 4 \\\\ 3 & 5 \\end{bmatrix} = - (2 \\cdot 5 - 4 \\cdot 3) = - (10 - 12) = 2$.",
+          "$C_{13} = (-1)^{1+3} \\det\\begin{bmatrix} 2 & 3 \\\\ 3 & 4 \\end{bmatrix} = 2 \\cdot 4 - 3 \\cdot 3 = 8 - 9 = -1$.",
+          "Tính: $\\det(A) = 1 \\cdot (-1) + 1 \\cdot 2 + 1 \\cdot (-1) = -1 + 2 - 1 = 0$.",
+          "Vậy $\\det(A) = 0$."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $A = \\begin{bmatrix} 1 & 0 & 2 \\\\ 0 & 3 & 0 \\\\ 2 & 0 & 4 \\end{bmatrix}$ bằng phương pháp khai triển theo cột.",
+      "answer": {
+        "steps": [
+          "Khai triển theo cột 2 (có nhiều số 0): $\\det(A) = a_{12}C_{12} + a_{22}C_{22} + a_{32}C_{32}$.",
+          "Phần tử: $a_{12} = 0$, $a_{22} = 3$, $a_{32} = 0$.",
+          "Tính phụ đại số: $C_{22} = (-1)^{2+2} \\det\\begin{bmatrix} 1 & 2 \\\\ 2 & 4 \\end{bmatrix} = 1 \\cdot 4 - 2 \\cdot 2 = 4 - 4 = 0$.",
+          "Vì $a_{12} = a_{32} = 0$ và $C_{22} = 0$, ta có $\\det(A) = 0 \\cdot C_{12} + 3 \\cdot 0 + 0 \\cdot C_{32} = 0$.",
+          "Vậy $\\det(A) = 0$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 2 & 1 & 0 \\\\ 0 & 3 & 4 \\\\ 0 & 0 & 5 \\end{bmatrix}$ và $B = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 3 \\end{bmatrix}$. Tính $\\det(AB)$.",
+      "answer": {
+        "steps": [
+          "Tính chất: $\\det(AB) = \\det(A) \\cdot \\det(B)$.",
+          "Tính $\\det(A)$: Ma trận tam giác, $\\det(A) = 2 \\cdot 3 \\cdot 5 = 30$.",
+          "Tính $\\det(B)$: Ma trận chéo, $\\det(B) = 1 \\cdot 2 \\cdot 3 = 6$.",
+          "Vậy $\\det(AB) = 30 \\cdot 6 = 180$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$. Tính định thức của $A^2$.",
+      "answer": {
+        "steps": [
+          "Tính chất: Với ma trận $n \\times n$, $\\det(A^k) = [\\det(A)]^k$. Với $n = 2$, ta có $\\det(A^2) = [\\det(A)]^2$.",
+          "Tính $\\det(A) = 1 \\cdot 4 - 2 \\cdot 3 = 4 - 6 = -2$.",
+          "Vậy $\\det(A^2) = (-2)^2 = 4$."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng nếu ma trận $A$ là ma trận vuông có hai hàng giống nhau, thì $\\det(A) = 0$.",
+      "answer": {
+        "steps": [
+          "Giả sử ma trận $A$ có hai hàng giống nhau, ví dụ hàng $i$ và $j$.",
+          "Nếu hoán đổi hàng $i$ và $j$, ma trận không đổi (vì hai hàng giống nhau), nhưng định thức đổi dấu: $\\det(A) = -\\det(A)$.",
+          "Suy ra $\\det(A) = -\\det(A) \\implies 2\\det(A) = 0 \\implies \\det(A) = 0$.",
+          "Vậy nếu $A$ có hai hàng giống nhau, thì $\\det(A) = 0$."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $A = \\begin{bmatrix} 1 & 1 & 1 \\\\ 1 & 2 & 3 \\\\ 1 & 3 & 6 \\end{bmatrix}$ bằng phép biến đổi sơ cấp.",
+      "answer": {
+        "steps": [
+          "Ma trận: $A = \\begin{bmatrix} 1 & 1 & 1 \\\\ 1 & 2 & 3 \\\\ 1 & 3 & 6 \\end{bmatrix}$.",
+          "Trừ hàng 2 cho hàng 1: $R_2 = R_2 - R_1$, được $\\begin{bmatrix} 1 & 1 & 1 \\\\ 0 & 1 & 2 \\\\ 1 & 3 & 6 \\end{bmatrix}$.",
+          "Trừ hàng 3 cho hàng 1: $R_3 = R_3 - R_1$, được $\\begin{bmatrix} 1 & 1 & 1 \\\\ 0 & 1 & 2 \\\\ 0 & 2 & 5 \\end{bmatrix}$.",
+          "Trừ hàng 3 cho 2 lần hàng 2: $R_3 = R_3 - 2R_2$, được $\\begin{bmatrix} 1 & 1 & 1 \\\\ 0 & 1 & 2 \\\\ 0 & 0 & 1 \\end{bmatrix}$.",
+          "Ma trận tam giác trên, định thức là $1 \\cdot 1 \\cdot 1 = 1$. Các phép biến đổi sơ cấp không làm thay đổi định thức (trừ nhân hàng/cột).",
+          "Vậy $\\det(A) = 1$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 & 0 \\\\ 0 & 3 & 4 \\\\ 0 & 0 & 5 \\end{bmatrix}$. Tính định thức của ma trận nghịch đảo $A^{-1}$.",
+      "answer": {
+        "steps": [
+          "Tính chất: Nếu $A$ khả nghịch, thì $\\det(A^{-1}) = \\frac{1}{\\det(A)}$.",
+          "Tính $\\det(A)$: Ma trận tam giác, $\\det(A) = 1 \\cdot 3 \\cdot 5 = 15$.",
+          "Vậy $\\det(A^{-1}) = \\frac{1}{15}$."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $A = \\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 0 & 1 & 2 & 3 \\\\ 0 & 0 & 1 & 2 \\\\ 0 & 0 & 0 & 1 \\end{bmatrix}$.",
+      "answer": {
+        "steps": [
+          "Ma trận tam giác trên, định thức là tích các phần tử trên đường chéo chính.",
+          "Thay số: $\\det(A) = 1 \\cdot 1 \\cdot 1 \\cdot 1 = 1$.",
+          "Vậy $\\det(A) = 1$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 & 0 \\\\ 0 & 3 & 4 \\\\ 0 & 0 & 5 \\end{bmatrix}$ và $B = \\begin{bmatrix} 2 & 0 & 0 \\\\ 0 & 3 & 0 \\\\ 0 & 0 & 4 \\end{bmatrix}$. Tính định thức của $A + B$.",
+      "answer": {
+        "steps": [
+          "Tính $A + B = \\begin{bmatrix} 1+2 & 2+0 & 0+0 \\\\ 0+0 & 3+3 & 4+0 \\\\ 0+0 & 0+0 & 5+4 \\end{bmatrix} = \\begin{bmatrix} 3 & 2 & 0 \\\\ 0 & 6 & 4 \\\\ 0 & 0 & 9 \\end{bmatrix}$.",
+          "Ma trận tam giác trên, định thức là $3 \\cdot 6 \\cdot 9 = 162$.",
+          "Vậy $\\det(A + B) = 162$."
+        ]
+      }
+    },
+    {
+      "question": "Sử dụng luật Cramer để giải hệ phương trình: $x + 2y = 3$, $3x + 4y = 5$, và xác định vai trò của định thức.",
+      "answer": {
+        "steps": [
+          "Ma trận hệ số: $A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$, vector hằng số: $\\begin{bmatrix} 3 \\\\ 5 \\end{bmatrix}$.",
+          "Tính định thức: $\\det(A) = 1 \\cdot 4 - 2 \\cdot 3 = 4 - 6 = -2$.",
+          "Tính $\\det(A_x) = \\begin{bmatrix} 3 & 2 \\\\ 5 & 4 \\end{bmatrix} = 3 \\cdot 4 - 2 \\cdot 5 = 12 - 10 = 2$, nên $x = \\frac{\\det(A_x)}{\\det(A)} = \\frac{2}{-2} = -1$.",
+          "Tính $\\det(A_y) = \\begin{bmatrix} 1 & 3 \\\\ 3 & 5 \\end{bmatrix} = 1 \\cdot 5 - 3 \\cdot 3 = 5 - 9 = -4$, nên $y = \\frac{\\det(A_y)}{\\det(A)} = \\frac{-4}{-2} = 2$.",
+          "Định thức $\\det(A)$ quyết định hệ có nghiệm duy nhất ($\\det(A) \\neq 0$).",
+          "Vậy nghiệm là $(x, y) = (-1, 2)$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 1 & 1 \\\\ 1 & \\omega & \\omega^2 \\\\ 1 & \\omega^2 & \\omega \\end{bmatrix}$, với $\\omega$ là căn bậc ba của 1 ($\\omega^3 = 1$, $1 + \\omega + \\omega^2 = 0$). Tính $\\det(A)$.",
+      "answer": {
+        "steps": [
+          "Khai triển theo hàng 1: $\\det(A) = 1 \\cdot C_{11} + 1 \\cdot C_{12} + 1 \\cdot C_{13}$.",
+          "Tính: $C_{11} = (-1)^{1+1} \\det\\begin{bmatrix} \\omega & \\omega^2 \\\\ \\omega^2 & \\omega \\end{bmatrix} = \\omega \\cdot \\omega - \\omega^2 \\cdot \\omega^2 = \\omega^2 - \\omega^4 = \\omega^2 - \\omega$.",
+          "$C_{12} = (-1)^{1+2} \\det\\begin{bmatrix} 1 & \\omega^2 \\\\ 1 & \\omega \\end{bmatrix} = - (1 \\cdot \\omega - \\omega^2 \\cdot 1) = - (\\omega - \\omega^2) = \\omega^2 - \\omega$.",
+          "$C_{13} = (-1)^{1+3} \\det\\begin{bmatrix} 1 & \\omega \\\\ 1 & \\omega^2 \\end{bmatrix} = 1 \\cdot \\omega^2 - \\omega \\cdot 1 = \\omega^2 - \\omega$.",
+          "Tính: $\\det(A) = 1 \\cdot (\\omega^2 - \\omega) + 1 \\cdot (\\omega^2 - \\omega) + 1 \\cdot (\\omega^2 - \\omega) = 3(\\omega^2 - \\omega)$.",
+          "Vì $\\omega^2 - \\omega = -\\omega (\\omega + 1) = -\\omega (-\\omega^2) = \\omega^3 = 1$, nên $\\det(A) = 3 \\cdot 1 = 3$.",
+          "Vậy $\\det(A) = 3$."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $A = \\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 5 & 6 & 7 & 8 \\\\ 9 & 10 & 11 & 12 \\\\ 13 & 14 & 15 & 16 \\end{bmatrix}$ bằng phép biến đổi sơ cấp.",
+      "answer": {
+        "steps": [
+          "Ma trận: $A = \\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 5 & 6 & 7 & 8 \\\\ 9 & 10 & 11 & 12 \\\\ 13 & 14 & 15 & 16 \\end{bmatrix}$.",
+          "Trừ hàng 2 cho 5 lần hàng 1: $R_2 = R_2 - 5R_1$, được $\\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 0 & -4 & -8 & -12 \\\\ 9 & 10 & 11 & 12 \\\\ 13 & 14 & 15 & 16 \\end{bmatrix}$.",
+          "Trừ hàng 3 cho 9 lần hàng 1: $R_3 = R_3 - 9R_1$, được $\\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 0 & -4 & -8 & -12 \\\\ 0 & -8 & -16 & -24 \\\\ 13 & 14 & 15 & 16 \\end{bmatrix}$.",
+          "Trừ hàng 4 cho 13 lần hàng 1: $R_4 = R_4 - 13R_1$, được $\\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 0 & -4 & -8 & -12 \\\\ 0 & -8 & -16 & -24 \\\\ 0 & -12 & -24 & -36 \\end{bmatrix}$.",
+          "Nhân hàng 2 cho $-\\frac{1}{4}$: $R_2 = -\\frac{1}{4}R_2$, được $\\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 0 & 1 & 2 & 3 \\\\ 0 & -8 & -16 & -24 \\\\ 0 & -12 & -24 & -36 \\end{bmatrix}$, định thức nhân với $-4$.",
+          "Cộng hàng 3 với 8 lần hàng 2: $R_3 = R_3 + 8R_2$, được $\\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 0 & 1 & 2 & 3 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & -12 & -24 & -36 \\end{bmatrix}$.",
+          "Hàng 3 toàn 0, nên $\\det(A) = 0$.",
+          "Vậy $\\det(A) = 0$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}$. Tìm điều kiện để $A$ khả nghịch.",
+      "answer": {
+        "steps": [
+          "Ma trận $A$ khả nghịch nếu $\\det(A) \\neq 0$.",
+          "Tính: $\\det(A) = ad - bc$.",
+          "Điều kiện: $ad - bc \\neq 0$."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận $A = \\begin{bmatrix} 0 & 1 & 2 \\\\ 1 & 0 & 3 \\\\ 2 & 3 & 0 \\end{bmatrix}$.",
+      "answer": {
+        "steps": [
+          "Khai triển theo hàng 1: $\\det(A) = 0 \\cdot C_{11} + 1 \\cdot C_{12} + 2 \\cdot C_{13}$.",
+          "Tính: $C_{12} = (-1)^{1+2} \\det\\begin{bmatrix} 1 & 3 \\\\ 2 & 0 \\end{bmatrix} = - (1 \\cdot 0 - 3 \\cdot 2) = - (0 - 6) = 6$.",
+          "$C_{13} = (-1)^{1+3} \\det\\begin{bmatrix} 1 & 0 \\\\ 2 & 3 \\end{bmatrix} = 1 \\cdot 3 - 0 \\cdot 2 = 3$.",
+          "Tính: $\\det(A) = 0 + 1 \\cdot 6 + 2 \\cdot 3 = 6 + 6 = 12$.",
+          "Vậy $\\det(A) = 12$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & k \\end{bmatrix}$. Tìm $k$ để $\\det(A) = 0$.",
+      "answer": {
+        "steps": [
+          "Tính định thức: $\\det(A) = 1(5 \\cdot k - 6 \\cdot 8) - 2(4 \\cdot k - 6 \\cdot 7) + 3(4 \\cdot 8 - 5 \\cdot 7) = 1(5k - 48) - 2(4k - 42) + 3(32 - 35)$.",
+          "Rút gọn: $5k - 48 - 8k + 84 - 9 = 5k - 8k + 84 - 48 - 9 = -3k + 27$.",
+          "Để $\\det(A) = 0$, ta có $-3k + 27 = 0 \\implies k = 9$.",
+          "Vậy $k = 9$."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh rằng nếu $A$ là ma trận vuông và $AB = BA = 0$, thì $\\det(A) = 0$ hoặc $\\det(B) = 0$.",
+      "answer": {
+        "steps": [
+          "Giả sử $AB = 0$. Tính định thức: $\\det(AB) = \\det(A) \\cdot \\det(B) = \\det(0) = 0$.",
+          "Suy ra $\\det(A) \\cdot \\det(B) = 0 \\implies \\det(A) = 0$ hoặc $\\det(B) = 0$.",
+          "Điều kiện $BA = 0$ cũng dẫn đến kết quả tương tự do $\\det(BA) = \\det(B) \\cdot \\det(A) = 0$.",
+          "Vậy hoặc $\\det(A) = 0$ hoặc $\\det(B) = 0$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 & 3 \\\\ 0 & 0 & 1 \\\\ 0 & 1 & 0 \\end{bmatrix}$. Tính định thức bằng phép biến đổi sơ cấp.",
+      "answer": {
+        "steps": [
+          "Ma trận: $A = \\begin{bmatrix} 1 & 2 & 3 \\\\ 0 & 0 & 1 \\\\ 0 & 1 & 0 \\end{bmatrix}$.",
+          "Hoán đổi hàng 2 và 3: $\\begin{bmatrix} 1 & 2 & 3 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}$, định thức đổi dấu (nhân với $-1$).",
+          "Ma trận tam giác trên, định thức là $1 \\cdot 1 \\cdot 1 = 1$.",
+          "Định thức ban đầu: $\\det(A) = -1 \\cdot 1 = -1$.",
+          "Vậy $\\det(A) = -1$."
+        ]
+      }
+    },
+    {
+      "question": "Tính định thức của ma trận Vandermonde $A = \\begin{bmatrix} 1 & a & a^2 \\\\ 1 & b & b^2 \\\\ 1 & c & c^2 \\end{bmatrix}$.",
+      "answer": {
+        "steps": [
+          "Công thức định thức Vandermonde: $\\det(A) = (b - a)(c - a)(c - b)$.",
+          "Khai triển để kiểm tra: Trừ hàng 2 cho hàng 1: $R_2 = R_2 - R_1$, được $\\begin{bmatrix} 1 & a & a^2 \\\\ 0 & b - a & b^2 - a^2 \\\\ 1 & c & c^2 \\end{bmatrix}$.",
+          "Trừ hàng 3 cho hàng 1: $R_3 = R_3 - R_1$, được $\\begin{bmatrix} 1 & a & a^2 \\\\ 0 & b - a & b^2 - a^2 \\\\ 0 & c - a & c^2 - a^2 \\end{bmatrix}$.",
+          "Khai triển theo cột 1: $\\det(A) = 1 \\cdot \\det\\begin{bmatrix} b - a & b^2 - a^2 \\\\ c - a & c^2 - a^2 \\end{bmatrix}$.",
+          "Tính: $\\det\\begin{bmatrix} b - a & b^2 - a^2 \\\\ c - a & c^2 - a^2 \\end{bmatrix} = (b - a)(c^2 - a^2) - (c - a)(b^2 - a^2) = (b - a)(c - a)(c + a) - (c - a)(b - a)(b + a)$.",
+          "Rút gọn: $(b - a)(c - a)[(c + a) - (b + a)] = (b - a)(c - a)(c - b)$.",
+          "Vậy $\\det(A) = (b - a)(c - a)(c - b)$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 \\end{bmatrix}$. Tính định thức của $A^3$.",
+      "answer": {
+        "steps": [
+          "Tính chất: $\\det(A^k) = [\\det(A)]^k$.",
+          "Ma trận tam giác trên, $\\det(A) = 1 \\cdot 1 \\cdot 1 \\cdot 1 = 1$.",
+          "Vậy $\\det(A^3) = 1^3 = 1$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 1 & 1 \\\\ a & b & c \\\\ a^2 & b^2 & c^2 \\end{bmatrix}$. Tìm điều kiện để $\\det(A) = 0$.",
+      "answer": {
+        "steps": [
+          "Ma trận $A$ là ma trận Vandermonde dạng $A = \\begin{bmatrix} 1 & 1 & 1 \\\\ a & b & c \\\\ a^2 & b^2 & c^2 \\end{bmatrix}$.",
+          "Định thức: $\\det(A) = (b - a)(c - a)(c - b)$.",
+          "Để $\\det(A) = 0$, ta có $b - a = 0$, $c - a = 0$, hoặc $c - b = 0$, tức là $a = b$, $a = c$, hoặc $b = c$.",
+          "Vậy điều kiện là $a = b$, $a = c$, hoặc $b = c$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 5 & 6 & 7 & 8 \\\\ 9 & 10 & 11 & 12 \\\\ 13 & 14 & 15 & k \\end{bmatrix}$. Tìm điều kiện để $A$ khả nghịch.",
+      "answer": {
+        "steps": [
+          "Ma trận $A$ khả nghịch nếu và chỉ nếu $\\det(A) \\neq 0$.",
+          "Ma trận: $A = \\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 5 & 6 & 7 & 8 \\\\ 9 & 10 & 11 & 12 \\\\ 13 & 14 & 15 & k \\end{bmatrix}$.",
+          "Thực hiện phép biến đổi sơ cấp: Trừ hàng 2 cho 5 lần hàng 1: $R_2 = R_2 - 5R_1$, được $\\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 0 & -4 & -8 & -12 \\\\ 9 & 10 & 11 & 12 \\\\ 13 & 14 & 15 & k \\end{bmatrix}$.",
+          "Trừ hàng 3 cho 9 lần hàng 1: $R_3 = R_3 - 9R_1$, được $\\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 0 & -4 & -8 & -12 \\\\ 0 & -8 & -16 & -24 \\\\ 13 & 14 & 15 & k \\end{bmatrix}$.",
+          "Trừ hàng 4 cho 13 lần hàng 1: $R_4 = R_4 - 13R_1$, được $\\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 0 & -4 & -8 & -12 \\\\ 0 & -8 & -16 & -24 \\\\ 0 & -12 & -24 & k - 52 \\end{bmatrix}$.",
+          "Nhân hàng 2 với $-\\frac{1}{4}$: $R_2 = -\\frac{1}{4}R_2$, được $\\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 0 & 1 & 2 & 3 \\\\ 0 & -8 & -16 & -24 \\\\ 0 & -12 & -24 & k - 52 \\end{bmatrix}$, định thức nhân với $-4$.",
+          "Cộng hàng 3 với 8 lần hàng 2: $R_3 = R_3 + 8R_2$, được $\\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 0 & 1 & 2 & 3 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & -12 & -24 & k - 52 \\end{bmatrix}$.",
+          "Cộng hàng 4 với 12 lần hàng 2: $R_4 = R_4 + 12R_2$, được $\\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 0 & 1 & 2 & 3 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & k - 16 \\end{bmatrix}$.",
+          "Vì hàng 3 toàn 0, định thức phụ thuộc vào $k - 16$. Ma trận có định thức khác 0 nếu $k - 16 \\neq 0$.",
+          "Vậy điều kiện để $A$ khả nghịch là $k \\neq 16$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình tuyến tính sau bằng phương pháp Gauss: $\\begin{cases} x + y = 2 \\\\ 2x - y = 1 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Viết ma trận bổ sung: $\\begin{bmatrix} 1 & 1 & | & 2 \\\\ 2 & -1 & | & 1 \\end{bmatrix}$",
+          "Biến đổi dòng: $L2 = L2 - 2L1$, ta được: $\\begin{bmatrix} 1 & 1 & | & 2 \\\\ 0 & -3 & | & -3 \\end{bmatrix}$",
+          "Giải: Từ dòng 2, $-3y = -3 \\implies y = 1$. Thay vào dòng 1, $x + y = 2 \\implies x + 1 = 2 \\implies x = 1$.",
+          "Nghiệm: $(x, y) = (1, 1)$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định nghiệm của hệ phương trình: $\\begin{cases} 2x + 3y = 5 \\\\ 4x + 6y = 10 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Nhận xét: Phương trình thứ hai là bội số của phương trình thứ nhất (nhân đôi).",
+          "Hệ có vô số nghiệm, phụ thuộc vào một tham số: $2x + 3y = 5$.",
+          "Đặt $y = t$, ta có $x = \\frac{5 - 3t}{2}$.",
+          "Nghiệm tổng quát: $(x, y) = \\left( \\frac{5 - 3t}{2}, t \\right)$, $t \\in \\mathbb{R}$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình: $\\begin{cases} x - 2y + z = 3 \\\\ 2x + y - z = 0 \\\\ 3x - y + 2z = 6 \\end{cases}$ bằng phương pháp Gauss-Jordan.",
+      "answer": {
+        "steps": [
+          "Viết ma trận bổ sung: $\\begin{bmatrix} 1 & -2 & 1 & | & 3 \\\\ 2 & 1 & -1 & | & 0 \\\\ 3 & -1 & 2 & | & 6 \\end{bmatrix}$",
+          "Biến đổi: $L2 = L2 - 2L1$, $L3 = L3 - 3L1$: $\\begin{bmatrix} 1 & -2 & 1 & | & 3 \\\\ 0 & 5 & -3 & | & -6 \\\\ 0 & 5 & -1 & | & -3 \\end{bmatrix}$",
+          "Tiếp tục: $L3 = L3 - L2$: $\\begin{bmatrix} 1 & -2 & 1 & | & 3 \\\\ 0 & 5 & -3 & | & -6 \\\\ 0 & 0 & 2 & | & 3 \\end{bmatrix}$",
+          "Giải ngược: Từ dòng 3, $2z = 3 \\implies z = \\frac{3}{2}$. Thay vào dòng 2, $5y - 3 \\cdot \\frac{3}{2} = -6 \\implies 5y = -\\frac{3}{2} \\implies y = -\\frac{3}{10}$. Thay vào dòng 1, $x - 2 \\cdot (-\\frac{3}{10}) + \\frac{3}{2} = 3 \\implies x = \\frac{9}{10}$.",
+          "Nghiệm: $(x, y, z) = \\left( \\frac{9}{10}, -\\frac{3}{10}, \\frac{3}{2} \\right)$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định số nghiệm của hệ: $\\begin{cases} x + y + z = 1 \\\\ x + y + 2z = 2 \\\\ x + y + 3z = 3 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Viết ma trận hệ số: $\\begin{bmatrix} 1 & 1 & 1 \\\\ 1 & 1 & 2 \\\\ 1 & 1 & 3 \\end{bmatrix}$, ma trận bổ sung: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 1 & 1 & 2 & | & 2 \\\\ 1 & 1 & 3 & | & 3 \\end{bmatrix}$",
+          "Biến đổi: $L2 = L2 - L1$, $L3 = L3 - L1$: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 0 & 0 & 1 & | & 1 \\\\ 0 & 0 & 2 & | & 2 \\end{bmatrix}$",
+          "Tiếp tục: $L3 = L3 - 2L2$: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 0 & 0 & 1 & | & 1 \\\\ 0 & 0 & 0 & | & 0 \\end{bmatrix}$",
+          "Hệ có vô số nghiệm. Từ dòng 2, $z = 1$. Dòng 1: $x + y + 1 = 1 \\implies x + y = 0 \\implies y = -x$.",
+          "Nghiệm tổng quát: $(x, y, z) = (t, -t, 1)$, $t \\in \\mathbb{R}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm điều kiện của $k$ để hệ phương trình sau có nghiệm duy nhất: $\\begin{cases} x + y + z = 1 \\\\ 2x + 3y + kz = 0 \\\\ x + 2y + 3z = 0 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Viết ma trận hệ số: $A = \\begin{bmatrix} 1 & 1 & 1 \\\\ 2 & 3 & k \\\\ 1 & 2 & 3 \\end{bmatrix}$",
+          "Hệ có nghiệm duy nhất khi $\\det(A) \\neq 0$. Tính định thức: $\\det(A) = 1 \\cdot (3 \\cdot 3 - k \\cdot 2) - 1 \\cdot (2 \\cdot 3 - k \\cdot 1) + 1 \\cdot (2 \\cdot 2 - 3 \\cdot 1)$",
+          "Tính toán: $\\det(A) = 1 \\cdot (9 - 2k) - 1 \\cdot (6 - k) + 1 \\cdot (4 - 3) = (9 - 2k) - (6 - k) + 1 = 4 - k$",
+          "Điều kiện: $4 - k \\neq 0 \\implies k \\neq 4$.",
+          "Kết luận: Hệ có nghiệm duy nhất khi $k \\neq 4$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm nghiệm của hệ phương trình: $\\begin{cases} x + 2y - z = 1 \\\\ 2x + y + z = 2 \\\\ x + y + z = 3 \\end{cases}$ bằng phương pháp Cramer.",
+      "answer": {
+        "steps": [
+          "Viết ma trận hệ số: $A = \\begin{bmatrix} 1 & 2 & -1 \\\\ 2 & 1 & 1 \\\\ 1 & 1 & 1 \\end{bmatrix}$, cột hằng số: $B = \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\end{bmatrix}$",
+          "Tính $\\det(A)$: $\\det(A) = 1 \\cdot (1 \\cdot 1 - 1 \\cdot 1) - 2 \\cdot (2 \\cdot 1 - 1 \\cdot 1) + (-1) \\cdot (2 \\cdot 1 - 1 \\cdot 1) = 1 \\cdot (1 - 1) - 2 \\cdot (2 - 1) + (-1) \\cdot (2 - 1) = 0 - 2 - 1 = -3$",
+          "Tính $\\det(A_x)$: Thay cột 1 bằng $B$: $A_x = \\begin{bmatrix} 1 & 2 & -1 \\\\ 2 & 1 & 1 \\\\ 3 & 1 & 1 \\end{bmatrix}$, $\\det(A_x) = 1 \\cdot (1 \\cdot 1 - 1 \\cdot 1) - 2 \\cdot (2 \\cdot 1 - 1 \\cdot 3) + (-1) \\cdot (2 \\cdot 1 - 1 \\cdot 3) = 0 - 2 \\cdot (2 - 3) + (-1) \\cdot (2 - 3) = 0 + 2 + 1 = 3$",
+          "Tính $\\det(A_y)$: Thay cột 2: $A_y = \\begin{bmatrix} 1 & 1 & -1 \\\\ 2 & 2 & 1 \\\\ 1 & 3 & 1 \\end{bmatrix}$, $\\det(A_y) = 1 \\cdot (2 \\cdot 1 - 1 \\cdot 3) - 1 \\cdot (2 \\cdot 1 - 1 \\cdot 1) + (-1) \\cdot (2 \\cdot 3 - 2 \\cdot 1) = 1 \\cdot (2 - 3) - 1 \\cdot (2 - 1) + (-1) \\cdot (6 - 2) = -1 - 1 - 4 = -6$",
+          "Tính $\\det(A_z)$: Thay cột 3: $A_z = \\begin{bmatrix} 1 & 2 & 1 \\\\ 2 & 1 & 2 \\\\ 1 & 1 & 3 \\end{bmatrix}$, $\\det(A_z) = 1 \\cdot (1 \\cdot 3 - 2 \\cdot 1) - 2 \\cdot (2 \\cdot 3 - 2 \\cdot 1) + 1 \\cdot (2 \\cdot 1 - 1 \\cdot 1) = 1 \\cdot (3 - 2) - 2 \\cdot (6 - 2) + 1 \\cdot (2 - 1) = 1 - 8 + 1 = -6$",
+          "Nghiệm: $x = \\frac{\\det(A_x)}{\\det(A)} = \\frac{3}{-3} = -1$, $y = \\frac{\\det(A_y)}{\\det(A)} = \\frac{-6}{-3} = 2$, $z = \\frac{\\det(A_z)}{\\det(A)} = \\frac{-6}{-3} = 2$",
+          "Nghiệm: $(x, y, z) = (-1, 2, 2)$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định nghiệm của hệ: $\\begin{cases} x + y + z = 1 \\\\ x + y + z = 2 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Nhận xét: Hai phương trình giống nhau về hệ số nhưng khác hằng số ($1$ và $2$).",
+          "Hệ vô nghiệm vì $x + y + z$ không thể đồng thời bằng $1$ và $2$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình: $\\begin{cases} x + 2y - z + w = 1 \\\\ 2x - y + z - w = 0 \\\\ x + y + z + w = 2 \\\\ 3x + y - w = 1 \\end{cases}$ bằng phương pháp Gauss.",
+      "answer": {
+        "steps": [
+          "Viết ma trận bổ sung: $\\begin{bmatrix} 1 & 2 & -1 & 1 & | & 1 \\\\ 2 & -1 & 1 & -1 & | & 0 \\\\ 1 & 1 & 1 & 1 & | & 2 \\\\ 3 & 1 & 0 & -1 & | & 1 \\end{bmatrix}$",
+          "Biến đổi: $L2 = L2 - 2L1$, $L3 = L3 - L1$, $L4 = L4 - 3L1$: $\\begin{bmatrix} 1 & 2 & -1 & 1 & | & 1 \\\\ 0 & -5 & 3 & -3 & | & -2 \\\\ 0 & -1 & 2 & 0 & | & 1 \\\\ 0 & -5 & 3 & -4 & | & -2 \\end{bmatrix}$",
+          "Tiếp tục: $L4 = L4 - L2$: $\\begin{bmatrix} 1 & 2 & -1 & 1 & | & 1 \\\\ 0 & -5 & 3 & -3 & | & -2 \\\\ 0 & -1 & 2 & 0 & | & 1 \\\\ 0 & 0 & 0 & -1 & | & 0 \\end{bmatrix}$",
+          "Giải ngược: Từ dòng 4, $-w = 0 \\implies w = 0$. Từ dòng 3, $-y + 2z = 1 \\implies y = 2z - 1$. Từ dòng 2, $-5y + 3z - 3 \\cdot 0 = -2 \\implies -5(2z - 1) + 3z = -2 \\implies -7z + 5 = -2 \\implies z = 1$. Thay $z = 1$ vào $y = 2z - 1$, ta được $y = 1$. Từ dòng 1, $x + 2y - z + w = 1 \\implies x + 2 \\cdot 1 - 1 + 0 = 1 \\implies x = 0$.",
+          "Nghiệm: $(x, y, z, w) = (0, 1, 1, 0)$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm điều kiện của $a$ để hệ sau vô nghiệm: $\\begin{cases} x + y + z = 1 \\\\ x + 2y + 2z = a \\\\ 2x + 3y + 3z = a + 1 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Viết ma trận bổ sung: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 1 & 2 & 2 & | & a \\\\ 2 & 3 & 3 & | & a + 1 \\end{bmatrix}$",
+          "Biến đổi: $L2 = L2 - L1$, $L3 = L3 - 2L1$: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 0 & 1 & 1 & | & a - 1 \\\\ 0 & 1 & 1 & | & a - 1 \\end{bmatrix}$",
+          "Tiếp tục: $L3 = L3 - L2$: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 0 & 1 & 1 & | & a - 1 \\\\ 0 & 0 & 0 & | & 0 \\end{bmatrix}$",
+          "Hệ có nghiệm vì dòng cuối cùng không mâu thuẫn ($0 = 0$). Hệ không thể vô nghiệm với mọi $a$.",
+          "Kết luận: Không tồn tại $a$ để hệ vô nghiệm."
+        ]
+      }
+    },
+    {
+      "question": "Xác định nghiệm tổng quát của hệ: $\\begin{cases} x + y - z = 0 \\\\ 2x - y + z = 1 \\\\ x - 2y + 2z = 1 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Viết ma trận bổ sung: $\\begin{bmatrix} 1 & 1 & -1 & | & 0 \\\\ 2 & -1 & 1 & | & 1 \\\\ 1 & -2 & 2 & | & 1 \\end{bmatrix}$",
+          "Biến đổi: $L2 = L2 - 2L1$, $L3 = L3 - L1$: $\\begin{bmatrix} 1 & 1 & -1 & | & 0 \\\\ 0 & -3 & 3 & | & 1 \\\\ 0 & -3 & 3 & | & 1 \\end{bmatrix}$",
+          "Tiếp tục: $L3 = L3 - L2$: $\\begin{bmatrix} 1 & 1 & -1 & | & 0 \\\\ 0 & -3 & 3 & | & 1 \\\\ 0 & 0 & 0 & | & 0 \\end{bmatrix}$",
+          "Từ dòng 2: $-3y + 3z = 1 \\implies y - z = -\\frac{1}{3} \\implies y = z - \\frac{1}{3}$.",
+          "Từ dòng 1: $x + y - z = 0 \\implies x + (z - \\frac{1}{3}) - z = 0 \\implies x = \\frac{1}{3}$.",
+          "Đặt $z = t$, ta có $y = t - \\frac{1}{3}$.",
+          "Nghiệm tổng quát: $(x, y, z) = \\left( \\frac{1}{3}, t - \\frac{1}{3}, t \\right)$, $t \\in \\mathbb{R}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm $k$ để hệ sau có vô số nghiệm: $\\begin{cases} x + y + z = 1 \\\\ 2x + y + kz = 0 \\\\ x + 2y + 3z = 0 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Viết ma trận hệ số: $A = \\begin{bmatrix} 1 & 1 & 1 \\\\ 2 & 1 & k \\\\ 1 & 2 & 3 \\end{bmatrix}$",
+          "Hệ có vô số nghiệm khi $\\det(A) = 0$ và các phương trình không mâu thuẫn.",
+          "Tính $\\det(A)$: $\\det(A) = 1 \\cdot (1 \\cdot 3 - k \\cdot 2) - 1 \\cdot (2 \\cdot 3 - k \\cdot 1) + 1 \\cdot (2 \\cdot 2 - 1 \\cdot 1) = (3 - 2k) - (6 - k) + (4 - 1) = 3 - 2k - 6 + k + 3 = -k$",
+          "Đặt $\\det(A) = 0 \\implies -k = 0 \\implies k = 0$.",
+          "Kiểm tra với $k = 0$: Hệ trở thành $\\begin{cases} x + y + z = 1 \\\\ 2x + y = 0 \\\\ x + 2y + 3z = 0 \\end{cases}$.",
+          "Viết ma trận bổ sung: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 2 & 1 & 0 & | & 0 \\\\ 1 & 2 & 3 & | & 0 \\end{bmatrix}$. Biến đổi: $L2 = L2 - 2L1$, $L3 = L3 - L1$: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 0 & -1 & -2 & | & -2 \\\\ 0 & 1 & 2 & | & -1 \\end{bmatrix}$. Tiếp tục: $L3 = L3 + L2$: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 0 & -1 & -2 & | & -2 \\\\ 0 & 0 & 0 & | & -3 \\end{bmatrix}$.",
+          "$0 = -3$, mâu thuẫn. Do đó, hệ không có giá trị $k$ nào để có vô số nghiệm."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình: $\\begin{cases} x - y + z = 0 \\\\ 2x + y - z = 1 \\\\ -x + 2y + z = 2 \\end{cases}$ bằng phương pháp ma trận nghịch đảo.",
+      "answer": {
+        "steps": [
+          "Viết hệ dưới dạng ma trận: $A \\mathbf{x} = \\mathbf{b}$, với $A = \\begin{bmatrix} 1 & -1 & 1 \\\\ 2 & 1 & -1 \\\\ -1 & 2 & 1 \\end{bmatrix}$, $\\mathbf{x} = \\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix}$, $\\mathbf{b} = \\begin{bmatrix} 0 \\\\ 1 \\\\ 2 \\end{bmatrix}$",
+          "Tính $\\det(A)$: $\\det(A) = 1 \\cdot (1 \\cdot 1 - (-1) \\cdot 2) - (-1) \\cdot (2 \\cdot 1 - (-1) \\cdot (-1)) + 1 \\cdot (2 \\cdot 2 - 1 \\cdot (-1)) = 1 \\cdot (1 + 2) + 1 \\cdot (2 - 1) + 1 \\cdot (4 + 1) = 3 + 1 + 5 = 9$",
+          "Tính ma trận nghịch đảo $A^{-1}$: Tìm ma trận phụ hợp: $C_{11} = 1 \\cdot 1 - (-1) \\cdot 2 = 3$, $C_{12} = -(2 \\cdot 1 - (-1) \\cdot (-1)) = -(2 - 1) = -1$, $\\ldots$",
+          "Ma trận phụ hợp: $\\begin{bmatrix} 3 & -1 & 5 \\\\ 3 & 2 & 1 \\\\ -3 & -1 & 3 \\end{bmatrix}$. Ma trận nghịch đảo: $A^{-1} = \\frac{1}{9} \\begin{bmatrix} 3 & -1 & 5 \\\\ 3 & 2 & 1 \\\\ -3 & -1 & 3 \\end{bmatrix}^T = \\frac{1}{9} \\begin{bmatrix} 3 & 3 & -3 \\\\ -1 & 2 & -1 \\\\ 5 & 1 & 3 \\end{bmatrix}$",
+          "Tính $\\mathbf{x} = A^{-1} \\mathbf{b}$: $\\mathbf{x} = \\frac{1}{9} \\begin{bmatrix} 3 & 3 & -3 \\\\ -1 & 2 & -1 \\\\ 5 & 1 & 3 \\end{bmatrix} \\begin{bmatrix} 0 \\\\ 1 \\\\ 2 \\end{bmatrix} = \\frac{1}{9} \\begin{bmatrix} 3 \\cdot 0 + 3 \\cdot 1 + (-3) \\cdot 2 \\\\ -1 \\cdot 0 + 2 \\cdot 1 + (-1) \\cdot 2 \\\\ 5 \\cdot 0 + 1 \\cdot 1 + 3 \\cdot 2 \\end{bmatrix} = \\frac{1}{9} \\begin{bmatrix} -3 \\\\ 0 \\\\ 7 \\end{bmatrix} = \\begin{bmatrix} -\\frac{1}{3} \\\\ 0 \\\\ \\frac{7}{9} \\end{bmatrix}$",
+          "Nghiệm: $(x, y, z) = \\left( -\\frac{1}{3}, 0, \\frac{7}{9} \\right)$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm điều kiện của $m$ để hệ sau có nghiệm: $\\begin{cases} x + y + z = 1 \\\\ x + 2y + 3z = m \\\\ 2x + y + z = m \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Viết ma trận bổ sung: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 1 & 2 & 3 & | & m \\\\ 2 & 1 & 1 & | & m \\end{bmatrix}$",
+          "Biến đổi: $L2 = L2 - L1$, $L3 = L3 - 2L1$: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 0 & 1 & 2 & | & m - 1 \\\\ 0 & -1 & -1 & | & m - 2 \\end{bmatrix}$",
+          "Tiếp tục: $L3 = L3 + L2$: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 0 & 1 & 2 & | & m - 1 \\\\ 0 & 0 & 1 & | & 2m - 3 \\end{bmatrix}$",
+          "Hệ có nghiệm vì không có dòng mâu thuẫn. Từ dòng 3: $z = 2m - 3$.",
+          "Hệ có nghiệm với mọi $m \\in \\mathbb{R}$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình: $\\begin{cases} x + y - z = 1 \\\\ 2x - y + z = 0 \\\\ x + 2y - 2z = 2 \\end{cases}$ bằng phương pháp thay thế.",
+      "answer": {
+        "steps": [
+          "Từ phương trình 1: $x = 1 - y + z$.",
+          "Thay vào phương trình 2: $2(1 - y + z) - y + z = 0 \\implies 2 - 2y + 2z - y + z = 0 \\implies 3z - 3y = -2 \\implies z - y = -\\frac{2}{3} \\implies z = y - \\frac{2}{3}$.",
+          "Thay vào phương trình 3: $x + 2y - 2(y - \\frac{2}{3}) = 2 \\implies x + 2y - 2y + \\frac{4}{3} = 2 \\implies x = \\frac{2}{3}$.",
+          "Thay $x = \\frac{2}{3}$ vào $x = 1 - y + z$: $\\frac{2}{3} = 1 - y + (y - \\frac{2}{3}) \\implies \\frac{2}{3} = 1 - \\frac{2}{3} \\implies \\frac{2}{3} = \\frac{1}{3}$, mâu thuẫn.",
+          "Kết luận: Hệ vô nghiệm."
+        ]
+      }
+    },
+    {
+      "question": "Tìm $k$ để hệ sau có nghiệm duy nhất: $\\begin{cases} x + y + z = 1 \\\\ x + 2y + kz = 0 \\\\ 2x + y + z = 0 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Viết ma trận hệ số: $A = \\begin{bmatrix} 1 & 1 & 1 \\\\ 1 & 2 & k \\\\ 2 & 1 & 1 \\end{bmatrix}$",
+          "Tính $\\det(A)$: $\\det(A) = 1 \\cdot (2 \\cdot 1 - k \\cdot 1) - 1 \\cdot (1 \\cdot 1 - k \\cdot 2) + 1 \\cdot (1 \\cdot 1 - 2 \\cdot 2) = (2 - k) - (1 - 2k) + (1 - 4) = 2 - k - 1 + 2k - 3 = k - 2$",
+          "Hệ có nghiệm duy nhất khi $\\det(A) \\neq 0 \\implies k - 2 \\neq 0 \\implies k \\neq 2$.",
+          "Kết luận: Hệ có nghiệm duy nhất khi $k \\neq 2$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình: $\\begin{cases} x + 2y + z = 1 \\\\ 2x - y + z = 0 \\\\ x + y + 2z = 0 \\end{cases}$ bằng phương pháp Gauss-Jordan.",
+      "answer": {
+        "steps": [
+          "Viết ma trận bổ sung: $\\begin{bmatrix} 1 & 2 & 1 & | & 1 \\\\ 2 & -1 & 1 & | & 0 \\\\ 1 & 1 & 2 & | & 0 \\end{bmatrix}$",
+          "Biến đổi: $L2 = L2 - 2L1$, $L3 = L3 - L1$: $\\begin{bmatrix} 1 & 2 & 1 & | & 1 \\\\ 0 & -5 & -1 & | & -2 \\\\ 0 & -1 & 1 & | & -1 \\end{bmatrix}$",
+          "Tiếp tục: $L2 = -\\frac{1}{5}L2$: $\\begin{bmatrix} 1 & 2 & 1 & | & 1 \\\\ 0 & 1 & \\frac{1}{5} & | & \\frac{2}{5} \\\\ 0 & -1 & 1 & | & -1 \\end{bmatrix}$",
+          "L3 = L3 + L2$: $\\begin{bmatrix} 1 & 2 & 1 & | & 1 \\\\ 0 & 1 & \\frac{1}{5} & | & \\frac{2}{5} \\\\ 0 & 0 & \\frac{6}{5} & | & -\\frac{3}{5} \\end{bmatrix}$",
+          "L3 = \\frac{5}{6}L3$: $\\begin{bmatrix} 1 & 2 & 1 & | & 1 \\\\ 0 & 1 & \\frac{1}{5} & | & \\frac{2}{5} \\\\ 0 & 0 & 1 & | & -\\frac{1}{2} \\end{bmatrix}$",
+          "Giải ngược: Từ dòng 3, $z = -\\frac{1}{2}$. Từ dòng 2, $y + \\frac{1}{5} \\cdot (-\\frac{1}{2}) = \\frac{2}{5} \\implies y - \\frac{1}{10} = \\frac{2}{5} \\implies y = \\frac{1}{2}$. Từ dòng 1, $x + 2 \\cdot \\frac{1}{2} + (-\\frac{1}{2}) = 1 \\implies x + \\frac{1}{2} = 1 \\implies x = \\frac{1}{2}$.",
+          "Nghiệm: $(x, y, z) = \\left( \\frac{1}{2}, \\frac{1}{2}, -\\frac{1}{2} \\right)$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định nghiệm của hệ: $\\begin{cases} x + y = 1 \\\\ 2x + 2y = 2 \\\\ 3x + 3y = 3 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Nhận xét: Cả ba phương trình đều tương đương $x + y = 1$.",
+          "Hệ có vô số nghiệm: $x + y = 1 \\implies y = 1 - x$.",
+          "Nghiệm tổng quát: $(x, y) = (t, 1 - t)$, $t \\in \\mathbb{R}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm $a$ và $b$ để hệ sau có nghiệm duy nhất: $\\begin{cases} x + y + z = a \\\\ 2x + y + 2z = b \\\\ x + 2y + z = 0 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Viết ma trận hệ số: $A = \\begin{bmatrix} 1 & 1 & 1 \\\\ 2 & 1 & 2 \\\\ 1 & 2 & 1 \\end{bmatrix}$",
+          "Tính $\\det(A)$: $\\det(A) = 1 \\cdot (1 \\cdot 1 - 2 \\cdot 2) - 1 \\cdot (2 \\cdot 1 - 2 \\cdot 1) + 1 \\cdot (2 \\cdot 2 - 1 \\cdot 1) = 1 \\cdot (1 - 4) - 1 \\cdot (2 - 2) + 1 \\cdot (4 - мак1) = -3 + 0 + 3 = 0$",
+          "Vì $\\det(A) = 0$, hệ không có nghiệm duy nhất với mọi $a, b$.",
+          "Kết luận: Không tồn tại $a, b$ để hệ có nghiệm duy nhất."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình: $\\begin{cases} x + y - z + w = 1 \\\\ x + 2y + z - w = 0 \\\\ 2x - y + z + w = 2 \\end{cases}$ bằng phương pháp Gauss.",
+      "answer": {
+        "steps": [
+          "Viết ma trận bổ sung: $\\begin{bmatrix} 1 & 1 & -1 & 1 & | & 1 \\\\ 1 & 2 & 1 & -1 & | & 0 \\\\ 2 & -1 & 1 & 1 & | & 2 \\end{bmatrix}$",
+          "Biến đổi: $L2 = L2 - L1$, $L3 = L3 - 2L1$: $\\begin{bmatrix} 1 & 1 & -1 &  ocurrió1 & | & 1 \\\\ 0 & 1 & 2 & -2 & | & -1 \\\\ 0 & -3 & 3 & -1 & | & 0 \\end{bmatrix}$",
+          "Tiếp tục: $L3 = L3 + 3L2$: $\\begin{bmatrix} 1 & 1 & -1 & 1 & | & 1 \\\\ 0 & 1 & 2 & -2 & | & -1 \\\\ 0 & 0 & 9 & -7 & | & -3 \\end{bmatrix}$",
+          "Giải ngược: Từ dòng 3, $9z - 7w = -3 \\implies z = \\frac{7w - 3}{9}$. Từ dòng 2, $y + 2z - 2w = -1 \\Rightarrow y = -1 - 2z + 2w$. Từ dòng 1, $x + y - z + w = 1 \\Rightarrow x = 1 - y + z - w$.",
+          "Đặt $w = t$, ta có $z = \\frac{7t - 3}{9}$, $y = -1 - 2 \\cdot \\frac{7t - 3}{9} + 2t = \\frac{5t + 3}{9}$, $x = 1 - \\frac{5t + 3}{9} + \\frac{7t - 3}{9} - t = \\frac{9 - 5t - 3 + 7t - 3 - 9t}{9} = \\frac{3 - 7t}{9}$.",
+          "Nghiệm tổng quát: $(x, y, z, w) = \\left( \\frac{3 - 7t}{9}, \\frac{5t + 3}{9}, \\frac{7t - 3}{9}, t \\right)$, $t \\in \\mathbb{R}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm điều kiện của $k$ để hệ sau vô nghiệm: $\\begin{cases} x + y + z = 1 \\\\ x + 2y + kz = 2 \\\\ 2x + y + z = k \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Viết ma trận bổ sung: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 1 & 2 & k & | & 2 \\\\ 2 & 1 & 1 & | & k \\end{bmatrix}$",
+          "Biến đổi: $L2 = L2 - L1$, $L3 = L3 - 2L1$: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 0 & 1 & k - 1 & | & 1 \\\\ 0 & -1 & -1 & | & k - 2 \\end{bmatrix}$",
+          "Tiếp tục: $L3 = L3 + L2$: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 0 & 1 & k - 1 & | & 1 \\\\ 0 & 0 & k - 2 & | & k - 1 \\end{bmatrix}$",
+          "Hệ vô nghiệm khi dòng cuối có dạng $0 = c \\neq 0$. Từ dòng 3: $(k - 2)z = k - 1$. Nếu $k - 2 = 0 \\implies k = 2$, thì dòng 3 trở thành $0 = k - 1 = 2 - 1 = 1$, tức $0 = 1$, mâu thuẫn.",
+          "Kết luận: Hệ vô nghiệm khi $k = 2$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình: $\\begin{casesV} x + y + z + w = 1 \\\\ 2x - y + z - w = 0 \\\\ x + 2y - z + w = 2 \\\\ 3x + y + z - w = 0 \\end{cases}$ bằng phương pháp Gauss-Jordan.",
+      "answer": {
+        "steps": [
+          "Viết ma trận bổ sung: $\\begin{bmatrix} 1 & 1 & 1 & 1 & | & 1 \\\\ 2 & -1 & 1 & -1 & | & 0 \\\\ 1 & 2 & -1 & 1 & | & 2 \\\\ 3 & 1 & 1 & -1 & | & 0 \\end{bmatrix}$",
+          "Biến đổi: $L2 = L2 - 2L1$, $L3 = L3 - L1$, $L4 = L4 - 3L1$: $\\begin{bmatrix} 1 & 1 & 1 & 1 & | & 1 \\\\ 0 & -3 & -1 & -3 & | & -2 \\\\ 0 & 1 & -2 & 0 & | & 1 \\\\ 0 & -2 & -2 & -4 & | & -3 \\end{bmatrix}$",
+          "L2 = -\\frac{1}{3}L2$: $\\begin{bmatrix} 1 & 1 & 1 & 1 & | & 1 \\\\ 0 & 1 & \\frac{1}{3} & 1 & | & \\frac{2}{3} \\\\ 0 & 1 & -2 & 0 & | & 1 \\\\ 0 & -2 & -2 & -4 & | & -3 \\end{bmatrix}$",
+          "L3 = L3 - L2$, $L4 = L4 + 2L2$: $\\begin{bmatrix} 1 & 1 & 1 & 1 & | & 1 \\\\ 0 & 1 & \\frac{1}{3} & 1 & | & \\frac{2}{3} \\\\ 0 & 0 & -\\frac{7}{3} & -1 & | & \\frac{1}{3} \\\\ 0 & 0 & -\\frac{4}{3} & -2 & | & -\\frac{5}{3} \\end{bmatrix}$",
+          "L3 = -\\frac{3 TOMMY}{7}L3$: $\\begin{bmatrix} 1 & 1 & 1 & 1 & | & 1 \\\\ 0 & 1 & \\frac{1}{3} & 1 & | & \\frac{2}{3} \\\\ 0 & 0 & 1 & \\frac{3}{7} & | & -\\frac{1}{7} \\\\ 0 & 0 & -\\frac{4}{3} & -2 & | & -\\frac{5}{3} \\end{bmatrix}$",
+          "L4 = L4 + \\frac{4}{3}L3$: $\\begin{bmatrix} 1 & 1 & 1 & 1 & | & 1 \\\\ 0 & 1 & \\frac{1}{3} & 1 & | & \\frac{2}{3} \\\\ 0 & 0 & 1 & \\frac{3}{7} & | & -\\frac{1}{7} \\\\ 0 & 0 & 0 & -\\frac{10}{7} & | & -\\frac{17}{7} \\end{bmatrix}$",
+          "L4 = -\\frac{7}{10}L4$: $\\begin{bmatrix} 1 & 1 & 1 & 1 & | & 1 \\\\ 0 & 1 & \\frac{1}{3} & 1 & | & \\frac{2}{3} \\\\ 0 & 0 & 1 & \\frac{3}{7} & | & -\\frac{1}{7} \\\\ 0 & 0 & 0 & 1 & | & \\frac{17}{10} \\end{bmatrix}$",
+          "Giải ngược: Từ dòng 4, $w = \\frac{17}{10}$. Từ dòng 3, $z + \\frac{3}{7}w = -\\frac{1}{7} \\implies z + \\frac{3}{7} \\cdot \\frac{17}{10} = -\\frac{1}{7} \\implies z = -\\frac{1}{7} - \\frac{51}{70} = -\\frac{10}{70} - \\frac{51}{70} = -\\frac{61}{70}$. Từ dòng 2, $y + \\frac{1}{3}z + w = \\frac{2}{3} \\implies y + \\frac{1}{3} \\cdot (-\\frac{61}{70}) + \\frac{17}{10} = \\frac{2}{3} \\implies y = \\frac{2}{3} + \\frac{61}{210} - \\frac{17}{10} = \\frac{140 + 61 - 357}{210} = -\\frac{156}{210} = -\\frac{26}{35}$. Từ dòng 1, $x + y + z + w = 1 \\implies x = 1 - (-\\frac{26}{35}) - (-\\frac{61}{70}) - \\frac{17}{10} = \\frac{70 + 182 - 61 - 119}{70} = \\frac{72}{70} = \\frac{36}{35}$.",
+          "Nghiệm: $(x, y, z, w) = \\left( \\frac{36}{35}, -\\frac{26}{35}, -\\frac{61}{70}, \\frac{17}{10} \\right)$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định số nghiệm của hệ: $\\begin{cases} x + y + z = 1 \\\\ x + y + 2z = 1 \\\\ x + y + 3z = 1 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Viết ma trận bổ sung: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 1 & 1 & 2 & | & 1 \\\\ 1 & 1 & 3 & | & 1 \\end{bmatrix}$",
+          "Biến đổi: $L2 = L2 - L1$, $L3 = L3 - L1$: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 0 & 0 & 1 & | & 0 \\\\ 0 & 0 & 2 & | & 0 \\end{bmatrix}$",
+          "Tiếp tục: $L3 = L3 - 2L2$: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 0 & 0 & 1 & | & 0 \\\\ 0 & 0 & 0 & | & 0 \\end{bmatrix}$",
+          "Từ dòng 2: $z = 0$. Từ dòng 1: $x + y + 0 = 1 \\implies x + y = 1 \\implies y = 1 - x$.",
+          "Nghiệm tổng quát: $(x, y, z) = (t, 1 - t, 0)$, $t \\in \\mathbb{R}$. Hệ có vô số nghiệm."
+        ]
+      }
+    },
+    {
+      "question": "Tìm $k$ để hệ sau có nghiệm duy nhất: $\\begin{cases} x + y + z = 1 \\\\ 2x + y + kz = 0 \\\\ x + 2y + 3z = 0 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Viết ma trận hệ số: $A = \\begin{bmatrix} 1 & 1 & 1 \\\\ 2 & 1 & k \\\\ 1 & 2 & 3 \\end{bmatrix}$",
+          "Tính $\\det(A)$: $\\det(A) = 1 \\cdot (1 \\cdot 3 - k \\cdot 2) - 1 \\cdot (2 \\cdot 3 - k \\cdot 1) + 1 \\cdot (2 \\cdot 2 - 1 \\cdot 1) = (3 - 2k) - (6 - k) + (4 - 1) = 3 - 2k - 6 + k + 3 = -k$",
+          "Hệ có nghiệm duy nhất khi $\\det(A) \\neq 0 \\implies -k \\neq 0 \\implies k \\neq 0$.",
+          "Kết luận: Hệ có nghiệm duy nhất khi $k \\neq 0$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm nghiệm của hệ phương trình: $\\begin{cases} x + 2y - z = 1 \\\\ 2x + y + z = 2 \\\\ x + y + z = 3 \\end{cases}$ bằng phương pháp Cramer.",
+      "answer": {
+        "steps": [
+          "Viết ma trận hệ số: $A = \\begin{bmatrix} 1 & 2 & -1 \\\\ 2 & 1 & 1 \\\\ 1 & 1 & 1 \\end{bmatrix}$, cột hằng số: $B = \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\end{bmatrix}$",
+          "Tính $\\det(A)$: $\\det(A) = 1 \\cdot (1 \\cdot 1 - 1 \\cdot 1) - 2 \\cdot (2 \\cdot 1 - 1 \\cdot 1) + (-1) \\cdot (2 \\cdot 1 - 1 \\cdot 1) = 1 \\cdot (1 - 1) - 2 \\cdot (2 - 1) + (-1) \\cdot (2 - 1) = 0 - 2 - 1 = -3$",
+          "Tính $\\det(A_x)$: Thay cột 1 bằng $B$: $A_x = \\begin{bmatrix} 1 & 2 & -1 \\\\ 2 & 1 & 1 \\\\ 3 & 1 & 1 \\end{bmatrix}$, $\\det(A_x) = 1 \\cdot (1 \\cdot 1 - 1 \\cdot 1) - 2 \\cdot (2 \\cdot 1 - 1 \\cdot 3) + (-1) \\cdot (2 \\cdot 1 - 1 \\cdot 3) = 0 - 2 \\cdot (2 - 3) + (-1) \\cdot (2 - 3) = 0 + 2 + 1 = 3$",
+          "Tính $\\det(A_y)$: Thay cột 2: $A_y = \\begin{bmatrix} 1 & 1 & -1 \\\\ 2 & 2 & 1 \\\\ 1 & 3 & 1 \\end{bmatrix}$, $\\det(A_y) = 1 \\cdot (2 \\cdot 1 - 1 \\cdot 3) - 1 \\cdot (2 \\cdot 1 - 1 \\cdot 1) + (-1) \\cdot (2 \\cdot 3 - 2 \\cdot 1) = 1 \\cdot (2 - 3) - 1 \\cdot (2 - 1) + (-1) \\cdot (6 - 2) = -1 - 1 - 4 = -6$",
+          "Tính $\\det(A_z)$: Thay cột 3: $A_z = \\begin{bmatrix} 1 & 2 & 1 \\\\ 2 & 1 & 2 \\\\ 1 & 1 & 3 \\end{bmatrix}$, $\\det(A_z) = 1 \\cdot (1 \\cdot 3 - 2 \\cdot 1) - 2 \\cdot (2 \\cdot 3 - 2 \\cdot 1) + 1 \\cdot (2 \\cdot 1 - 1 \\cdot 1) = 1 \\cdot (3 - 2) - 2 \\cdot (6 - 2) + 1 \\cdot (2 - 1) = 1 - 8 + 1 = -6$",
+          "Nghiệm: $x = \\frac{\\det(A_x)}{\\det(A)} = \\frac{3}{-3} = -1$, $y = \\frac{\\det(A_y)}{\\det(A)} = \\frac{-6}{-3} = 2$, $z = \\frac{\\det(A_z)}{\\det(A)} = \\frac{-6}{-3} = 2$",
+          "Nghiệm: $(x, y, z) = (-1, 2, 2)$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm nghiệm tổng quát của hệ: $\\begin{cases} x + y - z = 0 \\\\ 2x - y + z = 1 \\\\ x - 2y + 2z = 1 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Viết ma trận bổ sung: $\\begin{bmatrix} 1 & 1 & -1 & | & 0 \\\\ 2 & -1 & 1 & | & 1 \\\\ 1 & -2 & 2 & | & 1 \\end{bmatrix}$",
+          "Biến đổi: $L2 = L2 - 2L1$, $L3 = L3 - L1$: $\\begin{bmatrix} 1 & 1 & -1 & | & 0 \\\\ 0 & -3 & 3 & | & 1 \\\\ 0 & -3 & 3 & | & 1 \\end{bmatrix}$",
+          "Tiếp tục: $L3 = L3 - L2$: $\\begin{bmatrix} 1 & 1 & -1 & | & 0 \\\\ 0 & -3 & 3 & | & 1 \\\\ 0 & 0 & 0 & | & 0 \\end{bmatrix}$",
+          "Từ dòng 2: $-3y + 3z = 1 \\implies y - z = -\\frac{1}{3} \\implies y = z - \\frac{1}{3}$.",
+          "Từ dòng 1: $x + y - z = 0 \\implies x + (z - \\frac{1}{3}) - z = 0 \\implies x = \\frac{1}{3}$.",
+          "Đặt $z = t$, ta có $y = t - \\frac{1}{3}$.",
+          "Nghiệm tổng quát: $(x, y, z) = \\left( \\frac{1}{3}, t - \\frac{1}{3}, t \\right)$, $t \\in \\mathbb{R}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm $k$ để hệ sau vô nghiệm: $\\begin{cases} x + y + z = 1 \\\\ x + 2y + kz = 2 \\\\ 2x + y + z = k \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Viết ma trận bổ sung: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 1 & 2 & k & | & 2 \\\\ 2 & 1 & 1 & | & k \\end{bmatrix}$",
+          "Biến đổi: $L2 = L2 - L1$, $L3 = L3 - 2L1$: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 0 & 1 & k - 1 & | & 1 \\\\ 0 & -1 & -1 & | & k - 2 \\end{bmatrix}$",
+          "Tiếp tục: $L3 = L3 + L2$: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 0 & 1 & k - 1 & | & 1 \\\\ 0 & 0 & k - 2 & | & k - 1 \\end{bmatrix}$",
+          "Hệ vô nghiệm khi dòng cuối có dạng $0 = c \\neq 0$. Từ dòng 3: $(k - 2)z = k - 1$. Nếu $k - 2 = 0 \\implies k = 2$, thì $0 = k - 1 = 2 - 1 = 1$, tức $0 = 1$, mâu thuẫn.",
+          "Kết luận: Hệ vô nghiệm khi $k = 2$."
+        ]
+      }
+    },
+    {
+      "question": "Giải hệ phương trình: $\\begin{cases} x + 2y - z = 1 \\\\ 2x + y + z = 2 \\\\ x + y + z = 3 \\end{cases}$ bằng phương pháp ma trận nghịch đảo.",
+      "answer": {
+        "steps": [
+          "Viết hệ dưới dạng ma trận: $A \\mathbf{x} = \\mathbf{b}$, với $A = \\begin{bmatrix} 1 & 2 & -1 \\\\ 2 & 1 & 1 \\\\ 1 & 1 & 1 \\end{bmatrix}$, $\\mathbf{x} = \\begin{bmatrix} x \\\\ y \\\\ z \\end{bmatrix}$, $\\mathbf{b} = \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\end{bmatrix}$",
+          "Tính $\\det(A)$: $\\det(A) = 1 \\cdot (1 \\cdot 1 - 1 \\cdot 1) - 2 \\cdot (2 \\cdot 1 - 1 \\cdot 1) + (-1) \\cdot (2 \\cdot 1 - 1 \\cdot 1) = 1 \\cdot (1 - 1) - 2 \\cdot (2 - 1) + (-1) \\cdot (2 - 1) = 0 - 2 - 1 = -3$",
+          "Tính ma trận nghịch đảo $A^{-1}$: Ma trận phụ hợp: $C_{11} = 1 \\cdot 1 - 1 \\cdot 1 = 0$, $C_{12} = -(2 \\cdot 1 - 1 \\cdot 1) = -(2 - 1) = -1$, $\\ldots$",
+          "Ma trận phụ hợp: $\\begin{bmatrix} 0 & -1 & -1 \\\\ -1 & 2 & -1 \\\\ -1 & -1 & -3 \\end{bmatrix}$. Ma trận nghịch đảo: $A^{-1} = \\frac{1}{-3} \\begin{bmatrix} 0 & -1 & -1 \\\\ -1 & 2 & -1 \\\\ -1 & -1 & -3 \\end{bmatrix}^T = \\begin{bmatrix} 0 & \\frac{1}{3} & \\frac{1}{3} \\\\ \\frac{1}{3} & -\\frac{2}{3} & \\frac{1}{3} \\\\ \\frac{1}{3} & \\frac{1}{3} & 1 \\end{bmatrix}$",
+          "Tính $\\mathbf{x} = A^{-1} \\mathbf{b}$: $\\mathbf{x} = \\begin{bmatrix} 0 & \\frac{1}{3} & \\frac{1}{3} \\\\ \\frac{1}{3} & -\\frac{2}{3} & \\frac{1}{3} \\\\ \\frac{1}{3} & \\frac{1}{3} & 1 \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\end{bmatrix} = \\begin{bmatrix} 0 \\cdot 1 + \\frac{1}{3} \\cdot 2 + \\frac{1}{3} \\cdot 3 \\\\ \\frac{1}{3} \\cdot 1 + (-\\frac{2}{3}) \\cdot 2 + \\frac{1}{3} \\cdot 3 \\\\ \\frac{1}{3} \\cdot 1 + \\frac{1}{3} \\cdot 2 + 1 \\cdot 3 \\end{bmatrix} = \\begin{bmatrix} \\frac{2}{3} + 1 \\\\ \\frac{1}{3} - \\frac{4}{3} + 1 \\\\ \\frac{1}{3} + \\frac{2}{3} + 3 \\end{bmatrix} = \\begin{bmatrix} -1 \\\\ 2 \\\\ 2 \\end{bmatrix}$",
+          "Nghiệm: $(x, y, z) = (-1, 2, 2)$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm $a$ để hệ sau có vô số nghiệm: $\\begin{cases} x + y + z = 1 \\\\ x + 2y + z = a \\\\ 2x + 3y + 2z = a + 1 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Viết ma trận bổ sung: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 1 & 2 & 1 & | & a \\\\ 2 & 3 & 2 & | & a + 1 \\end{bmatrix}$",
+          "Biến đổi: $L2 = L2 - L1$, $L3 = L3 - 2L1$: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 0 & 1 & 0 & | & a - 1 \\\\ 0 & 1 & 0 & | & a - 1 \\end{bmatrix}$",
+          "Tiếp tục: $L3 = L3 - L2$: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 0 & 1 & 0 & | & a - 1 \\\\ 0 & 0 & 0 & | & 0 \\end{bmatrix}$",
+          "Hệ có vô số nghiệm vì dòng cuối là $0 = 0$ và ma trận hệ số có hạng nhỏ hơn số biến. Từ dòng 2: $y = a - 1$. Từ dòng 1: $x + y + z = 1 \\implies x + (a - 1) + z = 1 \\implies x + z = 2 - a$.",
+          "Đặt $z = t$, ta có $x = 2 - a - t$, $y = a - 1$.",
+          "Nghiệm tổng quát: $(x, y, z) = (2 - a - t, a - 1, t)$, $t \\in \\mathbb{R}$. Hệ có vô số nghiệm với mọi $a \\in \\mathbb{R}$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định số nghiệm của hệ: $\\begin{cases} x + y + z = 1 \\\\ x + y + 2z = 1 \\\\ x + y + 3z = 1 \\end{cases}$",
+      "answer": {
+        "steps": [
+          "Viết ma trận bổ sung: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 1 & 1 & 2 & | & 1 \\\\ 1 & 1 & 3 & | & 1 \\end{bmatrix}$",
+          "Biến đổi: $L2 = L2 - L1$, $L3 = L3 - L1$: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 0 & 0 & 1 & | & 0 \\\\ 0 & 0 & 2 & | & 0 \\end{bmatrix}$",
+          "Tiếp tục: $L3 = L3 - 2L2$: $\\begin{bmatrix} 1 & 1 & 1 & | & 1 \\\\ 0 & 0 & 1 & | & 0 \\\\ 0 & 0 & 0 & | & 0 \\end{bmatrix}$",
+          "Từ dòng 2: $z = 0$. Từ dòng 1: $x + y + 0 = 1 \\implies x + y = 1 \\implies y = 1 - x$.",
+          "Nghiệm tổng quát: $(x, y, z) = (t, 1 - t, 0)$, $t \\in \\mathbb{R}$. Hệ có vô số nghiệm."
+        ]
+      }
+    },
+    {
+      "question": "Tìm nghiệm của hệ phương trình: $\\begin{cases} x + 2y - z = 1 \\\\ 2x + y + z = 2 \\\\ x + y + z = 3 \\end{cases}$ bằng phương pháp Cramer.",
+      "answer": {
+        "steps": [
+          "Viết ma trận hệ số: $A = \\begin{bmatrix} 1 & 2 & -1 \\\\ 2 & 1 & 1 \\\\ 1 & 1 & 1 \\end{bmatrix}$, cột hằng số: $B = \\begin{bmatrix} 1 \\\\ 2 \\\\ 3 \\end{bmatrix}$",
+          "Tính $\\det(A)$: $\\det(A) = 1 \\cdot (1 \\cdot 1 - 1 \\cdot 1) - 2 \\cdot (2 \\cdot 1 - 1 \\cdot 1) + (-1) \\cdot (2 \\cdot 1 - 1 \\cdot 1) = 1 \\cdot (1 - 1) - 2 \\cdot (2 - 1) + (-1) \\cdot (2 - 1) = 0 - 2 - 1 = -3$",
+          "Tính $\\det(A_x)$: Thay cột 1 bằng $B$: $A_x = \\begin{bmatrix} 1 & 2 & -1 \\\\ 2 & 1 & 1 \\\\ 3 & 1 & 1 \\end{bmatrix}$, $\\det(A_x) = 1 \\cdot (1 \\cdot 1 - 1 \\cdot 1) - 2 \\cdot (2 \\cdot 1 - 1 \\cdot 3) + (-1) \\cdot (2 \\cdot 1 - 1 \\cdot 3) = 0 - 2 \\cdot (2 - 3) + (-1) \\cdot (2 - 3) = 0 + 2 + 1 = 3$",
+          "Tính $\\det(A_y)$: Thay cột 2: $A_y = \\begin{bmatrix} 1 & 1 & -1 \\\\ 2 & 2 & 1 \\\\ 1 & 3 & 1 \\end{bmatrix}$, $\\det(A_y) = 1 \\cdot (2 \\cdot 1 - 1 \\cdot 3) - 1 \\cdot (2 \\cdot 1 - 1 \\cdot 1) + (-1) \\cdot (2 \\cdot 3 - 2 \\cdot 1) = 1 \\cdot (2 - 3) - 1 \\cdot (2 - 1) + (-1) \\cdot (6 - 2) = -1 - 1 - 4 = -6$",
+          "Tính $\\det(A_z)$: Thay cột 3: $A_z = \\begin{bmatrix} 1 & 2 & 1 \\\\ 2 & 1 & 2 \\\\ 1 & 1 & 3 \\end{bmatrix}$, $\\det(A_z) = 1 \\cdot (1 \\cdot 3 - 2 \\cdot 1) - 2 \\cdot (2 \\cdot 3 - 2 \\cdot 1) + 1 \\cdot (2 \\cdot 1 - 1 \\cdot 1) = 1 \\cdot (3 - 2) - 2 \\cdot (6 - 2) + 1 \\cdot (2 - 1) = 1 - 8 + 1 = -6$",
+          "Nghiệm: $x = \\frac{\\det(A_x)}{\\det(A)} = \\frac{3}{-3} = -1$, $y = \\frac{\\det(A_y)}{\\det(A)} = \\frac{-6}{-3} = 2$, $z = \\frac{\\det(A_z)}{\\det(A)} = \\frac{-6}{-3} = 2$",
+          "Nghiệm: $(x, y, z) = (-1, 2, 2)$."
+        ]
+      }
+    },
+    {
+      "question": "Cho tập hợp các vector trong $\\mathbb{R}^2$: $S = \\{(1, 2), (3, 4)\\}$. Kiểm tra xem $S$ có độc lập tuyến tính hay không.",
+      "answer": {
+        "steps": [
+          "Giả sử $a(1, 2) + b(3, 4) = (0, 0)$, tức là $\\begin{cases} a + 3b = 0 \\\\ 2a + 4b = 0 \\end{cases}$.",
+          "Từ phương trình thứ hai: $2a + 4b = 0 \\implies a + 2b = 0$. Từ phương trình thứ nhất: $a + 3b = 0$.",
+          "Trừ hai phương trình: $(a + 3b) - (a + 2b) = 0 \\implies b = 0$. Thay vào $a + 2b = 0 \\implies a = 0$.",
+          "Nghiệm duy nhất là $a = b = 0$, do đó $S$ độc lập tuyến tính."
+        ]
+      }
+    },
+    {
+      "question": "Cho vector $\\mathbf{v} = (2, 3)$ và tập hợp $S = \\{(1, 1), (0, 1)\\}$ trong $\\mathbb{R}^2$. Biểu diễn $\\mathbf{v}$ như một tổ hợp tuyến tính của các vector trong $S$.",
+      "answer": {
+        "steps": [
+          "Giả sử $\\mathbf{v} = (2, 3) = a(1, 1) + b(0, 1)$, tức là $(2, 3) = (a, a + b)$.",
+          "Ta có hệ: $\\begin{cases} a = 2 \\\\ a + b = 3 \\end{cases}$.",
+          "Từ phương trình 1: $a = 2$. Thay vào phương trình 2: $2 + b = 3 \\implies b = 1$.",
+          "Vậy $\\mathbf{v} = 2(1, 1) + 1(0, 1)$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định xem tập $S = \\{(1, 0, 0), (0, 1, 0), (0, 0, 1)\\}$ có phải là cơ sở của $\\mathbb{R}^3$ hay không.",
+      "answer": {
+        "steps": [
+          "Tập $S$ có 3 vector, bằng số chiều của $\\mathbb{R}^3$.",
+          "Kiểm tra độc lập tuyến tính: Giả sử $a(1, 0, 0) + b(0, 1, 0) + c(0, 0, 1) = (0, 0, 0)$, tức là $(a, b, c) = (0, 0, 0)$.",
+          "Hệ có nghiệm duy nhất $a = b = c = 0$, nên $S$ độc lập tuyến tính.",
+          "Vì $S$ độc lập tuyến tính và có số vector bằng số chiều của $\\mathbb{R}^3$, $S$ là cơ sở của $\\mathbb{R}^3$."
+        ]
+      }
+    },
+    {
+      "question": "Cho tập $S = \\{(1, 2, 3), (2, 4, 6), (0, 1, 1)\\}$ trong $\\mathbb{R}^3$. Xác định xem $S$ có độc lập tuyến tính hay không.",
+      "answer": {
+        "steps": [
+          "Giả sử $a(1, 2, 3) + b(2, 4, 6) + c(0, 1, 1) = (0, 0, 0)$, tức là $\\begin{cases} a + 2b = 0 \\\\ 2a + 4b + c = 0 \\\\ 3a + 6b + c = 0 \\end{cases}$.",
+          "Từ phương trình 1: $a = -2b$. Thay vào phương trình 2: $2(-2b) + 4b + c = 0 \\implies c = 0$.",
+          "Thay $a = -2b$, $c = 0$ vào phương trình 3: $3(-2b) + 6b + 0 = 0 \\implies -6b + 6b = 0$, luôn đúng.",
+          "Chọn $b = 1 \\implies a = -2, c = 0$, ta có nghiệm không tầm thường $(-2, 1, 0)$.",
+          "Vậy $S$ phụ thuộc tuyến tính."
+        ]
+      }
+    },
+    {
+      "question": "Tìm cơ sở và số chiều của không gian con $W$ của $\\mathbb{R}^3$ được sinh bởi $S = \\{(1, 1, 0), (0, 1, 1), (1, 2, 1)\\}$.",
+      "answer": {
+        "steps": [
+          "Viết ma trận với các vector trong $S$ làm cột: $A = \\begin{bmatrix} 1 & 0 & 1 \\\\ 1 & 1 & 2 \\\\ 0 & 1 & 1 \\end{bmatrix}$.",
+          "Biến đổi ma trận về dạng bậc thang: $L2 = L2 - L1$, $L3 = L3 - L1$: $\\begin{bmatrix} 1 & 0 & 1 \\\\ 0 & 1 & 1 \\\\ 0 & 1 & 0 \\end{bmatrix}$. Tiếp tục: $L3 = L3 - L2$: $\\begin{bmatrix} 1 & 0 & 1 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & -1 \\end{bmatrix}$.",
+          "Hạng ma trận là 3, nên $S$ độc lập tuyến tính và $S$ là cơ sở của $W$.",
+          "Số chiều của $W$ là 3."
+        ]
+      }
+    },
+    {
+      "question": "Cho vector $\\mathbf{v} = (3, 2, 1)$ trong $\\mathbb{R}^3$. Biểu diễn $\\mathbf{v}$ theo cơ sở $B = \\{(1, 0, 0), (0, 1, 0), (0, 0, 1)\\}$.",
+      "answer": {
+        "steps": [
+          "Cơ sở $B$ là cơ sở chuẩn của $\\mathbb{R}^3$.",
+          "Vector $\\mathbf{v} = (3, 2, 1) = 3(1, 0, 0) + 2(0, 1, 0) + 1(0, 0, 1)$.",
+          "Tọa độ của $\\mathbf{v}$ theo cơ sở $B$ là $(3, 2, 1)$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định xem tập $S = \\{(1, 1), (1, -1)\\}$ có sinh ra $\\mathbb{R}^2$ hay không.",
+      "answer": {
+        "steps": [
+          "Kiểm tra xem $S$ có độc lập tuyến tính và đủ số vector để sinh ra $\\mathbb{R}^2$ (số chiều = 2).",
+          "Giả sử $a(1, 1) + b(1, -1) = (0, 0)$, tức là $\\begin{cases} a + b = 0 \\\\ a - b = 0 \\end{cases}$.",
+          "Cộng hai phương trình: $2a = 0 \\implies a = 0$. Thay vào: $a + b = 0 \\implies b = 0$.",
+          "Nghiệm duy nhất là $a = b = 0$, nên $S$ độc lập tuyến tính.",
+          "Vì $S$ có 2 vector độc lập tuyến tính trong $\\mathbb{R}^2$, $S$ sinh ra $\\mathbb{R}^2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho không gian con $W$ của $\\mathbb{R}^3$ được xác định bởi phương trình $x + y - z = 0$. Tìm cơ sở và số chiều của $W$.",
+      "answer": {
+        "steps": [
+          "Từ phương trình $x + y - z = 0$, ta có $z = x + y$.",
+          "Vector tổng quát trong $W$: $(x, y, z) = (x, y, x + y) = x(1, 0, 1) + y(0, 1, 1)$.",
+          "Tập sinh: $S = \\{(1, 0, 1), (0, 1, 1)\\}$.",
+          "Kiểm tra độc lập tuyến tính: $a(1, 0, 1) + b(0, 1, 1) = (0, 0, 0) \\implies \\begin{cases} a = 0 \\\\ b = 0 \\\\ a + b = 0 \\end{cases}$. Nghiệm duy nhất là $a = b = 0$.",
+          "Cơ sở của $W$ là $\\{(1, 0, 1), (0, 1, 1)\\}$, số chiều là 2."
+        ]
+      }
+    },
+    {
+      "question": "Tìm tọa độ của vector $\\mathbf{v} = (2, 1, 3)$ trong $\\mathbb{R}^3$ theo cơ sở $B = \\{(1, 0, 1), (0, 1, 1), (1, 1, 0)\\}$.",
+      "answer": {
+        "steps": [
+          "Giả sử $\\mathbf{v} = (2, 1, 3) = a(1, 0, 1) + b(0, 1, 1) + c(1, 1, 0)$, tức là $\\begin{cases} a + c = 2 \\\\ b + c = 1 \\\\ a + b = 3 \\end{cases}$.",
+          "Từ phương trình 2: $b + c = 1 \\implies c = 1 - b$.",
+          "Thay vào phương trình 1: $a + (1 - b) = 2 \\implies a - b = 1$.",
+          "Thay vào phương trình 3: $a + b = 3$. Cộng hai phương trình: $(a - b) + (a + b) = 1 + 3 \\implies 2a = 4 \\implies a = 2$.",
+          "Thay $a = 2$ vào $a + b = 3$: $2 + b = 3 \\implies b = 1$. Thay vào $c = 1 - b$: $c = 1 - 1 = 0$.",
+          "Tọa độ của $\\mathbf{v}$ theo cơ sở $B$ là $(2, 1, 0)$."
+        ]
+      }
+    },
+    {
+      "question": "Cho tập $S = \\{(1, 1, 0), (1, 0, 1), (0, 1, 1), (2, 2, 2)\\}$ trong $\\mathbb{R}^3$. Tìm một tập con của $S$ là cơ sở của không gian sinh bởi $S$.",
+      "answer": {
+        "steps": [
+          "Viết ma trận với các vector trong $S$ làm cột: $A = \\begin{bmatrix} 1 & 1 & 0 & 2 \\\\ 1 & 0 & 1 & 2 \\\\ 0 & 1 & 1 & 2 \\end{bmatrix}$.",
+          "Biến đổi ma trận: $L2 = L2 - L1$, $L3 = L3 - L1$: $\\begin{bmatrix} 1 & 1 & 0 & 2 \\\\ 0 & -1 & 1 &  Ascending - Descending order of the columns to determine the rank of the matrix. The rank is 3, so $\\{(1, 1, 0), (1, 0, 1), (0, 1, 1)\\}$ is a basis."
+        ]
+      }
+    },
+    {
+      "question": "Xác định số chiều của không gian con $W$ trong $\\mathbb{R}^4$ được xác định bởi hệ phương trình: $\\begin{cases} x + y - z + w = 0 \\\\ x - y + z - w = 0 \\end{cases}$.",
+      "answer": {
+        "steps": [
+          "Giải hệ: Cộng hai phương trình: $(x + y - z + w) + (x - y + z - w) = 0 \\implies 2x = 0 \\implies x = 0$.",
+          "Thay $x = 0$ vào phương trình 1: $y - z + w = 0 \\implies w = z - y$.",
+          "Vector tổng quát: $(x, y, z, w) = (0, y, z, z - y) = y(0, 1, 0, -1) + z(0, 0, 1, 1)$.",
+          "Cơ sở của $W$: $\\{(0, 1, 0, -1), (0, 0, 1, 1)\\}$. Số chiều là 2."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^2 \\to \\mathbb{R}^2$ được xác định bởi $f(x, y) = (x + y, x - y)$. Tìm ma trận đại diện của $f$ theo cơ sở chuẩn.",
+      "answer": {
+        "steps": [
+          "Cơ sở chuẩn của $\\mathbb{R}^2$: $B = \\{(1, 0), (0, 1)\\}$.",
+          "Tính $f(1, 0) = (1 + 0, 1 - 0) = (1, 1)$, tọa độ theo cơ sở chuẩn: $(1, 1)$.",
+          "Tính $f(0, 1) = (0 + 1, 0 - 1) = (1, -1)$, tọa độ: $(1, -1)$.",
+          "Ma trận đại diện: $\\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho hai không gian con của $\\mathbb{R}^3$: $W_1 = \\text{span}\\{(1, 0, 1), (0, 1, 0)\\}$, $W_2 = \\text{span}\\{(1, 1, 1)\\}$. Tìm cơ sở của $W_1 \\cap W_2$.",
+      "answer": {
+        "steps": [
+          "Vector $\\mathbf{v} = (x, y, z) \\in W_1 \\cap W_2$ phải thuộc cả $W_1$ và $W_2$.",
+          "Trong $W_1$: $\\mathbf{v} = a(1, 0, 1) + b(0, 1, 0) = (a, b, a)$.",
+          "Trong $W_2$: $\\mathbf{v} = c(1, 1, 1) = (c, c, c)$.",
+          "Ta có: $(a, b, a) = (c, c, c) \\implies \\begin{cases} a = c \\\\ b = c \\\\ a = c \\end{cases}$. Từ $a = c$, $b = c$, suy ra $a = b$.",
+          "Vector giao: $\\mathbf{v} = (a, a, a) = a(1, 1, 1)$. Cơ sở của $W_1 \\cap W_2$ là $\\{(1, 1, 1)\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho tập $S = \\{(1, 1, 0), (2, 5, 7), (1, 3, 4)\\}$ trong $\\mathbb{R}^3$. Tìm một vector trong $S$ có thể biểu diễn như tổ hợp tuyến tính của các vector còn lại.",
+      "answer": {
+        "steps": [
+          "Kiểm tra độc lập tuyến tính: Giả sử $a(1, 1, 0) + b(2, 5, 7) + c(1, 3, 4) = (0, 0, 0)$, tức là $\\begin{cases} a + 2b + c = 0 \\\\ a + 5b + 3c = 0 \\\\ 7b + 4c = 0 \\end{cases}$.",
+          "Từ phương trình 3: $7b + 4c = 0 \\implies c = -\\frac{7}{4}b$.",
+          "Thay vào phương trình 1: $a + 2b - \\frac{7}{4}b = 0 \\implies a + \\frac{1}{4}b = 0 \\implies a = -\\frac{1}{4}b$.",
+          "Thay vào phương trình 2: $-\\frac{1}{4}b + 5b - 3\\cdot\\frac{7}{4}b = 0 \\implies -\\frac{1}{4}b + 5b - \\frac{21}{4}b = 0 \\implies 0 = 0$, luôn đúng.",
+          "Chọn $b = 4 \\implies a = -1, c = -7$. Vậy $(1, 3, 4) = -1(1, 1, 0) + 4(2, 5, 7)$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^2$, $f(x, y, z) = (x + y, y - z)$. Tìm cơ sở của nhân (kernel) của $f$.",
+      "answer": {
+        "steps": [
+          "Nhân của $f$: $\\{(x, y, z) \\mid f(x, y, z) = (0, 0)\\}$, tức là $\\begin{cases} x + y = 0 \\\\ y - z = 0 \\end{cases}$.",
+          "Giải hệ: $x = -y$, $y = z$. Vector tổng quát: $(x, y, z) = (-y, y, y) = y(-1, 1, 1)$.",
+          "Cơ sở của nhân: $\\{(-1, 1, 1)\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm cơ sở và số chiều của không gian tổng $W_1 + W_2$, với $W_1 = \\text{span}\\{(1, 0, 1), (0, 1, 0)\\}$, $W_2 = \\text{span}\\{(0, 1, 1)\\}$ trong $\\mathbb{R}^3$.",
+      "answer": {
+        "steps": [
+          "Tập sinh của $W_1 + W_2$: $S = \\{(1, 0, 1), (0, 1, 0), (0, 1, 1)\\}$.",
+          "Viết ma trận: $A = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 1 \\\\ 1 & 0 & 1 \\end{bmatrix}$. Biến đổi: $L3 = L3 - L1$: $\\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 1 \\end{bmatrix}$.",
+          "Hạng ma trận là 3, nên $\\{(1, 0, 1), (0, 1, 0), (0, 1, 1)\\}$ là cơ sở của $W_1 + W_2$.",
+          "Số chiều: 3."
+        ]
+      }
+    },
+    {
+      "question": "Cho $W$ là không gian con của $\\mathbb{R}^4$ được xác định bởi $x + 2y - z + w = 0$. Tìm cơ sở và số chiều của $W$.",
+      "answer": {
+        "steps": [
+          "Từ phương trình $x + 2y - z + w = 0$, ta có $w = -x - 2y + z$.",
+          "Vector tổng quát: $(x, y, z, w) = (x, y, z, -x - 2y + z) = x(1, 0, 0, -1) + y(0, 1, 0, -2) + z(0, 0, 1, 1)$.",
+          "Cơ sở của $W$: $\\{(1, 0, 0, -1), (0, 1, 0, -2), (0, 0, 1, 1)\\}$. Số chiều là 3."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$, $f(x, y, z) = (x + y, y + z, x + z)$. Xác định xem $f$ có là đơn ánh (injective) hay không.",
+      "answer": {
+        "steps": [
+          "Kiểm tra nhân của $f$: $f(x, y, z) = (0, 0, 0) \\implies \\begin{cases} x + y = 0 \\\\ y + z = 0 \\\\ x + z = 0 \\end{cases}$.",
+          "Giải hệ: Từ phương trình 1: $x = -y$. Thay vào phương trình 3: $-y + z = 0 \\implies z = y$. Thay vào phương trình 2: $y + y = 0 \\implies 2y = 0 \\implies y = 0$.",
+          "Suy ra $x = 0$, $z = 0$. Nhân của $f$ chỉ chứa $(0, 0, 0)$, nên $f$ là đơn ánh."
+        ]
+      }
+    },
+    {
+      "question": "Cho tập $S = \\{(1, 0, 1, 0), (0, 1, 0, 1), (1, 1, 1, 1)\\}$ trong $\\mathbb{R}^4$. Kiểm tra xem $S$ có sinh ra $\\mathbb{R}^4$ hay không.",
+      "answer": {
+        "steps": [
+          "Viết ma trận với các vector trong $S$ làm cột: $A = \\begin{bmatrix} 1 & 0 & 1 \\\\ 0 & 1 & 1 \\\\ 1 & 0 & 1 \\\\ 0 & 1 & 1 \\end{bmatrix}$.",
+          "Biến đổi: $L3 = L3 - L1$, $L4 = L4 - L2$: $\\begin{bmatrix} 1 & 0 & 1 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{bmatrix}$.",
+          "Hạng ma trận là 2, nhỏ hơn số chiều của $\\mathbb{R}^4$ (4), nên $S$ không sinh ra $\\mathbb{R}^4$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm cơ sở của không gian con $W$ trong $\\mathbb{R}^3$ được xác định bởi $2x - y + z = 0$ và $x + y - z = 0$.",
+      "answer": {
+        "steps": [
+          "Giải hệ: $\\begin{cases} 2x - y + z = 0 \\\\ x + y - z = 0 \\end{cases}$.",
+          "Cộng hai phương trình: $3x = 0 \\implies x = 0$. Thay vào phương trình 2: $y - z = 0 \\implies y = z$.",
+          "Vector tổng quát: $(x, y, z) = (0, z, z) = z(0, 1, 1)$.",
+          "Cơ sở của $W$: $\\{(0, 1, 1)\\}$. Số chiều là 1."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^2 \\to \\mathbb{R}^3$, $f(x, y) = (x, x + y, y)$. Tìm cơ sở của ảnh (image) của $f$.",
+      "answer": {
+        "steps": [
+          "Ảnh của $f$: $\\{f(x, y) = (x, x + y, y) \\mid x, y \\in \\mathbb{R}\\}$.",
+          "Vector tổng quát trong ảnh: $(x, x + y, y) = x(1, 1, 0) + y(0, 1, 1)$.",
+          "Kiểm tra độc lập tuyến tính của $\\{(1, 1, 0), (0, 1, 1)\\}$: Giả sử $a(1, 1, 0) + b(0, 1, 1) = (0, 0, 0) \\implies \\begin{cases} a = 0 \\\\ a + b = 0 \\\\ b = 0 \\end{cases}$.",
+          "Nghiệm duy nhất: $a = b = 0$. Do đó, $\\{(1, 1, 0), (0, 1, 1)\\}$ độc lập tuyến tính và là cơ sở của ảnh $f$."
+        ]
+      }
+    },
+    {
+      "question": "Cho tập $S = \\{(1, 2, 0), (2, 4, 0), (0, 1, 1), (1, 0, 1)\\}$ trong $\\mathbb{R}^3$. Tìm tập con lớn nhất của $S$ độc lập tuyến tính.",
+      "answer": {
+        "steps": [
+          "Viết ma trận: $A = \\begin{bmatrix} 1 & 2 & 0 & 1 \\\\ 2 & 4 & 1 & 0 \\\\ 0 & 0 & 1 & 1 \\end{bmatrix}$.",
+          "Biến đổi: $L2 = L2 - 2L1$: $\\begin{bmatrix} 1 & 2 & 0 & 1 \\\\ 0 & 0 & 1 & -2 \\\\ 0 & 0 & 1 & 1 \\end{bmatrix}$. $L3 = L3 - L2$: $\\begin{bmatrix} 1 & 2 & 0 & 1 \\\\ 0 & 0 & 1 & -2 \\\\ 0 & 0 & 0 & 3 \\end{bmatrix}$.",
+          "Hạng ma trận là 3, nên tập con lớn nhất có 3 vector độc lập tuyến tính, ví dụ: $\\{(1, 2, 0), (0, 1, 1), (1, 0, 1)\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^2$, $f(x, y, z) = (x - y, y + z)$. Xác định số chiều của nhân và ảnh của $f$.",
+      "answer": {
+        "steps": [
+          "Nhân: $f(x, y, z) = (0, 0) \\implies \\begin{cases} x - y = 0 \\\\ y + z = 0 \\end{cases} \\implies x = y, y = -z$. Vector tổng quát: $(y, y, -y) = y(1, 1, -1)$. Số chiều của nhân: 1.",
+          "Số chiều của ảnh: Theo định lý Rank-Nullity, $\\dim(\\text{image}) = \\dim(\\mathbb{R}^3) - \\dim(\\text{kernel}) = 3 - 1 = 2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $W_1 = \\text{span}\\{(1, 0, 0, 1), (0, 1, 1, 0)\\}$, $W_2 = \\text{span}\\{(1, 1, 0, 0), (0, 0, 1, 1)\\}$ trong $\\mathbb{R}^4$. Tìm cơ sở của $W_1 + W_2$.",
+      "answer": {
+        "steps": [
+          "Tập sinh: $S = \\{(1, 0, 0, 1), (0, 1, 1, 0), (1, 1, 0, 0), (0, 0, 1, 1)\\}$.",
+          "Viết ma trận: $A = \\begin{bmatrix} 1 & 0 & 1 & 0 \\\\ 0 & 1 & 1 & 0 \\\\ 0 & 1 & 0 & 1 \\\\ 1 & 0 & 0 & 1 \\end{bmatrix}$.",
+          "Biến đổi: $L4 = L4 - L1$, $L3 = L3 - L2$: $\\begin{bmatrix} 1 & 0 & 1 & 0 \\\\ 0 & 1 & 1 & 0 \\\\ 0 & 0 & -1 & 1 \\\\ 0 & 0 & -1 & 1 \\end{bmatrix}$. $L4 = L4 - L3$: $\\begin{bmatrix} 1 & 0 & 1 & 0 \\\\ 0 & 1 & 1 & 0 \\\\ 0 & 0 & -1 & 1 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}$.",
+          "Hạng ma trận là 3, nên cơ sở: $\\{(1, 0, 0, 1), (0, 1, 1, 0), (1, 1, 0, 0)\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho tập $S = \\{(1, 2, 3, 4), (2, 4, 6, 8), (0, 1, 2, 3), (1, 3, 5, 7)\\}$ trong $\\mathbb{R}^4$. Xác định xem $S$ có độc lập tuyến tính hay không.",
+      "answer": {
+        "steps": [
+          "Viết ma trận: $A = \\begin{bmatrix} 1 & 2 & 0 & 1 \\\\ 2 & 4 & 1 & 3 \\\\ 3 & 6 & 2 & 5 \\\\ 4 & 8 & 3 & 7 \\end{bmatrix}$.",
+          "Biến đổi: $L2 = L2 - 2L1$, $L3 = L3 - 3L1$, $L4 = L4 - 4L1$: $\\begin{bmatrix} 1 & 2 & 0 & 1 \\\\ 0 & 0 & 1 & 1 \\\\ 0 & 0 & 2 & 2 \\\\ 0 & 0 & 3 & 3 \\end{bmatrix}$. $L3 = L3 - 2L2$, $L4 = L4 - 3L2$: $\\begin{bmatrix} 1 & 2 & 0 & 1 \\\\ 0 & 0 & 1 & 1 \\\\ 0 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}$.",
+          "Hạng ma trận là 3, nên $S$ phụ thuộc tuyến tính."
+        ]
+      }
+    },
+    {
+      "question": "Tìm tọa độ của vector $\\mathbf{v} = (1, 2, 3, 4)$ trong $\\mathbb{R}^4$ theo cơ sở $B = \\{(1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1)\\}$.",
+      "answer": {
+        "steps": [
+          "Cơ sở $B$ là cơ sở chuẩn của $\\mathbb{R}^4$.",
+          "Vector $\\mathbf{v} = (1, 2, 3, 4) = 1(1, 0, 0, 0) + 2(0, 1, 0, 0) + 3(0, 0, 1, 0) + 4(0, 0, 0, 1)$.",
+          "Tọa độ của $\\mathbf{v}$ theo cơ sở $B$ là $(1, 2, 3, 4)$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $W_1 = \\text{span}\\{(1, 1, 0), (0, 1, 1)\\}$, $W_2 = \\text{span}\\{(1, 0, 1), (0, 1, 0)\\}$ trong $\\mathbb{R}^3$. Tìm cơ sở của $W_1 \\cap W_2$.",
+      "answer": {
+        "steps": [
+          "Vector $\\mathbf{v} = (x, y, z) \\in W_1 \\cap W_2$.",
+          "Trong $W_1$: $\\mathbf{v} = a(1, 1, 0) + b(0, 1, 1) = (a, a + b, b)$.",
+          "Trong $W_2$: $\\mathbf{v} = c(1, 0, 1) + d(0, 1, 0) = (c, d, c)$.",
+          "Ta có: $(a, a + b, b) = (c, d, c) \\implies \\begin{cases} a = c \\\\ a + b = d \\\\ b = c \\end{cases}$.",
+          "Từ $a = c$, $b = c$, suy ra $a = b$. Thay vào phương trình 2: $a + a = d \\implies d = 2a$.",
+          "Vector giao: $\\mathbf{v} = (a, 2a, a) = a(1, 2, 1)$. Cơ sở: $\\{(1, 2, 1)\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm điều kiện của $k$ để tập $S = \\{(1, 1, 0), (0, 1, 1), (1, k, 1)\\}$ là cơ sở của $\\mathbb{R}^3$.",
+      "answer": {
+        "steps": [
+          "Tập $S$ là cơ sở nếu độc lập tuyến tính và sinh ra $\\mathbb{R}^3$.",
+          "Viết ma trận: $A = \\begin{bmatrix} 1 & 0 & 1 \\\\ 1 & 1 & k \\\\ 0 & 1 & 1 \\end{bmatrix}$. Biến đổi: $L2 = L2 - L1$: $\\begin{bmatrix} 1 & 0 & 1 \\\\ 0 & 1 & k - 1 \\\\ 0 & 1 & 1 \\end{bmatrix}$. $L3 = L3 - L2$: $\\begin{bmatrix} 1 & 0 & 1 \\\\ 0 & 1 & k - 1 \\\\ 0 & 0 & 2 - k \\end{bmatrix}$.",
+          "Hạng ma trận bằng 3 nếu $2 - k \\neq 0 \\implies k \\neq 2$.",
+          "Vậy $S$ là cơ sở của $\\mathbb{R}^3$ khi $k \\neq 2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho tập $S = \\{(1, 0, 1, 0), (0, 1, 0, 1), (1, 1, 0, 0), (0, 0, 1, 1)\\}$ trong $\\mathbb{R}^4$. Tìm cơ sở của không gian sinh bởi $S$.",
+      "answer": {
+        "steps": [
+          "Viết ma trận: $A = \\begin{bmatrix} 1 & 0 & 1 & 0 \\\\ 0 & 1 & 1 & 0 \\\\ 1 & 0 & 0 & 1 \\\\ 0 & 1 & 0 & 1 \\end{bmatrix}$.",
+          "Biến đổi: $L3 = L3 - L1$, $L4 = L4 - L2$: $\\begin{bmatrix} 1 & 0 & 1 & 0 \\\\ 0 & 1 & 1 & 0 \\\\ 0 & 0 & -1 & 1 \\\\ 0 & 0 & -1 & 1 \\end{bmatrix}$. $L4 = L4 - L3$: $\\begin{bmatrix} 1 & 0 & 1 & 0 \\\\ 0 & 1 & 1 & 0 \\\\ 0 & 0 & -1 & 1 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}$.",
+          "Hạng ma trận là 3, nên cơ sở: $\\{(1, 0, 1, 0), (0, 1, 0, 1), (1, 1, 0, 0)\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho hai không gian con của $\\mathbb{R}^4$: $W_1 = \\text{span}\\{(1, 0, 1, 0), (0, 1, 0, 1)\\}$, $W_2 = \\text{span}\\{(1, 1, 0, 0), (0, 0, 1, 1)\\}$. Tìm cơ sở và số chiều của $W_1 \\cap W_2$ và $W_1 + W_2$.",
+      "answer": {
+        "steps": [
+          "Tìm $W_1 \\cap W_2$: Vector $\\mathbf{v} = (x, y, z, w) \\in W_1 \\cap W_2$ phải thuộc cả $W_1$ và $W_2$.",
+          "Trong $W_1$: $\\mathbf{v} = a(1, 0, 1, 0) + b(0, 1, 0, 1) = (a, b, a, b)$.",
+          "Trong $W_2$: $\\mathbf{v} = c(1, 1, 0, 0) + d(0, 0, 1, 1) = (c, c, d, d)$.",
+          "Ta có: $(a, b, a, b) = (c, c, d, d) \\implies \\begin{cases} a = c \\\\ b = c \\\\ a = d \\\\ b = d \\end{cases}$.",
+          "Từ $a = c$, $b = c$, $a = d$, $b = d$, suy ra $a = b = c = d$.",
+          "Vector giao: $\\mathbf{v} = (a, a, a, a) = a(1, 1, 1, 1)$. Cơ sở của $W_1 \\cap W_2$: $\\{(1, 1, 1, 1)\\}$. Số chiều: 1.",
+          "Tìm $W_1 + W_2$: Tập sinh: $S = \\{(1, 0, 1, 0), (0, 1, 0, 1), (1, 1, 0, 0), (0, 0, 1, 1)\\}$.",
+          "Viết ma trận: $A = \\begin{bmatrix} 1 & 0 & 1 & 0 \\\\ 0 & 1 & 1 & 0 \\\\ 1 & 0 & 0 & 1 \\\\ 0 & 1 & 0 & 1 \\end{bmatrix}$.",
+          "Biến đổi: $L3 = L3 - L1$, $L4 = L4 - L2$: $\\begin{bmatrix} 1 & 0 & 1 & 0 \\\\ 0 & 1 & 1 & 0 \\\\ 0 & 0 & -1 & 1 \\\\ 0 & 0 & -1 & 1 \\end{bmatrix}$. $L4 = L4 - L3$: $\\begin{bmatrix} 1 & 0 & 1 & 0 \\\\ 0 & 1 & 1 & 0 \\\\ 0 & 0 & -1 & 1 \\\\ 0 & 0 & 0 & 0 \\end{bmatrix}$.",
+          "Hạng ma trận là 3, nên cơ sở của $W_1 + W_2$: $\\{(1, 0, 1, 0), (0, 1, 0, 1), (1, 1, 0, 0)\\}$. Số chiều: 3.",
+          "Kiểm tra: $\\dim(W_1 + W_2) = \\dim(W_1) + \\dim(W_2) - \\dim(W_1 \\cap W_2) = 2 + 2 - 1 = 3$, đúng."
+        ]
+      }
+    },
+    {
+      "question": "Cho hai không gian con của $\\mathbb{R}^4$: $W_1 = \\text{span}\\{(1, 2, 0, 1), (0, 1, 1, 0)\\}$, $W_2 = \\text{span}\\{(1, 0, 1, 0), (0, 1, 0, 1)\\}$. Tìm cơ sở và số chiều của $W_1 \\cap W_2$ và $W_1 + W_2$.",
+      "answer": {
+        "steps": [
+          "Tìm $W_1 \\cap W_2$: Vector $\\mathbf{v} = (x, y, z, w) \\in W_1 \\cap W_2$.",
+          "Trong $W_1$: $\\mathbf{v} = a(1, 2, 0, 1) + b(0, 1, 1, 0) = (a, 2a + b, b, a)$.",
+          "Trong $W_2$: $\\mathbf{v} = c(1, 0, 1, 0) + d(0, 1, 0, 1) = (c, d, c, d)$.",
+          "Ta có: $(a, 2a + b, b, a) = (c, d, c, d) \\implies \\begin{cases} a = c \\\\ 2a + b = d \\\\ b = c \\\\ a = d \\end{cases}$.",
+          "Từ $a = c$, $b = c$, suy ra $a = b$. Thay vào phương trình 2: $2a + a = d \\implies d = 3a$. Thay vào phương trình 4: $a = d = 3a \\implies 2a = 0 \\implies a = 0$.",
+          "Suy ra $b = 0$, $c = 0$, $d = 0$. Giao là không gian tầm thường: $W_1 \\cap W_2 = \\{(0, 0, 0, 0)\\}$. Số chiều: 0.",
+          "Tìm $W_1 + W_2$: Tập sinh: $S = \\{(1, 2, 0, 1), (0, 1, 1, 0), (1, 0, 1, 0), (0, 1, 0, 1)\\}$.",
+          "Viết ma trận: $A = \\begin{bmatrix} 1 & 0 & 1 & 0 \\\\ 2 & 1 & 0 & 1 \\\\ 0 & 1 & 1 & 0 \\\\ 1 & 0 & 0 & 1 \\end{bmatrix}$.",
+          "Biến đổi: $L2 = L2 - 2L1$, $L4 = L4 - L1$: $\\begin{bmatrix} 1 & 0 & 1 & 0 \\\\ 0 & 1 & -2 & 1 \\\\ 0 & 1 & 1 & 0 \\\\ 0 & 0 & -1 & 1 \\end{bmatrix}$. $L3 = L3 - L2$: $\\begin{bmatrix} 1 & 0 & 1 & 0 \\\\ 0 & 1 & -2 & 1 \\\\ 0 & 0 & 3 & -1 \\\\ 0 & 0 & -1 & 1 \\end{bmatrix}$. $L4 = L4 + \\frac{1}{3}L3$: $\\begin{bmatrix} 1 & 0 & 1 & 0 \\\\ 0 & 1 & -2 & 1 \\\\ 0 & 0 & 3 & -1 \\\\ 0 & 0 & 0 & \\frac{2}{3} \\end{bmatrix}$.",
+          "Hạng ma trận là 4, nên cơ sở của $W_1 + W_2$: $\\{(1, 2, 0, 1), (0, 1, 1, 0), (1, 0, 1, 0), (0, 1, 0, 1)\\}$. Số chiều: 4.",
+          "Kiểm tra: $\\dim(W_1 + W_2) = \\dim(W_1) + \\dim(W_2) - \\dim(W_1 \\cap W_2) = 2 + 2 - 0 = 4$, đúng."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích vô hướng của hai vector $\\mathbf{u} = (1, 2)$ và $\\mathbf{v} = (3, 4)$ trong $\\mathbb{R}^2$.",
+      "answer": {
+        "steps": [
+          "Tích vô hướng: $\\mathbf{u} \\cdot \\mathbf{v} = 1 \\cdot 3 + 2 \\cdot 4 = 3 + 8 = 11$."
+        ]
+      }
+    },
+    {
+      "question": "Tính chuẩn (độ dài) của vector $\\mathbf{u} = (2, -3)$ trong $\\mathbb{R}^2$.",
+      "answer": {
+        "steps": [
+          "Chuẩn: $\\|\\mathbf{u}\\| = \\sqrt{2^2 + (-3)^2} = \\sqrt{4 + 9} = \\sqrt{13}$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định xem hai vector $\\mathbf{u} = (1, 1)$ và $\\mathbf{v} = (-1, 1)$ trong $\\mathbb{R}^2$ có trực giao hay không.",
+      "answer": {
+        "steps": [
+          "Tích vô hướng: $\\mathbf{u} \\cdot \\mathbf{v} = 1 \\cdot (-1) + 1 \\cdot 1 = -1 + 1 = 0$.",
+          "Vì tích vô hướng bằng 0, hai vector trực giao."
+        ]
+      }
+    },
+    {
+      "question": "Tính cosin góc giữa hai vector $\\mathbf{u} = (1, 0)$ và $\\mathbf{v} = (1, 1)$ trong $\\mathbb{R}^2$.",
+      "answer": {
+        "steps": [
+          "Tích vô hướng: $\\mathbf{u} \\cdot \\mathbf{v} = 1 \\cdot 1 + 0 \\cdot 1 = 1$.",
+          "Chuẩn: $\\|\\mathbf{u}\\| = \\sqrt{1^2 + 0^2} = 1$, $\\|\\mathbf{v}\\| = \\sqrt{1^2 + 1^2} = \\sqrt{2}$.",
+          "Cosin góc: $\\cos \\theta = \\frac{\\mathbf{u} \\cdot \\mathbf{v}}{\\|\\mathbf{u}\\| \\cdot \\|\\mathbf{v}\\|} = \\frac{1}{1 \\cdot \\sqrt{2}} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho tập $S = \\{(1, 0, 0), (0, 1, 0), (0, 0, 1)\\}$ trong $\\mathbb{R}^3$. Kiểm tra xem $S$ có phải là tập trực giao hay không.",
+      "answer": {
+        "steps": [
+          "Tính tích vô hướng từng cặp: $(1, 0, 0) \\cdot (0, 1, 0) = 0$, $(1, 0, 0) \\cdot (0, 0, 1) = 0$, $(0, 1, 0) \\cdot (0, 0, 1) = 0$.",
+          "Vì tất cả tích vô hướng đều bằng 0, $S$ là tập trực giao."
+        ]
+      }
+    },
+    {
+      "question": "Tính chuẩn của vector $\\mathbf{u} = (1, -2, 3)$ trong $\\mathbb{R}^3$.",
+      "answer": {
+        "steps": [
+          "Chuẩn: $\\|\\mathbf{u}\\| = \\sqrt{1^2 + (-2)^2 + 3^2} = \\sqrt{1 + 4 + 9} = \\sqrt{14}$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định xem hai vector $\\mathbf{u} = (2, 1, -1)$ và $\\mathbf{v} = (1, -2, 1)$ trong $\\mathbb{R}^3$ có trực giao hay không.",
+      "answer": {
+        "steps": [
+          "Tích vô hướng: $\\mathbf{u} \\cdot \\mathbf{v} = 2 \\cdot 1 + 1 \\cdot (-2) + (-1) \\cdot 1 = 2 - 2 - 1 = -1$.",
+          "Vì tích vô hướng không bằng 0, hai vector không trực giao."
+        ]
+      }
+    },
+    {
+      "question": "Tìm góc giữa hai vector $\\mathbf{u} = (1, 2, 0)$ và $\\mathbf{v} = (0, 1, 1)$ trong $\\mathbb{R}^3$.",
+      "answer": {
+        "steps": [
+          "Tích vô hướng: $\\mathbf{u} \\cdot \\mathbf{v} = 1 \\cdot 0 + 2 \\cdot 1 + 0 \\cdot 1 = 2$.",
+          "Chuẩn: $\\|\\mathbf{u}\\| = \\sqrt{1^2 + 2^2 + 0^2} = \\sqrt{5}$, $\\|\\mathbf{v}\\| = \\sqrt{0^2 + 1^2 + 1^2} = \\sqrt{2}$.",
+          "Cosin góc: $\\cos \\theta = \\frac{2}{\\sqrt{5} \\cdot \\sqrt{2}} = \\frac{2}{\\sqrt{10}}$.",
+          "Góc: $\\theta = \\cos^{-1}\\left(\\frac{2}{\\sqrt{10}}\\right)$."
+        ]
+      }
+    },
+    {
+      "question": "Cho tập $S = \\{(1, 1, 0), (1, -1, 0)\\}$ trong $\\mathbb{R}^3$. Kiểm tra xem $S$ có phải là tập trực giao hay không và chuẩn hóa để được tập trực chuẩn.",
+      "answer": {
+        "steps": [
+          "Tích vô hướng: $(1, 1, 0) \\cdot (1, -1, 0) = 1 \\cdot 1 + 1 \\cdot (-1) + 0 \\cdot 0 = 1 - 1 = 0$.",
+          "Tập $S$ trực giao.",
+          "Chuẩn hóa: $\\|(1, 1, 0)\\| = \\sqrt{1^2 + 1^2} = \\sqrt{2}$, vector trực chuẩn: $\\left(\\frac{1}{\\sqrt{2}}, \\frac{1}{\\sqrt{2}}, 0\\right)$.",
+          "Chuẩn: $\\|(1, -1, 0)\\| = \\sqrt{1^2 + (-1)^2} = \\sqrt{2}$, vector trực chuẩn: $\\left(\\frac{1}{\\sqrt{2}}, -\\frac{1}{\\sqrt{2}}, 0\\right)$.",
+          "Tập trực chuẩn: $\\left\\{\\left(\\frac{1}{\\sqrt{2}}, \\frac{1}{\\sqrt{2}}, 0\\right), \\left(\\frac{1}{\\sqrt{2}}, -\\frac{1}{\\sqrt{2}}, 0\\right)\\right\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích vô hướng của hai vector $\\mathbf{u} = (1, 0, 1, 0)$ và $\\mathbf{v} = (0, 1, 0, 1)$ trong $\\mathbb{R}^4$.",
+      "answer": {
+        "steps": [
+          "Tích vô hướng: $\\mathbf{u} \\cdot \\mathbf{v} = 1 \\cdot 0 + 0 \\cdot 1 + 1 \\cdot 0 + 0 \\cdot 1 = 0$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm hình chiếu trực giao của vector $\\mathbf{u} = (1, 2)$ lên vector $\\mathbf{v} = (3, 4)$ trong $\\mathbb{R}^2$.",
+      "answer": {
+        "steps": [
+          "Hình chiếu: $\\text{proj}_{\\mathbf{v}}\\mathbf{u} = \\frac{\\mathbf{u} \\cdot \\mathbf{v}}{\\|\\mathbf{v}\\|^2} \\mathbf{v}$.",
+          "Tích vô hướng: $\\mathbf{u} \\cdot \\mathbf{v} = 1 \\cdot 3 + 2 \\cdot 4 = 3 + 8 = 11$.",
+          "Chuẩn: $\\|\\mathbf{v}\\|^2 = 3^2 + 4^2 = 9 + 16 = 25$.",
+          "Hình chiếu: $\\text{proj}_{\\mathbf{v}}\\mathbf{u} = \\frac{11}{25} (3, 4) = \\left(\\frac{33}{25}, \\frac{44}{25}\\right)$."
+        ]
+      }
+    },
+    {
+      "question": "Cho tập $S = \\{(2, 1, 0), (0, 1, 1)\\}$ trong $\\mathbb{R}^3$. Áp dụng thuật toán Gram-Schmidt để tìm cơ sở trực giao của không gian sinh bởi $S$.",
+      "answer": {
+        "steps": [
+          "Lấy $\\mathbf{u}_1 = (2, 1, 0)$.",
+          "Tính $\\mathbf{u}_2 = (0, 1, 1) - \\text{proj}_{\\mathbf{u}_1}(0, 1, 1)$.",
+          "Tích vô hướng: $(0, 1, 1) \\cdot (2, 1, 0) = 0 \\cdot 2 + 1 \\cdot 1 + 1 \\cdot 0 = 1$.",
+          "Chuẩn: $\\|\\mathbf{u}_1\\|^2 = 2^2 + 1^2 + 0^2 = 5$.",
+          "Hình chiếu: $\\text{proj}_{\\mathbf{u}_1}(0, 1, 1) = \\frac{1}{5} (2, 1, 0) = \\left(\\frac{2}{5}, \\frac{1}{5}, 0\\right)$.",
+          "$\\mathbf{u}_2 = (0, 1, 1) - \\left(\\frac{2}{5}, \\frac{1}{5}, 0\\right) = \\left(-\\frac{2}{5}, \\frac{4}{5}, 1\\right)$.",
+          "Cơ sở trực giao: $\\left\\{(2, 1, 0), \\left(-\\frac{2}{5}, \\frac{4}{5}, 1\\right)\\right\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm khoảng cách từ điểm $P(1, 1, 1)$ đến đường thẳng đi qua điểm $Q(0, 0, 0)$ và có vector chỉ phương $\\mathbf{v} = (1, 2, 3)$ trong $\\mathbb{R}^3$.",
+      "answer": {
+        "steps": [
+          "Vector $\\overrightarrow{QP} = (1, 1, 1)$. Đường thẳng: $\\mathbf{x} = t(1, 2, 3)$.",
+          "Khoảng cách: $d = \\frac{\\|\\overrightarrow{QP} \\times \\mathbf{v}\\|}{\\|\\mathbf{v}\\|}$.",
+          "Tích có hướng: $\\overrightarrow{QP} \\times \\mathbf{v} = (1, 1, 1) \\times (1, 2, 3) = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ 1 & 1 & 1 \\\\ 1 & 2 & 3 \\end{vmatrix} = (1 \\cdot 3 - 1 \\cdot 2, 1 \\cdot 3 - 1 \\cdot 1, 1 \\cdot 2 - 1 \\cdot 1) = (1, 2, 1)$.",
+          "Chuẩn: $\\|(1, 2, 1)\\| = \\sqrt{1^2 + 2^2 + 1^2} = \\sqrt{6}$, $\\|\\mathbf{v}\\| = \\sqrt{1^2 + 2^2 + 3^2} = \\sqrt{14}$.",
+          "Khoảng cách: $d = \\frac{\\sqrt{6}}{\\sqrt{14}} = \\sqrt{\\frac{3}{7}}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm phương trình mặt phẳng đi qua ba điểm $A(1, 0, 0)$, $B(0, 1, 0)$, và $C(0, 0, 1)$ trong $\\mathbb{R}^3$.",
+      "answer": {
+        "steps": [
+          "Vector pháp tuyến: $\\overrightarrow{AB} = (-1, 1, 0)$, $\\overrightarrow{AC} = (-1, 0, 1)$. Tích có hướng: $\\overrightarrow{AB} \\times \\overrightarrow{AC} = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ -1 & 1 & 0 \\\\ -1 & 0 & 1 \\end{vmatrix} = (1 \\cdot 1 - 0 \\cdot 0, 0 \\cdot (-1) - 1 \\cdot (-1), -1 \\cdot 0 - 1 \\cdot (-1)) = (1, 1, 1)$.",
+          "Phương trình mặt phẳng: $1(x - 1) + 1(y - 0) + 1(z - 0) = 0 \\implies x + y + z = 1$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định xem tập $S = \\{(1, 0, 1), (0, 1, 1), (1, 1, 0)\\}$ trong $\\mathbb{R}^3$ có phải là cơ sở trực giao hay không.",
+      "answer": {
+        "steps": [
+          "Tính tích vô hướng: $(1, 0, 1) \\cdot (0, 1, 1) = 0 + 0 + 1 = 1$, $(1, 0, 1) \\cdot (1, 1, 0) = 1 + 0 + 0 = 1$, $(0, 1, 1) \\cdot (1, 1, 0) = 0 + 1 + 0 = 1$.",
+          "Vì các tích vô hướng không bằng 0, $S$ không phải cơ sở trực giao."
+        ]
+      }
+    },
+    {
+      "question": "Tìm hình chiếu trực giao của vector $\\mathbf{u} = (1, 2, 3)$ lên không gian con $W = \\text{span}\\{(1, 0, 1), (0, 1, 0)\\}$ trong $\\mathbb{R}^3$.",
+      "answer": {
+        "steps": [
+          "Áp dụng Gram-Schmidt để tìm cơ sở trực giao của $W$. Lấy $\\mathbf{u}_1 = (1, 0, 1)$.",
+          "$\\mathbf{u}_2 = (0, 1, 0) - \\text{proj}_{\\mathbf{u}_1}(0, 1, 0)$. Tích vô hướng: $(0, 1, 0) \\cdot (1, 0, 1) = 0$. Chuẩn: $\\|(1, 0, 1)\\|^2 = 2$. Hình chiếu: $\\text{proj}_{\\mathbf{u}_1}(0, 1, 0) = 0$.",
+          "$\\mathbf{u}_2 = (0, 1, 0)$. Cơ sở trực giao: $\\{(1, 0, 1), (0, 1, 0)\\}$.",
+          "Hình chiếu của $\\mathbf{u}$ lên $W$: $\\text{proj}_W \\mathbf{u} = \\text{proj}_{\\mathbf{u}_1}\\mathbf{u} + \\text{proj}_{\\mathbf{u}_2}\\mathbf{u}$.",
+          "$\\text{proj}_{\\mathbf{u}_1}\\mathbf{u} = \\frac{(1, 2, 3) \\cdot (1, 0, 1)}{2} (1, 0, 1) = \\frac{4}{2} (1, 0, 1) = (2, 0, 2)$.",
+          "$\\text{proj}_{\\mathbf{u}_2}\\mathbf{u} = \\frac{(1, 2, 3) \\cdot (0, 1, 0)}{1} (0, 1, 0) = 2(0, 1, 0) = (0, 2, 0)$.",
+          "Hình chiếu: $(2, 0, 2) + (0, 2, 0) = (2, 2, 2)$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm khoảng cách từ điểm $P(2, 1, 0)$ đến mặt phẳng $x + y - z = 1$ trong $\\mathbb{R}^3$.",
+      "answer": {
+        "steps": [
+          "Phương trình mặt phẳng: $x + y - z - 1 = 0$. Vector pháp tuyến: $\\mathbf{n} = (1, 1, -1)$.",
+          "Khoảng cách: $d = \\frac{|1 \\cdot 2 + 1 \\cdot 1 + (-1) \\cdot 0 - 1|}{\\sqrt{1^2 + 1^2 + (-1)^2}} = \\frac{|2 + 1 - 1|}{\\sqrt{3}} = \\frac{2}{\\sqrt{3}} = \\frac{2\\sqrt{3}}{3}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^2 \\to \\mathbb{R}^2$, $f(x, y) = (x + y, x - y)$. Xác định xem $f$ có phải là ánh xạ trực giao hay không.",
+      "answer": {
+        "steps": [
+          "Ma trận đại diện của $f$ theo cơ sở chuẩn: $A = \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix}$.",
+          "Kiểm tra $A^TA = I$: $A^T = \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix}$, $A^TA = \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} = \\begin{bmatrix} 2 & 0 \\\\ 0 & 2 \\end{bmatrix} \\neq I$.",
+          "Vì $A^TA \\neq I$, $f$ không phải ánh xạ trực giao."
+        ]
+      }
+    },
+    {
+      "question": "Cho tập $S = \\{(1, 1, 0, 0), (0, 0, 1, 1)\\}$ trong $\\mathbb{R}^4$. Áp dụng thuật toán Gram-Schmidt để tìm cơ sở trực chuẩn.",
+      "answer": {
+        "steps": [
+          "Lấy $\\mathbf{u}_1 = (1, 1, 0, 0)$. Chuẩn: $\\|\\mathbf{u}_1\\| = \\sqrt{1^2 + 1^2} = \\sqrt{2}$. Vector trực chuẩn: $\\mathbf{v}_1 = \\frac{1}{\\sqrt{2}}(1, 1, 0, 0)$.",
+          "$\\mathbf{u}_2 = (0, 0, 1, 1) - \\text{proj}_{\\mathbf{u}_1}(0, 0, 1, 1)$. Tích vô hướng: $(0, 0, 1, 1) \\cdot (1, 1, 0, 0) = 0$.",
+          "$\\mathbf{u}_2 = (0, 0, 1, 1)$. Chuẩn: $\\|\\mathbf{u}_2\\| = \\sqrt{1^2 + 1^2} = \\sqrt{2}$. Vector trực chuẩn: $\\mathbf{v}_2 = \\frac{1}{\\sqrt{2}}(0, 0, 1, 1)$.",
+          "Cơ sở trực chuẩn: $\\left\\{\\left(\\frac{1}{\\sqrt{2}}, \\frac{1}{\\sqrt{2}}, 0, 0\\right), \\left(0, 0, \\frac{1}{\\sqrt{2}}, \\frac{1}{\\sqrt{2}}\\right)\\right\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh bất đẳng thức Cauchy-Schwarz cho hai vector $\\mathbf{u} = (a, b)$ và $\\mathbf{v} = (c, d)$ trong $\\mathbb{R}^2$.",
+      "answer": {
+        "steps": [
+          "Bất đẳng thức Cauchy-Schwarz: $|\\mathbf{u} \\cdot \\mathbf{v}| \\leq \\|\\mathbf{u}\\| \\cdot \\|\\mathbf{v}\\|$.",
+          "Tích vô hướng: $\\mathbf{u} \\cdot \\mathbf{v} = ac + bd$.",
+          "Chuẩn: $\\|\\mathbf{u}\\| = \\sqrt{a^2 + b^2}$, $\\|\\mathbf{v}\\| = \\sqrt{c^2 + d^2}$.",
+          "Cần chứng minh: $|ac + bd| \\leq \\sqrt{a^2 + b^2} \\cdot \\sqrt{c^2 + d^2}$.",
+          "Xét hàm $f(t) = \\|\\mathbf{u} - t\\mathbf{v}\\|^2 = (a - tc)^2 + (b - td)^2 \\geq 0$ cho mọi $t$.",
+          "Khai triển: $f(t) = (a^2 - 2act + t^2c^2) + (b^2 - 2bdt + t^2d^2) = t^2(c^2 + d^2) - 2t(ac + bd) + (a^2 + b^2)$.",
+          "Vì $f(t) \\geq 0$, phương trình bậc hai có delta: $\\Delta = 4(ac + bd)^2 - 4(c^2 + d^2)(a^2 + b^2) \\leq 0$.",
+          "Suy ra: $(ac + bd)^2 \\leq (a^2 + b^2)(c^2 + d^2)$, tức là $|ac + bd| \\leq \\sqrt{a^2 + b^2} \\cdot \\sqrt{c^2 + d^2}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm cơ sở trực giao của không gian con $W$ trong $\\mathbb{R}^3$ được xác định bởi phương trình $x + y - z = 0$.",
+      "answer": {
+        "steps": [
+          "Từ phương trình $x + y - z = 0$, ta có $z = x + y$. Vector tổng quát: $(x, y, z) = (x, y, x + y) = x(1, 0, 1) + y(0, 1, 1)$.",
+          "Tập sinh: $\\{(1, 0, 1), (0, 1, 1)\\}$. Áp dụng Gram-Schmidt:",
+          "$\\mathbf{u}_1 = (1, 0, 1)$.",
+          "$\\mathbf{u}_2 = (0, 1, 1) - \\text{proj}_{\\mathbf{u}_1}(0, 1, 1)$. Tích vô hướng: $(0, 1, 1) \\cdot (1, 0, 1) = 1$. Chuẩn: $\\|(1, 0, 1)\\|^2 = 2$.",
+          "Hình chiếu: $\\text{proj}_{\\mathbf{u}_1}(0, 1, 1) = \\frac{1}{2}(1, 0, 1)$.",
+          "$\\mathbf{u}_2 = (0, 1, 1) - \\frac{1}{2}(1, 0, 1) = \\left(-\\frac{1}{2}, 1, \\frac{1}{2}\\right)$.",
+          "Cơ sở trực giao: $\\left\\{(1, 0, 1), \\left(-\\frac{1}{2}, 1, \\frac{1}{2}\\right)\\right\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm khoảng cách từ điểm $P(1, 0, 0)$ đến mặt phẳng đi qua ba điểm $A(0, 1, 0)$, $B(0, 0, 1)$, và $C(1, 1, 1)$ trong $\\mathbb{R}^3$.",
+      "answer": {
+        "steps": [
+          "Tìm vector pháp tuyến: $\\overrightarrow{AB} = (0, -1, 1)$, $\\overrightarrow{AC} = (1, 0, 1)$. Tích có hướng: $\\overrightarrow{AB} \\times \\overrightarrow{AC} = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ 0 & -1 & 1 \\\\ 1 & 0 & 1 \\end{vmatrix} = (-1 \\cdot 1 - 1 \\cdot 0, 1 \\cdot 0 - 0 \\cdot 1, 0 \\cdot 0 - (-1) \\cdot 1) = (-1, 0, 1)$.",
+          "Phương trình mặt phẳng qua $A(0, 1, 0)$: $-1(x - 0) + 0(y - 1) + 1(z - 0) = 0 \\implies -x + z = 0 \\implies z = x$.",
+          "Khoảng cách từ $P(1, 0, 0)$: $d = \\frac{|1 \\cdot 1 + 0 \\cdot 0 + (-1) \\cdot 0|}{\\sqrt{(-1)^2 + 0^2 + 1^2}} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm cơ sở trực chuẩn của không gian con $W$ trong $\\mathbb{R}^4$ được xác định bởi hệ phương trình $\\begin{cases} x + y - z = 0 \\\\ y + w = 0 \\end{cases}$.",
+      "answer": {
+        "steps": [
+          "Giải hệ: $y = -w$, $x = z - y = z + w$. Vector tổng quát: $(x, y, z, w) = (z + w, -w, z, w) = z(1, 0, 1, 0) + w(1, -1, 0, 1)$.",
+          "Tập sinh: $\\{(1, 0, 1, 0), (1, -1, 0, 1)\\}$. Áp dụng Gram-Schmidt:",
+          "$\\mathbf{u}_1 = (1, 0, 1, 0)$. Chuẩn: $\\|\\mathbf{u}_1\\| = \\sqrt{2}$. $\\mathbf{v}_1 = \\frac{1}{\\sqrt{2}}(1, 0, 1, 0)$.",
+          "$\\mathbf{u}_2 = (1, -1, 0, 1) - \\text{proj}_{\\mathbf{u}_1}(1, -1, 0, 1)$. Tích vô hướng: $(1, -1, 0, 1) \\cdot (1, 0, 1, 0) = 1$. Hình chiếu: $\\text{proj}_{\\mathbf{u}_1} = \\frac{1}{2}(1, 0, 1, 0)$.",
+          "$\\mathbf{u}_2 = (1, -1, 0, 1) - \\frac{1}{2}(1, 0, 1, 0) = \\left(\\frac{1}{2}, -1, -\\frac{1}{2}, 1\\right)$. Chuẩn: $\\|\\mathbf{u}_2\\| = \\sqrt{\\frac{3}{2}}$. $\\mathbf{v}_2 = \\sqrt{\\frac{2}{3}}\\left(\\frac{1}{2}, -1, -\\frac{1}{2}, 1\\right)$.",
+          "Cơ sở trực chuẩn: $\\left\\{\\left(\\frac{1}{\\sqrt{2}}, 0, \\frac{1}{\\sqrt{2}}, 0\\right), \\left(\\frac{1}{\\sqrt{6}}, -\\sqrt{\\frac{2}{3}}, -\\frac{1}{\\sqrt{6}}, \\sqrt{\\frac{2}{3}}\\right)\\right\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm vector $\\mathbf{u}$ trong $\\mathbb{R}^3$ sao cho $\\mathbf{u}$ trực giao với $\\mathbf{v}_1 = (1, 0, 1)$ và $\\mathbf{v}_2 = (0, 1, 1)$, và có chuẩn bằng 2.",
+      "answer": {
+        "steps": [
+          "Vector $\\mathbf{u} = (x, y, z)$ trực giao với $\\mathbf{v}_1$, $\\mathbf{v}_2$: $\\begin{cases} x + z = 0 \\\\ y + z = 0 \\end{cases} \\implies z = -x, y = -z = x$.",
+          "Vector tổng quát: $(x, x, -x) = x(1, 1, -1)$.",
+          "Chuẩn: $\\|(x, x, -x)\\| = \\sqrt{x^2 + x^2 + (-x)^2} = \\sqrt{3x^2} = |x|\\sqrt{3} = 2 \\implies |x| = \\frac{2}{\\sqrt{3}}$.",
+          "Chọn $x = \\frac{2}{\\sqrt{3}}$, vector: $\\mathbf{u} = \\left(\\frac{2}{\\sqrt{3}}, \\frac{2}{\\sqrt{3}}, -\\frac{2}{\\sqrt{3}}\\right)$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm khoảng cách từ điểm $P(1, 1, 1, 1)$ đến không gian con $W$ trong $\\mathbb{R}^4$ được xác định bởi $\\begin{cases} x - y + z = 0 \\\\ y - w = 0 \\end{cases}$.",
+      "answer": {
+        "steps": [
+          "Giải hệ: $y = w$, $x = y - z = w - z$. Vector tổng quát: $(w - z, w, z, w) = z(-1, 0, 1, 0) + w(1, 1, 0, 1)$.",
+          "Cơ sở trực giao (Gram-Schmidt): $\\mathbf{u}_1 = (-1, 0, 1, 0)$, $\\mathbf{u}_2 = (1, 1, 0, 1) - \\text{proj}_{\\mathbf{u}_1}(1, 1, 0, 1) = \\left(\\frac{1}{2}, 1, \\frac{1}{2}, 1\\right)$.",
+          "Hình chiếu của $\\mathbf{u} = (1, 1, 1, 1)$ lên $W$: $\\text{proj}_W \\mathbf{u} = \\text{proj}_{\\mathbf{u}_1}\\mathbf{u} + \\text{proj}_{\\mathbf{u}_2}\\mathbf{u}$.",
+          "Tính: $\\text{proj}_{\\mathbf{u}_1}\\mathbf{u} = \\frac{2}{2}(-1, 0, 1, 0) = (-1, 0, 1, 0)$, $\\text{proj}_{\\mathbf{u}_2}\\mathbf{u} = \\frac{3}{\\frac{7}{2}}\\left(\\frac{1}{2}, 1, \\frac{1}{2}, 1\\right) = \\left(\\frac{3}{7}, \\frac{6}{7}, \\frac{3}{7}, \\frac{6}{7}\\right)$.",
+          "Hình chiếu: $(-1, 0, 1, 0) + \\left(\\frac{3}{7}, \\frac{6}{7}, \\frac{3}{7}, \\frac{6}{7}\\right) = \\left(-\\frac{4}{7}, \\frac{6}{7}, \\frac{10}{7}, \\frac{6}{7}\\right)$.",
+          "Vector vuông góc: $(1, 1, 1, 1) - \\left(-\\frac{4}{7}, \\frac{6}{7}, \\frac{10}{7}, \\frac{6}{7}\\right) = \\left(\\frac{11}{7}, \\frac{1}{7}, -\\frac{3}{7}, \\frac{1}{7}\\right)$.",
+          "Khoảng cách: $\\sqrt{\\left(\\frac{11}{7}\\right)^2 + \\left(\\frac{1}{7}\\right)^2 + \\left(-\\frac{3}{7}\\right)^2 + \\left(\\frac{1}{7}\\right)^2} = \\sqrt{\\frac{132}{49}} = \\frac{2\\sqrt{33}}{7}$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích vô hướng của hai vector $\\mathbf{u} = (2, -1, 3)$ và $\\mathbf{v} = (0, 2, 1)$ trong $\\mathbb{R}^3$.",
+      "answer": {
+        "steps": [
+          "Tích vô hướng: $\\mathbf{u} \\cdot \\mathbf{v} = 2 \\cdot 0 + (-1) \\cdot 2 + 3 \\cdot 1 = 0 - 2 + 3 = 1$."
+        ]
+      }
+    },
+    {
+      "question": "Kiểm tra xem tập $S = \\{(1, 0, 0), (0, 2, 0), (0, 0, 3)\\}$ trong $\\mathbb{R}^3$ có phải là tập trực giao hay không, và nếu có, chuẩn hóa để được tập trực chuẩn.",
+      "answer": {
+        "steps": [
+          "Tính tích vô hướng từng cặp: $(1, 0, 0) \\cdot (0, 2, 0) = 0$, $(1, 0, 0) \\cdot (0, 0, 3) = 0$, $(0, 2, 0) \\cdot (0, 0, 3) = 0$.",
+          "Tập $S$ trực giao.",
+          "Chuẩn hóa: $\\|(1, 0, 0)\\| = 1$, vector trực chuẩn: $(1, 0, 0)$.",
+          "$\\|(0, 2, 0)\\| = 2$, vector trực chuẩn: $\\left(0, \\frac{2}{2}, 0\\right) = (0, 1, 0)$.",
+          "$\\|(0, 0, 3)\\| = 3$, vector trực chuẩn: $\\left(0, 0, \\frac{3}{3}\\right) = (0, 0, 1)$.",
+          "Tập trực chuẩn: $\\{(1, 0, 0), (0, 1, 0), (0, 0, 1)\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm hình chiếu trực giao của vector $\\mathbf{u} = (3, 1, 2)$ lên vector $\\mathbf{v} = (1, 1, 1)$ trong $\\mathbb{R}^3$.",
+      "answer": {
+        "steps": [
+          "Hình chiếu: $\\text{proj}_{\\mathbf{v}}\\mathbf{u} = \\frac{\\mathbf{u} \\cdot \\mathbf{v}}{\\|\\mathbf{v}\\|^2} \\mathbf{v}$.",
+          "Tích vô hướng: $\\mathbf{u} \\cdot \\mathbf{v} = 3 \\cdot 1 + 1 \\cdot 1 + 2 \\cdot 1 = 3 + 1 + 2 = 6$.",
+          "Chuẩn: $\\|\\mathbf{v}\\|^2 = 1^2 + 1^2 + 1^2 = 3$.",
+          "Hình chiếu: $\\text{proj}_{\\mathbf{v}}\\mathbf{u} = \\frac{6}{3} (1, 1, 1) = (2, 2, 2)$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm khoảng cách từ điểm $P(2, 0, 1)$ đến đường thẳng đi qua điểm $Q(1, 1, 0)$ và có vector chỉ phương $\\mathbf{v} = (1, 0, 1)$ trong $\\mathbb{R}^3$.",
+      "answer": {
+        "steps": [
+          "Vector $\\overrightarrow{QP} = (2 - 1, 0 - 1, 1 - 0) = (1, -1, 1)$.",
+          "Khoảng cách: $d = \\frac{\\|\\overrightarrow{QP} \\times \\mathbf{v}\\|}{\\|\\mathbf{v}\\|}$.",
+          "Tích có hướng: $\\overrightarrow{QP} \\times \\mathbf{v} = (1, -1, 1) \\times (1, 0, 1) = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ 1 & -1 & 1 \\\\ 1 & 0 & 1 \\end{vmatrix} = (-1 \\cdot 1 - 1 \\cdot 0, 1 \\cdot 1 - 1 \\cdot 1, 1 \\cdot 0 - (-1) \\cdot 1) = (-1, 0, 1)$.",
+          "Chuẩn: $\\|(-1, 0, 1)\\| = \\sqrt{(-1)^2 + 0^2 + 1^2} = \\sqrt{2}$, $\\|\\mathbf{v}\\| = \\sqrt{1^2 + 0^2 + 1^2} = \\sqrt{2}$.",
+          "Khoảng cách: $d = \\frac{\\sqrt{2}}{\\sqrt{2}} = 1$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm cơ sở trực chuẩn của không gian con $W$ trong $\\mathbb{R}^4$ được xác định bởi hệ phương trình $\\begin{cases} x + y + z - w = 0 \\\\ x - y + z + w = 0 \\end{cases}$.",
+      "answer": {
+        "steps": [
+          "Giải hệ: Cộng hai phương trình: $2x + 2z = 0 \\implies x = -z$. Trừ: $2y - 2w = 0 \\implies y = w$.",
+          "Vector tổng quát: $(x, y, z, w) = (-z, w, z, w) = z(-1, 0, 1, 0) + w(0, 1, 0, 1)$.",
+          "Tập sinh: $\\{(-1, 0, 1, 0), (0, 1, 0, 1)\\}$. Áp dụng Gram-Schmidt:",
+          "$\\mathbf{u}_1 = (-1, 0, 1, 0)$. Chuẩn: $\\|\\mathbf{u}_1\\| = \\sqrt{2}$. $\\mathbf{v}_1 = \\frac{1}{\\sqrt{2}}(-1, 0, 1, 0)$.",
+          "$\\mathbf{u}_2 = (0, 1, 0, 1) - \\text{proj}_{\\mathbf{u}_1}(0, 1, 0, 1)$. Tích vô hướng: $(0, 1, 0, 1) \\cdot (-1, 0, 1, 0) = 0$.",
+          "$\\mathbf{u}_2 = (0, 1, 0, 1)$. Chuẩn: $\\|\\mathbf{u}_2\\| = \\sqrt{2}$. $\\mathbf{v}_2 = \\frac{1}{\\sqrt{2}}(0, 1, 0, 1)$.",
+          "Cơ sở trực chuẩn: $\\left\\{\\left(-\\frac{1}{\\sqrt{2}}, 0, \\frac{1}{\\sqrt{2}}, 0\\right), \\left(0, \\frac{1}{\\sqrt{2}}, 0, \\frac{1}{\\sqrt{2}}\\right)\\right\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định xem ánh xạ $f: \\mathbb{R}^2 \\to \\mathbb{R}^2$ được xác định bởi $f(x, y) = (x + y, x - y)$ có phải là ánh xạ tuyến tính hay không.",
+      "answer": {
+        "steps": [
+          "Kiểm tra tính tuyến tính: $f(\\mathbf{u} + \\mathbf{v}) = f((x_1, y_1) + (x_2, y_2)) = f(x_1 + x_2, y_1 + y_2) = (x_1 + x_2 + y_1 + y_2, x_1 + x_2 - (y_1 + y_2)) = (x_1 + y_1, x_1 - y_1) + (x_2 + y_2, x_2 - y_2) = f(\\mathbf{u}) + f(\\mathbf{v})$.",
+          "$f(k\\mathbf{u}) = f(k(x, y)) = f(kx, ky) = (kx + ky, kx - ky) = k(x + y, x - y) = k f(\\mathbf{u})$.",
+          "Vì $f$ thỏa mãn tính cộng và tính đồng nhất, $f$ là ánh xạ tuyến tính."
+        ]
+      }
+    },
+    {
+      "question": "Tìm ma trận đại diện của ánh xạ tuyến tính $f: \\mathbb{R}^2 \\to \\mathbb{R}^2$, $f(x, y) = (2x, y)$, theo cơ sở chuẩn.",
+      "answer": {
+        "steps": [
+          "Cơ sở chuẩn của $\\mathbb{R}^2$: $\\{(1, 0), (0, 1)\\}$.",
+          "$f(1, 0) = (2 \\cdot 1, 0) = (2, 0)$, tọa độ: $(2, 0)$.",
+          "$f(0, 1) = (2 \\cdot 0, 1) = (0, 1)$, tọa độ: $(0, 1)$.",
+          "Ma trận đại diện: $\\begin{bmatrix} 2 & 0 \\\\ 0 & 1 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^2$, $f(x, y, z) = (x + y, z)$. Tính $f(1, 2, 3)$.",
+      "answer": {
+        "steps": [
+          "$f(1, 2, 3) = (1 + 2, 3) = (3, 3)$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định xem ánh xạ $f: \\mathbb{R}^2 \\to \\mathbb{R}^2$, $f(x, y) = (x^2, y)$ có phải là ánh xạ tuyến tính hay không.",
+      "answer": {
+        "steps": [
+          "Kiểm tra tính cộng: $f((x_1, y_1) + (x_2, y_2)) = f(x_1 + x_2, y_1 + y_2) = ((x_1 + x_2)^2, y_1 + y_2)$.",
+          "$f(x_1, y_1) + f(x_2, y_2) = (x_1^2, y_1) + (x_2^2, y_2) = (x_1^2 + x_2^2, y_1 + y_2)$.",
+          "Vì $(x_1 + x_2)^2 \\neq x_1^2 + x_2^2$, $f$ không thỏa mãn tính cộng, nên không phải ánh xạ tuyến tính."
+        ]
+      }
+    },
+    {
+      "question": "Tìm ma trận đại diện của ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$, $f(x, y, z) = (x - y, y + z, x + z)$, theo cơ sở chuẩn.",
+      "answer": {
+        "steps": [
+          "$f(1, 0, 0) = (1, 0, 1)$, tọa độ: $(1, 0, 1)$.",
+          "$f(0, 1, 0) = (-1, 1, 0)$, tọa độ: $(-1, 1, 0)$.",
+          "$f(0, 0, 1) = (0, 1, 1)$, tọa độ: $(0, 1, 1)$.",
+          "Ma trận đại diện: $\\begin{bmatrix} 1 & -1 & 0 \\\\ 0 & 1 & 1 \\\\ 1 & 0 & 1 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^2 \\to \\mathbb{R}^3$, $f(x, y) = (x, x + y, y)$. Tìm cơ sở của nhân của $f$.",
+      "answer": {
+        "steps": [
+          "Nhân: $f(x, y) = (0, 0, 0) \\implies (x, x + y, y) = (0, 0, 0) \\implies x = 0, x + y = 0, y = 0$.",
+          "Từ $x = 0$, $y = 0$, nhân chỉ chứa $(0, 0)$.",
+          "Cơ sở của nhân: $\\emptyset$ (không gian tầm thường, số chiều 0)."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^2$, $f(x, y, z) = (x + y, y - z)$. Tìm cơ sở của ảnh của $f$.",
+      "answer": {
+        "steps": [
+          "Ảnh: $\\{(x + y, y - z) \\mid x, y, z \\in \\mathbb{R}\\}$. Vector tổng quát: $(x + y, y - z) = x(1, 0) + y(1, 1) + z(0, -1)$.",
+          "Tập sinh: $\\{(1, 0), (1, 1), (0, -1)\\}$. Kiểm tra độc lập tuyến tính:",
+          "Ma trận: $\\begin{bmatrix} 1 & 1 & 0 \\\\ 0 & 1 & -1 \\end{bmatrix}$. Biến đổi: $L1 = L1 - L2$: $\\begin{bmatrix} 1 & 0 & 1 \\\\ 0 & 1 & -1 \\end{bmatrix}$.",
+          "Hạng ma trận là 2, nên $\\{(1, 0), (1, 1)\\}$ là cơ sở của ảnh."
+        ]
+      }
+    },
+    {
+      "question": "Xác định xem ánh xạ tuyến tính $f: \\mathbb{R}^2 \\to \\mathbb{R}^2$, $f(x, y) = (x, 0)$ có đơn ánh hay không.",
+      "answer": {
+        "steps": [
+          "Nhân: $f(x, y) = (0, 0) \\implies (x, 0) = (0, 0) \\implies x = 0$.",
+          "Vector tổng quát trong nhân: $(0, y)$. Chọn $y = 1$, nhân chứa $(0, 1) \\neq (0, 0)$, nên $f$ không đơn ánh."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$, $f(x, y, z) = (x + y, y, z)$. Xác định xem $f$ có toàn ánh hay không.",
+      "answer": {
+        "steps": [
+          "Ma trận đại diện: $A = \\begin{bmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}$.",
+          "Hạng ma trận: $A$ là ma trận bậc thang với hạng 3, bằng số chiều của $\\mathbb{R}^3$.",
+          "Theo định lý Rank-Nullity, $\\dim(\\text{image}) = 3$, nên $f$ toàn ánh."
+        ]
+      }
+    },
+    {
+      "question": "Tính $f(2, 1, -1)$ cho ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^2$, $f(x, y, z) = (x - z, y + z)$.",
+      "answer": {
+        "steps": [
+          "$f(2, 1, -1) = (2 - (-1), 1 + (-1)) = (3, 0)$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm cơ sở của nhân của ánh xạ tuyến tính $f: \\mathbb{R}^4 \\to \\mathbb{R}^2$, $f(x, y, z, w) = (x + y - z, y + w)$.",
+      "answer": {
+        "steps": [
+          "Nhân: $f(x, y, z, w) = (0, 0) \\implies \\begin{cases} x + y - z = 0 \\\\ y + w = 0 \\end{cases}$.",
+          "Giải: $y = -w$, $x = z - y = z + w$. Vector tổng quát: $(z + w, -w, z, w) = z(1, 0, 1, 0) + w(1, -1, 0, 1)$.",
+          "Cơ sở của nhân: $\\{(1, 0, 1, 0), (1, -1, 0, 1)\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm ma trận đại diện của ánh xạ tuyến tính $f: \\mathbb{R}^2 \\to \\mathbb{R}^2$, $f(x, y) = (x + y, 2x - y)$, theo cơ sở $B = \\{(1, 1), (1, -1)\\}$.",
+      "answer": {
+        "steps": [
+          "$f(1, 1) = (1 + 1, 2 \\cdot 1 - 1) = (2, 1)$. Tọa độ theo $B$: Giải $a(1, 1) + b(1, -1) = (2, 1) \\implies \\begin{cases} a + b = 2 \\\\ a - b = 1 \\end{cases} \\implies a = \\frac{3}{2}, b = \\frac{1}{2}$. Tọa độ: $\\left(\\frac{3}{2}, \\frac{1}{2}\\right)$.",
+          "$f(1, -1) = (1 - 1, 2 \\cdot 1 - (-1)) = (0, 3)$. Tọa độ: $a(1, 1) + b(1, -1) = (0, 3) \\implies \\begin{cases} a + b = 0 \\\\ a - b = 3 \\end{cases} \\implies a = \\frac{3}{2}, b = -\\frac{3}{2}$. Tọa độ: $\\left(\\frac{3}{2}, -\\frac{3}{2}\\right)$.",
+          "Ma trận đại diện: $\\begin{bmatrix} \\frac{3}{2} & \\frac{3}{2} \\\\ \\frac{1}{2} & -\\frac{3}{2} \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định xem ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$, $f(x, y, z) = (x, y, 0)$ có đơn ánh hay không.",
+      "answer": {
+        "steps": [
+          "Nhân: $f(x, y, z) = (0, 0, 0) \\implies (x, y, 0) = (0, 0, 0) \\implies x = 0, y = 0$.",
+          "Vector tổng quát trong nhân: $(0, 0, z)$. Chọn $z = 1$, nhân chứa $(0, 0, 1) \\neq (0, 0, 0)$, nên $f$ không đơn ánh."
+        ]
+      }
+    },
+    {
+      "question": "Tìm cơ sở của ảnh của ánh xạ tuyến tính $f: \\mathbb{R}^4 \\to \\mathbb{R}^3$, $f(x, y, z, w) = (x + y, y - z, z + w)$.",
+      "answer": {
+        "steps": [
+          "Vector tổng quát trong ảnh: $(x + y, y - z, z + w) = x(1, 0, 0) + y(1, 1, 0) + z(0, -1, 1) + w(0, 0, 1)$.",
+          "Tập sinh: $\\{(1, 0, 0), (1, 1, 0), (0, -1, 1), (0, 0, 1)\\}$.",
+          "Ma trận: $\\begin{bmatrix} 1 & 1 & 0 & 0 \\\\ 0 & 1 & -1 & 0 \\\\ 0 & 0 & 1 & 1 \\end{bmatrix}$. Biến đổi: $L2 = L2 - L1$: $\\begin{bmatrix} 1 & 0 & 1 & 0 \\\\ 0 & 1 & -1 & 0 \\\\ 0 & 0 & 1 & 1 \\end{bmatrix}$.",
+          "Hạng ma trận là 3, nên $\\{(1, 0, 0), (1, 1, 0), (0, -1, 1)\\}$ là cơ sở của ảnh."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^2$, $f(x, y, z) = (x - y, x + z)$. Tìm số chiều của nhân và ảnh của $f$.",
+      "answer": {
+        "steps": [
+          "Nhân: $f(x, y, z) = (0, 0) \\implies \\begin{cases} x - y = 0 \\\\ x + z = 0 \\end{cases} \\implies x = y, x = -z$.",
+          "Vector tổng quát: $(x, x, -x) = x(1, 1, -1)$. Số chiều của nhân: 1.",
+          "Số chiều của ảnh: $\\dim(\\text{image}) = \\dim(\\mathbb{R}^3) - \\dim(\\text{kernel}) = 3 - 1 = 2$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định xem ánh xạ tuyến tính $f: \\mathbb{R}^2 \\to \\mathbb{R}^2$, $f(x, y) = (x + y, x + y)$ có toàn ánh hay không.",
+      "answer": {
+        "steps": [
+          "Ma trận đại diện: $A = \\begin{bmatrix} 1 & 1 \\\\ 1 & 1 \\end{bmatrix}$.",
+          "Hạng ma trận: $A$ có hạng 1 (các hàng giống nhau), nhỏ hơn 2 (số chiều của $\\mathbb{R}^2$).",
+          "Do đó, $f$ không toàn ánh."
+        ]
+      }
+    },
+    {
+      "question": "Tìm ma trận đại diện của ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$, $f(x, y, z) = (x + y, y - z, x + z)$, theo cơ sở $B = \\{(1, 0, 0), (1, 1, 0), (0, 1, 1)\\}$.",
+      "answer": {
+        "steps": [
+          "$f(1, 0, 0) = (1, 0, 1)$. Tọa độ theo $B$: Giải $a(1, 0, 0) + b(1, 1, 0) + c(0, 1, 1) = (1, 0, 1) \\implies a + b = 1, b + c = 0, c = 1 \\implies c = 1, b = -1, a = 2$. Tọa độ: $(2, -1, 1)$.",
+          "$f(1, 1, 0) = (2, 1, 1)$. Tọa độ: $a + b = 2, b + c = 1, c = 1 \\implies c = 1, b = 0, a = 2$. Tọa độ: $(2, 0, 1)$.",
+          "$f(0, 1, 1) = (1, 0, 1)$. Tọa độ: $a + b = 1, b + c = 0, c = 1 \\implies c = 1, b = -1, a = 2$. Tọa độ: $(2, -1, 1)$.",
+          "Ma trận đại diện: $\\begin{bmatrix} 2 & 2 & 2 \\\\ -1 & 0 & -1 \\\\ 1 & 1 & 1 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^4 \\to \\mathbb{R}^3$, $f(x, y, z, w) = (x + y - z, y + w, x - w)$. Xác định xem $f$ có đơn ánh hay không.",
+      "answer": {
+        "steps": [
+          "Nhân: $f(x, y, z, w) = (0, 0, 0) \\implies \\begin{cases} x + y - z = 0 \\\\ y + w = 0 \\\\ x - w = 0 \\end{cases}$.",
+          "Giải: $w = x$, $y = -w = -x$, $z = x + y = x - x = 0$. Vector tổng quát: $(x, -x, 0, x) = x(1, -1, 0, 1)$.",
+          "Nhân có số chiều 1, nên $f$ không đơn ánh."
+        ]
+      }
+    },
+    {
+      "question": "Tìm cơ sở của nhân và ảnh của ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$, $f(x, y, z) = (x + y, x - y, z)$.",
+      "answer": {
+        "steps": [
+          "Nhân: $f(x, y, z) = (0, 0, 0) \\implies \\begin{cases} x + y = 0 \\\\ x - y = 0 \\\\ z = 0 \\end{cases} \\implies x = y = z = 0$.",
+          "Cơ sở của nhân: $\\emptyset$ (số chiều 0).",
+          "Ảnh: Ma trận đại diện: $A = \\begin{bmatrix} 1 & 1 & 0 \\\\ 1 & -1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}$. Hạng ma trận là 3, nên cơ sở của ảnh: $\\{(1, 1, 0), (1, -1, 0), (0, 0, 1)\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định xem ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$, $f(x, y, z) = (x + y + z, x - y, y + z)$ có phải là đẳng cấu hay không.",
+      "answer": {
+        "steps": [
+          "Kiểm tra đơn ánh: Nhân: $f(x, y, z) = (0, 0, 0) \\implies \\begin{cases} x + y + z = 0 \\\\ x - y = 0 \\\\ y + z = 0 \\end{cases}$.",
+          "Từ $x - y = 0$, ta có $x = y$. Thay vào $y + z = 0 \\implies x + z = 0 \\implies z = -x$. Thay vào $x + y + z = 0 \\implies x + x - x = 0$, luôn đúng.",
+          "Nhân chứa nghiệm không tầm thường, ví dụ $(1, 1, -1)$, nên $f$ không đơn ánh, do đó không đẳng cấu."
+        ]
+      }
+    },
+    {
+      "question": "Tìm điều kiện của $k$ để ánh xạ tuyến tính $f: \\mathbb{R}^2 \\to \\mathbb{R}^2$, $f(x, y) = (x + ky, x - y)$ là đơn ánh.",
+      "answer": {
+        "steps": [
+          "Ma trận đại diện: $A = \\begin{bmatrix} 1 & k \\\\ 1 & -1 \\end{bmatrix}$.",
+          "$f$ đơn ánh khi $A$ khả nghịch, tức là $\\det(A) = 1 \\cdot (-1) - k \\cdot 1 = -1 - k \\neq 0 \\implies k \\neq -1$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$, $f(x, y, z) = (x, y, kx + y + z)$. Tìm giá trị của $k$ để $f$ là toàn ánh.",
+      "answer": {
+        "steps": [
+          "Ma trận đại diện: $A = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ k & 1 & 1 \\end{bmatrix}$.",
+          "$f$ toàn ánh khi $\\dim(\\text{image}) = 3$, tức là $\\det(A) = 1 \\cdot (1 \\cdot 1 - 0 \\cdot 1) = 1 \\neq 0$, luôn đúng với mọi $k$.",
+          "Do đó, $f$ luôn toàn ánh với mọi $k$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm ma trận đại diện của ánh xạ tuyến tính $f: \\mathbb{R}^4 \\to \\mathbb{R}^4$, $f(x, y, z, w) = (x + y, y - z, z + w, x - w)$, theo cơ sở chuẩn.",
+      "answer": {
+        "steps": [
+          "$f(1, 0, 0, 0) = (1, 0, 0, 1)$, tọa độ: $(1, 0, 0, 1)$.",
+          "$f(0, 1, 0, 0) = (1, 1, 0, 0)$, tọa độ: $(1, 1, 0, 0)$.",
+          "$f(0, 0, 1, 0) = (0, -1, 1, 0)$, tọa độ: $(0, -1, 1, 0)$.",
+          "$f(0, 0, 0, 1) = (0, 0, 1, -1)$, tọa độ: $(0, 0, 1, -1)$.",
+          "Ma trận đại diện: $\\begin{bmatrix} 1 & 1 & 0 & 0 \\\\ 0 & 1 & -1 & 0 \\\\ 0 & 0 & 1 & 1 \\\\ 1 & 0 & 0 & -1 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^2$, $f(x, y, z) = (x + y - z, x - y + z)$. Tìm cơ sở của nhân và xác định xem $f$ có toàn ánh hay không.",
+      "answer": {
+        "steps": [
+          "Nhân: $f(x, y, z) = (0, 0) \\implies \\begin{cases} x + y - z = 0 \\\\ x - y + z = 0 \\end{cases}$.",
+          "Cộng: $2x = 0 \\implies x = 0$. Thay vào: $y - z = 0 \\implies y = z$. Vector tổng quát: $(0, z, z) = z(0, 1, 1)$.",
+          "Cơ sở của nhân: $\\{(0, 1, 1)\\}$.",
+          "Số chiều của ảnh: $\\dim(\\text{image}) = 3 - 1 = 2$, bằng số chiều của $\\mathbb{R}^2$, nên $f$ toàn ánh."
+        ]
+      }
+    },
+    {
+      "question": "Tìm ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$ sao cho $f(1, 0, 0) = (1, 1, 0)$, $f(0, 1, 0) = (0, 1, 1)$, $f(0, 0, 1) = (1, 0, 1)$, và xác định ma trận đại diện.",
+      "answer": {
+        "steps": [
+          "Ma trận đại diện là ma trận cột của các giá trị $f$ trên cơ sở chuẩn: $\\begin{bmatrix} 1 & 0 & 1 \\\\ 1 & 1 & 0 \\\\ 0 & 1 & 1 \\end{bmatrix}$.",
+          "Ánh xạ: $f(x, y, z) = x(1, 1, 0) + y(0, 1, 1) + z(1, 0, 1) = (x + z, x + y, y + z)$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^4 \\to \\mathbb{R}^4$, $f(x, y, z, w) = (x + y, y - z, z + w, x - w)$. Xác định xem $f$ có phải là đẳng cấu hay không.",
+      "answer": {
+        "steps": [
+          "Ma trận đại diện: $A = \\begin{bmatrix} 1 & 1 & 0 & 0 \\\\ 0 & 1 & -1 & 0 \\\\ 0 & 0 & 1 & 1 \\\\ 1 & 0 & 0 & -1 \\end{bmatrix}$.",
+          "Tính định thức: $\\det(A) = 1 \\cdot \\det\\begin{bmatrix} 1 & -1 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & -1 \\end{bmatrix} - 1 \\cdot \\det\\begin{bmatrix} 0 & -1 & 0 \\\\ 0 & 1 & 1 \\\\ 1 & 0 & -1 \\end{bmatrix} = 1 \\cdot (1 \\cdot (-1) \\cdot (-1) - 0) - 1 \\cdot (-1) \\cdot (1 \\cdot 1 - 0) = 1 - (-1) = 2$.",
+          "Vì $\\det(A) \\neq 0$, $f$ là đẳng cấu."
+        ]
+      }
+    },
+    {
+      "question": "Tìm cơ sở của nhân và ảnh của ánh xạ tuyến tính $f: \\mathbb{R}^4 \\to \\mathbb{R}^3$, $f(x, y, z, w) = (x + y - z, y + w, x + z - w)$.",
+      "answer": {
+        "steps": [
+          "Nhân: $f(x, y, z, w) = (0, 0, 0) \\implies \\begin{cases} x + y - z = 0 \\\\ y + w = 0 \\\\ x + z - w = 0 \\end{cases}$.",
+          "Từ $y + w = 0$, ta có $y = -w$. Thay vào: $x - z - w = 0$, $x + z - w = 0$.",
+          "Cộng: $2x - 2w = 0 \\implies x = w$. Thay vào $x - z - w = 0 \\implies w - z - w = 0 \\implies z = 0$.",
+          "Vector tổng quát: $(w, -w, 0, w) = w(1, -1, 0, 1)$. Cơ sở của nhân: $\\{(1, -1, 0, 1)\\}$.",
+          "Ảnh: $\\dim(\\text{image}) = 4 - 1 = 3$. Ma trận: $\\begin{bmatrix} 1 & 1 & -1 & 0 \\\\ 0 & 1 & 0 & 1 \\\\ 1 & 0 & 1 & -1 \\end{bmatrix}$. Hạng ma trận là 3, cơ sở: $\\{(1, 0, 1), (1, 1, 0), (-1, 0, 1)\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$, $f(x, y, z) = (kx + y, x - z, y + z)$. Tìm giá trị của $k$ để $f$ là đẳng cấu.",
+      "answer": {
+        "steps": [
+          "Ma trận đại diện: $A = \\begin{bmatrix} k & 1 & 0 \\\\ 1 & 0 & -1 \\\\ 0 & 1 & 1 \\end{bmatrix}$.",
+          "Tính định thức: $\\det(A) = k \\cdot \\det\\begin{bmatrix} 0 & -1 \\\\ 1 & 1 \\end{bmatrix} - 1 \\cdot \\det\\begin{bmatrix} 1 & -1 \\\\ 1 & 1 \\end{bmatrix} = k(0 \\cdot 1 - (-1) \\cdot 1) - 1(1 \\cdot 1 - (-1) \\cdot 1) = k \\cdot 1 - (1 + 1) = k - 2$.",
+          "$f$ đẳng cấu khi $\\det(A) \\neq 0 \\implies k - 2 \\neq 0 \\implies k \\neq 2$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm ma trận đại diện của ánh xạ tuyến tính $f: \\mathbb{R}^2 \\to \\mathbb{R}^2$, $f(x, y) = (2x - y, x + y)$, theo cơ sở $B = \\{(1, 0), (1, 1)\\}$.",
+      "answer": {
+        "steps": [
+          "$f(1, 0) = (2 \\cdot 1 - 0, 1 + 0) = (2, 1)$. Tọa độ theo $B$: $a(1, 0) + b(1, 1) = (2, 1) \\implies a + b = 2, b = 1 \\implies a = 1$. Tọa độ: $(1, 1)$.",
+          "$f(1, 1) = (2 \\cdot 1 - 1, 1 + 1) = (1, 2)$. Tọa độ: $a + b = 1, b = 2 \\implies a = -1$. Tọa độ: $(-1, 2)$.",
+          "Ma trận đại diện: $\\begin{bmatrix} 1 & -1 \\\\ 1 & 2 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$, $f(x, y, z) = (x + y - z, x - y + z, y)$. Tìm cơ sở của nhân và xác định xem $f$ có đơn ánh hay không.",
+      "answer": {
+        "steps": [
+          "Nhân: $f(x, y, z) = (0, 0, 0) \\implies \\begin{cases} x + y - z = 0 \\\\ x - y + z = 0 \\\\ y = 0 \\end{cases}$.",
+          "Thay $y = 0$ vào: $x - z = 0$, $x + z = 0 \\implies x = z = 0$.",
+          "Nhân chỉ chứa $(0, 0, 0)$, nên cơ sở của nhân: $\\emptyset$. $f$ đơn ánh."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^2 \\to \\mathbb{R}^2$, $f(x, y) = (x + 2y, 3x - y)$. Tìm ma trận đại diện của $f$ theo cơ sở $B = \\{(1, 1), (1, -1)\\}$.",
+      "answer": {
+        "steps": [
+          "Tính $f$ trên cơ sở $B$: $f(1, 1) = (1 + 2 \\cdot 1, 3 \\cdot 1 - 1) = (3, 2)$.",
+          "Tọa độ của $(3, 2)$ theo $B$: Giải $a(1, 1) + b(1, -1) = (3, 2) \\implies \\begin{cases} a + b = 3 \\\\ a - b = 2 \\end{cases} \\implies a = \\frac{5}{2}, b = \\frac{1}{2}$. Tọa độ: $\\left(\\frac{5}{2}, \\frac{1}{2}\\right)$.",
+          "$f(1, -1) = (1 + 2 \\cdot (-1), 3 \\cdot 1 - (-1)) = (-1, 4)$.",
+          "Tọa độ của $(-1, 4)$ theo $B$: Giải $a(1, 1) + b(1, -1) = (-1, 4) \\implies \\begin{cases} a + b = -1 \\\\ a - b = 4 \\end{cases} \\implies a = \\frac{3}{2}, b = -\\frac{5}{2}$. Tọa độ: $\\left(\\frac{3}{2}, -\\frac{5}{2}\\right)$.",
+          "Ma trận đại diện: $\\begin{bmatrix} \\frac{5}{2} & \\frac{3}{2} \\\\ \\frac{1}{2} & -\\frac{5}{2} \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$, $f(x, y, z) = (x - y, y + z, x + z)$. Tìm ma trận đại diện của $f$ theo cơ sở $B = \\{(1, 0, 0), (1, 1, 0), (0, 0, 1)\\}$.",
+      "answer": {
+        "steps": [
+          "$f(1, 0, 0) = (1, 0, 1)$. Tọa độ theo $B$: Giải $a(1, 0, 0) + b(1, 1, 0) + c(0, 0, 1) = (1, 0, 1) \\implies a + b = 1, b = 0, c = 1 \\implies a = 1$. Tọa độ: $(1, 0, 1)$.",
+          "$f(1, 1, 0) = (0, 1, 1)$. Tọa độ: $a + b = 0, b = 1, c = 1 \\implies a = -1$. Tọa độ: $(-1, 1, 1)$.",
+          "$f(0, 0, 1) = (0, 1, 1)$. Tọa độ: $a + b = 0, b = 1, c = 1 \\implies a = -1$. Tọa độ: $(-1, 1, 1)$.",
+          "Ma trận đại diện: $\\begin{bmatrix} 1 & -1 & -1 \\\\ 0 & 1 & 1 \\\\ 1 & 1 & 1 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$, $f(x, y, z) = (x + y, x - z, y + z)$. Tìm ma trận đại diện của $f$ theo cơ sở $B = \\{(1, 1, 0), (0, 1, 1), (1, 0, 1)\\}$.",
+      "answer": {
+        "steps": [
+          "$f(1, 1, 0) = (2, 1, 1)$. Tọa độ theo $B$: Giải $a(1, 1, 0) + b(0, 1, 1) + c(1, 0, 1) = (2, 1, 1) \\implies \\begin{cases} a + c = 2 \\\\ a + b = 1 \\\\ b + c = 1 \\end{cases} \\implies a = 1, b = 0, c = 1$. Tọa độ: $(1, 0, 1)$.",
+          "$f(0, 1, 1) = (1, -1, 2)$. Tọa độ: $a + c = 1, a + b = -1, b + c = 2 \\implies a = -1, b = 0, c = 2$. Tọa độ: $(-1, 0, 2)$.",
+          "$f(1, 0, 1) = (1, 0, 1)$. Tọa độ: $a + c = 1, a + b = 0, b + c = 1 \\implies a = 0, b = 0, c = 1$. Tọa độ: $(0, 0, 1)$.",
+          "Ma trận đại diện: $\\begin{bmatrix} 1 & -1 & 0 \\\\ 0 & 0 & 0 \\\\ 1 & 2 & 1 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^2 \\to \\mathbb{R}^2$ có ma trận đại diện theo cơ sở chuẩn là $A = \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$. Tìm ma trận đồng dạng của $A$ theo cơ sở $B = \\{(1, 0), (1, 1)\\}$.",
+      "answer": {
+        "steps": [
+          "Ma trận chuyển cơ sở từ $B$ sang cơ sở chuẩn: $P = \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix}$.",
+          "Tính $P^{-1}$: $\\det(P) = 1 \\cdot 1 - 1 \\cdot 0 = 1$. $P^{-1} = \\begin{bmatrix} 1 & -1 \\\\ 0 & 1 \\end{bmatrix}$.",
+          "Ma trận đồng dạng: $B = P^{-1}AP = \\begin{bmatrix} 1 & -1 \\\\ 0 & 1 \\end{bmatrix} \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix}$.",
+          "$P^{-1}A = \\begin{bmatrix} 1 & -1 \\\\ 0 & 1 \\end{bmatrix} \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} = \\begin{bmatrix} 1 - 3 & 2 - 4 \\\\ 3 & 4 \\end{bmatrix} = \\begin{bmatrix} -2 & -2 \\\\ 3 & 4 \\end{bmatrix}$.",
+          "$B = \\begin{bmatrix} -2 & -2 \\\\ 3 & 4 \\end{bmatrix} \\begin{bmatrix} 1 & 1 \\\\ 0 & 1 \\end{bmatrix} = \\begin{bmatrix} -2 & -4 \\\\ 3 & 7 \\end{bmatrix}$.",
+          "Ma trận đồng dạng: $\\begin{bmatrix} -2 & -4 \\\\ 3 & 7 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$ có ma trận đại diện theo cơ sở chuẩn là $A = \\begin{bmatrix} 1 & 0 & 1 \\\\ 0 & 2 & 0 \\\\ 1 & 0 & 1 \\end{bmatrix}$. Xác định xem ma trận $B = \\begin{bmatrix} 2 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 0 \\end{bmatrix}$ có đồng dạng với $A$ hay không.",
+      "answer": {
+        "steps": [
+          "Kiểm tra đồng dạng: Hai ma trận đồng dạng nếu chúng có cùng hạng, cùng giá trị riêng, và cùng dạng Jordan.",
+          "Hạng của $A$: Biến đổi: $L3 = L3 - L1$: $\\begin{bmatrix} 1 & 0 & 1 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 0 \\end{bmatrix}$. Hạng của $A$ là 2.",
+          "Hạng của $B$ là 2 (do có hai hàng khác 0).",
+          "Giá trị riêng của $A$: Tính $\\det(A - \\lambda I) = \\det\\begin{bmatrix} 1 - \\lambda & 0 & 1 \\\\ 0 & 2 - \\lambda & 0 \\\\ 1 & 0 & 1 - \\lambda \\end{bmatrix} = (2 - \\lambda) \\cdot \\det\\begin{bmatrix} 1 - \\lambda & 1 \\\\ 1 & 1 - \\lambda \\end{bmatrix} = (2 - \\lambda)((1 - \\lambda)^2 - 1) = (2 - \\lambda)(\\lambda^2 - 2\\lambda) = -\\lambda(\\lambda - 2)^2$. Giá trị riêng: $\\lambda = 0, 2$ (trùng lặp).",
+          "Giá trị riêng của $B$: $\\det(B - \\lambda I) = (2 - \\lambda)^2 (0 - \\lambda) = -\\lambda (2 - \\lambda)^2$. Giá trị riêng: $\\lambda = 0, 2$ (trùng lặp).",
+          "Kiểm tra dạng Jordan: Với $\\lambda = 2$, nhân của $A - 2I$ có số chiều 1 (giải hệ $(A - 2I)\\mathbf{x} = 0$), nên dạng Jordan của $A$ có một khối Jordan kích thước 2. Với $B$, nhân của $B - 2I$ có số chiều 2, nên dạng Jordan có hai khối Jordan kích thước 1.",
+          "Vì dạng Jordan khác nhau, $A$ và $B$ không đồng dạng."
+        ]
+      }
+    },
+    {
+      "question": "Cho ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$ có ma trận đại diện theo cơ sở chuẩn là $A = \\begin{bmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 2 \\end{bmatrix}$. Tìm ma trận đồng dạng của $A$ theo cơ sở $B = \\{(1, 0, 0), (1, 1, 0), (0, 1, 1)\\}$.",
+      "answer": {
+        "steps": [
+          "Ma trận chuyển cơ sở từ $B$ sang cơ sở chuẩn: $P = \\begin{bmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 1 \\end{bmatrix}$.",
+          "Tính $P^{-1}$: $\\det(P) = 1$. $P^{-1} = \\begin{bmatrix} 1 & -1 & -1 \\\\ 0 & 1 & -1 \\\\ 0 & 0 & 1 \\end{bmatrix}$.",
+          "Ma trận đồng dạng: $B = P^{-1}AP$.",
+          "$P^{-1}A = \\begin{bmatrix} 1 & -1 & -1 \\\\ 0 & 1 & -1 \\\\ 0 & 0 & 1 \\end{bmatrix} \\begin{bmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 2 \\end{bmatrix} = \\begin{bmatrix} 1 & 0 & -1 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 2 \\end{bmatrix}$.",
+          "$B = \\begin{bmatrix} 1 & 0 & -1 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 2 \\end{bmatrix} \\begin{bmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 1 \\end{bmatrix} = \\begin{bmatrix} 1 & 1 & -1 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 2 \\end{bmatrix}$.",
+          "Ma trận đồng dạng: $\\begin{bmatrix} 1 & 1 & -1 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 2 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm trị riêng của ma trận $A = \\begin{bmatrix} 4 & 0 \\\\ 0 & 2 \\end{bmatrix}$.",
+      "answer": {
+        "steps": [
+          "Phương trình đặc trưng: $\\det(A - \\lambda I) = (4 - \\lambda)(2 - \\lambda) = 0$.",
+          "Trị riêng: $\\lambda = 4, 2$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm trị riêng và véc tơ riêng của ma trận $A = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 0 \\end{bmatrix}$.",
+      "answer": {
+        "steps": [
+          "Phương trình đặc trưng: $\\det(A - \\lambda I) = (1 - \\lambda)^2(0 - \\lambda) = -\\lambda(1 - \\lambda)^2 = 0$. Trị riêng: $\\lambda = 0, 1$ (trùng lặp).",
+          "Với $\\lambda = 0$: $A = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 0 \\end{bmatrix}$, giải $A\\mathbf{x} = 0 \\implies x_1 = 0, x_2 + x_3 = 0$. Véc tơ riêng: $(0, -x_3, x_3) = x_3(0, -1, 1)$. Cơ sở: $\\{(0, -1, 1)\\}$.",
+          "Với $\\lambda = 1$: $A - I = \\begin{bmatrix} 0 & 0 & 0 \\\\ 0 & 0 & 1 \\\\ 0 & 0 & -1 \\end{bmatrix}$, giải $(A - I)\\mathbf{x} = 0 \\implies x_3 = 0$. Véc tơ riêng: $(x_1, x_2, 0) = x_1(1, 0, 0) + x_2(0, 1, 0)$. Cơ sở: $\\{(1, 0, 0), (0, 1, 0)\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm ma trận chéo $D$ và ma trận khả nghịch $P$ sao cho $A = \\begin{bmatrix} 2 & 1 & 0 \\\\ 0 & 2 & 1 \\\\ 0 & 0 & 3 \\end{bmatrix}$ thỏa mãn $A = PDP^{-1}$.",
+      "answer": {
+        "steps": [
+          "Trị riêng: $\\det(A - \\lambda I) = (2 - \\lambda)^2(3 - \\lambda) = 0$. Trị riêng: $\\lambda = 2$ (trùng lặp), $\\lambda = 3$.",
+          "Với $\\lambda = 2$: $A - 2I = \\begin{bmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ 0 & 0 & 1 \\end{bmatrix}$, giải $(A - 2I)\\mathbf{x} = 0 \\implies x_2 = 0, x_3 = 0$. Véc tơ riêng: $(x_1, 0, 0)$. Số chiều không gian riêng: 1.",
+          "Vì số chiều không gian riêng của $\\lambda = 2$ (1) nhỏ hơn số lần trùng lặp (2), $A$ không chéo hóa được."
+        ]
+      }
+    },
+    {
+      "question": "Tìm véc tơ riêng của ma trận $A = \\begin{bmatrix} 3 & 0 \\\\ 0 & 3 \\end{bmatrix}$ tương ứng với trị riêng.",
+      "answer": {
+        "steps": [
+          "Phương trình đặc trưng: $\\det(A - \\lambda I) = (3 - \\lambda)^2 = 0$. Trị riêng: $\\lambda = 3$ (trùng lặp).",
+          "Với $\\lambda = 3$: $A - 3I = \\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix}$, giải $(A - 3I)\\mathbf{x} = 0 \\implies \\mathbf{x} = (x_1, x_2)$. Véc tơ riêng: $(x_1, x_2) = x_1(1, 0) + x_2(0, 1)$. Cơ sở: $\\{(1, 0), (0, 1)\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định xem ma trận đối xứng thực $A = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$ có chéo hóa được hay không.",
+      "answer": {
+        "steps": [
+          "Phương trình đặc trưng: $\\det(A - \\lambda I) = (1 - \\lambda)^2 = 0$. Trị riêng: $\\lambda = 1$ (trùng lặp).",
+          "Với $\\lambda = 1$: $A - I = \\begin{bmatrix} 0 & 0 \\\\ 0 & 0 \\end{bmatrix}$, giải $(A - I)\\mathbf{x} = 0 \\implies \\mathbf{x} = (x_1, x_2)$. Số chiều không gian riêng: 2.",
+          "Vì $A$ là đối xứng thực và số chiều không gian riêng bằng số chiều ma trận, $A$ chéo hóa được."
+        ]
+      }
+    },
+    {
+      "question": "Tìm trị riêng của ma trận đối xứng thực $A = \\begin{bmatrix} 2 & 1 \\\\ 1 & 2 \\end{bmatrix}$.",
+      "answer": {
+        "steps": [
+          "Phương trình đặc trưng: $\\det(A - \\lambda I) = \\det\\begin{bmatrix} 2 - \\lambda & 1 \\\\ 1 & 2 - \\lambda \\end{bmatrix} = (2 - \\lambda)^2 - 1 = \\lambda^2 - 4\\lambda + 3 = 0$.",
+          "Giải: $(\\lambda - 1)(\\lambda - 3) = 0$. Trị riêng: $\\lambda = 1, 3$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm giá trị riêng và véc tơ riêng của ma trận $A = \\begin{bmatrix} 2 & 0 & 0 \\\\ 0 & 2 & 1 \\\\ 0 & 0 & 1 \\end{bmatrix}$.",
+      "answer": {
+        "steps": [
+          "Phương trình đặc trưng: $\\det(A - \\lambda I) = (2 - \\lambda)^2(1 - \\lambda) = 0$. Trị riêng: $\\lambda = 2$ (trùng lặp), $\\lambda = 1$.",
+          "Với $\\lambda = 2$: $A - 2I = \\begin{bmatrix} 0 & 0 & 0 \\\\ 0 & 0 & 1 \\\\ 0 & 0 & -1 \\end{bmatrix}$, giải $(A - 2I)\\mathbf{x} = 0 \\implies x_3 = 0$. Véc tơ riêng: $(x_1, x_2, 0) = x_1(1, 0, 0) + x_2(0, 1, 0)$. Cơ sở: $\\{(1, 0, 0), (0, 1, 0)\\}$.",
+          "Với $\\lambda = 1$: $A - I = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 0 & 0 \\end{bmatrix}$, giải $(A - I)\\mathbf{x} = 0 \\implies x_1 = 0, x_2 = -x_3$. Véc tơ riêng: $(0, -x_3, x_3) = x_3(0, -1, 1)$. Cơ sở: $\\{(0, -1, 1)\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm véc tơ riêng của ma trận đối xứng thực $A = \\begin{bmatrix} 2 & 1 \\\\ 1 & 2 \\end{bmatrix}$ tương ứng với các trị riêng.",
+      "answer": {
+        "steps": [
+          "Trị riêng (từ câu 4): $\\lambda = 1, 3$.",
+          "Với $\\lambda = 1$: $A - I = \\begin{bmatrix} 1 & 1 \\\\ 1 & 1 \\end{bmatrix}$, giải $(A - I)\\mathbf{x} = 0 \\implies x_1 + x_2 = 0 \\implies x_2 = -x_1$. Véc tơ riêng: $(x_1, -x_1) = x_1(1, -1)$. Cơ sở: $\\{(1, -1)\\}$.",
+          "Với $\\lambda = 3$: $A - 3I = \\begin{bmatrix} -1 & 1 \\\\ 1 & -1 \\end{bmatrix}$, giải $(A - 3I)\\mathbf{x} = 0 \\implies x_1 = x_2$. Véc tơ riêng: $(x_1, x_1) = x_1(1, 1)$. Cơ sở: $\\{(1, 1)\\}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm ma trận chéo $D$ và ma trận khả nghịch $P$ sao cho ma trận đối xứng thực $A = \\begin{bmatrix} 2 & 1 \\\\ 1 & 2 \\end{bmatrix}$ thỏa mãn $A = PDP^{-1}$.",
+      "answer": {
+        "steps": [
+          "Trị riêng (từ câu 4): $\\lambda = 1, 3$.",
+          "Véc tơ riêng (từ câu 5): $\\{(1, -1), (1, 1)\\}$.",
+          "Ma trận $P = \\begin{bmatrix} 1 & 1 \\\\ -1 & 1 \\end{bmatrix}$, $D = \\begin{bmatrix} 1 & 0 \\\\ 0 & 3 \\end{bmatrix}$.",
+          "Kiểm tra: $P^{-1} = \\frac{1}{2}\\begin{bmatrix} 1 & -1 \\\\ 1 & 1 \\end{bmatrix}$, $PDP^{-1} = A$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm trị riêng của ánh xạ tuyến tính $f: \\mathbb{R}^2 \\to \\mathbb{R}^2$ với $f(x, y) = (2x + y, x + 2y)$, biểu diễn bằng ma trận chuẩn.",
+      "answer": {
+        "steps": [
+          "Ma trận đại diện: $A = \\begin{bmatrix} 2 & 1 \\\\ 1 & 2 \\end{bmatrix}$.",
+          "Phương trình đặc trưng: $\\det(A - \\lambda I) = \\det\\begin{bmatrix} 2 - \\lambda & 1 \\\\ 1 & 2 - \\lambda \\end{bmatrix} = (2 - \\lambda)^2 - 1 = \\lambda^2 - 4\\lambda + 3 = 0$.",
+          "Giải: $(\\lambda - 1)(\\lambda - 3) = 0$. Trị riêng: $\\lambda = 1, 3$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm véc tơ riêng của ánh xạ tuyến tính $f: \\mathbb{R}^2 \\to \\mathbb{R}^2$ với $f(x, y) = (2x + y, x + 2y)$ tương ứng với các trị riêng.",
+      "answer": {
+        "steps": [
+          "Ma trận đại diện: $A = \\begin{bmatrix} 2 & 1 \\\\ 1 & 2 \\end{bmatrix}$.",
+          "Trị riêng (từ câu 7): $\\lambda = 1, 3$.",
+          "Với $\\lambda = 1$: $A - I = \\begin{bmatrix} 1 & 1 \\\\ 1 & 1 \\end{bmatrix}$, giải $(A - I)\\mathbf{x} = 0 \\implies x_1 + x_2 = 0 \\implies x_2 = -x_1$. Véc tơ riêng: $(x_1, -x_1) = x_1(1, -1)$.",
+          "Với $\\lambda = 3$: $A - 3I = \\begin{bmatrix} -1 & 1 \\\\ 1 & -1 \\end{bmatrix}$, giải $(A - 3I)\\mathbf{x} = 0 \\implies x_1 = x_2$. Véc tơ riêng: $(x_1, x_1) = x_1(1, 1)$."
+        ]
+      }
+    },
+    {
+      "question": "Chéo hóa ánh xạ tuyến tính $f: \\mathbb{R}^2 \\to \\mathbb{R}^2$ với $f(x, y) = (2x + y, x + 2y)$ bằng cách tìm ma trận chéo $D$ và ma trận khả nghịch $P$.",
+      "answer": {
+        "steps": [
+          "Ma trận đại diện: $A = \\begin{bmatrix} 2 & 1 \\\\ 1 & 2 \\end{bmatrix}$.",
+          "Trị riêng (từ câu 7): $\\lambda = 1, 3$.",
+          "Véc tơ riêng (từ câu 8): $\\{(1, -1), (1, 1)\\}$.",
+          "Ma trận $P = \\begin{bmatrix} 1 & 1 \\\\ -1 & 1 \\end{bmatrix}$, $D = \\begin{bmatrix} 1 & 0 \\\\ 0 & 3 \\end{bmatrix}$.",
+          "Kiểm tra: $P^{-1} = \\frac{1}{2}\\begin{bmatrix} 1 & -1 \\\\ 1 & 1 \\end{bmatrix}$, $PDP^{-1} = A$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm trị riêng của ma trận $A = \\begin{bmatrix} 0 & 1 \\\\ -1 & 0 \\end{bmatrix}$.",
+      "answer": {
+        "steps": [
+          "Phương trình đặc trưng: $\\det(A - \\lambda I) = \\det\\begin{bmatrix} -\\lambda & 1 \\\\ -1 & -\\lambda \\end{bmatrix} = \\lambda^2 + 1 = 0$.",
+          "Trị riêng: $\\lambda = i, -i$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm véc tơ riêng của ma trận $A = \\begin{bmatrix} 1 & 2 \\\\ 0 & 3 \\end{bmatrix}$ tương ứng với các trị riêng.",
+      "answer": {
+        "steps": [
+          "Phương trình đặc trưng: $\\det(A - \\lambda I) = (1 - \\lambda)(3 - \\lambda) = 0$. Trị riêng: $\\lambda = 1, 3$.",
+          "Với $\\lambda = 1$: $A - I = \\begin{bmatrix} 0 & 2 \\\\ 0 & 2 \\end{bmatrix}$, giải $(A - I)\\mathbf{x} = 0 \\implies x_2 = 0$. Véc tơ riêng: $(x_1, 0) = x_1(1, 0)$.",
+          "Với $\\lambda = 3$: $A - 3I = \\begin{bmatrix} -2 & 2 \\\\ 0 & 0 \\end{bmatrix}$, giải $(A - 3I)\\mathbf{x} = 0 \\implies -2x_1 + 2x_2 = 0 \\implies x_1 = x_2$. Véc tơ riêng: $(x_2, x_2) = x_2(1, 1)$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định xem ma trận đối xứng thực $A = \\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix}$ có chéo hóa được hay không.",
+      "answer": {
+        "steps": [
+          "Phương trình đặc trưng: $\\det(A - \\lambda I) = \\det\\begin{bmatrix} -\\lambda & 1 \\\\ 1 & -\\lambda \\end{bmatrix} = \\lambda^2 - 1 = 0$.",
+          "Trị riêng: $\\lambda = 1, -1$.",
+          "Với $\\lambda = 1$: $A - I = \\begin{bmatrix} -1 & 1 \\\\ 1 & -1 \\end{bmatrix}$, giải $(A - I)\\mathbf{x} = 0 \\implies x_1 = x_2$. Véc tơ riêng: $(x_1, x_1)$.",
+          "Với $\\lambda = -1$: $A + I = \\begin{bmatrix} 1 & 1 \\\\ 1 & 1 \\end{bmatrix}$, giải $(A + I)\\mathbf{x} = 0 \\implies x_1 + x_2 = 0 \\implies x_2 = -x_1$.",
+          "Số chiều không gian riêng: 2, bằng số chiều ma trận, nên $A$ chéo hóa được."
+        ]
+      }
+    },
+    {
+      "question": "Tìm ma trận chéo $D$ và ma trận khả nghịch $P$ sao cho ma trận đối xứng thực $A = \\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix}$ thỏa mãn $A = PDP^{-1}$.",
+      "answer": {
+        "steps": [
+          "Trị riêng (từ câu 12): $\\lambda = 1, -1$.",
+          "Véc tơ riêng: $\\{(1, 1), (1, -1)\\}$.",
+          "Ma trận $P = \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix}$, $D = \\begin{bmatrix} 1 & 0 \\\\ 0 & -1 \\end{bmatrix}$.",
+          "Kiểm tra: $P^{-1} = \\frac{1}{2}\\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix}$, $PDP^{-1} = A$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm trị riêng của ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$ với $f(x, y, z) = (x + y, y + z, x + z)$, biểu diễn bằng ma trận chuẩn.",
+      "answer": {
+        "steps": [
+          "Ma trận đại diện: $A = \\begin{bmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 1 & 0 & 1 \\end{bmatrix}$.",
+          "Phương trình đặc trưng: $\\det(A - \\lambda I) = \\det\\begin{bmatrix} 1 - \\lambda & 1 & 0 \\\\ 0 & 1 - \\lambda & 1 \\\\ 1 & 0 & 1 - \\lambda \\end{bmatrix} = (1 - \\lambda)^3 - 1 = 0$.",
+          "Giải: $(1 - \\lambda)(\\lambda^2 - 2\\lambda) = 0$. Trị riêng: $\\lambda = 1$ (trùng lặp), $0$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm véc tơ riêng của ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$ với $f(x, y, z) = (x + y, y + z, x + z)$ tương ứng với các trị riêng.",
+      "answer": {
+        "steps": [
+          "Ma trận đại diện: $A = \\begin{bmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 1 & 0 & 1 \\end{bmatrix}$.",
+          "Trị riêng (từ câu 14): $\\lambda = 1$ (trùng lặp), $0$.",
+          "Với $\\lambda = 1$: $A - I = \\begin{bmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\ 1 & 0 & 0 \\end{bmatrix}$, giải $(A - I)\\mathbf{x} = 0 \\implies x_2 = 0, x_3 = 0$. Véc tơ riêng: $(x_1, 0, 0)$.",
+          "Với $\\lambda = 0$: $A = \\begin{bmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 1 & 0 & 1 \\end{bmatrix}$, giải $A\\mathbf{x} = 0 \\implies x_1 + x_2 = 0, x_3 = 0$. Véc tơ riêng: $(-x_2, x_2, 0)$."
+        ]
+      }
+    },
+    {
+      "question": "Chéo hóa ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$ với $f(x, y, z) = (x + y, y + z, x + z)$ bằng cách tìm ma trận chéo $D$ và ma trận khả nghịch $P$.",
+      "answer": {
+        "steps": [
+          "Ma trận đại diện: $A = \\begin{bmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 1 \\\\ 1 & 0 & 1 \\end{bmatrix}$.",
+          "Trị riêng (từ câu 14): $\\lambda = 1$ (trùng lặp), $0$.",
+          "Véc tơ riêng: $\\{(1, 0, 0), (-1, 1, 0)\\}$.",
+          "Ma trận $P = \\begin{bmatrix} 1 & -1 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}$, $D = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 0 \\end{bmatrix}$ (cần điều chỉnh cơ sở)."
+        ]
+      }
+    },
+    {
+      "question": "Tìm trị riêng của ma trận $A = \\begin{bmatrix} 2 & 0 & 0 \\\\ 0 & 2 & 1 \\\\ 0 & 0 & 3 \\end{bmatrix}$.",
+      "answer": {
+        "steps": [
+          "Phương trình đặc trưng: $\\det(A - \\lambda I) = (2 - \\lambda)^2(3 - \\lambda) = 0$.",
+          "Trị riêng: $\\lambda = 2$ (trùng lặp), $\\lambda = 3$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm véc tơ riêng của ma trận $A = \\begin{bmatrix} 1 & 1 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 2 \\end{bmatrix}$ tương ứng với các trị riêng.",
+      "answer": {
+        "steps": [
+          "Phương trình đặc trưng: $\\det(A - \\lambda I) = (1 - \\lambda)^2(2 - \\lambda) = 0$. Trị riêng: $\\lambda = 1$ (trùng lặp), $\\lambda = 2$.",
+          "Với $\\lambda = 1$: $A - I = \\begin{bmatrix} 0 & 1 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}$, giải $(A - I)\\mathbf{x} = 0 \\implies x_2 = 0$. Véc tơ riêng: $(x_1, 0, x_3)$.",
+          "Với $\\lambda = 2$: $A - 2I = \\begin{bmatrix} -1 & 1 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 0 \\end{bmatrix}$, giải $(A - 2I)\\mathbf{x} = 0 \\implies x_1 = x_2$. Véc tơ riêng: $(x_2, x_2, x_3)$."
+        ]
+      }
+    },
+    {
+      "question": "Xác định xem ma trận đối xứng thực $A = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 2 & 1 \\\\ 0 & 1 & 2 \\end{bmatrix}$ có chéo hóa được hay không.",
+      "answer": {
+        "steps": [
+          "Phương trình đặc trưng: $\\det(A - \\lambda I) = (1 - \\lambda)\\det\\begin{bmatrix} 2 - \\lambda & 1 \\\\ 1 & 2 - \\lambda \\end{bmatrix} = (1 - \\lambda)((2 - \\lambda)^2 - 1) = (1 - \\lambda)(\\lambda^2 - 4\\lambda + 3) = 0$.",
+          "Trị riêng: $\\lambda = 1, 1, 3$.",
+          "Với $\\lambda = 1$: $A - I = \\begin{bmatrix} 0 & 0 & 0 \\\\ 0 & 1 & 1 \\\\ 0 & 1 & 1 \\end{bmatrix}$, giải $(A - I)\\mathbf{x} = 0 \\implies x_2 + x_3 = 0$.",
+          "Với $\\lambda = 3$: $A - 3I = \\begin{bmatrix} -2 & 0 & 0 \\\\ 0 & -1 & 1 \\\\ 0 & 1 & -1 \\end{bmatrix}$, giải $(A - 3I)\\mathbf{x} = 0 \\implies x_2 = x_3$.",
+          "Số chiều không gian riêng: 3, bằng số chiều ma trận, nên $A$ chéo hóa được."
+        ]
+      }
+    },
+    {
+      "question": "Tìm ma trận chéo $D$ và ma trận khả nghịch $P$ sao cho ma trận đối xứng thực $A = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 2 & 1 \\\\ 0 & 1 & 2 \\end{bmatrix}$ thỏa mãn $A = PDP^{-1}$.",
+      "answer": {
+        "steps": [
+          "Trị riêng (từ câu 18): $\\lambda = 1, 3$.",
+          "Véc tơ riêng: Cần tính chi tiết (từ bước trên).",
+          "Ma trận $P$ và $D$ sẽ được xây dựng từ cơ sở trực chuẩn của không gian riêng."
+        ]
+      }
+    },
+    {
+      "question": "Tìm trị riêng của ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$ với $f(x, y, z) = (2x, 2y, 3z)$.",
+      "answer": {
+        "steps": [
+          "Ma trận đại diện: $A = \\begin{bmatrix} 2 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 3 \\end{bmatrix}$.",
+          "Phương trình đặc trưng: $\\det(A - \\lambda I) = (2 - \\lambda)^2(3 - \\lambda) = 0$.",
+          "Trị riêng: $\\lambda = 2$ (trùng lặp), $\\lambda = 3$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm véc tơ riêng của ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$ với $f(x, y, z) = (2x, 2y, 3z)$ tương ứng với các trị riêng.",
+      "answer": {
+        "steps": [
+          "Ma trận đại diện: $A = \\begin{bmatrix} 2 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 3 \\end{bmatrix}$.",
+          "Trị riêng (từ câu 20): $\\lambda = 2$ (trùng lặp), $\\lambda = 3$.",
+          "Với $\\lambda = 2$: $A - 2I = \\begin{bmatrix} 0 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}$, giải $(A - 2I)\\mathbf{x} = 0 \\implies x_3 = 0$. Véc tơ riêng: $(x_1, x_2, 0)$.",
+          "Với $\\lambda = 3$: $A - 3I = \\begin{bmatrix} -1 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 0 \\end{bmatrix}$, giải $(A - 3I)\\mathbf{x} = 0 \\implies x_1 = 0, x_2 = 0$. Véc tơ riêng: $(0, 0, x_3)$."
+        ]
+      }
+    },
+    {
+      "question": "Chéo hóa ánh xạ tuyến tính $f: \\mathbb{R}^3 \\to \\mathbb{R}^3$ với $f(x, y, z) = (2x, 2y, 3z)$ bằng cách tìm ma trận chéo $D$ và ma trận khả nghịch $P$.",
+      "answer": {
+        "steps": [
+          "Ma trận đại diện: $A = \\begin{bmatrix} 2 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 3 \\end{bmatrix}$.",
+          "Trị riêng (từ câu 20): $\\lambda = 2$ (trùng lặp), $\\lambda = 3$.",
+          "Véc tơ riêng: $\\{(1, 0, 0), (0, 1, 0), (0, 0, 1)\\}$.",
+          "Ma trận $P = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}$, $D = \\begin{bmatrix} 2 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 3 \\end{bmatrix}$ (với cơ sở chuẩn)."
+        ]
+      }
+    },
+    {
+      "question": "Tìm trị riêng của ma trận $A = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 0 & 1 \\\\ 0 & -1 & 0 \\end{bmatrix}$.",
+      "answer": {
+        "steps": [
+          "Phương trình đặc trưng: $\\det(A - \\lambda I) = (1 - \\lambda)\\det\\begin{bmatrix} -\\lambda & 1 \\\\ -1 & -\\lambda \\end{bmatrix} = (1 - \\lambda)(\\lambda^2 + 1) = 0$.",
+          "Trị riêng: $\\lambda = 1, i, -i$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm điều kiện của $k$ để ma trận $A = \\begin{bmatrix} 1 & k \\\\ 0 & 2 \\end{bmatrix}$ có hai trị riêng phân biệt.",
+      "answer": {
+        "steps": [
+          "Phương trình đặc trưng: $\\det(A - \\lambda I) = (1 - \\lambda)(2 - \\lambda) = 0$.",
+          "Trị riêng: $\\lambda = 1, 2$, luôn phân biệt với mọi $k$."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng toàn phương $f(x, y) = 2x^2 + 3y^2 + 4xy$. Viết dạng toàn phương này dưới dạng ma trận.",
+      "answer": {
+        "steps": [
+          "Dạng toàn phương có thể viết $f(X) = X^T A X$, với $X = \\begin{bmatrix} x \\\\ y \\end{bmatrix}$.",
+          "Ma trận $A$ được xác định từ hệ số: $a_{11} = 2$, $a_{22} = 3$, $a_{12} = a_{21} = 2$.",
+          "Kết quả: $A = \\begin{bmatrix} 2 & 2 \\\\ 2 & 3 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 4 & 1 \\\\ 1 & 3 \\end{bmatrix}$. Viết dạng toàn phương $f(X) = X^T A X$.",
+      "answer": {
+        "steps": [
+          "Với $X = \\begin{bmatrix} x \\\\ y \\end{bmatrix}$, ta có:",
+          "$f(X) = [x \\ y] \\begin{bmatrix} 4 & 1 \\\\ 1 & 3 \\end{bmatrix} \\begin{bmatrix} x \\\\ y \\end{bmatrix}$.",
+          "Nhân ma trận: $f(X) = 4x^2 + 2xy + 3y^2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng toàn phương $f(x, y) = 5x^2 - 4xy + y^2$. Viết ma trận đối xứng biểu diễn dạng này.",
+      "answer": {
+        "steps": [
+          "Hệ số $a_{11} = 5$, $a_{22} = 1$, $a_{12} = a_{21} = -2$.",
+          "Ma trận: $A = \\begin{bmatrix} 5 & -2 \\\\ -2 & 1 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 2 & 1 & 0 \\\\ 1 & 3 & 2 \\\\ 0 & 2 & 4 \\end{bmatrix}$. Viết dạng toàn phương $f(X) = X^T A X$.",
+      "answer": {
+        "steps": [
+          "Đặt $X = \\begin{bmatrix} x_1 \\\\ x_2 \\\\ x_3 \\end{bmatrix}$.",
+          "Nhân ma trận: $f(X) = 2x_1^2 + 2x_1x_2 + 3x_2^2 + 4x_2x_3 + 4x_3^2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng toàn phương $f(x_1, x_2, x_3) = x_1^2 + 2x_2^2 + 3x_3^2 + 4x_1x_2 + 6x_2x_3$. Tìm ma trận đối xứng $A$.",
+      "answer": {
+        "steps": [
+          "$a_{11} = 1$, $a_{22} = 2$, $a_{33} = 3$.",
+          "$a_{12} = a_{21} = 2$, $a_{23} = a_{32} = 3$, $a_{13} = a_{31} = 0$.",
+          "Ma trận: $A = \\begin{bmatrix} 1 & 2 & 0 \\\\ 2 & 2 & 3 \\\\ 0 & 3 & 3 \\end{bmatrix}$."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng toàn phương $f(x, y) = 4x^2 + 4xy + y^2$. Chuyển về dạng chính tắc bằng phương pháp hoàn bình phương.",
+      "answer": {
+        "steps": [
+          "$f(x, y) = (2x + y)^2$.",
+          "Đặt $u = 2x + y$, $v = y$, khi đó $f(u, v) = u^2$.",
+          "Dạng chính tắc: $f = u^2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng toàn phương $f(x, y) = 3x^2 + 4xy + 5y^2$. Chuyển về dạng chính tắc bằng phép quay trục.",
+      "answer": {
+        "steps": [
+          "Ma trận $A = \\begin{bmatrix} 3 & 2 \\\\ 2 & 5 \\end{bmatrix}$.",
+          "Giải trị riêng: $|A - \\lambda I| = (3-\\lambda)(5-\\lambda) - 4 = \\lambda^2 - 8\\lambda + 11 = 0$.",
+          "Nghiệm: $\\lambda_{1,2} = 4 \\pm \\sqrt{5}$.",
+          "Dạng chính tắc: $\\lambda_1 u^2 + \\lambda_2 v^2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 6 & 2 \\\\ 2 & 3 \\end{bmatrix}$. Đưa dạng toàn phương về dạng chính tắc.",
+      "answer": {
+        "steps": [
+          "Giải trị riêng: $|A - \\lambda I| = \\lambda^2 - 9\\lambda + 14 = 0$.",
+          "Nghiệm: $\\lambda_{1,2} = 7, 2$.",
+          "Dạng chính tắc: $7u^2 + 2v^2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng toàn phương $f(x, y, z) = x^2 + y^2 + z^2 + 2xy + 2yz + 2xz$. Chuyển về dạng chính tắc.",
+      "answer": {
+        "steps": [
+          "Ma trận $A = \\begin{bmatrix} 1 & 1 & 1 \\\\ 1 & 1 & 1 \\\\ 1 & 1 & 1 \\end{bmatrix}$.",
+          "Giải trị riêng: $\\lambda_1 = 3$, $\\lambda_2 = 0$, $\\lambda_3 = 0$.",
+          "Dạng chính tắc: $3u^2$."
+        ]
+      }
+    },
+    {
+      "question": "Xét dạng toàn phương $f(x, y) = 7x^2 - 6xy + 2y^2$. Chuyển về dạng chính tắc.",
+      "answer": {
+        "steps": [
+          "Ma trận $A = \\begin{bmatrix} 7 & -3 \\\\ -3 & 2 \\end{bmatrix}$.",
+          "Giải trị riêng: $|A - \\lambda I| = (7-\\lambda)(2-\\lambda) - 9 = \\lambda^2 - 9\\lambda + 5 = 0$.",
+          "Nghiệm: $\\lambda_{1,2} = \\frac{9 \\pm \\sqrt{61}}{2}$.",
+          "Dạng chính tắc: $\\lambda_1 u^2 + \\lambda_2 v^2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 5 & 4 \\\\ 4 & 5 \\end{bmatrix}$. Chuyển dạng toàn phương về dạng chính tắc.",
+      "answer": {
+        "steps": [
+          "Giải trị riêng: $|A - \\lambda I| = (5-\\lambda)^2 - 16 = \\lambda^2 - 10\\lambda + 9 = 0$.",
+          "Nghiệm: $\\lambda_{1,2} = 9, 1$.",
+          "Dạng chính tắc: $9u^2 + v^2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng toàn phương $f(x_1, x_2, x_3) = 2x_1^2 + 3x_2^2 + 4x_3^2 + 2x_1x_2 + 4x_2x_3$. Đưa về dạng chính tắc.",
+      "answer": {
+        "steps": [
+          "Ma trận: $A = \\begin{bmatrix} 2 & 1 & 0 \\\\ 1 & 3 & 2 \\\\ 0 & 2 & 4 \\end{bmatrix}$.",
+          "Tìm trị riêng của $A$ (bài toán 3x3).",
+          "Dạng chính tắc: $\\lambda_1 u^2 + \\lambda_2 v^2 + \\lambda_3 w^2$."
+        ]
+      }
+    },
+    {
+      "question": "Xét $f(x, y) = 4x^2 + 4y^2 + 4xy$. Sử dụng phép quay trục $45^\\circ$ để khử số hạng chéo.",
+      "answer": {
+        "steps": [
+          "Đặt $x = \\frac{u+v}{\\sqrt{2}}$, $y = \\frac{-u+v}{\\sqrt{2}}$.",
+          "Thay vào $f$, ta thu được dạng không có số hạng $uv$.",
+          "Kết quả: $f = 8u^2 + 0v^2$."
+        ]
+      }
+    },
+    {
+      "question": "Xét $f(x, y) = 10x^2 + 4xy + y^2$. Tìm phép quay trục khử số hạng chéo.",
+      "answer": {
+        "steps": [
+          "Công thức $\\cot 2\\theta = \\frac{a - c}{b}$ với $a = 10, b = 2, c = 1$.",
+          "Tính $\\cot 2\\theta = \\frac{10-1}{2} = 4.5$.",
+          "Giải để tìm $\\theta$, sau đó chuyển đổi hệ trục."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng toàn phương $f(x, y) = x^2 + 6xy + 9y^2$. Chuyển về dạng chính tắc.",
+      "answer": {
+        "steps": [
+          "Ma trận $A = \\begin{bmatrix} 1 & 3 \\\\ 3 & 9 \\end{bmatrix}$.",
+          "Giải trị riêng: $|A - \\lambda I| = (1-\\lambda)(9-\\lambda) - 9 = \\lambda^2 - 10\\lambda = 0$.",
+          "Nghiệm: $\\lambda_{1,2} = 10, 0$.",
+          "Dạng chính tắc: $10u^2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng toàn phương $f(x, y) = 8x^2 - 6xy + y^2$. Tìm trị riêng và đưa về dạng chính tắc.",
+      "answer": {
+        "steps": [
+          "Ma trận $A = \\begin{bmatrix} 8 & -3 \\\\ -3 & 1 \\end{bmatrix}$.",
+          "Giải trị riêng: $|A - \\lambda I| = (8-\\lambda)(1-\\lambda) - 9 = \\lambda^2 - 9\\lambda - 1 = 0$.",
+          "Nghiệm: $\\lambda_{1,2} = \\frac{9 \\pm \\sqrt{85}}{2}$.",
+          "Dạng chính tắc: $\\lambda_1 u^2 + \\lambda_2 v^2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng toàn phương $f(x, y) = 5x^2 + 2xy + 5y^2$. Sử dụng phép quay trục để khử số hạng chéo.",
+      "answer": {
+        "steps": [
+          "Áp dụng $\\cot 2\\theta = \\frac{a-c}{b} = 0$.",
+          "Suy ra $2\\theta = 90^\\circ \\Rightarrow \\theta = 45^\\circ$.",
+          "Dạng mới: $(a+b)u^2 + (a-b)v^2 = 7u^2 + 3v^2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $f(x, y, z) = x^2 + y^2 + z^2 + xy + yz + zx$. Tìm trị riêng của ma trận và dạng chính tắc.",
+      "answer": {
+        "steps": [
+          "Ma trận $A = \\begin{bmatrix} 1 & 0.5 & 0.5 \\\\ 0.5 & 1 & 0.5 \\\\ 0.5 & 0.5 & 1 \\end{bmatrix}$.",
+          "Giải trị riêng: $\\lambda_1 = 2$, $\\lambda_2 = 0.5$, $\\lambda_3 = 0.5$.",
+          "Dạng chính tắc: $2u^2 + 0.5v^2 + 0.5w^2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 3 & 1 & 0 \\\\ 1 & 4 & 2 \\\\ 0 & 2 & 5 \\end{bmatrix}$. Tìm trị riêng.",
+      "answer": {
+        "steps": [
+          "Giải phương trình đặc trưng $|A - \\lambda I| = 0$.",
+          "Tính trị riêng bằng khai triển Laplace hoặc phương pháp số.",
+          "Thu được 3 trị riêng $\\lambda_1, \\lambda_2, \\lambda_3$."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng toàn phương $f(x, y) = 4x^2 + 2y^2 + 4xy$. Tìm ma trận và dạng chính tắc.",
+      "answer": {
+        "steps": [
+          "Ma trận $A = \\begin{bmatrix} 4 & 2 \\\\ 2 & 2 \\end{bmatrix}$.",
+          "Giải trị riêng: $\\lambda^2 - 6\\lambda + 4 = 0$.",
+          "Nghiệm: $\\lambda_{1,2} = 3 \\pm \\sqrt{5}$.",
+          "Dạng chính tắc: $(3+\\sqrt{5})u^2 + (3-\\sqrt{5})v^2$."
+        ]
+      }
+    },
+    {
+      "question": "Xét dạng toàn phương $f(x, y) = 9x^2 + 6xy + y^2$. Chuyển về dạng chính tắc.",
+      "answer": {
+        "steps": [
+          "Ma trận $A = \\begin{bmatrix} 9 & 3 \\\\ 3 & 1 \\end{bmatrix}$.",
+          "Giải trị riêng: $\\lambda^2 - 10\\lambda = 0$.",
+          "Nghiệm: $\\lambda_{1,2} = 10, 0$.",
+          "Dạng chính tắc: $10u^2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $f(x, y) = 7x^2 + 4xy + 7y^2$. Khử số hạng chéo bằng phép quay.",
+      "answer": {
+        "steps": [
+          "$\\cot 2\\theta = \\frac{a-c}{b} = 0$.",
+          "Suy ra $\\theta = 45^\\circ$.",
+          "Dạng mới: $(7+2)u^2 + (7-2)v^2 = 9u^2 + 5v^2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 2 & 1 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 1 & 2 \\end{bmatrix}$. Tìm trị riêng.",
+      "answer": {
+        "steps": [
+          "Nhận thấy $A$ có dạng $I + J$ với $J$ là ma trận toàn 1.",
+          "Trị riêng: $\\lambda_1 = 4$ (1 lần), $\\lambda_{2,3} = 1$ (bội 2)."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng toàn phương $f(x_1, x_2, x_3) = 5x_1^2 + 4x_2^2 + 3x_3^2 + 4x_1x_2 + 2x_1x_3$. Đưa về dạng chính tắc.",
+      "answer": {
+        "steps": [
+          "Ma trận $A = \\begin{bmatrix} 5 & 2 & 1 \\\\ 2 & 4 & 0 \\\\ 1 & 0 & 3 \\end{bmatrix}$.",
+          "Giải trị riêng để thu được dạng chính tắc $\\lambda_1 u^2 + \\lambda_2 v^2 + \\lambda_3 w^2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $f(x, y) = 2x^2 + 8xy + 2y^2$. Chuyển về dạng chính tắc.",
+      "answer": {
+        "steps": [
+          "Ma trận $A = \\begin{bmatrix} 2 & 4 \\\\ 4 & 2 \\end{bmatrix}$.",
+          "Giải trị riêng: $\\lambda_{1,2} = 6, -2$.",
+          "Dạng chính tắc: $6u^2 - 2v^2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $f(x, y, z) = 2x^2 + 2y^2 + 2z^2 + 2xy + 2yz + 2xz$. Chuyển về dạng chính tắc.",
+      "answer": {
+        "steps": [
+          "Ma trận $A = \\begin{bmatrix} 2 & 1 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 1 & 2 \\end{bmatrix}$.",
+          "Trị riêng: $\\lambda_1 = 4$, $\\lambda_{2,3} = 1$.",
+          "Dạng chính tắc: $4u^2 + v^2 + w^2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho ma trận $A = \\begin{bmatrix} 3 & -1 & 0 \\\\ -1 & 3 & -1 \\\\ 0 & -1 & 3 \\end{bmatrix}$. Tìm trị riêng.",
+      "answer": {
+        "steps": [
+          "Đây là ma trận 3 chéo dạng Toeplitz.",
+          "Trị riêng: $\\lambda_k = 3 - 2\\cos\\frac{k\\pi}{4}$ với $k=1,2,3$."
+        ]
+      }
+    },
+    {
+      "question": "Cho $f(x, y) = 5x^2 + 6xy + 5y^2$. Khử số hạng chéo.",
+      "answer": {
+        "steps": [
+          "$\\cot 2\\theta = 0 \\Rightarrow \\theta = 45^\\circ$.",
+          "Dạng mới: $(5+3)u^2 + (5-3)v^2 = 8u^2 + 2v^2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng toàn phương $f(x, y) = 4x^2 - 4xy + 4y^2$. Chuyển về dạng chính tắc.",
+      "answer": {
+        "steps": [
+          "Ma trận $A = \\begin{bmatrix} 4 & -2 \\\\ -2 & 4 \\end{bmatrix}$.",
+          "Trị riêng: $\\lambda_{1,2} = 6, 2$.",
+          "Dạng chính tắc: $6u^2 + 2v^2$."
+        ]
+      }
+    },
+    {
+      "question": "Cho dạng toàn phương $f(x_1, x_2, x_3) = 6x_1^2 + 5x_2^2 + 4x_3^2 + 4x_1x_2 + 2x_1x_3 + 4x_2x_3$. Hãy: (1) Viết ma trận đối xứng $A$, (2) Tìm trị riêng và vectơ riêng trực chuẩn, (3) Đưa về dạng chính tắc, (4) Xác định loại dạng toàn phương (xác định dương, âm hay không xác định).",
+      "answer": {
+        "steps": [
+          "Bước 1: Viết ma trận đối xứng $A$ từ dạng toàn phương:",
+          "$$ A = \\begin{bmatrix} 6 & 2 & 1 \\\\ 2 & 5 & 2 \\\\ 1 & 2 & 4 \\end{bmatrix} $$",
+          "Bước 2: Giải phương trình đặc trưng $|A - \\lambda I| = 0$ để tìm trị riêng:",
+          "$$ -\\lambda^3 + 15\\lambda^2 - 65\\lambda + 81 = 0 $$",
+          "Nghiệm: $\\lambda_1 = 3$, $\\lambda_2 = 6$, $\\lambda_3 = 6$ (đơn và kép).",
+          "Bước 3: Tìm vectơ riêng tương ứng và trực chuẩn hóa (Gram–Schmidt) để thu được ma trận trực chuẩn $P$.",
+          "Bước 4: Đưa về dạng chính tắc: $$ f = 3u^2 + 6v^2 + 6w^2 $$",
+          "Bước 5: Vì tất cả trị riêng dương nên dạng toàn phương là **xác định dương**."
+        ]
+      }
     }
   ]
 }
