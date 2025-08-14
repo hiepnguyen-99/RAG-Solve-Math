@@ -1,8 +1,9 @@
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
-from langchain_huggingface import HuggingFacePipeline
+from langchain.llms.base import LLM
 from function import *
 from conversation_manager import conversation_manager
+from langchain.prompts import PromptTemplate
 
 
 # Thiết bị
@@ -34,20 +35,29 @@ model = AutoModelForCausalLM.from_pretrained(
 RERANK_MODEL = "BAAI/bge-reranker-base"
 
 
-# 5. Pipeline tối ưu
-generation_pipe = pipeline(
-    "text-generation",
-    model=model,
-    tokenizer=tokenizer,
-    max_new_tokens=300,
-    temperature=0.6,
-    top_p=0.9,
-    do_sample=False,
-    return_full_text=False,
-    device=device
-)
-llm = HuggingFacePipeline(pipeline=generation_pipe)
+class DirectGenerateLLM(LLM):
+    def _call(self, prompt: str, stop=None):
+        inputs = tokenizer(prompt, return_tensors="pt").to(device)
+        outputs = model.generate(
+            **inputs,
+            max_new_tokens=300,
+            temperature=0.6,
+            top_p=0.9,
+            do_sample=True,
+            eos_token_id=tokenizer.eos_token_id
+        )
+        text = tokenizer.decode(outputs[0], skip_special_tokens=True)
+        return text.strip()
 
+    @property
+    def _identifying_params(self):
+        return {"model_name": model_name}
+
+    @property
+    def _llm_type(self):
+        return "custom-direct-generate"
+
+llm = DirectGenerateLLM()
 # 6. Prompt rút gọn với conversation context
 prompt_template = PromptTemplate(
     input_variables=["context", "question", "conversation_context"],

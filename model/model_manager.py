@@ -24,9 +24,9 @@ class ModelManager:
                 'loaded': False
             },
             'model-api': {
-                'name': 'Meta-llama 70B (API)',
-                'module': 'model.rag_api', 
-                'function': 'solve_question_api',
+                'name': 'llama 7B (API)',
+                'module': 'model.rag_7b_api', 
+                'function': 'solve_question_api_groq',
                 'loaded': False
             },
             'gemini-api': {

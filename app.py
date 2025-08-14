@@ -428,6 +428,35 @@ def get_document(filename):
     except Exception as e:
         return jsonify({'error': f'Lỗi khi tải tài liệu: {str(e)}'}), 500
 
+@app.route('/api/document-chunk', methods=['POST'])
+def get_document_chunk():
+    """Lấy thông tin chi tiết về một chunk cụ thể"""
+    try:
+        data = request.get_json()
+        chunk_content = data.get('content', '')
+        filename = data.get('filename', '')
+        
+        if not chunk_content:
+            return jsonify({'error': 'Nội dung chunk không được để trống'}), 400
+        
+        # Tạo tiêu đề từ filename
+        title = filename.replace('.md', '').replace('_', ' ').title()
+        title = re.sub(r'File \d+', '', title).strip()
+        
+        # Convert markdown to HTML cho chunk content
+        html_content = markdown.markdown(chunk_content, extensions=['tables', 'fenced_code'])
+        
+        return jsonify({
+            'success': True,
+            'title': f'Chi tiết từ: {title}',
+            'content': html_content,
+            'filename': filename,
+            'is_chunk': True
+        })
+    
+    except Exception as e:
+        return jsonify({'error': f'Lỗi khi tải chunk: {str(e)}'}), 500
+
 @app.route('/api/settings', methods=['POST'])
 def update_settings():
     """Cập nhật cài đặt người dùng"""

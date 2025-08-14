@@ -273,6 +273,65 @@ class ChatApp {
         }
     }
 
+    async openDocumentChunk(content, filename) {
+        try {
+            const response = await fetch('/api/document-chunk', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    content: content,
+                    filename: filename
+                })
+            });
+            
+            const data = await response.json();
+            
+            if (data.success) {
+                this.modalTitle.textContent = data.title;
+                
+                // Add source info and navigation option
+                const sourceInfo = `
+                    <div class="chunk-info">
+                        <div class="chunk-header">
+                            <span class="material-icons">content_cut</span>
+                            <span>Đoạn văn được tìm thấy từ chunking</span>
+                        </div>
+                        <div class="chunk-actions">
+                            <button class="view-full-doc" data-filename="${this.escapeHtml(filename)}">
+                                <span class="material-icons">library_books</span>
+                                <span>Xem tài liệu đầy đủ</span>
+                            </button>
+                        </div>
+                    </div>
+                    <hr style="margin: 15px 0; border: 1px solid var(--border-color);">
+                `;
+                
+                this.modalBody.innerHTML = sourceInfo + data.content;
+                this.documentModal.classList.add('show');
+                
+                // Add event listener for "view full document" button
+                const viewFullDocBtn = this.modalBody.querySelector('.view-full-doc');
+                if (viewFullDocBtn) {
+                    viewFullDocBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const targetFilename = e.currentTarget.getAttribute('data-filename');
+                        this.openDocument(targetFilename);
+                    });
+                }
+                
+                // Process LaTeX in modal
+                this.processLaTeX(data.content, this.modalBody);
+            } else {
+                this.showToast('Không thể tải chi tiết chunk', 'error');
+            }
+        } catch (error) {
+            console.error('Error opening chunk:', error);
+            this.showToast('Đã xảy ra lỗi khi tải chi tiết chunk', 'error');
+        }
+    }
+
     closeModal() {
         this.documentModal.classList.remove('show');
     }
@@ -448,7 +507,10 @@ class ChatApp {
                 <div class="source-item">
                     <div class="source-header-item">
                         <strong>Tài liệu ${index + 1}:</strong>
-                        <button class="document-link" data-filename="${fileName}" title="Xem tài liệu đầy đủ">
+                        <button class="document-link" 
+                                data-filename="${fileName}" 
+                                data-content="${this.escapeHtml(doc.page_content)}"
+                                title="Xem chi tiết đoạn văn được tìm thấy">
                             <span class="material-icons">description</span>
                             <span>${capitalizedName}</span>
                         </button>
@@ -517,14 +579,22 @@ class ChatApp {
             });
         }
         
-        // Add click handlers for document links
+        // Add click handlers for document links - now shows chunk detail
         const documentLinks = messageElement.querySelectorAll('.document-link');
         documentLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
                 const filename = link.getAttribute('data-filename');
-                this.openDocument(filename);
+                const content = link.getAttribute('data-content');
+                
+                // Show chunk detail instead of full document
+                if (content) {
+                    this.openDocumentChunk(content, filename);
+                } else {
+                    // Fallback to full document if no chunk content
+                    this.openDocument(filename);
+                }
             });
         });
     }
@@ -1124,7 +1194,7 @@ class ChatApp {
         const models = {
             'qwen-1.5b': 'Qwen 1.5B',
             'qwen-4b': 'Qwen 4B',
-            'model-api': 'Meta-llama 70B (API)',
+            'model-api': 'llama 7B (API)',
             'gemini-api': 'Gemini (API)',
         };
         return models[modelKey] || modelKey;

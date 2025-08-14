@@ -1893,3 +1893,61 @@ body {
     background: linear-gradient(135deg, #66bb6a 0%, #9ccc65 100%);
     box-shadow: 0 2px 4px rgba(102, 187, 106, 0.3);
 }
+
+/* ===== Chunk Info Styling ===== */
+.chunk-info {
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
+    border: 1px solid #e3f2fd;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+[data-theme="dark"] .chunk-info {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border: 1px solid #2d3748;
+}
+
+.chunk-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.chunk-header .material-icons {
+    font-size: 20px;
+}
+
+.chunk-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.view-full-doc {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.view-full-doc:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-medium);
+}
+
+.view-full-doc .material-icons {
+    font-size: 16px;
+}
