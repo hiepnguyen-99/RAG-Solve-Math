@@ -158,20 +158,28 @@ $y = \log_a x$ với $0 < a \ne 1$: TXĐ là $\mathbb{R}_{>0}$, tập giá trị
 #### Hàm số lượng giác cơ bản
 • Hàm số $y = \sin x$ xác định $\forall x \in \mathbb{R}$, là hàm số lẻ, tuần hoàn chu kì $2\pi$.
 
-![](../extracted/graphs/graph_10_0.png)
+<p align="center">
+  <img src="../extracted/graphs/graph_10_0.png" width="50%" />
+</p>
 
 • Hàm số $y = \cos x$ xác định $\forall x \in \mathbb{R}$, là hàm số chẵn, tuần hoàn chu kì $2\pi$.
 
-![](../extracted/graphs/graph_11_0.png)
+<p align="center">
+  <img src="../extracted/graphs/graph_11_0.png" width="50%" />
+</p>
 
 
 • Hàm số $y = \tan x$ xác định $\forall x \in \mathbb{R} \setminus \left\{\left(2k+1\right)\frac{\pi}{2} \mid k \in \mathbb{Z}\right\}$, là hàm số lẻ, tuần hoàn chu kì $\pi$.
 
-![](../extracted/graphs/graph_11_1.png)
+<p align="center">
+  <img src="../extracted/graphs/graph_11_1.png" width="50%" />
+</p>
 
 • Hàm số $y = \cot x$ xác định $\forall x \in \mathbb{R} \setminus \left\{k\pi \mid k \in \mathbb{Z}\right\}$, là hàm số lẻ, tuần hoàn chu kì $\pi$.
 
-![](../extracted/graphs/graph_11_2.png)
+<p align="center">
+  <img src="../extracted/graphs/graph_11_2.png" width="50%" />
+</p>
 
 
 #### ví dụ (Ngụy biện toán học). 
@@ -185,33 +193,45 @@ Muốn tìm hàm ngược của một hàm số, điều kiện cần là hàm s
 
 Để khắc phục, ta hạn chế miền xác định của các hàm lượng giác về những khoảng mà chúng đơn ánh. Chẳng hạn, hàm $f(x)=\sin x$ là đơn ánh trên khoảng $-\pi/2 \le x \le \pi/2$.
 
+<p align="center">
+  <img src="../extracted/graphs/graph_12_0.png" width="50%" />
+</p>
+
 - Hàm số ngược của $y=\sin x$, kí hiệu $\arcsin x$, được xác định bởi:
 $x \mapsto y=\arcsin x \Leftrightarrow x=\sin y$
 
 Với qui ước chuẩn, $\arcsin: [-1,1] \to [-\pi/2,\pi/2]$. Hàm $y=\arcsin x$ xác định trên $[-1,1]$, nhận giá trị trong $[-\pi/2,\pi/2]$ và là hàm đơn điệu tăng.
 
-![](../extracted/graphs/graph_12_1.png)
+<p align="center">
+  <img src="../extracted/graphs/graph_12_1.png" width="50%" />
+</p>
 
 - Hàm số ngược của $y=\cos x$, kí hiệu $\arccos x$, được xác định bởi:
 $x \mapsto y=\arccos x \Leftrightarrow x=\cos y$
 
 Với qui ước chuẩn, $\arccos: [-1,1] \to [0,\pi]$. Hàm $y=\arccos x$ xác định trên $[-1,1]$, nhận giá trị trong $[0,\pi]$ và là hàm đơn điệu giảm.
 
-![](../extracted/graphs/graph_13_0.png)
+<p align="center">
+  <img src="../extracted/graphs/graph_13_0.png" width="50%" />
+</p>
 
 - Hàm số ngược của $y=\tan x$, kí hiệu $\arctan x$, được xác định bởi:
 $x \mapsto y=\arctan x \Leftrightarrow x=\tan y$
 
 Ta có $\arctan: (-\infty,+\infty) \to (-\pi/2,\pi/2)$. Hàm $y=\arctan x$ xác định trên toàn bộ $\mathbb R$, nhận giá trị trong $(-\pi/2,\pi/2)$ và là hàm đơn điệu tăng.
 
-![](../extracted/graphs/graph_13_1.png)
+<p align="center">
+  <img src="../extracted/graphs/graph_13_1.png" width="50%" />
+</p>
 
 - Hàm số ngược của $y=\cot x$, kí hiệu $\operatorname{arccot} x$, được xác định bởi:
 $x \mapsto y=\operatorname{arccot} x \Leftrightarrow x=\cot y$
 
 Theo qui ước này, $\operatorname{arccot}: (-\infty,+\infty) \to (0,\pi)$. Hàm $y=\operatorname{arccot} x$ xác định trên toàn bộ $\mathbb R$, nhận giá trị trong $(0,\pi)$ và là hàm đơn điệu giảm.
 
-![](../extracted/graphs/graph_14_0.png)
+<p align="center">
+  <img src="../extracted/graphs/graph_14_0.png" width="50%" />
+</p>
 
 #### Hàm số sơ cấp
 
@@ -373,7 +393,9 @@ $\lim_{x \to x_0} f(x) = L$
 
 Hình dung: $\lim_{x \to x_0} f(x) = L$ nghĩa là $\forall \epsilon > 0$, $\exists \delta > 0$ sao cho đồ thị hàm số trong $(x_0 - \delta, x_0 + \delta)$ nằm hoàn toàn trong dải $(L - \epsilon, L + \epsilon)$.
 
-![](../extracted/graphs/graph_28_0.png)
+<p align="center">
+  <img src="../extracted/graphs/graph_28_0.png" width="50%" />
+</p>
 
 Các giới hạn một phía $\lim_{x \to x_0^+} f(x) = L$, $\lim_{x \to x_0^-} f(x) = L$ và $\lim_{x \to \infty} f(x) = L$ được định nghĩa tương tự.
 
@@ -787,7 +809,9 @@ vẫn đúng.
 
 #### Ý nghĩa hình học  
 
-![](../extracted/graphs/graph_47_0.png)
+<p align="center">
+  <img src="../extracted/graphs/graph_47_0.png" width="50%" />
+</p>
 
 Khi x thay đổi từ $x_0$ đến $x_0$ + $\Delta$ x thì
 
@@ -1742,7 +1766,9 @@ Với các “VCB tương đương nhân tạo”, muốn $ x-\beta(x)\sim x^a $
 
 Mỗi phương pháp có ưu, nhược điểm riêng và hợp với từng dạng bài. Dưới đây là 6 ví dụ minh họa:
 
-![](../extracted/graphs/graph_77_0.png)
+<p align="center">
+  <img src="../extracted/graphs/graph_77_0.png" width="50%" />
+</p>
   
 #### Ví dụ 1 (Cả ba phương pháp đều áp dụng được)
 
@@ -2512,7 +2538,7 @@ $$\begin{aligned} I &= 2 \int \frac{t^2}{(t^2 - 1)^2} \, dt \\ &= \frac{1}{2} \i
 
 Giả sử hàm số $f(x)$ xác định và bị chặn trên $[a,b]$. Chia $[a,b]$ thành $n$ khoảng nhỏ $[x_i, x_{i+1}]$ với $a = x_0 < x_1 < \ldots < x_n = b$. Trong mỗi khoảng $[x_i, x_{i+1}]$, ta chọn điểm $\xi_i \in [x_i, x_{i+1}]$ và thành lập biểu thức
 
-$$S_n = \sum_{i=0}^{n-1} f(\xi_i) \Delta x_i \quad \text{với} \quad \Delta x_i = x_{i+1} - x_i$$
+$$S_n = \sum_{i=0}^{n-1} f(\xi_i) \Delta x_i \quad \text{với} \quad \Delta x_i = x_{i+1} - x_i \tag{2.3}$$
 
 Biểu thức $S_n$ được gọi là tổng tích phân. Gọi $\lambda = \max_{0 \leq i \leq n-1} \Delta x_i$. Nếu tồn tại giới hạn hữu hạn $I = \lim_{\lambda \to 0} S_n$ không phụ thuộc vào cách chia đoạn $[a, b]$ và không phụ thuộc vào cách chọn điểm $\xi_i$, thì $I$ được gọi là tích phân xác định của hàm số $f(x)$ trên $[a,b]$ và ký hiệu là
 
@@ -2976,7 +3002,9 @@ $$\begin{cases} 0 \le x \le 1 \\ y = \sqrt{x^2 - x^4} \end{cases}$$
 
 Do miền $D$ nằm hoàn toàn trong hình vuông $0 \le x \le 1$, $0 \le y \le 1$, hơn nữa hàm số $y = \sqrt{x^2 - x^4}$ liên tục, $y(0) = y(1) = 0$ nên đồ thị của nó trong $[0, 1]$ có hình dáng như hình vẽ.
 
-![](../extracted/graphs/graph_138_0.png)
+<p align="center">
+  <img src="../extracted/graphs/graph_138_0.png" width="50%" />
+</p>
 
 Áp dụng công thức (2.13) ta có:
 
@@ -2998,7 +3026,9 @@ Tính diện tích hình phẳng giới hạn bởi đường hình tim $r^2 = a
 
 **Gợi ý**:
 
-![](../extracted/graphs/graph_139_0.png)
+<p align="center">
+  <img src="../extracted/graphs/graph_139_0.png" width="50%" />
+</p>
 
 Khảo sát và vẽ đồ thị của đường cong trong toạ độ cực và nhận xét tính đối xứng của hình vẽ ta có:
 
@@ -3195,7 +3225,9 @@ Cho vật thể tròn xoay tạo bởi khi xoay miền giới hạn bởi:
 
 $$\begin{cases} x \geq 1 \\ y = 0 \\ y = \frac{1}{x} \\ \end{cases} \quad \text{quanh trục } Ox$$
 
-![](../extracted/graphs/graph_144_0.png)
+<p align="center">
+  <img src="../extracted/graphs/graph_144_0.png" width="50%" />
+</p>
 
 Thể tích:
 
