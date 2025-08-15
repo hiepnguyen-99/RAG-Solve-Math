@@ -498,7 +498,7 @@ Không được thay tương đương cho **hiệu** hai VCB tương đương.
 #### Định nghĩa 1.14  
 Hàm số $f(x)$ được gọi là **vô cùng lớn (VCL)** khi $x \to a$ nếu:  
 $\lim_{x \to a} |f(x)| = \infty$.  
-> **Nhận xét**: Nghịch đảo của VCB là VCL và ngược lại.
+**Nhận xét**: Nghịch đảo của VCB là VCL và ngược lại.
 
 #### Định nghĩa 1.15 (So sánh VCL)  
 Giả sử $\alpha(x)$, $\beta(x)$ là VCL khi $x \to a$:  
@@ -811,7 +811,7 @@ $$\frac{d}{dx}[f(u)] = f'(u) \cdot u' = f'(2016x) \cdot 2016 = x^2 \Rightarrow f
 Đặt $t = 2016x \Rightarrow x = \dfrac{t}{2016}$:  
 $$
 
-f'(t) = \frac{(t/2016)^2}{2016} = \frac{t^2}{2016^3} \Rightarrow \boxed{f'(x) = \dfrac{x^2}{2016^3}}$$  
+f'(t) = \frac{(t/2016)^2}{2016} = \frac{t^2}{2016^3} \Rightarrow f'(x) = \dfrac{x^2}{2016^3}$$  
 
 #### Ứng dụng tính gần đúng  
 $$f(x_0 + \Delta x) \approx f(x_0) + f'(x_0) \Delta x$$
@@ -824,10 +824,10 @@ b) $\sqrt[3]{8.03}$
 **Lời giải:**  
 Xét $f(x) = \sqrt[3]{x}$, $f'(x) = \dfrac{1}{3} x^{-2/3}$.  
 a) Chọn $x_0 = 8$, $\Delta x = -0.03$:  
-$$f(7.97) \approx f(8) + f'(8) \cdot (-0.03) = 2 + \frac{1}{3} \cdot \frac{1}{4} \cdot (-0.03) = 2 - 0.0025 = \boxed{1.9975}$$
+$$f(7.97) \approx f(8) + f'(8) \cdot (-0.03) = 2 + \frac{1}{3} \cdot \frac{1}{4} \cdot (-0.03) = 2 - 0.0025 = 1.9975$$
 
 b) Chọn $x_0 = 8$, $\Delta x = 0.03$:  
-$$f(8.03) \approx 2 + \frac{1}{12} \cdot 0.03 = 2 + 0.0025 = \boxed{2.0025}$$
+$$f(8.03) \approx 2 + \frac{1}{12} \cdot 0.03 = 2 + 0.0025 = 2.0025$$
 
 
 ### 8.7 Đạo hàm cấp cao
@@ -863,12 +863,12 @@ a) $y' = 2x e^{x^2} = 2x y$. Đạo hàm cấp $n$:
 $$y^{(n+1)} = [2x y]^{(n)} = 2x y^{(n)} + 2n y^{(n-1)}$$
 Tại $x=0$: $y^{(n+1)}(0) = 2n y^{(n-1)}(0)$.  
 Truy hồi:  
-$$y^{(10)}(0) = 2\cdot9\cdot y^{(8)}(0) = \cdots = 2^5 \cdot (9\cdot7\cdot5\cdot3\cdot1) \cdot 1 = \boxed{30240}$$
+$$y^{(10)}(0) = 2\cdot9\cdot y^{(8)}(0) = \cdots = 2^5 \cdot (9\cdot7\cdot5\cdot3\cdot1) \cdot 1 = 30240$$
 
 b) $y' = \dfrac{1}{1+x^2}$. Đạo hàm cấp $n$:  
 $$(1+x^2) y^{(n+1)} + 2n x y^{(n)} + n(n-1) y^{(n-1)} = 0$$
 Tại $x=0$: $y^{(n+1)}(0) = -n(n-1) y^{(n-1)}(0)$.  
-Tính $y''(0) = 0$ nên $\boxed{y^{(10)}(0) = 0}$  
+Tính $y''(0) = 0$ nên $y^{(10)}(0) = 0$  
 
 #### Ví dụ
 Tính $f^{(10)}(1)$ với $f(x) = x^9 \ln x$.  
@@ -876,7 +876,7 @@ Tính $f^{(10)}(1)$ với $f(x) = x^9 \ln x$.
 **Lời giải:**  
 Xét $g(x) = x^n \ln x$. Đạo hàm cấp $n+1$:  
 $$g^{(n+1)}(x) = \dfrac{n!}{x}$$
-Với $n=9$: $f^{(10)}(x) = \dfrac{9!}{x} \Rightarrow \boxed{f^{(10)}(1) = 9! = 362880}$  
+Với $n=9$: $f^{(10)}(x) = \dfrac{9!}{x} \Rightarrow f^{(10)}(1) = 9! = 362880$  
 
 
 ### 8.8 Vi phân cấp cao
@@ -900,7 +900,7 @@ Cho $y = x^3$, $x = t^2$. Chứng minh $d^2 y \neq y^{(2)} dx^2$.
 **Lời giải:**  
 - Tính trực tiếp: $y = t^6 \Rightarrow dy = 6t^5 dt \Rightarrow d^2 y = 30t^4 (dt)^2 + 6t^5 d^2 t$  
 - Tính qua $x$: $y'' dx^2 = 6x (dx)^2 = 6t^2 (2t dt)^2 = 24t^4 (dt)^2$  
-Rõ ràng $\boxed{30t^4 (dt)^2 + 6t^5 d^2 t \neq 24t^4 (dt)^2}$ nên $d^2 y \neq y^{(2)} dx^2$.
+Rõ ràng $30t^4 (dt)^2 + 6t^5 d^2 t \neq 24t^4 (dt)^2$ nên $d^2 y \neq y^{(2)} dx^2$.
 
 ### 8.10 Đọc thêm: Về khái niệm vi phân
 
@@ -2918,7 +2918,7 @@ Mà $\sum_{n=0}^{+\infty} \frac{2}{(n+1)\pi}$ phân kỳ, nên theo tiêu chuẩ
 
 ### 4.1 Tính diện tích hình phẳng
 
-1. Trường hợp biên của hình phẳng cho trong hệ toạ độ Descartes (tính diện tích "hình thang cong")
+#### Trường hợp biên của hình phẳng cho trong hệ toạ độ Descartes (tính diện tích "hình thang cong")
 
 Nếu $S$ giới hạn bởi:  
 
@@ -2982,7 +2982,7 @@ Do miền $D$ nằm hoàn toàn trong hình vuông $0 \le x \le 1$, $0 \le y \le
 
 $S(D) = \int_{0}^{1} \sqrt{x^2 - x^4} \ dx = \frac{1}{3} \ \Rightarrow \ S = \frac{4}{3}$.
 
-2. Trường hợp biên của hình phẳng cho trong hệ toạ độ cực (tính diện tích của miền có dạng hình quạt):
+#### Trường hợp biên của hình phẳng cho trong hệ toạ độ cực (tính diện tích của miền có dạng hình quạt):
 
 Nếu $S$ giới hạn bởi:  
 
@@ -3006,7 +3006,8 @@ $$S = 4S(D) = 4 \cdot \frac{1}{2} \int_{0}^{\frac{\pi}{4}} r^{2}(\varphi) \ d\va
 
 ### 4.2 Tính độ dài đường cong phẳng
 
-**Trường hợp 1:** Đường cong $AB$ cho bởi phương trình $y = f(x)$
+#### Trường hợp 1 
+Đường cong $AB$ cho bởi phương trình $y = f(x)$
 
 $$AB \begin{cases} y = f(x) \\ a \le x \le b \\ f \in C^{1}[a,b] \end{cases}$$
 
@@ -3014,7 +3015,8 @@ thì
 
 $$s = \int_{a}^{b} \sqrt{1 + [f'(x)]^2} \tag{2.17}$$
 
-**Trường hợp 2:** Đường cong $AB$ cho bởi phương trình tham số
+#### Trường hợp 2 
+Đường cong $AB$ cho bởi phương trình tham số
 
 $$AB \begin{cases} x = x(t) \\ y = y(t) \\ \alpha \le t \le \beta \\ x(t), y(t) \in C^{1}[\alpha, \beta] \\ x'^{2}(t) + y'^{2}(t) > 0, \quad \forall t \in [\alpha, \beta] \end{cases}$$
 
@@ -3022,7 +3024,8 @@ thì:
 
 $$s = \int_{\alpha}^{\beta} \sqrt{[x'(t)]^2 + [y'(t)]^2} \, dt \tag{2.18}$$
 
-**Trường hợp 3:** Đường cong $AB$ cho bởi phương trình trong tọa độ cực
+#### Trường hợp 3
+Đường cong $AB$ cho bởi phương trình trong tọa độ cực
 
 $$AB \begin{cases} r = r(\varphi) \\ \alpha \le \varphi \le \beta \\ r(\varphi) \in C^{1}[\alpha, \beta] \end{cases}$$
 
