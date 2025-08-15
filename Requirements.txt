@@ -11,3 +11,4 @@ python-dotenv
 FlagEmbedding 
 markdown
 google-generativeai
+groq
