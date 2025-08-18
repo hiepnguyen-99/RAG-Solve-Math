@@ -1196,6 +1196,7 @@ class ChatApp {
             'qwen-4b': 'Qwen 4B',
             'model-api': 'llama 7B (API)',
             'gemini-api': 'Gemini (API)',
+            'Rag-2b': 'Qwen-2b',
         };
         return models[modelKey] || modelKey;
     }
