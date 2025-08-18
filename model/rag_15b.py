@@ -91,9 +91,46 @@ def rewrite_query_15b(query, k=5):
     return response.split('\n') if response else [query]
 
 # 8. Hàm giải đáp với conversation context
+def classify_question_15b(question: str) -> str:
+    """
+    Phân loại câu hỏi bằng chính Qwen 1.5B model
+    """
+    classification_prompt = f"""
+Phân loại câu hỏi sau đây thuộc loại nào:
+
+LOẠI 1 - "SOLVING": Câu hỏi yêu cầu GIẢI TOÁN CỤ THỂ, tính toán, tìm nghiệm, chứng minh với dữ liệu cụ thể
+- Có số liệu, biểu thức, phương trình cụ thể cần giải
+- Yêu cầu tính toán, tìm kết quả số
+- Ví dụ: "Tính đạo hàm của f(x)=x²", "Giải phương trình x²-5x+6=0"
+
+LOẠI 2 - "KNOWLEDGE": Câu hỏi yêu cầu GIẢI THÍCH LÝ THUYẾT, định nghĩa, phương pháp, khái niệm
+- Hỏi về cách làm, phương pháp, định nghĩa, lý thuyết
+- Yêu cầu ví dụ, giải thích khái niệm
+- Ví dụ: "Định nghĩa đạo hàm là gì?", "Cách tính định thức của ma trận"
+
+Câu hỏi: "{question}"
+
+Trả lời CHÍNH XÁC một trong hai từ: SOLVING hoặc KNOWLEDGE
+"""
+    
+    try:
+        response = llm.invoke(classification_prompt).strip().upper()
+        
+        if "SOLVING" in response:
+            return 'math_solving'
+        elif "KNOWLEDGE" in response:
+            return 'knowledge_retrieval'
+        else:
+            return None
+    except Exception as e:
+        print(f"⚠️ Lỗi phân loại Qwen 1.5B: {e}")
+        return None
+
+
 def solve_question_15b(question: str, k: int = 3, rerank: bool = False, rewrite: bool = True, conversation_history: list = None):
     """
-    Giải câu hỏi với hỗ trợ conversation context
+    Giải câu hỏi với hỗ trợ conversation context.
+    Tự động phân loại câu hỏi để quyết định dùng RAG hay giải toán trực tiếp.
     
     Args:
         question: Câu hỏi hiện tại
@@ -102,86 +139,98 @@ def solve_question_15b(question: str, k: int = 3, rerank: bool = False, rewrite:
         rewrite: Có rewrite query không
         conversation_history: Lịch sử trò chuyện (danh sách messages)
     """
+    # Phân loại câu hỏi bằng chính Qwen 1.5B model
+    question_type = classify_question_type_generic(question, classify_question_15b)
+    print(f"🔍 Loại câu hỏi được phân loại bởi Qwen 1.5B: {question_type}")
+    
     # Xây dựng conversation context
     conversation_context = ""
     if conversation_history and conversation_manager.should_use_context(question, conversation_history):
         conversation_context = conversation_manager.build_conversation_context(conversation_history, question)
         print(f"🔄 Sử dụng conversation context: {len(conversation_context)} ký tự")
     
-    # Tạo queries với rewrite
-    if rewrite:
-        if conversation_context:
-            topics = conversation_manager.extract_key_topics(conversation_history)
-            enhanced_question = question
-            if topics:
-                enhanced_question = f"{question} (Liên quan: {', '.join(topics)})"
-            queries = rewrite_query_15b(enhanced_question, 3)
-        else:
-            queries = rewrite_query_15b(question, 3)
-        queries.append(question)  # Thêm câu hỏi gốc vào cuối
+    if question_type == 'math_solving':
+        # Giải toán trực tiếp - không cần retrieval
+        print("⚡ Chế độ giải toán trực tiếp (không dùng RAG)")
+        return solve_math_direct_15b(question, conversation_history)
     else:
-        queries = [question]
-
-    # Collect documents từ tất cả queries
-    docs = []
-    for query in queries:
-        custom_retriever = db.as_retriever(search_kwargs={"k": k})
-        doc = custom_retriever.get_relevant_documents(query)
+        # Dùng RAG để tìm kiếm tài liệu
+        print("📚 Chế độ tìm kiếm tài liệu (dùng RAG)")
         
-        # Apply reranking if enabled
-        if rerank and doc and RERANK_AVAILABLE:
-            try:
-                reranker = FlagReranker(RERANK_MODEL, use_fp16=True)
-                doc = rerank_docs_with_model(query, doc, reranker)
-                print(f"Reranking applied to {len(doc)} documents")
-            except Exception as e:
-                print(f"Reranking failed: {e}, continuing without reranking...")
-        elif rerank and not RERANK_AVAILABLE:
-            print("Reranking requested but FlagEmbedding not available")
-        
-        docs.extend([doc])
-
-    # Sử dụng reciprocal rank fusion để kết hợp kết quả
-    docs = reciprocal_rank_fusion(docs, num_docs=k)
-
-    # Tạo prompt với conversation context
-    context = "\n".join([split_combined_content(doc.page_content) for doc in docs])
-    prompt_text = prompt_template.format(
-        context=context, 
-        question=question, 
-        conversation_context=conversation_context
-    )
-    
-    # Gọi model
-    answer = llm.invoke(prompt_text).strip()
-
-    # Xử lý lặp lại prompt trong câu trả lời
-    if question in answer:
-        answer = answer.split(question)[-1].strip(": \n")
-
-    # fallback nếu không có kết quả
-    if not answer:
-        fallback_prompt = f"Câu hỏi: {question}\nTrả lời ngắn gọn:"
-        raw_output = llm.invoke(fallback_prompt).strip()
-        if question in raw_output:
-            answer = raw_output.split(question)[-1].strip(": \n")
+        # Tạo queries với rewrite
+        if rewrite:
+            if conversation_context:
+                topics = conversation_manager.extract_key_topics(conversation_history)
+                enhanced_question = question
+                if topics:
+                    enhanced_question = f"{question} (Liên quan: {', '.join(topics)})"
+                queries = rewrite_query_15b(enhanced_question, 3)
+            else:
+                queries = rewrite_query_15b(question, 3)
+            queries.append(question)  # Thêm câu hỏi gốc vào cuối
         else:
-            answer = raw_output.strip()
+            queries = [question]
 
-    # Tạo source documents
-    source_docs = []
-    for doc in docs:
-        source_docs.append({
-            "page_content": split_combined_content(doc.page_content),
-            "metadata": doc.metadata
-        })
-    
-    # Tạo thông tin về rewrite queries riêng biệt
-    rewrite_queries = []
-    if rewrite and len(queries) > 1:
-        rewrite_queries = queries[:-1]  # Loại bỏ câu hỏi gốc
+        # Collect documents từ tất cả queries
+        docs = []
+        for query in queries:
+            custom_retriever = db.as_retriever(search_kwargs={"k": k})
+            doc = custom_retriever.get_relevant_documents(query)
+            
+            # Apply reranking if enabled
+            if rerank and doc and RERANK_AVAILABLE:
+                try:
+                    reranker = FlagReranker(RERANK_MODEL, use_fp16=True)
+                    doc = rerank_docs_with_model(query, doc, reranker)
+                    print(f"Reranking applied to {len(doc)} documents")
+                except Exception as e:
+                    print(f"Reranking failed: {e}, continuing without reranking...")
+            elif rerank and not RERANK_AVAILABLE:
+                print("Reranking requested but FlagEmbedding not available")
+            
+            docs.extend([doc])
 
-    return answer, source_docs, rewrite_queries
+        # Sử dụng reciprocal rank fusion để kết hợp kết quả
+        docs = reciprocal_rank_fusion(docs, num_docs=k)
+
+        # Tạo prompt với conversation context
+        context = "\n".join([split_combined_content(doc.page_content) for doc in docs])
+        prompt_text = prompt_template.format(
+            context=context, 
+            question=question, 
+            conversation_context=conversation_context
+        )
+        
+        # Gọi model
+        answer = llm.invoke(prompt_text).strip()
+
+        # Xử lý lặp lại prompt trong câu trả lời
+        if question in answer:
+            answer = answer.split(question)[-1].strip(": \n")
+
+        # fallback nếu không có kết quả
+        if not answer:
+            fallback_prompt = f"Câu hỏi: {question}\nTrả lời ngắn gọn:"
+            raw_output = llm.invoke(fallback_prompt).strip()
+            if question in raw_output:
+                answer = raw_output.split(question)[-1].strip(": \n")
+            else:
+                answer = raw_output.strip()
+
+        # Tạo source documents
+        source_docs = []
+        for doc in docs:
+            source_docs.append({
+                "page_content": split_combined_content(doc.page_content),
+                "metadata": doc.metadata
+            })
+        
+        # Tạo thông tin về rewrite queries riêng biệt
+        rewrite_queries = []
+        if rewrite and len(queries) > 1:
+            rewrite_queries = queries[:-1]  # Loại bỏ câu hỏi gốc
+
+        return answer, source_docs, rewrite_queries
 
 # Thêm hàm giải toán chuyên biệt cho Qwen 1.5B với LaTeX
 from langchain.prompts import PromptTemplate as MathPromptTemplate
@@ -263,3 +312,56 @@ def solve_math_question_15b(question: str, k: int = 3, rerank: bool = False, rew
         rewrite_queries = queries[:-1]  # Loại bỏ câu hỏi gốc
     
     return answer, source_docs, rewrite_queries
+
+
+# Hàm giải toán không dùng retrieval - chỉ dùng model trực tiếp
+def solve_math_direct_15b(question: str, conversation_history: list = None):
+    """
+    Giải toán trực tiếp bằng Qwen 1.5B không cần retrieval documents
+    
+    Args:
+        question: Câu hỏi toán học
+        conversation_history: Lịch sử trò chuyện
+    """
+    try:
+        # Xây dựng conversation context
+        conversation_context = ""
+        if conversation_history and conversation_manager.should_use_context(question, conversation_history):
+            conversation_context = conversation_manager.build_conversation_context(conversation_history, question)
+            print(f"🔄 Sử dụng conversation context: {len(conversation_context)} ký tự")
+        
+        # Tạo prompt giải toán trực tiếp
+        math_prompt = f"""
+Bạn là trợ lý AI chuyên giải các bài toán.
+
+{conversation_context}
+
+Hãy giải bài toán sau đây từng bước một, hiển thị các công thức trong khối LaTeX (đặt giữa $$):
+
+Câu hỏi: {question}
+
+Hãy làm theo các bước:
+1. Phân tích đề bài và xác định phương pháp giải
+2. Giải chi tiết từng bước với các công thức toán học  
+3. Đưa ra kết luận cuối cùng
+
+Trả lời:
+"""
+        
+        # Gọi model trực tiếp
+        answer = llm.invoke(math_prompt).strip()
+
+        # Xử lý lặp lại prompt trong câu trả lời
+        if question in answer:
+            answer = answer.split(question)[-1].strip(": \n")
+
+        # fallback nếu không có kết quả
+        if not answer:
+            fallback_prompt = f"Giải bài toán: {question}"
+            answer = llm.invoke(fallback_prompt).strip()
+
+        # Trả về với source_docs và rewrite_queries rỗng vì không dùng retrieval
+        return answer, [], []
+    
+    except Exception as e:
+        return f"Lỗi khi xử lý câu hỏi: {str(e)}", [], []

@@ -25,7 +25,7 @@ app.secret_key = 'your-secret-key-here'
 
 # Cấu hình
 class Config:
-    DEFAULT_MODEL = 'qwen-4b'
+    DEFAULT_MODEL = 'gemini-api'
     DEFAULT_K_DOCUMENTS = 3
     DEFAULT_RERANK = False
     CHAT_HISTORY_FILE = 'chat_history.json'
@@ -103,6 +103,7 @@ def chat():
         message_id = str(uuid.uuid4())
         
         # Lưu tin nhắn user
+        current_session_id = session.get('chat_id', str(uuid.uuid4()))
         user_msg = {
             'id': message_id + '_user',
             'type': 'user',
@@ -110,7 +111,8 @@ def chat():
             'timestamp': datetime.now().isoformat(),
             'model': selected_model,
             'k_documents': k_documents,
-            'rerank_enabled': rerank_enabled
+            'rerank_enabled': rerank_enabled,
+            'session_id': current_session_id  # 🆕 Thêm session_id
         }
         session['messages'].append(user_msg)
         
@@ -130,6 +132,12 @@ def chat():
             # Chuẩn bị conversation history (chỉ lấy các tin nhắn trước đó, không bao gồm user message mới nhất)
             conversation_history = session['messages'][:-1] if len(session['messages']) > 0 else []
             
+            # Thêm session_id cho mỗi message trong conversation_history nếu chưa có
+            current_session_id = session.get('chat_id', str(uuid.uuid4()))
+            for msg in conversation_history:
+                if 'session_id' not in msg:
+                    msg['session_id'] = current_session_id
+            
             if selected_model == 'qwen-4b':
                 # Qwen 4B có thể cần ngrok_url parameter
                 ngrok_url = os.getenv("NGROK_URL", "")
@@ -143,7 +151,7 @@ def chat():
                 print(f"DEBUG: Model function returned {len(result)} values: {type(result)}")
                 answer, source_docs, rewrite_queries = result
             elif selected_model == 'gemini-api':
-                # Gemini có parameter rewrite và conversation_history
+                # Gemini có parameter rewrite và conversation_history với session_id
                 result = model_function(
                     question=user_message,
                     k=k_documents,
@@ -193,7 +201,8 @@ def chat():
             'model': selected_model,
             'k_documents': k_documents,
             'processing_time': processing_time,
-            'used_context': len(conversation_history) > 0  # Thêm thông tin này
+            'used_context': len(conversation_history) > 0,  # Thêm thông tin này
+            'session_id': current_session_id  # 🆕 Thêm session_id
         }
         session['messages'].append(bot_msg)
         

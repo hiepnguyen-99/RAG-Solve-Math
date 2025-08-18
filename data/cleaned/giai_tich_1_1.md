@@ -960,8 +960,6 @@ iii) Lạm dụng kí hiệu: Đặt $x := \text{Id}$ (ánh xạ đồng nhất)
 $d_{x_0}x = \text{Id}$ (không phụ thuộc $x_0$) nên kí hiệu $dx$. Suy ra: $d_{x_0}f = f'(x_0)dx$.  Bỏ $x_0$ và thay $f'(x_0)$ bởi $f'(x)$, ta có biểu thức cô đọng:  
 $$df = f'(x)dx$$
 
-Mình đã chuẩn hóa lại văn bản: sửa lỗi chính tả, dấu tiếng Việt, ký hiệu, và các công thức; giữ nguyên logic. Tất cả công thức đều đặt trong dấu $ $ và chèn xuống dòng đôi để hiển thị markdown đẹp.
-
 
 
 ## §9. CÁC ĐỊNH LÝ VỀ HÀM KHẢ VI VÀ ỨNG DỤNG

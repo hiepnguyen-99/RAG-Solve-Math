@@ -34,6 +34,12 @@ class ModelManager:
                 'module': 'model.rag_gemini_api',
                 'function': 'solve_question_api_gemini',
                 'loaded': False
+            },
+            'Rag-2B': {
+                'name': 'Qwen-2B',
+                'module': 'model.rag_2b',
+                'function': 'solve_2b',
+                'loaded': False
             }
         }
         
