@@ -13091,7 +13091,9 @@
           "b) Khi $x \\to \\infty$, ta có $u = \\frac{1}{x^2} \\to 0$. Do đó, ta có thể dùng VCB tương đương: $f(x) = \\ln(1 + \\frac{1}{x^2}) \\sim \\frac{1}{x^2} = g(x)$.",
           "c) Cả hai phương pháp đều dẫn đến việc so sánh $I$ với tích phân $J = \\int_1^\\infty \\frac{1}{x^2} dx$. Tích phân $J$ là tích phân p loại 1 với $p=2 > 1$, nên $J$ hội tụ. Theo tiêu chuẩn so sánh (trực tiếp hoặc giới hạn), tích phân $I$ cũng hội tụ."
         ]
-      },
+      }
+    },
+    {
       "question": "Tính tích phân suy rộng $I = \\int_0^\\infty \\frac{dx}{(1+x^2)^2}$ bằng cách sử dụng phép thế lượng giác $x = \\tan(\\theta)$. a) Thực hiện phép thế và tìm biểu thức vi phân $dx$ và biểu thức $(1+x^2)^2$ theo $\\theta$. b) Xác định cận mới cho $\\theta$. c) Tính tích phân theo $\\theta$.",
       "answer": {
         "steps": [
