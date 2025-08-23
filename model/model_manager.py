@@ -38,7 +38,7 @@ class ModelManager:
             'Rag-2B': {
                 'name': 'Qwen-2B',
                 'module': 'model.rag_2b',
-                'function': 'solve_2b',
+                'function': 'solve_question_2b',
                 'loaded': False
             }
         }

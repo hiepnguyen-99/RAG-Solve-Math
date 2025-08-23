@@ -46,42 +46,53 @@ def call_qwen_4b(prompt: str, ngrok_url: str):
     except Exception as e:
         return f"Lỗi: {str(e)}"
 
-def rewrite_query_4b(query, k=5):
-    query_rewrite_prompt = f"""
-Tạo {k} câu hỏi ngắn để tìm kiếm thông tin trả lời: "{query}"
+def rewrite_query_4b(query, k=5, conversation_history=None):
+    """
+    Rewrite query sử dụng context hội thoại (multi-turn)
+    """
+    # Xây dựng context hội thoại nếu có
+    history_text = ""
+    if conversation_history:
+        for turn in conversation_history:
+            user = turn.get("user", "")
+            model = turn.get("model", "")
+            history_text += f"User: {user}\nModel: {model}\n"
 
-Chỉ liệt kê {k} câu hỏi, mỗi câu một dòng:
-"""
-    
+    query_rewrite_prompt = (
+        f"Dựa vào lịch sử hội thoại sau (nếu có):\n{history_text}\n"
+        f"Tạo {k} câu hỏi ngắn, đa dạng để tìm kiếm thông tin trả lời cho câu hỏi cuối cùng: '{query}'\n"
+        f"Chỉ liệt kê {k} câu hỏi, mỗi câu một dòng, không giải thích:\n"
+    )
+
     if not NGROK_URL:
         print("Warning: NGROK_URL not configured, returning original query")
         return [query]
-        
+
     response = call_qwen_4b(query_rewrite_prompt, NGROK_URL)
-    
+
     if response and not response.startswith("Lỗi:"):
         # Tách các dòng và làm sạch
         lines = response.split('\n')
         queries = []
-        
+
         for line in lines:
             line = line.strip()
             if not line:
                 continue
-            
+
             # Bỏ qua các dòng không phải câu hỏi (tiếng Anh, số thứ tự, etc.)
             if any(word.lower() in line.lower() for word in ['okay', 'let\'s', 'first', 'user', 'think', 'wait', 'the']):
                 continue
-                
+
             # Loại bỏ số thứ tự ở đầu dòng (1., 2., -, •, etc.)
             import re
             line = re.sub(r'^\d+\.?\s*', '', line)  # Loại bỏ "1. " hoặc "1 "
             line = re.sub(r'^[-•*]\s*', '', line)   # Loại bỏ "- " hoặc "• "
             line = line.strip()
-            
-            if line and len(line) > 10 and not line.lower().startswith(('vui lòng', 'okay', 'first')):  # Loại bỏ các dòng không hợp lệ
+
+            if line and len(line) > 10 and not line.lower().startswith(('vui lòng', 'okay', 'first')):
                 queries.append(line)
-        
+
         # Giới hạn số lượng câu hỏi theo k
         queries = queries[:k] if len(queries) > k else queries
         return queries if queries else [query]

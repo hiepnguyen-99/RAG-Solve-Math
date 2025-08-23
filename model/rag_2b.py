@@ -4,6 +4,8 @@ from dotenv import load_dotenv
 import requests
 from conversation_manager import conversation_manager
 from langchain.prompts import PromptTemplate
+import sys
+sys.stdout.reconfigure(encoding="utf-8")
 
 # Thiết bị
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -27,7 +29,7 @@ load_dotenv()
 NGROK_URL = os.getenv("NGROK_URL_2")
 
 
-def call_2b(prompt: str, ngrok_url: str):
+def call_qwen_2b(prompt: str, ngrok_url: str):
     if not ngrok_url:
         return "Lỗi: NGROK_URL không được cấu hình"
     
@@ -44,42 +46,53 @@ def call_2b(prompt: str, ngrok_url: str):
     except Exception as e:
         return f"Lỗi: {str(e)}"
 
-def rewrite_2b(query, k=5):
-    query_rewrite_prompt = f"""
-Tạo {k} câu hỏi ngắn để tìm kiếm thông tin trả lời: "{query}"
+def rewrite_query_2b(query, k=5, conversation_history=None):
+    """
+    Rewrite query sử dụng context hội thoại (multi-turn)
+    """
+    # Xây dựng context hội thoại nếu có
+    history_text = ""
+    if conversation_history:
+        for turn in conversation_history:
+            user = turn.get("user", "")
+            model = turn.get("model", "")
+            history_text += f"User: {user}\nModel: {model}\n"
 
-Chỉ liệt kê {k} câu hỏi, mỗi câu một dòng:
-"""
-    
+    query_rewrite_prompt = (
+        f"Dựa vào lịch sử hội thoại sau (nếu có):\n{history_text}\n"
+        f"Tạo {k} câu hỏi ngắn, đa dạng để tìm kiếm thông tin trả lời cho câu hỏi cuối cùng: '{query}'\n"
+        f"Chỉ liệt kê {k} câu hỏi, mỗi câu một dòng, không giải thích:\n"
+    )
+
     if not NGROK_URL:
         print("Warning: NGROK_URL not configured, returning original query")
         return [query]
-        
-    response = call_2b(query_rewrite_prompt, NGROK_URL)
-    
+
+    response = call_qwen_2b(query_rewrite_prompt, NGROK_URL)
+
     if response and not response.startswith("Lỗi:"):
         # Tách các dòng và làm sạch
         lines = response.split('\n')
         queries = []
-        
+
         for line in lines:
             line = line.strip()
             if not line:
                 continue
-            
+
             # Bỏ qua các dòng không phải câu hỏi (tiếng Anh, số thứ tự, etc.)
             if any(word.lower() in line.lower() for word in ['okay', 'let\'s', 'first', 'user', 'think', 'wait', 'the']):
                 continue
-                
+
             # Loại bỏ số thứ tự ở đầu dòng (1., 2., -, •, etc.)
             import re
             line = re.sub(r'^\d+\.?\s*', '', line)  # Loại bỏ "1. " hoặc "1 "
             line = re.sub(r'^[-•*]\s*', '', line)   # Loại bỏ "- " hoặc "• "
             line = line.strip()
-            
-            if line and len(line) > 10 and not line.lower().startswith(('vui lòng', 'okay', 'first')):  # Loại bỏ các dòng không hợp lệ
+
+            if line and len(line) > 10 and not line.lower().startswith(('vui lòng', 'okay', 'first')):
                 queries.append(line)
-        
+
         # Giới hạn số lượng câu hỏi theo k
         queries = queries[:k] if len(queries) > k else queries
         return queries if queries else [query]
@@ -103,7 +116,7 @@ Trả lời:
 
 def classify_question_2b(question: str, ngrok_url: str = NGROK_URL) -> str:
     """
-    Phân loại câu hỏi bằng chính model 2B qua ngrok
+    Phân loại câu hỏi bằng chính Qwen 2B model qua ngrok
     """
     if not ngrok_url:
         return None
@@ -127,7 +140,7 @@ Trả lời CHÍNH XÁC một trong hai từ: SOLVING hoặc KNOWLEDGE
 """
     
     try:
-        response = call_2b(classification_prompt, ngrok_url).strip().upper()
+        response = call_qwen_2b(classification_prompt, ngrok_url).strip().upper()
         
         if "SOLVING" in response:
             return 'math_solving'
@@ -136,11 +149,11 @@ Trả lời CHÍNH XÁC một trong hai từ: SOLVING hoặc KNOWLEDGE
         else:
             return None
     except Exception as e:
-        print(f"⚠️ Lỗi phân loại model 2B: {e}")
+        print(f"⚠️ Lỗi phân loại Qwen 2B: {e}")
         return None
 
 
-def solve_2b(question: str, k: int = 3, ngrok_url: str = NGROK_URL, rerank: bool = False, rewrite: bool = True, conversation_history: list = None):
+def solve_question_2b(question: str, k: int = 3, ngrok_url: str = NGROK_URL, rerank: bool = False, rewrite: bool = True, conversation_history: list = None):
     """
     Giải câu hỏi với hỗ trợ conversation context.
     Tự động phân loại câu hỏi để quyết định dùng RAG hay giải toán trực tiếp.
@@ -153,13 +166,13 @@ def solve_2b(question: str, k: int = 3, ngrok_url: str = NGROK_URL, rerank: bool
         rewrite: Có rewrite query không
         conversation_history: Lịch sử trò chuyện (danh sách messages)
     """
-    # Phân loại câu hỏi bằng chính model 2B
+    # Phân loại câu hỏi bằng chính Qwen 2B model
     def model_classify_func(q):
         return classify_question_2b(q, ngrok_url)
-    
+
     question_type = classify_question_type_generic(question, model_classify_func)
-    print(f"🔍 Loại câu hỏi được phân loại bởi Model 2B: {question_type}")
-    
+    print(f"🔍 Loại câu hỏi được phân loại bởi Qwen 2B: {question_type}")
+
     # Xây dựng conversation context
     conversation_context = ""
     if conversation_history and conversation_manager.should_use_context(question, conversation_history):
@@ -182,9 +195,9 @@ def solve_2b(question: str, k: int = 3, ngrok_url: str = NGROK_URL, rerank: bool
                 enhanced_question = question
                 if topics:
                     enhanced_question = f"{question} (Liên quan: {', '.join(topics)})"
-                queries = rewrite_2b(enhanced_question, 3)
+                queries = rewrite_query_2b(enhanced_question, 3)
             else:
-                queries = rewrite_2b(question, 3)
+                queries = rewrite_query_2b(question, 3)
             queries.append(question)  # Thêm câu hỏi gốc vào cuối
         else:
             queries = [question]
@@ -222,7 +235,7 @@ def solve_2b(question: str, k: int = 3, ngrok_url: str = NGROK_URL, rerank: bool
         )
 
         # Gửi prompt tới mô hình qua ngrok
-        answer = call_2b(prompt_text, ngrok_url)
+        answer = call_qwen_2b(prompt_text, ngrok_url)
 
         # Xử lý nếu mô hình lặp lại câu hỏi
         if question in answer:
@@ -231,7 +244,7 @@ def solve_2b(question: str, k: int = 3, ngrok_url: str = NGROK_URL, rerank: bool
         # Nếu không có câu trả lời rõ ràng, fallback
         if not answer.strip():
             fallback_prompt = f"Câu hỏi: {question}\nTrả lời ngắn gọn:"
-            answer = call_2b(fallback_prompt, ngrok_url)
+            answer = call_qwen_2b(fallback_prompt, ngrok_url)
 
         # Tạo source documents
         source_docs = []
@@ -250,7 +263,7 @@ def solve_2b(question: str, k: int = 3, ngrok_url: str = NGROK_URL, rerank: bool
 
 from langchain.prompts import PromptTemplate as MathPromptTemplate
 
-def solve_math_2b(question: str, k: int = 3, ngrok_url: str = NGROK_URL, rerank: bool = False, rewrite: bool = True, conversation_history: list = None):
+def solve_math_question_2b(question: str, k: int = 3, ngrok_url: str = NGROK_URL, rerank: bool = False, rewrite: bool = True, conversation_history: list = None):
     """
     Giải toán bước-by-step, sử dụng biểu diễn LaTeX cho công thức.
     Trả về answer và source_docs.
@@ -268,9 +281,9 @@ def solve_math_2b(question: str, k: int = 3, ngrok_url: str = NGROK_URL, rerank:
             enhanced_question = question
             if topics:
                 enhanced_question = f"{question} (Liên quan: {', '.join(topics)})"
-            queries = rewrite_2b(enhanced_question, 3)
+            queries = rewrite_query_2b(enhanced_question, 3)
         else:
-            queries = rewrite_2b(question, 3)
+            queries = rewrite_query_2b(question, 3)
         queries.append(question)  # Thêm câu hỏi gốc vào cuối
     else:
         queries = [question]
@@ -322,7 +335,7 @@ Câu hỏi: {question}
     )
     
     # Gọi API
-    raw = call_2b(prompt_text, ngrok_url)
+    raw = call_qwen_2b(prompt_text, ngrok_url)
 
     # Xử lý
     answer = raw.strip()
@@ -346,7 +359,7 @@ Câu hỏi: {question}
 # Hàm giải toán không dùng retrieval - chỉ dùng model trực tiếp
 def solve_math_direct_2b(question: str, ngrok_url: str = NGROK_URL, conversation_history: list = None):
     """
-    Giải toán trực tiếp bằng model 2B không cần retrieval documents
+    Giải toán trực tiếp bằng Qwen 2B không cần retrieval documents
 
     Args:
         question: Câu hỏi toán học
@@ -372,14 +385,14 @@ Câu hỏi: {question}
 
 Hãy làm theo các bước:
 1. Phân tích đề bài và xác định phương pháp giải
-2. Giải chi tiết từng bước với các công thức toán học  
+2. Giải chi tiết từng bước  
 3. Đưa ra kết luận cuối cùng
 
 Trả lời:
 """
 
         # Gọi API thông qua ngrok
-        answer = call_2b(math_prompt, ngrok_url)
+        answer = call_qwen_2b(math_prompt, ngrok_url)
 
         # Xử lý nếu mô hình lặp lại câu hỏi
         if question in answer:
@@ -388,7 +401,7 @@ Trả lời:
         # Nếu không có câu trả lời rõ ràng, fallback
         if not answer.strip():
             fallback_prompt = f"Giải bài toán: {question}"
-            answer = call_2b(fallback_prompt, ngrok_url)
+            answer = call_qwen_2b(fallback_prompt, ngrok_url)
 
         # Trả về với source_docs và rewrite_queries rỗng vì không dùng retrieval
         return answer, [], []
