@@ -190,11 +190,53 @@ def chat():
         
         processing_time = round(time.time() - start_time, 2)
         
-        # Lưu tin nhắn bot
+        # Nếu answer là chuỗi và có thể parse thành JSON, hoặc đã là dict, giữ nguyên. Nếu không, đóng gói lại thành JSON cấu trúc.
+        bot_content = answer
+        def split_to_items(text):
+            import re
+            # Tách các bước, ý, hoặc đoạn
+            lines = re.split(r'\n|(?<=\.)\s+(?=\d+\.|\*|\-|Bước|\*\*)', text)
+            items = []
+            for line in lines:
+                line = line.strip()
+                if not line:
+                    continue
+                # Loại bỏ triệt để các ký hiệu markdown ở đầu dòng (nhiều dấu liền nhau)
+                line = re.sub(r'^(\s*([#\-*]|\*{1,}|`|_)+)', '', line).strip()
+                # Loại bỏ các ký hiệu markdown nhấn mạnh ở đầu dòng (ví dụ **, __, vv)
+                line = re.sub(r'^(\*+|_+)', '', line).strip()
+                # In đậm nếu có số thứ tự đầu dòng, bắt đầu bằng Bước, hoặc còn lại ** ở đầu dòng
+                bold = bool(re.match(r'^(\d+\.|Bước)', line))
+                items.append({'text': line, 'bold': bold})
+            return items if items else [{'text': text, 'bold': False}]
+
+        try:
+            if isinstance(answer, str):
+                parsed = json.loads(answer)
+                if isinstance(parsed, dict) and 'items' in parsed:
+                    bot_content = answer
+                else:
+                    bot_content = json.dumps({
+                        'title': '',
+                        'items': split_to_items(answer)
+                    }, ensure_ascii=False)
+            elif isinstance(answer, dict) and 'items' in answer:
+                bot_content = json.dumps(answer, ensure_ascii=False)
+            else:
+                bot_content = json.dumps({
+                    'title': '',
+                    'items': split_to_items(str(answer))
+                }, ensure_ascii=False)
+        except Exception:
+            bot_content = json.dumps({
+                'title': '',
+                'items': split_to_items(str(answer))
+            }, ensure_ascii=False)
+
         bot_msg = {
             'id': message_id + '_bot',
             'type': 'bot',
-            'content': answer,
+            'content': bot_content,
             'timestamp': datetime.now().isoformat(),
             'source_documents': source_docs,
             'rewrite_queries': rewrite_queries if 'rewrite_queries' in locals() else [],

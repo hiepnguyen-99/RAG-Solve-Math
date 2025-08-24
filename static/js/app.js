@@ -454,6 +454,33 @@ class ChatApp {
                 </div>
             `;
         } else {
+            // Nếu content là JSON có cấu trúc, render từng ý
+            let botContent = '';
+            try {
+                const parsed = typeof message.content === 'string' ? JSON.parse(message.content) : message.content;
+                if (parsed && parsed.items && Array.isArray(parsed.items)) {
+                    botContent += `<div class='bot-list'>`;
+                    // Ẩn tiêu đề nếu là 'Kết quả' hoặc không có title
+                    if (parsed.title && parsed.title.trim() && parsed.title.trim().toLowerCase() !== 'kết quả') {
+                        botContent += `<div class='bot-title'><strong>${this.escapeHtml(parsed.title)}</strong></div>`;
+                    }
+                    parsed.items.forEach(item => {
+                        botContent += `<div class='bot-item'>`;
+                        if (item.bold) {
+                            botContent += `<strong>${this.escapeHtml(item.text)}</strong>`;
+                        } else {
+                            botContent += `${this.escapeHtml(item.text)}`;
+                        }
+                        botContent += `</div>`;
+                    });
+                    botContent += `</div>`;
+                } else {
+                    botContent = this.escapeHtml(message.content);
+                }
+            } catch (e) {
+                botContent = this.escapeHtml(message.content);
+            }
+
             const sourceDocsHTML = message.source_documents && message.source_documents.length > 0
                 ? this.createSourceDocumentsHTML(message.source_documents)
                 : '';
@@ -471,7 +498,7 @@ class ChatApp {
 
             return `
                 <div class="message-content">
-                    ${this.escapeHtml(message.content)}
+                    ${botContent}
                     ${contextIndicator}
                     ${rewriteQueriesHTML}
                     ${sourceDocsHTML}
