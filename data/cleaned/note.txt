@@ -5,4 +5,15 @@
 
 giải tích
 250 lý thuyết
-1328 bài tập
+1329 bài tập
+
+
+
+
+test đại số
+100 lý thuyết
+300 bài tập
+
+test giải tích
+100 lý thuyết
+400 bài tập
