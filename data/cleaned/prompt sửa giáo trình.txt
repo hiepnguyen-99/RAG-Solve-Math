@@ -1,0 +1,16 @@
+không sửa logic, sửa khi có lỗi text hoặc công thức
+xuống dòng 2 lần, không là sẽ bị dính vào nhau khi hiển thị md
+viết tất cả các công thức dưới dạng katex trong file md
+nếu có lỗi text, chữ, không đúng như logic chuẩn của bài đó thì sửa
+công thức liền mạch thì cho cùng vào $ $ để không bị ngắt đoạn 
+công thức thì để trong dấu $ $ thay vì \] hoặc \[
+và công thức nội suy cũng để $ $
+text thì để ngoài $ $
+​không để \$ \$ chỉ để $ $
+không để dấu ngoặc {} chỉ để \{ \}
+nếu text là chương thì thêm # ở đầu
+nếu là bài, lecture, § thì thêm ##
+nếu là mục con có số dạng 2.3 ..., 4.1 ... thì thêm ###
+nếu là tính chất, dinh nghĩa, dinh ly, ví dụ, chú y, thì thêm ####, nếu đã đánh dấu thì xuống dòng với nội dung tiếp theo của tính chất, dinh nghĩa, 
+nếu begin và end của ma trận thì phần xuống dòng thay vì \ chỉ để \\
+bỏ dấu > 

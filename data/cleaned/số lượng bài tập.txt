@@ -1,12 +1,11 @@
-đại số
+train đại số
 401 lý thuyết
 648 câu hỏi 1 ý
 331 câu hỏi nhiều ý a b c...
 
-giải tích
+train giải tích
 250 lý thuyết
 1329 bài tập
-
 
 
 

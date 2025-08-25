@@ -1,0 +1,26 @@
+bạn là 1 chuyên gia giảng dậy môn đại số tuyến tính 
+tạo thêm 15 bài tập đại số, mức độ dễ, chương ánh xạ tuyến tính, trong giáo trình đại số tuyến tính 
+những bài phải thật đặc biệt vì trước đó tôi đã tạo rất nhiều bài tập, thật đặc biệt để tránh trùng với những gì bạn tìm
+tạo câu hỏi có nhiều câu hỏi nhỏ hơn: a,b,c...
+nếu kiến thức nào chưa được thêm thì thêm vào
+giải từng bước cụ thể
+các bài tập đều khác nhau, cũng khác với các bài ở trên
+làm đúng yêu cầu này: tạo text không để 1 dấu \, chỉ tạo 2 dấu \\, \ thường đứng trước kí tự khác để xuống dòng hoặc tạo công thức đặc biệt trong file md cũng phải tạo thành \\
+không đánh dấu số bài
+tạo với form giống ở dưới
+{
+  "problems": [
+    {
+      "question": "Cho hai ma trận cùng kích thước: $A = \\begin{pmatrix} 1 & -2 & 3 \\\\ 0 & 4 & 5 \\end{pmatrix}$ và $B = \\begin{pmatrix} 2 & 1 & -1 \\\\ 3 & -2 & 0 \\end{pmatrix}$. Thực hiện: a) Tính $A + B$. b) Tính $2A - 3B$. c) Phép trừ $A - B^T$ có thực hiện được không? Giải thích.",
+      "answer": {
+        "steps": [
+          "Kiểm tra kích thước: $A, B$ đều là ma trận $2 \\times 3$, nên phép cộng và nhân vô hướng là hợp lệ.",
+          "a) Cộng theo từng phần tử: $A + B = \\begin{pmatrix} 1+2 & -2+1 & 3+(-1) \\\\ 0+3 & 4+(-2) & 5+0 \\end{pmatrix} = \\begin{pmatrix} 3 & -1 & 2 \\\\ 3 & 2 & 5 \\end{pmatrix}$.",
+          "b) Tính $2A = \\begin{pmatrix} 2 & -4 & 6 \\\\ 0 & 8 & 10 \\end{pmatrix}$ và $3B = \\begin{pmatrix} 6 & 3 & -3 \\\\ 9 & -6 & 0 \\end{pmatrix}$. Do đó $2A - 3B = \\begin{pmatrix} -4 & -7 & 9 \\\\ -9 & 14 & 10 \\end{pmatrix}$.",
+          "c) $B^T$ có kích thước $3 \\times 2$ còn $A$ là $2 \\times 3$. Vì không cùng kích thước nên $A - B^T$ không xác định.",
+          "Kết luận: Thực hiện được (a), (b); không thực hiện được (c) do không cùng kích thước."
+        ]
+      }
+    }
+  ]
+}
