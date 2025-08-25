@@ -1,5 +1,5 @@
-bạn là 1 chuyên gia giảng dậy môn đại số tuyến tính 
-tạo thêm 15 bài tập đại số, mức độ dễ, chương ánh xạ tuyến tính, trong giáo trình đại số tuyến tính 
+bạn là 1 chuyên gia giảng dạy môn giải tích 1
+tạo thêm 10 bài tập giải tích 1, mức độ dễ, chương hàm số một biến số, bài hàm số, trong giáo trình giải tích 1
 những bài phải thật đặc biệt vì trước đó tôi đã tạo rất nhiều bài tập, thật đặc biệt để tránh trùng với những gì bạn tìm
 tạo câu hỏi có nhiều câu hỏi nhỏ hơn: a,b,c...
 nếu kiến thức nào chưa được thêm thì thêm vào
