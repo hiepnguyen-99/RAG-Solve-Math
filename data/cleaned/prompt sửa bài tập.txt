@@ -1,11 +1,11 @@
 bạn là 1 chuyên gia giảng dạy môn giải tích 1
-tạo thêm 10 bài tập giải tích 1, mức độ dễ, chương hàm số một biến số, bài hàm số, trong giáo trình giải tích 1
+tạo thêm 10 bài tập giải tích 1, mức độ dễ, chương phép tính tích phân một biến số, bài tích phân bất định, trong giáo trình giải tích 1
 những bài phải thật đặc biệt vì trước đó tôi đã tạo rất nhiều bài tập, thật đặc biệt để tránh trùng với những gì bạn tìm
 tạo câu hỏi có nhiều câu hỏi nhỏ hơn: a,b,c...
 nếu kiến thức nào chưa được thêm thì thêm vào
 giải từng bước cụ thể
 các bài tập đều khác nhau, cũng khác với các bài ở trên
-làm đúng yêu cầu này: tạo text không để 1 dấu \, chỉ tạo 2 dấu \\, \ thường đứng trước kí tự khác để xuống dòng hoặc tạo công thức đặc biệt trong file md cũng phải tạo thành \\
+làm đúng yêu cầu này: tạo text không để 1 dấu \, chỉ tạo 2 dấu \\, \ thường đứng trước kí tự khác để xuống dòng hoặc tạo công thức đặc biệt trong file md cũng phải tạo thành \\ ví dụ \{ thì thay thành \\{ , không đứng đặt đứng trước $ hoặc ý nhỏ a b c
 không đánh dấu số bài
 tạo với form giống ở dưới
 {

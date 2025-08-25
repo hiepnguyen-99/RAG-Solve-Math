@@ -2932,6 +2932,1626 @@
           "Giá trị $a=3$ thỏa mãn điều kiện $a>0$."
         ]
       }
+    },
+    {
+      "question": "Tính tích phân của một đa thức chứa cả luỹ thừa phân số và luỹ thừa âm: $I = \\int (2x^3 - \\frac{1}{x^2} + 4\\sqrt{x}) dx$. a) Viết lại hàm số dưới dấu tích phân sử dụng luỹ thừa thay cho phân số và căn thức. b) Áp dụng tính chất tuyến tính của tích phân để tách thành các tích phân đơn giản hơn. c) Tìm nguyên hàm của từng phần và kết hợp lại để có kết quả cuối cùng.",
+      "answer": {
+        "steps": [
+          "a) Ta biến đổi hàm số: $\\frac{1}{x^2} = x^{-2}$ và $\\sqrt{x} = x^{1/2}$. Vậy hàm số trở thành $2x^3 - x^{-2} + 4x^{1/2}$.",
+          "b) Tích phân của một tổng/hiệu bằng tổng/hiệu các tích phân: $I = \\int 2x^3 dx - \\int x^{-2} dx + \\int 4x^{1/2} dx$.",
+          "c) Áp dụng công thức nguyên hàm của luỹ thừa $\\int x^n dx = \\frac{x^{n+1}}{n+1} + C$ cho từng phần:",
+          "$\\int 2x^3 dx = 2 \\frac{x^{3+1}}{3+1} = \\frac{2x^4}{4} = \\frac{1}{2}x^4$.",
+          "$\\int x^{-2} dx = \\frac{x^{-2+1}}{-2+1} = \\frac{x^{-1}}{-1} = -\\frac{1}{x}$.",
+          "$\\int 4x^{1/2} dx = 4 \\frac{x^{1/2+1}}{1/2+1} = 4 \\frac{x^{3/2}}{3/2} = 4 \\cdot \\frac{2}{3}x^{3/2} = \\frac{8}{3}x\\sqrt{x}$.",
+          "Kết hợp lại và thêm hằng số tích phân C: $I = \\frac{1}{2}x^4 - (-\\frac{1}{x}) + \\frac{8}{3}x\\sqrt{x} + C = \\frac{1}{2}x^4 + \\frac{1}{x} + \\frac{8}{3}x\\sqrt{x} + C$."
+        ]
+      }
+    },
+    {
+      "question": "Kiểm tra mối quan hệ giữa đạo hàm và nguyên hàm. a) Tính tích phân $I = \\int e^{5x} dx$. b) Gọi $F(x)$ là kết quả bạn tìm được ở câu a (với C=0). Hãy tính đạo hàm $F'(x)$. c) So sánh kết quả $F'(x)$ với hàm số ban đầu dưới dấu tích phân. Điều này cho thấy điều gì?",
+      "answer": {
+        "steps": [
+          "a) Sử dụng công thức nguyên hàm cơ bản $\\int e^{ax} dx = \\frac{1}{a}e^{ax} + C$.",
+          "Với $a=5$, ta có $I = \\frac{1}{5}e^{5x} + C$.",
+          "b) Đặt $F(x) = \\frac{1}{5}e^{5x}$. Ta tính đạo hàm của nó:",
+          "$F'(x) = (\\frac{1}{5}e^{5x})' = \\frac{1}{5} (e^{5x})' = \\frac{1}{5} (e^{5x} \\cdot 5) = e^{5x}$.",
+          "c) Kết quả $F'(x) = e^{5x}$ chính là hàm số ban đầu dưới dấu tích phân. Điều này minh họa định nghĩa của tích phân bất định: Nguyên hàm của một hàm số $f(x)$ là một hàm số $F(x)$ sao cho $F'(x) = f(x)$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân bằng phương pháp đổi biến số đơn giản: $I = \\int (2x+1)^7 dx$. a) Đặt $u = 2x+1$. Tính vi phân $du$ theo $dx$. b) Biểu diễn $dx$ qua $du$ và thay thế vào tích phân ban đầu để có tích phân theo biến $u$. c) Tính tích phân theo $u$ rồi trả lại biến $x$ ban đầu.",
+      "answer": {
+        "steps": [
+          "a) Đặt $u = 2x+1$. Lấy vi phân hai vế, ta có $du = (2x+1)'dx = 2dx$.",
+          "b) Từ $du = 2dx$, ta suy ra $dx = \\frac{1}{2}du$.",
+          "Thay vào tích phân: $I = \\int u^7 (\\frac{1}{2}du) = \\frac{1}{2} \\int u^7 du$.",
+          "c) Tích phân theo $u$ là: $\\frac{1}{2} \\frac{u^8}{8} + C = \\frac{u^8}{16} + C$.",
+          "Bây giờ, ta thay $u=2x+1$ trở lại để có kết quả cuối cùng theo biến $x$: $I = \\frac{(2x+1)^8}{16} + C$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân của một hàm lượng giác cần biến đổi: $I = \\int \\cos^2(x) dx$. a) Nhắc lại công thức hạ bậc cho $\\cos^2(x)$. b) Áp dụng công thức này để viết lại hàm số dưới dấu tích phân. c) Tính tích phân của biểu thức mới.",
+      "answer": {
+        "steps": [
+          "a) Công thức hạ bậc cho cosin là: $\\cos^2(x) = \\frac{1 + \\cos(2x)}{2}$.",
+          "b) Thay công thức vào tích phân: $I = \\int \\frac{1 + \\cos(2x)}{2} dx = \\frac{1}{2} \\int (1 + \\cos(2x)) dx$.",
+          "c) Tách thành hai tích phân: $I = \\frac{1}{2} (\\int 1 dx + \\int \\cos(2x) dx)$.",
+          "$\\int 1 dx = x$.",
+          "$\\int \\cos(2x) dx = \\frac{1}{2}\\sin(2x)$.",
+          "Kết hợp lại và thêm hằng số C: $I = \\frac{1}{2} (x + \\frac{1}{2}\\sin(2x)) + C = \\frac{x}{2} + \\frac{\\sin(2x)}{4} + C$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm một nguyên hàm cụ thể thỏa mãn điều kiện ban đầu. a) Tìm họ nguyên hàm $F(x)$ của hàm số $f(x) = 3x^2 - 4x + 1$. b) Tìm hằng số $C$ sao cho đồ thị của nguyên hàm $y=F(x)$ đi qua điểm $M(2, 5)$. c) Viết nguyên hàm cụ thể tìm được.",
+      "answer": {
+        "steps": [
+          "a) Ta tính tích phân bất định: $F(x) = \\int (3x^2 - 4x + 1) dx = 3\\frac{x^3}{3} - 4\\frac{x^2}{2} + x + C = x^3 - 2x^2 + x + C$.",
+          "b) Đồ thị đi qua $M(2, 5)$ nghĩa là khi $x=2$ thì $F(2)=5$.",
+          "Ta có: $F(2) = (2)^3 - 2(2)^2 + 2 + C = 5$.",
+          "$8 - 8 + 2 + C = 5 \\Rightarrow 2 + C = 5 \\Rightarrow C = 3$.",
+          "c) Thay $C=3$ vào họ nguyên hàm, ta được nguyên hàm cụ thể cần tìm là: $F(x) = x^3 - 2x^2 + x + 3$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân bằng cách nhận dạng đạo hàm của mẫu số: $I = \\int \\frac{3x^2}{x^3+1} dx$. a) Đặt $u$ bằng biểu thức ở mẫu số. b) Tính $du$ và so sánh với biểu thức ở tử số. c) Sử dụng công thức nguyên hàm $\\int \\frac{du}{u}$.",
+      "answer": {
+        "steps": [
+          "a) Đặt $u = x^3+1$.",
+          "b) Lấy vi phân: $du = (x^3+1)'dx = 3x^2 dx$.",
+          "Ta thấy biểu thức $3x^2 dx$ ở tử số chính là $du$.",
+          "c) Tích phân trở thành $I = \\int \\frac{du}{u}$.",
+          "Đây là dạng nguyên hàm cơ bản: $\\int \\frac{du}{u} = \\ln|u| + C$.",
+          "Thay $u = x^3+1$ trở lại: $I = \\ln|x^3+1| + C$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân của một phân thức đơn giản bằng cách chia tử cho mẫu: $I = \\int \\frac{x+5}{x+2} dx$. a) Viết lại tử số $x+5$ để xuất hiện mẫu số $x+2$. b) Tách phân thức thành một hằng số và một phân thức đơn giản. c) Tính tích phân của biểu thức mới.",
+      "answer": {
+        "steps": [
+          "a) Ta có thể viết $x+5 = (x+2) + 3$.",
+          "b) Thay vào tích phân: $I = \\int \\frac{(x+2)+3}{x+2} dx = \\int (\\frac{x+2}{x+2} + \\frac{3}{x+2}) dx = \\int (1 + \\frac{3}{x+2}) dx$.",
+          "c) Tách thành hai tích phân: $I = \\int 1 dx + \\int \\frac{3}{x+2} dx$.",
+          "$\\int 1 dx = x$.",
+          "$\\int \\frac{3}{x+2} dx = 3 \\int \\frac{1}{x+2} dx = 3\\ln|x+2|$.",
+          "Kết quả cuối cùng là $I = x + 3\\ln|x+2| + C$."
+        ]
+      }
+    },
+    {
+      "question": "Sử dụng tích phân từng phần cho một trường hợp cơ bản: $I = \\int x e^x dx$. a) Nêu công thức tích phân từng phần $\\int u dv$. b) Chọn $u$ và $dv$ một cách hợp lý từ biểu thức $x e^x dx$. c) Tính $du$ và $v$, sau đó áp dụng công thức để tìm kết quả.",
+      "answer": {
+        "steps": [
+          "a) Công thức tích phân từng phần là: $\\int u dv = uv - \\int v du$.",
+          "b) Ta cần chọn $u$ sao cho đạo hàm của nó đơn giản hơn, và chọn $dv$ sao cho dễ lấy nguyên hàm. Ta chọn:",
+          "$u = x$ (đạo hàm là 1, đơn giản hơn).",
+          "$dv = e^x dx$ (dễ lấy nguyên hàm).",
+          "c) Từ lựa chọn trên, ta tính:",
+          "$du = dx$.",
+          "$v = \\int dv = \\int e^x dx = e^x$.",
+          "Áp dụng công thức: $I = x e^x - \\int e^x dx$.",
+          "Tích phân còn lại là một tích phân cơ bản: $\\int e^x dx = e^x$.",
+          "Vậy kết quả cuối cùng là $I = x e^x - e^x + C$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân dẫn đến hàm arcsin: $I = \\int \\frac{1}{\\sqrt{4-x^2}} dx$. a) Nhắc lại công thức nguyên hàm có dạng $\\int \\frac{du}{\\sqrt{a^2-u^2}}$. b) So sánh tích phân đã cho với công thức tổng quát để xác định $a$ và $u$. c) Áp dụng công thức để tìm kết quả.",
+      "answer": {
+        "steps": [
+          "a) Công thức nguyên hàm cơ bản cho dạng này là: $\\int \\frac{du}{\\sqrt{a^2-u^2}} = \\arcsin(\\frac{u}{a}) + C$.",
+          "b) Ta viết lại tích phân: $I = \\int \\frac{1}{\\sqrt{2^2-x^2}} dx$.",
+          "So sánh với dạng tổng quát, ta thấy $a=2$ và $u=x$. Vi phân $du = dx$, hoàn toàn khớp.",
+          "c) Áp dụng công thức với $a=2, u=x$, ta được:",
+          "$I = \\arcsin(\\frac{x}{2}) + C$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân của tổng hai hàm số mũ khác cơ số: $I = \\int (2^x + e^{2x}) dx$. a) Tách tích phân thành tổng hai tích phân. b) Sử dụng công thức nguyên hàm cho hàm mũ $a^x$. c) Sử dụng công thức nguyên hàm cho hàm mũ $e^{kx}$ và kết hợp kết quả.",
+      "answer": {
+        "steps": [
+          "a) $I = \\int 2^x dx + \\int e^{2x} dx$.",
+          "b) Công thức nguyên hàm tổng quát của hàm mũ là $\\int a^x dx = \\frac{a^x}{\\ln a} + C$.",
+          "Áp dụng cho số hạng đầu tiên: $\\int 2^x dx = \\frac{2^x}{\\ln 2}$.",
+          "c) Công thức nguyên hàm cho $e^{kx}$ là $\\int e^{kx} dx = \\frac{1}{k}e^{kx} + C$.",
+          "Áp dụng cho số hạng thứ hai: $\\int e^{2x} dx = \\frac{1}{2}e^{2x}$.",
+          "Kết hợp cả hai kết quả và thêm hằng số tích phân C: $I = \\frac{2^x}{\\ln 2} + \\frac{1}{2}e^{2x} + C$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân bằng phương pháp tích phân từng phần cho một hàm logarit phức tạp hơn: $I = \\int \\ln(x^2+1) dx$. a) Nêu công thức tích phân từng phần. b) Hãy chọn $u$ và $dv$ cho tích phân này. Gợi ý: đôi khi $dv$ chỉ đơn giản là $dx$. c) Áp dụng công thức và tính toán để ra kết quả cuối cùng.",
+      "answer": {
+        "steps": [
+          "a) Công thức tích phân từng phần là $\\int u dv = uv - \\int v du$.",
+          "b) Ta không dễ dàng tìm nguyên hàm của $\\ln(x^2+1)$, nên ta sẽ chọn nó làm $u$ để lấy đạo hàm.",
+          "Chọn $u = \\ln(x^2+1)$ và $dv = dx$.",
+          "c) Ta tính các thành phần còn lại: $du = \\frac{2x}{x^2+1} dx$ và $v = \\int dx = x$.",
+          "Áp dụng công thức: $I = x\\ln(x^2+1) - \\int x \\cdot \\frac{2x}{x^2+1} dx = x\\ln(x^2+1) - \\int \\frac{2x^2}{x^2+1} dx$.",
+          "Để tính tích phân còn lại, ta biến đổi phân thức: $\\frac{2x^2}{x^2+1} = \\frac{2(x^2+1) - 2}{x^2+1} = 2 - \\frac{2}{x^2+1}$.",
+          "Vậy $\\int \\frac{2x^2}{x^2+1} dx = \\int (2 - \\frac{2}{x^2+1}) dx = 2x - 2\\arctan(x)$.",
+          "Kết hợp lại: $I = x\\ln(x^2+1) - (2x - 2\\arctan(x)) + C = x\\ln(x^2+1) - 2x + 2\\arctan(x) + C$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân của hàm phân thức hữu tỉ bằng phương pháp đồng nhất hệ số: $I = \\int \\frac{x+3}{x^2-2x-3} dx$. a) Phân tích mẫu số thành nhân tử. b) Viết biểu thức dưới dấu tích phân dưới dạng tổng của các phân thức đơn giản (dạng $\\frac{A}{nhân tử 1} + \\frac{B}{nhân tử 2}$). c) Tìm các hằng số A, B và tính tích phân.",
+      "answer": {
+        "steps": [
+          "a) Mẫu số $x^2-2x-3$ có hai nghiệm là $x=-1$ và $x=3$. Vậy $x^2-2x-3 = (x+1)(x-3)$.",
+          "b) Ta phân tích: $\\frac{x+3}{(x+1)(x-3)} = \\frac{A}{x+1} + \\frac{B}{x-3}$.",
+          "c) Quy đồng mẫu số: $\\frac{x+3}{(x+1)(x-3)} = \\frac{A(x-3) + B(x+1)}{(x+1)(x-3)}$.",
+          "Đồng nhất tử số: $x+3 = A(x-3) + B(x+1)$.",
+          "Cho $x=3$: $3+3 = A(0) + B(4) \\Rightarrow 6 = 4B \\Rightarrow B = 3/2$.",
+          "Cho $x=-1$: $-1+3 = A(-4) + B(0) \\Rightarrow 2 = -4A \\Rightarrow A = -1/2$.",
+          "Vậy $I = \\int (\\frac{-1/2}{x+1} + \\frac{3/2}{x-3}) dx = -\\frac{1}{2}\\int \\frac{dx}{x+1} + \\frac{3}{2}\\int \\frac{dx}{x-3}$.",
+          "$I = -\\frac{1}{2}\\ln|x+1| + \\frac{3}{2}\\ln|x-3| + C$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân bằng cách hoàn thành bình phương ở mẫu số: $I = \\int \\frac{1}{x^2+4x+13} dx$. a) Biến đổi mẫu số $x^2+4x+13$ về dạng $(x-a)^2 + b^2$ bằng phương pháp hoàn thành bình phương. b) Sử dụng phép đổi biến $u = x-a$ để đưa tích phân về dạng $\\int \\frac{du}{u^2+b^2}$. c) Áp dụng công thức nguyên hàm của arctan để tìm kết quả.",
+      "answer": {
+        "steps": [
+          "a) $x^2+4x+13 = (x^2+4x+4) + 9 = (x+2)^2 + 3^2$.",
+          "b) Tích phân trở thành $I = \\int \\frac{1}{(x+2)^2 + 3^2} dx$.",
+          "Đặt $u=x+2$, suy ra $du = dx$. Tích phân theo $u$ là $I = \\int \\frac{1}{u^2+3^2} du$.",
+          "c) Áp dụng công thức $\\int \\frac{du}{u^2+a^2} = \\frac{1}{a}\\arctan(\\frac{u}{a}) + C$ với $a=3$.",
+          "$I = \\frac{1}{3}\\arctan(\\frac{u}{3}) + C$.",
+          "Thay $u=x+2$ trở lại, ta được $I = \\frac{1}{3}\\arctan(\\frac{x+2}{3}) + C$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân bằng phương pháp đổi biến lượng giác: $I = \\int \\frac{x^2}{\\sqrt{9-x^2}} dx$. a) Lựa chọn phép đổi biến $x=a\\sin t$ hoặc $x=a\\tan t$ hoặc $x=a\\sec t$ phù hợp. b) Thay thế $x$ và $dx$ vào tích phân ban đầu để có tích phân theo biến $t$. c) Tính tích phân lượng giác theo $t$ và đổi ngược về biến $x$.",
+      "answer": {
+        "steps": [
+          "a) Dạng $\\sqrt{a^2-x^2}$ gợi ý phép đặt $x=a\\sin t$. Ở đây $a^2=9$, vậy $a=3$.",
+          "Đặt $x = 3\\sin t$, với $t \\in [-\\pi/2, \\pi/2]$. Suy ra $dx = 3\\cos t dt$.",
+          "b) $\\sqrt{9-x^2} = \\sqrt{9-9\\sin^2 t} = \\sqrt{9\\cos^2 t} = 3|\\cos t| = 3\\cos t$ (vì $t \\in [-\\pi/2, \\pi/2]$).",
+          "Thay vào tích phân: $I = \\int \\frac{(3\\sin t)^2}{3\\cos t} (3\\cos t dt) = \\int 9\\sin^2 t dt$.",
+          "c) Sử dụng công thức hạ bậc $\\sin^2 t = \\frac{1-\\cos(2t)}{2}$: ",
+          "$I = 9 \\int \\frac{1-\\cos(2t)}{2} dt = \\frac{9}{2} (\\int 1 dt - \\int \\cos(2t) dt) = \\frac{9}{2}(t - \\frac{1}{2}\\sin(2t)) + C$.",
+          "Đổi về biến $x$: từ $x=3\\sin t$, ta có $t = \\arcsin(x/3)$.",
+          "$\\sin(2t) = 2\\sin t \\cos t$. Ta có $\\sin t = x/3$ và $\\cos t = \\sqrt{1-\\sin^2 t} = \\sqrt{1-(x/3)^2} = \\frac{\\sqrt{9-x^2}}{3}$.",
+          "Vậy $\\sin(2t) = 2(x/3) \\frac{\\sqrt{9-x^2}}{3} = \\frac{2x\\sqrt{9-x^2}}{9}$.",
+          "Kết quả cuối cùng: $I = \\frac{9}{2}(\\arcsin(\\frac{x}{3}) - \\frac{x\\sqrt{9-x^2}}{9}) + C = \\frac{9}{2}\\arcsin(\\frac{x}{3}) - \\frac{x\\sqrt{9-x^2}}{2} + C$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân bằng phương pháp tích phân từng phần lặp lại: $I = \\int e^{x} \\cos(x) dx$. a) Áp dụng tích phân từng phần lần thứ nhất. b) Áp dụng tích phân từng phần lần thứ hai cho tích phân mới xuất hiện. c) Nhận thấy tích phân ban đầu xuất hiện lại và giải phương trình để tìm $I$.",
+      "answer": {
+        "steps": [
+          "a) Đặt $u = e^x, dv = \\cos x dx$. Suy ra $du = e^x dx, v = \\sin x$.",
+          "$I = e^x \\sin x - \\int e^x \\sin x dx$.",
+          "b) Tính $J = \\int e^x \\sin x dx$. Đặt $u = e^x, dv = \\sin x dx$. Suy ra $du = e^x dx, v = -\\cos x$.",
+          "$J = -e^x \\cos x - \\int (-\\cos x)e^x dx = -e^x \\cos x + \\int e^x \\cos x dx$.",
+          "Nhận thấy $\\int e^x \\cos x dx$ chính là $I$. Vậy $J = -e^x \\cos x + I$.",
+          "c) Thay $J$ trở lại biểu thức của $I$: $I = e^x \\sin x - (-e^x \\cos x + I)$.",
+          "$I = e^x \\sin x + e^x \\cos x - I$.",
+          "Chuyển $-I$ sang vế trái: $2I = e^x(\\sin x + \\cos x)$.",
+          "Vậy $I = \\frac{e^x(\\sin x + \\cos x)}{2} + C$."
+        ]
+      }
+    },
+    {
+      "question": "Sử dụng phép đổi biến trong đó phải biểu diễn biến cũ theo biến mới: $I = \\int x\\sqrt{x+1} dx$. a) Đặt $u = x+1$. Tìm $du$ và biểu diễn $x$ theo $u$. b) Thay thế tất cả các biểu thức chứa $x$ trong tích phân bằng các biểu thức tương ứng theo $u$. c) Tính tích phân theo $u$ và đổi ngược về biến $x$.",
+      "answer": {
+        "steps": [
+          "a) Đặt $u = x+1$. Lấy vi phân ta có $du=dx$. Từ $u=x+1$, ta suy ra $x = u-1$.",
+          "b) Thay vào tích phân: $I = \\int (u-1)\\sqrt{u} du$.",
+          "Viết lại dưới dạng luỹ thừa: $I = \\int (u-1)u^{1/2} du = \\int (u^{3/2} - u^{1/2}) du$.",
+          "c) Tính tích phân theo $u$: $I = \\frac{u^{5/2}}{5/2} - \\frac{u^{3/2}}{3/2} + C = \\frac{2}{5}u^{5/2} - \\frac{2}{3}u^{3/2} + C$.",
+          "Đổi về biến $x$: $I = \\frac{2}{5}(x+1)^{5/2} - \\frac{2}{3}(x+1)^{3/2} + C$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân bằng cách sử dụng công thức lượng giác biến đổi tích thành tổng: $I = \\int \\sin(3x)\\cos(2x) dx$. a) Nhắc lại công thức biến đổi tích thành tổng cho $\\sin(A)\\cos(B)$. b) Áp dụng công thức để viết lại hàm số dưới dấu tích phân. c) Tính tích phân của biểu thức mới.",
+      "answer": {
+        "steps": [
+          "a) Công thức biến đổi tích thành tổng là: $\\sin(A)\\cos(B) = \\frac{1}{2}[\\sin(A+B) + \\sin(A-B)]$.",
+          "b) Với $A=3x, B=2x$, ta có: $\\sin(3x)\\cos(2x) = \\frac{1}{2}[\\sin(3x+2x) + \\sin(3x-2x)] = \\frac{1}{2}[\\sin(5x) + \\sin(x)]$.",
+          "Tích phân trở thành $I = \\int \\frac{1}{2}(\\sin(5x) + \\sin(x)) dx = \\frac{1}{2} (\\int \\sin(5x) dx + \\int \\sin(x) dx)$.",
+          "c) Tính các tích phân thành phần:",
+          "$\\int \\sin(5x) dx = -\\frac{1}{5}\\cos(5x)$.",
+          "$\\int \\sin(x) dx = -\\cos(x)$.",
+          "Kết quả cuối cùng: $I = \\frac{1}{2}(-\\frac{1}{5}\\cos(5x) - \\cos(x)) + C = -\\frac{\\cos(5x)}{10} - \\frac{\\cos(x)}{2} + C$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân của hàm phân thức hữu tỉ có mẫu là luỹ thừa của một nhị thức: $I = \\int \\frac{2x+3}{(x-1)^2} dx$. a) Phân tích biểu thức thành tổng các phân thức đơn giản có dạng $\\frac{A}{x-1} + \\frac{B}{(x-1)^2}$. b) Tìm các hằng số $A, B$ bằng phương pháp đồng nhất hệ số hoặc phương pháp giá trị riêng. c) Tính tích phân của các phân thức đơn giản đó.",
+      "answer": {
+        "steps": [
+          "a) Ta phân tích: $\\frac{2x+3}{(x-1)^2} = \\frac{A}{x-1} + \\frac{B}{(x-1)^2}$.",
+          "b) Quy đồng mẫu số: $2x+3 = A(x-1) + B$.",
+          "Để tìm B, cho $x=1$: $2(1)+3 = A(0) + B \\Rightarrow B=5$.",
+          "Để tìm A, đồng nhất hệ số của $x$: $2 = A$.",
+          "Vậy, biểu thức trở thành $\\frac{2}{x-1} + \\frac{5}{(x-1)^2}$.",
+          "c) $I = \\int (\\frac{2}{x-1} + \\frac{5}{(x-1)^2}) dx = 2\\int\\frac{dx}{x-1} + 5\\int(x-1)^{-2}dx$.",
+          "$I = 2\\ln|x-1| + 5 \\frac{(x-1)^{-1}}{-1} + C = 2\\ln|x-1| - \\frac{5}{x-1} + C$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân bằng cách nhận dạng đạo hàm của một hàm hợp: $I = \\int \\frac{\\arctan(x)}{1+x^2} dx$. a) Quan sát hàm số dưới dấu tích phân và tìm xem có biểu thức nào là đạo hàm của một biểu thức khác không. b) Thực hiện phép đổi biến phù hợp dựa trên nhận xét ở câu a. c) Tính tích phân theo biến mới và trả lại kết quả theo biến ban đầu.",
+      "answer": {
+        "steps": [
+          "a) Ta nhận thấy rằng đạo hàm của $\\arctan(x)$ là $\\frac{1}{1+x^2}$. Biểu thức này xuất hiện trong tích phân.",
+          "b) Đặt $u = \\arctan(x)$. Lấy vi phân hai vế, ta có $du = \\frac{1}{1+x^2} dx$.",
+          "c) Thay thế vào tích phân, ta được $I = \\int u du$.",
+          "Đây là một tích phân cơ bản: $\\int u du = \\frac{u^2}{2} + C$.",
+          "Trả lại biến ban đầu $x$, ta có $I = \\frac{(\\arctan(x))^2}{2} + C$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân của hàm phân thức hữu tỉ có bậc tử lớn hơn bậc mẫu: $I = \\int \\frac{x^3+x}{x-1} dx$. a) Sử dụng phép chia đa thức để chia $x^3+x$ cho $x-1$. b) Viết lại hàm số dưới dấu tích phân thành tổng của một đa thức và một phân thức thực sự. c) Tính tích phân của các thành phần đó.",
+      "answer": {
+        "steps": [
+          "a) Thực hiện phép chia đa thức: $(x^3+x) : (x-1)$.",
+          "Ta được thương là $x^2+x+2$ và số dư là 2.",
+          "b) Do đó, $\\frac{x^3+x}{x-1} = x^2+x+2 + \\frac{2}{x-1}$.",
+          "c) Tích phân trở thành $I = \\int (x^2+x+2 + \\frac{2}{x-1}) dx$.",
+          "$I = \\int x^2 dx + \\int x dx + \\int 2 dx + \\int \\frac{2}{x-1} dx$.",
+          "$I = \\frac{x^3}{3} + \\frac{x^2}{2} + 2x + 2\\ln|x-1| + C$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm công thức truy hồi cho tích phân $I_n = \\int (\\ln x)^n dx$ với $n$ là số nguyên dương. a) Tính $I_1 = \\int \\ln x dx$ bằng phương pháp tích phân từng phần. b) Áp dụng tích phân từng phần cho $I_n$, hãy thiết lập một công thức liên hệ giữa $I_n$ và $I_{n-1}$. c) Sử dụng công thức truy hồi vừa tìm được để tính $I_3 = \\int (\\ln x)^3 dx$.",
+      "answer": {
+        "steps": [
+          "a) Để tính $I_1$, đặt $u = \\ln x$ và $dv = dx$. Ta có $du = \\frac{1}{x} dx$ và $v = x$.",
+          "$I_1 = x \\ln x - \\int x \\cdot \\frac{1}{x} dx = x \\ln x - \\int 1 dx = x \\ln x - x + C$.",
+          "b) Để tính $I_n = \\int (\\ln x)^n dx$, ta đặt $u = (\\ln x)^n$ và $dv = dx$.",
+          "Ta có $du = n(\\ln x)^{n-1} \\cdot \\frac{1}{x} dx$ và $v = x$.",
+          "Áp dụng công thức tích phân từng phần: $I_n = x(\\ln x)^n - \\int x \\cdot n(\\ln x)^{n-1} \\frac{1}{x} dx$.",
+          "$I_n = x(\\ln x)^n - n \\int (\\ln x)^{n-1} dx$.",
+          "Tích phân còn lại chính là $I_{n-1}$. Vậy công thức truy hồi là $I_n = x(\\ln x)^n - n I_{n-1}$.",
+          "c) Ta tính $I_3$ bằng cách áp dụng công thức truy hồi:",
+          "$I_3 = x(\\ln x)^3 - 3I_2$.",
+          "$I_2 = x(\\ln x)^2 - 2I_1 = x(\\ln x)^2 - 2(x \\ln x - x)$.",
+          "Thay vào $I_3$: $I_3 = x(\\ln x)^3 - 3[x(\\ln x)^2 - 2(x \\ln x - x)] = x(\\ln x)^3 - 3x(\\ln x)^2 + 6x \\ln x - 6x + C$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân của hàm lượng giác bằng phép thế Weierstrass (phép thế t = tan(x/2)): $I = \\int \\frac{dx}{1 + \\sin x - \\cos x}$. a) Nêu các công thức biểu diễn $\\sin x, \\cos x$ và $dx$ theo $t = \\tan(x/2)$. b) Thực hiện phép thế để chuyển tích phân đã cho về tích phân của một hàm hữu tỉ theo $t$. c) Tính tích phân theo $t$ và trả về biến $x$.",
+      "answer": {
+        "steps": [
+          "a) Phép thế Weierstrass: đặt $t = \\tan(x/2)$. Ta có các công thức:",
+          "$\\sin x = \\frac{2t}{1+t^2}$, $\\cos x = \\frac{1-t^2}{1+t^2}$, và $dx = \\frac{2dt}{1+t^2}$.",
+          "b) Thay các biểu thức vào tích phân:",
+          "$I = \\int \\frac{\\frac{2dt}{1+t^2}}{1 + \\frac{2t}{1+t^2} - \\frac{1-t^2}{1+t^2}} = \\int \\frac{2dt}{(1+t^2) + 2t - (1-t^2)} = \\int \\frac{2dt}{1+t^2+2t-1+t^2}$.",
+          "$I = \\int \\frac{2dt}{2t^2+2t} = \\int \\frac{dt}{t^2+t} = \\int \\frac{dt}{t(t+1)}$.",
+          "c) Phân tích phân thức: $\\frac{1}{t(t+1)} = \\frac{1}{t} - \\frac{1}{t+1}$.",
+          "$I = \\int (\\frac{1}{t} - \\frac{1}{t+1}) dt = \\ln|t| - \\ln|t+1| + C = \\ln|\\frac{t}{t+1}| + C$.",
+          "Trả về biến $x$: $I = \\ln|\\frac{\\tan(x/2)}{\\tan(x/2)+1}| + C$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân $I = \\int \\frac{dx}{(x^2+1)^2}$ bằng nhiều cách. a) Cách 1: Sử dụng phép đổi biến lượng giác $x = \\tan t$. b) Cách 2: Sử dụng phương pháp tích phân từng phần cho tích phân $J = \\int \\frac{dx}{x^2+1}$. c) So sánh hai kết quả.",
+      "answer": {
+        "steps": [
+          "a) Đặt $x=\\tan t$, $dx=\\sec^2 t dt$. $x^2+1 = \\tan^2 t + 1 = \\sec^2 t$.",
+          "$I = \\int \\frac{\\sec^2 t dt}{(\\sec^2 t)^2} = \\int \\frac{dt}{\\sec^2 t} = \\int \\cos^2 t dt$.",
+          "$I = \\int \\frac{1+\\cos(2t)}{2} dt = \\frac{1}{2}(t + \\frac{1}{2}\\sin(2t)) + C = \\frac{1}{2}t + \\frac{1}{4}(2\\sin t \\cos t) + C$.",
+          "Từ $x=\\tan t$, ta có $t=\\arctan x$, $\\sin t = \\frac{x}{\\sqrt{x^2+1}}$, $\\cos t = \\frac{1}{\\sqrt{x^2+1}}$.",
+          "$I = \\frac{1}{2}\\arctan x + \\frac{1}{2} \\frac{x}{\\sqrt{x^2+1}} \\frac{1}{\\sqrt{x^2+1}} + C = \\frac{1}{2}\\arctan x + \\frac{x}{2(x^2+1)} + C$.",
+          "b) Xét $J = \\int \\frac{dx}{x^2+1} = \\arctan x$. Áp dụng tích phân từng phần cho $J$: đặt $u=\\frac{1}{x^2+1}, dv=dx$.",
+          "$du = \\frac{-2x}{(x^2+1)^2}dx, v=x$.",
+          "$J = \\frac{x}{x^2+1} - \\int x \\frac{-2x}{(x^2+1)^2} dx = \\frac{x}{x^2+1} + 2\\int \\frac{x^2}{(x^2+1)^2} dx$.",
+          "$\\int \\frac{x^2}{(x^2+1)^2} dx = \\int \\frac{(x^2+1)-1}{(x^2+1)^2} dx = \\int \\frac{dx}{x^2+1} - \\int \\frac{dx}{(x^2+1)^2} = J - I$.",
+          "Vậy $J = \\frac{x}{x^2+1} + 2(J - I) \\Rightarrow I = \\frac{1}{2}J + \\frac{x}{2(x^2+1)} = \\frac{1}{2}\\arctan x + \\frac{x}{2(x^2+1)} + C$.",
+          "c) Cả hai phương pháp đều cho cùng một kết quả, cho thấy sự đa dạng của các kỹ thuật giải tích."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân của một hàm vô tỉ bằng phép thế Euler: $I = \\int \\frac{dx}{x+\\sqrt{x^2-x+1}}$. a) Giới thiệu phép thế Euler loại 1: $\\sqrt{ax^2+bx+c} = \\pm \\sqrt{a}x+t$. Áp dụng cho bài toán này. b) Từ phép thế, hãy biểu diễn $x$ và $dx$ theo biến mới $t$. c) Thay thế và tính tích phân theo $t$, sau đó trả về biến $x$.",
+      "answer": {
+        "steps": [
+          "a) Với $\\sqrt{x^2-x+1}$, ta có $a=1>0$. Ta đặt $\\sqrt{x^2-x+1} = t-x$.",
+          "b) Bình phương hai vế: $x^2-x+1 = (t-x)^2 = t^2 - 2tx + x^2$.",
+          "$-x+1 = t^2-2tx \\Rightarrow 2tx-x = t^2-1 \\Rightarrow x(2t-1)=t^2-1 \\Rightarrow x = \\frac{t^2-1}{2t-1}$.",
+          "Lấy vi phân: $dx = \\frac{2t(2t-1) - 2(t^2-1)}{(2t-1)^2} dt = \\frac{4t^2-2t-2t^2+2}{(2t-1)^2} dt = \\frac{2t^2-2t+2}{(2t-1)^2} dt$.",
+          "Mẫu số của tích phân ban đầu: $x+\\sqrt{x^2-x+1} = x + (t-x) = t$.",
+          "c) Thay vào tích phân: $I = \\int \\frac{1}{t} \\cdot \\frac{2t^2-2t+2}{(2t-1)^2} dt = \\int \\frac{2(t^2-t+1)}{t(2t-1)^2} dt$.",
+          "Phân tích thành phân thức đơn giản: $\\frac{A}{t} + \\frac{B}{2t-1} + \\frac{C}{(2t-1)^2}$. Giải ra $A=2, B=-3, C=3$.",
+          "$I = \\int(\\frac{2}{t} - \\frac{3}{2t-1} + \\frac{3}{(2t-1)^2}) dt = 2\\ln|t| - \\frac{3}{2}\\ln|2t-1| - \\frac{3}{2(2t-1)} + C$.",
+          "Trả về biến $x$ với $t = x+\\sqrt{x^2-x+1}$. Kết quả khá phức tạp."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân nổi tiếng $I = \\int \\sec^3 x dx$. a) Viết lại $\\sec^3 x = \\sec x \\cdot \\sec^2 x$ và áp dụng tích phân từng phần. b) Biến đổi tích phân mới thu được bằng cách sử dụng đồng nhất thức $\\tan^2 x = \\sec^2 x - 1$. c) Giải phương trình thu được để tìm $I$.",
+      "answer": {
+        "steps": [
+          "a) Đặt $u=\\sec x, dv=\\sec^2 x dx$. Ta có $du=\\sec x \\tan x dx, v=\\tan x$.",
+          "$I = \\sec x \\tan x - \\int \\tan x (\\sec x \\tan x) dx = \\sec x \\tan x - \\int \\sec x \\tan^2 x dx$.",
+          "b) Sử dụng $\\tan^2 x = \\sec^2 x - 1$:",
+          "$I = \\sec x \\tan x - \\int \\sec x (\\sec^2 x - 1) dx = \\sec x \\tan x - (\\int \\sec^3 x dx - \\int \\sec x dx)$.",
+          "c) Tích phân $\\int \\sec^3 x dx$ chính là $I$.",
+          "$I = \\sec x \\tan x - I + \\int \\sec x dx$.",
+          "$2I = \\sec x \\tan x + \\ln|\\sec x + \\tan x|$.",
+          "Vậy $I = \\frac{1}{2}(\\sec x \\tan x + \\ln|\\sec x + \\tan x|) + C$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân $I = \\int \\frac{x^2-1}{x^4+1} dx$. a) Thực hiện phép biến đổi đại số bằng cách chia cả tử và mẫu cho $x^2$. b) Viết lại mẫu số dưới dạng bình phương của một tổng hoặc hiệu. c) Sử dụng phép đổi biến $u = x+1/x$ để tính tích phân.",
+      "answer": {
+        "steps": [
+          "a) $I = \\int \\frac{1 - 1/x^2}{x^2 + 1/x^2} dx$.",
+          "b) Ta biến đổi mẫu số: $x^2 + 1/x^2 = (x^2 + 2 + 1/x^2) - 2 = (x+1/x)^2 - 2$.",
+          "Tích phân trở thành $I = \\int \\frac{1-1/x^2}{(x+1/x)^2 - 2} dx$.",
+          "c) Đặt $u = x+1/x$. Vi phân là $du = (1 - 1/x^2) dx$.",
+          "Tích phân theo $u$ là $I = \\int \\frac{du}{u^2-2} = \\int \\frac{du}{u^2-(\\sqrt{2})^2}$.",
+          "Áp dụng công thức $\\int \\frac{du}{u^2-a^2} = \\frac{1}{2a}\\ln|\\frac{u-a}{u+a}| + C$ với $a=\\sqrt{2}$.",
+          "$I = \\frac{1}{2\\sqrt{2}} \\ln|\\frac{u-\\sqrt{2}}{u+\\sqrt{2}}| + C$.",
+          "Trả về biến $x$: $I = \\frac{1}{2\\sqrt{2}} \\ln|\\frac{x+1/x-\\sqrt{2}}{x+1/x+\\sqrt{2}}| + C = \\frac{1}{2\\sqrt{2}} \\ln|\\frac{x^2-\\sqrt{2}x+1}{x^2+\\sqrt{2}x+1}| + C$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm nguyên hàm của một nhị thức vi phân (Differential Binomial): $I = \\int \\sqrt[3]{x}(1+\\sqrt{x})^2 dx$. a) Khai triển biểu thức dưới dấu tích phân thành một đa thức theo các luỹ thừa của $x$. b) So sánh với dạng tổng quát $\\int x^m (a+bx^n)^p dx$ và kiểm tra các trường hợp khả tích của Chebyshev. c) Tính tích phân trực tiếp sau khi khai triển.",
+      "answer": {
+        "steps": [
+          "a) Ta có $(1+\\sqrt{x})^2 = 1 + 2\\sqrt{x} + x = 1+2x^{1/2}+x$.",
+          "Hàm dưới dấu tích phân là $x^{1/3}(1+2x^{1/2}+x) = x^{1/3} + 2x^{1/3+1/2} + x^{1/3+1} = x^{1/3} + 2x^{5/6} + x^{4/3}$.",
+          "b) Bài toán này thực ra không cần đến lý thuyết nhị thức vi phân phức tạp vì có thể giải trực tiếp. Nếu cố gắng khớp dạng, ví dụ với $(1+\\sqrt{x})^2 = (1+x^{1/2})^2$, ta có $m=1/3, n=1/2, p=2$. Vì $p=2$ là số nguyên, nó rơi vào trường hợp khả tích của Chebyshev, có thể giải bằng cách khai triển.",
+          "c) $I = \\int (x^{1/3} + 2x^{5/6} + x^{4/3}) dx$.",
+          "$I = \\frac{x^{4/3}}{4/3} + 2\\frac{x^{11/6}}{11/6} + \\frac{x^{7/3}}{7/3} + C$.",
+          "$I = \\frac{3}{4}x^{4/3} + \\frac{12}{11}x^{11/6} + \\frac{3}{7}x^{7/3} + C$. Bài toán này khó ở việc nhận dạng và lựa chọn phương pháp, nhưng việc tính toán lại đơn giản sau khi khai triển."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân bằng phương pháp hệ số bất định cho hàm siêu việt: $I = \\int (x^2+3x)e^{2x} dx$. a) Đưa ra dự đoán về dạng của nguyên hàm, dựa trên dạng của hàm số dưới dấu tích phân. Dạng dự đoán sẽ là $F(x) = (Ax^2+Bx+C)e^{2x}$. b) Lấy đạo hàm của dạng dự đoán $F'(x)$. c) Đồng nhất hệ số của $F'(x)$ với hàm số ban đầu để tìm $A, B, C$.",
+      "answer": {
+        "steps": [
+          "a) Vì hàm số là tích của một đa thức bậc 2 và hàm $e^{2x}$, ta dự đoán nguyên hàm có dạng $F(x) = (Ax^2+Bx+C)e^{2x}$.",
+          "b) $F'(x) = (2Ax+B)e^{2x} + (Ax^2+Bx+C) \\cdot 2e^{2x} = [2Ax^2 + (2A+2B)x + (B+2C)]e^{2x}$.",
+          "c) Ta đồng nhất $F'(x)$ với $(x^2+3x)e^{2x}$. Điều này có nghĩa là:",
+          "$[2Ax^2 + (2A+2B)x + (B+2C)] = x^2+3x+0$.",
+          "Đồng nhất hệ số của các luỹ thừa của $x$:",
+          "$x^2: 2A = 1 \\Rightarrow A = 1/2$.",
+          "$x^1: 2A+2B = 3 \\Rightarrow 2(1/2)+2B=3 \\Rightarrow 1+2B=3 \\Rightarrow B = 1$.",
+          "$x^0: B+2C = 0 \\Rightarrow 1+2C=0 \\Rightarrow C = -1/2$.",
+          "Vậy, $I = (\\frac{1}{2}x^2+x-\\frac{1}{2})e^{2x} + K$ (dùng K để tránh nhầm với C trong bài)."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân $I = \\int \\frac{dx}{\\sin x + \\tan x}$. a) Biến đổi hàm số dưới dấu tích phân về dạng chỉ chứa $\\sin x$ và $\\cos x$. b) Rút gọn biểu thức và sử dụng các công thức lượng giác để đơn giản hóa. c) Tính tích phân của biểu thức đã rút gọn.",
+      "answer": {
+        "steps": [
+          "a) $\\tan x = \\frac{\\sin x}{\\cos x}$. Vậy $\\sin x + \\tan x = \\sin x + \\frac{\\sin x}{\\cos x} = \\sin x (1 + \\frac{1}{\\cos x}) = \\sin x \\frac{\\cos x + 1}{\\cos x}$.",
+          "Hàm dưới dấu tích phân là $\\frac{1}{\\sin x \\frac{\\cos x + 1}{\\cos x}} = \\frac{\\cos x}{\\sin x (1+\\cos x)}$.",
+          "b) Sử dụng công thức góc nhân đôi: $\\sin x = 2\\sin(x/2)\\cos(x/2)$ và $1+\\cos x = 2\\cos^2(x/2)$.",
+          "$I = \\int \\frac{\\cos x}{2\\sin(x/2)\\cos(x/2) \\cdot 2\\cos^2(x/2)} dx = \\int \\frac{\\cos x}{4\\sin(x/2)\\cos^3(x/2)} dx$.",
+          "Biến đổi $\\cos x = \\cos^2(x/2) - \\sin^2(x/2)$.",
+          "$I = \\int \\frac{\\cos^2(x/2) - \\sin^2(x/2)}{4\\sin(x/2)\\cos^3(x/2)} dx = \\frac{1}{4} \\int (\\frac{1}{\\sin(x/2)\\cos(x/2)} - \\frac{\\sin(x/2)}{\\cos^3(x/2)}) dx$.",
+          "Cách tiếp cận khác đơn giản hơn: $I = \\int \\frac{\\cos x (1-\\cos x)}{\\sin x (1-\\cos^2 x)} dx = \\int \\frac{\\cos x (1-\\cos x)}{\\sin^3 x} dx = \\int(\\frac{\\cot x}{\\sin^2 x} - \\frac{\\cot^2 x}{\\sin x})dx$. Đây vẫn phức tạp.",
+          "c) Quay lại biểu thức $\\frac{\\cos x}{\\sin x(1+\\cos x)}$. Đặt $u=\\cos x, du=-\\sin x dx$. $I=\\int \\frac{u}{-(1-u^2)(1+u)}du = \\int \\frac{-u}{(1-u)(1+u)^2}du$. Phân tích thành phân thức đơn giản rồi giải."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân bằng cách đưa về hàm Hyperbolic: $I = \\int \\sqrt{x^2+2x+5} dx$. a) Hoàn thành bình phương biểu thức dưới dấu căn. b) Sử dụng phép đổi biến để đưa về dạng $\\int \\sqrt{u^2+a^2} du$. c) Sử dụng phép thế hyperbolic $u=a\\sinh t$ để tính tích phân và đổi ngược về biến $x$.",
+      "answer": {
+        "steps": [
+          "a) $x^2+2x+5 = (x^2+2x+1)+4 = (x+1)^2 + 2^2$.",
+          "b) Đặt $u=x+1$, $du=dx$. Tích phân trở thành $I = \\int \\sqrt{u^2+2^2} du$.",
+          "c) Đặt $u=2\\sinh t$, $du=2\\cosh t dt$. $\\sqrt{u^2+4} = \\sqrt{4\\sinh^2 t + 4} = 2\\sqrt{\\cosh^2 t} = 2\\cosh t$.",
+          "$I = \\int (2\\cosh t)(2\\cosh t dt) = 4\\int \\cosh^2 t dt$.",
+          "Sử dụng công thức $\\cosh^2 t = \\frac{\\cosh(2t)+1}{2}$: $I = 4\\int \\frac{\\cosh(2t)+1}{2} dt = 2(\\frac{1}{2}\\sinh(2t) + t) + C$.",
+          "$I = \\sinh(2t) + 2t + C = 2\\sinh t \\cosh t + 2t + C$.",
+          "Đổi về biến $u$: $\\sinh t = u/2$, $\\cosh t = \\sqrt{1+\\sinh^2 t} = \\frac{\\sqrt{u^2+4}}{2}$, $t=\\operatorname{arsinh}(u/2)$.",
+          "$I = 2(\\frac{u}{2})\\frac{\\sqrt{u^2+4}}{2} + 2\\operatorname{arsinh}(\\frac{u}{2}) + C = \\frac{u\\sqrt{u^2+4}}{2} + 2\\ln|u+\\sqrt{u^2+4}| + C'$.",
+          "Đổi về biến $x$: $I = \\frac{(x+1)\\sqrt{x^2+2x+5}}{2} + 2\\ln|x+1+\\sqrt{x^2+2x+5}| + C'$."
+        ]
+      }
+    },
+    {
+      "question": "Sử dụng ý nghĩa hình học của tích phân xác định để tính $I = \\int_{0}^{4} f(x) dx$, biết rằng đồ thị của $y=f(x)$ bao gồm một nửa đường tròn và một đoạn thẳng như hình vẽ (nửa đường tròn có tâm tại $(2,0)$ bán kính 2). a) Chia tích phân thành hai phần tương ứng với hai hình hình học. b) Tính diện tích của nửa hình tròn. c) Tính diện tích của hình tam giác và kết hợp lại để ra kết quả cuối cùng (lưu ý dấu của diện tích).",
+      "answer": {
+        "steps": [
+          "a) Dựa vào đồ thị, ta có thể tách tích phân thành: $I = \\int_{0}^{4} f(x) dx = \\int_{0}^{2} f(x) dx + \\int_{2}^{4} f(x) dx$.",
+          "b) Tích phân $\\int_{0}^{2} f(x) dx$ biểu diễn diện tích của một phần tư hình tròn bán kính r=2, nằm phía trên trục Ox. Diện tích này là $A_1 = \\frac{1}{4}\\pi r^2 = \\frac{1}{4}\\pi (2)^2 = \\pi$.",
+          "c) Tích phân $\\int_{2}^{4} f(x) dx$ biểu diễn diện tích của một hình tam giác vuông có đáy là 2 (từ 2 đến 4) và chiều cao là -2, nằm phía dưới trục Ox. Diện tích này là $A_2 = \\frac{1}{2} \\times base \\times height = \\frac{1}{2} \\times 2 \\times (-2) = -2$.",
+          "Kết quả cuối cùng là tổng của hai giá trị: $I = A_1 + A_2 = \\pi - 2$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân của một hàm số cho bởi nhiều quy tắc: $f(x) = \\begin{cases} 2x & \\text{khi } x < 1 \\\\ 2 & \\text{khi } x \\ge 1 \\end{cases}$. Hãy tính $I = \\int_{0}^{3} f(x) dx$. a) Giải thích tại sao phải tách tích phân tại điểm $x=1$. b) Viết biểu thức tích phân sau khi được tách. c) Tính từng tích phân thành phần và cộng chúng lại.",
+      "answer": {
+        "steps": [
+          "a) Hàm số $f(x)$ thay đổi công thức tại $x=1$. Để tính tích phân trên đoạn $[0, 3]$, ta phải sử dụng công thức đúng trên mỗi khoảng con. Do đó, ta phải tách tích phân tại điểm $x=1$ theo tính chất cộng của tích phân.",
+          "b) Ta tách tích phân thành: $I = \\int_{0}^{1} f(x) dx + \\int_{1}^{3} f(x) dx$.",
+          "Trên khoảng $[0, 1]$, $f(x) = 2x$. Trên khoảng $[1, 3]$, $f(x) = 2$.",
+          "Vậy $I = \\int_{0}^{1} 2x dx + \\int_{1}^{3} 2 dx$.",
+          "c) Tính tích phân thứ nhất: $\\int_{0}^{1} 2x dx = [x^2]_{0}^{1} = 1^2 - 0^2 = 1$.",
+          "Tính tích phân thứ hai: $\\int_{1}^{3} 2 dx = [2x]_{1}^{3} = 2(3) - 2(1) = 6 - 2 = 4$.",
+          "Kết quả cuối cùng: $I = 1 + 4 = 5$."
+        ]
+      }
+    },
+    {
+      "question": "Sử dụng các tính chất cơ bản của tích phân xác định. Cho biết $\\int_{1}^{5} f(x) dx = 8$ và $\\int_{1}^{5} g(x) dx = -3$. a) Tính $I_1 = \\int_{1}^{5} [2f(x) - 3g(x)] dx$. b) Tính $I_2 = \\int_{5}^{1} f(x) dx$. c) Nếu $\\int_{1}^{3} f(x) dx = 2$, hãy tính $\\int_{3}^{5} f(x) dx$.",
+      "answer": {
+        "steps": [
+          "a) Sử dụng tính chất tuyến tính của tích phân: $I_1 = 2\\int_{1}^{5} f(x) dx - 3\\int_{1}^{5} g(x) dx$.",
+          "$I_1 = 2(8) - 3(-3) = 16 + 9 = 25$.",
+          "b) Sử dụng tính chất đổi cận tích phân: $\\int_{b}^{a} f(x) dx = -\\int_{a}^{b} f(x) dx$.",
+          "$I_2 = \\int_{5}^{1} f(x) dx = -\\int_{1}^{5} f(x) dx = -8$.",
+          "c) Sử dụng tính chất cộng trên các đoạn: $\\int_{1}^{5} f(x) dx = \\int_{1}^{3} f(x) dx + \\int_{3}^{5} f(x) dx$.",
+          "Ta có $8 = 2 + \\int_{3}^{5} f(x) dx$.",
+          "Suy ra $\\int_{3}^{5} f(x) dx = 8 - 2 = 6$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm giá trị trung bình của hàm số và điểm đạt giá trị đó. Cho hàm số $f(x) = 3x^2$ trên đoạn $[0, 2]$. a) Viết công thức tính giá trị trung bình của một hàm số $f(x)$ trên đoạn $[a, b]$. b) Tính giá trị trung bình của $f(x) = 3x^2$ trên đoạn $[0, 2]$. c) Tìm giá trị $c \\in [0, 2]$ sao cho $f(c)$ bằng giá trị trung bình vừa tìm được.",
+      "answer": {
+        "steps": [
+          "a) Giá trị trung bình của hàm số $f(x)$ trên $[a, b]$ được tính bởi công thức: $f_{tb} = \\frac{1}{b-a} \\int_{a}^{b} f(x) dx$.",
+          "b) Áp dụng công thức với $a=0, b=2$: $f_{tb} = \\frac{1}{2-0} \\int_{0}^{2} 3x^2 dx$.",
+          "Tính tích phân: $\\int_{0}^{2} 3x^2 dx = [x^3]_{0}^{2} = 2^3 - 0^3 = 8$.",
+          "Vậy giá trị trung bình là $f_{tb} = \\frac{1}{2} \\cdot 8 = 4$.",
+          "c) Ta cần tìm $c \\in [0, 2]$ sao cho $f(c) = 4$.",
+          "Tức là $3c^2 = 4 \\Rightarrow c^2 = \\frac{4}{3} \\Rightarrow c = \\pm \\sqrt{\\frac{4}{3}} = \\pm \\frac{2}{\\sqrt{3}}$.",
+          "Vì $c$ phải thuộc đoạn $[0, 2]$, ta chọn giá trị dương: $c = \\frac{2}{\\sqrt{3}}$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân bằng phương pháp tích phân từng phần cho tích phân xác định: $I = \\int_{0}^{\\pi/2} x \\cos(x) dx$. a) Nêu công thức tích phân từng phần cho tích phân xác định. b) Chọn $u, dv$ và tính $du, v$. c) Áp dụng công thức và tính toán kết quả.",
+      "answer": {
+        "steps": [
+          "a) Công thức tích phân từng phần cho tích phân xác định là: $\\int_{a}^{b} u dv = [uv]_{a}^{b} - \\int_{a}^{b} v du$.",
+          "b) Ta chọn $u = x$ và $dv = \\cos(x) dx$.",
+          "Suy ra $du = dx$ và $v = \\int \\cos(x) dx = \\sin(x)$.",
+          "c) Áp dụng công thức:",
+          "$I = [x \\sin(x)]_{0}^{\\pi/2} - \\int_{0}^{\\pi/2} \\sin(x) dx$.",
+          "Tính phần thứ nhất: $[x \\sin(x)]_{0}^{\\pi/2} = (\\frac{\\pi}{2}\\sin(\\frac{\\pi}{2})) - (0\\sin(0)) = \\frac{\\pi}{2}(1) - 0 = \\frac{\\pi}{2}$.",
+          "Tính phần thứ hai: $\\int_{0}^{\\pi/2} \\sin(x) dx = [-\\cos(x)]_{0}^{\\pi/2} = (-\\cos(\\frac{\\pi}{2})) - (-\\cos(0)) = 0 - (-1) = 1$.",
+          "Kết hợp lại: $I = \\frac{\\pi}{2} - 1$."
+        ]
+      }
+    },
+    {
+      "question": "Tính đạo hàm của hàm số được cho bởi tích phân: $F(x) = \\int_{x^2}^{x^3} e^{t^2} dt$. a) Nêu công thức Leibniz cho đạo hàm của tích phân có cận là hàm số: $\\frac{d}{dx} \\int_{a(x)}^{b(x)} f(t) dt$. b) Xác định các hàm $f(t), a(x), b(x)$ trong bài toán. c) Áp dụng công thức để tìm $F'(x)$.",
+      "answer": {
+        "steps": [
+          "a) Công thức Leibniz là: $\\frac{d}{dx} \\int_{a(x)}^{b(x)} f(t) dt = f(b(x)) \\cdot b'(x) - f(a(x)) \\cdot a'(x)$.",
+          "b) Trong bài toán này, ta có:",
+          "$f(t) = e^{t^2}$.",
+          "Cận dưới là $a(x) = x^2$.",
+          "Cận trên là $b(x) = x^3$.",
+          "c) Ta tính đạo hàm của các cận: $a'(x) = 2x$ và $b'(x) = 3x^2$.",
+          "Áp dụng công thức Leibniz:",
+          "$F'(x) = f(x^3) \\cdot (3x^2) - f(x^2) \\cdot (2x)$.",
+          "$F'(x) = e^{(x^3)^2} \\cdot 3x^2 - e^{(x^2)^2} \\cdot 2x = 3x^2 e^{x^6} - 2x e^{x^4}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm diện tích miền phẳng giới hạn bởi hai đường cong $y=x^2$ và $y=x+2$. a) Tìm hoành độ giao điểm của hai đường cong. b) Xác định đường cong nào nằm trên trong khoảng giữa hai giao điểm. c) Thiết lập và tính tích phân để tìm diện tích.",
+      "answer": {
+        "steps": [
+          "a) Cho hai phương trình bằng nhau để tìm giao điểm: $x^2 = x+2 \\Rightarrow x^2 - x - 2 = 0$.",
+          "Phương trình có hai nghiệm là $x=-1$ và $x=2$. Đây là hai cận của tích phân.",
+          "b) Chọn một điểm thử trong khoảng $(-1, 2)$, ví dụ $x=0$.",
+          "Tại $x=0$, $y=x^2=0$ và $y=x+2=2$.",
+          "Vì $2>0$, đường thẳng $y=x+2$ nằm trên parabol $y=x^2$ trong khoảng $(-1, 2)$.",
+          "c) Diện tích được tính bằng tích phân của (đường trên - đường dưới):",
+          "$S = \\int_{-1}^{2} [(x+2) - x^2] dx = \\int_{-1}^{2} (-x^2+x+2) dx$.",
+          "Tính tích phân: $S = [-\\frac{x^3}{3} + \\frac{x^2}{2} + 2x]_{-1}^{2}$.",
+          "$S = (-\\frac{8}{3} + \\frac{4}{2} + 4) - (-(-\\frac{1}{3}) + \\frac{1}{2} - 2) = (-\\frac{8}{3} + 6) - (\\frac{1}{3} + \\frac{1}{2} - 2) = \\frac{10}{3} - (-\\frac{7}{6}) = \\frac{20}{6} + \\frac{7}{6} = \\frac{27}{6} = \\frac{9}{2}$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân của một hàm số không có nguyên hàm sơ cấp, bằng cách sử dụng tính đối xứng. Tính $I = \\int_{-1}^{1} \\frac{e^x}{1+e^x} dx$. a) Tách tích phân $I$ thành hai phần: $\\int_{-1}^{0} ... dx + \\int_{0}^{1} ... dx$. b) Đối với tích phân từ -1 đến 0, thực hiện phép đổi biến $u=-x$. c) Kết hợp các kết quả để tìm giá trị của $I$.",
+      "answer": {
+        "steps": [
+          "a) $I = \\int_{-1}^{0} \\frac{e^x}{1+e^x} dx + \\int_{0}^{1} \\frac{e^x}{1+e^x} dx$.",
+          "b) Xét $J = \\int_{-1}^{0} \\frac{e^x}{1+e^x} dx$. Đặt $u=-x$, suy ra $x=-u$ và $dx=-du$.",
+          "Đổi cận: khi $x=-1, u=1$; khi $x=0, u=0$.",
+          "$J = \\int_{1}^{0} \\frac{e^{-u}}{1+e^{-u}} (-du) = \\int_{0}^{1} \\frac{e^{-u}}{1+e^{-u}} du = \\int_{0}^{1} \\frac{1/e^u}{1+1/e^u} du = \\int_{0}^{1} \\frac{1}{e^u+1} du$.",
+          "Vì biến tích phân là giả, ta có thể viết lại $J = \\int_{0}^{1} \\frac{1}{1+e^x} dx$.",
+          "c) Thay $J$ trở lại vào biểu thức của $I$: $I = \\int_{0}^{1} \\frac{1}{1+e^x} dx + \\int_{0}^{1} \\frac{e^x}{1+e^x} dx$.",
+          "$I = \\int_{0}^{1} (\\frac{1}{1+e^x} + \\frac{e^x}{1+e^x}) dx = \\int_{0}^{1} \\frac{1+e^x}{1+e^x} dx = \\int_{0}^{1} 1 dx$.",
+          "$I = [x]_{0}^{1} = 1-0 = 1$."
+        ]
+      }
+    },
+    {
+      "question": "Tính thể tích vật thể tròn xoay khi quay một miền phẳng quanh trục Ox. Miền D được giới hạn bởi $y=\\sqrt{x}$, trục Ox, và các đường thẳng $x=1, x=4$. a) Nêu công thức tính thể tích vật thể tròn xoay khi quay miền giới hạn bởi $y=f(x)$, $y=0$, $x=a, x=b$ quanh trục Ox. b) Áp dụng công thức cho bài toán. c) Tính tích phân và đưa ra kết quả.",
+      "answer": {
+        "steps": [
+          "a) Công thức thể tích (phương pháp đĩa) là $V = \\pi \\int_{a}^{b} [f(x)]^2 dx$.",
+          "b) Trong bài toán này, $f(x) = \\sqrt{x}$, $a=1$, $b=4$.",
+          "Vậy thể tích là $V = \\pi \\int_{1}^{4} (\\sqrt{x})^2 dx = \\pi \\int_{1}^{4} x dx$.",
+          "c) Tính tích phân: $V = \\pi [\\frac{x^2}{2}]_{1}^{4}$.",
+          "$V = \\pi (\\frac{4^2}{2} - \\frac{1^2}{2}) = \\pi (\\frac{16}{2} - \\frac{1}{2}) = \\pi (8 - \\frac{1}{2}) = \\frac{15\\pi}{2}$.",
+          "Vậy thể tích là $\\frac{15\\pi}{2}$ (đơn vị thể tích)."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân của một hàm lượng giác có chu kỳ. Tính $I = \\int_{0}^{2\\pi} |\\sin(x)| dx$. a) Xét dấu của $\\sin(x)$ trên đoạn $[0, 2\\pi]$ và tách tích phân thành các khoảng mà hàm không đổi dấu. b) Viết lại tích phân mà không còn dấu giá trị tuyệt đối. c) Tính toán và cho kết quả cuối cùng. Gợi ý: sử dụng tính đối xứng.",
+      "answer": {
+        "steps": [
+          "a) Trên $[0, 2\\pi]$, $\\sin(x) \\ge 0$ khi $x \\in [0, \\pi]$ và $\\sin(x) \\le 0$ khi $x \\in [\\pi, 2\\pi]$.",
+          "Ta tách tích phân: $I = \\int_{0}^{\\pi} |\\sin(x)| dx + \\int_{\\pi}^{2\\pi} |\\sin(x)| dx$.",
+          "b) $I = \\int_{0}^{\\pi} \\sin(x) dx + \\int_{\\pi}^{2\\pi} -\\sin(x) dx$.",
+          "c) Tính tích phân thứ nhất: $\\int_{0}^{\\pi} \\sin(x) dx = [-\\cos(x)]_{0}^{\\pi} = (-\\cos(\\pi)) - (-\\cos(0)) = -(-1) - (-1) = 2$.",
+          "Do tính đối xứng của đồ thị $|\\sin(x)|$, diện tích từ $\\pi$ đến $2\\pi$ bằng diện tích từ 0 đến $\\pi$.",
+          "Vậy $\\int_{\\pi}^{2\\pi} -\\sin(x) dx$ cũng bằng 2.",
+          "Kết quả cuối cùng: $I = 2 + 2 = 4$."
+        ]
+      }
+    },
+    {
+      "question": "Ước lượng giá trị của một tích phân. Cho tích phân $I = \\int_{0}^{1} e^{-x^2} dx$. a) Tìm giá trị lớn nhất (M) và nhỏ nhất (m) của hàm $f(x) = e^{-x^2}$ trên đoạn $[0, 1]$. b) Sử dụng bất đẳng thức $m(b-a) \\le \\int_{a}^{b} f(x) dx \\le M(b-a)$ để tìm một khoảng chứa giá trị của $I$. c) So sánh ước lượng này với giá trị của $f(0)$ và $f(1)$.",
+      "answer": {
+        "steps": [
+          "a) $f'(x) = -2xe^{-x^2}$. Trên $[0, 1]$, $f'(x) \\le 0$, vậy hàm số nghịch biến.",
+          "Giá trị lớn nhất đạt tại $x=0$: $M = f(0) = e^0 = 1$.",
+          "Giá trị nhỏ nhất đạt tại $x=1$: $m = f(1) = e^{-1} = \\frac{1}{e}$.",
+          "b) Với $a=0, b=1$, ta có $b-a = 1$.",
+          "Bất đẳng thức trở thành $m \\cdot 1 \\le I \\le M \\cdot 1$.",
+          "Vậy $\\frac{1}{e} \\le I \\le 1$. (Biết $1/e \\approx 0.367$).",
+          "c) Ước lượng cho thấy giá trị của tích phân nằm giữa giá trị của hàm số tại hai đầu mút, điều này hợp lý vì giá trị trung bình của hàm số phải nằm giữa giá trị lớn nhất và nhỏ nhất."
+        ]
+      }
+    },
+    {
+      "question": "Sử dụng phép đổi biến để đơn giản hóa cận tích phân. Tính tích phân Wallis $I = \\int_{0}^{\\pi/2} \\sin^2(x) dx$. a) Sử dụng công thức hạ bậc để viết lại hàm số. b) Tính tích phân sau khi biến đổi. c) Sử dụng tính chất $\\int_{0}^{a} f(x)dx = \\int_{0}^{a} f(a-x)dx$ để chứng minh $\\int_{0}^{\\pi/2} \\sin^2(x) dx = \\int_{0}^{\\pi/2} \\cos^2(x) dx$ và tính $I$ theo một cách khác.",
+      "answer": {
+        "steps": [
+          "a) $\\sin^2(x) = \\frac{1 - \\cos(2x)}{2}$.",
+          "b) $I = \\int_{0}^{\\pi/2} \\frac{1 - \\cos(2x)}{2} dx = \\frac{1}{2}[x - \\frac{1}{2}\\sin(2x)]_{0}^{\\pi/2}$.",
+          "$I = \\frac{1}{2}[(\\frac{\\pi}{2} - \\frac{1}{2}\\sin(\\pi)) - (0 - \\frac{1}{2}\\sin(0))] = \\frac{1}{2}(\\frac{\\pi}{2} - 0 - 0) = \\frac{\\pi}{4}$.",
+          "c) Đặt $J = \\int_{0}^{\\pi/2} \\cos^2(x) dx$. Sử dụng phép thế $x=\\frac{\\pi}{2}-u$, $dx=-du$.",
+          "Cận: $x=0 \\to u=\\pi/2$, $x=\\pi/2 \\to u=0$.",
+          "$J = \\int_{\\pi/2}^{0} \\cos^2(\\frac{\\pi}{2}-u)(-du) = \\int_{0}^{\\pi/2} \\sin^2(u)du = I$.",
+          "Vậy $I=J$. Ta có $I+J = \\int_{0}^{\\pi/2} (\\sin^2 x + \\cos^2 x) dx = \\int_{0}^{\\pi/2} 1 dx = [x]_{0}^{\\pi/2} = \\frac{\\pi}{2}$.",
+          "Vì $I+J = \\pi/2$ và $I=J$, suy ra $2I = \\pi/2 \\Rightarrow I = \\pi/4$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân của một hàm phân thức hữu tỉ có mẫu số bất khả quy. $I = \\int_{0}^{1} \\frac{x}{x^2+x+1} dx$. a) Biến đổi tử số để xuất hiện đạo hàm của mẫu số. b) Tách tích phân thành hai phần, một phần có thể giải bằng đổi biến $\\ln$, phần còn lại đưa về dạng arctan. c) Tính toán từng phần và kết hợp kết quả.",
+      "answer": {
+        "steps": [
+          "a) Đạo hàm của mẫu số là $(x^2+x+1)'=2x+1$. Ta viết tử số $x = \\frac{1}{2}(2x) = \\frac{1}{2}(2x+1 - 1) = \\frac{1}{2}(2x+1) - \\frac{1}{2}$.",
+          "b) $I = \\int_{0}^{1} \\frac{\\frac{1}{2}(2x+1) - \\frac{1}{2}}{x^2+x+1} dx = \\frac{1}{2}\\int_{0}^{1} \\frac{2x+1}{x^2+x+1} dx - \\frac{1}{2}\\int_{0}^{1} \\frac{1}{x^2+x+1} dx$.",
+          "c) Tích phân thứ nhất: $I_1 = \\frac{1}{2}[\\ln(x^2+x+1)]_{0}^{1} = \\frac{1}{2}(\\ln(3) - \\ln(1)) = \\frac{1}{2}\\ln(3)$.",
+          "Tích phân thứ hai: $I_2 = -\\frac{1}{2}\\int_{0}^{1} \\frac{dx}{(x+1/2)^2 + 3/4} = -\\frac{1}{2}[\\frac{1}{\\sqrt{3}/2}\\arctan(\\frac{x+1/2}{\\sqrt{3}/2})]_{0}^{1}$.",
+          "$I_2 = -\\frac{1}{\\sqrt{3}} [\\arctan(\\frac{2x+1}{\\sqrt{3}})]_{0}^{1} = -\\frac{1}{\\sqrt{3}}(\\arctan(\\sqrt{3}) - \\arctan(\\frac{1}{\\sqrt{3}})) = -\\frac{1}{\\sqrt{3}}(\\frac{\\pi}{3} - \\frac{\\pi}{6}) = -\\frac{\\pi}{6\\sqrt{3}}$.",
+          "Kết quả cuối cùng: $I = I_1 + I_2 = \\frac{1}{2}\\ln(3) - \\frac{\\pi}{6\\sqrt{3}}$."
+        ]
+      }
+    },
+    {
+      "question": "Tính độ dài cung của một đường cong. Tìm độ dài của đường cong $y = \\frac{2}{3}x^{3/2}$ từ $x=0$ đến $x=3$. a) Nêu công thức tính độ dài cung của đồ thị hàm số $y=f(x)$ từ $x=a$ đến $x=b$. b) Tính đạo hàm $y'$ và biểu thức $1+(y')^2$. c) Thiết lập và tính tích phân.",
+      "answer": {
+        "steps": [
+          "a) Công thức độ dài cung là $L = \\int_{a}^{b} \\sqrt{1 + [f'(x)]^2} dx$.",
+          "b) $f(x) = \\frac{2}{3}x^{3/2}$. Đạo hàm là $f'(x) = \\frac{2}{3} \\cdot \\frac{3}{2} x^{1/2} = \\sqrt{x}$.",
+          "Biểu thức dưới dấu căn là $1 + [f'(x)]^2 = 1 + (\\sqrt{x})^2 = 1+x$.",
+          "c) Ta cần tính tích phân $L = \\int_{0}^{3} \\sqrt{1+x} dx$.",
+          "Đặt $u=1+x$, $du=dx$. Cận: $x=0 \\to u=1$, $x=3 \\to u=4$.",
+          "$L = \\int_{1}^{4} \\sqrt{u} du = \\int_{1}^{4} u^{1/2} du = [\\frac{u^{3/2}}{3/2}]_{1}^{4} = \\frac{2}{3}[u^{3/2}]_{1}^{4}$.",
+          "$L = \\frac{2}{3}(4^{3/2} - 1^{3/2}) = \\frac{2}{3}(8 - 1) = \\frac{14}{3}$."
+        ]
+      }
+    },
+    {
+      "question": "Chứng minh và áp dụng Định lý Giá trị Trung bình cho Tích phân. a) Phát biểu Định lý Giá trị Trung bình cho Tích phân. b) Chứng minh rằng nếu $f$ là hàm liên tục và không âm trên $[a, b]$, thì tồn tại $c \\in [a, b]$ sao cho $f(c)$ là trung bình nhân của các giá trị $f(x)$ trên đoạn đó, tức là $f(c) = \\exp\\left(\\frac{1}{b-a}\\int_{a}^{b} \\ln(f(x)) dx\\right)$. c) Áp dụng kết quả trên để tìm $c$ cho hàm $f(x)=e^x$ trên $[0,1]$.",
+      "answer": {
+        "steps": [
+          "a) Định lý Giá trị Trung bình cho Tích phân: Nếu $f$ liên tục trên $[a, b]$, thì tồn tại $c \\in [a, b]$ sao cho $\\int_{a}^{b} f(x) dx = f(c)(b-a)$.",
+          "b) Đặt $g(x) = \\ln(f(x))$. Vì $f(x)$ liên tục và không âm, $g(x)$ liên tục. Áp dụng Định lý Giá trị Trung bình cho $g(x)$, tồn tại $c \\in [a, b]$ sao cho $\\int_{a}^{b} g(x) dx = g(c)(b-a)$.",
+          "Thay $g(x)$ trở lại: $\\int_{a}^{b} \\ln(f(x)) dx = \\ln(f(c))(b-a)$.",
+          "Chia cho $b-a$: $\\frac{1}{b-a}\\int_{a}^{b} \\ln(f(x)) dx = \\ln(f(c))$.",
+          "Lấy lũy thừa cơ số $e$ hai vế: $\\exp\\left(\\frac{1}{b-a}\\int_{a}^{b} \\ln(f(x)) dx\\right) = f(c)$. Đây là trung bình nhân hình học.",
+          "c) Với $f(x)=e^x$ trên $[0,1]$, ta có $\\ln(f(x)) = \\ln(e^x) = x$.",
+          "Ta cần tìm $c$ sao cho $f(c) = e^c = \\exp\\left(\\frac{1}{1-0}\\int_{0}^{1} x dx\\right)$.",
+          "$\\int_{0}^{1} x dx = [\\frac{x^2}{2}]_0^1 = \\frac{1}{2}$.",
+          "Vậy $e^c = \\exp(\\frac{1}{2}) = e^{1/2}$. Suy ra $c=1/2$."
+        ]
+      }
+    },
+    {
+      "question": "Tính giới hạn của tổng Riemann. Tính giới hạn $L = \\lim_{n \\to \\infty} \\sum_{k=1}^{n} \\frac{k}{n^2+k^2}$. a) Biến đổi đại số biểu thức bên trong tổng để có dạng $\\frac{1}{n} f(\\frac{k}{n})$. b) Chuyển giới hạn của tổng Riemann thành một tích phân xác định tương ứng. c) Tính tích phân xác định đó.",
+      "answer": {
+        "steps": [
+          "a) Ta chia cả tử và mẫu cho $n^2$: $\\frac{k}{n^2+k^2} = \\frac{k/n^2}{1+k^2/n^2} = \\frac{1}{n} \\cdot \\frac{k/n}{1+(k/n)^2}$.",
+          "Biểu thức có dạng $\\frac{1}{n}f(\\frac{k}{n})$ với $f(x) = \\frac{x}{1+x^2}$.",
+          "b) Giới hạn của tổng Riemann này tương ứng với tích phân xác định của $f(x)$ từ 0 đến 1:",
+          "$L = \\int_{0}^{1} \\frac{x}{1+x^2} dx$.",
+          "c) Để tính tích phân, ta dùng phép đổi biến. Đặt $u = 1+x^2$, suy ra $du = 2x dx$, hay $x dx = \\frac{1}{2}du$.",
+          "Đổi cận: $x=0 \\to u=1$, $x=1 \\to u=2$.",
+          "$L = \\int_{1}^{2} \\frac{1}{u} (\\frac{1}{2}du) = \\frac{1}{2} \\int_{1}^{2} \\frac{du}{u} = \\frac{1}{2}[\\ln|u|]_{1}^{2}$.",
+          "$L = \\frac{1}{2}(\\ln 2 - \\ln 1) = \\frac{1}{2}\\ln 2$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm thể tích vật thể có thiết diện cắt ngang cho trước. Đáy của một vật thể là một miền phẳng giới hạn bởi parabol $y=1-x^2$ và trục Ox. Các thiết diện vuông góc với trục Ox là các hình vuông. a) Biểu diễn diện tích $A(x)$ của một thiết diện hình vuông tại vị trí $x$. b) Thiết lập công thức tích phân để tính thể tích của vật thể. c) Tính tích phân đó.",
+      "answer": {
+        "steps": [
+          "a) Tại một vị trí $x$ bất kỳ, cạnh của hình vuông bằng chiều cao của parabol tại điểm đó, tức là $s = y = 1-x^2$.",
+          "Diện tích của thiết diện hình vuông là $A(x) = s^2 = (1-x^2)^2 = 1 - 2x^2 + x^4$.",
+          "b) Đáy của vật thể giới hạn bởi $y=1-x^2=0$, tức là từ $x=-1$ đến $x=1$.",
+          "Thể tích được tính bằng cách tích phân diện tích thiết diện: $V = \\int_{-1}^{1} A(x) dx = \\int_{-1}^{1} (1-2x^2+x^4) dx$.",
+          "c) Vì hàm dưới dấu tích phân là hàm chẵn và miền tích phân đối xứng, ta có:",
+          "$V = 2 \\int_{0}^{1} (1-2x^2+x^4) dx = 2[x - \\frac{2x^3}{3} + \\frac{x^5}{5}]_{0}^{1}$.",
+          "$V = 2(1 - \\frac{2}{3} + \\frac{1}{5} - 0) = 2(\\frac{15-10+3}{15}) = 2(\\frac{8}{15}) = \\frac{16}{15}$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân $I = \\int_{0}^{\\pi} \\frac{x \\sin x}{1+\\cos^2 x} dx$. a) Sử dụng tính chất $\\int_0^a f(x) dx = \\int_0^a f(a-x) dx$. b) Cộng hai biểu thức của $I$ lại với nhau để khử $x$ ở tử số. c) Tính tích phân mới thu được.",
+      "answer": {
+        "steps": [
+          "a) Áp dụng tính chất với $a=\\pi$: $I = \\int_{0}^{\\pi} \\frac{(\\pi-x) \\sin(\\pi-x)}{1+\\cos^2(\\pi-x)} dx$.",
+          "Vì $\\sin(\\pi-x)=\\sin x$ và $\\cos(\\pi-x)=-\\cos x$, ta có $\\cos^2(\\pi-x) = (-\\cos x)^2 = \\cos^2 x$.",
+          "Vậy $I = \\int_{0}^{\\pi} \\frac{(\\pi-x) \\sin x}{1+\\cos^2 x} dx = \\int_{0}^{\\pi} \\frac{\\pi \\sin x}{1+\\cos^2 x} dx - \\int_{0}^{\\pi} \\frac{x \\sin x}{1+\\cos^2 x} dx$.",
+          "Biểu thức cuối cùng chính là $I$. Vậy $I = \\pi \\int_{0}^{\\pi} \\frac{\\sin x}{1+\\cos^2 x} dx - I$.",
+          "b) Từ trên ta có $2I = \\pi \\int_{0}^{\\pi} \\frac{\\sin x}{1+\\cos^2 x} dx$.",
+          "c) Để tính tích phân này, đặt $u=\\cos x$, $du = -\\sin x dx$.",
+          "Đổi cận: $x=0 \\to u=1$, $x=\\pi \\to u=-1$.",
+          "$2I = \\pi \\int_{1}^{-1} \\frac{-du}{1+u^2} = \\pi \\int_{-1}^{1} \\frac{du}{1+u^2} = \\pi [\\arctan u]_{-1}^{1}$.",
+          "$2I = \\pi (\\arctan(1) - \\arctan(-1)) = \\pi(\\frac{\\pi}{4} - (-\\frac{\\pi}{4})) = \\pi(\\frac{\\pi}{2}) = \\frac{\\pi^2}{2}$.",
+          "Vậy $I = \\frac{\\pi^2}{4}$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân suy rộng loại 1: $I = \\int_{0}^{\\infty} e^{-x} \\cos(x) dx$. a) Biểu diễn tích phân suy rộng dưới dạng giới hạn của một tích phân xác định. b) Tìm nguyên hàm của $e^{-x}\\cos(x)$ bằng phương pháp tích phân từng phần hai lần. c) Tính giới hạn để tìm giá trị của tích phân suy rộng.",
+      "answer": {
+        "steps": [
+          "a) $I = \\lim_{b \\to \\infty} \\int_{0}^{b} e^{-x} \\cos(x) dx$.",
+          "b) Đặt $J = \\int e^{-x}\\cos(x) dx$. Tích phân từng phần: $u=e^{-x}, dv=\\cos x dx \\Rightarrow du=-e^{-x}dx, v=\\sin x$.",
+          "$J = e^{-x}\\sin x - \\int -e^{-x}\\sin x dx = e^{-x}\\sin x + \\int e^{-x}\\sin x dx$.",
+          "Tích phân từng phần lần nữa cho $\\int e^{-x}\\sin x dx$: $u=e^{-x}, dv=\\sin x dx \\Rightarrow du=-e^{-x}dx, v=-\\cos x$.",
+          "$\\int e^{-x}\\sin x dx = -e^{-x}\\cos x - \\int (-e^{-x})(-\\cos x) dx = -e^{-x}\\cos x - J$.",
+          "Thay lại: $J = e^{-x}\\sin x - e^{-x}\\cos x - J \\Rightarrow 2J = e^{-x}(\\sin x - \\cos x)$.",
+          "Nguyên hàm là $F(x) = \\frac{e^{-x}(\\sin x - \\cos x)}{2}$.",
+          "c) $\\int_{0}^{b} e^{-x} \\cos(x) dx = [\\frac{e^{-x}(\\sin x - \\cos x)}{2}]_0^b = \\frac{e^{-b}(\\sin b - \\cos b)}{2} - \\frac{e^0(\\sin 0 - \\cos 0)}{2}$.",
+          "$= \\frac{e^{-b}(\\sin b - \\cos b)}{2} - \\frac{1(0-1)}{2} = \\frac{e^{-b}(\\sin b - \\cos b)}{2} + \\frac{1}{2}$.",
+          "$I = \\lim_{b \\to \\infty} (\\frac{e^{-b}(\\sin b - \\cos b)}{2} + \\frac{1}{2})$.",
+          "Vì $\\sin b - \\cos b$ bị chặn và $\\lim_{b\\to\\infty} e^{-b} = 0$, nên số hạng đầu tiên tiến tới 0. Vậy $I = 1/2$."
+        ]
+      }
+    },
+    {
+      "question": "Sử dụng phương pháp vỏ trụ (cylindrical shells) để tính thể tích. Miền D giới hạn bởi $y=x-x^2$ và trục Ox. Tìm thể tích vật thể tạo thành khi quay D quanh trục Oy. a) Nêu công thức tính thể tích bằng phương pháp vỏ trụ khi quay quanh trục Oy. b) Xác định bán kính, chiều cao của vỏ trụ và các cận tích phân. c) Thiết lập và tính tích phân.",
+      "answer": {
+        "steps": [
+          "a) Công thức vỏ trụ khi quay quanh trục Oy là $V = 2\\pi \\int_{a}^{b} x h(x) dx$, trong đó $x$ là bán kính và $h(x)$ là chiều cao của vỏ trụ.",
+          "b) Giao điểm của $y=x-x^2$ với trục Ox là $x-x^2=0 \\Rightarrow x(1-x)=0 \\Rightarrow x=0, x=1$. Cận tích phân là từ 0 đến 1.",
+          "Tại một vị trí $x$ bất kỳ, bán kính của vỏ trụ là $r=x$.",
+          "Chiều cao của vỏ trụ là $h = y = x-x^2$.",
+          "c) Thiết lập tích phân: $V = 2\\pi \\int_{0}^{1} x(x-x^2) dx = 2\\pi \\int_{0}^{1} (x^2-x^3) dx$.",
+          "Tính tích phân: $V = 2\\pi [\\frac{x^3}{3} - \\frac{x^4}{4}]_{0}^{1}$.",
+          "$V = 2\\pi ((\\frac{1}{3} - \\frac{1}{4}) - (0-0)) = 2\\pi (\\frac{1}{12}) = \\frac{\\pi}{6}$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân suy rộng loại 2 (hàm không bị chặn). Tính $I = \\int_{0}^{1} \\frac{dx}{\\sqrt{1-x^2}}$. a) Xác định điểm làm cho hàm số không bị chặn và viết tích phân dưới dạng giới hạn. b) Tìm nguyên hàm của hàm số dưới dấu tích phân. c) Tính giới hạn để tìm giá trị của tích phân.",
+      "answer": {
+        "steps": [
+          "a) Hàm số $f(x) = \\frac{1}{\\sqrt{1-x^2}}$ không bị chặn tại $x=1$.",
+          "Ta viết tích phân dưới dạng giới hạn: $I = \\lim_{b \\to 1^-} \\int_{0}^{b} \\frac{dx}{\\sqrt{1-x^2}}$.",
+          "b) Nguyên hàm của $\\frac{1}{\\sqrt{1-x^2}}$ là $\\arcsin(x)$.",
+          "c) $\\int_{0}^{b} \\frac{dx}{\\sqrt{1-x^2}} = [\\arcsin(x)]_0^b = \\arcsin(b) - \\arcsin(0) = \\arcsin(b)$.",
+          "$I = \\lim_{b \\to 1^-} \\arcsin(b)$.",
+          "Vì hàm $\\arcsin$ liên tục tại 1, giới hạn này bằng giá trị của hàm tại điểm đó: $I = \\arcsin(1) = \\frac{\\pi}{2}$."
+        ]
+      }
+    },
+    {
+      "question": "Một ứng dụng vật lý: tính công thực hiện. Một sợi cáp đồng chất dài 50m và nặng 100kg đang treo thẳng đứng từ một tời cuốn. a) Biểu diễn khối lượng của một đoạn cáp nhỏ có độ dài $dy$ tại vị trí $y$ mét tính từ đầu dưới của sợi cáp. b) Tính công cần thiết để nâng đoạn cáp nhỏ đó lên đỉnh. c) Thiết lập và tính tích phân để tìm tổng công cần thiết để cuốn toàn bộ sợi cáp lên.",
+      "answer": {
+        "steps": [
+          "a) Mật độ khối lượng dài của sợi cáp là $\\rho = \\frac{100 \\text{kg}}{50 \\text{m}} = 2$ kg/m.",
+          "Một đoạn cáp nhỏ có độ dài $dy$ sẽ có khối lượng là $dm = \\rho dy = 2 dy$. Lực (trọng lượng) của đoạn cáp này là $dF = dm \\cdot g = 2g dy$ (với $g$ là gia tốc trọng trường).",
+          "b) Gọi $y$ là khoảng cách từ đầu dưới của sợi cáp. Một đoạn cáp nhỏ tại vị trí $y$ cần phải được nâng lên một quãng đường là $50-y$ mét.",
+          "Công để nâng đoạn cáp này là $dW = dF \\cdot (50-y) = 2g(50-y)dy$.",
+          "c) Để tìm tổng công, ta tích phân $dW$ trên toàn bộ chiều dài sợi cáp, từ $y=0$ (đầu dưới) đến $y=50$ (đầu trên).",
+          "$W = \\int_{0}^{50} 2g(50-y) dy = 2g [50y - \\frac{y^2}{2}]_{0}^{50}$.",
+          "$W = 2g ((50^2 - \\frac{50^2}{2}) - 0) = 2g (\\frac{50^2}{2}) = g \\cdot 50^2 = 2500g$.",
+          "Công cần thiết là $2500g$ Joules (nếu $g \\approx 9.8$ m/s$^2$, công là 24500 J)."
+        ]
+      }
+    },
+    {
+      "question": "Đánh giá sự hội tụ của tích phân suy rộng bằng tiêu chuẩn so sánh. Xét sự hội tụ của $I = \\int_{1}^{\\infty} \\frac{\\sin^2 x}{x^2} dx$. a) Tìm một hàm số $g(x)$ đơn giản hơn mà $0 \\le \\frac{\\sin^2 x}{x^2} \\le g(x)$ với mọi $x \\ge 1$. b) Xét sự hội tụ của tích phân $\\int_{1}^{\\infty} g(x) dx$. c) Dựa vào tiêu chuẩn so sánh, kết luận về sự hội tụ của $I$.",
+      "answer": {
+        "steps": [
+          "a) Ta biết rằng $0 \\le \\sin^2 x \\le 1$ với mọi $x$.",
+          "Chia các vế cho $x^2$ (với $x^2>0$ khi $x \\ge 1$), ta có $0 \\le \\frac{\\sin^2 x}{x^2} \\le \\frac{1}{x^2}$.",
+          "Vậy ta có thể chọn $g(x) = \\frac{1}{x^2}$.",
+          "b) Ta xét sự hội tụ của $\\int_{1}^{\\infty} \\frac{1}{x^2} dx$. Đây là tích phân dạng p-series $\\int_1^\\infty \\frac{1}{x^p} dx$ với $p=2$.",
+          "Vì $p=2 > 1$, tích phân này hội tụ.",
+          "Cụ thể: $\\int_{1}^{\\infty} \\frac{1}{x^2} dx = \\lim_{b\\to\\infty} [-\\frac{1}{x}]_1^b = \\lim_{b\\to\\infty} (-\\frac{1}{b} - (-1)) = 0+1=1$.",
+          "c) Theo tiêu chuẩn so sánh cho tích phân suy rộng: vì $0 \\le \\frac{\\sin^2 x}{x^2} \\le \\frac{1}{x^2}$ và $\\int_{1}^{\\infty} \\frac{1}{x^2} dx$ hội tụ, nên tích phân ban đầu $I = \\int_{1}^{\\infty} \\frac{\\sin^2 x}{x^2} dx$ cũng hội tụ."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân Beta, một loại tích phân xác định đặc biệt: $B(m, n) = \\int_0^1 x^{m-1}(1-x)^{n-1} dx$. Tính $B(3,2)$. a) Viết lại biểu thức tích phân với $m=3, n=2$. b) Khai triển hàm số dưới dấu tích phân thành một đa thức. c) Tính tích phân của đa thức đó.",
+      "answer": {
+        "steps": [
+          "a) Với $m=3, n=2$, ta có $B(3,2) = \\int_0^1 x^{3-1}(1-x)^{2-1} dx = \\int_0^1 x^2(1-x) dx$.",
+          "b) Khai triển hàm số: $x^2(1-x) = x^2 - x^3$.",
+          "c) Tích phân trở thành $B(3,2) = \\int_0^1 (x^2 - x^3) dx$.",
+          "$B(3,2) = [\\frac{x^3}{3} - \\frac{x^4}{4}]_0^1$.",
+          "$B(3,2) = (\\frac{1^3}{3} - \\frac{1^4}{4}) - (0-0) = \\frac{1}{3} - \\frac{1}{4} = \\frac{4-3}{12} = \\frac{1}{12}$."
+        ]
+      }
+    },
+    {
+      "question": "Xét tích phân suy rộng loại 1 cơ bản: $I = \\int_{1}^{\\infty} \\frac{1}{x^2} dx$. a) Tích phân này là suy rộng loại 1 vì sao? b) Viết lại tích phân này dưới dạng giới hạn của một tích phân xác định. c) Tính giới hạn đó để tìm giá trị của tích phân.",
+      "answer": {
+        "steps": [
+          "a) Tích phân này là suy rộng loại 1 vì có ít nhất một cận tích phân là vô hạn (cụ thể là cận trên bằng $\\infty$).",
+          "b) Theo định nghĩa, ta viết: $I = \\lim_{b \\to \\infty} \\int_{1}^{b} \\frac{1}{x^2} dx$.",
+          "c) Trước hết, ta tính tích phân xác định: $\\int_{1}^{b} \\frac{1}{x^2} dx = \\int_{1}^{b} x^{-2} dx = [-\\frac{1}{x}]_{1}^{b} = (-\\frac{1}{b}) - (-\\frac{1}{1}) = 1 - \\frac{1}{b}$.",
+          "Bây giờ, ta tính giới hạn: $I = \\lim_{b \\to \\infty} (1 - \\frac{1}{b})$. Khi $b \\to \\infty$, $\\frac{1}{b} \\to 0$.",
+          "Vậy $I = 1 - 0 = 1$. Tích phân này hội tụ và có giá trị bằng 1."
+        ]
+      }
+    },
+    {
+      "question": "Xét tích phân suy rộng loại 2 cơ bản: $I = \\int_{0}^{1} \\frac{1}{\\sqrt{x}} dx$. a) Tại sao tích phân này được gọi là suy rộng loại 2? b) Viết lại tích phân này dưới dạng giới hạn của một tích phân xác định. c) Tính toán để xác định tích phân này hội tụ hay phân kỳ, nếu hội tụ hãy tìm giá trị.",
+      "answer": {
+        "steps": [
+          "a) Tích phân này là suy rộng loại 2 vì hàm số dưới dấu tích phân $f(x) = \\frac{1}{\\sqrt{x}}$ không xác định (gián đoạn vô cực) tại một điểm trong đoạn lấy tích phân, cụ thể là tại cận dưới $x=0$.",
+          "b) Theo định nghĩa, ta viết: $I = \\lim_{a \\to 0^+} \\int_{a}^{1} \\frac{1}{\\sqrt{x}} dx$.",
+          "c) Ta tính tích phân xác định: $\\int_{a}^{1} x^{-1/2} dx = [2x^{1/2}]_{a}^{1} = [2\\sqrt{x}]_{a}^{1} = 2\\sqrt{1} - 2\\sqrt{a} = 2 - 2\\sqrt{a}$.",
+          "Bây giờ, ta tính giới hạn: $I = \\lim_{a \\to 0^+} (2 - 2\\sqrt{a})$. Khi $a \\to 0^+$, $\\sqrt{a} \\to 0$.",
+          "Vậy $I = 2 - 0 = 2$. Tích phân này hội tụ và có giá trị bằng 2."
+        ]
+      }
+    },
+    {
+      "question": "So sánh hai tích phân suy rộng đơn giản. a) Tính $I_1 = \\int_{1}^{\\infty} \\frac{1}{x} dx$. b) Tính $I_2 = \\int_{0}^{1} \\frac{1}{x} dx$. c) Dựa vào kết quả, hãy nêu nhận xét về sự hội tụ của hàm $1/x$ trên các khoảng $(0,1]$ và $[1, \\infty)$.",
+      "answer": {
+        "steps": [
+          "a) $I_1 = \\lim_{b \\to \\infty} \\int_{1}^{b} \\frac{1}{x} dx = \\lim_{b \\to \\infty} [\\ln|x|]_{1}^{b} = \\lim_{b \\to \\infty} (\\ln b - \\ln 1) = \\lim_{b \\to \\infty} \\ln b = +\\infty$.",
+          "Vậy tích phân $I_1$ phân kỳ.",
+          "b) $I_2 = \\lim_{a \\to 0^+} \\int_{a}^{1} \\frac{1}{x} dx = \\lim_{a \\to 0^+} [\\ln|x|]_{a}^{1} = \\lim_{a \\to 0^+} (\\ln 1 - \\ln a) = \\lim_{a \\to 0^+} (0 - \\ln a) = -(-\\infty) = +\\infty$.",
+          "Vậy tích phân $I_2$ cũng phân kỳ.",
+          "c) Nhận xét: Mặc dù hàm $f(x)=1/x$ trông có vẻ 'nhỏ' khi $x$ lớn, diện tích dưới đồ thị của nó từ 1 đến vô cùng là vô hạn. Tương tự, dù khoảng $(0,1]$ là hữu hạn, diện tích dưới đồ thị của nó trên khoảng này cũng là vô hạn do sự tăng đột ngột gần $x=0$."
+        ]
+      }
+    },
+    {
+      "question": "Xét tích phân $I = \\int_{0}^{\\infty} e^{-x} dx$. a) Đây là tích phân suy rộng loại nào? Viết nó dưới dạng giới hạn. b) Tìm nguyên hàm của $e^{-x}$. c) Tính giới hạn và kết luận về sự hội tụ. Tích phân này có ý nghĩa gì trong xác suất?",
+      "answer": {
+        "steps": [
+          "a) Đây là tích phân suy rộng loại 1 vì có cận trên là vô cùng. Ta viết: $I = \\lim_{b \\to \\infty} \\int_{0}^{b} e^{-x} dx$.",
+          "b) Nguyên hàm của $e^{-x}$ là $\\int e^{-x} dx = -e^{-x}$.",
+          "c) Ta tính $\\int_{0}^{b} e^{-x} dx = [-e^{-x}]_{0}^{b} = (-e^{-b}) - (-e^{-0}) = 1 - e^{-b}$.",
+          "Giới hạn là $I = \\lim_{b \\to \\infty} (1 - e^{-b}) = 1 - 0 = 1$. Tích phân hội tụ về 1.",
+          "Ý nghĩa: Trong lý thuyết xác suất, hàm $f(x)=e^{-x}$ (với $x \\ge 0$) là hàm mật độ xác suất của phân phối mũ với tham số $\\lambda=1$. Việc tích phân này bằng 1 khẳng định rằng tổng xác suất trên toàn bộ không gian mẫu là 1."
+        ]
+      }
+    },
+    {
+      "question": "Xác định xem một tích phân có phải là suy rộng hay không và cách xử lý nó. Xét $I = \\int_{0}^{2} \\frac{1}{x-1} dx$. a) Tích phân này có phải là tích phân suy rộng không? Tại sao? b) Nếu có, phải làm thế nào để tính nó một cách chính xác? (Chỉ cần thiết lập biểu thức giới hạn, không cần tính). c) Tại sao việc tính $[\\ln|x-1|]_0^2$ trực tiếp lại sai?",
+      "answer": {
+        "steps": [
+          "a) Có, đây là một tích phân suy rộng. Lý do là hàm số $f(x) = \\frac{1}{x-1}$ có một gián đoạn vô cực tại $x=1$, một điểm nằm trong khoảng lấy tích phân $[0, 2]$.",
+          "b) Ta phải tách tích phân tại điểm gián đoạn: $I = \\int_{0}^{1} \\frac{1}{x-1} dx + \\int_{1}^{2} \\frac{1}{x-1} dx$.",
+          "Sau đó, viết mỗi tích phân thành một giới hạn: $I = \\lim_{b \\to 1^-} \\int_{0}^{b} \\frac{dx}{x-1} + \\lim_{a \\to 1^+} \\int_{a}^{2} \\frac{dx}{x-1}$.",
+          "Tích phân ban đầu chỉ hội tụ nếu cả hai tích phân thành phần đều hội tụ.",
+          "c) Việc tính trực tiếp $[\\ln|x-1|]_0^2 = \\ln|1| - \\ln|-1| = 0 - 0 = 0$ là sai lầm. Cách tính này đã bỏ qua điểm kỳ dị tại $x=1$, nơi hàm số và nguyên hàm của nó không xác định. Định lý Newton-Leibniz chỉ áp dụng cho các hàm liên tục trên toàn bộ đoạn lấy tích phân."
+        ]
+      }
+    },
+    {
+      "question": "Sử dụng tính đối xứng cho tích phân suy rộng. Xét $I = \\int_{-\\infty}^{\\infty} x dx$. a) Viết tích phân này dưới dạng tổng của hai tích phân suy rộng. b) Tính $\\lim_{a \\to \\infty} \\int_{-a}^{a} x dx$. c) Tính $I$ theo định nghĩa chính xác ở câu a. Kết quả có giống câu b không và tại sao?",
+      "answer": {
+        "steps": [
+          "a) Theo định nghĩa, ta phải tách tại một điểm hữu hạn, ví dụ $x=0$: $I = \\int_{-\\infty}^{0} x dx + \\int_{0}^{\\infty} x dx$.",
+          "Điều này tương đương với $I = \\lim_{a \\to -\\infty} \\int_{a}^{0} x dx + \\lim_{b \\to \\infty} \\int_{0}^{b} x dx$.",
+          "b) $\\int_{-a}^{a} x dx = [\\frac{x^2}{2}]_{-a}^{a} = \\frac{a^2}{2} - \\frac{(-a)^2}{2} = 0$. Do đó, $\\lim_{a \\to \\infty} \\int_{-a}^{a} x dx = 0$. Đây được gọi là giá trị chính Cauchy.",
+          "c) Tính theo câu a: $\\lim_{b \\to \\infty} \\int_{0}^{b} x dx = \\lim_{b \\to \\infty} [\\frac{x^2}{2}]_0^b = \\lim_{b \\to \\infty} \\frac{b^2}{2} = \\infty$.",
+          "Vì một trong hai tích phân thành phần đã phân kỳ, tích phân ban đầu $I$ phân kỳ.",
+          "Kết quả không giống nhau. Lý do là định nghĩa của tích phân suy rộng trên $(-\\infty, \\infty)$ yêu cầu hai giới hạn phải tồn tại độc lập với nhau. Cách tính ở câu b bắt hai cận tiến ra vô cùng với tốc độ như nhau, điều này che giấu sự phân kỳ."
+        ]
+      }
+    },
+    {
+      "question": "Một tích phân p-series suy rộng loại 2. Xét tích phân $I = \\int_{0}^{1} \\frac{1}{x^p} dx$. a) Viết tích phân này dưới dạng giới hạn. b) Tính tích phân xác định $\\int_{a}^{1} \\frac{1}{x^p} dx$ (với $p \\neq 1$). c) Dựa vào kết quả, hãy xác định các giá trị của $p$ để tích phân $I$ hội tụ.",
+      "answer": {
+        "steps": [
+          "a) $I = \\lim_{a \\to 0^+} \\int_{a}^{1} x^{-p} dx$.",
+          "b) $\\int_{a}^{1} x^{-p} dx = [\\frac{x^{-p+1}}{-p+1}]_{a}^{1} = \\frac{1^{1-p}}{1-p} - \\frac{a^{1-p}}{1-p} = \\frac{1}{1-p}(1 - a^{1-p})$.",
+          "c) Ta xét giới hạn $\\lim_{a \\to 0^+} \\frac{1}{1-p}(1 - a^{1-p})$. Giới hạn này tồn tại hữu hạn khi và chỉ khi $\\lim_{a \\to 0^+} a^{1-p}$ tồn tại.",
+          "Nếu $1-p > 0$ (tức là $p < 1$), thì $\\lim_{a \\to 0^+} a^{1-p} = 0$. Giới hạn tồn tại.",
+          "Nếu $1-p < 0$ (tức là $p > 1$), thì $\\lim_{a \\to 0^+} a^{1-p} = \\infty$. Giới hạn không tồn tại.",
+          "Nếu $p=1$, ta có tích phân $\\int_0^1 \\frac{1}{x}dx$ đã biết là phân kỳ.",
+          "Vậy, tích phân $I$ hội tụ khi và chỉ khi $p < 1$."
+        ]
+      }
+    },
+    {
+      "question": "Xét sự hội tụ của một tích phân suy rộng bằng tiêu chuẩn so sánh. Cho tích phân $I = \\int_{1}^{\\infty} \\frac{1}{x^2+e^x} dx$. a) Tìm một hàm số $g(x)$ đơn giản hơn sao cho $0 < \\frac{1}{x^2+e^x} < g(x)$ với $x \\ge 1$. b) Tích phân $\\int_1^{\\infty} g(x)dx$ hội tụ hay phân kỳ? c) Dựa vào tiêu chuẩn so sánh, hãy kết luận về sự hội tụ của $I$.",
+      "answer": {
+        "steps": [
+          "a) Với $x \\ge 1$, ta có $x^2 > 0$ và $e^x > 0$. Do đó $x^2+e^x > x^2$.",
+          "Lấy nghịch đảo và đổi chiều bất đẳng thức, ta được: $0 < \\frac{1}{x^2+e^x} < \\frac{1}{x^2}$.",
+          "Vậy, ta có thể chọn $g(x) = \\frac{1}{x^2}$.",
+          "b) Tích phân $\\int_{1}^{\\infty} \\frac{1}{x^2} dx$ là một tích phân p-series với $p=2$.",
+          "Vì $p=2>1$, tích phân này hội tụ.",
+          "c) Theo tiêu chuẩn so sánh, vì hàm số ban đầu nhỏ hơn một hàm số có tích phân hội tụ, nên tích phân ban đầu $I = \\int_{1}^{\\infty} \\frac{1}{x^2+e^x} dx$ cũng hội tụ."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân suy rộng của một hàm có nguyên hàm là arctan: $I = \\int_{0}^{\\infty} \\frac{1}{x^2+1} dx$. a) Biểu diễn tích phân này dưới dạng một giới hạn. b) Tìm nguyên hàm của hàm số dưới dấu tích phân. c) Tính giới hạn để tìm giá trị của $I$.",
+      "answer": {
+        "steps": [
+          "a) $I = \\lim_{b \\to \\infty} \\int_{0}^{b} \\frac{1}{x^2+1} dx$.",
+          "b) Nguyên hàm của $\\frac{1}{x^2+1}$ là $\\arctan(x)$.",
+          "c) $\\int_{0}^{b} \\frac{1}{x^2+1} dx = [\\arctan(x)]_{0}^{b} = \\arctan(b) - \\arctan(0) = \\arctan(b) - 0$.",
+          "Bây giờ, ta tính giới hạn: $I = \\lim_{b \\to \\infty} \\arctan(b)$.",
+          "Đồ thị của hàm arctan có một tiệm cận ngang là $y=\\pi/2$ khi $b \\to \\infty$.",
+          "Vậy $I = \\frac{\\pi}{2}$. Tích phân này hội tụ."
+        ]
+      }
+    },
+    {
+      "question": "Một ví dụ đơn giản về tích phân phân kỳ. Tính $I = \\int_{0}^{\\infty} 1 dx$. a) Viết tích phân dưới dạng giới hạn. b) Tính tích phân xác định từ 0 đến $b$. c) Tính giới hạn và kết luận. Điều này có ý nghĩa hình học gì?",
+      "answer": {
+        "steps": [
+          "a) $I = \\lim_{b \\to \\infty} \\int_{0}^{b} 1 dx$.",
+          "b) $\\int_{0}^{b} 1 dx = [x]_{0}^{b} = b - 0 = b$.",
+          "c) $I = \\lim_{b \\to \\infty} b = +\\infty$.",
+          "Tích phân này phân kỳ.",
+          "Ý nghĩa hình học: Tích phân này biểu diễn diện tích của một hình chữ nhật có chiều cao là 1 và chiều rộng kéo dài từ 0 đến vô cùng. Một hình chữ nhật có chiều rộng vô hạn thì dĩ nhiên sẽ có diện tích vô hạn."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân suy rộng sử dụng tích phân từng phần: $I = \\int_{0}^{\\infty} x e^{-x} dx$. a) Viết tích phân dưới dạng giới hạn của một tích phân xác định. b) Tìm nguyên hàm của $x e^{-x}$ bằng phương pháp tích phân từng phần. c) Tính giá trị của giới hạn để xác định sự hội tụ và giá trị của tích phân.",
+      "answer": {
+        "steps": [
+          "a) Theo định nghĩa của tích phân suy rộng loại 1, ta có: $I = \\lim_{b \\to \\infty} \\int_{0}^{b} x e^{-x} dx$.",
+          "b) Ta tính tích phân bất định $J = \\int x e^{-x} dx$. Đặt $u=x$ và $dv=e^{-x}dx$. Suy ra $du=dx$ và $v = -e^{-x}$.",
+          "Áp dụng công thức tích phân từng phần: $J = -xe^{-x} - \\int (-e^{-x})dx = -xe^{-x} + \\int e^{-x}dx = -xe^{-x} - e^{-x} = -e^{-x}(x+1)$.",
+          "c) Bây giờ ta tính tích phân xác định: $\\int_{0}^{b} x e^{-x} dx = [-e^{-x}(x+1)]_{0}^{b} = (-e^{-b}(b+1)) - (-e^0(0+1)) = 1 - \\frac{b+1}{e^b}$.",
+          "Ta cần tính giới hạn: $I = \\lim_{b \\to \\infty} (1 - \\frac{b+1}{e^b})$. Giới hạn của phân thức có dạng $\\frac{\\infty}{\\infty}$, ta dùng quy tắc L'Hôpital:",
+          "$\\lim_{b \\to \\infty} \\frac{b+1}{e^b} = \\lim_{b \\to \\infty} \\frac{1}{e^b} = 0$.",
+          "Vậy $I = 1 - 0 = 1$. Tích phân hội tụ."
+        ]
+      }
+    },
+    {
+      "question": "Xét sự hội tụ của tích phân với tham số: $I = \\int_{2}^{\\infty} \\frac{1}{x(\\ln x)^p} dx$. a) Thực hiện phép đổi biến $u = \\ln x$. Tìm $du$ và đổi cận tích phân. b) Chuyển tích phân đã cho về một tích phân p-series theo biến $u$. c) Dựa vào điều kiện hội tụ của tích phân p-series, hãy xác định các giá trị của $p$ để $I$ hội tụ.",
+      "answer": {
+        "steps": [
+          "a) Đặt $u = \\ln x$. Lấy vi phân, ta có $du = \\frac{1}{x} dx$.",
+          "Đổi cận: Khi $x=2$, $u = \\ln 2$. Khi $x \\to \\infty$, $u = \\ln x \\to \\infty$.",
+          "b) Tích phân được viết lại hoàn toàn theo biến $u$: $I = \\int_{\\ln 2}^{\\infty} \\frac{1}{u^p} du$.",
+          "Đây là một tích phân p-series loại 1.",
+          "c) Ta biết rằng tích phân dạng $\\int_{a}^{\\infty} \\frac{1}{u^p} du$ (với $a>0$) hội tụ khi và chỉ khi $p > 1$.",
+          "Do đó, tích phân ban đầu $I$ hội tụ khi và chỉ khi $p > 1$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân suy rộng loại 2 có điểm kỳ dị ở cận trên: $I = \\int_{0}^{4} \\frac{1}{\\sqrt{4-x}} dx$. a) Xác định điểm kỳ dị và viết tích phân dưới dạng giới hạn. b) Tìm nguyên hàm của hàm số dưới dấu tích phân. c) Tính giới hạn và kết luận.",
+      "answer": {
+        "steps": [
+          "a) Hàm số $f(x) = \\frac{1}{\\sqrt{4-x}}$ có gián đoạn vô cực tại $x=4$, là cận trên của tích phân. Đây là tích phân suy rộng loại 2.",
+          "Ta viết: $I = \\lim_{b \\to 4^-} \\int_{0}^{b} \\frac{1}{\\sqrt{4-x}} dx$.",
+          "b) Để tìm nguyên hàm, đặt $u=4-x$, suy ra $du = -dx$.",
+          "$\\int \\frac{1}{\\sqrt{4-x}} dx = \\int \\frac{-du}{\\sqrt{u}} = -\\int u^{-1/2} du = -2u^{1/2} = -2\\sqrt{u} = -2\\sqrt{4-x}$.",
+          "c) $\\int_{0}^{b} \\frac{1}{\\sqrt{4-x}} dx = [-2\\sqrt{4-x}]_{0}^{b} = (-2\\sqrt{4-b}) - (-2\\sqrt{4-0}) = 4 - 2\\sqrt{4-b}$.",
+          "Tính giới hạn: $I = \\lim_{b \\to 4^-} (4 - 2\\sqrt{4-b}) = 4 - 2\\sqrt{0} = 4$.",
+          "Vậy tích phân hội tụ và có giá trị bằng 4."
+        ]
+      }
+    },
+    {
+      "question": "Sử dụng tiêu chuẩn so sánh giới hạn để xét sự hội tụ: $I = \\int_{1}^{\\infty} \\frac{x^2+1}{\\sqrt{x^6+x}} dx$. a) Khi $x \\to \\infty$, hãy tìm một hàm số $g(x)$ đơn giản có cùng bậc với hàm số dưới dấu tích phân $f(x)$. b) Tính giới hạn $\\lim_{x \\to \\infty} \\frac{f(x)}{g(x)}$. c) Dựa vào kết quả giới hạn và sự hội tụ của $\\int_1^{\\infty} g(x) dx$, hãy kết luận về sự hội tụ của $I$.",
+      "answer": {
+        "steps": [
+          "a) Khi $x$ rất lớn, $x^2+1 \\approx x^2$ và $\\sqrt{x^6+x} \\approx \\sqrt{x^6} = x^3$.",
+          "Do đó, $f(x) \\approx \\frac{x^2}{x^3} = \\frac{1}{x}$. Ta chọn hàm so sánh là $g(x) = \\frac{1}{x}$.",
+          "b) Ta tính giới hạn: $L = \\lim_{x \\to \\infty} \\frac{f(x)}{g(x)} = \\lim_{x \\to \\infty} \\frac{(x^2+1)/\\sqrt{x^6+x}}{1/x} = \\lim_{x \\to \\infty} \\frac{x(x^2+1)}{\\sqrt{x^6+x}}$.",
+          "$L = \\lim_{x \\to \\infty} \\frac{x^3(1+1/x^2)}{\\sqrt{x^6(1+1/x^5)}} = \\lim_{x \\to \\infty} \\frac{x^3(1+1/x^2)}{x^3\\sqrt{1+1/x^5}} = \\frac{1}{\\sqrt{1}} = 1$.",
+          "c) Vì giới hạn $L=1$ là một số hữu hạn và dương ($0 < 1 < \\infty$), theo tiêu chuẩn so sánh giới hạn, hai tích phân $\\int_1^\\infty f(x)dx$ và $\\int_1^\\infty g(x)dx$ có cùng tính chất hội tụ.",
+          "Tích phân $\\int_1^{\\infty} g(x) dx = \\int_1^{\\infty} \\frac{1}{x} dx$ là tích phân p-series với $p=1$, do đó nó phân kỳ.",
+          "Vậy, tích phân ban đầu $I$ cũng phân kỳ."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân suy rộng có điểm kỳ dị nằm trong khoảng tích phân: $I = \\int_{0}^{3} \\frac{1}{(x-2)^2} dx$. a) Tại sao tích phân này suy rộng và phải được xử lý như thế nào? b) Viết lại $I$ dưới dạng tổng của hai giới hạn. c) Tính một trong hai giới hạn để xác định sự hội tụ của $I$.",
+      "answer": {
+        "steps": [
+          "a) Tích phân này suy rộng vì hàm $f(x) = \\frac{1}{(x-2)^2}$ có gián đoạn vô cực tại $x=2$, một điểm nằm bên trong đoạn $[0, 3]$. Ta phải tách tích phân tại điểm kỳ dị này.",
+          "b) Ta tách $I = \\int_{0}^{2} \\frac{1}{(x-2)^2} dx + \\int_{2}^{3} \\frac{1}{(x-2)^2} dx$.",
+          "Sau đó viết dưới dạng giới hạn: $I = \\lim_{b \\to 2^-} \\int_{0}^{b} \\frac{dx}{(x-2)^2} + \\lim_{a \\to 2^+} \\int_{a}^{3} \\frac{dx}{(x-2)^2}$.",
+          "c) Ta tính tích phân thứ nhất: $\\int_{0}^{b} (x-2)^{-2} dx = [-\\frac{1}{x-2}]_{0}^{b} = -\\frac{1}{b-2} - (-\\frac{1}{0-2}) = -\\frac{1}{b-2} - \\frac{1}{2}$.",
+          "$\\lim_{b \\to 2^-} (-\\frac{1}{b-2} - \\frac{1}{2})$. Khi $b \\to 2^-$, $b-2 \\to 0^-$, nên $-\\frac{1}{b-2} \\to +\\infty$.",
+          "Vì một trong hai tích phân thành phần đã phân kỳ, tích phân ban đầu $I$ phân kỳ. Không cần tính tích phân thứ hai."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân của một hàm chẵn trên $(-\\infty, \\infty)$: $I = \\int_{-\\infty}^{\\infty} \\frac{1}{x^2+4} dx$. a) Tách tích phân thành hai phần từ $(-\\infty, 0]$ và $[0, \\infty)$. b) Sử dụng tính chẵn của hàm số để đơn giản hóa biểu thức. c) Tính tích phân suy rộng còn lại.",
+      "answer": {
+        "steps": [
+          "a) $I = \\int_{-\\infty}^{0} \\frac{1}{x^2+4} dx + \\int_{0}^{\\infty} \\frac{1}{x^2+4} dx$.",
+          "b) Hàm số $f(x) = \\frac{1}{x^2+4}$ là hàm chẵn vì $f(-x) = \\frac{1}{(-x)^2+4} = \\frac{1}{x^2+4} = f(x)$.",
+          "Do đó, $\\int_{-\\infty}^{0} f(x) dx = \\int_{0}^{\\infty} f(x) dx$.",
+          "Vậy $I = 2 \\int_{0}^{\\infty} \\frac{1}{x^2+4} dx$.",
+          "c) Ta tính $J = \\int_{0}^{\\infty} \\frac{1}{x^2+2^2} dx = \\lim_{b \\to \\infty} \\int_{0}^{b} \\frac{1}{x^2+2^2} dx$.",
+          "Nguyên hàm là $\\frac{1}{2}\\arctan(\\frac{x}{2})$.",
+          "$\\int_{0}^{b} \\frac{dx}{x^2+4} = [\\frac{1}{2}\\arctan(\\frac{x}{2})]_0^b = \\frac{1}{2}\\arctan(\\frac{b}{2}) - \\frac{1}{2}\\arctan(0) = \\frac{1}{2}\\arctan(\\frac{b}{2})$.",
+          "$J = \\lim_{b \\to \\infty} \\frac{1}{2}\\arctan(\\frac{b}{2}) = \\frac{1}{2} \\cdot \\frac{\\pi}{2} = \\frac{\\pi}{4}$.",
+          "Kết quả cuối cùng: $I = 2J = 2(\\frac{\\pi}{4}) = \\frac{\\pi}{2}$."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân suy rộng loại 2 của hàm logarit: $I = \\int_{0}^{1} \\ln(x) dx$. a) Tại sao đây là tích phân suy rộng? Viết nó dưới dạng giới hạn. b) Tìm nguyên hàm của $\\ln(x)$ bằng phương pháp tích phân từng phần. c) Tính giới hạn, sử dụng giới hạn đã biết $\\lim_{x \\to 0^+} x\\ln x = 0$.",
+      "answer": {
+        "steps": [
+          "a) Đây là tích phân suy rộng loại 2 vì hàm $\\ln(x)$ không xác định tại cận dưới $x=0$.",
+          "Ta viết: $I = \\lim_{a \\to 0^+} \\int_{a}^{1} \\ln(x) dx$.",
+          "b) Để tính $\\int \\ln(x) dx$, ta đặt $u=\\ln x, dv=dx$. Suy ra $du=\\frac{1}{x}dx, v=x$.",
+          "$\\int \\ln(x) dx = x\\ln x - \\int x \\cdot \\frac{1}{x} dx = x\\ln x - \\int 1 dx = x\\ln x - x$.",
+          "c) $\\int_{a}^{1} \\ln(x) dx = [x\\ln x - x]_a^1 = (1\\ln 1 - 1) - (a\\ln a - a) = -1 - a\\ln a + a$.",
+          "Ta tính giới hạn: $I = \\lim_{a \\to 0^+} (-1 - a\\ln a + a)$.",
+          "Sử dụng giới hạn cho trước $\\lim_{a \\to 0^+} a\\ln a = 0$. Cũng có $\\lim_{a \\to 0^+} a = 0$.",
+          "Vậy $I = -1 - 0 + 0 = -1$. Tích phân hội tụ."
+        ]
+      }
+    },
+    {
+      "question": "Xét sự hội tụ của tích phân bằng cách so sánh trực tiếp. Cho tích phân $I = \\int_{1}^{\\infty} \\frac{x}{x^3+1} dx$. a) Tìm một hàm số $g(x)$ đơn giản hơn sao cho $\\frac{x}{x^3+1} < g(x)$ với $x \\ge 1$. b) Chứng minh rằng $\\int_1^{\\infty} g(x) dx$ hội tụ. c) Kết luận về sự hội tụ của $I$.",
+      "answer": {
+        "steps": [
+          "a) Với $x \\ge 1$, ta có $x^3+1 > x^3$.",
+          "Do đó, $\\frac{1}{x^3+1} < \\frac{1}{x^3}$.",
+          "Nhân cả hai vế với $x$ (là số dương): $\\frac{x}{x^3+1} < \\frac{x}{x^3} = \\frac{1}{x^2}$.",
+          "Vậy ta có thể chọn $g(x) = \\frac{1}{x^2}$.",
+          "b) Tích phân $\\int_1^{\\infty} g(x) dx = \\int_1^{\\infty} \\frac{1}{x^2} dx$ là một tích phân p-series với $p=2$.",
+          "Vì $p=2 > 1$, tích phân này hội tụ.",
+          "c) Theo tiêu chuẩn so sánh trực tiếp, vì $0 < \\frac{x}{x^3+1} < \\frac{1}{x^2}$ và tích phân của hàm lớn hơn hội tụ, nên tích phân ban đầu $I$ cũng hội tụ."
+        ]
+      }
+    },
+    {
+      "question": "Tính thể tích của một vật thể tròn xoay vô hạn (Sừng Gabriel). Quay miền giới hạn bởi $y=1/x$, trục Ox và $x=1$ về phía bên phải quanh trục Ox. a) Thiết lập công thức tích phân suy rộng để tính thể tích. b) Tính tích phân đó để tìm thể tích. c) (Câu hỏi thêm) Tích phân tính diện tích bề mặt của vật thể này hội tụ hay phân kỳ?",
+      "answer": {
+        "steps": [
+          "a) Sử dụng phương pháp đĩa, thể tích được cho bởi $V = \\pi \\int_{1}^{\\infty} [f(x)]^2 dx$.",
+          "Với $f(x) = 1/x$, ta có $V = \\pi \\int_{1}^{\\infty} (\\frac{1}{x})^2 dx = \\pi \\int_{1}^{\\infty} \\frac{1}{x^2} dx$.",
+          "b) Đây là tích phân p-series với $p=2$, nó hội tụ.",
+          "$V = \\pi \\lim_{b \\to \\infty} \\int_{1}^{b} \\frac{1}{x^2} dx = \\pi \\lim_{b \\to \\infty} [-\\frac{1}{x}]_1^b = \\pi \\lim_{b \\to \\infty} (-\\frac{1}{b} - (-1)) = \\pi(0+1) = \\pi$.",
+          "Thể tích của vật thể vô hạn này là một số hữu hạn $\\pi$.",
+          "c) Diện tích bề mặt được tính bởi $S = 2\\pi \\int_1^{\\infty} f(x) \\sqrt{1+(f'(x))^2} dx = 2\\pi \\int_1^{\\infty} \\frac{1}{x} \\sqrt{1+\\frac{1}{x^4}} dx$.",
+          "Vì $\\sqrt{1+1/x^4} > 1$ với $x \\ge 1$, ta có $\\frac{1}{x} \\sqrt{1+\\frac{1}{x^4}} > \\frac{1}{x}$.",
+          "Do $\\int_1^{\\infty} \\frac{1}{x} dx$ phân kỳ, theo tiêu chuẩn so sánh, tích phân tính diện tích bề mặt cũng phân kỳ. Đây là một nghịch lý nổi tiếng: một vật có thể tích hữu hạn nhưng diện tích bề mặt vô hạn."
+        ]
+      }
+    },
+    {
+      "question": "Một tích phân vừa là loại 1 vừa là loại 2. Xét tích phân $I = \\int_{0}^{\\infty} \\frac{1}{\\sqrt{x}(1+x)} dx$. a) Tại sao tích phân này là suy rộng ở cả hai cận? b) Tách tích phân thành hai phần tại một điểm thuận tiện, ví dụ $x=1$. c) Tính từng tích phân thành phần bằng cách đổi biến.",
+      "answer": {
+        "steps": [
+          "a) Tích phân này suy rộng ở cận dưới $x=0$ vì hàm số không xác định (loại 2). Nó cũng suy rộng ở cận trên $x=\\infty$ (loại 1).",
+          "b) Ta tách $I = \\int_{0}^{1} \\frac{dx}{\\sqrt{x}(1+x)} + \\int_{1}^{\\infty} \\frac{dx}{\\sqrt{x}(1+x)}$.",
+          "c) Để tính cả hai phần, ta dùng chung một phép đổi biến: đặt $u = \\sqrt{x}$, suy ra $x=u^2$ và $dx=2u du$.",
+          "Nguyên hàm: $\\int \\frac{2u du}{u(1+u^2)} = 2\\int \\frac{du}{1+u^2} = 2\\arctan(u) = 2\\arctan(\\sqrt{x})$.",
+          "Tính tích phân thứ nhất: $\\int_{0}^{1} ... dx = \\lim_{a\\to 0^+} [2\\arctan(\\sqrt{x})]_a^1 = 2\\arctan(1) - 2\\arctan(0) = 2(\\frac{\\pi}{4}) - 0 = \\frac{\\pi}{2}$.",
+          "Tính tích phân thứ hai: $\\int_{1}^{\\infty} ... dx = \\lim_{b\\to\\infty} [2\\arctan(\\sqrt{x})]_1^b = \\lim_{b\\to\\infty} (2\\arctan(\\sqrt{b})) - 2\\arctan(1) = 2(\\frac{\\pi}{2}) - 2(\\frac{\\pi}{4}) = \\pi - \\frac{\\pi}{2} = \\frac{\\pi}{2}$.",
+          "Kết quả cuối cùng: $I = \\frac{\\pi}{2} + \\frac{\\pi}{2} = \\pi$."
+        ]
+      }
+    },
+    {
+      "question": "Hàm Gamma, một sự tổng quát hóa của giai thừa, được định nghĩa bởi một tích phân suy rộng: $\\Gamma(z) = \\int_0^\\infty x^{z-1}e^{-x}dx$. a) Chứng minh rằng tích phân này hội tụ với mọi $z>0$. (Gợi ý: tách tích phân tại $x=1$). b) Sử dụng tích phân từng phần, chứng minh công thức truy hồi quan trọng $\\Gamma(z+1) = z\\Gamma(z)$. c) Áp dụng công thức trên và biết rằng $\\Gamma(1)=1$, hãy tính $\\Gamma(4)$ và so sánh với $(4-1)!$.",
+      "answer": {
+        "steps": [
+          "a) Ta tách $I = \\int_0^1 x^{z-1}e^{-x}dx + \\int_1^\\infty x^{z-1}e^{-x}dx = I_1 + I_2$.",
+          "Với $I_1$: Khi $x \\to 0^+$, $e^{-x} \\to 1$, nên $x^{z-1}e^{-x} \\sim x^{z-1} = \\frac{1}{x^{1-z}}$. Đây là tích phân p-series loại 2, hội tụ khi $1-z < 1 \\Rightarrow z>0$.",
+          "Với $I_2$: Khi $x \\to \\infty$, $e^x$ tăng nhanh hơn bất kỳ luỹ thừa nào của $x$. Ta có $\\lim_{x\\to\\infty} \\frac{x^{z-1}e^{-x}}{1/x^2} = \\lim_{x\\to\\infty} \\frac{x^{z+1}}{e^x} = 0$. Vì $\\int_1^\\infty \\frac{1}{x^2}dx$ hội tụ, theo tiêu chuẩn so sánh giới hạn, $I_2$ hội tụ với mọi $z$.",
+          "Kết hợp lại, $\\Gamma(z)$ hội tụ khi $z>0$.",
+          "b) Tính $\\Gamma(z+1) = \\int_0^\\infty x^z e^{-x}dx$. Dùng tích phân từng phần: $u=x^z, dv=e^{-x}dx \\Rightarrow du=zx^{z-1}dx, v=-e^{-x}$.",
+          "$\\Gamma(z+1) = [-x^z e^{-x}]_0^\\infty - \\int_0^\\infty (-e^{-x})zx^{z-1}dx$.",
+          "Giới hạn $[-x^z e^{-x}]_0^\\infty = \\lim_{b\\to\\infty}(-b^z e^{-b}) - 0 = 0$.",
+          "Vậy $\\Gamma(z+1) = z \\int_0^\\infty x^{z-1}e^{-x}dx = z\\Gamma(z)$.",
+          "c) $\\Gamma(4) = 3\\Gamma(3) = 3 \\cdot 2\\Gamma(2) = 6\\Gamma(1)$.",
+          "Vì $\\Gamma(1) = \\int_0^\\infty e^{-x}dx = 1$, ta có $\\Gamma(4) = 6 \\cdot 1 = 6$.",
+          "Giá trị này bằng với $(4-1)! = 3! = 6$."
+        ]
+      }
+    },
+    {
+      "question": "Biến đổi Laplace của một hàm số $f(t)$ được định nghĩa là $\\mathcal{L}\\{f(t)\\} = F(s) = \\int_0^\\infty e^{-st}f(t)dt$. a) Hãy tìm biến đổi Laplace của hàm $f(t) = t^2$, tức là tính $F(s) = \\int_0^\\infty t^2 e^{-st}dt$ (giả sử $s>0$). b) Sử dụng tích phân từng phần hai lần. c) Kết quả thu được là một hàm theo biến $s$. Miền hội tụ của tích phân là gì?",
+      "answer": {
+        "steps": [
+          "a) Ta cần tính $F(s) = \\lim_{b\\to\\infty} \\int_0^b t^2 e^{-st}dt$.",
+          "b) Lần 1: Đặt $u=t^2, dv=e^{-st}dt \\Rightarrow du=2tdt, v=-\\frac{1}{s}e^{-st}$.",
+          "$\\int t^2 e^{-st}dt = -\\frac{t^2}{s}e^{-st} - \\int (-\\frac{1}{s}e^{-st})2tdt = -\\frac{t^2}{s}e^{-st} + \\frac{2}{s}\\int t e^{-st}dt$.",
+          "Lần 2 (cho tích phân còn lại): Đặt $u=t, dv=e^{-st}dt \\Rightarrow du=dt, v=-\\frac{1}{s}e^{-st}$.",
+          "$\\int t e^{-st}dt = -\\frac{t}{s}e^{-st} - \\int (-\\frac{1}{s}e^{-st})dt = -\\frac{t}{s}e^{-st} - \\frac{1}{s^2}e^{-st}$.",
+          "Kết hợp lại: $\\int t^2 e^{-st}dt = -\\frac{t^2}{s}e^{-st} - \\frac{2t}{s^2}e^{-st} - \\frac{2}{s^3}e^{-st}$.",
+          "c) Bây giờ tính giới hạn: $[-\\frac{e^{-st}}{s^3}(s^2t^2+2st+2)]_0^b$.",
+          "Khi $b\\to\\infty$, $e^{-sb} \\to 0$ (vì $s>0$), nên số hạng tại $b$ tiến tới 0.",
+          "Khi $t=0$, giá trị là $-\\frac{e^0}{s^3}(0+0+2) = -\\frac{2}{s^3}$.",
+          "Vậy $F(s) = 0 - (-\\frac{2}{s^3}) = \\frac{2}{s^3}$. Miền hội tụ là $s>0$."
+        ]
+      }
+    },
+    {
+      "question": "Xét sự hội tụ có điều kiện của tích phân Dirichlet $I = \\int_1^\\infty \\frac{\\sin x}{x} dx$. a) Chứng minh rằng tích phân này không hội tụ tuyệt đối, tức là $\\int_1^\\infty |\\frac{\\sin x}{x}| dx$ phân kỳ. (Gợi ý: so sánh với một chuỗi điều hòa). b) Sử dụng tích phân từng phần để biểu diễn $I$ dưới dạng một tích phân khác. c) Chứng minh tích phân mới ở câu b hội tụ và từ đó suy ra $I$ hội tụ.",
+      "answer": {
+        "steps": [
+          "a) Ta có $|\\sin x| \\ge \\sin^2 x = \\frac{1-\\cos(2x)}{2}$.",
+          "$\\int_1^\\infty |\\frac{\\sin x}{x}| dx \\ge \\int_1^\\infty \\frac{\\sin^2 x}{x} dx = \\int_1^\\infty \\frac{1-\\cos(2x)}{2x} dx = \\frac{1}{2}\\int_1^\\infty \\frac{dx}{x} - \\frac{1}{2}\\int_1^\\infty \\frac{\\cos(2x)}{x} dx$.",
+          "$\\int_1^\\infty \\frac{dx}{x}$ phân kỳ. Có thể chứng minh $\\int_1^\\infty \\frac{\\cos(2x)}{x} dx$ hội tụ. Do đó, vế phải phân kỳ. Suy ra $I$ không hội tụ tuyệt đối.",
+          "b) Đặt $u=1/x, dv=\\sin x dx \\Rightarrow du = -1/x^2 dx, v=-\\cos x$.",
+          "$I = [-\\frac{\\cos x}{x}]_1^\\infty - \\int_1^\\infty (-\\cos x)(-\\frac{1}{x^2})dx$.",
+          "$[-\\frac{\\cos x}{x}]_1^\\infty = \\lim_{b\\to\\infty}(-\\frac{\\cos b}{b}) - (-\\frac{\\cos 1}{1}) = 0 + \\cos 1 = \\cos 1$.",
+          "$I = \\cos 1 - \\int_1^\\infty \\frac{\\cos x}{x^2} dx$.",
+          "c) Xét tích phân $J = \\int_1^\\infty \\frac{\\cos x}{x^2} dx$. Ta có $|\\frac{\\cos x}{x^2}| \\le \\frac{1}{x^2}$.",
+          "Vì $\\int_1^\\infty \\frac{1}{x^2} dx$ hội tụ (p-series với p=2>1), theo tiêu chuẩn so sánh, $J$ hội tụ tuyệt đối.",
+          "Do đó, $I = \\cos 1 - J$ là một giá trị hữu hạn. Vậy $I$ hội tụ. Vì $I$ hội tụ nhưng không hội tụ tuyệt đối, nó được gọi là hội tụ có điều kiện."
+        ]
+      }
+    },
+    {
+      "question": "Tính giá trị chính Cauchy cho một tích phân suy rộng loại 2 phân kỳ. Xét $I = \\int_{-1}^{1} \\frac{1}{x} dx$. a) Giải thích tại sao tích phân này phân kỳ theo định nghĩa thông thường. b) Định nghĩa giá trị chính Cauchy (P.V.) cho tích phân này. c) Tính giá trị chính Cauchy đó.",
+      "answer": {
+        "steps": [
+          "a) Tích phân có kỳ dị tại $x=0$. Ta phải tách $I = \\int_{-1}^0 \\frac{dx}{x} + \\int_0^1 \\frac{dx}{x}$.",
+          "Xét $\\int_0^1 \\frac{dx}{x} = \\lim_{a\\to 0^+} [\\ln|x|]_a^1 = \\lim_{a\\to 0^+} (0 - \\ln a) = \\infty$.",
+          "Vì một trong hai phần đã phân kỳ, tích phân $I$ phân kỳ.",
+          "b) Giá trị chính Cauchy được định nghĩa bằng cách cho các khoảng tiến đến điểm kỳ dị một cách đối xứng:",
+          "P.V. $\\int_{-1}^{1} \\frac{1}{x} dx = \\lim_{\\epsilon \\to 0^+} \\left( \\int_{-1}^{-\\epsilon} \\frac{dx}{x} + \\int_{\\epsilon}^{1} \\frac{dx}{x} \\right)$.",
+          "c) Tính toán: $\\int_{-1}^{-\\epsilon} \\frac{dx}{x} = [\\ln|x|]_{-1}^{-\\epsilon} = \\ln|-\\epsilon| - \\ln|-1| = \\ln(\\epsilon)$.",
+          "$\\int_{\\epsilon}^{1} \\frac{dx}{x} = [\\ln|x|]_{\\epsilon}^{1} = \\ln|1| - \\ln|\\epsilon| = -\\ln(\\epsilon)$.",
+          "P.V. $I = \\lim_{\\epsilon \\to 0^+} (\\ln(\\epsilon) - \\ln(\\epsilon)) = \\lim_{\\epsilon \\to 0^+} 0 = 0$.",
+          "Giá trị chính Cauchy của tích phân này là 0, mặc dù tích phân phân kỳ theo định nghĩa chuẩn."
+        ]
+      }
+    },
+    {
+      "question": "Sử dụng tích phân Gaussian $\\int_0^\\infty e^{-x^2}dx = \\frac{\\sqrt{\\pi}}{2}$ để tính một tích phân khác. a) Tính $I_1 = \\int_0^\\infty e^{-ax^2}dx$ với $a>0$ bằng cách sử dụng phép đổi biến. b) Tính $I_2 = \\int_0^\\infty x^2 e^{-x^2}dx$ bằng cách sử dụng tích phân từng phần và kết quả đã biết.",
+      "answer": {
+        "steps": [
+          "a) Đặt $u = \\sqrt{a}x$, suy ra $x = u/\\sqrt{a}$ và $dx = du/\\sqrt{a}$.",
+          "Cận không đổi. Tích phân trở thành $I_1 = \\int_0^\\infty e^{-u^2} \\frac{du}{\\sqrt{a}} = \\frac{1}{\\sqrt{a}} \\int_0^\\infty e^{-u^2}du$.",
+          "Sử dụng kết quả cho trước: $I_1 = \\frac{1}{\\sqrt{a}} \\frac{\\sqrt{\\pi}}{2} = \\frac{\\sqrt{\\pi}}{2\\sqrt{a}}$.",
+          "b) Ta tính $I_2$ bằng tích phân từng phần. Đặt $u=x, dv=xe^{-x^2}dx$.",
+          "Ta có $du=dx$. Để tìm $v$, ta tính $\\int xe^{-x^2}dx = -\\frac{1}{2}e^{-x^2}$. Vậy $v = -\\frac{1}{2}e^{-x^2}$.",
+          "$I_2 = [x(-\\frac{1}{2}e^{-x^2})]_0^\\infty - \\int_0^\\infty (-\\frac{1}{2}e^{-x^2})dx$.",
+          "Số hạng đầu tiên: $\\lim_{b\\to\\infty}(-\\frac{b}{2e^{b^2}}) - 0 = 0$ (dùng L'Hôpital).",
+          "Số hạng thứ hai: $\\frac{1}{2}\\int_0^\\infty e^{-x^2}dx = \\frac{1}{2} (\\frac{\\sqrt{\\pi}}{2}) = \\frac{\\sqrt{\\pi}}{4}$.",
+          "Vậy $I_2 = \\frac{\\sqrt{\\pi}}{4}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm điều kiện hội tụ của tích phân suy rộng phụ thuộc hai tham số: $I = \\int_1^\\infty \\frac{dx}{x^p(\\ln x)^q}$. a) Xét trường hợp $p=1$. Biến đổi tích phân bằng cách đặt $u = \\ln x$ và tìm điều kiện của $q$. b) Xét trường hợp $p>1$. So sánh hàm dưới dấu tích phân với $g(x)=\\frac{M}{x^p}$ để chứng minh hội tụ với mọi $q$. c) Xét trường hợp $p<1$. So sánh với $h(x)=\\frac{1}{x^r}$ với $p<r<1$ để chứng minh phân kỳ. Tổng hợp các điều kiện.",
+      "answer": {
+        "steps": [
+          "a) Nếu $p=1$, $I = \\int_1^\\infty \\frac{dx}{x(\\ln x)^q}$. Đặt $u=\\ln x, du=dx/x$. Cận mới là $u_1=\\ln 1=0, u_2=\\infty$.",
+          "$I = \\int_0^\\infty \\frac{du}{u^q}$. Đây là tích phân p-series loại 2 tại 0 và loại 1 tại $\\infty$. Nó chỉ hội tụ nếu hội tụ ở cả hai đầu. Nhưng $\\int_0^1 \\frac{du}{u^q}$ hội tụ khi $q<1$, còn $\\int_1^\\infty \\frac{du}{u^q}$ hội tụ khi $q>1$. Hai điều kiện này mâu thuẫn. Do đó, với $p=1$, tích phân luôn phân kỳ. (Chú ý: tích phân gốc bắt đầu từ 1, nên kỳ dị tại $\\ln(1)=0$. $I = \\int_0^\\infty u^{-q} du$ phân kỳ với mọi q).",
+          "b) Nếu $p>1$. Chọn $\\epsilon$ sao cho $p-\\epsilon > 1$. Ta có $\\lim_{x\\to\\infty} \\frac{(\\ln x)^q}{x^\\epsilon}=0$ với mọi $q$. Do đó, với $x$ đủ lớn, $(\\ln x)^q < x^\\epsilon$.",
+          "Suy ra $\\frac{1}{x^p(\\ln x)^q} = \\frac{1}{x^{p-\\epsilon}} \\frac{1}{x^\\epsilon(\\ln x)^q}$. Với $x$ đủ lớn, ta có thể so sánh hàm với $M/x^p$. Hoặc đơn giản hơn, $\\frac{1}{x^p(\\ln x)^q} < \\frac{1}{x^p}$ khi $\\ln x > 1$. Vì $\\int_e^\\infty x^{-p}dx$ hội tụ, tích phân ban đầu hội tụ.",
+          "c) Nếu $p<1$. Chọn $r$ sao cho $p < r < 1$. Ta so sánh $\\frac{1}{x^p(\\ln x)^q}$ và $\\frac{1}{x^r}$.",
+          "$\\lim_{x\\to\\infty} \\frac{1/(x^p(\\ln x)^q)}{1/x^r} = \\lim_{x\\to\\infty} \\frac{x^{r-p}}{(\\ln x)^q} = \\infty$ vì $r-p>0$.",
+          "Vì $\\int_1^\\infty \\frac{dx}{x^r}$ phân kỳ (do $r<1$), theo tiêu chuẩn so sánh giới hạn, tích phân ban đầu cũng phân kỳ.",
+          "Tổng hợp: Tích phân hội tụ khi $p>1$ (với mọi $q$) hoặc $p=1, q>1$. (Sửa lại bước a: Tích phân $\\int_1^2 \\frac{dx}{x(\\ln x)^q}$ hội tụ khi $q<1$. Tích phân $\\int_2^\\infty \\frac{dx}{x(\\ln x)^q}$ hội tụ khi $q>1$. Vậy không có $q$ nào làm cho tích phân hội tụ khi $p=1$. Kết luận đúng)."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân Frullani: $I = \\int_0^\\infty \\frac{\\arctan(ax)-\\arctan(bx)}{x} dx$ với $a,b>0$. a) Phát biểu định lý Frullani cho tích phân $\\int_0^\\infty \\frac{f(ax)-f(bx)}{x} dx$. b) Xác định hàm $f(x)$ tương ứng trong bài toán và kiểm tra các điều kiện của định lý. c) Áp dụng định lý để tính giá trị của $I$.",
+      "answer": {
+        "steps": [
+          "a) Định lý Frullani: Nếu $f$ là hàm liên tục trên $[0, \\infty)$, có giới hạn hữu hạn $f(0)$ và $f(\\infty)$, và tích phân $\\int_A^\\infty \\frac{f(t)}{t}dt$ hội tụ với mọi $A>0$, thì $\\int_0^\\infty \\frac{f(ax)-f(bx)}{x} dx = (f(\\infty)-f(0))\\ln(\\frac{a}{b})$.",
+          "b) So sánh với tích phân đã cho, ta chọn $f(t) = \\arctan(t)$.",
+          "Kiểm tra điều kiện: $f(t)$ liên tục. $f(0) = \\arctan(0) = 0$.",
+          "$f(\\infty) = \\lim_{t\\to\\infty} \\arctan(t) = \\frac{\\pi}{2}$. Cả hai giới hạn đều hữu hạn.",
+          "c) Áp dụng công thức Frullani:",
+          "$I = (f(\\infty) - f(0)) \\ln(\\frac{a}{b}) = (\\frac{\\pi}{2} - 0) \\ln(\\frac{a}{b}) = \\frac{\\pi}{2}\\ln(\\frac{a}{b})$."
+        ]
+      }
+    },
+    {
+      "question": "Xét sự hội tụ của một tích phân dao động phức tạp: $I = \\int_0^\\infty \\cos(x^2)dx$ (Tích phân Fresnel). a) Tách tích phân thành $\\int_0^1 \\cos(x^2)dx + \\int_1^\\infty \\cos(x^2)dx$. Nhận xét về tích phân thứ nhất. b) Đối với tích phân thứ hai, sử dụng phép đổi biến $u=x^2$. c) Sử dụng tích phân từng phần cho tích phân theo biến $u$ để chứng minh sự hội tụ.",
+      "answer": {
+        "steps": [
+          "a) Tích phân $\\int_0^1 \\cos(x^2)dx$ là một tích phân xác định thông thường vì hàm số liên tục trên $[0,1]$. Do đó nó có giá trị hữu hạn.",
+          "b) Xét $J = \\int_1^\\infty \\cos(x^2)dx$. Đặt $u=x^2 \\Rightarrow x=\\sqrt{u}, dx = \\frac{du}{2\\sqrt{u}}$.",
+          "Cận: $x=1 \\to u=1, x\\to\\infty \\to u\\to\\infty$.",
+          "$J = \\int_1^\\infty \\cos(u) \\frac{du}{2\\sqrt{u}} = \\frac{1}{2}\\int_1^\\infty \\frac{\\cos u}{\\sqrt{u}} du$.",
+          "c) Ta chứng minh $J$ hội tụ bằng tích phân từng phần. Đặt $f(u)=1/\\sqrt{u}, g'(u)=\\cos u \\Rightarrow f'(u)=-1/(2u^{3/2}), g(u)=\\sin u$.",
+          "$\\int_1^\\infty \\frac{\\cos u}{\\sqrt{u}}du = [\\frac{\\sin u}{\\sqrt{u}}]_1^\\infty - \\int_1^\\infty \\sin u (-\\frac{1}{2u^{3/2}})du$.",
+          "Số hạng đầu: $[\\frac{\\sin u}{\\sqrt{u}}]_1^\\infty = 0 - \\sin(1)$ là hữu hạn.",
+          "Tích phân còn lại: $\\frac{1}{2}\\int_1^\\infty \\frac{\\sin u}{u^{3/2}}du$. Tích phân này hội tụ tuyệt đối vì $|\\frac{\\sin u}{u^{3/2}}| \\le \\frac{1}{u^{3/2}}$ và $\\int_1^\\infty u^{-3/2}du$ hội tụ (p-series, p=3/2>1).",
+          "Vì cả hai phần đều hữu hạn, $J$ hội tụ. Do đó, $I$ hội tụ."
+        ]
+      }
+    },
+    {
+      "question": "Tính tích phân suy rộng bằng cách kết hợp các số hạng: $I = \\int_1^\\infty (\\frac{1}{\\sqrt{x}} - \\frac{1}{\\sqrt{x+1}}) dx$. a) Giải thích tại sao không thể tính $\\int_1^\\infty \\frac{dx}{\\sqrt{x}}$ và $\\int_1^\\infty \\frac{dx}{\\sqrt{x+1}}$ riêng lẻ. b) Viết tích phân dưới dạng giới hạn của một tích phân xác định và tìm nguyên hàm của biểu thức bên trong. c) Tính giới hạn để tìm giá trị của $I$.",
+      "answer": {
+        "steps": [
+          "a) Cả hai tích phân $\\int_1^\\infty x^{-1/2}dx$ và $\\int_1^\\infty (x+1)^{-1/2}dx$ đều là dạng p-series với $p=1/2 \\le 1$, do đó cả hai đều phân kỳ. Ta không thể lấy $\\infty - \\infty$.",
+          "b) $I = \\lim_{b\\to\\infty} \\int_1^b (x^{-1/2} - (x+1)^{-1/2}) dx$.",
+          "Nguyên hàm là $[2\\sqrt{x} - 2\\sqrt{x+1}]_1^b$.",
+          "c) Giá trị của tích phân xác định là $(2\\sqrt{b} - 2\\sqrt{b+1}) - (2\\sqrt{1} - 2\\sqrt{1+1}) = 2(\\sqrt{b} - \\sqrt{b+1}) - 2 + 2\\sqrt{2}$.",
+          "Ta cần tính $\\lim_{b\\to\\infty} 2(\\sqrt{b} - \\sqrt{b+1})$. Nhân liên hợp:",
+          "$\\lim_{b\\to\\infty} 2 \\frac{(\\sqrt{b} - \\sqrt{b+1})(\\sqrt{b} + \\sqrt{b+1})}{\\sqrt{b} + \\sqrt{b+1}} = \\lim_{b\\to\\infty} 2 \\frac{b - (b+1)}{\\sqrt{b} + \\sqrt{b+1}} = \\lim_{b\\to\\infty} \\frac{-2}{\\sqrt{b} + \\sqrt{b+1}} = 0$.",
+          "Vậy $I = 0 - 2 + 2\\sqrt{2} = 2\\sqrt{2}-2$. Tích phân hội tụ."
+        ]
+      }
+    },
+    {
+      "question": "Sử dụng đạo hàm theo tham số để tính tích phân suy rộng. Cho $I(a) = \\int_0^\\infty e^{-ax} \\frac{\\sin x}{x} dx$ với $a \\ge 0$. a) Tính đạo hàm $I'(a)$ bằng cách lấy đạo hàm dưới dấu tích phân. (Giả sử $a>0$). b) Tính tích phân $I'(a)$ để tìm biểu thức của $I'(a)$ theo $a$. c) Lấy nguyên hàm của $I'(a)$ để tìm $I(a)$, sau đó sử dụng điều kiện $\\lim_{a\\to\\infty} I(a) = 0$ để tìm hằng số và suy ra $I(0) = \\int_0^\\infty \\frac{\\sin x}{x}dx$.",
+      "answer": {
+        "steps": [
+          "a) $I'(a) = \\frac{d}{da} \\int_0^\\infty e^{-ax} \\frac{\\sin x}{x} dx = \\int_0^\\infty \\frac{\\partial}{\\partial a}(e^{-ax} \\frac{\\sin x}{x}) dx = \\int_0^\\infty -xe^{-ax} \\frac{\\sin x}{x} dx = -\\int_0^\\infty e^{-ax}\\sin x dx$.",
+          "b) Tích phân $J = \\int_0^\\infty e^{-ax}\\sin x dx$ có thể tính bằng tích phân từng phần hai lần, cho kết quả $J = \\frac{1}{a^2+1}$.",
+          "Vậy $I'(a) = -\\frac{1}{a^2+1}$.",
+          "c) Lấy nguyên hàm hai vế theo $a$: $I(a) = \\int -\\frac{1}{a^2+1} da = -\\arctan(a) + C$.",
+          "Ta có $\\lim_{a\\to\\infty} I(a) = \\lim_{a\\to\\infty} (-\\arctan(a)+C) = -\\frac{\\pi}{2} + C$.",
+          "Mặt khác, $|I(a)| \\le \\int_0^\\infty |e^{-ax} \\frac{\\sin x}{x}| dx \\le \\int_0^\\infty e^{-ax} dx = 1/a$, nên $\\lim_{a\\to\\infty} I(a)=0$.",
+          "Do đó, $-\\frac{\\pi}{2} + C = 0 \\Rightarrow C = \\frac{\\pi}{2}$.",
+          "Vậy $I(a) = \\frac{\\pi}{2} - \\arctan(a)$.",
+          "Giá trị cần tìm là $I(0) = \\frac{\\pi}{2} - \\arctan(0) = \\frac{\\pi}{2}$."
+        ]
+      }
+    },
+    {
+      "question": "Tính diện tích của một vùng đất hình tam giác. Vùng đất có các đỉnh tại các tọa độ (0,0), (3,0), và (3,2). a) Tìm phương trình đường thẳng đi qua hai đỉnh (0,0) và (3,2). b) Thiết lập tích phân xác định để tính diện tích của vùng đất này. c) Tính tích phân và so sánh kết quả với công thức diện tích tam giác (1/2 * đáy * cao) để kiểm tra.",
+      "answer": {
+        "steps": [
+          "a) Đường thẳng đi qua (0,0) có dạng $y=mx$. Thay điểm (3,2) vào, ta có $2 = m(3) \\Rightarrow m = 2/3$. Vậy phương trình đường thẳng là $y = \\frac{2}{3}x$.",
+          "b) Vùng đất được giới hạn bởi $y=\\frac{2}{3}x$, trục hoành $y=0$, từ $x=0$ đến $x=3$. Diện tích được tính bằng tích phân: $S = \\int_{0}^{3} \\frac{2}{3}x dx$.",
+          "c) Tính tích phân: $S = \\frac{2}{3} [\\frac{x^2}{2}]_{0}^{3} = \\frac{1}{3}[x^2]_0^3 = \\frac{1}{3}(3^2 - 0^2) = \\frac{9}{3} = 3$.",
+          "Kiểm tra bằng công thức hình học: tam giác có đáy là 3 và chiều cao là 2. Diện tích là $\\frac{1}{2} \\times 3 \\times 2 = 3$. Hai kết quả khớp nhau."
+        ]
+      }
+    },
+    {
+      "question": "Tìm quãng đường một vật rơi tự do đi được. Vận tốc của một vật rơi (bỏ qua sức cản không khí) được cho bởi công thức $v(t) = 9.8t$ (m/s), với $t$ là thời gian tính bằng giây. a) Mối quan hệ giữa quãng đường đi được và tích phân của vận tốc là gì? b) Thiết lập tích phân để tính tổng quãng đường vật đi được trong 4 giây đầu tiên (từ $t=0$ đến $t=4$). c) Tính tích phân đó.",
+      "answer": {
+        "steps": [
+          "a) Quãng đường đi được trong một khoảng thời gian là tích phân của hàm vận tốc trên khoảng thời gian đó.",
+          "b) Quãng đường $S$ đi được từ $t=0$ đến $t=4$ là: $S = \\int_{0}^{4} v(t) dt = \\int_{0}^{4} 9.8t dt$.",
+          "c) Tính tích phân: $S = 9.8 [\\frac{t^2}{2}]_{0}^{4} = 4.9[t^2]_0^4 = 4.9(4^2 - 0^2) = 4.9(16) = 78.4$.",
+          "Vậy, trong 4 giây đầu tiên, vật đi được 78.4 mét."
+        ]
+      }
+    },
+    {
+      "question": "Tính thể tích của một chiếc ly hình nón. Chiếc ly được tạo ra bằng cách quay đường thẳng $y=2x$ quanh trục Oy, từ $y=0$ đến $y=6$. a) Để tính thể tích khi quay quanh trục Oy, ta cần biểu diễn $x$ như một hàm của $y$. Hãy tìm hàm đó. b) Nêu công thức tính thể tích bằng phương pháp đĩa khi quay quanh trục Oy. c) Thiết lập và tính tích phân để tìm thể tích của chiếc ly.",
+      "answer": {
+        "steps": [
+          "a) Từ $y=2x$, ta có $x = \\frac{y}{2}$.",
+          "b) Công thức thể tích khi quay miền giới hạn bởi $x=g(y)$, trục Oy, $y=c, y=d$ quanh trục Oy là: $V = \\pi \\int_{c}^{d} [g(y)]^2 dy$.",
+          "c) Trong trường hợp này, $g(y) = y/2$, $c=0, d=6$.",
+          "$V = \\pi \\int_{0}^{6} (\\frac{y}{2})^2 dy = \\pi \\int_{0}^{6} \\frac{y^2}{4} dy$.",
+          "$V = \\frac{\\pi}{4} [\\frac{y^3}{3}]_{0}^{6} = \\frac{\\pi}{12} [y^3]_0^6 = \\frac{\\pi}{12} (6^3 - 0^3) = \\frac{216\\pi}{12} = 18\\pi$.",
+          "Thể tích của chiếc ly là $18\\pi$ (đơn vị thể tích)."
+        ]
+      }
+    },
+    {
+      "question": "Tìm độ dài của một đoạn đường thẳng. Hãy dùng tích phân để tính độ dài của đoạn thẳng $y=x+1$ từ điểm $x=1$ đến $x=4$. a) Nêu công thức tính độ dài cung của đồ thị hàm số $y=f(x)$. b) Tính đạo hàm $f'(x)$ và biểu thức $\\sqrt{1+(f'(x))^2}$. c) Tính tích phân để tìm độ dài và kiểm tra lại bằng công thức khoảng cách.",
+      "answer": {
+        "steps": [
+          "a) Công thức độ dài cung là $L = \\int_{a}^{b} \\sqrt{1 + [f'(x)]^2} dx$.",
+          "b) Với $f(x)=x+1$, ta có $f'(x)=1$.",
+          "Do đó, $\\sqrt{1+(f'(x))^2} = \\sqrt{1+1^2} = \\sqrt{2}$.",
+          "c) $L = \\int_{1}^{4} \\sqrt{2} dx = \\sqrt{2} [x]_{1}^{4} = \\sqrt{2} (4-1) = 3\\sqrt{2}$.",
+          "Kiểm tra: Các điểm đầu mút là $(1, 2)$ và $(4, 5)$. Khoảng cách là $\\sqrt{(4-1)^2 + (5-2)^2} = \\sqrt{3^2+3^2} = \\sqrt{18} = 3\\sqrt{2}$. Kết quả khớp nhau."
+        ]
+      }
+    },
+    {
+      "question": "Tính diện tích phần dương của một chu kỳ hàm sin. Tìm diện tích miền phẳng giới hạn bởi đường cong $y=\\sin(x)$ và trục Ox, trong khoảng từ $x=0$ đến $x=\\pi$. a) Trong khoảng $[0, \\pi]$, hàm $y=\\sin(x)$ nằm trên hay dưới trục Ox? b) Thiết lập tích phân tính diện tích. c) Tính tích phân đó.",
+      "answer": {
+        "steps": [
+          "a) Trong khoảng $(0, \\pi)$, giá trị của $\\sin(x)$ luôn dương, do đó đồ thị nằm hoàn toàn phía trên trục Ox.",
+          "b) Diện tích được tính bằng $S = \\int_{0}^{\\pi} \\sin(x) dx$.",
+          "c) Nguyên hàm của $\\sin(x)$ là $-\\cos(x)$.",
+          "$S = [-\\cos(x)]_{0}^{\\pi} = (-\\cos(\\pi)) - (-\\cos(0)) = -(-1) - (-1) = 1+1 = 2$.",
+          "Diện tích của một 'vòm' của đường sin là 2 (đơn vị diện tích)."
+        ]
+      }
+    },
+    {
+      "question": "Tìm nhiệt độ trung bình trong một ngày. Giả sử nhiệt độ (độ C) vào thời điểm $t$ (giờ, tính từ lúc 0h) trong 6 giờ đầu tiên của buổi sáng được mô tả bởi hàm số $T(t) = 10 + 2t$. a) Nêu công thức tính giá trị trung bình của một hàm số. b) Thiết lập tích phân để tính nhiệt độ trung bình từ $t=0$ đến $t=6$. c) Tính toán để tìm nhiệt độ trung bình.",
+      "answer": {
+        "steps": [
+          "a) Giá trị trung bình của hàm $f(t)$ trên đoạn $[a, b]$ là $f_{tb} = \\frac{1}{b-a} \\int_{a}^{b} f(t) dt$.",
+          "b) Nhiệt độ trung bình $T_{tb}$ từ $t=0$ đến $t=6$ là: $T_{tb} = \\frac{1}{6-0} \\int_{0}^{6} (10+2t) dt$.",
+          "c) $T_{tb} = \\frac{1}{6} [10t + t^2]_{0}^{6} = \\frac{1}{6} ((10(6) + 6^2) - (0)) = \\frac{1}{6}(60+36) = \\frac{96}{6} = 16$.",
+          "Nhiệt độ trung bình trong 6 giờ đầu là 16 độ C."
+        ]
+      }
+    },
+    {
+      "question": "Tính thể tích của một thùng phi hình trụ. Một thùng phi hình trụ được tạo ra bằng cách quay hình chữ nhật giới hạn bởi $y=3$, trục Ox, $x=0, x=2$ quanh trục Ox. a) Sử dụng phương pháp đĩa, hãy cho biết bán kính của đĩa tròn tại một vị trí $x$ bất kỳ. b) Thiết lập tích phân tính thể tích. c) Tính tích phân và so sánh với công thức thể tích hình trụ ($V=\\pi r^2 h$) để kiểm tra.",
+      "answer": {
+        "steps": [
+          "a) Tại một vị trí $x$ bất kỳ, bán kính của đĩa tròn là $R(x) = y = 3$.",
+          "b) Thể tích được tính bằng: $V = \\pi \\int_{0}^{2} [R(x)]^2 dx = \\pi \\int_{0}^{2} 3^2 dx = \\pi \\int_{0}^{2} 9 dx$.",
+          "c) $V = 9\\pi [x]_{0}^{2} = 9\\pi(2-0) = 18\\pi$.",
+          "Kiểm tra: Hình trụ có bán kính $r=3$ và chiều cao $h=2$. Thể tích là $V=\\pi(3^2)(2) = 18\\pi$. Kết quả khớp nhau."
+        ]
+      }
+    },
+    {
+      "question": "Tính diện tích giữa một đường cong và một đường thẳng. Tìm diện tích miền phẳng giới hạn bởi đường cong $y=e^x$, đường thẳng $y=e$, và trục Oy ($x=0$). a) Tìm giao điểm của $y=e^x$ và $y=e$ để xác định cận tích phân. b) Xác định hàm nào nằm trên trong miền cần tính diện tích. c) Thiết lập và tính tích phân.",
+      "answer": {
+        "steps": [
+          "a) Cho $e^x=e$, ta có $x=1$. Miền được giới hạn theo $x$ từ 0 đến 1.",
+          "b) Trong khoảng $[0, 1]$, $e^x \\le e$. Do đó, đường thẳng $y=e$ nằm trên đường cong $y=e^x$.",
+          "c) Diện tích được tính bằng $S = \\int_{0}^{1} (\\text{đường trên} - \\text{đường dưới}) dx = \\int_{0}^{1} (e - e^x) dx$.",
+          "$S = [ex - e^x]_{0}^{1} = (e(1) - e^1) - (e(0) - e^0) = (e-e) - (0-1) = 0 - (-1) = 1$.",
+          "Diện tích của miền là 1 (đơn vị diện tích)."
+        ]
+      }
+    },
+    {
+      "question": "Tính công để bơm nước ra khỏi một bể hình hộp chữ nhật. Bể có đáy hình vuông cạnh 2m, cao 3m và chứa đầy nước. a) Xét một lớp nước mỏng có bề dày $dy$ ở độ sâu $y$ (tính từ mặt trên của bể). Tính thể tích và trọng lượng của lớp nước này (biết trọng lượng riêng của nước là 9800 N/m$^3$). b) Lớp nước này cần được bơm một quãng đường là bao nhiêu? Tính công $dW$ để bơm lớp nước này. c) Thiết lập và tính tích phân để tìm tổng công.",
+      "answer": {
+        "steps": [
+          "a) Thể tích của một lớp nước mỏng là $dV = (\\text{diện tích đáy}) \\times dy = (2 \\times 2) dy = 4 dy$ (m$^3$).",
+          "Trọng lượng của lớp nước này là $dF = 9800 \\times dV = 9800 \\times 4 dy = 39200 dy$ (N).",
+          "b) Lớp nước ở độ sâu $y$ cần được bơm một quãng đường là $y$ mét.",
+          "Công để bơm lớp nước này là $dW = dF \\times y = 39200 y dy$.",
+          "c) Bể chứa đầy nước, nên $y$ chạy từ 0 (mặt nước) đến 3 (đáy bể).",
+          "Tổng công là $W = \\int_{0}^{3} 39200 y dy = 39200 [\\frac{y^2}{2}]_{0}^{3}$.",
+          "$W = 19600 [y^2]_0^3 = 19600 (3^2 - 0^2) = 19600 \\times 9 = 176400$.",
+          "Tổng công cần thiết là 176,400 Joules."
+        ]
+      }
+    },
+    {
+      "question": "Tìm diện tích của một miền không bị chặn bởi hai đường cong. Tìm diện tích miền phẳng giới hạn bởi $y=1/x$, $y=1/x^2$ và $x=1$ về phía bên phải. a) Tìm giao điểm của hai đường cong. b) Xác định hàm nào lớn hơn khi $x>1$. c) Thiết lập và tính tích phân suy rộng để tìm diện tích.",
+      "answer": {
+        "steps": [
+          "a) Cho $1/x = 1/x^2 \\Rightarrow x^2 = x \\Rightarrow x^2-x=0 \\Rightarrow x(x-1)=0$. Giao điểm là $x=1$ (ta không xét $x=0$). Cận dưới của tích phân là 1.",
+          "b) Khi $x>1$, ta có $x^2 > x$. Lấy nghịch đảo, ta được $\\frac{1}{x^2} < \\frac{1}{x}$. Vậy $y=1/x$ nằm trên $y=1/x^2$.",
+          "c) Diện tích là một tích phân suy rộng: $S = \\int_{1}^{\\infty} (\\frac{1}{x} - \\frac{1}{x^2}) dx$.",
+          "$S = \\lim_{b \\to \\infty} \\int_{1}^{b} (\\frac{1}{x} - \\frac{1}{x^2}) dx = \\lim_{b \\to \\infty} [\\ln|x| - (-\\frac{1}{x})]_{1}^{b}$.",
+          "$S = \\lim_{b \\to \\infty} [\\ln(x) + \\frac{1}{x}]_{1}^{b} = \\lim_{b \\to \\infty} ( (\\ln(b) + \\frac{1}{b}) - (\\ln(1) + \\frac{1}{1}) )$.",
+          "$S = \\lim_{b \\to \\infty} (\\ln(b) + \\frac{1}{b} - 1)$. Vì $\\lim_{b\\to\\infty} \\ln(b) = \\infty$, giới hạn này không tồn tại (tiến ra vô cùng).",
+          "Vậy diện tích của miền này là vô hạn."
+        ]
+      }
+    },
+    {
+      "question": "Tìm diện tích miền phẳng bằng cách tích phân theo biến y. Miền D được giới hạn bởi parabol $x=y^2-1$ và đường thẳng $x=y+1$. a) Tìm tung độ giao điểm của hai đường cong. b) Xác định đường cong nào nằm bên phải (có giá trị $x$ lớn hơn) trong miền cần tính. c) Thiết lập và tính tích phân theo biến $y$ để tìm diện tích.",
+      "answer": {
+        "steps": [
+          "a) Để tìm giao điểm, ta cho hai biểu thức của $x$ bằng nhau: $y^2-1 = y+1 \\Rightarrow y^2 - y - 2 = 0$.",
+          "Phương trình có hai nghiệm $y=-1$ và $y=2$. Đây là hai cận tích phân theo biến $y$.",
+          "b) Chọn một điểm thử trong khoảng $(-1, 2)$, ví dụ $y=0$.",
+          "Tại $y=0$, ta có $x = 0^2-1 = -1$ và $x=0+1=1$.",
+          "Vì $1 > -1$, đường thẳng $x=y+1$ nằm bên phải parabol $x=y^2-1$ trong khoảng này.",
+          "c) Diện tích được tính bằng tích phân của (đường bên phải - đường bên trái) theo biến $y$:",
+          "$S = \\int_{-1}^{2} [(y+1) - (y^2-1)] dy = \\int_{-1}^{2} (-y^2+y+2) dy$.",
+          "Tính tích phân: $S = [-\\frac{y^3}{3} + \\frac{y^2}{2} + 2y]_{-1}^{2}$.",
+          "$S = (-\\frac{8}{3} + \\frac{4}{2} + 4) - (-(-\\frac{1}{3}) + \\frac{1}{2} - 2) = (-\\frac{8}{3} + 6) - (\\frac{1}{3} + \\frac{1}{2} - 2) = \\frac{10}{3} - (-\\frac{7}{6}) = \\frac{20}{6} + \\frac{7}{6} = \\frac{27}{6} = \\frac{9}{2}$."
+        ]
+      }
+    },
+    {
+      "question": "Tính thể tích vật thể tròn xoay khi quay quanh một đường thẳng không phải là trục tọa độ. Miền D giới hạn bởi $y=x^2$ và $y=\\sqrt{x}$. a) Nêu công thức phương pháp vòng đệm (washer method) khi quay quanh đường thẳng $y=k$. b) Thiết lập tích phân tính thể tích khi quay miền D quanh đường thẳng $y=2$. c) Tính tích phân đó.",
+      "answer": {
+        "steps": [
+          "a) Công thức là $V = \\pi \\int_{a}^{b} [R(x)^2 - r(x)^2] dx$, trong đó $R(x)$ là bán kính ngoài (khoảng cách từ đường $y=k$ đến đường cong xa hơn) và $r(x)$ là bán kính trong (khoảng cách từ $y=k$ đến đường cong gần hơn).",
+          "b) Giao điểm của $y=x^2$ và $y=\\sqrt{x}$ là $x=0, x=1$. Trong khoảng $(0,1)$, $\\sqrt{x} > x^2$.",
+          "Đường cong xa trục quay $y=2$ hơn là $y=x^2$. Bán kính ngoài: $R(x) = 2 - x^2$.",
+          "Đường cong gần trục quay $y=2$ hơn là $y=\\sqrt{x}$. Bán kính trong: $r(x) = 2 - \\sqrt{x}$.",
+          "Thể tích là $V = \\pi \\int_{0}^{1} [(2-x^2)^2 - (2-\\sqrt{x})^2] dx$.",
+          "c) Khai triển biểu thức: $V = \\pi \\int_{0}^{1} [(4-4x^2+x^4) - (4-4\\sqrt{x}+x)] dx = \\pi \\int_{0}^{1} (x^4 - 4x^2 - x + 4x^{1/2}) dx$.",
+          "$V = \\pi [\\frac{x^5}{5} - \\frac{4x^3}{3} - \\frac{x^2}{2} + 4\\frac{x^{3/2}}{3/2}]_{0}^{1} = \\pi [\\frac{x^5}{5} - \\frac{4x^3}{3} - \\frac{x^2}{2} + \\frac{8}{3}x^{3/2}]_{0}^{1}$.",
+          "$V = \\pi (\\frac{1}{5} - \\frac{4}{3} - \\frac{1}{2} + \\frac{8}{3}) = \\pi (\\frac{1}{5} + \\frac{4}{3} - \\frac{1}{2}) = \\pi (\\frac{6+40-15}{30}) = \\frac{31\\pi}{30}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm độ dài cung của một đường cong có đạo hàm phức tạp hơn. Tìm độ dài cung của đồ thị hàm số $y = \\ln(\\cos x)$ từ $x=0$ đến $x=\\pi/3$. a) Tính đạo hàm $y'$. b) Tính và rút gọn biểu thức $\\sqrt{1+(y')^2}$. c) Thiết lập và tính tích phân độ dài cung.",
+      "answer": {
+        "steps": [
+          "a) $y' = \\frac{1}{\\cos x} \\cdot (-\\sin x) = -\\tan x$.",
+          "b) $1 + (y')^2 = 1 + (-\\tan x)^2 = 1 + \\tan^2 x = \\sec^2 x$.",
+          "Vậy $\\sqrt{1+(y')^2} = \\sqrt{\\sec^2 x} = |\\sec x|$.",
+          "Trên khoảng $[0, \\pi/3]$, $\\cos x > 0$ nên $\\sec x > 0$. Do đó $|\\sec x| = \\sec x$.",
+          "c) Độ dài cung là $L = \\int_{0}^{\\pi/3} \\sec x dx$.",
+          "Nguyên hàm của $\\sec x$ là $\\ln|\\sec x + \\tan x|$.",
+          "$L = [\\ln|\\sec x + \\tan x|]_{0}^{\\pi/3}$.",
+          "$L = \\ln|\\sec(\\pi/3) + \\tan(\\pi/3)| - \\ln|\\sec(0) + \\tan(0)|$.",
+          "$L = \\ln|2 + \\sqrt{3}| - \\ln|1 + 0| = \\ln(2+\\sqrt{3}) - 0 = \\ln(2+\\sqrt{3})$."
+        ]
+      }
+    },
+    {
+      "question": "Tính thể tích vật thể có thiết diện cho trước. Đáy của vật thể là một hình tròn có bán kính $R=2$. Các thiết diện vuông góc với một đường kính cố định của đáy là các tam giác đều. a) Thiết lập hệ tọa độ và biểu diễn phương trình của đường tròn đáy. b) Tại một vị trí $x$ trên đường kính, hãy tìm độ dài cạnh của tam giác đều theo $x$. c) Tìm diện tích $A(x)$ của thiết diện và tính tích phân để tìm thể tích.",
+      "answer": {
+        "steps": [
+          "a) Đặt đường kính cố định nằm trên trục Ox. Tâm đường tròn tại gốc tọa độ. Phương trình đường tròn là $x^2+y^2=2^2=4$.",
+          "b) Tại một vị trí $x$, ta có $y = \\pm \\sqrt{4-x^2}$. Độ dài cạnh của tam giác đều bằng chiều dài dây cung vuông góc với trục Ox tại $x$, tức là $s(x) = \\sqrt{4-x^2} - (-\\sqrt{4-x^2}) = 2\\sqrt{4-x^2}$.",
+          "c) Diện tích của một tam giác đều cạnh $s$ là $A = \\frac{s^2\\sqrt{3}}{4}$.",
+          "$A(x) = \\frac{(2\\sqrt{4-x^2})^2 \\sqrt{3}}{4} = \\frac{4(4-x^2)\\sqrt{3}}{4} = \\sqrt{3}(4-x^2)$.",
+          "Thể tích được tính bằng cách tích phân $A(x)$ từ $x=-2$ đến $x=2$:",
+          "$V = \\int_{-2}^{2} \\sqrt{3}(4-x^2) dx = \\sqrt{3} [4x - \\frac{x^3}{3}]_{-2}^{2}$.",
+          "Vì hàm là chẵn, $V = 2\\sqrt{3} [4x - \\frac{x^3}{3}]_{0}^{2} = 2\\sqrt{3} (8 - \\frac{8}{3}) = 2\\sqrt{3}(\\frac{16}{3}) = \\frac{32\\sqrt{3}}{3}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm tọa độ trọng tâm (centroid) của một miền phẳng. Tìm trọng tâm của miền D giới hạn bởi $y=x^3$, trục Ox, và đường thẳng $x=1$. a) Tính diện tích $A$ của miền D. b) Tính các moment $M_x$ và $M_y$ của miền D. c) Tìm tọa độ trọng tâm $(\\bar{x}, \\bar{y})$.",
+      "answer": {
+        "steps": [
+          "a) Diện tích: $A = \\int_{0}^{1} x^3 dx = [\\frac{x^4}{4}]_{0}^{1} = \\frac{1}{4}$.",
+          "b) Moment quanh trục y: $M_y = \\int_{a}^{b} x f(x) dx = \\int_{0}^{1} x(x^3) dx = \\int_{0}^{1} x^4 dx = [\\frac{x^5}{5}]_{0}^{1} = \\frac{1}{5}$.",
+          "Moment quanh trục x: $M_x = \\int_{a}^{b} \\frac{1}{2} [f(x)]^2 dx = \\frac{1}{2} \\int_{0}^{1} (x^3)^2 dx = \\frac{1}{2} \\int_{0}^{1} x^6 dx = \\frac{1}{2}[\\frac{x^7}{7}]_{0}^{1} = \\frac{1}{14}$.",
+          "c) Tọa độ trọng tâm $(\\bar{x}, \\bar{y})$ được tính bởi:",
+          "$\\bar{x} = \\frac{M_y}{A} = \\frac{1/5}{1/4} = \\frac{4}{5}$.",
+          "$\\bar{y} = \\frac{M_x}{A} = \\frac{1/14}{1/4} = \\frac{4}{14} = \\frac{2}{7}$.",
+          "Vậy trọng tâm của miền là $(\\frac{4}{5}, \\frac{2}{7})$."
+        ]
+      }
+    },
+    {
+      "question": "Tính công để bơm nước ra khỏi một bể hình bán cầu. Bể có dạng một nửa hình cầu bán kính $R=3$ mét và chứa đầy nước. Miệng bể ở trên cùng. a) Xét một lớp nước mỏng hình đĩa ở độ sâu $y$ (tính từ mặt nước). Biểu diễn bán kính $r$ của lớp nước này theo $y$. b) Tính thể tích $dV$ và trọng lượng $dF$ của lớp nước này. c) Thiết lập và tính tích phân để tìm tổng công.",
+      "answer": {
+        "steps": [
+          "a) Đặt gốc tọa độ tại tâm của hình cầu. Phương trình của hình cầu là $x^2+y^2+z^2 = 3^2$. Mặt nước ở $y=0$. Một lớp nước ở độ sâu $y$ (tức là tọa độ $-y$) sẽ có bán kính $r$ thỏa mãn $r^2 + (-y)^2 = 3^2$.",
+          "Vậy $r^2 = 9-y^2$, suy ra $r = \\sqrt{9-y^2}$.",
+          "b) Thể tích lớp nước: $dV = \\pi r^2 dy = \\pi (9-y^2) dy$.",
+          "Trọng lượng lớp nước: $dF = \\rho g dV = 9800 \\pi (9-y^2) dy$. (với $\\rho g = 9800$ N/m$^3$).",
+          "Lớp nước này cần được bơm một quãng đường là $y$.",
+          "c) Công để bơm lớp nước này là $dW = y \\cdot dF = 9800 \\pi y(9-y^2) dy$.",
+          "Bể chứa đầy nước từ đáy ($y=3$) đến mặt ($y=0$).",
+          "Tổng công là $W = \\int_{0}^{3} 9800 \\pi y(9-y^2) dy = 9800\\pi \\int_{0}^{3} (9y-y^3) dy$.",
+          "$W = 9800\\pi [\\frac{9y^2}{2} - \\frac{y^4}{4}]_{0}^{3} = 9800\\pi ((\\frac{9(3^2)}{2} - \\frac{3^4}{4}) - 0) = 9800\\pi (\\frac{81}{2} - \\frac{81}{4}) = 9800\\pi (\\frac{81}{4})$.",
+          "$W = 2450 \\pi (81) = 198450\\pi$ Joules."
+        ]
+      }
+    },
+    {
+      "question": "Tính diện tích bề mặt tròn xoay. Tìm diện tích bề mặt của vật thể tạo thành khi quay cung parabol $y=x^2$ từ $x=0$ đến $x=1$ quanh trục Oy. a) Nêu công thức tính diện tích bề mặt khi quay quanh trục Oy. b) Thiết lập tích phân để tính diện tích. c) Tính tích phân bằng phương pháp đổi biến.",
+      "answer": {
+        "steps": [
+          "a) Công thức diện tích bề mặt khi quay quanh trục Oy là $S = 2\\pi \\int_{a}^{b} x \\sqrt{1 + [f'(x)]^2} dx$.",
+          "b) Ta có $f(x)=x^2$, $f'(x)=2x$.",
+          "Biểu thức dưới căn là $\\sqrt{1+(2x)^2} = \\sqrt{1+4x^2}$.",
+          "Tích phân là $S = 2\\pi \\int_{0}^{1} x \\sqrt{1+4x^2} dx$.",
+          "c) Đặt $u = 1+4x^2$. Suy ra $du = 8x dx$, hay $x dx = \\frac{1}{8}du$.",
+          "Đổi cận: $x=0 \\to u=1$, $x=1 \\to u=5$.",
+          "$S = 2\\pi \\int_{1}^{5} \\sqrt{u} (\\frac{1}{8}du) = \\frac{\\pi}{4} \\int_{1}^{5} u^{1/2} du$.",
+          "$S = \\frac{\\pi}{4} [\\frac{u^{3/2}}{3/2}]_{1}^{5} = \\frac{\\pi}{4} \\cdot \\frac{2}{3} [u^{3/2}]_1^5 = \\frac{\\pi}{6} (5^{3/2} - 1^{3/2}) = \\frac{\\pi}{6}(5\\sqrt{5}-1)$."
+        ]
+      }
+    },
+    {
+      "question": "Tính áp lực (lực thủy tĩnh) tác dụng lên một mặt phẳng. Một cửa sổ hình tam giác cân có đáy 2m và chiều cao 3m được đặt thẳng đứng dưới nước sao cho đỉnh của nó hướng xuống dưới và đáy của nó nằm trên mặt nước. a) Thiết lập hệ tọa độ và biểu diễn chiều rộng $w(y)$ của cửa sổ như một hàm của độ sâu $y$. b) Tính lực tác dụng lên một dải ngang mỏng của cửa sổ ở độ sâu $y$. c) Thiết lập và tính tích phân để tìm tổng áp lực.",
+      "answer": {
+        "steps": [
+          "a) Đặt gốc tọa độ tại đỉnh của tam giác, trục y hướng lên trên. Đáy tam giác nằm trên đường $y=3$.",
+          "Sử dụng tam giác đồng dạng: tại chiều cao $y$, chiều rộng $w(y)$ thỏa mãn $\\frac{w(y)}{y} = \\frac{\\text{đáy}}{\\text{cao}} = \\frac{2}{3}$.",
+          "Vậy $w(y) = \\frac{2}{3}y$.",
+          "Độ sâu của một dải ngang tại vị trí $y$ là $3-y$.",
+          "b) Diện tích của một dải ngang mỏng là $dA = w(y) dy = \\frac{2}{3}y dy$.",
+          "Lực tác dụng lên dải này là $dF = (\\text{áp suất}) \\times (\\text{diện tích}) = (\\rho g \\cdot \\text{độ sâu}) \\cdot dA$.",
+          "$dF = \\rho g (3-y) \\frac{2}{3}y dy$.",
+          "c) Tổng lực là tích phân của $dF$ từ đáy ($y=0$) đến đỉnh ($y=3$):",
+          "$F = \\int_{0}^{3} \\rho g (3-y) \\frac{2}{3}y dy = \\frac{2\\rho g}{3} \\int_{0}^{3} (3y - y^2) dy$.",
+          "$F = \\frac{2\\rho g}{3} [\\frac{3y^2}{2} - \\frac{y^3}{3}]_{0}^{3} = \\frac{2\\rho g}{3} ((\\frac{3(9)}{2} - \\frac{27}{3}) - 0) = \\frac{2\\rho g}{3} (\\frac{27}{2} - 9) = \\frac{2\\rho g}{3} (\\frac{9}{2}) = 3\\rho g$.",
+          "Với $\\rho g=9800$ N/m$^3$, $F = 3 \\times 9800 = 29400$ N."
+        ]
+      }
+    },
+    {
+      "question": "Tìm diện tích trong hệ tọa độ cực. Tìm diện tích của miền nằm bên trong đường cong hình tim $r = 1+\\cos\\theta$. a) Nêu công thức tính diện tích trong tọa độ cực. b) Xác định các cận tích phân để vẽ toàn bộ đường cong. c) Thiết lập và tính tích phân.",
+      "answer": {
+        "steps": [
+          "a) Công thức diện tích là $S = \\frac{1}{2} \\int_{\\alpha}^{\\beta} [r(\\theta)]^2 d\\theta$.",
+          "b) Để vẽ toàn bộ đường cong cardioid $r=1+\\cos\\theta$, ta cần cho $\\theta$ chạy từ $0$ đến $2\\pi$.",
+          "c) $S = \\frac{1}{2} \\int_{0}^{2\\pi} (1+\\cos\\theta)^2 d\\theta = \\frac{1}{2} \\int_{0}^{2\\pi} (1+2\\cos\\theta+\\cos^2\\theta) d\\theta$.",
+          "Sử dụng công thức hạ bậc $\\cos^2\\theta = \\frac{1+\\cos(2\\theta)}{2}$.",
+          "$S = \\frac{1}{2} \\int_{0}^{2\\pi} (1+2\\cos\\theta+\\frac{1+\\cos(2\\theta)}{2}) d\\theta = \\frac{1}{2} \\int_{0}^{2\\pi} (\\frac{3}{2}+2\\cos\\theta+\\frac{1}{2}\\cos(2\\theta)) d\\theta$.",
+          "$S = \\frac{1}{2} [\\frac{3}{2}\\theta+2\\sin\\theta+\\frac{1}{4}\\sin(2\\theta)]_{0}^{2\\pi}$.",
+          "$S = \\frac{1}{2} ((\\frac{3}{2}(2\\pi)+0+0) - (0+0+0)) = \\frac{1}{2}(3\\pi) = \\frac{3\\pi}{2}$."
+        ]
+      }
+    },
+    {
+      "question": "Tính giá trị trung bình của bình phương vận tốc trong chuyển động điều hòa. Vận tốc của một vật dao động điều hòa là $v(t) = A\\omega \\cos(\\omega t + \\phi)$. a) Tìm biểu thức của bình phương vận tốc, $v(t)^2$. b) Thiết lập tích phân để tính giá trị trung bình của $v(t)^2$ trên một chu kỳ, từ $t=0$ đến $T=2\\pi/\\omega$. c) Tính tích phân và tìm giá trị trung bình đó.",
+      "answer": {
+        "steps": [
+          "a) $v(t)^2 = (A\\omega \\cos(\\omega t + \\phi))^2 = A^2\\omega^2 \\cos^2(\\omega t + \\phi)$.",
+          "b) Giá trị trung bình là $\\overline{v^2} = \\frac{1}{T-0} \\int_{0}^{T} v(t)^2 dt = \\frac{\\omega}{2\\pi} \\int_{0}^{2\\pi/\\omega} A^2\\omega^2 \\cos^2(\\omega t + \\phi) dt$.",
+          "c) Ta sử dụng công thức hạ bậc: $\\cos^2(\\theta) = \\frac{1+\\cos(2\\theta)}{2}$.",
+          "$\\overline{v^2} = \\frac{A^2\\omega^3}{2\\pi} \\int_{0}^{2\\pi/\\omega} \\frac{1+\\cos(2(\\omega t + \\phi))}{2} dt$.",
+          "$\\overline{v^2} = \\frac{A^2\\omega^3}{4\\pi} [t + \\frac{1}{2\\omega}\\sin(2(\\omega t + \\phi))]_{0}^{2\\pi/\\omega}$.",
+          "$\\overline{v^2} = \\frac{A^2\\omega^3}{4\\pi} [( \\frac{2\\pi}{\\omega} + \\frac{\\sin(4\\pi+2\\phi)}{2\\omega}) - (0 + \\frac{\\sin(2\\phi)}{2\\omega})]$.",
+          "Vì $\\sin(4\\pi+2\\phi) = \\sin(2\\phi)$, hai số hạng sin triệt tiêu nhau.",
+          "$\\overline{v^2} = \\frac{A^2\\omega^3}{4\\pi} (\\frac{2\\pi}{\\omega}) = \\frac{A^2\\omega^2}{2}$.",
+          "Giá trị này liên quan đến động năng trung bình của vật dao động."
+        ]
+      }
+    },
+    {
+      "question": "Sử dụng Định lý Pappus thứ hai để tìm thể tích của một hình xuyến (torus). a) Phát biểu Định lý Pappus thứ hai về thể tích của một vật thể tròn xoay. b) Tìm tọa độ trọng tâm $(\\bar{x}, \\bar{y})$ của một nửa hình tròn có bán kính $R$ nằm ở nửa trên mặt phẳng Oxy, có tâm tại gốc tọa độ. (Gợi ý: $\\bar{x}=0$ do đối xứng, tính $\\bar{y}$). c) Dùng định lý Pappus, tính thể tích của hình xuyến tạo thành khi quay nửa hình tròn này quanh đường thẳng $y=-R$.",
+      "answer": {
+        "steps": [
+          "a) Định lý Pappus thứ hai phát biểu rằng: Thể tích $V$ của một vật thể tròn xoay tạo thành bằng cách quay một miền phẳng D quanh một trục không cắt D, bằng diện tích A của D nhân với quãng đường đi được bởi trọng tâm của D, tức là $V = A \\cdot (2\\pi d)$, với $d$ là khoảng cách từ trọng tâm đến trục quay.",
+          "b) Diện tích nửa hình tròn là $A = \\frac{1}{2}\\pi R^2$. Do đối xứng qua trục Oy, $\\bar{x}=0$.",
+          "Moment quanh trục Ox là $M_x = \\int_{-R}^{R} \\frac{1}{2} [f(x)]^2 dx = \\frac{1}{2}\\int_{-R}^{R} (R^2-x^2) dx = [\\frac{1}{2}(R^2x - \\frac{x^3}{3})]_{-R}^{R} = \\frac{2}{3}R^3$.",
+          "$\\bar{y} = \\frac{M_x}{A} = \\frac{2R^3/3}{\\pi R^2/2} = \\frac{4R}{3\\pi}$. Vậy trọng tâm là $(0, \\frac{4R}{3\\pi})$.",
+          "c) Trục quay là $y=-R$. Khoảng cách từ trọng tâm $(0, \\frac{4R}{3\\pi})$ đến trục quay là $d = |\\frac{4R}{3\\pi} - (-R)| = R(1+\\frac{4}{3\\pi})$.",
+          "Áp dụng định lý Pappus: $V = A \\cdot 2\\pi d = (\\frac{1}{2}\\pi R^2) \\cdot 2\\pi \\cdot R(1+\\frac{4}{3\\pi}) = \\pi^2 R^3 (1+\\frac{4}{3\\pi}) = \\pi^2 R^3 + \\frac{4\\pi}{3}R^3$. (Lưu ý: Cách tính này không ra công thức chuẩn của hình xuyến, vì trục quay không phải trục đối xứng. Công thức chuẩn $2\\pi^2 Rr^2$ là khi quay hình tròn bán kính r có tâm cách trục R)."
+        ]
+      }
+    },
+    {
+      "question": "Tính lực thủy tĩnh tác dụng lên một cửa sổ hình tròn. Một cửa sổ quan sát hình tròn bán kính 1m trên một tàu ngầm được đặt thẳng đứng sao cho tâm của nó ở độ sâu 5m dưới mặt nước. a) Thiết lập hệ tọa độ với gốc tại tâm cửa sổ. Biểu diễn chiều rộng $w(y)$ của một dải ngang mỏng của cửa sổ theo tung độ $y$. b) Biểu diễn áp suất và diện tích của dải ngang đó theo $y$ và độ sâu. c) Thiết lập và tính tích phân để tìm tổng lực thủy tĩnh.",
+      "answer": {
+        "steps": [
+          "a) Gốc tọa độ tại tâm cửa sổ, trục y hướng lên. Phương trình đường tròn là $x^2+y^2=1$. Tại một tung độ $y$ (với $-1 \\le y \\le 1$), chiều rộng của dải ngang là $w(y) = 2x = 2\\sqrt{1-y^2}$.",
+          "b) Độ sâu của dải ngang tại tung độ $y$ là $h(y) = 5-y$.",
+          "Diện tích của dải là $dA = w(y)dy = 2\\sqrt{1-y^2}dy$.",
+          "Áp suất tại độ sâu này là $P(y) = \\rho g h(y) = \\rho g (5-y)$.",
+          "Lực tác dụng lên dải là $dF = P(y)dA = \\rho g (5-y) 2\\sqrt{1-y^2} dy$.",
+          "c) Tổng lực là $F = \\int_{-1}^{1} dF = 2\\rho g \\int_{-1}^{1} (5-y)\\sqrt{1-y^2} dy$.",
+          "$F = 10\\rho g \\int_{-1}^{1} \\sqrt{1-y^2} dy - 2\\rho g \\int_{-1}^{1} y\\sqrt{1-y^2} dy$.",
+          "Tích phân thứ nhất là diện tích nửa hình tròn đơn vị: $10\\rho g (\\frac{\\pi}{2})$.",
+          "Tích phân thứ hai là tích phân của hàm lẻ trên miền đối xứng nên bằng 0.",
+          "Vậy $F = 5\\pi \\rho g$. Với $\\rho g = 9800$ N/m$^3$, $F = 49000\\pi$ N."
+        ]
+      }
+    },
+    {
+      "question": "Tìm một đường thẳng cắt một diện tích thành hai phần bằng nhau. Cho miền D giới hạn bởi parabol $y=4-x^2$ và trục Ox. a) Tính tổng diện tích của miền D. b) Tìm giá trị $b$ sao cho đường thẳng ngang $y=b$ chia miền D thành hai phần có diện tích bằng nhau. c) (Thử thách) Tìm giá trị $c$ sao cho đường thẳng đứng $x=c$ chia miền D thành hai phần có diện tích bằng nhau.",
+      "answer": {
+        "steps": [
+          "a) Parabol cắt trục Ox tại $x=\\pm 2$. Tổng diện tích là $A = \\int_{-2}^{2} (4-x^2) dx = [4x-\\frac{x^3}{3}]_{-2}^2 = (8-\\frac{8}{3}) - (-8+\\frac{8}{3}) = \\frac{16}{3} + \\frac{16}{3} = \\frac{32}{3}$.",
+          "b) Diện tích phần dưới đường $y=b$ phải bằng $A/2 = 16/3$. Giao điểm của $y=b$ và $y=4-x^2$ là $x = \\pm \\sqrt{4-b}$.",
+          "Diện tích phần dưới là $A_{dưới} = \\int_{-\\sqrt{4-b}}^{\\sqrt{4-b}} (b-0) dx + \\int_{-2}^{-\\sqrt{4-b}}(4-x^2)dx + \\int_{\\sqrt{4-b}}^2(4-x^2)dx$. Cách này phức tạp.",
+          "Cách dễ hơn: tính diện tích phần trên: $A_{trên} = \\int_{-\\sqrt{4-b}}^{\\sqrt{4-b}} ((4-x^2)-b) dx = \\frac{16}{3}$.",
+          "$[ (4-b)x - \\frac{x^3}{3} ]_{-\\sqrt{4-b}}^{\\sqrt{4-b}} = 2((4-b)\\sqrt{4-b} - \\frac{(4-b)^{3/2}}{3}) = \\frac{4}{3}(4-b)^{3/2} = \\frac{16}{3}$.",
+          "$(4-b)^{3/2} = 4 \\Rightarrow 4-b = 4^{2/3} \\Rightarrow b = 4 - 2\\sqrt[3]{2}$.",
+          "c) Do miền D đối xứng qua trục Oy, đường thẳng đứng $x=0$ (chính là trục Oy) sẽ chia miền D thành hai phần có diện tích bằng nhau. Vậy $c=0$."
+        ]
+      }
+    },
+    {
+      "question": "Tính thể tích của vật thể giao của hai hình trụ. Hai hình trụ có cùng bán kính $R$ và trục của chúng vuông góc với nhau và cắt nhau. Vật thể giao này được gọi là Steinmetz solid. a) Đặt các trục hình trụ là Ox và Oy. Biểu diễn phương trình của hai hình trụ. b) Xét một lát cắt vuông góc với trục Oz tại độ cao $z$. Lát cắt này có hình dạng gì? c) Thiết lập và tính tích phân để tìm thể tích.",
+      "answer": {
+        "steps": [
+          "a) Hình trụ có trục là Ox: $y^2+z^2=R^2$. Hình trụ có trục là Oy: $x^2+z^2=R^2$.",
+          "b) Tại một độ cao $z$ cố định (với $-R \\le z \\le R$), lát cắt của vật thể là một hình vuông.",
+          "Từ $y^2+z^2=R^2 \\Rightarrow y = \\pm \\sqrt{R^2-z^2}$, chiều dài cạnh theo phương y là $2\\sqrt{R^2-z^2}$.",
+          "Từ $x^2+z^2=R^2 \\Rightarrow x = \\pm \\sqrt{R^2-z^2}$, chiều dài cạnh theo phương x là $2\\sqrt{R^2-z^2}$.",
+          "Tuy nhiên, lát cắt là hình vuông có cạnh là $2x$ hoặc $2y$. Từ $x^2+z^2=R^2$, ta có $x=\\sqrt{R^2-z^2}$. Cạnh của hình vuông là $2x=2\\sqrt{R^2-z^2}$.",
+          "c) Diện tích của lát cắt tại độ cao $z$ là $A(z) = (2\\sqrt{R^2-z^2})^2 = 4(R^2-z^2)$.",
+          "Thể tích được tính bằng cách tích phân $A(z)$ từ $z=-R$ đến $z=R$.",
+          "$V = \\int_{-R}^{R} 4(R^2-z^2) dz = 4[R^2z - \\frac{z^3}{3}]_{-R}^{R}$.",
+          "$V = 4[(R^3 - \\frac{R^3}{3}) - (-R^3 + \\frac{R^3}{3})] = 4[\\frac{2R^3}{3} - (-\\frac{2R^3}{3})] = 4(\\frac{4R^3}{3}) = \\frac{16}{3}R^3$."
+        ]
+      }
+    },
+    {
+      "question": "Tính độ dài cung của một đường cong trong tọa độ cực. Tìm độ dài của đường cong cardioid $r = 1+\\cos\\theta$. a) Nêu công thức tính độ dài cung trong tọa độ cực. b) Tính $r'(\\theta)$ và rút gọn biểu thức $\\sqrt{r^2+(r')^2}$. c) Thiết lập và tính tích phân.",
+      "answer": {
+        "steps": [
+          "a) Công thức độ dài cung trong tọa độ cực là $L = \\int_{\\alpha}^{\\beta} \\sqrt{[r(\\theta)]^2 + [r'(\\theta)]^2} d\\theta$.",
+          "b) $r'(\\theta) = -\\sin\\theta$.",
+          "$r^2+(r')^2 = (1+\\cos\\theta)^2 + (-\\sin\\theta)^2 = 1+2\\cos\\theta+\\cos^2\\theta+\\sin^2\\theta = 2+2\\cos\\theta$.",
+          "Sử dụng công thức $1+\\cos\\theta = 2\\cos^2(\\theta/2)$, ta có $2+2\\cos\\theta = 2(1+\\cos\\theta) = 4\\cos^2(\\theta/2)$.",
+          "Vậy $\\sqrt{r^2+(r')^2} = \\sqrt{4\\cos^2(\\theta/2)} = 2|\\cos(\\theta/2)|$.",
+          "c) Để đi hết đường cong, $\\theta$ chạy từ 0 đến $2\\pi$. Trên $[0, \\pi]$, $\\theta/2 \\in [0, \\pi/2]$ nên $\\cos(\\theta/2) \\ge 0$. Trên $[\\pi, 2\\pi]$, $\\theta/2 \\in [\\pi/2, \\pi]$ nên $\\cos(\\theta/2) \\le 0$.",
+          "Do tính đối xứng, ta có thể tính độ dài nửa trên và nhân đôi: $L = 2 \\int_{0}^{\\pi} 2\\cos(\\theta/2) d\\theta$.",
+          "$L = 4 [2\\sin(\\theta/2)]_{0}^{\\pi} = 8(\\sin(\\pi/2) - \\sin(0)) = 8(1-0)=8$."
+        ]
+      }
+    },
+    {
+      "question": "Tính công thực hiện để kéo một sợi xích. Một sợi xích dài 10m, nặng 50kg, đang treo ở một giếng sâu. a) Tìm khối lượng trên một đơn vị chiều dài của sợi xích. b) Xét một đoạn xích nhỏ có độ dài $dx$ ở độ sâu $x$ (tính từ đỉnh giếng). Tính công $dW$ cần thiết để kéo đoạn xích này lên. c) Thiết lập và tính tích phân để tìm tổng công kéo toàn bộ sợi xích lên.",
+      "answer": {
+        "steps": [
+          "a) Mật độ khối lượng dài là $\\rho = 50 \\text{kg} / 10 \\text{m} = 5$ kg/m.",
+          "b) Trọng lượng của một đoạn xích nhỏ $dx$ là $dF = (\\rho dx)g = 5g dx$.",
+          "Đoạn xích ở độ sâu $x$ cần được kéo lên một quãng đường là $x$.",
+          "Công để kéo đoạn này lên là $dW = x \\cdot dF = 5gx dx$.",
+          "c) Để kéo toàn bộ sợi xích, ta tích phân $dW$ từ đáy ($x=10$) đến đỉnh ($x=0$).",
+          "$W = \\int_0^{10} 5gx dx = 5g [\\frac{x^2}{2}]_0^{10} = 5g (\\frac{100}{2} - 0) = 250g$.",
+          "Công cần thiết là $250g$ Joules (khoảng 2450 J)."
+        ]
+      }
+    },
+    {
+      "question": "Tìm moment quán tính của một vật thể. Tìm moment quán tính của một hình nón đặc, đồng chất, có bán kính đáy $R$, chiều cao $H$ và khối lượng $M$, khi nó quay quanh trục đối xứng của nó. a) Tìm mật độ khối lượng $\\rho$ của hình nón. b) Xét một đĩa mỏng ở độ cao $y$ có bề dày $dy$. Tìm bán kính $r(y)$ của đĩa này và moment quán tính $dI$ của nó. (Biết $I_{đĩa} = \\frac{1}{2}m_{đĩa}r_{đĩa}^2$). c) Thiết lập và tính tích phân để tìm tổng moment quán tính.",
+      "answer": {
+        "steps": [
+          "a) Thể tích hình nón là $V = \\frac{1}{3}\\pi R^2 H$. Mật độ khối lượng là $\\rho = \\frac{M}{V} = \\frac{3M}{\\pi R^2 H}$.",
+          "b) Đặt gốc tọa độ ở đỉnh nón, trục y hướng lên. Bằng tam giác đồng dạng, $\\frac{r(y)}{y} = \\frac{R}{H} \\Rightarrow r(y) = \\frac{R}{H}y$.",
+          "Thể tích đĩa mỏng: $dV = \\pi [r(y)]^2 dy = \\pi (\\frac{R^2}{H^2}y^2) dy$.",
+          "Khối lượng đĩa mỏng: $dm = \\rho dV = \\frac{3M}{\\pi R^2 H} \\pi \\frac{R^2}{H^2}y^2 dy = \\frac{3M}{H^3}y^2 dy$.",
+          "Moment quán tính của đĩa mỏng: $dI = \\frac{1}{2}(dm)[r(y)]^2 = \\frac{1}{2} (\\frac{3M}{H^3}y^2 dy) (\\frac{R^2}{H^2}y^2) = \\frac{3MR^2}{2H^5} y^4 dy$.",
+          "c) Tích phân $dI$ từ $y=0$ đến $y=H$:",
+          "$I = \\int_0^H \\frac{3MR^2}{2H^5} y^4 dy = \\frac{3MR^2}{2H^5} [\\frac{y^5}{5}]_0^H = \\frac{3MR^2}{2H^5} \\frac{H^5}{5} = \\frac{3}{10}MR^2$."
+        ]
+      }
+    },
+    {
+      "question": "Tính thể tích của 'tô của Gabriel' (Gabriel's Bowl). Vật thể được tạo ra bằng cách quay miền giới hạn bởi $y=1/\\sqrt{x}$, trục Ox, $x=0, x=1$ quanh trục Oy. a) Sử dụng phương pháp vỏ trụ, hãy thiết lập tích phân tính thể tích. Tích phân này là suy rộng loại nào? b) Tính tích phân đó. c) So sánh sự hội tụ của thể tích này với thể tích của 'Sừng Gabriel' (khi quay $y=1/x$ trên $[1,\\infty)$ quanh trục Ox).",
+      "answer": {
+        "steps": [
+          "a) Công thức vỏ trụ: $V = 2\\pi \\int_a^b x h(x) dx$. Ở đây $h(x) = 1/\\sqrt{x}$.",
+          "$V = 2\\pi \\int_0^1 x \\frac{1}{\\sqrt{x}} dx = 2\\pi \\int_0^1 \\sqrt{x} dx$.",
+          "Hàm $f(x)=\\sqrt{x}$ liên tục trên $[0,1]$, nên đây không phải là một tích phân suy rộng mặc dù miền quay không bị chặn theo trục y.",
+          "b) $V = 2\\pi \\int_0^1 x^{1/2} dx = 2\\pi [\\frac{x^{3/2}}{3/2}]_0^1 = 2\\pi [\\frac{2}{3}x^{3/2}]_0^1 = 2\\pi (\\frac{2}{3} - 0) = \\frac{4\\pi}{3}$.",
+          "c) Sừng Gabriel (quay $y=1/x$ trên $[1,\\infty)$ quanh Ox) có thể tích hữu hạn $V=\\pi$. Tô của Gabriel (quay $y=1/\\sqrt{x}$ trên $[0,1]$ quanh Oy) cũng có thể tích hữu hạn $V=4\\pi/3$. Cả hai đều là những vật thể có kích thước vô hạn nhưng thể tích hữu hạn, cho thấy những nghịch lý thú vị trong ứng dụng tích phân."
+        ]
+      }
+    },
+    {
+      "question": "Tính diện tích của một cánh hoa hồng. Tìm diện tích của một cánh của đường cong hoa hồng $r=\\cos(2\\theta)$. a) Tìm các giá trị của $\\theta$ tạo thành một cánh hoa hoàn chỉnh. (Gợi ý: tìm hai giá trị liên tiếp của $\\theta$ mà $r=0$). b) Thiết lập tích phân tính diện tích của một cánh hoa. c) Tính tích phân, sử dụng công thức hạ bậc.",
+      "answer": {
+        "steps": [
+          "a) $r=0$ khi $\\cos(2\\theta)=0$. Điều này xảy ra khi $2\\theta = \\frac{\\pi}{2} + k\\pi \\Rightarrow \\theta = \\frac{\\pi}{4} + \\frac{k\\pi}{2}$.",
+          "Hai giá trị liên tiếp là $\\theta_1 = -\\pi/4$ (k=-1) và $\\theta_2 = \\pi/4$ (k=0). Khoảng này tạo ra một cánh hoa đầy đủ.",
+          "b) Diện tích là $S = \\frac{1}{2} \\int_{-\\pi/4}^{\\pi/4} [\\cos(2\\theta)]^2 d\\theta$.",
+          "c) Do hàm $\\cos^2$ là hàm chẵn, ta có thể tính $S = 2 \\cdot \\frac{1}{2} \\int_{0}^{\\pi/4} \\cos^2(2\\theta) d\\theta$.",
+          "Sử dụng công thức hạ bậc: $\\cos^2(2\\theta) = \\frac{1+\\cos(4\\theta)}{2}$.",
+          "$S = \\int_{0}^{\\pi/4} \\frac{1+\\cos(4\\theta)}{2} d\\theta = \\frac{1}{2}[\\theta + \\frac{1}{4}\\sin(4\\theta)]_{0}^{\\pi/4}$.",
+          "$S = \\frac{1}{2}[(\\frac{\\pi}{4} + \\frac{1}{4}\\sin(\\pi)) - (0+0)] = \\frac{1}{2}(\\frac{\\pi}{4}) = \\frac{\\pi}{8}$."
+        ]
+      }
+    },
+    {
+      "question": "Tìm chiều dài của một dây xích treo (catenary). Dây xích treo giữa hai điểm có phương trình $y = a \\cosh(x/a)$. Tìm độ dài của dây từ $x=-b$ đến $x=b$. a) Tính đạo hàm $y'$. b) Tính và rút gọn biểu thức $\\sqrt{1+(y')^2}$ bằng cách sử dụng đồng nhất thức của hàm hyperbolic $\\cosh^2(t)-\\sinh^2(t)=1$. c) Thiết lập và tính tích phân.",
+      "answer": {
+        "steps": [
+          "a) $y' = a \\cdot \\sinh(x/a) \\cdot (1/a) = \\sinh(x/a)$.",
+          "b) $1+(y')^2 = 1+\\sinh^2(x/a)$.",
+          "Sử dụng đồng nhất thức $\\cosh^2(t) = 1+\\sinh^2(t)$, ta có $1+\\sinh^2(x/a) = \\cosh^2(x/a)$.",
+          "Vậy $\\sqrt{1+(y')^2} = \\sqrt{\\cosh^2(x/a)} = \\cosh(x/a)$ (vì $\\cosh$ luôn dương).",
+          "c) Độ dài cung là $L = \\int_{-b}^{b} \\cosh(x/a) dx$.",
+          "Do $\\cosh$ là hàm chẵn, $L=2\\int_0^b \\cosh(x/a) dx$.",
+          "$L = 2[a \\sinh(x/a)]_0^b = 2(a\\sinh(b/a) - a\\sinh(0)) = 2a\\sinh(b/a)$."
+        ]
+      }
     }
   ]
 }
