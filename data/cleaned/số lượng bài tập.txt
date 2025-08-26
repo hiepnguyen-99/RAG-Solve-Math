@@ -1,0 +1,18 @@
+train đại số
+401 lý thuyết
+648 câu hỏi 1 ý
+331 câu hỏi nhiều ý a b c...
+
+train giải tích
+250 lý thuyết
+1329 bài tập
+
+
+
+test đại số
+100 lý thuyết
+300 bài tập
+
+test giải tích
+100 lý thuyết
+400 bài tập

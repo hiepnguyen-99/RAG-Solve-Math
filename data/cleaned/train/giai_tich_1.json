@@ -1,7 +1,7 @@
 {
   "problems": [
     {
-      "question": "Cho các hàm số $f(x) = \\frac{\\sqrt{x-1}}{x-3}$ và $g(x) = \\ln(4 - x^2)$.\\na) Tìm tập xác định của hàm số $f(x)$.\\nb) Tìm tập xác định của hàm số $g(x)$.\\nc) Xét tính chẵn, lẻ của hàm số $h(x) = x^3 - \\sin(x)$.",
+      "question": "Cho các hàm số $f(x) = \\frac{\\sqrt{x-1}}{x-3}$ và $g(x) = \\ln(4 - x^2)$.a) Tìm tập xác định của hàm số $f(x)$.b) Tìm tập xác định của hàm số $g(x)$.c) Xét tính chẵn, lẻ của hàm số $h(x) = x^3 - \\sin(x)$.",
       "answer": {
         "steps": [
           "a) Để hàm số $f(x)$ xác định, cần hai điều kiện đồng thời: biểu thức dưới dấu căn không âm và mẫu số khác không.",
@@ -18,7 +18,7 @@
       }
     },
     {
-      "question": "Cho hai hàm số $f(x) = x^2 + 1$ và $g(x) = \\sqrt{x-2}$.\\na) Lập hàm số hợp $h(x) = f(g(x))$ và tìm tập xác định của nó.\\nb) Lập hàm số hợp $k(x) = g(f(x))$ và tìm tập xác định của nó.\\nc) Tính $h(6)$ và $k(2)$. Hai hàm số hợp $h(x)$ và $k(x)$ có bằng nhau không?",
+      "question": "Cho hai hàm số $f(x) = x^2 + 1$ và $g(x) = \\sqrt{x-2}$.a) Lập hàm số hợp $h(x) = f(g(x))$ và tìm tập xác định của nó.b) Lập hàm số hợp $k(x) = g(f(x))$ và tìm tập xác định của nó.c) Tính $h(6)$ và $k(2)$. Hai hàm số hợp $h(x)$ và $k(x)$ có bằng nhau không?",
       "answer": {
         "steps": [
           "a) Tính hàm hợp $h(x) = f(g(x))$. Ta thay $g(x)$ vào biến của hàm $f(x)$.",
@@ -35,7 +35,7 @@
       }
     },
     {
-      "question": "Cho hàm số $y = f(x) = \\frac{2x + 1}{x - 3}$.\\na) Tìm tập xác định và tập giá trị của hàm số.\\nb) Chứng minh rằng hàm số đơn điệu trên từng khoảng xác định của nó và từ đó suy ra hàm số có hàm ngược.\\nc) Tìm hàm số ngược $f^{-1}(x)$.",
+      "question": "Cho hàm số $y = f(x) = \\frac{2x + 1}{x - 3}$.a) Tìm tập xác định và tập giá trị của hàm số.b) Chứng minh rằng hàm số đơn điệu trên từng khoảng xác định của nó và từ đó suy ra hàm số có hàm ngược.c) Tìm hàm số ngược $f^{-1}(x)$.",
       "answer": {
         "steps": [
           "a) Tập xác định: Mẫu số phải khác 0, nên $x - 3 \\neq 0 \\implies x \\neq 3$. Vậy $D = R \\setminus\\{3\\}$.",
@@ -53,7 +53,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = \\sin(2x) + \\cos(4x)$.\\na) Xét tính chẵn, lẻ của hàm số.\\nb) Hàm số có tuần hoàn không? Nếu có, hãy tìm chu kỳ cơ sở của nó.\\nc) Chứng minh rằng hàm số bị chặn.",
+      "question": "Cho hàm số $f(x) = \\sin(2x) + \\cos(4x)$.a) Xét tính chẵn, lẻ của hàm số.b) Hàm số có tuần hoàn không? Nếu có, hãy tìm chu kỳ cơ sở của nó.c) Chứng minh rằng hàm số bị chặn.",
       "answer": {
         "steps": [
           "a) Tập xác định của hàm số là $D = R$. Ta tính $f(-x)$:",
@@ -74,7 +74,7 @@
       }
     },
     {
-      "question": "Cho hàm số cho bởi nhiều công thức (hàm ghép): $f(x) = \\begin{cases} x^2 + 2x & \\text{khi } x \\le 0 \\\\ \\frac{\\sin x}{x} & \\text{khi } 0 < x \\le \\pi \\\\ \\frac{1}{x - \\pi} & \\text{khi } x > \\pi \\end{cases}$.\\na) Tìm tập xác định của hàm số $f(x)$.\\nb) Tính các giá trị $f(-2)$, $f(0)$, $f(\\pi/2)$.\\nc) Tìm tập giá trị của hàm số $f(x)$.",
+      "question": "Cho hàm số cho bởi nhiều công thức (hàm ghép): $f(x) = \\begin{cases} x^2 + 2x & \\text{khi } x \\le 0 \\\\ \\frac{\\sin x}{x} & \\text{khi } 0 < x \\le \\pi \\\\ \\frac{1}{x - \\pi} & \\text{khi } x > \\pi \\end{cases}$.a) Tìm tập xác định của hàm số $f(x)$.b) Tính các giá trị $f(-2)$, $f(0)$, $f(\\pi/2)$.c) Tìm tập giá trị của hàm số $f(x)$.",
       "answer": {
         "steps": [
           "a) Ta xét tập xác định trên từng khoảng:",
@@ -96,7 +96,7 @@
       }
     },
     {
-      "question": "Cho hai hàm số $f(x) = x + 2$ và $g(x) = x^2 - 3$.\\na) Tìm tập xác định của hai hàm số.\\nb) Lập công thức và tính giá trị của hàm hợp $h(x) = f(g(x))$ tại $x=2$.\\nc) Lập công thức và tính giá trị của hàm hợp $k(x) = g(f(x))$ tại $x=2$.",
+      "question": "Cho hai hàm số $f(x) = x + 2$ và $g(x) = x^2 - 3$.a) Tìm tập xác định của hai hàm số.b) Lập công thức và tính giá trị của hàm hợp $h(x) = f(g(x))$ tại $x=2$.c) Lập công thức và tính giá trị của hàm hợp $k(x) = g(f(x))$ tại $x=2$.",
       "answer": {
         "steps": [
           "a) Hàm số $f(x) = x+2$ là hàm đa thức, nên có tập xác định $D_f = R$.",
@@ -111,7 +111,7 @@
       }
     },
     {
-      "question": "Xét tính chẵn, lẻ của các hàm số sau:\\na) $f(x) = x^4 - 3x^2 + 5$\\nb) $g(x) = x^3 + \\sin(x)$\\nc) $h(x) = x^2 - x + 1$",
+      "question": "Xét tính chẵn, lẻ của các hàm số sau:a) $f(x) = x^4 - 3x^2 + 5$b) $g(x) = x^3 + \\sin(x)$c) $h(x) = x^2 - x + 1$",
       "answer": {
         "steps": [
           "a) Tập xác định của $f(x)$ là $D=R$. Xét $f(-x) = (-x)^4 - 3(-x)^2 + 5 = x^4 - 3x^2 + 5$.",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "question": "Tìm tập xác định của các hàm số sau:\\na) $y = \\frac{x+1}{x-4}$\\nb) $y = \\sqrt{2x - 6}$\\nc) $y = \\frac{\\sqrt{x}}{x^2 - 1}$",
+      "question": "Tìm tập xác định của các hàm số sau:a) $y = \\frac{x+1}{x-4}$b) $y = \\sqrt{2x - 6}$c) $y = \\frac{\\sqrt{x}}{x^2 - 1}$",
       "answer": {
         "steps": [
           "a) Hàm số $y = \\frac{x+1}{x-4}$ xác định khi mẫu số khác 0.",
@@ -139,7 +139,7 @@
       }
     },
     {
-      "question": "Cho hàm số tuyến tính $y = f(x) = 4x - 8$.\\na) Hàm số này đồng biến hay nghịch biến trên $R$? Vì sao?\\nb) Tìm hàm số ngược $f^{-1}(x)$.\\nc) Tính $f(3)$ và $f^{-1}(4)$, sau đó nhận xét kết quả.",
+      "question": "Cho hàm số tuyến tính $y = f(x) = 4x - 8$.a) Hàm số này đồng biến hay nghịch biến trên $R$? Vì sao?b) Tìm hàm số ngược $f^{-1}(x)$.c) Tính $f(3)$ và $f^{-1}(4)$, sau đó nhận xét kết quả.",
       "answer": {
         "steps": [
           "a) Hàm số $y = 4x - 8$ là hàm số bậc nhất có hệ số $a=4$.",
@@ -154,7 +154,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = \\begin{cases} x+3 & \\text{khi } x < 1 \\\\ 5 & \\text{khi } x=1 \\\\ x^2+1 & \\text{khi } x > 1 \\end{cases}$.\\na) Tìm tập xác định của hàm số.\\nb) Tính các giá trị $f(-2), f(1), f(3)$.\\nc) $f(x)$ có phải là hàm số liên tục tại $x=1$ không?",
+      "question": "Cho hàm số $f(x) = \\begin{cases} x+3 & \\text{khi } x < 1 \\\\ 5 & \\text{khi } x=1 \\\\ x^2+1 & \\text{khi } x > 1 \\end{cases}$.a) Tìm tập xác định của hàm số.b) Tính các giá trị $f(-2), f(1), f(3)$.c) $f(x)$ có phải là hàm số liên tục tại $x=1$ không?",
       "answer": {
         "steps": [
           "a) Hàm số được định nghĩa cho tất cả các trường hợp $x < 1$, $x=1$, và $x > 1$.",
@@ -169,7 +169,7 @@
       }
     },
     {
-      "question": "Xét hàm số $f(x) = 2\\sin(x) + 1$.\\na) Tìm tập xác định của hàm số.\\nb) Tìm tập giá trị của hàm số.\\nc) Hàm số có phải là hàm tuần hoàn không? Nếu có, chu kỳ là bao nhiêu?",
+      "question": "Xét hàm số $f(x) = 2\\sin(x) + 1$.a) Tìm tập xác định của hàm số.b) Tìm tập giá trị của hàm số.c) Hàm số có phải là hàm tuần hoàn không? Nếu có, chu kỳ là bao nhiêu?",
       "answer": {
         "steps": [
           "a) Hàm số $f(x) = 2\\sin(x) + 1$ xác định với mọi $x \\in R$.",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = \\ln(x^2 - 4)$.\\na) Tìm tập xác định của hàm số.\\nb) Xét tính chẵn, lẻ của hàm số.\\nc) Tính giá trị của hàm số tại $x=3$.",
+      "question": "Cho hàm số $f(x) = \\ln(x^2 - 4)$.a) Tìm tập xác định của hàm số.b) Xét tính chẵn, lẻ của hàm số.c) Tính giá trị của hàm số tại $x=3$.",
       "answer": {
         "steps": [
           "a) Hàm logarit xác định khi biểu thức bên trong nó lớn hơn 0.",
@@ -199,7 +199,7 @@
       }
     },
     {
-      "question": "Cho hàm số Parabol $y = f(x) = x^2 - 6x + 5$.\\na) Tìm tọa độ đỉnh của Parabol.\\nb) Dựa vào đỉnh và hệ số a, tìm tập giá trị của hàm số.\\nc) Hàm số có hàm ngược trên R không? Tại sao?",
+      "question": "Cho hàm số Parabol $y = f(x) = x^2 - 6x + 5$.a) Tìm tọa độ đỉnh của Parabol.b) Dựa vào đỉnh và hệ số a, tìm tập giá trị của hàm số.c) Hàm số có hàm ngược trên R không? Tại sao?",
       "answer": {
         "steps": [
           "a) Parabol $y = ax^2+bx+c$ có hoành độ đỉnh $x_v = -\\frac{b}{2a}$.",
@@ -215,7 +215,7 @@
       }
     },
     {
-      "question": "Cho hai hàm số $f(x) = \\frac{1}{x}$ và $g(x) = x-1$.\\na) Tìm tập xác định của $f(x)$ và $g(x)$.\\nb) Lập hàm hợp $h(x) = f(g(x))$ và tìm tập xác định của nó.\\nc) Lập hàm hợp $k(x) = g(f(x))$ và tìm tập xác định của nó.",
+      "question": "Cho hai hàm số $f(x) = \\frac{1}{x}$ và $g(x) = x-1$.a) Tìm tập xác định của $f(x)$ và $g(x)$.b) Lập hàm hợp $h(x) = f(g(x))$ và tìm tập xác định của nó.c) Lập hàm hợp $k(x) = g(f(x))$ và tìm tập xác định của nó.",
       "answer": {
         "steps": [
           "a) $f(x) = 1/x$ có tập xác định $D_f = R \\setminus \\{0\\}$.",
@@ -230,7 +230,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = |x-2|$.\\na) Viết lại hàm số $f(x)$ dưới dạng hàm cho bởi nhiều công thức (bỏ dấu giá trị tuyệt đối).\\nb) Vẽ đồ thị của hàm số $f(x)$.\\nc) Tìm tập giá trị của hàm số.",
+      "question": "Cho hàm số $f(x) = |x-2|$.a) Viết lại hàm số $f(x)$ dưới dạng hàm cho bởi nhiều công thức (bỏ dấu giá trị tuyệt đối).b) Vẽ đồ thị của hàm số $f(x)$.c) Tìm tập giá trị của hàm số.",
       "answer": {
         "steps": [
           "a) Ta xét dấu của biểu thức bên trong dấu giá trị tuyệt đối:",
@@ -246,7 +246,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = x^2 - 4x + 3$.\\na) Tính các giá trị $f(0), f(2), f(-1)$.\\nb) Tìm các giá trị của $x$ sao cho $f(x) = 0$.\\nc) Tìm các giá trị của $x$ sao cho $f(x) = 3$.",
+      "question": "Cho hàm số $f(x) = x^2 - 4x + 3$.a) Tính các giá trị $f(0), f(2), f(-1)$.b) Tìm các giá trị của $x$ sao cho $f(x) = 0$.c) Tìm các giá trị của $x$ sao cho $f(x) = 3$.",
       "answer": {
         "steps": [
           "a) Ta thay các giá trị của $x$ vào biểu thức hàm số:",
@@ -262,7 +262,7 @@
       }
     },
     {
-      "question": "Tìm tập xác định của các hàm số sau:\\na) $y = \\frac{2x+1}{x^2 - 9}$\\nb) $y = \\sqrt{5-x} + \\sqrt{x-1}$\\nc) $y = \\frac{1}{\\sqrt{x+2}}$",
+      "question": "Tìm tập xác định của các hàm số sau:a) $y = \\frac{2x+1}{x^2 - 9}$b) $y = \\sqrt{5-x} + \\sqrt{x-1}$c) $y = \\frac{1}{\\sqrt{x+2}}$",
       "answer": {
         "steps": [
           "a) Hàm số xác định khi mẫu số khác 0: $x^2 - 9 \\neq 0 \\implies x^2 \\neq 9$.",
@@ -278,7 +278,7 @@
       }
     },
     {
-      "question": "Cho hai hàm số $f(x) = 3x-1$ và $g(x) = 2x+5$.\\na) Lập công thức hàm số $h(x) = (f+g)(x)$.\\nb) Lập công thức hàm số $k(x) = (f \\cdot g)(x)$.\\nc) Tính giá trị của $(\\frac{f}{g})(1)$.",
+      "question": "Cho hai hàm số $f(x) = 3x-1$ và $g(x) = 2x+5$.a) Lập công thức hàm số $h(x) = (f+g)(x)$.b) Lập công thức hàm số $k(x) = (f \\cdot g)(x)$.c) Tính giá trị của $(\\frac{f}{g})(1)$.",
       "answer": {
         "steps": [
           "a) Hàm tổng $(f+g)(x) = f(x) + g(x)$.",
@@ -291,7 +291,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = 3^x$.\\na) Tìm tập xác định và tập giá trị của hàm số.\\nb) Hàm số $f(x)$ là đồng biến hay nghịch biến? Vì sao?\\nc) Tìm hàm số ngược $f^{-1}(x)$.",
+      "question": "Cho hàm số $f(x) = 3^x$.a) Tìm tập xác định và tập giá trị của hàm số.b) Hàm số $f(x)$ là đồng biến hay nghịch biến? Vì sao?c) Tìm hàm số ngược $f^{-1}(x)$.",
       "answer": {
         "steps": [
           "a) Hàm mũ $y=a^x$ với $a>0, a\\neq1$ luôn có tập xác định là $D = R$.",
@@ -305,7 +305,7 @@
       }
     },
     {
-      "question": "Xét tính chẵn, lẻ của các hàm số sau:\\na) $f(x) = |x| + 3$\\nb) $g(x) = \\frac{\\sin(x)}{x}$\\nc) $h(x) = 2^x - 2^{-x}$",
+      "question": "Xét tính chẵn, lẻ của các hàm số sau:a) $f(x) = |x| + 3$b) $g(x) = \\frac{\\sin(x)}{x}$c) $h(x) = 2^x - 2^{-x}$",
       "answer": {
         "steps": [
           "a) TXĐ: $D=R$. Ta có $f(-x) = |-x| + 3 = |x| + 3 = f(x)$.",
@@ -318,7 +318,7 @@
       }
     },
     {
-      "question": "Cho hàm số $y = f(x) = 4 - x^2$.\\na) Vẽ đồ thị của hàm số.\\nb) Tìm tập giá trị của hàm số.\\nc) Tìm các khoảng đồng biến, nghịch biến của hàm số.",
+      "question": "Cho hàm số $y = f(x) = 4 - x^2$.a) Vẽ đồ thị của hàm số.b) Tìm tập giá trị của hàm số.c) Tìm các khoảng đồng biến, nghịch biến của hàm số.",
       "answer": {
         "steps": [
           "a) Đồ thị hàm số $y = -x^2+4$ là một Parabol có hệ số $a=-1 < 0$ (bề lõm quay xuống).",
@@ -332,7 +332,7 @@
       }
     },
     {
-      "question": "Cho hàm số $g(x) = \\cos(\\frac{x}{2})$.\\na) Tìm tập giá trị của hàm số.\\nb) Hàm số có tuần hoàn không? Tìm chu kỳ cơ sở.\\nc) Hàm số $g(x)$ là chẵn hay lẻ?",
+      "question": "Cho hàm số $g(x) = \\cos(\\frac{x}{2})$.a) Tìm tập giá trị của hàm số.b) Hàm số có tuần hoàn không? Tìm chu kỳ cơ sở.c) Hàm số $g(x)$ là chẵn hay lẻ?",
       "answer": {
         "steps": [
           "a) Ta biết $-1 \\le \\cos(u) \\le 1$ với mọi $u$.",
@@ -345,7 +345,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = \\frac{x}{x+1}$ và $g(x) = \\frac{1}{x}$.\\na) Lập công thức của hàm hợp $h(x) = f(g(x))$.\\nb) Tìm tập xác định của hàm hợp $h(x)$.\\nc) Tính $h(2)$.",
+      "question": "Cho hàm số $f(x) = \\frac{x}{x+1}$ và $g(x) = \\frac{1}{x}$.a) Lập công thức của hàm hợp $h(x) = f(g(x))$.b) Tìm tập xác định của hàm hợp $h(x)$.c) Tính $h(2)$.",
       "answer": {
         "steps": [
           "a) Để lập $h(x) = f(g(x))$, ta thay $g(x)$ vào biến $x$ của hàm $f(x)$.",
@@ -361,7 +361,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = \\sqrt{x^2+1}$.\\na) Tìm tập xác định của hàm số.\\nb) Hàm số là chẵn, lẻ hay không chẵn không lẻ?\\nc) Tìm tập giá trị của hàm số.",
+      "question": "Cho hàm số $f(x) = \\sqrt{x^2+1}$.a) Tìm tập xác định của hàm số.b) Hàm số là chẵn, lẻ hay không chẵn không lẻ?c) Tìm tập giá trị của hàm số.",
       "answer": {
         "steps": [
           "a) Biểu thức dưới dấu căn là $x^2+1$.",
@@ -376,7 +376,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = 5 - 2x$.\\na) Hàm số $f(x)$ là hàm đơn điệu trên $R$. Tính đơn điệu đó là gì?\\nb) Tìm hàm số ngược $f^{-1}(x)$.\\nc) Vẽ đồ thị của $f(x)$ và $f^{-1}(x)$ trên cùng một hệ trục tọa độ.",
+      "question": "Cho hàm số $f(x) = 5 - 2x$.a) Hàm số $f(x)$ là hàm đơn điệu trên $R$. Tính đơn điệu đó là gì?b) Tìm hàm số ngược $f^{-1}(x)$.c) Vẽ đồ thị của $f(x)$ và $f^{-1}(x)$ trên cùng một hệ trục tọa độ.",
       "answer": {
         "steps": [
           "a) Đây là hàm số bậc nhất $y=ax+b$ với hệ số góc $a=-2$.",
@@ -392,7 +392,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = \\frac{2x+3}{x-1}$.\\na) Tìm tập xác định và tập giá trị của hàm số.\\nb) Chứng minh rằng hàm số $f(x)$ là hàm đơn ánh trên tập xác định của nó bằng cách xét $f(x_1) = f(x_2)$.\\nc) Tìm công thức của hàm số ngược $f^{-1}(x)$ và chỉ rõ tập xác định của nó.",
+      "question": "Cho hàm số $f(x) = \\frac{2x+3}{x-1}$.a) Tìm tập xác định và tập giá trị của hàm số.b) Chứng minh rằng hàm số $f(x)$ là hàm đơn ánh trên tập xác định của nó bằng cách xét $f(x_1) = f(x_2)$.c) Tìm công thức của hàm số ngược $f^{-1}(x)$ và chỉ rõ tập xác định của nó.",
       "answer": {
         "steps": [
           "a) Tập xác định: Mẫu số phải khác 0, nên $x-1 \\neq 0 \\implies x \\neq 1$. Vậy $D = R \\setminus \\{1\\}$.",
@@ -410,7 +410,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = \\ln(\\frac{x-1}{x+1})$.\\na) Tìm tập xác định của hàm số $f(x)$.\\nb) Xét tính chẵn, lẻ của hàm số.\\nc) Giải phương trình $f(x) = 0$.",
+      "question": "Cho hàm số $f(x) = \\ln(\\frac{x-1}{x+1})$.a) Tìm tập xác định của hàm số $f(x)$.b) Xét tính chẵn, lẻ của hàm số.c) Giải phương trình $f(x) = 0$.",
       "answer": {
         "steps": [
           "a) Hàm số xác định khi biểu thức trong logarit lớn hơn 0: $\\frac{x-1}{x+1} > 0$.",
@@ -427,7 +427,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = x^2 - 4x + 7$ với tập xác định là $D = [2, +\\infty)$.\\na) Chứng minh rằng $f(x)$ là hàm đơn điệu trên $D$.\\nb) Tìm tập giá trị của hàm số trên $D$.\\nc) Tìm hàm số ngược $f^{-1}(x)$.",
+      "question": "Cho hàm số $f(x) = x^2 - 4x + 7$ với tập xác định là $D = [2, +\\infty)$.a) Chứng minh rằng $f(x)$ là hàm đơn điệu trên $D$.b) Tìm tập giá trị của hàm số trên $D$.c) Tìm hàm số ngược $f^{-1}(x)$.",
       "answer": {
         "steps": [
           "a) Ta có thể viết lại $f(x) = (x^2 - 4x + 4) + 3 = (x-2)^2 + 3$.",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = 2\\cos^2(x) - \\sin(2x) + 1$.\\na) Biến đổi hàm số $f(x)$ về dạng $A\\cos(ax+b) + B$.\\nb) Tìm tập giá trị của hàm số $f(x)$.\\nc) Hàm số $f(x)$ có tuần hoàn không? Nếu có, hãy tìm chu kỳ.",
+      "question": "Cho hàm số $f(x) = 2\\cos^2(x) - \\sin(2x) + 1$.a) Biến đổi hàm số $f(x)$ về dạng $A\\cos(ax+b) + B$.b) Tìm tập giá trị của hàm số $f(x)$.c) Hàm số $f(x)$ có tuần hoàn không? Nếu có, hãy tìm chu kỳ.",
       "answer": {
         "steps": [
           "a) Áp dụng công thức hạ bậc và góc nhân đôi: $2\\cos^2(x) = 1 + \\cos(2x)$.",
@@ -461,7 +461,7 @@
       }
     },
     {
-      "question": "Cho hai hàm số $f(x) = \\frac{1}{x-2}$ và $g(x) = \\sqrt{x+1}$.\\na) Lập công thức của hàm hợp $h(x) = f(g(x))$.\\nb) Tìm tập xác định của $h(x)$.\\nc) Lập công thức và tìm tập xác định của hàm hợp $k(x) = g(f(x))$.",
+      "question": "Cho hai hàm số $f(x) = \\frac{1}{x-2}$ và $g(x) = \\sqrt{x+1}$.a) Lập công thức của hàm hợp $h(x) = f(g(x))$.b) Tìm tập xác định của $h(x)$.c) Lập công thức và tìm tập xác định của hàm hợp $k(x) = g(f(x))$.",
       "answer": {
         "steps": [
           "a) $h(x) = f(g(x)) = f(\\sqrt{x+1}) = \\frac{1}{\\sqrt{x+1} - 2}$.",
@@ -478,7 +478,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = \\sqrt{4-|x-1|}$.\\na) Tìm tập xác định của hàm số.\\nb) Xét tính chẵn, lẻ của hàm số.\\nc) Tìm tập giá trị của hàm số.",
+      "question": "Cho hàm số $f(x) = \\sqrt{4-|x-1|}$.a) Tìm tập xác định của hàm số.b) Xét tính chẵn, lẻ của hàm số.c) Tìm tập giá trị của hàm số.",
       "answer": {
         "steps": [
           "a) Hàm số xác định khi biểu thức dưới dấu căn không âm: $4 - |x-1| \\ge 0$.",
@@ -495,7 +495,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = e^x - e^{-x}$.\\na) Chứng minh $f(x)$ là hàm số lẻ.\\nb) Chứng minh $f(x)$ là hàm đồng biến trên $R$ bằng cách sử dụng đạo hàm.\\nc) Tìm hàm số ngược $f^{-1}(x)$. (Gợi ý: đặt $t=e^x$ và giải phương trình bậc hai).",
+      "question": "Cho hàm số $f(x) = e^x - e^{-x}$.a) Chứng minh $f(x)$ là hàm số lẻ.b) Chứng minh $f(x)$ là hàm đồng biến trên $R$ bằng cách sử dụng đạo hàm.c) Tìm hàm số ngược $f^{-1}(x)$. (Gợi ý: đặt $t=e^x$ và giải phương trình bậc hai).",
       "answer": {
         "steps": [
           "a) TXĐ: $D=R$. Ta xét $f(-x) = e^{-x} - e^{-(-x)} = e^{-x} - e^x = -(e^x - e^{-x}) = -f(x)$.",
@@ -513,7 +513,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = \\begin{cases} \\frac{1-x^2}{1-x} & \\text{khi } x < 1 \\\\ a & \\text{khi } x = 1 \\\\ \\sqrt{x+3} & \\text{khi } x > 1 \\end{cases}$.\\na) Rút gọn biểu thức của hàm số khi $x<1$.\\nb) Tìm giá trị của $a$ để hàm số liên tục tại $x=1$.\\nc) Với giá trị $a$ vừa tìm được, hãy tính $f(0) + f(1) + f(6)$.",
+      "question": "Cho hàm số $f(x) = \\begin{cases} \\frac{1-x^2}{1-x} & \\text{khi } x < 1 \\\\ a & \\text{khi } x = 1 \\\\ \\sqrt{x+3} & \\text{khi } x > 1 \\end{cases}$.a) Rút gọn biểu thức của hàm số khi $x<1$.b) Tìm giá trị của $a$ để hàm số liên tục tại $x=1$.c) Với giá trị $a$ vừa tìm được, hãy tính $f(0) + f(1) + f(6)$.",
       "answer": {
         "steps": [
           "a) Khi $x < 1$, ta có $x \\neq 1$. Do đó, ta có thể rút gọn:",
@@ -531,7 +531,7 @@
       }
     },
     {
-      "question": "Biết rằng hàm số $y=f(x)$ thỏa mãn $3f(x) - f(-x) = 4\\sin(x)$ với mọi $x \\in R$.\\na) Thay $x$ bởi $-x$ để tạo ra một phương trình thứ hai.\\nb) Giải hệ phương trình vừa tạo để tìm biểu thức tường minh cho $f(x)$.\\nc) Hàm số $f(x)$ là chẵn, lẻ, hay không chẵn không lẻ? Chứng minh.",
+      "question": "Biết rằng hàm số $y=f(x)$ thỏa mãn $3f(x) - f(-x) = 4\\sin(x)$ với mọi $x \\in R$.a) Thay $x$ bởi $-x$ để tạo ra một phương trình thứ hai.b) Giải hệ phương trình vừa tạo để tìm biểu thức tường minh cho $f(x)$.c) Hàm số $f(x)$ là chẵn, lẻ, hay không chẵn không lẻ? Chứng minh.",
       "answer": {
         "steps": [
           "a) Phương trình ban đầu là $3f(x) - f(-x) = 4\\sin(x) \\quad (1)$.",
@@ -548,7 +548,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = \\frac{1}{1-2^x}$.\\na) Tìm tập xác định của $f(x)$.\\nb) Xét hàm số $g(x) = f(x) + \\frac{1}{2}$. Chứng minh $g(x)$ là một hàm số lẻ.\\nc) Dựa vào kết quả câu b, hãy nhận xét về tính đối xứng của đồ thị hàm số $f(x)$.",
+      "question": "Cho hàm số $f(x) = \\frac{1}{1-2^x}$.a) Tìm tập xác định của $f(x)$.b) Xét hàm số $g(x) = f(x) + \\frac{1}{2}$. Chứng minh $g(x)$ là một hàm số lẻ.c) Dựa vào kết quả câu b, hãy nhận xét về tính đối xứng của đồ thị hàm số $f(x)$.",
       "answer": {
         "steps": [
           "a) Hàm số xác định khi mẫu số khác 0: $1-2^x \\neq 0 \\implies 2^x \\neq 1$.",
@@ -568,7 +568,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = x^2 - 2x - 3$. Xét hàm số này trên tập xác định thu hẹp $D = (-\\infty, 1]$.\\na) Tìm tọa độ đỉnh của parabol $y=f(x)$ và cho biết tại sao việc thu hẹp tập xác định là cần thiết để hàm số có hàm ngược.\\nb) Chứng minh rằng hàm số $f(x)$ nghịch biến trên $D$.\\nc) Tìm hàm số ngược $f^{-1}(x)$ tương ứng với tập xác định $D$.",
+      "question": "Cho hàm số $f(x) = x^2 - 2x - 3$. Xét hàm số này trên tập xác định thu hẹp $D = (-\\infty, 1]$.a) Tìm tọa độ đỉnh của parabol $y=f(x)$ và cho biết tại sao việc thu hẹp tập xác định là cần thiết để hàm số có hàm ngược.b) Chứng minh rằng hàm số $f(x)$ nghịch biến trên $D$.c) Tìm hàm số ngược $f^{-1}(x)$ tương ứng với tập xác định $D$.",
       "answer": {
         "steps": [
           "a) Hoành độ đỉnh của parabol là $x_v = -\\frac{b}{2a} = -\\frac{-2}{2(1)} = 1$.",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = \\sin(\\frac{2\\pi x}{3}) + 2\\cos(\\frac{\\pi x}{2})$.\\na) Tìm chu kỳ cơ sở $T_1$ của hàm số $g(x) = \\sin(\\frac{2\\pi x}{3})$.\\nb) Tìm chu kỳ cơ sở $T_2$ của hàm số $h(x) = 2\\cos(\\frac{\\pi x}{2})$.\\nc) Hàm số $f(x)$ có tuần hoàn không? Nếu có, tìm chu kỳ cơ sở $T$ của nó.",
+      "question": "Cho hàm số $f(x) = \\sin(\\frac{2\\pi x}{3}) + 2\\cos(\\frac{\\pi x}{2})$.a) Tìm chu kỳ cơ sở $T_1$ của hàm số $g(x) = \\sin(\\frac{2\\pi x}{3})$.b) Tìm chu kỳ cơ sở $T_2$ của hàm số $h(x) = 2\\cos(\\frac{\\pi x}{2})$.c) Hàm số $f(x)$ có tuần hoàn không? Nếu có, tìm chu kỳ cơ sở $T$ của nó.",
       "answer": {
         "steps": [
           "a) Chu kỳ của hàm $y=\\sin(ax)$ là $\\frac{2\\pi}{|a|}$.",
@@ -598,7 +598,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = 2\\arcsin(x-1) + \\frac{\\pi}{2}$.\\na) Tìm tập xác định của hàm số.\\nb) Tìm tập giá trị của hàm số.\\nc) Giải phương trình $f(x) = \\frac{\\pi}{2}$.",
+      "question": "Cho hàm số $f(x) = 2\\arcsin(x-1) + \\frac{\\pi}{2}$.a) Tìm tập xác định của hàm số.b) Tìm tập giá trị của hàm số.c) Giải phương trình $f(x) = \\frac{\\pi}{2}$.",
       "answer": {
         "steps": [
           "a) Hàm $\\arcsin(u)$ xác định khi $-1 \\le u \\le 1$.",
@@ -616,7 +616,7 @@
       }
     },
     {
-      "question": "Mọi hàm số $f(x)$ có tập xác định đối xứng đều có thể phân tích thành tổng của một hàm chẵn $f_e(x)$ và một hàm lẻ $f_o(x)$.\\na) Cho công thức $f_e(x) = \\frac{f(x)+f(-x)}{2}$ và $f_o(x) = \\frac{f(x)-f(-x)}{2}$. Chứng minh $f_e(x)$ là hàm chẵn và $f_o(x)$ là hàm lẻ.\\nb) Áp dụng công thức trên để tìm phần chẵn và phần lẻ của hàm số $f(x) = e^x + x^2$.\\nc) Kiểm tra lại rằng $f_e(x) + f_o(x) = f(x)$.",
+      "question": "Mọi hàm số $f(x)$ có tập xác định đối xứng đều có thể phân tích thành tổng của một hàm chẵn $f_e(x)$ và một hàm lẻ $f_o(x)$.a) Cho công thức $f_e(x) = \\frac{f(x)+f(-x)}{2}$ và $f_o(x) = \\frac{f(x)-f(-x)}{2}$. Chứng minh $f_e(x)$ là hàm chẵn và $f_o(x)$ là hàm lẻ.b) Áp dụng công thức trên để tìm phần chẵn và phần lẻ của hàm số $f(x) = e^x + x^2$.c) Kiểm tra lại rằng $f_e(x) + f_o(x) = f(x)$.",
       "answer": {
         "steps": [
           "a) Xét $f_e(-x) = \\frac{f(-x)+f(-(-x))}{2} = \\frac{f(-x)+f(x)}{2} = f_e(x)$. Vậy $f_e(x)$ là hàm chẵn.",
@@ -630,7 +630,7 @@
       }
     },
     {
-      "question": "Tìm biểu thức tường minh của hàm số $f(x)$ nếu nó thỏa mãn phương trình hàm: $2f(x) + f(\\frac{1}{x}) = 3x$ với mọi $x \\neq 0$.\\na) Tính giá trị của $f(2)$.\\nb) Bằng cách thay $x$ bởi $\\frac{1}{x}$ trong phương trình đã cho, hãy tạo ra một phương trình thứ hai.\\nc) Giải hệ hai phương trình để tìm $f(x)$.",
+      "question": "Tìm biểu thức tường minh của hàm số $f(x)$ nếu nó thỏa mãn phương trình hàm: $2f(x) + f(\\frac{1}{x}) = 3x$ với mọi $x \\neq 0$.a) Tính giá trị của $f(2)$.b) Bằng cách thay $x$ bởi $\\frac{1}{x}$ trong phương trình đã cho, hãy tạo ra một phương trình thứ hai.c) Giải hệ hai phương trình để tìm $f(x)$.",
       "answer": {
         "steps": [
           "a) Thay $x=2$ vào phương trình: $2f(2) + f(1/2) = 3(2) = 6$. Ta chưa thể tính được $f(2)$.",
@@ -646,7 +646,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = \\frac{2x}{x^2+1}$.\\na) Tìm tập xác định của hàm số và xét tính chẵn, lẻ.\\nb) Chứng minh rằng hàm số $f(x)$ bị chặn, tức là tồn tại số $M$ sao cho $|f(x)| \\le M$ với mọi $x$.\\nc) Tìm tập giá trị của hàm số.",
+      "question": "Cho hàm số $f(x) = \\frac{2x}{x^2+1}$.a) Tìm tập xác định của hàm số và xét tính chẵn, lẻ.b) Chứng minh rằng hàm số $f(x)$ bị chặn, tức là tồn tại số $M$ sao cho $|f(x)| \\le M$ với mọi $x$.c) Tìm tập giá trị của hàm số.",
       "answer": {
         "steps": [
           "a) Mẫu số $x^2+1 \\ge 1 > 0$ với mọi $x$, nên tập xác định là $D=R$.",
@@ -662,7 +662,7 @@
       }
     },
     {
-      "question": "Cho hàm số ghép $f(x) = \\begin{cases} 1 - x^3 & \\text{khi } x < 0 \\\\ \\sqrt{1-x} & \\text{khi } 0 \\le x \\le 1 \\end{cases}$.\\na) Tìm tập xác định và tập giá trị của hàm số.\\nb) Hàm số $f(x)$ có phải là hàm đơn ánh (một-một) không? Giải thích.\\nc) Hàm số $f(x)$ có đơn điệu trên toàn bộ tập xác định của nó không?",
+      "question": "Cho hàm số ghép $f(x) = \\begin{cases} 1 - x^3 & \\text{khi } x < 0 \\\\ \\sqrt{1-x} & \\text{khi } 0 \\le x \\le 1 \\end{cases}$.a) Tìm tập xác định và tập giá trị của hàm số.b) Hàm số $f(x)$ có phải là hàm đơn ánh (một-một) không? Giải thích.c) Hàm số $f(x)$ có đơn điệu trên toàn bộ tập xác định của nó không?",
       "answer": {
         "steps": [
           "a) Tập xác định là hợp của các khoảng: $D = (-\\infty, 0) \\cup [0, 1] = (-\\infty, 1]$.",
@@ -679,7 +679,7 @@
       }
     },
     {
-      "question": "Bắt đầu từ đồ thị hàm số cơ bản $y=\\sqrt{x}$, hãy mô tả các phép biến đổi để thu được đồ thị của hàm số $f(x) = 3 - \\sqrt{2-x}$.\\na) Bước 1: Từ $y=\\sqrt{x}$, làm thế nào để có $y=\\sqrt{-x}$?\\nb) Bước 2: Từ $y=\\sqrt{-x}$, làm thế nào để có $y=\\sqrt{-(x-2)} = \\sqrt{2-x}$?\\nc) Bước 3 & 4: Từ $y=\\sqrt{2-x}$, mô tả các phép biến đổi còn lại để có $f(x) = 3 - \\sqrt{2-x}$.",
+      "question": "Bắt đầu từ đồ thị hàm số cơ bản $y=\\sqrt{x}$, hãy mô tả các phép biến đổi để thu được đồ thị của hàm số $f(x) = 3 - \\sqrt{2-x}$.a) Bước 1: Từ $y=\\sqrt{x}$, làm thế nào để có $y=\\sqrt{-x}$?b) Bước 2: Từ $y=\\sqrt{-x}$, làm thế nào để có $y=\\sqrt{-(x-2)} = \\sqrt{2-x}$?c) Bước 3 & 4: Từ $y=\\sqrt{2-x}$, mô tả các phép biến đổi còn lại để có $f(x) = 3 - \\sqrt{2-x}$.",
       "answer": {
         "steps": [
           "a) Để có $y=\\sqrt{-x}$ từ $y=\\sqrt{x}$, ta lấy đối xứng đồ thị $y=\\sqrt{x}$ qua trục tung (trục Oy).",
@@ -691,7 +691,7 @@
       }
     },
     {
-      "question": "Cho hai hàm số $f(x) = \\frac{x+1}{x-1}$ và $g(x) = \\frac{x}{2}$. Ta biết rằng $(g \\circ f)^{-1} = f^{-1} \\circ g^{-1}$.\\na) Tìm hàm ngược $f^{-1}(x)$.\\nb) Tìm hàm ngược $g^{-1}(x)$.\\nc) Dùng kết quả hai câu trên để tìm $(g \\circ f)^{-1}(x)$ mà không cần tìm $g \\circ f(x)$ trước.",
+      "question": "Cho hai hàm số $f(x) = \\frac{x+1}{x-1}$ và $g(x) = \\frac{x}{2}$. Ta biết rằng $(g \\circ f)^{-1} = f^{-1} \\circ g^{-1}$.a) Tìm hàm ngược $f^{-1}(x)$.b) Tìm hàm ngược $g^{-1}(x)$.c) Dùng kết quả hai câu trên để tìm $(g \\circ f)^{-1}(x)$ mà không cần tìm $g \\circ f(x)$ trước.",
       "answer": {
         "steps": [
           "a) Đặt $y = \\frac{x+1}{x-1} \\implies y(x-1) = x+1 \\implies yx-y = x+1$.",
@@ -705,7 +705,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = \\log_{1/2}(x^2 - 2x + 5)$.\\na) Tìm tập xác định của hàm số.\\nb) Biến đổi biểu thức bên trong logarit để tìm giá trị nhỏ nhất của nó. Từ đó suy ra tập giá trị của hàm số $f(x)$.\\nc) Giải phương trình $f(x) = -3$.",
+      "question": "Cho hàm số $f(x) = \\log_{1/2}(x^2 - 2x + 5)$.a) Tìm tập xác định của hàm số.b) Biến đổi biểu thức bên trong logarit để tìm giá trị nhỏ nhất của nó. Từ đó suy ra tập giá trị của hàm số $f(x)$.c) Giải phương trình $f(x) = -3$.",
       "answer": {
         "steps": [
           "a) Hàm số xác định khi $x^2 - 2x + 5 > 0$.",
@@ -723,7 +723,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x)$ xác định trên $R \\setminus \\{0\\}$ và thỏa mãn phương trình hàm: $f(x) + 2f(\\frac{1}{x}) = 3x + 6$. \\na) Bằng cách thực hiện phép thế $x \\to \\frac{1}{x}$, hãy tạo ra một phương trình thứ hai liên hệ giữa $f(x)$ và $f(\\frac{1}{x})$.\\nb) Giải hệ phương trình thu được để tìm biểu thức tường minh cho $f(x)$.\\nc) Tính giá trị của $f(2)$.",
+      "question": "Cho hàm số $f(x)$ xác định trên $R \\setminus \\{0\\}$ và thỏa mãn phương trình hàm: $f(x) + 2f(\\frac{1}{x}) = 3x + 6$. a) Bằng cách thực hiện phép thế $x \\to \\frac{1}{x}$, hãy tạo ra một phương trình thứ hai liên hệ giữa $f(x)$ và $f(\\frac{1}{x})$.b) Giải hệ phương trình thu được để tìm biểu thức tường minh cho $f(x)$.c) Tính giá trị của $f(2)$.",
       "answer": {
         "steps": [
           "a) Phương trình đã cho là: $f(x) + 2f(\\frac{1}{x}) = 3x + 6 \\quad (1)$.",
@@ -743,7 +743,7 @@
       }
     },
     {
-      "question": "Chứng minh ταυτότητα (đồng nhất thức) sau đây cho các hàm lượng giác ngược: $\\arcsin(x) + \\arccos(x) = \\frac{\\pi}{2}$ với mọi $x \\in [-1, 1]$.\\na) Đặt $f(x) = \\arcsin(x) + \\arccos(x)$. Tìm tập xác định của $f(x)$.\\nb) Tính đạo hàm $f'(x)$. (Kiến thức này có thể thuộc chương sau nhưng hữu ích ở đây).\\nc) Từ kết quả đạo hàm, suy ra $f(x)$ là một hàm hằng và tìm giá trị của hằng số đó để hoàn thành chứng minh.",
+      "question": "Chứng minh ταυτότητα (đồng nhất thức) sau đây cho các hàm lượng giác ngược: $\\arcsin(x) + \\arccos(x) = \\frac{\\pi}{2}$ với mọi $x \\in [-1, 1]$.a) Đặt $f(x) = \\arcsin(x) + \\arccos(x)$. Tìm tập xác định của $f(x)$.b) Tính đạo hàm $f'(x)$. (Kiến thức này có thể thuộc chương sau nhưng hữu ích ở đây).c) Từ kết quả đạo hàm, suy ra $f(x)$ là một hàm hằng và tìm giá trị của hằng số đó để hoàn thành chứng minh.",
       "answer": {
         "steps": [
           "a) Hàm $\\arcsin(x)$ và $\\arccos(x)$ cùng có tập xác định là $[-1, 1]$.",
@@ -759,7 +759,7 @@
       }
     },
     {
-      "question": "Tìm tập xác định và tập giá trị của hàm số $f(x) = \\log_{0.5}(\\frac{x^2 - 4x + 3}{x^2 - 1})$.\\na) Tìm điều kiện để biểu thức trong logarit xác định và dương.\\nb) Giải bất phương trình ở câu (a) để tìm tập xác định của $f(x)$.\\nc) Tìm tập giá trị của biểu thức $u = \\frac{x^2 - 4x + 3}{x^2 - 1}$ trên tập xác định, từ đó suy ra tập giá trị của $f(x)$.",
+      "question": "Tìm tập xác định và tập giá trị của hàm số $f(x) = \\log_{0.5}(\\frac{x^2 - 4x + 3}{x^2 - 1})$.a) Tìm điều kiện để biểu thức trong logarit xác định và dương.b) Giải bất phương trình ở câu (a) để tìm tập xác định của $f(x)$.c) Tìm tập giá trị của biểu thức $u = \\frac{x^2 - 4x + 3}{x^2 - 1}$ trên tập xác định, từ đó suy ra tập giá trị của $f(x)$.",
       "answer": {
         "steps": [
           "a) Điều kiện xác định: $\\frac{x^2 - 4x + 3}{x^2 - 1} > 0$.",
@@ -777,7 +777,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x)$ được định nghĩa bởi phương trình $f(x)^5 + f(x) = x - 1$.\\na) Chứng minh rằng $f(x)$ là hàm đơn ánh.\\nb) Tìm biểu thức của hàm ngược $f^{-1}(x)$.\\nc) Dựa vào tính chất của hàm số, chứng minh rằng $f(x)$ là một hàm lẻ sau khi tịnh tiến gốc tọa độ thích hợp.",
+      "question": "Cho hàm số $f(x)$ được định nghĩa bởi phương trình $f(x)^5 + f(x) = x - 1$.a) Chứng minh rằng $f(x)$ là hàm đơn ánh.b) Tìm biểu thức của hàm ngược $f^{-1}(x)$.c) Dựa vào tính chất của hàm số, chứng minh rằng $f(x)$ là một hàm lẻ sau khi tịnh tiến gốc tọa độ thích hợp.",
       "answer": {
         "steps": [
           "a) Giả sử $f(x_1) = f(x_2)$. Đặt $y_0 = f(x_1) = f(x_2)$.",
@@ -796,7 +796,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = \\frac{4^x}{4^x+2}$.\\na) Chứng minh rằng hàm số thỏa mãn đẳng thức $f(x) + f(1-x) = 1$.\\nb) Không tính từng số hạng, hãy tính tổng $S = f(\\frac{1}{101}) + f(\\frac{2}{101}) + \\dots + f(\\frac{100}{101})$.\\nc) Mở rộng, tính tổng $S_n = \\sum_{k=1}^{n-1} f(\\frac{k}{n})$ với $n$ là số nguyên dương chẵn.",
+      "question": "Cho hàm số $f(x) = \\frac{4^x}{4^x+2}$.a) Chứng minh rằng hàm số thỏa mãn đẳng thức $f(x) + f(1-x) = 1$.b) Không tính từng số hạng, hãy tính tổng $S = f(\\frac{1}{101}) + f(\\frac{2}{101}) + \\dots + f(\\frac{100}{101})$.c) Mở rộng, tính tổng $S_n = \\sum_{k=1}^{n-1} f(\\frac{k}{n})$ với $n$ là số nguyên dương chẵn.",
       "answer": {
         "steps": [
           "a) Ta có $f(1-x) = \\frac{4^{1-x}}{4^{1-x}+2} = \\frac{4/4^x}{4/4^x+2} = \\frac{4}{4+2 \\cdot 4^x} = \\frac{2}{2+4^x}$.",
@@ -816,7 +816,7 @@
       }
     },
     {
-      "question": "Chứng minh rằng hàm số $f(x) = \\cos(x) + \\cos(\\sqrt{3}x)$ không phải là hàm số tuần hoàn.\\na) Giả sử $f(x)$ là hàm tuần hoàn với chu kỳ $T > 0$. Điều này có nghĩa là $f(x+T) = f(x)$ với mọi $x$. Viết điều kiện này cho $x=0$.\\nb) Từ $f(T)=f(0)$ và $f''(T)=f''(0)$ (nếu tồn tại đạo hàm), hãy suy ra các điều kiện cần cho $T$.\\nc) Chứng minh rằng không tồn tại $T>0$ thỏa mãn đồng thời các điều kiện trên.",
+      "question": "Chứng minh rằng hàm số $f(x) = \\cos(x) + \\cos(\\sqrt{3}x)$ không phải là hàm số tuần hoàn.a) Giả sử $f(x)$ là hàm tuần hoàn với chu kỳ $T > 0$. Điều này có nghĩa là $f(x+T) = f(x)$ với mọi $x$. Viết điều kiện này cho $x=0$.b) Từ $f(T)=f(0)$ và $f''(T)=f''(0)$ (nếu tồn tại đạo hàm), hãy suy ra các điều kiện cần cho $T$.c) Chứng minh rằng không tồn tại $T>0$ thỏa mãn đồng thời các điều kiện trên.",
       "answer": {
         "steps": [
           "a) Giả sử $f(x)$ tuần hoàn với chu kỳ $T>0$. Khi đó $f(x+T)=f(x)$ với mọi $x$.",
@@ -835,7 +835,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = \\frac{x-1}{x+1}$. Ký hiệu $f_1(x) = f(x)$, $f_2(x) = f(f(x))$, $f_n(x) = f(f_{n-1}(x))$.\\na) Tính $f_2(x)$ và $f_3(x)$.\\nb) Dựa vào kết quả trên, hãy dự đoán công thức tổng quát cho $f_4(x)$ và $f_n(x)$.\\nc) Tìm tất cả các giá trị $x$ sao cho $f_{2024}(x) = x$.",
+      "question": "Cho hàm số $f(x) = \\frac{x-1}{x+1}$. Ký hiệu $f_1(x) = f(x)$, $f_2(x) = f(f(x))$, $f_n(x) = f(f_{n-1}(x))$.a) Tính $f_2(x)$ và $f_3(x)$.b) Dựa vào kết quả trên, hãy dự đoán công thức tổng quát cho $f_4(x)$ và $f_n(x)$.c) Tìm tất cả các giá trị $x$ sao cho $f_{2024}(x) = x$.",
       "answer": {
         "steps": [
           "a) $f_2(x) = f(f(x)) = \\frac{f(x)-1}{f(x)+1} = \\frac{\\frac{x-1}{x+1}-1}{\\frac{x-1}{x+1}+1} = \\frac{(x-1)-(x+1)}{(x-1)+(x+1)} = \\frac{-2}{2x} = -\\frac{1}{x}$.",
@@ -853,7 +853,7 @@
       }
     },
     {
-      "question": "Tìm tập giá trị của hàm số $f(x) = \\frac{x^2+2x-1}{x^2+x+1}$.\\na) Đặt $y = f(x)$ và biến đổi phương trình về dạng phương trình bậc hai theo biến $x$.\\nb) Tìm điều kiện của $y$ để phương trình bậc hai ở câu (a) có nghiệm thực.\\nc) Giải bất phương trình điều kiện tìm được để suy ra tập giá trị của $f(x)$.",
+      "question": "Tìm tập giá trị của hàm số $f(x) = \\frac{x^2+2x-1}{x^2+x+1}$.a) Đặt $y = f(x)$ và biến đổi phương trình về dạng phương trình bậc hai theo biến $x$.b) Tìm điều kiện của $y$ để phương trình bậc hai ở câu (a) có nghiệm thực.c) Giải bất phương trình điều kiện tìm được để suy ra tập giá trị của $f(x)$.",
       "answer": {
         "steps": [
           "a) Đặt $y = \\frac{x^2+2x-1}{x^2+x+1}$. (Mẫu số $x^2+x+1 = (x+1/2)^2 + 3/4 > 0$ nên TXĐ là R).",
@@ -873,7 +873,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = [x] + [-x]$ với $[x]$ là hàm phần nguyên (số nguyên lớn nhất không vượt quá $x$).\\na) Tính giá trị của $f(3), f(3.5), f(-2.7)$.\\nb) Dựa vào các ví dụ trên, hãy đưa ra một công thức rút gọn cho $f(x)$ trong hai trường hợp: $x$ là số nguyên và $x$ không phải là số nguyên.\\nc) Vẽ đồ thị của hàm số $y = [x] + [-x]$ và tìm tập giá trị của nó.",
+      "question": "Cho hàm số $f(x) = [x] + [-x]$ với $[x]$ là hàm phần nguyên (số nguyên lớn nhất không vượt quá $x$).a) Tính giá trị của $f(3), f(3.5), f(-2.7)$.b) Dựa vào các ví dụ trên, hãy đưa ra một công thức rút gọn cho $f(x)$ trong hai trường hợp: $x$ là số nguyên và $x$ không phải là số nguyên.c) Vẽ đồ thị của hàm số $y = [x] + [-x]$ và tìm tập giá trị của nó.",
       "answer": {
         "steps": [
           "a) $f(3) = [3] + [-3] = 3 + (-3) = 0$.",
@@ -895,7 +895,7 @@
       }
     },
     {
-      "question": "Cho hai hàm số $f(x) = \\frac{1}{1+x^2}$ và $g(x) = \\tan(x)$.\\na) Tìm tập xác định của hàm hợp $h(x) = f(g(x))$.\\nb) Rút gọn biểu thức $h(x)$ bằng cách sử dụng các công thức lượng giác. Hàm số $h(x)$ sau khi rút gọn có tuần hoàn không? Nếu có, chu kỳ là bao nhiêu?\\nc) So sánh tập xác định của hàm số $h(x)$ ban đầu và hàm số sau khi rút gọn. Chúng có giống nhau không? Giải thích.",
+      "question": "Cho hai hàm số $f(x) = \\frac{1}{1+x^2}$ và $g(x) = \\tan(x)$.a) Tìm tập xác định của hàm hợp $h(x) = f(g(x))$.b) Rút gọn biểu thức $h(x)$ bằng cách sử dụng các công thức lượng giác. Hàm số $h(x)$ sau khi rút gọn có tuần hoàn không? Nếu có, chu kỳ là bao nhiêu?c) So sánh tập xác định của hàm số $h(x)$ ban đầu và hàm số sau khi rút gọn. Chúng có giống nhau không? Giải thích.",
       "answer": {
         "steps": [
           "a) Hàm hợp là $h(x) = f(g(x)) = f(\\tan(x)) = \\frac{1}{1+\\tan^2(x)}$.",
@@ -914,7 +914,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x)$ xác định trên $R$ và thỏa mãn phương trình hàm Cauchy: $f(x+y) = f(x) + f(y)$ với mọi $x, y \\in R$. Giả sử thêm rằng $f(x)$ liên tục tại $x=0$.\\na) Chứng minh rằng $f(0) = 0$ và $f(nx) = nf(x)$ với mọi $n \\in N$.\\nb) Chứng minh rằng $f(x)$ là một hàm số lẻ.\\nc) Chứng minh rằng tồn tại một hằng số $a$ sao cho $f(x) = ax$ với mọi $x \\in R$. (Gợi ý: Chứng minh cho $x$ hữu tỉ trước, sau đó dùng tính liên tục).",
+      "question": "Cho hàm số $f(x)$ xác định trên $R$ và thỏa mãn phương trình hàm Cauchy: $f(x+y) = f(x) + f(y)$ với mọi $x, y \\in R$. Giả sử thêm rằng $f(x)$ liên tục tại $x=0$.a) Chứng minh rằng $f(0) = 0$ và $f(nx) = nf(x)$ với mọi $n \\in N$.b) Chứng minh rằng $f(x)$ là một hàm số lẻ.c) Chứng minh rằng tồn tại một hằng số $a$ sao cho $f(x) = ax$ với mọi $x \\in R$. (Gợi ý: Chứng minh cho $x$ hữu tỉ trước, sau đó dùng tính liên tục).",
       "answer": {
         "steps": [
           "a) Cho $x=y=0$, ta có $f(0) = f(0)+f(0) \\implies f(0)=0$. Bằng quy nạp, ta có $f(nx) = nf(x)$. Cơ sở $n=1$ đúng. Giả sử đúng với $n=k$, $f(kx)=kf(x)$. Ta có $f((k+1)x) = f(kx+x) = f(kx)+f(x) = kf(x)+f(x)=(k+1)f(x)$.",
@@ -926,7 +926,7 @@
       }
     },
     {
-      "question": "Tìm tập xác định và tập giá trị của hàm số $f(x) = \\arcsin(\\frac{2x}{1+x^2}) - 2\\arctan(x)$.\\na) Tìm tập xác định của hàm số.\\nb) Tính đạo hàm $f'(x)$ trên các khoảng xác định và rút gọn biểu thức đó. (Kiến thức này có thể thuộc chương sau nhưng hữu ích ở đây).\\nc) Dựa vào đạo hàm, hãy tìm biểu thức rút gọn cho $f(x)$ trên các khoảng $(-\\infty, -1)$, $(-1, 1)$, và $(1, +\\infty)$.",
+      "question": "Tìm tập xác định và tập giá trị của hàm số $f(x) = \\arcsin(\\frac{2x}{1+x^2}) - 2\\arctan(x)$.a) Tìm tập xác định của hàm số.b) Tính đạo hàm $f'(x)$ trên các khoảng xác định và rút gọn biểu thức đó. (Kiến thức này có thể thuộc chương sau nhưng hữu ích ở đây).c) Dựa vào đạo hàm, hãy tìm biểu thức rút gọn cho $f(x)$ trên các khoảng $(-\\infty, -1)$, $(-1, 1)$, và $(1, +\\infty)$.",
       "answer": {
         "steps": [
           "a) Hàm $\\arctan(x)$ có TXĐ là $R$. Hàm $\\arcsin(u)$ có TXĐ là $[-1, 1]$. Ta cần $-1 \\le \\frac{2x}{1+x^2} \\le 1$.",
@@ -944,7 +944,7 @@
       }
     },
     {
-      "question": "Cho hàm số Dirichlet $D(x) = \\begin{cases} 1 & \\text{khi } x \\in Q \\\\ 0 & \\text{khi } x \\notin Q \\end{cases}$.\\na) Tìm tập giá trị của $D(x)$. Hàm số này là chẵn hay lẻ?\\nb) Xét tính tuần hoàn của hàm số. Chứng minh rằng mọi số hữu tỉ $r > 0$ đều là một chu kỳ của $D(x)$. Hàm số có chu kỳ cơ sở không?\\nc) Xét hàm số $f(x) = D(x) \\cdot \\sin^2(\\pi x)$. Chứng minh rằng $f(x)=0$ với mọi $x \\in R$.",
+      "question": "Cho hàm số Dirichlet $D(x) = \\begin{cases} 1 & \\text{khi } x \\in Q \\\\ 0 & \\text{khi } x \\notin Q \\end{cases}$.a) Tìm tập giá trị của $D(x)$. Hàm số này là chẵn hay lẻ?b) Xét tính tuần hoàn của hàm số. Chứng minh rằng mọi số hữu tỉ $r > 0$ đều là một chu kỳ của $D(x)$. Hàm số có chu kỳ cơ sở không?c) Xét hàm số $f(x) = D(x) \\cdot \\sin^2(\\pi x)$. Chứng minh rằng $f(x)=0$ với mọi $x \\in R$.",
       "answer": {
         "steps": [
           "a) Dựa vào định nghĩa, hàm số chỉ nhận hai giá trị là 0 và 1. Vậy tập giá trị là $T=\\{0, 1\\}$.",
@@ -960,7 +960,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = x - [x]$, được gọi là hàm phần lẻ của $x$.\\na) Vẽ đồ thị của hàm số $f(x)$ trên đoạn $[-2, 3]$.\\nb) Chứng minh rằng hàm số $f(x)$ tuần hoàn và tìm chu kỳ cơ sở của nó.\\nc) Giải phương trình $f(x^2) = (f(x))^2$.",
+      "question": "Cho hàm số $f(x) = x - [x]$, được gọi là hàm phần lẻ của $x$.a) Vẽ đồ thị của hàm số $f(x)$ trên đoạn $[-2, 3]$.b) Chứng minh rằng hàm số $f(x)$ tuần hoàn và tìm chu kỳ cơ sở của nó.c) Giải phương trình $f(x^2) = (f(x))^2$.",
       "answer": {
         "steps": [
           "a) Trên mỗi khoảng $[n, n+1)$ với $n$ là số nguyên, $[x]=n$, do đó $f(x)=x-n$.",
@@ -979,7 +979,7 @@
       }
     },
     {
-      "question": "Tìm hàm ngược của hàm số $f(x) = \\frac{e^x - e^{-x}}{e^x + e^{-x}}$ (hàm hyperbolic tangent, $\\tanh(x)$).\\na) Tìm tập xác định và tập giá trị của $f(x)$.\\nb) Từ phương trình $y = f(x)$, hãy biểu diễn $e^{2x}$ theo $y$.\\nc) Từ kết quả câu (b), hãy tìm biểu thức của hàm ngược $f^{-1}(x)$.",
+      "question": "Tìm hàm ngược của hàm số $f(x) = \\frac{e^x - e^{-x}}{e^x + e^{-x}}$ (hàm hyperbolic tangent, $\\tanh(x)$).a) Tìm tập xác định và tập giá trị của $f(x)$.b) Từ phương trình $y = f(x)$, hãy biểu diễn $e^{2x}$ theo $y$.c) Từ kết quả câu (b), hãy tìm biểu thức của hàm ngược $f^{-1}(x)$.",
       "answer": {
         "steps": [
           "a) Mẫu số $e^x+e^{-x} = 2\\cosh(x) \\ge 2$ nên luôn khác 0. TXĐ là $D=R$.",
@@ -996,7 +996,7 @@
       }
     },
     {
-      "question": "Cho hai hàm số $f(x) = \\log_2(x)$ và $g(x) = x^2-4x+6$. \\na) Tìm tập giá trị của hàm số $g(x)$.\\nb) Lập công thức của hàm hợp $h(x) = f(g(x))$ và tìm tập xác định của nó.\\nc) Tìm tập giá trị của hàm hợp $h(x)$.",
+      "question": "Cho hai hàm số $f(x) = \\log_2(x)$ và $g(x) = x^2-4x+6$. a) Tìm tập giá trị của hàm số $g(x)$.b) Lập công thức của hàm hợp $h(x) = f(g(x))$ và tìm tập xác định của nó.c) Tìm tập giá trị của hàm hợp $h(x)$.",
       "answer": {
         "steps": [
           "a) Hàm $g(x) = x^2-4x+6 = (x^2-4x+4)+2 = (x-2)^2+2$.",
@@ -1014,7 +1014,7 @@
       }
     },
     {
-      "question": "Cho hàm số $f(x) = \\max\\{x+1, 7-x\\}$.\\na) Tìm giá trị của $x$ mà tại đó $x+1 = 7-x$. Dùng kết quả này để viết lại $f(x)$ dưới dạng hàm piecewise (hàm cho bởi nhiều công thức).\\nb) Vẽ đồ thị của hàm số $f(x)$ và tìm tập giá trị của nó.\\nc) Hàm số có đơn điệu trên $R$ không? Tìm các khoảng đơn điệu của hàm số.",
+      "question": "Cho hàm số $f(x) = \\max\\{x+1, 7-x\\}$.a) Tìm giá trị của $x$ mà tại đó $x+1 = 7-x$. Dùng kết quả này để viết lại $f(x)$ dưới dạng hàm piecewise (hàm cho bởi nhiều công thức).b) Vẽ đồ thị của hàm số $f(x)$ và tìm tập giá trị của nó.c) Hàm số có đơn điệu trên $R$ không? Tìm các khoảng đơn điệu của hàm số.",
       "answer": {
         "steps": [
           "a) Giải phương trình $x+1 = 7-x \\implies 2x = 6 \\implies x=3$.",
@@ -1031,7 +1031,7 @@
       }
     },
     {
-      "question": "Chứng minh rằng hàm số $f(x) = x \\sin(x)$ không tuần hoàn.\\na) Giả sử $f(x)$ tuần hoàn với chu kỳ $T>0$. Viết ra phương trình $f(x+T) = f(x)$.\\nb) Tìm các giá trị của $x$ mà tại đó $f(x)=0$. Chứng tỏ rằng khoảng cách giữa các không điểm này không phải là hằng số.\\nc) Sử dụng kết quả câu (b) hoặc bằng cách xét giới hạn, chứng tỏ giả thiết tuần hoàn là sai.",
+      "question": "Chứng minh rằng hàm số $f(x) = x \\sin(x)$ không tuần hoàn.a) Giả sử $f(x)$ tuần hoàn với chu kỳ $T>0$. Viết ra phương trình $f(x+T) = f(x)$.b) Tìm các giá trị của $x$ mà tại đó $f(x)=0$. Chứng tỏ rằng khoảng cách giữa các không điểm này không phải là hằng số.c) Sử dụng kết quả câu (b) hoặc bằng cách xét giới hạn, chứng tỏ giả thiết tuần hoàn là sai.",
       "answer": {
         "steps": [
           "a) Giả sử $f(x)$ tuần hoàn với chu kỳ $T>0$. Khi đó, $(x+T)\\sin(x+T) = x\\sin(x)$ với mọi $x \\in R$.",
@@ -1052,7 +1052,7 @@
       }
     },
     {
-      "question": "Cho $f(x) = \\frac{1}{2}(a^x + a^{-x})$ và $g(x) = \\frac{1}{2}(a^x - a^{-x})$ với $a>0, a\\neq1$ (các hàm hyperbolic cosine và sine cơ số $a$).\\na) Chứng minh rằng $f(x)$ là hàm chẵn và $g(x)$ là hàm lẻ.\\nb) Chứng minh ταυτότητα (đồng nhất thức) $f(x)^2 - g(x)^2 = 1$.\\nc) Tìm biểu thức của $f(2x)$ và $g(2x)$ theo $f(x)$ và $g(x)$.",
+      "question": "Cho $f(x) = \\frac{1}{2}(a^x + a^{-x})$ và $g(x) = \\frac{1}{2}(a^x - a^{-x})$ với $a>0, a\\neq1$ (các hàm hyperbolic cosine và sine cơ số $a$).a) Chứng minh rằng $f(x)$ là hàm chẵn và $g(x)$ là hàm lẻ.b) Chứng minh ταυτότητα (đồng nhất thức) $f(x)^2 - g(x)^2 = 1$.c) Tìm biểu thức của $f(2x)$ và $g(2x)$ theo $f(x)$ và $g(x)$.",
       "answer": {
         "steps": [
           "a) $f(-x) = \\frac{1}{2}(a^{-x} + a^{-(-x)}) = \\frac{1}{2}(a^{-x} + a^x) = f(x)$. Vậy $f(x)$ là hàm chẵn.",
@@ -1070,7 +1070,7 @@
       }
     },
     {
-      "question": "Tìm tất cả các hàm số $f: R \\to R$ thỏa mãn $f(x)f(y) - f(xy) = x+y$ với mọi $x, y \\in R$.\\na) Cho $y=1$, ta có $f(x)f(1) - f(x) = x+1$. Biến đổi phương trình này để biểu diễn $f(x)$.\\nb) Thay biểu thức của $f(x)$ tìm được ở câu (a) vào phương trình gốc để tìm các giá trị có thể có của $f(1)$.\\nc) Với mỗi giá trị của $f(1)$ tìm được, hãy xác định hàm số $f(x)$ tương ứng và kiểm tra lại.",
+      "question": "Tìm tất cả các hàm số $f: R \\to R$ thỏa mãn $f(x)f(y) - f(xy) = x+y$ với mọi $x, y \\in R$.a) Cho $y=1$, ta có $f(x)f(1) - f(x) = x+1$. Biến đổi phương trình này để biểu diễn $f(x)$.b) Thay biểu thức của $f(x)$ tìm được ở câu (a) vào phương trình gốc để tìm các giá trị có thể có của $f(1)$.c) Với mỗi giá trị của $f(1)$ tìm được, hãy xác định hàm số $f(x)$ tương ứng và kiểm tra lại.",
       "answer": {
         "steps": [
           "a) Cho $y=1$: $f(x)f(1) - f(x) = x+1 \\implies f(x)(f(1)-1) = x+1$.",
