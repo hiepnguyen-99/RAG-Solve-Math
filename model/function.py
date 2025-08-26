@@ -2,8 +2,8 @@ import os
 import torch
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
-from retrieval import *
-from conversation_manager import conversation_manager
+from .retrieval import *
+from .conversation_manager import conversation_manager
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 # ===== Khởi tạo embedding model chung =====

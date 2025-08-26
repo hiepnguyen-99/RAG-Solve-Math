@@ -1,11 +1,11 @@
 import torch
-from function import *
+from .function import *
 from dotenv import load_dotenv
 import requests
-from conversation_manager import conversation_manager
+from .conversation_manager import conversation_manager
 from langchain.prompts import PromptTemplate
-import sys
-sys.stdout.reconfigure(encoding="utf-8")
+#import sys
+#sys.stdout.reconfigure(encoding="utf-8")
 
 # Thiết bị
 device = "cuda" if torch.cuda.is_available() else "cpu"
