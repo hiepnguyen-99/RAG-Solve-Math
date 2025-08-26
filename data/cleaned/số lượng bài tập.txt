@@ -11,8 +11,8 @@ train giải tích
 
 test đại số
 100 lý thuyết
-300 bài tập
+353 bài tập
 
 test giải tích
 100 lý thuyết
-400 bài tập
+394 bài tập
