@@ -39,86 +39,7 @@
                 </div>
                 
                 <div class="header-controls">
-                    <!-- Model Selector -->
-                    <div class="control-group">
-                        <label for="model-select" class="control-label">
-                            <span class="material-icons">memory</span>
-                            Model AI
-                        </label>
-                        <select id="model-select" class="model-select">
-                            {% for key, model in models.items() %}
-                            <option value="{{ key }}" {% if key == current_model %}selected{% endif %}>
-                                {{ model.name }}
-                            </option>
-                            {% endfor %}
-                        </select>
-                        <small class="model-info" id="loaded-models-info" style="display: none;">Models đã load: 0</small>
-                    </div>
-                    
-                    <!-- Document Count Selector -->
-                    <div class="control-group">
-                        <label for="k-select" class="control-label">
-                            <span class="material-icons">description</span>
-                            Số tài liệu
-                        </label>
-                        <select id="k-select" class="k-select">
-                            <option value="1">1 tài liệu</option>
-                            <option value="2">2 tài liệu</option>
-                            <option value="3" selected>3 tài liệu</option>
-                            <option value="4">4 tài liệu</option>
-                            <option value="5">5 tài liệu</option>
-                            <option value="6">6 tài liệu</option>
-                            <option value="7">7 tài liệu</option>
-                            <option value="8">8 tài liệu</option>
-                            <option value="9">9 tài liệu</option>
-                            <option value="10">10 tài liệu</option>   
-                        </select>
-                    </div>
-                    
-                    <!-- Rerank Toggle -->
-                    <div class="control-group">
-                        <label for="rerank-toggle" class="control-label">
-                            <span class="material-icons">trending_up</span>
-                            Reranking
-                        </label>
-                        <div class="toggle-switch" title="Bật/tắt chế độ reranking để cải thiện độ chính xác tìm kiếm">
-                            <input type="checkbox" id="rerank-toggle" class="toggle-input" {% if rerank_enabled %}checked{% endif %}>
-                            <label for="rerank-toggle" class="toggle-label">
-                                <span class="toggle-slider"></span>
-                            </label>
-                        </div>
-                        <small class="rerank-status" id="rerank-status">Đang kiểm tra...</small>
-                    </div>
-                    
-                    <!-- Theme Toggle -->
-                    <button class="theme-toggle" id="theme-toggle" title="Chuyển đổi theme">
-                        <span class="material-icons">light_mode</span>
-                    </button>
-                    
-                    <!-- New Chat -->
-                    <button class="new-chat" id="new-chat" title="Cuộc trò chuyện mới">
-                        <span class="material-icons">add_comment</span>
-                    </button>
-                    
-                    <!-- Chat History Toggle -->
-                    <button class="chat-history-toggle" id="chat-history-toggle" title="Lịch sử trò chuyện">
-                        <span class="material-icons">history</span>
-                    </button>
-                    
-                    <!-- Model Management Toggle -->
-                    <button class="model-management-toggle" id="model-management-toggle" title="Quản lý Models">
-                        <span class="material-icons">settings</span>
-                    </button>
-                    
-                    <!-- Document Library Toggle -->
-                    <button class="docs-toggle" id="docs-toggle" title="Thư viện tài liệu">
-                        <span class="material-icons">library_books</span>
-                    </button>
-                    
-                    <!-- Clear Chat -->
-                    <button class="clear-chat" id="clear-chat" title="Xóa cuộc trò chuyện">
-                        <span class="material-icons">delete_sweep</span>
-                    </button>
+                    <!-- Header controls now empty -->
                 </div>
             </div>
         </header>
@@ -280,24 +201,121 @@
             <!-- Input Section -->
             <div class="input-section">
                 <div class="input-container">
-                    <div class="input-wrapper">
+                    <div class="input-wrapper gemini-style">
+                        <!-- Left buttons group -->
+                        <div class="input-left-buttons">
+                            <!-- Add button with dropdown -->
+                            <div class="dropdown-container">
+                                <button class="input-btn" id="add-dropdown-btn" title="Tùy chọn thêm">
+                                    <span class="material-icons">add</span>
+                                </button>
+                                <div class="dropdown-menu" id="add-dropdown-menu">
+                                    <!-- Model Selection -->
+                                    <div class="dropdown-item">
+                                        <label class="dropdown-label">Model:</label>
+                                        <select id="model-select" class="model-select-mini">
+                                            {% for key, model in models.items() %}
+                                            <option value="{{ key }}" {% if key == current_model %}selected{% endif %}>
+                                                {{ model.name }}
+                                            </option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                    
+                                    <!-- Document Count -->
+                                    <div class="dropdown-item">
+                                        <label class="dropdown-label">Số tài liệu:</label>
+                                        <div class="slider-container">
+                                            <input type="range" id="k-select" class="k-slider" 
+                                                   min="1" max="10" value="3" step="1">
+                                            <div class="slider-value" id="k-value">3</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Rerank Toggle -->
+                                    <div class="dropdown-item">
+                                        <label class="dropdown-label">Reranking:</label>
+                                        <div class="toggle-switch-mini">
+                                            <input type="checkbox" id="rerank-toggle" class="toggle-input" {% if rerank_enabled %}checked{% endif %}>
+                                            <label for="rerank-toggle" class="toggle-label">
+                                                <span class="toggle-slider"></span>
+                                            </label>
+                                        </div>
+                                        <small class="rerank-status" id="rerank-status">Đang kiểm tra...</small>
+                                    </div>
+                                    
+                                    <!-- New Chat option -->
+                                    <div class="dropdown-item dropdown-button" id="new-chat">
+                                        <span class="material-icons">chat</span>
+                                        <span>Cuộc trò chuyện mới</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Main input -->
                         <textarea 
                             id="user-input" 
-                            placeholder="Đặt câu hỏi về toán học, tải ảnh đề bài hoặc paste ảnh (Ctrl+V)..."
+                            placeholder="Đặt câu hỏi Toán học"
                             rows="1"
                             maxlength="2000"
                         ></textarea>
+                        
+                        <!-- Right buttons group -->
+                        <div class="input-right-buttons">
+                            <!-- Image Upload -->
+                            <button class="input-btn" id="image-button" title="Hình ảnh">
+                                <span class="material-icons">image</span>
+                            </button>
+                            
+                            <!-- Documents Library -->
+                            <button class="input-btn" id="docs-toggle" title="Thư viện tài liệu">
+                                <span class="material-icons">library_books</span>
+                            </button>
+                            
+                            <!-- Send Button -->
+                            <button class="send-btn" id="send-button" title="Gửi" disabled>
+                                <span class="material-icons">send</span>
+                            </button>
+                        </div>
+                        
                         <input type="file" id="image-input" accept="image/*" style="display: none;">
-                        <button class="image-button" id="image-button" title="Tải ảnh đề bài">
-                            <span class="material-icons">photo_camera</span>
-                        </button>
-                        <button class="send-button" id="send-button" disabled>
-                            <span class="material-icons">send</span>
-                        </button>
                     </div>
-                    <div class="input-footer">
-                        <span class="char-counter" id="char-counter">0/2000</span>
-                        <span class="model-info" id="model-info">Qwen 1.5B</span>
+                    
+                    <!-- Bottom row with more controls -->
+                    <div class="input-footer-controls">
+                        <div class="input-footer-left">
+                            <span class="char-counter" id="char-counter">0/2000</span>
+                        </div>
+                        <div class="input-footer-right">
+                            <!-- Menu button with dropdown -->
+                            <div class="dropdown-container">
+                                <button class="footer-btn" id="menu-dropdown-btn" title="Menu">
+                                    <span class="material-icons">menu</span>
+                                </button>
+                                <div class="dropdown-menu menu-dropdown" id="menu-dropdown-menu">
+                                    <!-- Chat History -->
+                                    <div class="dropdown-item dropdown-button" id="chat-history-toggle">
+                                        <span class="material-icons">history</span>
+                                        <span>Lịch sử chat</span>
+                                    </div>
+                                    
+                                    <!-- Theme Toggle -->
+                                    <div class="dropdown-item dropdown-button" id="theme-toggle">
+                                        <span class="material-icons">light_mode</span>
+                                        <span>Chuyển chế độ tối</span>
+                                    </div>
+                                    
+                                    <!-- Settings -->
+                                    <div class="dropdown-item dropdown-button" id="model-management-toggle">
+                                        <span class="material-icons">settings</span>
+                                        <span>Cài đặt</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <span class="model-info" id="model-info">Qwen 1.5B</span>
+                        </div>
                     </div>
                 </div>
             </div>

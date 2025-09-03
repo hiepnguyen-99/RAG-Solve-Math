@@ -30,13 +30,16 @@ class ChatApp {
         this.imageInput = document.getElementById('image-input');
         this.imageButton = document.getElementById('image-button');
         
+        // New input buttons
+        this.docsToggle = document.getElementById('docs-toggle');
+        
         // Controls
         this.modelSelect = document.getElementById('model-select');
         this.kSelect = document.getElementById('k-select');
+        this.kValue = document.getElementById('k-value');
         this.rerankToggle = document.getElementById('rerank-toggle');
         this.themeToggle = document.getElementById('theme-toggle');
         this.clearChat = document.getElementById('clear-chat');
-        this.docsToggle = document.getElementById('docs-toggle');
         this.newChat = document.getElementById('new-chat');
         this.chatHistoryToggle = document.getElementById('chat-history-toggle');
         
@@ -78,24 +81,116 @@ class ChatApp {
         this.imageButton.addEventListener('click', () => this.imageInput.click());
         this.imageInput.addEventListener('change', (e) => this.handleImageUpload(e));
         
+        // New input button events
+        if (this.docsToggle) {
+            this.docsToggle.addEventListener('click', () => this.showDocumentsModal());
+        }
+        
         // Control events
         this.modelSelect.addEventListener('change', () => this.handleModelChange());
+        this.kSelect.addEventListener('input', () => this.handleKChange());
         this.kSelect.addEventListener('change', () => this.handleKChange());
         this.rerankToggle.addEventListener('change', () => this.handleRerankToggle());
-        this.themeToggle.addEventListener('click', () => this.toggleTheme());
-        this.clearChat.addEventListener('click', () => this.handleClearChat());
-        this.newChat.addEventListener('click', () => this.handleNewChat());
-        this.chatHistoryToggle.addEventListener('click', () => this.toggleChatHistory());
         
-        // Model management events
-        const modelManagementToggle = document.getElementById('model-management-toggle');
+        // Initialize slider progress on load with wave effect
+        setTimeout(() => {
+            this.updateSliderProgress();
+            this.kSelect.style.animation = 'waveRipple 1s ease-out';
+        }, 500);
+        
+        // Dropdown list animation events
+        this.modelSelect.addEventListener('mousedown', (e) => this.handleDropdownOpen(e));
+        this.modelSelect.addEventListener('blur', (e) => this.handleDropdownClose(e));
+        
+        // Note: These will be handled through dropdown menu now
+        // this.themeToggle.addEventListener('click', () => this.toggleTheme());
+        // this.chatHistoryToggle.addEventListener('click', () => this.toggleChatHistory());
+        
+        // Add dropdown functionality
+        const addDropdownBtn = document.getElementById('add-dropdown-btn');
+        const addDropdownMenu = document.getElementById('add-dropdown-menu');
+        const newChatBtn = document.getElementById('new-chat');
+        
+        if (addDropdownBtn && addDropdownMenu) {
+            addDropdownBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.toggleAddDropdown();
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!addDropdownBtn.contains(e.target) && !addDropdownMenu.contains(e.target)) {
+                    this.closeAddDropdown();
+                }
+            });
+        }
+        
+        if (newChatBtn) {
+            newChatBtn.addEventListener('click', () => {
+                this.handleNewChat();
+                this.closeAddDropdown();
+            });
+        }
+        
+        // Menu dropdown functionality
+        const menuDropdownBtn = document.getElementById('menu-dropdown-btn');
+        const menuDropdownMenu = document.getElementById('menu-dropdown-menu');
+        
+        if (menuDropdownBtn && menuDropdownMenu) {
+            menuDropdownBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.toggleMenuDropdown();
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!menuDropdownBtn.contains(e.target) && !menuDropdownMenu.contains(e.target)) {
+                    this.closeMenuDropdown();
+                }
+            });
+            
+            // Add event listeners for menu items
+            const chatHistoryItem = menuDropdownMenu.querySelector('#chat-history-toggle');
+            const themeToggleItem = menuDropdownMenu.querySelector('#theme-toggle');
+            const settingsItem = menuDropdownMenu.querySelector('#model-management-toggle');
+            
+            if (chatHistoryItem) {
+                chatHistoryItem.addEventListener('click', () => {
+                    this.toggleChatHistory();
+                    this.closeMenuDropdown();
+                });
+            }
+            
+            if (themeToggleItem) {
+                themeToggleItem.addEventListener('click', () => {
+                    this.toggleTheme();
+                    this.closeMenuDropdown();
+                });
+            }
+            
+            if (settingsItem) {
+                settingsItem.addEventListener('click', () => {
+                    this.toggleModelManagement();
+                    this.closeMenuDropdown();
+                });
+            }
+        }
+        
+        // Additional buttons
+        if (this.imageButton) {
+            this.imageButton.addEventListener('click', () => this.imageInput.click());
+        }
+        
+        // Deep research button
+        const deepResearchBtn = document.getElementById('deep-research');
+        if (deepResearchBtn) {
+            deepResearchBtn.addEventListener('click', () => this.handleDeepResearch());
+        }
+        
+        // Model management sidebar controls
         const modelManagementClose = document.getElementById('model-management-close');
         const unloadAllBtn = document.getElementById('unload-all-models');
         const refreshStatusBtn = document.getElementById('refresh-model-status');
-        
-        if (modelManagementToggle) {
-            modelManagementToggle.addEventListener('click', () => this.toggleModelManagement());
-        }
         if (modelManagementClose) {
             modelManagementClose.addEventListener('click', () => this.closeModelManagement());
         }
@@ -107,11 +202,18 @@ class ChatApp {
         }
         
         // Sidebar events
-        this.docsToggle.addEventListener('click', () => this.toggleSidebar());
-        this.sidebarClose.addEventListener('click', () => this.closeSidebar());
-        this.chatHistoryClose.addEventListener('click', () => this.closeChatHistory());
-        this.docSearch.addEventListener('input', (e) => this.searchDocuments(e.target.value));
-        this.chatSearch.addEventListener('input', (e) => this.filterChats(e.target.value));
+        if (this.sidebarClose) {
+            this.sidebarClose.addEventListener('click', () => this.closeSidebar());
+        }
+        if (this.chatHistoryClose) {
+            this.chatHistoryClose.addEventListener('click', () => this.closeChatHistory());
+        }
+        if (this.docSearch) {
+            this.docSearch.addEventListener('input', (e) => this.searchDocuments(e.target.value));
+        }
+        if (this.chatSearch) {
+            this.chatSearch.addEventListener('input', (e) => this.filterChats(e.target.value));
+        }
         
         // Modal events
         this.modalClose.addEventListener('click', () => this.closeModal());
@@ -184,12 +286,6 @@ class ChatApp {
     toggleSidebar() {
         this.documentSidebar.classList.toggle('open');
         this.mainContent.classList.toggle('sidebar-open');
-        
-        // Add visual feedback
-        this.docsToggle.style.transform = 'scale(0.9)';
-        setTimeout(() => {
-            this.docsToggle.style.transform = '';
-        }, 150);
     }
 
     closeSidebar() {
@@ -677,7 +773,34 @@ class ChatApp {
     }
 
     handleKChange() {
-        // Just update the UI, no immediate action needed
+        // Update slider value display
+        if (this.kValue) {
+            this.kValue.textContent = this.kSelect.value;
+        }
+        
+        // Update progress bar width based on value
+        this.updateSliderProgress();
+        
+        // Add visual feedback with wave effect
+        this.kValue.style.transform = 'scale(1.1)';
+        this.kSelect.style.animation = 'waveRipple 0.8s ease-out';
+        
+        setTimeout(() => {
+            this.kValue.style.transform = 'scale(1)';
+            this.kSelect.style.animation = '';
+        }, 800);
+    }
+
+    updateSliderProgress() {
+        if (!this.kSelect) return;
+        
+        const value = parseInt(this.kSelect.value);
+        const min = parseInt(this.kSelect.min);
+        const max = parseInt(this.kSelect.max);
+        const percentage = ((value - min) / (max - min)) * 100;
+        
+        // Update the ::before pseudo-element width through CSS custom property
+        this.kSelect.style.setProperty('--slider-progress', `${percentage}%`);
     }
 
     handleRerankToggle() {
@@ -759,10 +882,161 @@ class ChatApp {
     }
 
     toggleChatHistory() {
-        this.chatHistorySidebar.classList.toggle('open');
-        if (this.chatHistorySidebar.classList.contains('open')) {
-            this.loadChatHistorySidebar();
+        this.showChatHistoryModal();
+    }
+
+    async showChatHistoryModal() {
+        try {
+            const response = await fetch('/api/chats');
+            const data = await response.json();
+            
+            this.modalTitle.textContent = 'Lịch sử trò chuyện';
+            this.modalBody.innerHTML = this.createChatHistoryHTML(data.chats || []);
+            this.documentModal.classList.add('show');
+            
+            // Add event listeners for chat items
+            this.initChatHistoryLinks();
+        } catch (error) {
+            console.error('Error loading chat history:', error);
+            this.showToast('Lỗi khi tải lịch sử chat', 'error');
         }
+    }
+
+    createChatHistoryHTML(chats) {
+        if (!chats || chats.length === 0) {
+            return `
+                <div class="no-chats">
+                    <div class="empty-state">
+                        <span class="material-icons">chat_bubble_outline</span>
+                        <h3>Chưa có cuộc trò chuyện nào</h3>
+                        <p>Hãy bắt đầu cuộc trò chuyện đầu tiên của bạn!</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Group chats by date
+        const groupedChats = this.groupChatsByDate(chats);
+        
+        let html = '<div class="chat-history-modal-list">';
+        
+        Object.entries(groupedChats).forEach(([dateGroup, chatList]) => {
+            html += `
+                <div class="chat-date-group">
+                    <h4 class="date-title">${dateGroup}</h4>
+                    <div class="chat-items">
+            `;
+            
+            chatList.forEach(chat => {
+                const title = chat.title || 'Cuộc trò chuyện không có tiêu đề';
+                const truncatedTitle = title.length > 50 ? title.substring(0, 50) + '...' : title;
+                const timeStr = this.formatChatTime(chat.updated_at);
+                const messageCount = chat.message_count || 0;
+                
+                html += `
+                    <div class="chat-item" data-chat-id="${chat.id}">
+                        <div class="chat-icon">
+                            <span class="material-icons">chat</span>
+                        </div>
+                        <div class="chat-info">
+                            <div class="chat-title">${this.escapeHtml(truncatedTitle)}</div>
+                            <div class="chat-time">${messageCount} tin nhắn • ${timeStr}</div>
+                        </div>
+                        <div class="chat-actions">
+                            <button class="chat-action-btn" data-action="load" data-chat-id="${chat.id}" title="Tải cuộc trò chuyện">
+                                <span class="material-icons">restore</span>
+                            </button>
+                            <button class="chat-action-btn delete-btn" data-action="delete" data-chat-id="${chat.id}" title="Xóa cuộc trò chuyện">
+                                <span class="material-icons">delete</span>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            html += `
+                    </div>
+                </div>
+            `;
+        });
+        
+        html += '</div>';
+        return html;
+    }
+
+    groupChatsByDate(chats) {
+        const now = new Date();
+        const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        const yesterday = new Date(today.getTime() - 24 * 60 * 60 * 1000);
+        const weekAgo = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000);
+
+        const groups = {
+            'Hôm nay': [],
+            'Hôm qua': [],
+            '7 ngày trước đó': [],
+            'Cũ hơn': []
+        };
+
+        chats.forEach(chat => {
+            const chatDate = new Date(chat.updated_at);
+            const chatDay = new Date(chatDate.getFullYear(), chatDate.getMonth(), chatDate.getDate());
+
+            if (chatDay.getTime() === today.getTime()) {
+                groups['Hôm nay'].push(chat);
+            } else if (chatDay.getTime() === yesterday.getTime()) {
+                groups['Hôm qua'].push(chat);
+            } else if (chatDay >= weekAgo) {
+                groups['7 ngày trước đó'].push(chat);
+            } else {
+                groups['Cũ hơn'].push(chat);
+            }
+        });
+
+        // Remove empty groups
+        Object.keys(groups).forEach(key => {
+            if (groups[key].length === 0) {
+                delete groups[key];
+            }
+        });
+
+        return groups;
+    }
+
+    formatChatTime(updated_at) {
+        const date = new Date(updated_at);
+        const now = new Date();
+        const diffMs = now - date;
+        const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+        const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+        if (diffHours < 1) {
+            const diffMinutes = Math.floor(diffMs / (1000 * 60));
+            return `${diffMinutes} phút trước`;
+        } else if (diffHours < 24) {
+            return `${diffHours} giờ trước`;
+        } else if (diffDays < 7) {
+            return `${diffDays} ngày trước`;
+        } else {
+            return date.toLocaleDateString('vi-VN');
+        }
+    }
+
+    initChatHistoryLinks() {
+        const chatActionBtns = this.modalBody.querySelectorAll('.chat-action-btn');
+        chatActionBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const action = btn.dataset.action;
+                const chatId = btn.dataset.chatId;
+                
+                if (action === 'load') {
+                    this.loadChatConversation(chatId);
+                    this.documentModal.classList.remove('show'); // Đóng modal sau khi load
+                } else if (action === 'delete') {
+                    this.deleteChatConversation(chatId);
+                }
+            });
+        });
     }
 
     closeChatHistory() {
@@ -771,10 +1045,255 @@ class ChatApp {
 
     // ===== Model Management Methods =====
     toggleModelManagement() {
+        // Khôi phục chức năng ban đầu - toggle sidebar
         const sidebar = document.getElementById('model-management-sidebar');
-        sidebar.classList.toggle('open');
-        if (sidebar.classList.contains('open')) {
-            this.loadModelStatus();
+        if (sidebar) {
+            const isOpen = sidebar.classList.contains('open');
+            if (isOpen) {
+                this.closeModelManagement();
+            } else {
+                sidebar.classList.add('open');
+                this.loadModelStatus(); // Load status khi mở sidebar
+            }
+        }
+    }
+
+    // Method riêng để show modal (có thể dùng sau này)
+    async showModelManagementModal() {
+        this.modalTitle.textContent = 'Quản lý Models';
+        this.modalBody.innerHTML = this.createModelManagementHTML();
+        this.documentModal.classList.add('show');
+        
+        // Load model status and system info
+        await this.loadModelStatusInModal();
+        this.loadSystemInfoInModal();
+        this.initModelManagementActions();
+    }
+
+    async loadSystemInfoInModal() {
+        try {
+            const response = await fetch('/api/system-info');
+            const data = await response.json();
+            
+            const cudaStatus = document.getElementById('modal-cuda-status');
+            const memoryStatus = document.getElementById('modal-memory-status');
+            
+            if (data.success && data.system_info) {
+                const info = data.system_info;
+                
+                if (cudaStatus) {
+                    const cudaText = info.cuda_available ? 
+                        `Có (${info.cuda_device_count || 0} GPU)` : 'Không có';
+                    cudaStatus.textContent = cudaText;
+                    cudaStatus.className = `info-value ${info.cuda_available ? 'status-success' : 'status-error'}`;
+                }
+                
+                if (memoryStatus) {
+                    const memoryText = info.memory_info || 'N/A';
+                    memoryStatus.textContent = memoryText;
+                    memoryStatus.className = 'info-value status-info';
+                }
+            } else {
+                if (cudaStatus) {
+                    cudaStatus.textContent = 'Lỗi khi tải';
+                    cudaStatus.className = 'info-value status-error';
+                }
+                if (memoryStatus) {
+                    memoryStatus.textContent = 'Lỗi khi tải';
+                    memoryStatus.className = 'info-value status-error';
+                }
+            }
+        } catch (error) {
+            console.error('Error loading system info for modal:', error);
+            const cudaStatus = document.getElementById('modal-cuda-status');
+            const memoryStatus = document.getElementById('modal-memory-status');
+            
+            if (cudaStatus) {
+                cudaStatus.textContent = 'Lỗi kết nối';
+                cudaStatus.className = 'info-value status-error';
+            }
+            if (memoryStatus) {
+                memoryStatus.textContent = 'Lỗi kết nối';
+                memoryStatus.className = 'info-value status-error';
+            }
+        }
+    }
+
+    createModelManagementHTML() {
+        return `
+            <div class="model-management-content">
+                <div class="model-section">
+                    <div class="section-header">
+                        <h4 class="section-title">
+                            <span class="material-icons">memory</span>
+                            Trạng thái Models
+                        </h4>
+                    </div>
+                    <div class="model-status-list" id="modal-model-status-list">
+                        <div class="loading-message">
+                            <span class="material-icons">hourglass_empty</span>
+                            Đang tải trạng thái...
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="model-section">
+                    <div class="section-header">
+                        <h4 class="section-title">
+                            <span class="material-icons">build</span>
+                            Hành động
+                        </h4>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="action-btn primary" id="modal-unload-all-models">
+                            <span class="material-icons">clear_all</span>
+                            <span>Unload All Models</span>
+                        </button>
+                        <button class="action-btn secondary" id="modal-refresh-model-status">
+                            <span class="material-icons">refresh</span>
+                            <span>Refresh Status</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="model-section">
+                    <div class="section-header">
+                        <h4 class="section-title">
+                            <span class="material-icons">info</span>
+                            Thông tin hệ thống
+                        </h4>
+                    </div>
+                    <div class="system-info-grid" id="modal-system-info">
+                        <div class="info-card">
+                            <div class="info-label">CUDA</div>
+                            <div class="info-value" id="modal-cuda-status">Đang kiểm tra...</div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-label">Memory</div>
+                            <div class="info-value" id="modal-memory-status">Đang kiểm tra...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    async loadModelStatusInModal() {
+        try {
+            const response = await fetch('/api/models');
+            const data = await response.json();
+            
+            const statusContainer = document.getElementById('modal-model-status-list');
+            const cudaStatus = document.getElementById('modal-cuda-status');
+            const memoryStatus = document.getElementById('modal-memory-status');
+            
+            if (statusContainer) {
+                let statusHTML = '';
+                
+                if (data.models && Object.keys(data.models).length > 0) {
+                    Object.entries(data.models).forEach(([modelId, modelInfo]) => {
+                        const status = modelInfo.loaded ? 'loaded' : 'unloaded';
+                        const statusClass = modelInfo.loaded ? 'status-loaded' : 'status-unloaded';
+                        const statusText = modelInfo.loaded ? 'Đã tải' : 'Chưa tải';
+                        
+                        statusHTML += `
+                            <div class="model-status-card">
+                                <div class="model-info">
+                                    <div class="model-name">${modelInfo.name}</div>
+                                    <div class="status-badge ${statusClass}">${statusText}</div>
+                                </div>
+                                <div class="model-actions">
+                                    ${modelInfo.loaded ? 
+                                        `<button class="model-action-btn unload-btn" data-model-id="${modelId}" title="Unload model">
+                                            <span class="material-icons">stop</span>
+                                        </button>` : 
+                                        `<span class="model-action-placeholder">—</span>`
+                                    }
+                                </div>
+                            </div>
+                        `;
+                    });
+                } else {
+                    statusHTML = '<div class="no-models">Không có models nào được tìm thấy</div>';
+                }
+                
+                statusContainer.innerHTML = statusHTML;
+            }
+            
+            // Update system info
+            if (cudaStatus) {
+                cudaStatus.textContent = data.cuda_available ? 'Có sẵn' : 'Không có';
+                cudaStatus.className = `info-value ${data.cuda_available ? 'status-success' : 'status-error'}`;
+            }
+            
+            if (memoryStatus) {
+                memoryStatus.textContent = data.memory_info || 'N/A';
+            }
+            
+        } catch (error) {
+            console.error('Error loading model status:', error);
+            const statusContainer = document.getElementById('modal-model-status-list');
+            if (statusContainer) {
+                statusContainer.innerHTML = '<div class="error-message">Lỗi khi tải trạng thái</div>';
+            }
+        }
+    }
+
+    initModelManagementActions() {
+        const unloadAllBtn = document.getElementById('modal-unload-all-models');
+        const refreshBtn = document.getElementById('modal-refresh-model-status');
+        
+        if (unloadAllBtn) {
+            unloadAllBtn.addEventListener('click', () => this.unloadAllModels());
+        }
+        
+        if (refreshBtn) {
+            refreshBtn.addEventListener('click', () => this.loadModelStatusInModal());
+        }
+        
+        // Add event listeners for individual model unload buttons
+        const unloadBtns = document.querySelectorAll('.unload-btn');
+        unloadBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const modelId = btn.dataset.modelId;
+                this.unloadSingleModel(modelId);
+            });
+        });
+    }
+
+    async unloadSingleModel(modelId) {
+        if (!confirm(`Bạn có chắc chắn muốn unload model ${modelId}?`)) {
+            return;
+        }
+
+        try {
+            const response = await fetch(`/api/models/${modelId}/unload`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                this.showToast(`Đã unload model ${modelId}`, 'success');
+                
+                // Refresh modal if it's open
+                if (this.documentModal.classList.contains('show') && this.modalTitle.textContent === 'Quản lý Models') {
+                    this.loadModelStatusInModal();
+                } else {
+                    this.loadModelStatus();
+                }
+                
+                // Update model status in select
+                this.updateModelStatus(modelId, 'unloaded');
+            } else {
+                this.showToast(result.message || 'Không thể unload model', 'error');
+            }
+        } catch (error) {
+            console.error('Error unloading model:', error);
+            this.showToast('Lỗi khi unload model', 'error');
         }
     }
 
@@ -909,7 +1428,14 @@ class ChatApp {
             
             if (result.success) {
                 this.showToast(result.message, 'success');
-                this.loadModelStatus(); // Refresh status
+                
+                // Refresh modal if it's open
+                if (this.documentModal.classList.contains('show') && this.modalTitle.textContent === 'Quản lý Models') {
+                    this.loadModelStatusInModal();
+                } else {
+                    this.loadModelStatus(); // Refresh status for sidebar
+                }
+                
                 this.updateLoadedModelsList([]);
                 
                 // Reset all model select options
@@ -1072,7 +1598,12 @@ class ChatApp {
                 
                 if (data.success) {
                     this.showToast('Đã xóa cuộc trò chuyện', 'success');
-                    this.loadChatHistorySidebar();
+                    // Refresh modal if it's open
+                    if (this.documentModal.classList.contains('show') && this.modalTitle.textContent === 'Lịch sử trò chuyện') {
+                        this.showChatHistoryModal();
+                    } else {
+                        this.loadChatHistorySidebar();
+                    }
                 } else {
                     this.showToast(data.error || 'Không thể xóa cuộc trò chuyện', 'error');
                 }
@@ -1271,6 +1802,10 @@ class ChatApp {
         
         if (savedK) {
             this.kSelect.value = savedK;
+            this.handleKChange(); // Update slider display and progress
+        } else {
+            // Initialize progress for default value
+            this.updateSliderProgress();
         }
     }
 
@@ -1479,6 +2014,184 @@ class ChatApp {
         this.userInput.value = '';
         this.handleInputChange();
         this.userInput.focus();
+    }
+
+    // ===== Function Button Handlers =====
+    handleDeepResearch() {
+        // Chế độ nghiên cứu sâu - có thể thêm logic đặc biệt sau
+        this.userInput.focus();
+        this.userInput.placeholder = "Nhập câu hỏi cần nghiên cứu sâu...";
+        this.addMessage('system', '🔍 Chế độ nghiên cứu sâu đã được kích hoạt. Tôi sẽ tìm kiếm và phân tích chi tiết cho câu hỏi của bạn.');
+    }
+
+    // ===== Dropdown Handlers =====
+    toggleAddDropdown() {
+        const dropdown = document.getElementById('add-dropdown-menu');
+        if (dropdown) {
+            dropdown.classList.toggle('show');
+        }
+    }
+
+    closeAddDropdown() {
+        const dropdown = document.getElementById('add-dropdown-menu');
+        if (dropdown) {
+            dropdown.classList.remove('show');
+        }
+    }
+
+    toggleMenuDropdown() {
+        const dropdown = document.getElementById('menu-dropdown-menu');
+        if (dropdown) {
+            dropdown.classList.toggle('show');
+        }
+    }
+
+    closeMenuDropdown() {
+        const dropdown = document.getElementById('menu-dropdown-menu');
+        if (dropdown) {
+            dropdown.classList.remove('show');
+        }
+    }
+
+    // ===== Documents Modal =====
+    async showDocumentsModal() {
+        try {
+            const response = await fetch('/api/documents');
+            const data = await response.json();
+            
+            if (data.success) {
+                this.modalTitle.textContent = 'Thư viện tài liệu';
+                this.modalBody.innerHTML = this.createDocumentsListHTML(data.documents);
+                this.documentModal.classList.add('show');
+                
+                // Add event listeners for document links
+                this.initDocumentLinks();
+            } else {
+                this.showToast('Không thể tải danh sách tài liệu', 'error');
+            }
+        } catch (error) {
+            console.error('Error loading documents:', error);
+            this.showToast('Lỗi khi tải tài liệu', 'error');
+        }
+    }
+
+    createDocumentsListHTML(documents) {
+        if (!documents || documents.length === 0) {
+            return '<p class="no-documents">Không có tài liệu nào.</p>';
+        }
+
+        // Group documents by category
+        const categories = {
+            'Cơ bản': [],
+            'Phép toán': [],
+            'Nâng cao': []
+        };
+
+        documents.forEach(doc => {
+            if (doc.name.includes('basics') || doc.name.includes('types') || doc.name.includes('transpose')) {
+                categories['Cơ bản'].push(doc);
+            } else if (doc.name.includes('operations') || doc.name.includes('determinant') || doc.name.includes('inverse')) {
+                categories['Phép toán'].push(doc);
+            } else {
+                categories['Nâng cao'].push(doc);
+            }
+        });
+
+        let html = '<div class="documents-modal-list">';
+        
+        Object.entries(categories).forEach(([category, docs]) => {
+            if (docs.length > 0) {
+                html += `
+                    <div class="document-category">
+                        <h4 class="category-title">${category}</h4>
+                        <div class="category-docs">
+                `;
+                
+                docs.forEach(doc => {
+                    const displayName = doc.name.replace('.md', '').replace(/_/g, ' ');
+                    html += `
+                        <div class="doc-item" data-filename="${doc.name}">
+                            <span class="material-icons">description</span>
+                            <span class="doc-name">${displayName}</span>
+                            <span class="doc-size">${doc.size || 'N/A'}</span>
+                        </div>
+                    `;
+                });
+                
+                html += `
+                        </div>
+                    </div>
+                `;
+            }
+        });
+        
+        html += '</div>';
+        return html;
+    }
+
+    initDocumentLinks() {
+        const docItems = this.modalBody.querySelectorAll('.doc-item');
+        docItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const filename = item.dataset.filename;
+                this.openDocument(filename);
+            });
+        });
+    }
+
+    // ===== Dropdown List Animation Methods =====
+    handleDropdownOpen(e) {
+        const select = e.target;
+        
+        // Trigger dropdown opening with size
+        setTimeout(() => {
+            if (select.size > 1 || select.multiple) {
+                // Dropdown đã mở, trigger animation
+                this.animateDropdownList(select);
+            } else {
+                // Force mở dropdown với size
+                const optionCount = select.options.length;
+                const maxSize = Math.min(optionCount, 6);
+                select.size = maxSize;
+                this.animateDropdownList(select);
+                
+                // Auto-close khi chọn
+                const handleSelection = () => {
+                    setTimeout(() => {
+                        select.removeAttribute('size');
+                    }, 150);
+                    select.removeEventListener('change', handleSelection);
+                };
+                select.addEventListener('change', handleSelection);
+            }
+        }, 50);
+    }
+
+    handleDropdownClose(e) {
+        const select = e.target;
+        setTimeout(() => {
+            select.removeAttribute('size');
+        }, 100);
+    }
+
+    animateDropdownList(select) {
+        // Reset animation
+        select.style.animation = 'none';
+        
+        // Trigger reflow
+        select.offsetHeight;
+        
+        // Start animation
+        select.style.animation = 'dropdownSlideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+        
+        // Animate options với stagger effect
+        const options = select.querySelectorAll('option');
+        options.forEach((option, index) => {
+            option.style.animation = 'none';
+            option.offsetHeight; // Trigger reflow
+            option.style.animation = `optionFadeIn 0.2s ease forwards`;
+            option.style.animationDelay = `${index * 0.05}s`;
+        });
     }
 }
 
