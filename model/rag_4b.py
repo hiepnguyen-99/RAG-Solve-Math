@@ -383,12 +383,10 @@ Hãy giải bài toán sau đây từng bước một, hiển thị các công t
 
 Câu hỏi: {question}
 
-Hãy làm theo các bước:
-1. Phân tích đề bài và xác định phương pháp giải
-2. Giải chi tiết từng bước  
-3. Đưa ra kết luận cuối cùng
-
-Trả lời:
+Đầu ra:
+1. Phân tích bài toán.
+2. Giải các bước chi tiết kèm công thức.
+3. Kết luận câu trả lời cuối cùng.
 """
 
         # Gọi API thông qua ngrok
