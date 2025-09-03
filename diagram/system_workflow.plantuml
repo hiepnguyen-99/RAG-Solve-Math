@@ -1,0 +1,73 @@
+@startuml Luồng Xử Lý Câu Hỏi
+!theme plain
+' Cài đặt giao diện cho sơ đồ
+skinparam defaultFontName "Arial"
+skinparam defaultFontSize 14
+skinparam sequenceActorBorderColor black
+skinparam sequenceParticipantBorderColor black
+skinparam sequenceArrowColor black
+skinparam sequenceLifeLineBorderColor gray
+skinparam actorBackgroundColor #ADD8E6
+skinparam participantBackgroundColor #F8F8F8
+
+title Luồng xử lý câu hỏi của hệ thống
+
+' Khai báo các tác nhân và thành phần hệ thống
+actor "Người dùng" as User
+participant "Hệ thống API" as API
+box "Hệ thống xử lý lõi" #LightYellow
+    participant "Phân loại & Rewrite" as ClassRewrite
+    participant "Retriever" as Retriever
+    participant "Reranker" as Reranker
+    participant "Generator" as Generator
+end box
+
+' Bắt đầu luồng
+User -> API : Gửi câu hỏi
+activate API
+
+API -> ClassRewrite : Yêu cầu xử lý câu hỏi
+activate ClassRewrite
+
+ClassRewrite -> ClassRewrite : Phân loại câu hỏi (Lý thuyết / Giải bài tập)
+
+' Kiểm tra điều kiện có lịch sử trò chuyện hay không
+alt Có lịch sử trò chuyện (>= 2)
+    ClassRewrite -> ClassRewrite : 1. Tạo ngữ cảnh từ lịch sử
+    ClassRewrite -> ClassRewrite : 2. Rewrite câu hỏi gốc -> k câu hỏi mới
+else Không có lịch sử trò chuyện
+    note right of ClassRewrite : Bỏ qua bước rewrite, \nsử dụng câu hỏi gốc.
+end
+
+' Bắt đầu quy trình RAG
+group Quy trình Retrieval-Augmented Generation (RAG)
+    ClassRewrite -> Retriever : Gửi các câu hỏi để tìm kiếm
+    deactivate ClassRewrite
+    activate Retriever
+
+    Retriever -> Retriever : Thu thập k*k tài liệu liên quan
+    Retriever -> Reranker : Gửi tài liệu để xếp hạng lại
+    deactivate Retriever
+    activate Reranker
+
+    Reranker -> Reranker : Xếp hạng lại với BAAI/bge-reranker-base
+    Reranker -> Reranker : Kết hợp k tài liệu tốt nhất\n(sử dụng Reciprocal Rank Fusion)
+
+    Reranker -> Generator : Gửi ngữ cảnh (tài liệu đã xử lý)
+    deactivate Reranker
+    activate Generator
+end
+
+' Tạo prompt và sinh câu trả lời
+group Tạo Prompt và Sinh câu trả lời
+    Generator -> Generator : 1. Sử dụng PromptTemplate để tạo prompt
+    Generator -> Generator : 2. Sinh câu trả lời từ prompt cuối cùng
+end
+
+Generator --> API : Gửi câu trả lời đã tạo
+deactivate Generator
+
+API --> User : Trả về câu trả lời
+deactivate API
+
+@enduml
