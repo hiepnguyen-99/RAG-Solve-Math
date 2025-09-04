@@ -5,6 +5,7 @@ from langchain_chroma import Chroma
 from .retrieval import *
 from .conversation_manager import conversation_manager
 
+
 device = "cuda" if torch.cuda.is_available() else "cpu"
 # ===== Khởi tạo embedding model chung =====
 def get_embedding_model():
@@ -18,7 +19,7 @@ def get_embedding_model():
 # ===== Khởi tạo Chroma database =====
 def get_chroma_db():
     """Trả về Chroma database instance"""
-    chroma_path = "./chroma_db"
+    chroma_path = os.getenv("CHROMA_DB_PATH", "./chroma_db")
     embedding_model = get_embedding_model()
     return Chroma(
         persist_directory=chroma_path,
