@@ -1766,6 +1766,51 @@ body {
     line-height: 1.5;
 }
 
+/* Markdown styling trong message content */
+.message-content h1,
+.message-content h2,
+.message-content h3 {
+    margin: 16px 0 8px 0;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.message-content h1 {
+    font-size: 1.4em;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 8px;
+}
+
+.message-content h2 {
+    font-size: 1.3em;
+    color: var(--primary-color);
+}
+
+.message-content h3 {
+    font-size: 1.2em;
+    color: var(--secondary-color);
+}
+
+.message-content strong {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.message-content em {
+    font-style: italic;
+    color: var(--text-secondary);
+}
+
+.message-content code {
+    background: var(--surface-color);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9em;
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+}
+
 .message-user .message-content {
     background: var(--primary-color);
     color: white;

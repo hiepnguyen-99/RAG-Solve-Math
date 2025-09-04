@@ -268,20 +268,6 @@ class ChatApp {
         this.userInput.style.height = Math.min(this.userInput.scrollHeight, 120) + 'px';
     }
 
-    // ===== LaTeX and Markdown Processing =====
-    processLaTeX(content, container = null) {
-        // Render LaTeX math expressions
-        if (window.MathJax) {
-            setTimeout(() => {
-                const targetElement = container || this.chatMessages;
-                MathJax.typesetPromise([targetElement]).catch((err) => {
-                    console.log('MathJax error:', err);
-                });
-            }, 100);
-        }
-        return content;
-    }
-
     // ===== Sidebar Management =====
     toggleSidebar() {
         this.documentSidebar.classList.toggle('open');
@@ -359,7 +345,11 @@ class ChatApp {
                 this.documentModal.classList.add('show');
                 
                 // Process LaTeX in modal
-                this.processLaTeX(data.content, this.modalBody);
+                if (window.MathJax && window.MathJax.typesetPromise) {
+                    window.MathJax.typesetPromise([this.modalBody]).catch((err) => {
+                        console.log('MathJax error:', err);
+                    });
+                }
             } else {
                 this.showToast('Không thể tải tài liệu', 'error');
             }
@@ -418,7 +408,11 @@ class ChatApp {
                 }
                 
                 // Process LaTeX in modal
-                this.processLaTeX(data.content, this.modalBody);
+                if (window.MathJax && window.MathJax.typesetPromise) {
+                    window.MathJax.typesetPromise([this.modalBody]).catch((err) => {
+                        console.log('MathJax error:', err);
+                    });
+                }
             } else {
                 this.showToast('Không thể tải chi tiết chunk', 'error');
             }
@@ -522,8 +516,12 @@ class ChatApp {
             this.initSourceToggle(messageElement);
         }
         
-        // Process LaTeX for math expressions
-        this.processLaTeX(message.content);
+        // Process LaTeX for math expressions in the newly added element
+        if (window.MathJax && window.MathJax.typesetPromise) {
+            window.MathJax.typesetPromise([messageElement]).catch((err) => {
+                console.log('MathJax error:', err);
+            });
+        }
         
         this.messages.push(message);
         
@@ -542,7 +540,7 @@ class ChatApp {
         if (message.type === 'user') {
             return `
                 <div class="message-content">
-                    ${this.escapeHtml(message.content)}
+                    ${this.processMarkdown(message.content)}
                 </div>
                 <div class="message-meta">
                     <span class="material-icons">schedule</span>
@@ -567,7 +565,7 @@ class ChatApp {
 
             return `
                 <div class="message-content">
-                    ${this.escapeHtml(message.content)}
+                    ${this.processMarkdown(message.content)}
                     ${contextIndicator}
                     ${rewriteQueriesHTML}
                     ${sourceDocsHTML}
@@ -1719,6 +1717,83 @@ class ChatApp {
         const div = document.createElement('div');
         div.textContent = text;
         return div.innerHTML.replace(/\\n/g, '<br>');
+    }
+
+    // Xử lý Markdown cơ bản với bảo vệ LaTeX
+    processMarkdown(text) {
+        if (!text) return '';
+        
+        console.log('Input text:', text); // Debug
+        
+        // Bảo vệ LaTeX expressions trước khi escape HTML
+        const latexPlaceholders = [];
+        let placeholderCounter = 0;
+        
+        // Bảo vệ display math $$...$$
+        text = text.replace(/\$\$([\s\S]*?)\$\$/g, (match) => {
+            const placeholder = `__LATEX_PLACEHOLDER_${placeholderCounter}__`;
+            latexPlaceholders.push({ placeholder, original: match });
+            console.log('Display math placeholder:', placeholder, '=', match); // Debug
+            placeholderCounter++;
+            return placeholder;
+        });
+        
+        // Bảo vệ inline math $...$
+        text = text.replace(/\$([^$\n]+?)\$/g, (match) => {
+            const placeholder = `__LATEX_PLACEHOLDER_${placeholderCounter}__`;
+            latexPlaceholders.push({ placeholder, original: match });
+            console.log('Inline math placeholder:', placeholder, '=', match); // Debug
+            placeholderCounter++;
+            return placeholder;
+        });
+        
+        // Bảo vệ LaTeX commands \(...\) và \[...\]
+        text = text.replace(/\\[\(\[][\s\S]*?\\[\)\]]/g, (match) => {
+            const placeholder = `__LATEX_PLACEHOLDER_${placeholderCounter}__`;
+            latexPlaceholders.push({ placeholder, original: match });
+            console.log('LaTeX command placeholder:', placeholder, '=', match); // Debug
+            placeholderCounter++;
+            return placeholder;
+        });
+        
+        console.log('Text after placeholder replacement:', text); // Debug
+        console.log('Placeholders array:', latexPlaceholders); // Debug
+        
+        // Escape HTML cho phần còn lại
+        const div = document.createElement('div');
+        div.textContent = text;
+        let processed = div.innerHTML;
+        
+        console.log('Text after HTML escape:', processed); // Debug
+        
+        // Xử lý các format Markdown cơ bản
+        processed = processed
+            // Bold: **text** hoặc __text__
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            // Italic: *text* (tránh conflict với LaTeX)
+            .replace(/(?<!\*)\*([^*\n]+?)\*(?!\*)/g, '<em>$1</em>')
+            // Code inline: `code`
+            .replace(/`(.*?)`/g, '<code>$1</code>')
+            // Xuống dòng: \n thành <br>
+            .replace(/\n/g, '<br>')
+            .replace(/\\n/g, '<br>')
+            // Headers: ### Title
+            .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+            .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+            .replace(/^# (.*$)/gim, '<h1>$1</h1>');
+        
+        console.log('Text after markdown processing:', processed); // Debug
+        
+        // Khôi phục LaTeX expressions - theo thứ tự ngược lại để tránh conflict
+        for (let i = latexPlaceholders.length - 1; i >= 0; i--) {
+            const { placeholder, original } = latexPlaceholders[i];
+            console.log('Restoring:', placeholder, 'to', original); // Debug
+            processed = processed.split(placeholder).join(original);
+        }
+        
+        console.log('Final processed text:', processed); // Debug
+        
+        return processed;
     }
 
     getModelDisplayName(modelKey) {
