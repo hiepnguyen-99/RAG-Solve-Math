@@ -80,6 +80,10 @@ def index():
                          current_model=session.get('selected_model', Config.DEFAULT_MODEL),
                          rerank_enabled=session.get('rerank_enabled', Config.DEFAULT_RERANK))
 
+@app.route('/favicon.ico')
+def favicon():
+    return app.send_static_file('ai-technology.png')
+
 @app.route('/api/chat', methods=['POST'])
 def chat():
     init_session()
