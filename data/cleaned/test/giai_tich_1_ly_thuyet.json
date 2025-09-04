@@ -742,35 +742,32 @@
             }
         },
         {
-            "question": "Định nghĩa tích phân xác định (theo Riemann).",
+            "question": "Định nghĩa tích phân xác định được phát biểu như thế nào?",
             "answer": {
                 "steps": [
-                    "Chia đoạn $[a,b]$ thành $n$ phần: $a=x_0<...<x_n=b$.",
-                    "Chọn $\\xi_i \\in [x_{i-1},x_i]$, xét tổng Riemann:",
-                    "$$ S = \\sum_{i=1}^n f(\\xi_i) \\Delta x_i. $$",
-                    "Nếu $S$ có giới hạn khi $\\max \\Delta x_i \\to 0$, không phụ thuộc cách chia, thì giới hạn đó là tích phân xác định:",
-                    "$$ I = \\int_a^b f(x) dx. $$",
-                    "Ý nghĩa: tích phân xác định được hiểu là diện tích có hướng dưới đồ thị hàm số."
+                    "Giả sử $f(x)$ bị chặn trên $[a,b]$, chia đoạn thành $n$ phần nhỏ $[x_i, x_{i+1}]$ và chọn $\\xi_i \\in [x_i, x_{i+1}]$.",
+                    "Xét tổng Riemann: $S_n = \\sum_{i=0}^{n-1} f(\\xi_i)\\Delta x_i$, với $\\Delta x_i = x_{i+1} - x_i$.",
+                    "Nếu tồn tại giới hạn hữu hạn $I = \\lim_{\\lambda \\to 0} S_n$, độc lập với cách chia và chọn $\\xi_i$, thì $I$ gọi là tích phân xác định của $f$ trên $[a,b]$, ký hiệu $\\int_a^b f(x)\\,dx$."
                 ]
             }
         },
         {
-            "question": "Định lý cơ bản của giải tích (phần I).",
+            "question": "Tiêu chuẩn khả tích cần và đủ của một hàm số bị chặn trên $[a,b]$ là gì?",
             "answer": {
                 "steps": [
-                    "Nếu $f$ liên tục trên $[a,b]$, đặt $F(x) = \\int_a^x f(t) dt$.",
-                    "Khi đó $F'(x) = f(x)$.",
-                    "Ý nghĩa: hàm tích phân là một nguyên hàm của $f$."
+                    "Đặt $S = \\sum_{i=1}^{n+1} M_i \\Delta x_i$, $s = \\sum_{i=1}^{n+1} m_i \\Delta x_i$,",
+                    "trong đó $M_i = \\sup_{x \\in [x_i, x_{i+1}]} f(x)$, $m_i = \\inf_{x \\in [x_i, x_{i+1}]} f(x)$.",
+                    "Điều kiện cần và đủ để $f(x)$ khả tích trên $[a,b]$ là $\\lim_{\\lambda \\to 0}(S-s) = 0$."
                 ]
             }
         },
         {
-            "question": "Định lý cơ bản của giải tích (phần II).",
+            "question": "Nêu các định lý thường dùng để suy ra tính khả tích của hàm số trên đoạn $[a,b]$.",
             "answer": {
                 "steps": [
-                    "Nếu $F(x)$ là nguyên hàm của $f(x)$ trên $[a,b]$ thì:",
-                    "$$ \\int_a^b f(x) dx = F(b) - F(a). $$",
-                    "Ý nghĩa: cho phép tính tích phân xác định bằng nguyên hàm, tạo mối liên hệ trực tiếp giữa đạo hàm và tích phân."
+                    "Nếu $f(x)$ liên tục trên $[a,b]$ thì $f(x)$ khả tích trên $[a,b]$.",
+                    "Nếu $f(x)$ bị chặn trên $[a,b]$ và chỉ có hữu hạn điểm gián đoạn thì $f(x)$ khả tích trên $[a,b]$.",
+                    "Nếu $f(x)$ bị chặn và đơn điệu trên $[a,b]$ thì $f(x)$ khả tích trên $[a,b]$."
                 ]
             }
         },

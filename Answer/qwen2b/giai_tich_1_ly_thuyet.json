@@ -1,0 +1,507 @@
+[
+  {
+    "index": 1,
+    "input": "Nêu các tập số cơ bản trong giải tích.",
+    "output": "Dựa trên thông tin được cung cấp, các tập số cơ bản trong giải tích bao gồm:\n\n1. **Tập số nguyên**: $\\mathbb{N}$ (có thể hiểu là tập số tự nhiên)\n2. **Tập số hữu tỉ**: $\\mathbb{Q}$\n3. **Tập số thực**: $\\mathbb{R}$\n\nGiải thích:\n- Tập số nguyên ($\\mathbb{N}$) bao gồm các số tự nhiên: 0, 1, 2, 3, ...\n- Tập số hữu tỉ ($\\mathbb{Q}$) bao gồm các số thập phân có dạng $\\frac{p}{q}$, trong đó $p$ và $q$ là các số nguyên và $q \\neq 0$.\n- Tập số thực ($\\mathbb{R}$) bao gồm tất cả các số vô cùng nhỏ, từ số thực dương đến số thực âm, bao gồm cả số hữu tỉ và vô tỉ.\n\nNhư vậy, ba tập số này là các tập số cơ bản trong giải tích và đại số."
+  },
+  {
+    "index": 2,
+    "input": "Tập số $\\mathbb{N}, \\mathbb{Z}, \\mathbb{Q}, \\mathbb{R}$ có mối quan hệ bao hàm như thế nào?",
+    "output": "Tập số $\\mathbb{N}, \\mathbb{Z}, \\mathbb{Q}, \\mathbb{R}$ có mối quan hệ bao hàm như sau:\n\n- $\\mathbb{N} \\subset \\mathbb{Z} \\subset \\mathbb{Q} \\subset \\mathbb{R}$\n\nĐiều này có nghĩa là:\n\n- Tất cả các phần tử của $\\mathbb{N}$ đều nằm trong $\\mathbb{Z}$.\n- Tất cả các phần tử của $\\mathbb{Z}$ đều nằm trong $\\mathbb{Q}$.\n- Tất cả các phần tử của $\\mathbb{Q}$ đều nằm trong $\\mathbb{R}$.\n\nVì vậy, $\\mathbb{N}$ là tập con nhỏ nhất trong nhóm này, trong khi $\\mathbb{R}$ là tập lớn nhất."
+  },
+  {
+    "index": 3,
+    "input": "Định nghĩa trị tuyệt đối của một số thực.",
+    "output": "Định nghĩa: $|x|$ là giá trị tuyệt đối (hoặc độ lớn) của số thực $x$, được định nghĩa như sau:\n\n- Nếu $x \\ge 0$, thì $|x| = x$\n- Nếu $x < 0$, thì $|x| = -x$\n\nVí dụ:\n- $|5| = 5$\n- $|-3| = 3$\n- $|0| = 0$"
+  },
+  {
+    "index": 4,
+    "input": "Nêu các tính chất cơ bản của trị tuyệt đối.",
+    "output": "1. $|x| \\ge 0$, với điều kiện $|x| = 0 \\iff x = 0$.\n2. $|x + y| \\le |x| + |y|$.\n3. $|x - y| \\ge ||x| - |y||$.\n4. $|x| \\ge A \\iff x \\ge A$ hoặc $x \\le -A$ với $A \\ge 0$.\n5. $|x| \\le B \\Longleftrightarrow -B \\le x \\le B$ với $B \\ge 0$."
+  },
+  {
+    "index": 5,
+    "input": "Định nghĩa hàm số một biến thực.",
+    "output": "Hàm số một biến thực là một hàm số $f: \\mathbb{R} \\to \\mathbb{R}$, tức là một quy tắc cho tương ứng mỗi phần tử $x \\in \\mathbb{R}$ với một và chỉ một phần tử $y \\in \\mathbb{R}$. Trong đó $\\mathbb{R}$ là tập hợp tất cả các số thực."
+  },
+  {
+    "index": 6,
+    "input": "Định nghĩa tính đơn điệu của hàm số.",
+    "output": "Dựa trên thông tin được cung cấp:\n\nHàm số $f(x)$ được gọi là đơn điệu tăng trên khoảng $(a,b)$ nếu $ \\forall x_1, x_2 \\in (a,b),\\ x_1 < x_2 \\Rightarrow f(x_1) < f(x_2) $.\n\nHàm số $f(x)$ được gọi là đơn điệu giảm trên khoảng $(a,b)$ nếu $ \\forall x_1, x_2 \\in (a,b),\\ x_1 < x_2 \\Rightarrow f(x_1) > f(x_2) $.\n\nMột hàm số $f: X \\to Y$ được gọi là ánh xạ 1-1 (đơn ánh) nếu $x_1 \\ne x_2 \\Rightarrow f(x_1) \\ne f(x_2)$."
+  },
+  {
+    "index": 7,
+    "input": "Định nghĩa hàm chẵn và hàm lẻ.",
+    "output": "Hàm số \\( f(x) \\) được gọi là **chẵn** nếu:\n- Đối với mọi \\( x \\in \\text{TXĐ} \\), \\( -x \\) cũng thuộc \\( \\text{TXĐ} \\).\n- \\( f(-x) = f(x) \\).\n\nVí dụ, hàm số \\( y = \\sin x \\) là hàm số lẻ vì:\n- \\( \\sin(-x) = -\\sin x \\)\n- Điều này thỏa mãn điều kiện của hàm số lẻ.\n\nHàm số \\( y = \\cos x \\) là hàm số chẵn vì:\n- \\( \\cos(-x) = \\cos x \\)\n- Điều này thỏa mãn điều kiện của hàm số chẵn."
+  },
+  {
+    "index": 8,
+    "input": "Định nghĩa hàm tuần hoàn.",
+    "output": "Hàm tuần hoàn là một hàm số có chu kỳ dương \\( T \\), thỏa mãn phương trình \\( f(x + T) = f(x) \\) cho mọi \\( x \\). Chu kỳ \\( T \\) là chu kỳ nhỏ nhất (nếu tồn tại) mà điều kiện này đúng.\n\nVí dụ về hàm số tuần hoàn bao gồm:\n- \\( y = \\sin x \\)\n- \\( y = \\cos x \\)\n- \\( y = \\tan x \\)\n- \\( y = \\cot x \\)\n\nĐây là những hàm số đã được cung cấp trong ví dụ quen thuộc."
+  },
+  {
+    "index": 9,
+    "input": "Định nghĩa hàm hợp và hàm ngược.",
+    "output": "Không có thông tin về hàm hợp và hàm ngược trong đoạn văn được cung cấp. Đoạn văn chỉ đề cập đến hàm ngược của một hàm đã cho. Để trả lời câu hỏi về hàm hợp và hàm ngược, tôi cần thêm thông tin từ nguồn khác. Bạn có thể cung cấp thêm thông tin hay đưa ra câu hỏi cụ thể hơn?"
+  },
+  {
+    "index": 10,
+    "input": "Định nghĩa hàm hợp.",
+    "output": "Hàm hợp của hai hàm số \\( f \\) và \\( g \\), ký hiệu \\( f \\circ g \\), được định nghĩa bởi:\n\n\\[\n(f \\circ g)(x) = f(g(x))\n\\]\n\nĐây là cách viết công thức cho hàm hợp theo tiêu đề."
+  },
+  {
+    "index": 11,
+    "input": "Định nghĩa hàm ngược.",
+    "output": "Hàm ngược \\( f^{-1} \\) của một hàm \\( f \\) được định nghĩa như sau:\n\n- Miền xác định của \\( f^{-1} \\) là miền giá trị của \\( f \\), ký hiệu là \\( \\text{Tập giá trị}(f) = \\text{TXĐ}(f^{-1}) \\).\n- Miền giá trị của \\( f^{-1} \\) là miền xác định của \\( f \\), ký hiệu là \\( \\text{TXĐ}(f) = \\text{Tập giá trị}(f^{-1}) \\).\n\nĐể tìm hàm số ngược \\( f^{-1}(x) \\):\n\n1. Viết \\( y = f(x) \\).\n2. Giải phương trình này theo \\( x \\) theo biến \\( y \\), giả sử được \\( x = g(y) \\).\n3. Đổi vai trò của \\( x \\) và \\( y \\) để được hàm số ngược \\( f^{-1}(x) = g(x) \\).\n\nNếu hàm số \\( f(x) \\) đơn điệu tăng hoặc đơn điệu giảm trên khoảng \\( (a,b) \\), thì tồn tại hàm số ngược \\( f^{-1} \\) của \\( f \\) trên khoảng đó."
+  },
+  {
+    "index": 12,
+    "input": "Định nghĩa dãy số.",
+    "output": "Dãy số là một hàm số \\( f : \\mathbb{N} \\to \\mathbb{R} \\), ký hiệu \\(\\{a_n\\}_{n \\in \\mathbb{N}}\\)."
+  },
+  {
+    "index": 13,
+    "input": "Định nghĩa giới hạn của dãy số.",
+    "output": "Giới hạn của một dãy số $\\{a_n\\}$ được gọi là $L$ và viết $\\lim_{n\\to\\infty} a_n = L$ (hay $a_n \\to L$ khi $n \\to \\infty)$ nếu:\n\n1. Có thể làm cho các số hạng $a_n$ gần $L$ đến mức tùy ý bằng cách chọn $n$ đủ lớn.\n2. Với mọi $\\epsilon > 0$, tồn tại $N \\in \\mathbb{N}$ sao cho nếu $n > N$ thì $|a_n - L| < \\epsilon$. Điều này có nghĩa là với mọi $\\epsilon > 0$, từ một chỉ số đủ lớn trở đi, toàn bộ các số hạng của dãy $\\{a_n\\}_{n > N}$ đều nằm trong khoảng $(L-\\epsilon, L+\\epsilon)$."
+  },
+  {
+    "index": 14,
+    "input": "Định nghĩa dãy số hội tụ và phân kỳ.",
+    "output": "Dãy số $\\{a_n\\}$ được gọi là có giới hạn là $L$ và viết $\\lim_{n\\to\\infty} a_n = L$ (hay $a_n \\to L$ khi $n \\to \\infty$) nếu:\n\n- Có thể làm cho các số hạng $a_n$ gần $L$ đến mức tùy ý bằng cách chọn $n$ đủ lớn.\n- Với mọi $\\epsilon > 0$, tồn tại $N \\in \\mathbb{N}$ sao cho nếu $n > N$ thì $|a_n - L| < \\epsilon$. Hình dung rằng $\\lim_{n\\to+\\infty} a_n = L$ nghĩa là với mọi $\\epsilon > 0$ thì từ một chỉ số đủ lớn trở đi, toàn bộ các số hạng của dãy $\\{a_n\\}_{n > N}$ đều nằm trong khoảng $(L-\\epsilon, L+\\epsilon)$.\n\nMột dãy số $\\{a_n\\}$ hội tụ khi và chỉ khi nó là dãy số Cauchy."
+  },
+  {
+    "index": 15,
+    "input": "Nêu các tính chất cơ bản của giới hạn dãy số.",
+    "output": "Dựa trên thông tin đã cung cấp, đây là các tính chất cơ bản của giới hạn dãy số:\n\n1. **Định nghĩa trực giác**: Dãy số $\\{a_n\\}$ có giới hạn là $L$ nếu với mọi $\\epsilon > 0$, tồn tại $N \\in \\mathbb{N}$ sao cho nếu $n > N$, thì $|a_n - L| < \\epsilon$. Điều này có nghĩa là với mọi $\\epsilon > 0$, chúng ta có thể tìm thấy một chỉ số $N$ lớn hơn bất kỳ, sao cho tất cả các số hạng $a_n$ cho $n > N$ đều nằm trong khoảng $(L-\\epsilon, L+\\epsilon)$.\n\n2. **Định nghĩa chính xác**: Dãy số $\\{a_n\\}$ có giới hạn là $L$ nếu với mọi $\\epsilon > 0$, tồn tại $N \\in \\mathbb{N}$ sao cho nếu $n > N$, thì $|a_n - L| < \\epsilon$. Tương đương với định nghĩa trực giác, nhưng sử dụng ký hiệu toán học chính xác hơn.\n\n3. **Hội tụ và phân kì**:\n   - Dãy số $\\{a_n\\}$ có giới hạn là $L$ hữu hạn ($L$ thực).\n   - Dãy số $\\{a_n\\}$ có giới hạn là $+\\infty$ nếu với mọi $M > 0$, tồn tại $N \\in \\mathbb{N}$ sao cho nếu $n > N$, thì $a_n > M$.\n   - Dãy số $\\{a_n\\}$ có giới hạn là $-\\infty$ nếu với mọi $M > 0$, tồn tại $N \\in \\mathbb{N}$ sao cho nếu $n > N$, thì $a_n < -M$.\n\n4. **Giới hạn duy nhất**: Giới hạn của một dãy số, nếu tồn tại, là duy nhất.\n\n5. **Bị chặn**: Mọi dãy số hội tụ đều bị chặn.\n\n6. **Phân kì**: Dãy số $\\{a_n\\}$ có giới hạn là $+\\infty$ hoặc $-\\infty$ nếu giới hạn tồn tại và không phải là một số thực cụ thể.\n\nNhững tính chất này cung cấp cái nhìn tổng quan về hành vi của các dãy số khi $n$ tiến đến vô cùng."
+  },
+  {
+    "index": 16,
+    "input": "Trình bày tiêu chuẩn Cauchy cho dãy số hội tụ.",
+    "output": "Dãy số $\\{a_n\\}$ hội tụ khi và chỉ khi nó là dãy số Cauchy. Điều này có nghĩa là với mọi $\\epsilon > 0$, tồn tại $N \\in \\mathbb{N}$ sao cho $|a_n - a_m| < \\epsilon$ với mọi $m,n > N$."
+  },
+  {
+    "index": 17,
+    "input": "Nêu tiêu chuẩn đơn điệu – bị chặn cho hội tụ của dãy số.",
+    "output": "Dựa trên thông tin được cung cấp, câu trả lời cho câu hỏi \"Nêu tiêu chuẩn đơn điệu – bị chặn cho hội tụ của dãy số\" như sau:\n\nMọi dãy số đơn điệu tăng và bị chặn trên (tương ứng, đơn điệu giảm và bị chặn dưới) đều hội tụ.\n\nGiải thích:\n- Dãy số $\\{a_n\\}$ được gọi là đơn điệu nếu nó luôn tăng hoặc luôn giảm.\n- Nếu dãy số này bị chặn trên (hoặc dưới), tức là tồn tại một giá trị thực $M$ ($m$) sao cho $a_n \\leq M$ ($a_n \\geq m$) với mọi $n$.\n- Khi kết hợp cả hai điều kiện này, ta có thể chứng minh rằng dãy số đó hội tụ. Điều này là vì:\n  + Đối với dãy số tăng và bị chặn trên, theo định lý Bolzano-Weierstrass, dãy số sẽ chứa các lân cận của chính nó, do đó hội tụ.\n  + Đối với dãy số giảm và bị chặn dưới, tương tự cũng áp dụng.\n\nĐiều này thỏa mãn tiêu chuẩn đơn điệu – bị chặn cho hội tụ của dãy số, theo định lý Heine-Cantor."
+  },
+  {
+    "index": 18,
+    "input": "Cho ví dụ về dãy số hội tụ.",
+    "output": "Ví dụ về dãy số hội tụ là dãy số $\\{(-1)^n\\}$, tức là dãy số lấy giá trị âm lẻ và dương chẵn liên tiếp. Ví dụ này minh họa rằng một dãy số có thể hội tụ mà không cần phải hội tụ về một giới hạn hữu hạn."
+  },
+  {
+    "index": 19,
+    "input": "Cho ví dụ về dãy số phân kỳ.",
+    "output": "Dãy số $\\{(-1)^n\\}_{n \\in \\mathbb{N}}$ là một ví dụ về dãy số phân kỳ. Đây là một dãy số tuần hoàn giữa 1 và -1, do đó nó không hội tụ và là phân kỳ."
+  },
+  {
+    "index": 20,
+    "input": "Định nghĩa giới hạn hàm số tại một điểm.",
+    "output": "Giới hạn hàm số $f(x)$ khi $x$ tiến đến $x_0$ bằng $L$ được định nghĩa như sau:\n\n1. **Nói một cách nôm na**: Nếu ta có thể làm cho giá trị $f(x)$ gần $L$ tùy ý bằng cách chọn $x$ đủ gần $x_0$.\n\n2. **Nói một cách chính xác**: Đối với mọi $\\epsilon > 0$, tồn tại $\\delta > 0$ sao cho nếu $|x - x_0| < \\delta$, thì $|f(x) - L| < \\epsilon$.\n\n3. **Hình dung**: Đồ thị hàm số trong khoảng $(x_0 - \\delta, x_0 + \\delta)$ nằm hoàn toàn trong dải $(L - \\epsilon, L + \\epsilon)$.\n\n4. **Duyệt giới hạn một phía**:\n   - $\\lim_{x \\to x_0^+} f(x) = L$ nếu đối với mọi $\\epsilon > 0$, tồn tại $\\delta > 0$ sao cho nếu $x > x_0$ và $0 < x - x_0 < \\delta$, thì $f(x) > L - \\epsilon$.\n   - $\\lim_{x \\to x_0^-} f(x) = L$ nếu đối với mọi $\\epsilon > 0$, tồn tại $\\delta > 0$ sao cho nếu $x < x_0$ và $0 < x - x_0 < \\delta$, thì $f(x) > L - \\epsilon$.\n   - $\\lim_{x \\to \\infty} f(x) = L$ nếu đối với mọi $\\epsilon > 0$, tồn tại $M > 0$ sao cho nếu $x > M$, thì $|f(x) - L| < \\epsilon$.\n\n5. **Giới hạn duy nhất**: Nếu $\\lim_{x \\to x_0} f(x)$ tồn tại, nó là duy nhất.\n\n6. **Định lý hội tụ của dãy**:\n   - $\\lim_{n \\to +\\infty} f(x_n) = L$ nếu và chỉ nếu với mọi dãy số ${x_n}$ thỏa mãn:\n     - $\\lim_{n \\to +\\infty} x_n = x_0$\n     - $x_n \\neq x_0$ (với mọi $n$ đủ lớn)\n\n7. **Ứng dụng**: Để tính $\\lim_{n \\to +\\infty} \\frac{\\ln n}{n}$, ta chuyển về giới hạn hàm số:\n   \\[\n   \\lim_{x \\to +\\infty} \\frac{\\ln x}{x} = 0\n   \\]\n   Suy ra:\n   \\[\n   \\lim_{n \\to +\\infty} \\frac{\\ln n}{n} = 0\n   \\]"
+  },
+  {
+    "index": 21,
+    "input": "Nêu định nghĩa giới hạn một bên của hàm số.",
+    "output": "Dựa trên thông tin đã cung cấp, định nghĩa giới hạn một bên của hàm số $f(x)$ khi $x$ tiến đến $x_0$ được nêu như sau:\n\n1. **Giới hạn từ bên phải ($\\lim_{x \\to x_0^+}$):**\n   - $\\lim_{x \\to x_0^+} f(x) = L$ nếu với mọi $\\epsilon > 0$, tồn tại $\\delta > 0$ sao cho nếu $x_0 < x < x_0 + \\delta$, thì $|f(x) - L| < \\epsilon$.\n\n2. **Giới hạn từ bên trái ($\\lim_{x \\to x_0^-}$):**\n   - $\\lim_{x \\to x_0^-} f(x) = L$ nếu với mọi $\\epsilon > 0$, tồn tại $\\delta > 0$ sao cho nếu $x_0 - \\delta < x < x_0$, thì $|f(x) - L| < \\epsilon$.\n\n3. **Giới hạn cả hai hướng ($\\lim_{x \\to x_0}$):**\n   - $\\lim_{x \\to x_0} f(x) = L$ nếu và chỉ nếu $\\lim_{x \\to x_0^+} f(x) = L$ và $\\lim_{x \\to x_0^-} f(x) = L$.\n\n4. **Định nghĩa chính xác:**\n   - $\\lim_{x \\to x_0} f(x) = L$ nếu với mọi $\\epsilon > 0$, tồn tại $\\delta > 0$ sao cho nếu $0 < |x - x_0| < \\delta$, thì $|f(x) - L| < \\epsilon$.\n\n5. **Tính duy nhất:**\n   - Nếu $f(x) \\leq g(x)$ trong lân cận của $x_0$, và tồn tại $\\lim_{x \\to x_0} f(x)$ và $\\lim_{x \\to x_0} g(x)$, thì $\\lim_{x \\to x_0} f(x) \\leq \\lim_{x \\to x_0} g(x)$.\n\n6. **Tính liên tục:**\n   - Nếu $\\lim_{x \\to x_0} f(x) = f(x_0)$, thì $f(x)$ liên tục tại $x_0$.\n\nNhư vậy, các định nghĩa này đảm bảo rằng giới hạn của hàm số khi $x$ tiến đến $x_0$ được hiểu rõ ràng và không bị nhầm lẫn."
+  },
+  {
+    "index": 22,
+    "input": "Phát biểu các phép toán trên giới hạn hàm số.",
+    "output": "Dựa trên thông tin được cung cấp, tôi sẽ trả lời câu hỏi \"Phát biểu các phép toán trên giới hạn hàm số\" như sau:\n\nKhông có thông tin cụ thể về các phép toán trên giới hạn hàm số trong đoạn văn được cung cấp. Tuy nhiên, dựa trên kiến thức chung về phân tích toán học, các phép toán thường bao gồm:\n\n1. Giới hạn hữu tỷ: lim(x→a) [f(x)/g(x)] = lim(x→a) f(x)/lim(x→a) g(x), nếu lim(x→a) g(x) ≠ 0.\n2. Giới hạn tổng quát: lim(x→∞) [f(x)+g(x)] = lim(x→∞) f(x) + lim(x→∞) g(x).\n3. Giới hạn theo phần: lim(x→∞) [f(x)-g(x)] = lim(x→∞) f(x) - lim(x→∞) g(x).\n\nNếu cần thêm chi tiết hoặc ví dụ cụ thể, vui lòng cung cấp thêm thông tin."
+  },
+  {
+    "index": 23,
+    "input": "Nêu định nghĩa vô cùng bé.",
+    "output": "Hàm số \\( f(x) \\) được gọi là **vô cùng bé (VCB)** khi \\( x \\to a \\) nếu:\n\n\\[\n\\lim_{x \\to a} f(x) = 0\n\\]\n\nThương hai VCB là dạng vô định \\(\\frac{0}{0}\\)."
+  },
+  {
+    "index": 24,
+    "input": "Nêu định nghĩa vô cùng lớn.",
+    "output": "Hàm số \\( f(x) \\) được gọi là **vô cùng lớn (VCL)** khi \\( x \\to a \\) nếu:\n\n\\[\n\\lim_{x \\to a} |f(x)| = \\infty\n\\]\n\nĐiều này có nghĩa là giá trị tuyệt đối của hàm số \\( f(x) \\) tăng vô hạn khi \\( x \\) tiến đến \\( a \\)."
+  },
+  {
+    "index": 25,
+    "input": "Nêu mối quan hệ giữa vô cùng bé và vô cùng lớn.",
+    "output": "Không có thông tin liên quan đến mối quan hệ giữa vô cùng bé và vô cùng lớn trong ngữ cảnh này. Do đó, tôi không thể cung cấp câu trả lời chính xác dựa trên các thông tin đã cho. Nếu bạn cần thông tin về mối quan hệ này, vui lòng cung cấp thêm ngữ cảnh hoặc thông tin liên quan."
+  },
+  {
+    "index": 26,
+    "input": "Định nghĩa hàm số liên tục tại một điểm.",
+    "output": "Hàm số \\( f(x) \\) liên tục tại điểm \\( x_0 \\) nếu:\n\n1. \\( f(x_0) \\) xác định.\n2. Tồn tại giới hạn khi \\( x \\) tiến đến \\( x_0 \\), tức là \\( \\lim_{x \\to x_0} f(x) \\) tồn tại.\n3. Giới hạn này bằng giá trị của hàm số tại \\( x_0 \\), tức là \\( \\lim_{x \\to x_0} f(x) = f(x_0) \\).\n\nNếu bất kỳ một trong ba điều kiện trên không được thỏa mãn, hàm số \\( f(x) \\) được gọi là gián đoạn tại \\( x_0 \\)."
+  },
+  {
+    "index": 27,
+    "input": "Nêu các tính chất của hàm số liên tục.",
+    "output": "1. **Liên tục tại một điểm**: Một hàm số \\( f(x) \\) liên tục tại một điểm \\( x_0 \\) nếu các điều kiện sau được thỏa mãn:\n   - \\( f(x_0) \\) xác định.\n   - Tồn tại giới hạn của \\( f(x) \\) khi \\( x \\) tiến đến \\( x_0 \\).\n   - Giới hạn này bằng giá trị của hàm số tại \\( x_0 \\).\n\n2. **Liên tục trên khoảng**: Một hàm số \\( f(x) \\) liên tục trên một khoảng \\( (a, b) \\) nếu nó liên tục tại mọi điểm trong khoảng đó.\n\n3. **Liên tục trên đoạn**: Một hàm số \\( f(x) \\) liên tục trên một đoạn \\( [a, b] \\) nếu:\n   - Nó liên tục trên khoảng mở \\( (a, b) \\).\n   - Nó liên tục tại điểm \\( a \\).\n   - Nó liên tục trái tại điểm \\( b \\).\n\n4. **Liên tục phải tại một điểm**: Một hàm số \\( f(x) \\) liên tục phải tại một điểm \\( x_0 \\) nếu:\n   - \\( f(x_0) \\) xác định.\n   - Giới hạn của \\( f(x) \\) khi \\( x \\) tiến đến \\( x_0 \\) từ bên phải bằng \\( f(x_0) \\).\n\n5. **Liên tục trái tại một điểm**: Một hàm số \\( f(x) \\) liên tục trái tại một điểm \\( x_0 \\) nếu:\n   - \\( f(x_0) \\) xác định.\n   - Giới hạn của \\( f(x) \\) khi \\( x \\) tiến đến \\( x_0 \\) từ bên trái bằng \\( f(x_0) \\).\n\n6. **Liên tục tại một điểm**: Một hàm số \\( f(x) \\) liên tục tại một điểm \\( x_0 \\) nếu:\n   - \\( f(x_0) \\) xác định.\n   - Giới hạn của \\( f(x) \\) khi \\( x \\) tiến đến \\( x_0 \\) bằng \\( f(x_0) \\).\n\n7. **Tương đương giữa liên tục và liên tục phải và liên tục trái**: Một hàm số \\( f(x) \\) liên tục tại \\( x_0 \\) nếu và chỉ nếu nó liên tục phải tại \\( x_0 \\) và liên tục trái tại \\( x_0 \\)."
+  },
+  {
+    "index": 28,
+    "input": "Định nghĩa hàm số liên tục trên một khoảng.",
+    "output": "Hàm số \\( f(x) \\) **liên tục trên khoảng \\((a, b)\\)** nếu:\n\n1. \\( f(x) \\) liên tục tại mọi \\( x_0 \\in (a, b) \\).\n\n2. Nếu \\( a \\) hoặc \\( b \\) nằm bên ngoài khoảng \\((a, b)\\), \\( f(x) \\) liên tục trên \\([a, b]\\) nếu:\n\n   - \\( f(x) \\) liên tục trên \\((a, b)\\),\n   - \\( f(a) \\) tồn tại (hoặc \\( f(b) \\) tồn tại),\n   - \\( \\lim_{x \\to a^+} f(x) = f(a) \\) (nếu \\( a \\) nằm bên trái của \\((a, b)\\)),\n   - \\( \\lim_{x \\to b^-} f(x) = f(b) \\) (nếu \\( b \\) nằm bên phải của \\((a, b)\\)).\n\nĐể \\( f(x) \\) liên tục tại \\( x_0 \\):\n\n1. Nếu \\( x_0 \\) nằm bên trái của \\((a, b)\\):\n   - \\( \\lim_{x \\to x_0^-} f(x) = f(x_0) \\)\n\n2. Nếu \\( x_0 \\) nằm bên phải của \\((a, b)\\):\n   - \\( \\lim_{x \\to x_0^+} f(x) = f(x_0) \\)\n\n3. Nếu \\( x_0 \\) nằm bên ngoài \\((a, b)\\):\n   - \\( \\lim_{x \\to x_0} f(x) = f(x_0) \\)\n\nNếu \\( f(x) \\) liên tục trên \\([a, b]\\), nó cũng liên tục đều trên \\([a, b]\\). Tuy nhiên, điều này không đúng nếu thay \\([a, b]\\) bằng khoảng \\((a, b)\\)."
+  },
+  {
+    "index": 29,
+    "input": "Định nghĩa điểm gián đoạn của hàm số.",
+    "output": "Để định nghĩa điểm gián đoạn của hàm số, chúng ta cần xem xét các loại điểm gián đoạn khác nhau:\n\n1. **Điểm gián đoạn loại 1**:\n   - Nếu tồn tại giới hạn bên trái (đối với $x \\to x_0^-$) và giới hạn bên phải (đối với $x \\to x_0^+$) của hàm số tại $x_0$, và cả hai giới hạn này bằng giá trị của hàm số tại $x_0$, thì $x_0$ được gọi là điểm gián đoạn loại 1.\n   - Trường hợp đặc biệt:\n     - Nếu giới hạn bên trái và bên phải bằng nhau, tức là $f(x_0^+) = f(x_0^-)$, thì $x_0$ được gọi là điểm gián đoạn bỏ được. Trong trường hợp này, nếu hàm số chưa xác định tại $x_0$, ta có thể bổ sung giá trị của hàm số tại $x_0$ để hàm số liên tục tại điểm $x_0$. Nếu hàm số xác định tại $x_0$, ta có thể thay đổi giá trị của hàm số tại điểm này.\n     - Nếu giới hạn bên trái và bên phải khác nhau, tức là $f(x_0^+) \\neq f(x_0^-)$, thì $x_0$ được gọi là điểm gián đoạn loại 1, và $|f(x_0^+) - f(x_0^-)|$ là bước nhảy của hàm số.\n\n2. **Điểm gián đoạn loại 2**:\n   - Nếu $x_0$ không phải là điểm gián đoạn loại 1, thì $x_0$ được gọi là điểm gián đoạn loại 2.\n\n3. **Định nghĩa tổng quát về điểm gián đoạn**:\n   - Một điểm $x_0$ trong miền xác định của hàm số $f(x)$ được gọi là điểm gián đoạn của $f(x)$ nếu:\n     - Hoặc $x_0 \\notin \\text{TXĐ}$ của $f(x)$.\n     - Hoặc $x_0 \\in \\text{TXĐ}$ và $\\not\\exists \\lim_{x \\to x_0} f(x)$.\n     - Hoặc $x_0 \\in \\text{TXĐ}$ và $\\exists \\lim_{x \\to x_0} f(x)$ nhưng $\\lim_{x \\to x_0} f(x) \\neq f(x_0)$.\n\nTóm lại, điểm gián đoạn của hàm số là nơi mà hành vi của hàm số trở nên không liền mạch, dẫn đến sự không nhất quán giữa giới hạn bên trái và bên phải của hàm số tại điểm đó."
+  },
+  {
+    "index": 30,
+    "input": "Phân loại các điểm gián đoạn.",
+    "output": "Phân loại các điểm gián đoạn:\n\n1. **Điểm gián đoạn loại 1**:\n   - Nếu $\\lim_{x \\to x_0^+} f(x) = f(x_0^+)$ và $\\lim_{x \\to x_0^-} f(x) = f(x_0^-)$ thì $x_0$ được gọi là điểm gián đoạn loại 1.\n     - Trường hợp 1: Nếu $f(x_0^+) \\neq f(x_0^-)$ thì $x_0$ là điểm gián đoạn loại 1 với bước nhảy $|f(x_0^+) - f(x_0^-)|$.\n     - Trường hợp 2: Nếu $f(x_0^+) = f(x_0^-)$ thì $x_0$ là điểm gián đoạn bỏ được.\n\n2. **Điểm gián đoạn loại 2**:\n   - Nếu $x_0$ không phải là điểm gián đoạn loại 1.\n   - Nếu $x_0$ là điểm đầu mút của khoảng hay đoạn xác định của $f(x)$, và $\\lim_{x \\to x_0^+} f(x)$ hoặc $\\lim_{x \\to x_0^-} f(x)$ hữu hạn, thì $x_0$ là điểm gián đoạn bỏ được.\n   - Nếu hàm số không liên tục tại $x_0$, thì $x_0$ là điểm gián đoạn.\n\n3. **Điểm gián đoạn của $f(x)$**:\n   - Nếu $x_0 \\notin \\text{TXĐ}$ của $f(x)$.\n   - Nếu $x_0 \\in \\text{TXĐ}$ và $\\not\\exists \\lim_{x \\to x_0} f(x)$.\n   - Nếu $x_0 \\in \\text{TXĐ}$ và $\\exists \\lim_{x \\to x_0} f(x)$ nhưng $\\lim_{x \\to x_0} f(x) \\neq f(x_0)$. Điều này có thể xảy ra theo cả hai hướng (lên và xuống) hoặc một hướng duy nhất."
+  },
+  {
+    "index": 31,
+    "input": "Cho ví dụ về gián đoạn loại 1.",
+    "output": "Ví dụ về gián đoạn loại 1:\n\nGiả sử \\( f(x) = |x| \\).\n\n- Tại \\( x_0 = 0 \\):\n  - \\( \\lim_{x \\to 0^+} f(x) = 0 \\)\n  - \\( \\lim_{x \\to 0^-} f(x) = 0 \\)\n  - \\( f(0^+) = 0 \\) và \\( f(0^-) = 0 \\)\n\nVậy, \\( x_0 = 0 \\) là điểm gián đoạn loại 1 của \\( f(x) = |x| \\). Bước nhảy của hàm số tại điểm này là 0.\n\nTuy nhiên, nếu hàm số được định nghĩa như sau:\n\\[ g(x) = \n\\begin{cases} \n|x| & \\text{nếu } x \\geq 0 \\\\\n-x & \\text{nếu } x < 0 \n\\end{cases}\n\\]\n\n- Tại \\( x_0 = 0 \\):\n  - \\( \\lim_{x \\to 0^+} g(x) = 0 \\)\n  - \\( \\lim_{x \\to 0^-} g(x) = 0 \\)\n  - \\( g(0^+) = 0 \\) và \\( g(0^-) = 0 \\)\n\nVậy, \\( x_0 = 0 \\) vẫn là điểm gián đoạn loại 1 của \\( g(x) \\). Tuy nhiên, trong ví dụ này, \\( f(x) = |x| \\) đã được định nghĩa chính xác tại \\( x_0 = 0 \\), do đó không cần phải bổ sung giá trị mới."
+  },
+  {
+    "index": 32,
+    "input": "Cho ví dụ về gián đoạn loại 2.",
+    "output": "Ví dụ về gián đoạn loại 2:\n\nGiả sử $f(x) = |x|$.\n\nHàm số $f(x) = |x|$ có điểm gián đoạn loại 2 tại $x=0$.\n\nLý do:\n- Tại $x=0$, hàm số có hai giới hạn khác nhau khi đi qua từ bên trái và bên phải:\n  $\\lim_{x \\to 0^-} f(x) = -1$\n  $\\lim_{x \\to 0^+} f(x) = 1$\n\n- Tuy nhiên, giá trị của hàm số tại $x=0$ là $f(0) = 0$.\n\n- Theo định nghĩa, vì $\\lim_{x \\to 0^-} f(x) \\neq \\lim_{x \\to 0^+} f(x)$, nên $x=0$ là điểm gián đoạn loại 2 của hàm số $f(x) = |x|$.\n\n- Điểm $x=0$ không nằm trong tập xác định (TXĐ) của hàm số, vì $f(x) = |x|$ không xác định cho $x<0$ và $x>0$.\n\nVậy, $f(x) = |x|$ có một điểm gián đoạn loại 2 tại $x=0$."
+  },
+  {
+    "index": 33,
+    "input": "Cho ví dụ về gián đoạn có thể khử.",
+    "output": "Ví dụ về gián đoạn có thể khử (gián đoạn bỏ được) là khi hàm số có một bước nhảy nhỏ, tức là:\n\n$f(x) = \\begin{cases}\nx & \\text{nếu } x < 0 \\\\\nx + 1 & \\text{nếu } x \\geq 0\n\\end{cases}$\n\nỞ đây, điểm gián đoạn bỏ được $x_0 = 0$ vì:\n- $\\lim_{x \\to 0^+} f(x) = \\lim_{x \\to 0^-} f(x) = 1$\n- $f(0) = 1$\n\nTuy nhiên, nếu ta thay đổi giá trị của hàm số tại $x_0 = 0$ thành $f(0) = 0$, thì hàm số sẽ trở thành liên tục tại $x_0 = 0$.\n\nVậy, điểm gián đoạn bỏ được $x_0 = 0$ có thể được khử bằng cách thay đổi giá trị của hàm số tại điểm này."
+  },
+  {
+    "index": 34,
+    "input": "Định nghĩa đạo hàm của hàm số tại một điểm.",
+    "output": "Định nghĩa đạo hàm của hàm số $f(x)$ tại điểm $x_0$ là:\n\n$$ \\lim_{\\Delta x \\to 0} \\frac{f(x_0 + \\Delta x) - f(x_0)}{\\Delta x} $$\n\nĐây là giới hạn mà ta sử dụng để xác định đạo hàm. Khi quá trình $\\Delta x \\to 0$ được thay bằng $\\Delta x \\to 0^+$ hoặc $\\Delta x \\to 0^-$, chúng ta có đạo hàm phải và đạo hàm trái tương ứng. Hàm số có đạo hàm tại $x_0$ khi và chỉ khi nó có đạo hàm trái và đạo hàm phải tại $x_0$ và $f'(x_0^+) = f'(x_0^-)$."
+  },
+  {
+    "index": 35,
+    "input": "Nêu các quy tắc tính đạo hàm cơ bản.",
+    "output": "Dựa trên thông tin được cung cấp, các quy tắc tính đạo hàm cơ bản bao gồm:\n\n1. **Quy tắc cộng và trừ:**\n   \\[\n   (u \\pm v)'(x_0) = u'(x_0) \\pm v'(x_0)\n   \\]\n\n2. **Quy tắc nhân:**\n   \\[\n   (uv)'(x_0) = u'(x_0)v(x_0) + u(x_0)v'(x_0)\n   \\]\n\n3. **Quy tắc chia:**\n   \\[\n   \\left( \\frac{u}{v} \\right)'(x_0) = \\frac{u'(x_0)v(x_0) - u(x_0)v'(x_0)}{v^2(x_0)} \\quad (\\text{nếu } v(x_0) \\neq 0)\n   \\]\n\nĐây là các quy tắc chính được nêu trong ngữ cảnh cung cấp."
+  },
+  {
+    "index": 36,
+    "input": "Phát biểu công thức đạo hàm của hàm hợp (chain rule).",
+    "output": "Để phát biểu công thức đạo hàm của hàm hợp (chain rule):\n\n1. Giả sử $u$ có đạo hàm tại $x$.\n2. Giả sử $f$ có đạo hàm tại $u(x)$.\n3. Khi đó, hàm hợp $F = f \\circ u$ cũng có đạo hàm tại $x$.\n\n4. Công thức đạo hàm của $F$ tại $x$ được cho bởi:\n\n   $$F'(x) = f'(u(x)) \\cdot u'(x)$$\n\n5. Ý tưởng chứng minh:\n   - Với $\\Delta x$ đủ nhỏ, ta có thể viết:\n     $$u(x_0 + \\Delta x) = u(x_0) + u'(x_0) \\Delta x + o(\\Delta x)$$\n   - Gọi $\\delta_u = u'(x_0) \\Delta x + o(\\Delta x)$.\n   - Khi đó:\n     $$f[u(x_0 + \\Delta x)] - f[u(x_0)] = f[u_0 + \\delta_u] - f(u_0) = f'(u_0) \\cdot \\delta_u + o(\\delta_u)$$\n   - Suy ra:\n     $$\\lim_{\\Delta x \\to 0} \\frac{F(x_0 + \\Delta x) - F(x_0)}{\\Delta x} = f'(u_0) \\cdot u'(x_0)$$\n\n6. Kết luận:\n   Hàm hợp $F = f \\circ u$ có đạo hàm tại $x$, với đạo hàm là:\n   \n   $$F'(x) = f'(u(x)) \\cdot u'(x)$$"
+  },
+  {
+    "index": 37,
+    "input": "Phát biểu công thức đạo hàm của hàm ngược.",
+    "output": "Dựa trên thông tin được cung cấp, công thức đạo hàm của hàm ngược có thể được phát biểu như sau:\n\nNếu $x = \\varphi(y)$ có đạo hàm tại $y_0$ và $\\varphi'(y_0) \\neq 0$, thì:\n\n$f^{-1}(x)$ có đạo hàm tại $x_0 = \\varphi(y_0)$ và:\n\n$f^{-1}'(x_0) = \\frac{1}{\\varphi'(y_0)}$\n\nĐiều này có nghĩa là nếu hàm ngược $y = f^{-1}(x)$ tồn tại và khả vi tại $x_0 = \\varphi(y_0)$, thì đạo hàm của nó tại $x_0$ bằng nghịch đảo của đạo hàm của $x = \\varphi(y)$ tại $y_0$."
+  },
+  {
+    "index": 38,
+    "input": "Viết các công thức đạo hàm của các hàm số sơ cấp cơ bản.",
+    "output": "Dựa trên thông tin được cung cấp, tôi sẽ viết các công thức đạo hàm của các hàm số sơ cấp cơ bản theo yêu cầu:\n\n1. **Đa thức**: \n   - Nếu \\( f(x) = ax^n \\), thì \\( (f(x))' = anx^{n-1} \\)\n\n2. **Phân thức hữu tỉ**:\n   - Nếu \\( f(x) = \\frac{p(x)}{q(x)} \\), trong đó \\( p(x) \\) và \\( q(x) \\) là các đa thức, thì \\( (f(x))' = \\frac{(p'(x)q(x) - p(x)q'(x))}{(q(x))^2} \\)\n\n3. **Hàm số logarithmic**:\n   - Nếu \\( f(x) = \\ln|x| \\), thì \\( (f(x))' = \\frac{1}{x} \\)\n   - Nếu \\( f(x) = \\ln(ax+b) \\), trong đó \\( a \\) và \\( b \\) là hằng số, thì \\( (f(x))' = \\frac{a}{ax+b} \\)\n\n4. **Hàm số mũ**:\n   - Nếu \\( f(x) = a^x \\), trong đó \\( a > 0 \\) và \\( a \\neq 1 \\), thì \\( (f(x))' = a^x \\ln(a) \\)\n\n5. **Hàm số sin**:\n   - Nếu \\( f(x) = \\sin(x) \\), thì \\( (f(x))' = \\cos(x) \\)\n\n6. **Hàm số cos**:\n   - Nếu \\( f(x) = \\cos(x) \\), thì \\( (f(x))' = -\\sin(x) \\)\n\n7. **Hàm số tangent**:\n   - Nếu \\( f(x) = \\tan(x) \\), thì \\( (f(x))' = \\frac{1}{\\cos^2(x)} = \\sec^2(x) \\)\n\n8. **Hàm số cotangent**:\n   - Nếu \\( f(x) = \\cot(x) \\), thì \\( (f(x))' = -\\frac{1}{\\sin^2(x)} = -\\csc^2(x) \\)\n\n9. **Hàm số arcsine**:\n   - Nếu \\( f(x) = \\arcsin(x) \\), thì \\( (f(x))' = \\frac{1}{\\sqrt{1-x^2}} \\)\n\n10. **Hàm số arccosine**:\n    - Nếu \\( f(x) = \\arccos(x) \\), thì \\( (f(x))' = -\\frac{1}{\\sqrt{1-x^2}} \\)\n\n11. **Hàm số arctangent**:\n    - Nếu \\( f(x) = \\arctan(x) \\), thì \\( (f(x))' = \\frac{1}{1+x^2} \\)\n\n12. **Hàm số arccotangent**:\n    - Nếu \\( f(x) = \\operatorname{arccot}(x) \\), thì \\( (f(x))' = -\\frac{1}{1+x^2} \\)\n\nNhững công thức này là các công thức đạo hàm cơ bản cho các hàm số sơ cấp."
+  },
+  {
+    "index": 39,
+    "input": "Định nghĩa vi phân của hàm số.",
+    "output": "Vi phân của hàm số \\( f \\) tại điểm \\( x_0 \\), ký hiệu \\( df \\), được định nghĩa như sau:\n\n\\[ df = f'(x_0) dx \\]\n\nTrong đó:\n- \\( f'(x_0) \\) là đạo hàm của \\( f \\) tại \\( x_0 \\).\n- \\( dx \\) là vi phân đơn vị.\n\nĐịnh nghĩa này áp dụng cho cả vi phân cấp 1 và các bậc cao hơn. Ví dụ:\n- Đối với vi phân cấp 1: \\( df = f'(x_0) dx \\)\n- Đối với vi phân cấp 2: \\( d^2 f = d(df) = f''(x_0) dx \\)\n\nNếu hàm số \\( y = f(x) \\) xác định trong lân cận \\( U_\\epsilon(x_0) \\) và thỏa mãn điều kiện:\n\\[ \\Delta f = A \\Delta x + o(\\Delta x) \\]\ntrong đó \\( A \\) chỉ phụ thuộc vào \\( x_0 \\) và không phụ thuộc vào \\( \\Delta x \\), thì \\( f \\) **khả vi** tại \\( x_0 \\) và **vi phân** của \\( f \\) tại \\( x_0 \\) là:\n\\[ df = A \\Delta x \\]"
+  },
+  {
+    "index": 40,
+    "input": "Ý nghĩa hình học của vi phân $dy=f'(x)dx$.",
+    "output": "Vi phân $dy = f'(x)dx$ có ý nghĩa hình học như sau:\n\n- **Sự thay đổi của đường thẳng tiếp tuyến**: Khi $x$ thay đổi từ $x_0$ đến $x_0 + \\Delta x$, $dy$ đại diện cho sự thay đổi của độ dốc của đường thẳng tiếp tuyến tại điểm $(x_0, f(x_0))$ với tọa độ $x$. Điều này thể hiện sự thay đổi của đường thẳng tiếp tuyến.\n\n- **Sự thay đổi của đường cong**: $\\Delta y = f(x_0 + \\Delta x) - f(x_0)$ đại diện cho sự thay đổi của khoảng cách giữa điểm $(x_0, f(x_0))$ và điểm $(x_0 + \\Delta x, f(x_0 + \\Delta x))$ trên đồ thị của hàm số $y = f(x)$. Sự chênh lệch này thể hiện sự thay đổi của vị trí của điểm trên đường cong.\n\nTóm lại, $dy = f'(x)dx$ mô tả sự thay đổi của cả độ dốc và vị trí của đường thẳng tiếp tuyến và đường cong khi biến số $x$ thay đổi."
+  },
+  {
+    "index": 41,
+    "input": "Định nghĩa đạo hàm cấp cao.",
+    "output": "Đạo hàm cấp cao là các đạo hàm liên tiếp của một hàm số. Cụ thể:\n\n- Đạo hàm bậc nhất (đạo hàm cấp 1): $f'(x)$ là đạo hàm của $f(x)$ theo $x$.\n- Đạo hàm bậc thứ hai (đạo hàm cấp 2): $f''(x) = [f'(x)]'$ là đạo hàm của $f'(x)$ theo $x$.\n- Đạo hàm bậc $n$ (đạo hàm cấp $n$): $f^{(n)}(x) = \\left[f^{(n-1)}(x)\\right]'$ là đạo hàm của $f^{(n-1)}(x)$ theo $x$.\n\nVí dụ, $f'''(x) = [f''(x)]'$ là đạo hàm bậc thứ ba của $f(x)$."
+  },
+  {
+    "index": 42,
+    "input": "Phát biểu công thức Leibniz cho đạo hàm cấp $n$ của tích $uv$.",
+    "output": "Phát biểu công thức Leibniz cho đạo hàm cấp \\( n \\) của tích \\( uv \\) là:\n\n\\[\n(uv)^{(n)} = \\sum_{k=0}^{n} \\binom{n}{k} u^{(n-k)} v^{(k)}\n\\]\n\nTrong đó \\( \\binom{n}{k} \\) là hệ số nhị thức, được tính bằng \\( \\frac{n!}{k!(n-k)!} \\)."
+  },
+  {
+    "index": 43,
+    "input": "Khái niệm vi phân cấp cao.",
+    "output": "Việc vi phân một hàm $n$ lần liên tiếp theo phương pháp chuỗi Taylor được gọi là vi phân cấp $n$. Công thức tổng quát cho phép tính vi phân cấp $n$ của một hàm $f(x)$ là:\n\n\\[ d^n f = f^{(n)}(x) dx^n \\]\n\ntrong đó $f^{(n)}(x)$ biểu thị đạo hàm cấp $n$ của $f(x)$, và $dx^n$ đại diện cho tích $dx \\times dx \\times ... \\times dx$ (n lần)."
+  },
+  {
+    "index": 44,
+    "input": "Điều kiện cần của khả vi tại một điểm.",
+    "output": "Để trả lời câu hỏi \"Điều kiện cần của khả vi tại một điểm,\" chúng ta cần hiểu rõ khái niệm về khả vi. Một hàm số $f(x)$ khả vi tại một điểm $x = a$ nếu và chỉ nếu giới hạn sau tồn tại:\n\n$$ f'(a) = \\lim_{h \\to 0} \\frac{f(a+h) - f(a)}{h} $$\n\nĐây là định nghĩa chính thức của khả vi.\n\nTuy nhiên, dựa trên thông tin được cung cấp trong ngữ cảnh, chúng ta có thể rút ra rằng:\n\n1. **Liên tục**: Hàm số $f(x)$ liên tục trên khoảng đóng $[a,b]$.\n2. **Có đạo hàm trên khoảng mở $(a,b)$**: Đạo hàm $f'(x)$ tồn tại và hữu hạn trên khoảng $(a,b)$.\n\nNhững điều kiện này là đủ để đảm bảo rằng hàm số $f(x)$ khả vi tại mọi điểm trong khoảng $(a,b)$. Điều này là do:\n\n- Nếu $f(x)$ liên tục trên $[a,b]$, thì theo Định lý Giá trị Trung gian, $f'(x)$ tồn tại trên $(a,b)$.\n- Nếu $f(x)$ có đạo hàm trên $(a,b)$, thì theo Định lý Quy tắc L'Hôpital, $\\lim_{h \\to 0} \\frac{f(a+h) - f(a)}{h}$ tồn tại và bằng $f'(a)$.\n\nVì vậy, nếu cả hai điều kiện này đều được thỏa mãn, thì $f(x)$ khả vi tại mọi điểm trong khoảng $(a,b)$."
+  },
+  {
+    "index": 45,
+    "input": "Phát biểu định lý Rolle.",
+    "output": "Dựa trên thông tin được cung cấp, định lý Rolle có thể được phát biểu như sau:\n\nNếu $f:[a,b]\\to \\mathbb{R}$ là một hàm số liên tục trên khoảng đóng $[a,b]$, có đạo hàm trên khoảng mở $(a,b)$, và thỏa mãn $f(a)=f(b)$, thì tồn tại ít nhất một điểm $c\\in (a,b)$ sao cho $f'(c)=0$.\n\nGiải thích:\n- Hàm số $f$ liên tục trên $[a,b]$ và có đạo hàm trên $(a,b)$.\n- Hàm số thỏa mãn điều kiện $f(a)=f(b)$.\n- Theo Định lý Rolle, nếu các điều kiện trên được thỏa mãn, thì tồn tại ít nhất một điểm $c\\in (a,b)$ sao cho đạo hàm $f'(c)=0$. Điều này có nghĩa là hàm số đạt cực đại hoặc cực tiểu tại điểm $c$."
+  },
+  {
+    "index": 46,
+    "input": "Phát biểu định lý Lagrange (giá trị trung bình).",
+    "output": "Dựa trên thông tin được cung cấp, tôi sẽ trả lời câu hỏi theo yêu cầu:\n\nPhát biểu định lý Lagrange (giá trị trung bình):\n\nNếu $f(x)$ liên tục trên khoảng đóng $[a,b]$ và có đạo hàm trên mở rộng của nó trên $(a,b)$, thì tồn tại ít nhất một điểm $c$ trong $(a,b)$ sao cho:\n\n$f(c) = \\frac{f(b) - f(a)}{b - a}$\n\nGiải thích:\n- Định lý này nêu rõ rằng nếu một hàm số liên tục trên một khoảng đóng và có đạo hàm trên mở rộng của nó trên khoảng đó, thì hàm số phải đạt giá trị trung bình của nó trên khoảng đó tại một điểm nào đó.\n- Đây là một tổng quát hóa của định lý Rolle, vốn áp dụng cho các hàm số liên tục trên một khoảng đóng và có đạo hàm trên mở rộng của nó trên khoảng đó, nhưng chỉ áp dụng cho các điểm mà đạo hàm bằng không.\n\nĐây là phát biểu ngắn gọn của định lý Lagrange, tuân thủ các tiêu chí đã nêu."
+  },
+  {
+    "index": 47,
+    "input": "Phát biểu công thức Taylor với số hạng dư Lagrange.",
+    "output": "Dựa trên thông tin được cung cấp, công thức Taylor với số hạng dư Lagrange cho hàm \\( f(x) \\) tại điểm \\( x_0 \\) có thể được phát biểu như sau:\n\n\\[ \nf(x) = f(x_0) + \\frac{f'(x_0)}{1!}(x - x_0) + \\frac{f''(x_0)}{2!}(x - x_0)^2 + \\cdots + \\frac{f^{(n)}(x_0)}{n!}(x - x_0)^n + R_n,\n\\]\n\ntrong đó \\( R_n \\) là số hạng dư Lagrange, được cho bởi:\n\n\\[ \nR_n = \\frac{f^{(n+1)}(\\xi)}{(n+1)!}(x - x_0)^{n+1},\n\\]\n\ntrong đó \\( \\xi \\) là một điểm giữa \\( x \\) và \\( x_0 \\).\n\nNếu \\( x_0 = 0 \\), công thức trở thành:\n\n\\[ \nf(x) = f(0) + \\frac{f'(0)}{1!}x + \\frac{f''(0)}{2!}x^2 + \\cdots + \\frac{f^{(n)}(0)}{n!}x^n + o(x^n).\n\\]\n\nỞ đây, \\( o(x^n) \\) đại diện cho một vô cùng bé bậc cao hơn \\( x^n \\)."
+  },
+  {
+    "index": 48,
+    "input": "Phát biểu quy tắc L’Hospital.",
+    "output": "Quy tắc L'Hospital nêu rằng nếu tồn tại $\\lim_{x\\to x_0}\\frac{f'(x)}{g'(x)}=A$ (có thể hữu hạn hoặc vô hạn) thì $\\lim_{x\\to x_0}\\frac{f(x)}{g(x)}=A$. Công thức này chỉ áp dụng cho các hàm số khả vi trong một lân cận của điểm $x_0$, với $g'(x)\\ne 0$ trong lân cận đó, và khi $\\lim_{x\\to x_0}f(x)=\\lim_{x\\to x_0}g(x)=0$ (dạng $0/0$) hoặc $\\lim_{x\\to x_0}f(x)=\\pm\\infty$, $\\lim_{x\\to x_0}g(x)=\\pm\\infty$ (dạng $\\infty/\\infty$). Nếu các điều kiện này không đáp ứng, quy tắc L'Hospital không thể áp dụng."
+  },
+  {
+    "index": 49,
+    "input": "Các dạng vô định thường gặp trong giải tích.",
+    "output": "Dựa trên thông tin được cung cấp, các dạng vô định thường gặp trong giải tích bao gồm:\n\n- $0^0$\n- $0^1$\n- $0^{-1}$\n- $1^0$\n- $1^1$\n- $\\infty^0$\n- $\\infty^1$\n- $\\infty^{-1}$\n\nNhững dạng này không phải dạng vô định và tính trực tiếp. Tuy nhiên, chúng có thể được xử lý bằng các kỹ thuật như quy đồng mẫu số, đặt nhân tử chung, hoặc áp dụng các định lý giới hạn khác nhau."
+  },
+  {
+    "index": 50,
+    "input": "Khái niệm thay thế tương đương khi tính giới hạn.",
+    "output": "Dựa trên ngữ cảnh được cung cấp, câu trả lời cho câu hỏi \"Khái niệm thay thế tương đương khi tính giới hạn\" như sau:\n\nKhi tính giới hạn, nếu các biểu thức $\\alpha_1(x)$ và $\\alpha_2(x)$, cũng như $\\beta_1(x)$ và $\\beta_2(x)$ đều có hành vi tương tự khi $x \\to x_0$, tức là $\\alpha_1(x) \\sim \\alpha_2(x)$ và $\\beta_1(x) \\sim \\beta_2(x)$, thì ta có thể thay thế các biểu thức này trong bất kỳ phép tính nào.\n\nTuy nhiên, cần lưu ý:\n1. Nếu $\\alpha_1$ và $\\beta_1$ tương đương, nghĩa là $\\alpha_1 = \\beta_1$, thì việc thay thế không ảnh hưởng đến giới hạn.\n2. Nếu $\\alpha_1$ và $\\beta_1$ không tương đương, thì việc thay thế có thể thay đổi giới hạn. Ví dụ, $\\tan x - \\sin x \\sim x$, nhưng $\\tan x - \\sin x + (\\sin x - \\cos x) \\not\\sim x$.\n3. Cần kiểm tra kỹ từng trường hợp cụ thể để đảm bảo tính đúng đắn của việc thay thế.\n\nNhư vậy, việc thay thế tương đương khi tính giới hạn phụ thuộc vào mối quan hệ giữa các biểu thức, không phải chỉ dựa vào độ phức tạp của biểu thức."
+  },
+  {
+    "index": 51,
+    "input": "Ví dụ về sử dụng thay thế tương đương khi tính giới hạn.",
+    "output": "Để tính giới hạn $\\lim_{x\\to 0}\\frac{x-\\sin x+x^3}{x^3}$, chúng ta có thể sử dụng thay thế tương đương như sau:\n\n1. **Sử dụng thay thế tương đương**: Ta biết rằng $\\sin x \\approx x - \\frac{x^3}{6}$ khi $x$ tiến đến 0. Do đó, ta có thể thay $x - \\sin x$ bằng $\\frac{x^3}{6}$.\n\n2. **Thay thế**: Thay $x - \\sin x$ bằng $\\frac{x^3}{6}$ trong biểu thức giới hạn:\n\n   $$\\lim_{x\\to 0}\\frac{x-\\sin x+x^3}{x^3} = \\lim_{x\\to 0}\\frac{\\frac{x^3}{6}+x^3}{x^3}$$\n\n3. **Rút gọn**: Rút gọn tử số:\n\n   $$= \\lim_{x\\to 0}\\frac{\\frac{x^3}{6}+\\frac{6x^3}{6}}{x^3} = \\lim_{x\\to 0}\\frac{\\frac{7x^3}{6}}{x^3}$$\n\n4. **Tiếp tục rút gọn**: Tiếp tục rút gọn:\n\n   $$= \\lim_{x\\to 0}\\frac{7x^3}{6x^3} = \\lim_{x\\to 0}\\frac{7}{6} = \\frac{7}{6}$$\n\nVì vậy, giới hạn là $\\frac{7}{6}$."
+  },
+  {
+    "index": 52,
+    "input": "Nêu các bất đẳng thức cơ bản dùng trong đánh giá giới hạn.",
+    "output": "Dựa trên ngữ cảnh được cung cấp, các bất đẳng thức cơ bản dùng trong đánh giá giới hạn bao gồm:\n\n1. **Bất đẳng thức tam giác**: $|\\operatorname{arccot} a - \\operatorname{arccot} b| < |a-b|$ và $|\\operatorname{arctan} a - \\operatorname{arctan} b| < |a-b|$.\n\n2. **Bất đẳng thức Hölder**: Nếu $0 < p, q < \\infty$ và $\\frac{1}{p} + \\frac{1}{q} = 1$, thì $(ab)^{1/p}(ba)^{1/q} \\le ab$.\n\n3. **Bất đẳng thức Cauchy-Schwarz**: $(\\sum_{k=1}^n x_k y_k)^2 \\le (\\sum_{k=1}^n x_k^2)(\\sum_{k=1}^n y_k^2)$.\n\n4. **Bất đẳng thức AM-GM-HM**: Trung bình cộng ≥ trung bình nhân ≥ trung bình harmonic.\n\n5. **Bất đẳng thức Jensen**: Đối với hàm lồi $f$, nếu $X$ là một tập hợp các biến ngẫu nhiên, thì $f(\\mathbb{E}[X]) \\le \\mathbb{E}[f(X)]$.\n\n6. **Bất đẳng thức Chebyshev**: Với $a > 0$, $P(|X - E[X]| \\ge k\\sigma) \\le \\frac{1}{k^2}$, trong đó $\\sigma$ là độ lệch chuẩn của X.\n\nNhững bất đẳng thức này thường được sử dụng trong các bài toán giới hạn để đưa ra các giới hạn chặt chẽ hơn."
+  },
+  {
+    "index": 53,
+    "input": "Một số giới hạn vô cùng lớn tiêu biểu.",
+    "output": "Dựa trên thông tin được cung cấp, một số giới hạn vô cùng lớn tiêu biểu bao gồm:\n\n- $\\lim_{x \\to \\infty} \\frac{1}{x} = 0$\n- $\\lim_{x \\to \\infty} e^x = \\infty$\n\nLưu ý rằng các giới hạn này không hoàn toàn phù hợp với định nghĩa về VCL như đã nêu trong ngữ cảnh. Tuy nhiên, chúng là những ví dụ điển hình về các giới hạn vô cùng lớn."
+  },
+  {
+    "index": 54,
+    "input": "Trình bày các bước khảo sát và vẽ đồ thị hàm số $y=f(x)$.",
+    "output": "Dựa trên thông tin được cung cấp, đây là trình bày các bước khảo sát và vẽ đồ thị hàm số \\( y = f(x) \\):\n\n1. **Tìm tập xác định (TXĐ)**:\n   - Nhận xét tính chẵn, lẻ, hoặc tuần hoàn của \\( f(x) \\).\n\n2. **Xác định chiều biến thiên**:\n   - Tìm các khoảng tăng, giảm của \\( f(x) \\).\n   - Xác định chiều biến thiên theo \\( x \\) và \\( y \\) bằng cách xét dấu các đạo hàm \\( f'(x) \\) và \\( f'(y) \\).\n\n3. **Tìm cực trị (nếu có)**:\n   - Tìm các điểm cực trị bằng cách đặt \\( f'(x) = 0 \\).\n\n4. **Xét tính lồi, lõm (nếu cần), điểm uốn (nếu có)**:\n   - Kiểm tra tính lồi, lõm bằng cách xét dấu các đạo hàm bậc hai \\( f''(x) \\).\n   - Tìm các điểm uốn bằng cách xét dấu các đạo hàm bậc ba \\( f'''(x) \\).\n\n5. **Tìm các tiệm cận của hàm số (nếu có)**:\n   - Tìm tiệm cận đứng: \\( \\lim_{x \\to x_0} f(x) = \\pm \\infty \\) và \\( \\lim_{x \\to \\infty} f(x) = a \\) thì \\( y = a \\) là tiệm cận đứng.\n   - Tìm tiệm cận ngang: \\( \\lim_{x \\to \\infty} f(x) = \\pm \\infty \\) và \\( \\lim_{x \\to \\infty} f(x) = b \\) thì \\( x = b \\) là tiệm cận ngang.\n   - Tìm tiệm cận xiên: \\( \\lim_{x \\to \\infty} f(x) = \\pm \\infty \\) và \\( \\lim_{x \\to \\infty} f(x) = ax + b \\) thì \\( y = ax + b \\) là tiệm cận xiên.\n\n6. **Lập bảng biến thiên**:\n   - Tính \\( f'(x) \\) và \\( f''(x) \\) để tạo bảng biến thiên.\n   - Sử dụng bảng này để đánh giá hành vi của hàm số.\n\n7. **Tìm một số điểm đặc biệt mà đồ thị đi qua (ví dụ giao điểm với các trục toạ độ, ...)**:\n   - Tìm các điểm mà \\( f(x) = 0 \\) hoặc \\( f(x) = h \\) (trong đó \\( h \\) là một hằng số).\n   - Vẽ đồ thị tại các điểm này.\n\n8. **Vẽ đồ thị**:\n   - Kết hợp tất cả các thông tin đã thu thập để vẽ đồ thị chính xác.\n   - Sử dụng hệ số góc của tiếp tuyến tại các điểm đặc biệt để đảm bảo độ chính xác.\n\n9. **Giải thích các khái niệm**:\n   - Giải thích các khái niệm như tính chẵn, lẻ, tuần hoàn, tiệm cận, cực trị, lồi, lõm, điểm uốn, và tiệm cận xiên.\n\nBằng cách tuân theo các bước này, bạn có thể khảo sát và vẽ đồ thị hàm số \\( y = f(x) \\) một cách toàn diện và chính xác."
+  },
+  {
+    "index": 55,
+    "input": "Khảo sát đường cong cho dưới dạng tham số.",
+    "output": "Dựa trên thông tin được cung cấp, tôi sẽ trả lời câu hỏi \"Khảo sát đường cong cho dưới dạng tham số\" như sau:\n\n1. **Tìm TXĐ**: \n   - Xác định xem x(t) và y(t) có phải là hàm liên tục và khả vi trong khoảng [α, β] hay không.\n\n2. **Nhận xét tính chẵn, lẻ, tuần hoàn**:\n   - Kiểm tra xem x(t) và y(t) có phải là hàm chẵn, lẻ hoặc tuần hoàn trong khoảng [α, β] hay không.\n\n3. **Xác định chiều biến thiên**:\n   - Xét dấu của x'(t) và y'(t) để xác định x(t) và y(t) có tăng, giảm, hoặc không đổi theo t.\n\n4. **Tìm các tiệm cận**:\n   - **Tiệm cận đứng**: Nếu lim_{t→t₀(∞)} y(t) = ∞ và lim_{t→t₀(∞)} x(t) = x₀, thì x = x₀ là tiệm cận đứng.\n   - **Tiệm cận ngang**: Nếu lim_{t→t₀(∞)} x(t) = ∞ và lim_{t→t₀(∞)} y(t) = y₀, thì y = y₀ là tiệm cận ngang.\n   - **Tiệm cận xiên**: Nếu lim_{t→t₀(∞)} y(t) = ∞ và lim_{t→t₀(∞)} x(t) = ∞, thì có thể có tiệm cận xiên. Trong trường hợp này, a = lim_{t→t₀(∞)} (y(t)/x(t)) và b = lim_{t→t₀(∞)} (y(t) - ax(t)), thì y = ax + b là tiệm cận xiên.\n\n5. **Xác định tiếp tuyến**:\n   - Hệ số góc của tiếp tuyến tại điểm có x'(t) ≠ 0 là dy/dx = (dy/dt) / (dx/dt).\n\n6. **Xác định các điểm đặc biệt**:\n   - Tìm các điểm mà đồ thị đi qua và vẽ đồ thị.\n\nVí dụ cụ thể cho đường cong AB cho bởi phương trình tham số:\n\\[ AB \\begin{cases} x = x(t) \\\\ y = y(t) \\\\ \\alpha \\le t \\le \\beta \\\\ x(t), y(t) \\in C^{1}[\\alpha, \\beta] \\\\ x'^{2}(t) + y'^{2}(t) > 0, \\quad \\forall t \\in [\\alpha, \\beta] \\end{cases} \\]\n\n- **TXĐ**: x(t) và y(t) phải là hàm liên tục và khả vi trong [α, β].\n- **Nhận xét tính chẵn, lẻ, tuần hoàn**: Kiểm tra xem x(t) và y(t) có phải là hàm chẵn, lẻ hoặc tuần hoàn trong [α, β] hay không.\n- **Chiều biến thiên**: Xét dấu của x'(t) và y'(t).\n- **Tiệm cận**:\n  - Tiệm cận đứng: Nếu lim_{t→t₀(∞)} y(t) = ∞ và lim_{t→t₀(∞)} x(t) = x₀, thì x = x₀ là tiệm cận đứng.\n  - Tiệm cận ngang: Nếu lim_{t→t₀(∞)} x(t) = ∞ và lim_{t→t₀(∞)} y(t) = y₀, thì y = y₀ là tiệm cận ngang.\n  - Tiệm cận xiên: Nếu lim_{t→t₀(∞)} y(t) = ∞ và lim_{t→t₀(∞)} x(t) = ∞, thì có thể có tiệm cận xiên. Trong trường hợp này, a = lim_{t→t₀(∞)} (y(t)/x(t)) và b = lim_{t→t₀(∞)} (y(t) - ax(t)), thì y = ax + b là tiệm cận xiên.\n- **Tiếp tuyến**: Hệ số góc của tiếp tuyến tại điểm có x'(t) ≠ 0 là dy/dx = (dy/dt) / (dx/dt).\n- **Điểm đặc biệt**: Tìm các điểm mà đồ thị đi qua và vẽ đồ thị.\n\nHy vọng điều này giúp bạn hiểu rõ hơn về việc khảo sát đường cong cho dưới dạng tham số."
+  },
+  {
+    "index": 56,
+    "input": "Khảo sát đường cong trong hệ tọa độ cực.",
+    "output": "Đường cong AB trong hệ tọa độ cực được cho bởi:\n\n\\[ AB : \\begin{cases} \nr = r(\\varphi) \\\\\n\\alpha \\leq \\varphi \\leq \\beta \\\\\nr(\\varphi) \\in C^1[\\alpha, \\beta]\n\\end{cases} \\]\n\nVà phương trình độ dài cung \\( s \\) là:\n\n\\[ s = \\int_{\\alpha}^{\\beta} \\sqrt{r^2(\\varphi) + [r'(\\varphi)]^2} \\, d\\varphi \\]\n\n### 1. Tính Đẳng và Nhận Biết Tính Chẵn, Lẻ, Tuần Hoàn\n- **Tính Đẳng**: \\( r(\\varphi) \\) là hàm liên tục và khả vi trên khoảng \\([α, β]\\).\n- **Nhận Biết Tính Chẵn, Lẻ, Tuần Hoàn**:\n  - Nếu \\( r(\\varphi) \\) là hàm chẵn, tức là \\( r(-\\varphi) = r(\\varphi) \\), thì \\( x(t) \\) và \\( y(t) \\) cũng sẽ là hàm chẵn.\n  - Nếu \\( r(\\varphi) \\) là hàm lẻ, tức là \\( r(-\\varphi) = -r(\\varphi) \\), thì \\( x(t) \\) và \\( y(t) \\) cũng sẽ là hàm lẻ.\n  - Nếu \\( r(\\varphi) \\) là hàm tuần hoàn, tức là \\( r(\\varphi + 2π) = r(\\varphi) \\), thì \\( x(t) \\) và \\( y(t) \\) cũng sẽ là hàm tuần hoàn.\n\n### 2. Chiều Biến Thiên\n- **Chiều Biến Thiên của \\( x(t) \\)**: Dựa trên dấu của \\( x'(t) \\).\n- **Chiều Biến Thiên của \\( y(t) \\)**: Dựa trên dấu của \\( y'(t) \\).\n\n### 3. Các Tiệm Cận\n- **Tiệm Cận Đứng**: Nếu \\( \\lim_{t \\to t_0^\\pm} y(t) = \\infty \\) và \\( \\lim_{t \\to t_0^\\pm} x(t) = x_0 \\), thì \\( x = x_0 \\) là tiệm cận đứng.\n- **Tiệm Cận Ngang**: Nếu \\( \\lim_{t \\to t_0^\\pm} x(t) = \\infty \\) và \\( \\lim_{t \\to t_0^\\pm} y(t) = y_0 \\), thì \\( y = y_0 \\) là tiệm cận ngang.\n- **Tiệm Cận Xiên**: Nếu \\( \\lim_{t \\to t_0^\\pm} y(t) = \\infty \\) và \\( \\lim_{t \\to t_0^\\pm} x(t) = \\infty \\), thì có thể có tiệm cận xiên. Khi đó:\n  \\[ a = \\lim_{t \\to t_0^\\pm} \\frac{y(t)}{x(t)}, \\quad b = \\lim_{t \\to t_0^\\pm} (y(t) - ax(t)) \\]\n  thì \\( y = ax + b \\) là tiệm cận xiên.\n\n### 4. Tiếp Tuyến\n- **Hệ Số Góc của Tiếp Tuyến**: Tại điểm có \\( x'(t) \\neq 0 \\), hệ số góc của tiếp tuyến là:\n  \\[ \\frac{dy}{dx} = \\frac{dy/dt}{dx/dt} \\]\n\n- **Tính Lồi, Lõm và Điểm Uốn**: Sử dụng đạo hàm cấp hai:\n  \\[ \\frac{d^2y}{dx^2} = \\frac{d\\left(\\frac{dy/dt}{dx/dt}\\right)}{dx} = \\frac{y''(t)x'(t) - y'(t)x''(t)}{(x'(t))^3} \\]\n\n### 5. Các Điểm Đặc Biệt\n- **Đồ Thị**: Xác định các điểm đặc biệt mà đường cong đi qua và vẽ đồ thị.\n\n### Kết Luận\nDựa trên các thông tin đã cung cấp, bạn có thể thực hiện các bước trên để khảo sát và vẽ đường cong trong hệ tọa độ cực."
+  },
+  {
+    "index": 57,
+    "input": "Định nghĩa nguyên hàm của một hàm số.",
+    "output": "Nguyên hàm của một hàm số \\( f(x) \\) trên một khoảng \\( D \\) là một hàm số \\( F(x) \\) sao cho \\( F'(x) = f(x) \\), tức là \\( dF(x) = f(x) dx \\). Mỗi nguyên hàm \\( F(x) \\) của \\( f(x) \\) khác nhau chỉ bởi một hằng số \\( C \\), do đó có thể viết dưới dạng \\( F(x) + C \\).\n\nVí dụ:\n- Nếu \\( F(x) \\) là một nguyên hàm của \\( f(x) \\), thì \\( F(x) + C \\) cũng là một nguyên hàm của \\( f(x) \\).\n- Mọi nguyên hàm của \\( f(x) \\) có thể được viết dưới dạng \\( F(x) + C \\), trong đó \\( C \\) là một hằng số.\n\nTóm lại, \\( F(x) + C \\) biểu diễn tất cả các nguyên hàm của \\( f(x) \\), mỗi hằng số \\( C \\) tương ứng cho một nguyên hàm khác nhau."
+  },
+  {
+    "index": 58,
+    "input": "Nguyên hàm có tính chất duy nhất như thế nào?",
+    "output": "Nguyên hàm có tính chất duy nhất là **biểu thức $F(x) + C$**. Điều này có nghĩa là:\n\n1. **Tính duy nhất**: Nếu $F(x)$ là một nguyên hàm của $f(x)$ trên khoảng $D$, thì $F(x) + C$ cũng là một nguyên hàm của $f(x)$ trên cùng khoảng $D$. Điều này có thể được chứng minh bằng cách sử dụng định nghĩa rằng $F'(x) = f(x)$.\n\n2. **Điều kiện**: Mọi nguyên hàm của $f(x)$ đều có thể được biểu diễn dưới dạng $F(x) + C$, trong đó $C$ là một hằng số bất kỳ.\n\nVì vậy, $F(x) + C$ biểu diễn tất cả các nguyên hàm của $f(x)$, và mỗi hằng số $C$ tương ứng cho ta một nguyên hàm khác nhau."
+  },
+  {
+    "index": 59,
+    "input": "Định lý về sự tồn tại nguyên hàm.",
+    "output": "Định lý về sự tồn tại nguyên hàm nêu rằng đối với bất kỳ hàm số \\( f(x) \\) nào, tồn tại ít nhất một hàm số \\( F(x) \\) (gọi là nguyên hàm của \\( f(x) \\)) sao cho \\( F'(x) = f(x) \\), tức là \\( dF(x) = f(x)dx \\). Điều này có nghĩa là:\n\n1. **Hàm số \\( F(x) + C \\) cũng là một nguyên hàm của \\( f(x) \\)**: Với bất kỳ hằng số \\( C \\) nào, \\( F(x) + C \\) cũng thỏa mãn điều kiện \\( F'(x) = f(x) \\).\n\n2. **Mọi nguyên hàm của \\( f(x) \\) đều có thể viết dưới dạng \\( F(x) + C \\)**: Mọi nguyên hàm \\( G(x) \\) của \\( f(x) \\) đều có thể được viết dưới dạng \\( G(x) = F(x) + C \\), trong đó \\( F(x) \\) là một nguyên hàm duy nhất và \\( C \\) là một hằng số.\n\nTóm lại, biểu thức \\( F(x) + C \\) biểu diễn tất cả các nguyên hàm của \\( f(x) \\), mỗi hằng số \\( C \\) tương ứng cho ta một nguyên hàm khác nhau."
+  },
+  {
+    "index": 60,
+    "input": "Nguyên hàm của hàm số lũy thừa $x^n$ có dạng gì?",
+    "output": "Dựa trên thông tin được cung cấp, nguyên hàm của hàm số lũy thừa \\( x^n \\) có dạng:\n\n\\[ \\int x^n \\, dx = \\begin{cases} \n\\frac{x^{n+1}}{n+1} + C & \\text{nếu } n \\neq -1 \\\\ \n\\ln |x| + C & \\text{nếu } n = -1 \n\\end{cases} \\]\n\nGiải thích:\n- Đối với \\( n \\neq -1 \\), nguyên hàm của \\( x^n \\) là \\( \\frac{x^{n+1}}{n+1} + C \\).\n- Đối với \\( n = -1 \\), nguyên hàm của \\( x^{-1} \\) là \\( \\ln |x| + C \\)."
+  },
+  {
+    "index": 61,
+    "input": "Nguyên hàm của các hàm số mũ và logarit.",
+    "output": "Dựa trên các công thức đã cung cấp, chúng ta có thể xác định nguyên hàm của các hàm số mũ và logarit như sau:\n\n1. **Nguyên hàm của $e^x$:**\n   - Công thức: $\\int e^x dx = e^x + C$\n\n2. **Nguyên hàm của $\\ln |x|$:**\n   - Công thức: $\\int \\frac{dx}{x} = \\ln |x| + C$\n\nNhư vậy, nguyên hàm của $e^x$ là $e^x + C$, và nguyên hàm của $\\ln |x|$ là $\\ln |x| + C$."
+  },
+  {
+    "index": 62,
+    "input": "Nguyên hàm của các hàm lượng giác cơ bản.",
+    "output": "Dựa trên thông tin được cung cấp, đây là nguyên hàm của các hàm lượng giác cơ bản:\n\n1. **$\\int \\sin x \\, dx = -\\cos x + C$**\n2. **$\\int \\cos x \\, dx = \\sin x + C$**\n3. **$\\int \\tan x \\, dx = \\ln |\\sec x| + C$**\n4. **$\\int \\cot x \\, dx = \\ln |\\csc x| + C$**\n\nLưu ý rằng các nguyên hàm này có thể khác nhau tùy thuộc vào miền xác định của hàm lượng giác. Ví dụ, $\\int \\sin x \\, dx$ và $\\int \\cos x \\, dx$ đều là đúng cho tất cả $x \\neq (2k+1)\\frac{\\pi}{2}$, trong đó $k$ là bất kỳ số nguyên nào. Tuy nhiên, nguyên hàm của $\\tan x$ và $\\cot x$ phụ thuộc vào miền xác định cụ thể."
+  },
+  {
+    "index": 63,
+    "input": "Phương pháp đổi biến số trong tích phân bất định.",
+    "output": "Phương pháp đổi biến số trong tích phân bất định bao gồm hai bước chính:\n\n1. **Đổi biến đầu tiên**:\n   - Chọn một hàm số đơn điệu $\\varphi(t)$ sao cho $\\varphi'(t)$ là hàm số liên tục.\n   - Đổi biến: $x = \\varphi(t)$, do đó $dx = \\varphi'(t)dt$.\n   - Biểu thức dưới dấu tích phân $f(x)$ thay thế bằng $f(\\varphi(t)) \\varphi'(t)$.\n\n2. **Đổi biến thứ hai**:\n   - Chọn một hàm số có đạo hàm liên tục $\\psi(x)$ sao cho $f(x) = g(\\psi(x)) \\psi'(x)$.\n   - Đổi biến: $t = \\psi(x)$, do đó $dt = \\psi'(x)dx$.\n   - Biểu thức dưới dấu tích phân $g(x)$ thay thế bằng $g(\\psi(x)) \\psi'(x)$.\n\nSau khi đổi biến, ta tìm nguyên hàm của biểu thức mới và áp dụng công thức đổi biến để đưa kết quả trở lại dạng ban đầu."
+  },
+  {
+    "index": 64,
+    "input": "Ví dụ minh họa phương pháp đổi biến số.",
+    "output": "Dựa trên thông tin được cung cấp, đây là ví dụ minh họa phương pháp đổi biến số:\n\n**Ví dụ**: Tính tích phân $I = \\int x^2 dx$\n\n1. **Phép đổi biến thứ nhất**:\n   - Đặt $x = t^3$\n   - Vậy, $dx = 3t^2 dt$\n   - Biểu thức dưới dấu tích phân trở thành $t^6$\n   - Nguyên hàm của $t^6$ là $\\frac{t^7}{7}$\n   - Do đó, $I = \\frac{t^7}{7} + C = \\frac{x^7}{7} + C$\n\n2. **Phép đổi biến thứ hai**:\n   - Đặt $t = x^{1/3}$\n   - Vậy, $dt = \\frac{1}{3}x^{-2/3} dx$\n   - Biểu thức dưới dấu tích phân trở thành $x^5$\n   - Nguyên hàm của $x^5$ là $\\frac{x^6}{6}$\n   - Do đó, $I = \\frac{x^6}{6} + C$\n\nCả hai phương pháp đều cho kết quả giống nhau, nhưng phép đổi biến thứ nhất thường đơn giản hơn."
+  },
+  {
+    "index": 65,
+    "input": "Công thức tích phân từng phần.",
+    "output": "Công thức tích phân từng phần nêu rằng:\n\n$$\\int u \\, dv = \\left. uv \\right|_{a}^{b} - \\int_{a}^{b} v \\, du$$\n\nĐây là công thức chính xác để tính tích phân từng phần, được suy ra từ quy tắc lấy vi phân và định nghĩa về tích phân."
+  },
+  {
+    "index": 66,
+    "input": "Ví dụ minh họa phương pháp tích phân từng phần.",
+    "output": "Dựa trên thông tin được cung cấp, tôi sẽ đưa ra ví dụ minh họa phương pháp tích phân từng phần:\n\nVí dụ: Tích phân $\\int x^2 \\ln x \\, dx$\n\nPhương pháp:\n1. Chọn $u = \\ln x$ và $dv = x^2 \\, dx$\n2. Tính $du = \\frac{1}{x} \\, dx$ và $v = \\frac{x^3}{3}$\n3. Áp dụng công thức tích phân từng phần:\n   $$\\int x^2 \\ln x \\, dx = \\left. \\frac{x^3}{3} \\ln x \\right|_{x=1}^{x=\\infty} - \\int \\frac{x^3}{3} \\cdot \\frac{1}{x} \\, dx$$\n4. Rút gọn và đánh giá:\n   $$\\int x^2 \\ln x \\, dx = \\lim_{b \\to \\infty} \\left[ \\frac{x^3}{3} \\ln x \\right]_1^b - \\int \\frac{x^2}{3} \\, dx$$\n   $$= \\lim_{b \\to \\infty} \\left( \\frac{b^3}{3} \\ln b - \\frac{1}{3}b^2 + \\frac{1}{3} \\right) - \\frac{1}{9}x^3 + C$$\n   $$= \\infty - \\frac{1}{3}(2) + \\frac{1}{3} = \\infty$$\n\nVì vậy, tích phân không hội tụ.\n\nVí dụ này minh họa cách chọn $u$ và $dv$ để áp dụng công thức tích phân từng phần, đồng thời cho thấy một trường hợp mà tích phân không hội tụ do giới hạn dưới vô cùng."
+  },
+  {
+    "index": 67,
+    "input": "Định nghĩa tích phân xác định được phát biểu như thế nào?",
+    "output": "Định nghĩa tích phân xác định được phát biểu như sau:\n\nNếu tồn tại giới hạn hữu hạn \\( I = \\lim_{\\lambda \\to 0} S_n \\), trong đó \\( S_n = \\sum_{i=0}^{n-1} f(\\xi_i) \\Delta x_i \\) là tổng tích phân trong mỗi khoảng \\([x_i, x_{i+1}]\\), và \\(\\Delta x_i = x_{i+1} - x_i\\) là độ dài của mỗi khoảng, thì \\( I \\) được gọi là tích phân xác định của hàm số \\( f(x) \\) trên \\([a,b]\\). Ký hiệu cho tích phân này là:\n\n\\[ \\int_{a}^{b} f(x) \\, dx \\]\n\nTrong trường hợp này, ta nói hàm số \\( f(x) \\) khả tích trên \\([a,b]\\).\n\nLưu ý: Định nghĩa này áp dụng cho cả trường hợp \\( a < b \\), \\( b < a \\), và \\( a = b \\). Nếu \\( b < a \\), ta định nghĩa:\n\n\\[ \\int_{a}^{b} f(x) \\, dx = -\\int_{b}^{a} f(x) \\, dx \\]\n\nVà nếu \\( a = b \\), ta định nghĩa:\n\n\\[ \\int_{a}^{b} f(x) \\, dx = 0 \\]"
+  },
+  {
+    "index": 68,
+    "input": "Tiêu chuẩn khả tích cần và đủ của một hàm số bị chặn trên $[a,b]$ là gì?",
+    "output": "Tiêu chuẩn khả tích cần và đủ của một hàm số bị chặn trên $[a,b]$ là:\n\n$$\\lim_{\\lambda \\to 0} (S - s) = 0$$\n\ntrong đó:\n\n- $S = \\sum_{i=0}^{n-1} M_i \\Delta x_i$\n- $s = \\sum_{i=0}^{n-1} m_i \\Delta x_i$\n- $M_i = \\sup_{x \\in [x_i, x_{i+1}]} f(x)$\n- $m_i = \\inf_{x \\in [x_i, x_{i+1}]} f(x)$\n\nĐây là dạng tổng quát của điều kiện cần và đủ theo định lý 2.39."
+  },
+  {
+    "index": 69,
+    "input": "Nêu các định lý thường dùng để suy ra tính khả tích của hàm số trên đoạn $[a,b]$.",
+    "output": "Dựa trên thông tin được cung cấp, các định lý thường dùng để suy ra tính khả tích của hàm số trên đoạn $[a,b]$ bao gồm:\n\n1. **Định lý 2.39**: Định lý này nêu rằng một hàm số $f(x)$ bị chặn trên $[a,b]$ là khả tích nếu và chỉ nếu tồn tại các giá trị tối đa $M$ và tối thiểu $s$ sao cho:\n   $$\\lim_{\\lambda \\to 0} (S - s) = 0$$\n   Trong đó:\n   $$S = \\sum_{i=0}^{n-1} M_i \\Delta x_i, \\quad s = \\sum_{i=0}^{n-1} m_i \\Delta x_i$$\n   $$M_i = \\sup_{x \\in [x_i, x_{i+1}]} f(x), \\quad m_i = \\inf_{x \\in [x_i, x_{i+1}]} f(x)$$\n\n2. **Định lý cơ bản của tích phân Riemann**: Định lý này nêu rằng nếu $f(x)$ là liên tục trên $[a,b]$, thì $f(x)$ bị chặn và tồn tại một điểm $c \\in [a,b]$ sao cho:\n   $$\\int_{a}^{b} f(x) \\, dx = f(c) \\int_{a}^{b} 1 \\, dx = f(c)(b-a)$$\n\n3. **Định lý cơ bản của tích phân Lebesgue**: Định lý này nêu rằng nếu $f(x)$ là đo được trên $[a,b]$, thì $f(x)$ bị chặn và tồn tại một điểm $c \\in [a,b]$ sao cho:\n   $$\\int_{a}^{b} f(x) \\, dx = f(c) \\int_{a}^{b} 1 \\, dx = f(c)(b-a)$$\n\n4. **Định lý tích phân từng phần**: Định lý này nêu rằng nếu $u(x)$ và $v(x)$ là các hàm số liên tục trên $[a,b]$, thì:\n   $$\\int_{a}^{b} u(x)v'(x) \\, dx = [u(x)v(x)]_{a}^{b} - \\int_{a}^{b} u'(x)v(x) \\, dx$$\n\n5. **Định lý tích phân theo sai phân**: Định lý này nêu rằng nếu $f(x)$ là liên tục trên $[a,b]$, thì tồn tại một điểm $c \\in [a,b]$ sao cho:\n   $$\\int_{a}^{b} f(x) \\, dx = f(c)(b-a)$$\n\n6. **Định lý tích phân theo sai phân**: Định lý này nêu rằng nếu $f(x)$ là liên tục trên $[a,b]$, thì tồn tại một điểm $c \\in [a,b]$ sao cho:\n   $$\\int_{a}^{b} f(x) \\, dx = f(c)(b-a)$$\n\n7. **Định lý tích phân theo sai phân**: Định lý này nêu rằng nếu $f(x)$ là liên tục trên $[a,b]$, thì tồn tại một điểm $c \\in [a,b]$ sao cho:\n   $$\\int_{a}^{b} f(x) \\, dx = f(c)(b-a)$$\n\n8. **Định lý tích phân theo sai phân**: Định lý này nêu rằng nếu $f(x)$ là liên tục trên $[a,b]$, thì tồn tại một điểm $c \\in [a,b]$ sao cho:\n   $$\\int_{a}^{b} f(x) \\, dx = f(c)(b-a)$$\n\nNhững định lý này đều là những công cụ mạnh mẽ giúp xác định tính khả tích của hàm số trên đoạn $[a,b]$."
+  },
+  {
+    "index": 70,
+    "input": "Các tính chất cơ bản của tích phân xác định.",
+    "output": "Dựa trên thông tin được cung cấp, các tính chất cơ bản của tích phân xác định bao gồm:\n\n1. **Tính duy nhất**: Nếu một hàm số \\( f(x) \\) khả tích trên khoảng \\([a, b]\\), thì tồn tại một giá trị duy nhất \\( I \\) (tích phân xác định) sao cho:\n   \\[\n   \\int_{a}^{b} f(x) \\, dx = I\n   \\]\n   Điều này có nghĩa là nếu hai hàm số khả tích trên \\([a, b]\\) đều có cùng tích phân xác định, thì chúng bằng nhau.\n\n2. **Tính liên tục theo giới hạn**: Nếu \\( f(x) \\) liên tục trên \\([a, b]\\), thì \\( f(x) \\) cũng khả tích trên \\([a, b]\\). Điều này có nghĩa là nếu một hàm số liên tục trên một khoảng, thì nó cũng có thể được tích phân trên khoảng đó.\n\n3. **Tính đóng dưới phép nhân với hằng số**: Nếu \\( c \\) là một hằng số thực và \\( f(x) \\) khả tích trên \\([a, b]\\), thì \\( cf(x) \\) cũng khả tích trên \\([a, b]\\) và:\n   \\[\n   \\int_{a}^{b} cf(x) \\, dx = c \\int_{a}^{b} f(x) \\, dx\n   \\]\n\n4. **Tính đóng dưới phép cộng**: Nếu \\( f(x) \\) và \\( g(x) \\) khả tích trên \\([a, b]\\), thì \\( f(x) + g(x) \\) cũng khả tích trên \\([a, b]\\) và:\n   \\[\n   \\int_{a}^{b} (f(x) + g(x)) \\, dx = \\int_{a}^{b} f(x) \\, dx + \\int_{a}^{b} g(x) \\, dx\n   \\]\n\n5. **Tính đóng dưới phép thay thế**: Nếu \\( f(x) \\) khả tích trên \\([a, b]\\) và \\( g(x) \\) khả tích trên \\([g(a), g(b)]\\) (trong đó \\( g(a) \\leq a \\leq b \\leq g(b) \\)), thì:\n   \\[\n   \\int_{a}^{b} f(g(x)) \\cdot g'(x) \\, dx = \\int_{g(a)}^{g(b)} f(t) \\, dt\n   \\]\n\n6. **Tính đóng dưới phép thay thế theo biến**: Nếu \\( f(x) \\) khả tích trên \\([a, b]\\) và \\( g(x) \\) khả tích trên \\([c, d]\\), thì:\n   \\[\n   \\int_{c}^{d} f(g^{-1}(t)) \\cdot |g'(g^{-1}(t))| \\, dt = \\int_{g(c)}^{g(d)} f(u) \\, du\n   \\]\n\n7. **Tính đóng dưới phép thay thế theo hàm ngược**: Nếu \\( f(x) \\) khả tích trên \\([a, b]\\) và \\( g(x) \\) khả tích trên \\([c, d]\\), thì:\n   \\[\n   \\int_{c}^{d} f(g^{-1}(t)) \\cdot |g'(g^{-1}(t))| \\, dt = \\int_{g(a)}^{g(b)} f(u) \\, du\n   \\]\n\n8. **Tính đóng dưới phép thay thế theo hàm ngược**: Nếu \\( f(x) \\) khả tích trên \\([a, b]\\) và \\( g(x) \\) khả tích trên \\([c, d]\\), thì:\n   \\[\n   \\int_{c}^{d} f(g^{-1}(t)) \\cdot |g'(g^{-1}(t))| \\, dt = \\int_{g(a)}^{g(b)} f(u) \\, du\n   \\]\n\n9. **Tính đóng dưới phép thay thế theo hàm ngược**: Nếu \\( f(x) \\) khả tích trên \\([a, b]\\) và \\( g(x) \\) khả tích trên \\([c, d]\\), thì:\n   \\[\n   \\int_{c}^{d} f(g^{-1}(t)) \\cdot |g'(g^{-1}(t))| \\, dt = \\int_{g(a)}^{g(b)} f(u) \\, du\n   \\]\n\n10. **Tính đóng dưới phép thay thế theo hàm ngược**: Nếu \\( f(x) \\) khả tích trên \\([a, b]\\) và \\( g(x) \\) khả tích trên \\([c, d]\\), thì:\n    \\[\n    \\int_{c}^{d} f(g^{-1}(t)) \\cdot |g'(g^{-1}(t))| \\, dt = \\int_{g(a)}^{g(b)} f(u) \\, du\n    \\]\n\nNhững tính chất này đảm bảo rằng tích phân xác định có nhiều tính chất tốt, giúp dễ dàng áp dụng trong các bài toán thực tế."
+  },
+  {
+    "index": 71,
+    "input": "Công thức đổi biến trong tích phân xác định.",
+    "output": "Không có thông tin cụ thể về công thức đổi biến trong tích phân xác định trong ngữ cảnh đã cung cấp. Tuy nhiên, dựa trên kiến thức chung, tôi có thể giải thích như sau:\n\nCông thức đổi biến trong tích phân xác định cho biết nếu chúng ta có một tích phân $\\int_a^b f(g(x))g'(x)dx$, thì ta có thể thay đổi biến để viết lại tích phân thành dạng $\\int_c^d F(t)dt$, trong đó $t=g(x)$ và $dt=g'(x)dx$.\n\nĐiều này giúp đơn giản hóa việc đánh giá tích phân, đặc biệt khi $g(x)$ là hàm mũ, căn bậc hai, hoặc hàm lượng giác.\n\nTuy nhiên, vì ngữ cảnh đã cung cấp không đề cập đến công thức này, nên tôi không thể đưa ra câu trả lời chính xác dựa hoàn toàn trên thông tin đã cho."
+  },
+  {
+    "index": 72,
+    "input": "Công thức tích phân từng phần trong tích phân xác định.",
+    "output": "Công thức tích phân từng phần trong tích phân xác định là:\n\n\\[ \\int_a^b u \\, dv = \\left. uv \\right|_a^b - \\int_a^b v \\, du \\]\n\nCông thức này cho phép chúng ta thay thế tích phân phức tạp thành tích phân đơn giản hơn, đặc biệt hữu ích khi tích phân dưới dấu tích phân chứa một trong các hàm số sau: $\\ln x$, $a^x$, hàm lượng giác, hoặc hàm lượng giác ngược."
+  },
+  {
+    "index": 73,
+    "input": "Định nghĩa tích phân suy rộng loại 1.",
+    "output": "Dựa trên ngữ cảnh được cung cấp, định nghĩa tích phân suy rộng loại 1 là:\n\n**Tích phân suy rộng của hàm số \\( f(x) \\) trên khoảng \\([a, b)\\):**\n\n\\[ \\int_{a}^{b} f(x) \\, dx = \\lim_{t \\to b^-} \\int_{a}^{t} f(x) \\, dx \\]\n\nNếu giới hạn này tồn tại hữu hạn, ta nói tích phân suy rộng hội tụ. Ngược lại, nếu không tồn tại giới hạn này hoặc giới hạn bằng vô cực, ta nói tích phân phân kỳ.\n\n**Giới hạn của tích phân \\(\\int_{a}^{A} f(x) \\, dx\\) khi \\(A \\to +\\infty\\):**\n\n\\[ \\int_{a}^{+\\infty} f(x) \\, dx = \\lim_{A \\to +\\infty} \\int_{a}^{A} f(x) \\, dx \\]\n\nNếu giới hạn này tồn tại hữu hạn, ta nói tích phân suy rộng hội tụ. Ngược lại, nếu không tồn tại giới hạn này hoặc giới hạn bằng vô cực, ta nói tích phân phân kỳ.\n\n**Tích phân suy rộng của hàm số \\( f(x) \\) trên khoảng \\((-∞, +∞)\\):**\n\n\\[ \\int_{-\\infty}^{+\\infty} f(x) \\, dx = \\lim_{A' \\to -\\infty, A \\to +\\infty} \\int_{A'}^{A} f(x) \\, dx \\]\n\nTa có thể viết: \n\\[ \\int_{-\\infty}^{+\\infty} f(x) \\, dx = \\int_{-\\infty}^{a} f(x) \\, dx + \\int_{a}^{+\\infty} f(x) \\, dx \\]\nkhi hai trong ba tích phân nói trên hội tụ.\n\n**Công thức Newton-Leibniz:**\n\\[ \\int_{a}^{A} f(x) \\, dx = F(A) - F(a) \\]\nký hiệu:\n\\[ F(+\\infty) = \\lim_{A \\to +\\infty} F(A) \\]\nthì có thể viết:\n\\[ \\int_{a}^{+\\infty} f(x) \\, dx = F(+\\infty) - F(a) = \\left. F(x) \\right|_{a}^{+\\infty} \\]"
+  },
+  {
+    "index": 74,
+    "input": "Định nghĩa tích phân suy rộng loại 2.",
+    "output": "Dựa trên ngữ cảnh cung cấp, định nghĩa tích phân suy rộng loại 2 được mô tả như sau:\n\n**Tích phân suy rộng của hàm số \\( f(x) \\) trên khoảng \\([a, b)\\):**\n\n1. **Giới hạn:** \n   \\[\n   \\int_{a}^{b} f(x) \\, dx = \\lim_{t \\to b^-} \\int_{a}^{t} f(x) \\, dx\n   \\]\n\n2. **Định nghĩa:**\n   Nếu giới hạn này tồn tại hữu hạn, ta nói tích phân suy rộng hội tụ. Ngược lại, nếu không tồn tại giới hạn này hoặc giới hạn bằng vô cực, ta nói tích phân phân kỳ.\n\n3. **Ví dụ:**\n   \\[\n   \\int_{a}^{b} f(x) \\, dx = \\lim_{t \\to b^-} \\int_{a}^{t} f(x) \\, dx\n   \\]\n   \\[\n   \\int_{a}^{b} f(x) \\, dx = \\lim_{t \\to a^+, t' \\to b^-} \\int_{t}^{t'} f(x) \\, dx\n   \\]\n\n4. **Tích phân có hai điểm bất thường:**\n   \\[\n   \\int_{a}^{b} f(x) \\, dx = \\int_{a}^{c} f(x) \\, dx + \\int_{c}^{b} f(x) \\, dx\n   \\]\n   khi hai trong ba tích phân nói trên hội tụ.\n\n5. **Tích phân suy rộng trên \\([a, +\\infty)\\):**\n\n   - **Giới hạn:**\n     \\[\n     \\int_{a}^{+\\infty} f(x) \\, dx = \\lim_{A \\to +\\infty} \\int_{a}^{A} f(x) \\, dx\n     \\]\n\n   - **Định nghĩa:**\n     Nếu giới hạn này tồn tại hữu hạn, ta nói tích phân suy rộng hội tụ. Ngược lại, nếu không tồn tại giới hạn này hoặc giới hạn bằng vô cực, ta nói tích phân phân kỳ.\n\n6. **Tích phân của hàm số không bị chặn:**\n   \\[\n   \\int_{-\\infty}^{+\\infty} f(x) \\, dx = \\lim_{A' \\to -\\infty, A \\to +\\infty} \\int_{A'}^{A} f(x) \\, dx\n   \\]\n\n7. **Kết hợp các tích phân:**\n   \\[\n   \\int_{-\\infty}^{+\\infty} f(x) \\, dx = \\int_{-\\infty}^{a} f(x) \\, dx + \\int_{a}^{+\\infty} f(x) \\, dx\n   \\]\n   khi hai trong ba tích phân nói trên hội tụ.\n\n8. **Phương pháp tính:**\n   \\[\n   \\int_{a}^{A} f(x) \\, dx = F(A) - F(a)\n   \\]\n   ký hiệu:\n   \\[\n   F(+\\infty) = \\lim_{A \\to +\\infty} F(A)\n   \\]\n   thì có thể viết:\n   \\[\n   \\int_{a}^{+\\infty} f(x) \\, dx = F(+\\infty) - F(a) = \\left. F(x) \\right|_{a}^{+\\infty}\n   \\]\n\nNhư vậy, định nghĩa tích phân suy rộng loại 2 bao gồm các trường hợp cụ thể về giới hạn, định nghĩa, ví dụ, và phương pháp tính cho các tích phân trên các khoảng khác nhau."
+  },
+  {
+    "index": 75,
+    "input": "Tiêu chuẩn so sánh hội tụ cho tích phân suy rộng.",
+    "output": "Dựa trên thông tin được cung cấp, tôi sẽ trả lời câu hỏi về tiêu chuẩn so sánh hội tụ cho tích phân suy rộng như sau:\n\nTiêu chuẩn so sánh hội tụ cho tích phân suy rộng bao gồm hai loại tích phân suy rộng:\n\n1. **Tích phân suy rộng theo x:**\n   - \\( I_1 = \\int_{a}^{+\\infty} \\frac{dx}{x^{\\alpha}} \\)\n     - Hội tụ nếu \\( \\alpha > 1 \\)\n     - Phân kỳ nếu \\( \\alpha \\leq 1 \\)\n\n2. **Tích phân suy rộng theo (x-a):**\n   - \\( I_2 = \\int_{a}^{b} \\frac{dx}{(x - a)^{\\alpha}} \\)\n     - Hội tụ nếu \\( \\alpha < 1 \\)\n     - Phân kỳ nếu \\( \\alpha \\geq 1 \\)\n\n3. **Tích phân suy rộng theo (b-x):**\n   - \\( I_2' = \\int_{a}^{b} \\frac{dx}{(b - x)^{\\alpha}} \\)\n     - Hội tụ nếu \\( \\alpha < 1 \\)\n     - Phân kỳ nếu \\( \\alpha \\geq 1 \\)\n\n**Lưu ý:**\n- Các tiêu chuẩn này áp dụng cho cả hàm số dương và khả tích trên khoảng [a, +∞).\n- Nếu \\( \\lim_{x \\to +\\infty} \\frac{f(x)}{g(x)} = 0 \\) và \\( \\int_{a}^{+\\infty} g(x) \\, dx \\) hội tụ, thì \\( \\int_{a}^{+\\infty} f(x) \\, dx \\) hội tụ.\n- Nếu \\( \\lim_{x \\to +\\infty} \\frac{f(x)}{g(x)} = +\\infty \\) và \\( \\int_{a}^{+\\infty} g(x) \\, dx \\) phân kỳ, thì \\( \\int_{a}^{+\\infty} f(x) \\, dx \\) phân kỳ.\n\nĐây là những tiêu chuẩn hội tụ chính cho tích phân suy rộng dựa trên thông tin được cung cấp."
+  },
+  {
+    "index": 76,
+    "input": "Điều kiện hội tụ của $\\int_1^{+\\infty} \\frac{1}{x^p} dx$.",
+    "output": "Dựa trên thông tin được cung cấp, điều kiện hội tụ của $\\int_1^{+\\infty} \\frac{1}{x^p} dx$ phụ thuộc vào giá trị của $p$:\n\n- Nếu $p > 1$, thì $\\int_1^{+\\infty} \\frac{1}{x^p} dx$ hội tụ.\n- Nếu $p \\leq 1$, thì $\\int_1^{+\\infty} \\frac{1}{x^p} dx$ phân kỳ.\n\nĐiều này tương ứng với các tiêu chuẩn hội tụ của tích phân suy rộng:\n- Nếu $p > 1$, thì $\\int_1^{+\\infty} \\frac{1}{x^p} dx$ hội tụ (theo tiêu chuẩn $I_1$).\n- Nếu $p \\leq 1$, thì $\\int_1^{+\\infty} \\frac{1}{x^p} dx$ phân kỳ (theo tiêu chuẩn $I_1$).\n\nVì vậy, kết quả cuối cùng là:\n- Nếu $p > 1$, thì $\\int_1^{+\\infty} \\frac{1}{x^p} dx$ hội tụ.\n- Nếu $p \\leq 1$, thì $\\int_1^{+\\infty} \\frac{1}{x^p} dx$ phân kỳ."
+  },
+  {
+    "index": 77,
+    "input": "Điều kiện hội tụ của $\\int_0^1 \\frac{1}{x^p} dx$.",
+    "output": "Điều kiện hội tụ của $\\int_0^1 \\frac{1}{x^p} dx$ là $p > 1$."
+  },
+  {
+    "index": 78,
+    "input": "Công thức tính diện tích hình phẳng dưới đồ thị $y=f(x)$.",
+    "output": "Công thức tính diện tích hình phẳng dưới đồ thị \\( y = f(x) \\) là:\n\n\\[ S = \\int_{a}^{b} f(x) \\, dx \\]\n\ntrong đó \\( a \\) và \\( b \\) là giới hạn của tích phân, đại diện cho phạm vi của \\( x \\) tạo thành diện tích cần tính."
+  },
+  {
+    "index": 79,
+    "input": "Công thức diện tích miền giới hạn bởi hai đồ thị $y=f(x)$ và $y=g(x)$.",
+    "output": "Công thức diện tích miền giới hạn bởi hai đồ thị \\( y = f(x) \\) và \\( y = g(x) \\) được cho bởi:\n\n\\[ S = \\int_{a}^{b} |f(x) - g(x)| \\, dx \\]\n\ntrong đó \\( a \\) và \\( b \\) là các giá trị của \\( x \\) mà \\( f(x) \\) và \\( g(x) \\) tương ứng. Điều này có nghĩa là:\n\n- Nếu \\( f(x) > g(x) \\) cho mọi \\( x \\) trong khoảng \\( [a,b] \\), thì \\( S = \\int_{a}^{b} (f(x) - g(x)) \\, dx \\).\n- Nếu \\( f(x) < g(x) \\) cho mọi \\( x \\) trong khoảng \\( [a,b] \\), thì \\( S = \\int_{a}^{b} -(g(x) - f(x)) \\, dx \\).\n\nĐiều kiện \\( f, g \\in C[a,b] \\) đảm bảo rằng cả \\( f(x) \\) và \\( g(x) \\) đều liên tục trên khoảng \\( [a,b] \\)."
+  },
+  {
+    "index": 80,
+    "input": "Công thức tính độ dài cung đường cong $y=f(x)$.",
+    "output": "Công thức tính độ dài cung đường cong \\( y = f(x) \\) được cho bởi:\n\n\\[ s = \\int_{a}^{b} \\sqrt{1 + [f'(x)]^2} \\, dx \\]\n\ntrong đó \\( a \\leq x \\leq b \\) và \\( f \\in C^{1}[a,b] \\)."
+  },
+  {
+    "index": 81,
+    "input": "Công thức tính thể tích khối tròn xoay quanh trục Ox.",
+    "output": "Công thức tính thể tích khối tròn xoay quanh trục \\(Ox\\) là:\n\n\\[ V = \\pi \\int_{a}^{b} [f(x)]^2 \\, dx \\]\n\nTrong đó:\n- \\( f(x) \\) là hàm đại diện cho miền giới hạn.\n- \\( a \\) và \\( b \\) là giới hạn của \\( x \\).\n\nĐối với ví dụ a):\n\\[ V_a = \\pi \\int_{0}^{2} (2x - x^2)^2 \\, dx \\]\n\nĐối với ví dụ b):\n\\[ V_b = \\pi \\int_{0}^{1} \\left(1 + \\sqrt{1 - y}\\right)^2 \\, dy - \\pi \\int_{0}^{1} \\left(1 - \\sqrt{1 - y}\\right)^2 \\, dy \\]"
+  },
+  {
+    "index": 82,
+    "input": "Công thức tính thể tích khối tròn xoay quanh trục Oy.",
+    "output": "Dựa trên thông tin được cung cấp, công thức tính thể tích khối tròn xoay quanh trục \\(Oy\\) là:\n\n\\[ V = \\pi \\int_{c}^{d} \\varphi^{2}(y) \\, dy \\]\n\ntrong đó:\n- \\(c\\) và \\(d\\) là giới hạn dưới và trên của miền giới hạn theo trục \\(Oy\\).\n- \\(\\varphi(y)\\) là hàm \\(x\\) theo \\(y\\), tức là \\(x = \\varphi(y)\\).\n\nĐây là công thức tổng quát cho việc tính thể tích khối tròn xoay quanh trục \\(Oy\\)."
+  },
+  {
+    "index": 83,
+    "input": "Công thức tính diện tích mặt tròn xoay quanh trục Ox.",
+    "output": "Dựa trên thông tin đã cung cấp, công thức tính diện tích mặt tròn xoay quanh trục Ox cho các trường hợp khác nhau như sau:\n\n1. **Hình tròn xoay do $y = f(x)$**: \n   \\[\n   S = 2\\pi \\int_{a}^{b} f(x) \\sqrt{1 + [f'(x)]^2} \\ dx\n   \\]\n   Trong đó $a$ và $b$ là các điểm cuối của khoảng $x$, và $f'(x)$ là đạo hàm bậc nhất của $f(x)$.\n\n2. **Hình tròn xoay do $x = g(y)$**:\n   \\[\n   S = 2\\pi \\int_{c}^{d} g(y) \\sqrt{1 + [g'(y)]^2} \\ dy\n   \\]\n   Trong đó $c$ và $d$ là các điểm cuối của khoảng $y$, và $g'(y)$ là đạo hàm bậc nhất của $g(y)$.\n\n3. **Hình tròn xoay do $y = f(x)$ quanh trục $Ox$**:\n   \\[\n   S = 2\\pi \\int_{0}^{1} f(\\arctan u) \\sqrt{1 + (\\frac{du}{dx})^2} \\ dx\n   \\]\n   Trong đó $u$ là biến mới được định nghĩa bởi $x = \\tan u$, và $du/dx = \\sec^2 u$.\n\n4. **Hình tròn xoay do $x = f(y)$ quanh trục $Ox$**:\n   \\[\n   S = 2\\pi \\int_{c}^{d} f^{-1}(y) \\sqrt{1 + [\\frac{dy}{dx}]^2} \\ dy\n   \\]\n   Trong đó $f^{-1}(y)$ là hàm ngược của $f(y)$, và $dy/dx = \\pm \\frac{dx}{dy}$.\n\n5. **Hình tròn xoay do $y = f(x)$ quanh trục $Oy$**:\n   \\[\n   S = 4\\pi \\frac{a}{b} \\int_{0}^{b} \\sqrt{b^4 + (a^2 - b^2)y^2} \\ dy\n   \\]\n   Trong đó $a$ và $b$ là độ lớn của hai đỉnh của hình tròn xoay, và $b^4 + (a^2 - b^2)y^2$ là phương trình của parabol.\n\n6. **Hình tròn xoay do $x = f(y)$ quanh trục $Oy$**:\n   \\[\n   S = 4\\pi \\frac{a}{b} \\int_{0}^{b} \\sqrt{y^2 + \\beta} \\ dy\n   \\]\n   Trong đó $\\beta = \\frac{b^4}{a^2 - b^2}$.\n\n7. **Hình tròn xoay do $y = f(x)$ quanh trục $Ox$ với $f(x) = \\sqrt{x}$**:\n   \\[\n   S = 2\\pi \\int_{0}^{1} \\sqrt{x} \\sqrt{1 + (\\frac{1}{2\\sqrt{x}})^2} \\ dx = \\pi \\sqrt{5}\n   \\]\n\n8. **Hình tròn xoay do $x = f(y)$ quanh trục $Ox$ với $f(x) = \\sqrt{x}$**:\n   \\[\n   S = 2\\pi \\int_{0}^{1} \\sqrt{x} \\sqrt{1 + (-\\frac{1}{2x})^2} \\ dx = 3\\pi\n   \\]\n\nNhư vậy, công thức tính diện tích mặt tròn xoay quanh trục Ox phụ thuộc vào dạng cụ thể của miền và phương trình của nó."
+  },
+  {
+    "index": 84,
+    "input": "Công thức tính diện tích mặt tròn xoay quanh trục Oy.",
+    "output": "Dựa trên thông tin đã cung cấp, công thức tính diện tích mặt tròn xoay quanh trục Oy cho trường hợp tổng quát là:\n\n\\[ S = 2\\pi \\int_{a}^{b} \\sqrt{1 + [f'(x)]^2} \\cdot |f(x)| \\ dx \\]\n\nTrong đó:\n- \\( f(x) \\) là hàm đại diện cho đường cong giới hạn.\n- \\( a \\) và \\( b \\) là các điểm biên của miền giới hạn.\n\nCông thức này áp dụng cho cả trường hợp \\( f(x) \\) dương và âm. Nếu \\( f(x) \\) có dấu khác nhau, bạn cần điều chỉnh dấu của tích phân tương ứng."
+  },
+  {
+    "index": 85,
+    "input": "Ví dụ minh họa cách thiết lập tích phân tính diện tích miền giới hạn.",
+    "output": "Đây là một ví dụ về cách thiết lập tích phân để tính diện tích của một miền giới hạn:\n\nVí dụ 1: Diện tích của hình dạng parabol.\n\nHình dạng parabol được giới hạn bởi hai đường: $y = x^2 + 4$ và $x - y + 4 = 0$. Để tìm diện tích, chúng ta cần xác định điểm giao của hai đường này.\n\nBước 1: Giải hệ phương trình:\n$x - (x^2 + 4) + 4 = 0$\n$x^2 - x + 4 = 0$\n\nPhương trình bậc hai này có hai nghiệm thực, nhưng chúng không phải là nghiệm chính xác cho điểm giao. Chúng ta có thể sử dụng công thức nghiệm bậc hai để tìm chúng:\n\n$x = \\frac{-(-1) \\pm \\sqrt{(-1)^2 - 4(1)(4)}}{2(1)} = \\frac{1 \\pm \\sqrt{1-16}}{2} = \\frac{1 \\pm \\sqrt{-15}}{2}$\n\nNhưng đây là nghiệm phức tạp, vì vậy chúng ta sẽ tiếp cận vấn đề khác.\n\nBước 2: Xem xét hình dạng parabol và đường thẳng theo hướng ngược chiều. Chúng ta có thể viết lại phương trình của đường thẳng dưới dạng $y = x + 4$.\n\nBước 3: Phân chia miền thành hai phần:\n- Từ $x = 0$ đến nơi $y = x + 4$ cắt $y = x^2 + 4$.\n- Từ nơi $y = x + 4$ cắt $y = x^2 + 4$ đến $x = 1$.\n\nBước 4: Tính diện tích bằng cách tích phân từng phần:\n\nDiện tích = $\\int_{0}^{1} [(x + 4) - (x^2 + 4)] dx + \\int_{1}^{1/2} [(x + 4) - (x^2 + 4)] dx$\n\n= $\\int_{0}^{1} (x + 4 - x^2 - 4) dx + \\int_{1}^{1/2} (x + 4 - x^2 - 4) dx$\n\n= $\\int_{0}^{1} (-x^2 + x) dx + \\int_{1}^{1/2} (-x^2 + x) dx$\n\n= $[-\\frac{1}{3}x^3 + \\frac{1}{2}x^2]_{0}^{1} + [-\\frac{1}{3}x^3 + \\frac{1}{2}x^2]_{1}^{1/2}$\n\n= $(\\frac{1}{6}) + (\\frac{1}{24} - \\frac{1}{3})$\n\n= $\\frac{1}{6} + \\frac{1}{24} - \\frac{1}{3}$\n\n= $\\frac{4}{24} + \\frac{1}{24} - \\frac{8}{24}$\n\n= $\\frac{5}{24}$\n\nVậy, diện tích của hình dạng parabol là $\\frac{5}{24}$ đơn vị vuông."
+  },
+  {
+    "index": 86,
+    "input": "Ví dụ minh họa cách thiết lập công thức thể tích khối tròn xoay.",
+    "output": "Dựa trên thông tin được cung cấp, tôi sẽ giải thích cách thiết lập công thức thể tích khối tròn xoay cho từng trường hợp:\n\n### 1. Quay quanh trục \\( Ox \\):\nCông thức thể tích \\( V \\) cho khối tròn xoay được tính như sau:\n\\[ V = \\pi \\int_{a}^{b} [f(x)]^2 \\, dx \\]\n\nTrong đó:\n- \\( f(x) \\) là hàm đại diện cho đường cong giới hạn.\n- \\( a \\) và \\( b \\) là các điểm biên của miền giới hạn.\n\n### 2. Quay quanh trục \\( Oy \\):\nCông thức thể tích \\( V \\) cho khối tròn xoay được tính như sau:\n\\[ V = \\pi \\int_{c}^{d} [\\varphi(y)]^2 \\, dy \\]\n\nTrong đó:\n- \\( \\varphi(y) \\) là hàm đại diện cho đường cong giới hạn.\n- \\( c \\) và \\( d \\) là các giá trị y của miền giới hạn.\n\n### Ví dụ minh họa cách thiết lập công thức:\n\n#### Ví dụ 1: Thể tích khối tròn xoay quay quanh trục \\( Ox \\)\nGiả sử chúng ta có một hình tròn với tâm tại gốc tọa độ và bán kính \\( r \\). Đường cong giới hạn là \\( y = r - \\frac{x^2}{4} \\).\n\n1. **Xác định miền giới hạn**: \n   - Hàm \\( y = r - \\frac{x^2}{4} \\) cắt trục \\( y \\) tại \\( y = 0 \\).\n   - Để tìm \\( x \\), đặt \\( y = 0 \\): \\( 0 = r - \\frac{x^2}{4} \\), nên \\( x = \\pm 2r \\).\n\n2. **Đặt công thức**:\n   - Sử dụng công thức \\( V = \\pi \\int_{a}^{b} [f(x)]^2 \\, dx \\).\n   - Trong trường hợp này, \\( f(x) = r - \\frac{x^2}{4} \\), nên \\( [f(x)]^2 = (r - \\frac{x^2}{4})^2 \\).\n\n3. **Áp dụng quy tắc tích phân**:\n   \\[ V = \\pi \\int_{-2r}^{2r} (r - \\frac{x^2}{4})^2 \\, dx \\]\n   \\[ = \\pi \\int_{-2r}^{2r} (r^2 - rx^2 + \\frac{x^4}{16}) \\, dx \\]\n   \\[ = \\pi \\left[ rx^2 - \\frac{rx^3}{3} + \\frac{x^5}{80} \\right]_{-2r}^{2r} \\]\n   \\[ = \\pi \\left( 4r^3 - \\frac{4r^4}{3} + \\frac{4r^5}{80} - (-4r^3 + \\frac{4r^4}{3} - \\frac{4r^5}{80}) \\right) \\]\n   \\[ = \\pi \\cdot \\frac{8r^5}{40} = \\frac{\\pi r^5}{5} \\]\n\n#### Ví dụ 2: Thể tích khối tròn xoay quay quanh trục \\( Oy \\)\nGiả sử chúng ta có một hình tròn với tâm tại gốc tọa độ và bán kính \\( R \\). Đường cong giới hạn là \\( x = \\sqrt{R^2 - y^2} \\).\n\n1. **Xác định miền giới hạn**:\n   - Hàm \\( x = \\sqrt{R^2 - y^2} \\) cắt trục \\( x \\) tại \\( x = R \\).\n   - Để tìm \\( y \\), đặt \\( x = R \\): \\( R = \\sqrt{R^2 - y^2} \\), nên \\( y = \\pm R \\).\n\n2. **Đặt công thức**:\n   - Sử dụng công thức \\( V = \\pi \\int_{c}^{d} [\\varphi(y)]^2 \\, dy \\).\n   - Trong trường hợp này, \\( \\varphi(y) = \\sqrt{R^2 - y^2} \\), nên \\( [\\varphi(y)]^2 = R^2 - y^2 \\).\n\n3. **Áp dụng quy tắc tích phân**:\n   \\[ V = \\pi \\int_{-R}^{R} (R^2 - y^2) \\, dy \\]\n   \\[ = \\pi \\left[ R^2y - \\frac{y^3}{3} \\right]_{-R}^{R} \\]\n   \\[ = \\pi \\left( R^3 - \\frac{R^3}{3} - (-R^3 + \\frac{R^3}{3}) \\right) \\]\n   \\[ = \\pi \\cdot \\frac{4R^3}{3} = \\frac{4\\pi R^3}{3} \\]\n\nNhư vậy, chúng ta đã minh họa cách thiết lập công thức thể tích khối tròn xoay cho cả hai trường hợp quay quanh trục \\( Ox \\) và \\( Oy \\)."
+  },
+  {
+    "index": 87,
+    "input": "Định nghĩa giới hạn của hàm số hai biến.",
+    "output": "Định nghĩa giới hạn của hàm số hai biến:\n\nCho hàm số \\( z = f(x, y) \\) xác định trong một lân cận \\( V \\) nào đó của điểm \\( M_0(x_0, y_0) \\), có thể trừ tại điểm \\( M_0 \\). Ta nói rằng hàm số \\( f(x, y) \\) có giới hạn là \\( L \\) khi \\( M \\) dần đến \\( M_0 \\) nếu\n\n\\[ \\forall \\epsilon > 0, \\exists \\delta > 0: \\text{nếu } d(M, M_0) < \\delta \\text{ thì } |f(M) - L| < \\epsilon. \\]\n\nMột cách tương đương, với mọi dãy điểm \\( M_n(x_n, y_n) \\) thuộc lân cận \\( V \\) dần đến \\( M_0 \\), ta đều có\n\n\\[ \\lim_{n \\to +\\infty} f(x_n, y_n) = L. \\]\n\nKhi đó ta viết\n\n\\[ \\lim_{(x, y) \\to (x_0, y_0)} f(x, y) = L \\text{ hoặc } \\lim_{M \\to M_0} f(M) = L. \\]"
+  },
+  {
+    "index": 88,
+    "input": "Điều kiện tồn tại giới hạn của hàm nhiều biến.",
+    "output": "Để chứng minh sự tồn tại của giới hạn của hàm số nhiều biến số, ta cần chứng minh rằng:\n\n$\\lim_{n \\to +\\infty} f(x_n, y_n) = L$ với mọi dãy số $\\{x_n \\to x_0\\}$, $\\{y_n \\to y_0\\}$.\n\nTrong thực hành, ta thường chứng minh điều này bằng cách đánh giá hàm số, sử dụng nguyên lý giới hạn kẹp để đưa về giới hạn của hàm số một biến số.\n\nĐiều kiện tồn tại giới hạn của hàm số nhiều biến số là:\n\n$\\forall \\epsilon > 0, \\exists \\delta > 0: \\text{nếu } d(M, M_0) < \\delta \\text{ thì } |f(M) - L| < \\epsilon.$\n\nNgoài ra, ta cũng có thể chứng minh sự tồn tại giới hạn bằng cách chỉ ra rằng tồn tại hai dãy $\\{x_n \\to x_0, y_n \\to y_0\\}$ và $\\{x'_n \\to x_0, y'_n \\to y_0\\}$ sao cho $\\lim_{n \\to +\\infty} f(x_n, y_n) \\neq \\lim_{n \\to +\\infty} f(x'_n, y'_n)$ hoặc chỉ ra tồn tại hai quá trình $(x, y) \\to (x_0, y_0)$ khác nhau mà $f(x, y)$ tiến tới hai giới hạn khác nhau."
+  },
+  {
+    "index": 89,
+    "input": "Định nghĩa tính liên tục của hàm nhiều biến.",
+    "output": "Không có thông tin cụ thể về tính liên tục của hàm nhiều biến trong ngữ cảnh được cung cấp. Tuy nhiên, dựa trên kiến thức chung về hàm nhiều biến, ta có thể đưa ra một lời giải thích như sau:\n\n1. **Liên tục tại điểm \\( (a,b) \\)**: Một hàm nhiều biến \\( F(a,b) \\) liên tục tại điểm \\( (a,b) \\) nếu:\n   - \\( F(a,b) \\) xác định tại \\( (a,b) \\).\n   - Giới hạn của \\( F(x,y) \\) khi \\( (x,y) \\) tiến đến \\( (a,b) \\) tồn tại và bằng giá trị của \\( F(a,b) \\).\n\n2. **Liên tục trong miền \\( D \\)**: Một hàm nhiều biến \\( F(a,b) \\) liên tục trong miền \\( D \\) nếu nó liên tục tại mọi điểm trong \\( D \\).\n\n3. **Liên tục đều**: Một hàm nhiều biến \\( F(a,b) \\) liên tục đều trong miền \\( D \\) nếu với mọi \\( \\varepsilon > 0 \\), tồn tại \\( \\delta > 0 \\) sao cho với mọi \\( (x,y) \\) và \\( (u,v) \\) trong \\( D \\) thoả mãn \\( |(x,u) - (y,v)| < \\delta \\), ta có \\( |F(x,y) - F(u,v)| < \\varepsilon \\).\n\n4. **Giá trị cực đại và cực tiểu**: Một hàm nhiều biến \\( F(a,b) \\) liên tục trong miền \\( D \\) đạt giá trị lớn nhất và giá trị nhỏ nhất trong \\( D \\).\n\n5. **Tính liên tục của hàm số vector**: Đối với hàm số vector \\( F(a,b) = (f_1(a,b), f_2(a,b), ..., f_n(a,b)) \\), nó liên tục tại \\( (a,b) \\) nếu từng thành phần \\( f_i(a,b) \\) liên tục tại \\( (a,b) \\).\n\n6. **Tính liên tục của hàm số đa thức**: Mọi hàm số đa thức \\( P(x) \\) đều liên tục.\n\n7. **Tính liên tục của hàm số mũ**: Hàm số mũ \\( e^x \\) liên tục mọi nơi.\n\n8. **Tính liên tục của hàm số logarithmic**: Hàm số logarithmic \\( \\ln(x) \\) liên tục mọi nơi dương.\n\n9. **Tính liên tục của hàm số căn bậc hai**: Hàm số căn bậc hai \\( \\sqrt{x} \\) liên tục mọi nơi dương.\n\n10. **Tính liên tục của hàm số đối số phức**: Hàm số đối số phức \\( \\arg(z) \\) liên tục mọi nơi ngoại trừ tại gốc tọa độ.\n\n11. **Tính liên tục của hàm số lượng giác**: Các hàm số lượng giác \\( \\sin(x) \\), \\( \\cos(x) \\), \\( \\tan(x) \\) liên tục mọi nơi ngoại trừ tại các điểm kỳ dị.\n\n12. **Tính liên tục của hàm số hyperbolic**: Các hàm số hyperbolic \\( \\sinh(x) \\), \\( \\cosh(x) \\), \\( \\tanh(x) \\) liên tục mọi nơi.\n\n13. **Tính liên tục của hàm số hàm sinh**: Hàm số hàm sinh \\( \\Gamma(x) \\) liên tục mọi nơi.\n\n14. **Tính liên tục của hàm số hàm zeta**: Hàm số hàm zeta \\( \\zeta(s) \\) liên tục mọi nơi.\n\n15. **Tính liên tục của hàm số hàm đặc biệt**: Các hàm số đặc biệt như Bessel, Gamma, Beta, ... liên tục mọi nơi.\n\nNếu cần thêm thông tin chi tiết về một khía cạnh cụ thể, vui lòng cho biết."
+  },
+  {
+    "index": 90,
+    "input": "Khái niệm đạo hàm riêng theo biến.",
+    "output": "Đạo hàm riêng của một hàm số theo biến là đạo hàm của hàm số khi biến đó được thay đổi, với các biến khác được coi là hằng số. Cụ thể:\n\n1. **Đạo hàm riêng theo biến \\(x\\)**:\n   - Đối với hàm số \\(f(x, y)\\), khi \\(y\\) được cố định (\\(y = y_0\\)), đạo hàm riêng của \\(f\\) theo \\(x\\) tại điểm \\(M_0(x_0, y_0)\\) được ký hiệu là \\(\\frac{\\partial f}{\\partial x}\\) hoặc \\(\\frac{\\partial}{\\partial x} f(x, y)\\).\n   - Công thức tính đạo hàm riêng theo biến \\(x\\):\n     \\[\n     \\frac{\\partial f}{\\partial x} = \\lim_{\\Delta x \\to 0} \\frac{f(x_0 + \\Delta x, y_0) - f(x_0, y_0)}{\\Delta x}\n     \\]\n\n2. **Đạo hàm riêng theo biến \\(y\\)**:\n   - Đối với hàm số \\(f(x, y)\\), khi \\(x\\) được cố định (\\(x = x_0\\)), đạo hàm riêng của \\(f\\) theo \\(y\\) tại điểm \\(M_0(x_0, y_0)\\) được ký hiệu là \\(\\frac{\\partial f}{\\partial y}\\) hoặc \\(\\frac{\\partial}{\\partial y} f(x, y)\\).\n   - Công thức tính đạo hàm riêng theo biến \\(y\\):\n     \\[\n     \\frac{\\partial f}{\\partial y} = \\lim_{\\Delta y \\to 0} \\frac{f(x_0, y_0 + \\Delta y) - f(x_0, y_0)}{\\Delta y}\n     \\]\n\nCác đạo hàm riêng này giúp hiểu hành vi của hàm số khi một biến thay đổi, với các biến khác được coi là hằng số."
+  },
+  {
+    "index": 91,
+    "input": "Định nghĩa vi phân toàn phần của hàm hai biến.",
+    "output": "Vi phân toàn phần của hàm hai biến \\( z = f(x, y) \\) tại điểm \\( M_0(x_0, y_0) \\) được định nghĩa như sau:\n\n1. **Đạo hàm riêng bậc nhất**: \n   - \\( \\frac{\\partial f}{\\partial x}(x_0, y_0) \\)\n   - \\( \\frac{\\partial f}{\\partial y}(x_0, y_0) \\)\n\n2. **Vi phân toàn phần cấp hai**:\n   - \\( d^2z = \\frac{\\partial^2 f}{\\partial x^2} dx^2 + 2 \\frac{\\partial^2 f}{\\partial x \\partial y} dx dy + \\frac{\\partial^2 f}{\\partial y^2} dy^2 \\)\n\n3. **Số gia toàn phần**:\n   - \\( \\Delta f = f(x_0 + \\Delta x, y_0 + \\Delta y) - f(x_0, y_0) \\)\n\n4. **Vi phân toàn phần**:\n   - Nếu \\( \\Delta f \\) có thể biểu diễn dưới dạng:\n     \\[\n     \\Delta f = A \\Delta x + B \\Delta y + \\alpha \\Delta x + \\beta \\Delta y\n     \\]\n     trong đó \\( A \\), \\( B \\) là các hằng số chỉ phụ thuộc vào \\( x_0 \\) và \\( y_0 \\), còn \\( \\alpha \\), \\( \\beta \\to 0 \\) khi \\( M \\to M_0 \\), thì hàm số \\( z \\) khả vi tại \\( M_0 \\).\n\n5. **Định lý khả vi**:\n   - Nếu \\( f(x, y) \\) có các đạo hàm riêng trong lân cận của \\( M_0 \\) và các đạo hàm riêng đó liên tục tại \\( M_0 \\), thì \\( f(x, y) \\) khả vi tại \\( M_0 \\).\n   - Vi phân toàn phần của \\( z = f(x, y) \\) tại \\( M_0 \\) được cho bởi:\n     \\[\n     dz = \\frac{\\partial f}{\\partial x} \\Delta x + \\frac{\\partial f}{\\partial y} \\Delta y\n     \\]\n\nNhư vậy, vi phân toàn phần của hàm hai biến \\( z = f(x, y) \\) tại điểm \\( M_0(x_0, y_0) \\) bao gồm các đạo hàm riêng bậc nhất và vi phân toàn phần cấp hai, cùng với các điều kiện về khả vi và biểu diễn số gia toàn phần."
+  },
+  {
+    "index": 92,
+    "input": "Điều kiện khả vi của hàm nhiều biến.",
+    "output": "Không có thông tin cụ thể về điều kiện khả vi của hàm nhiều biến trong ngữ cảnh được cung cấp. Tuy nhiên, dựa trên kiến thức chung về giải tích nhiều biến, điều kiện khả vi của hàm nhiều biến thường bao gồm:\n\n1. **Khả vi theo từng biến**: Hàm số \\( z = f(x, y) \\) khả vi theo \\( x \\) tại \\( (x_0, y_0) \\) nếu tồn tại một đa thức \\( P_x \\) bậc tối đa \\( n \\) sao cho:\n   \\[\n   \\lim_{h \\to 0} \\frac{\\sqrt{(P_x(h))^2 + (P_y(h))^{2}}}{|h|} = 0\n   \\]\n   và tương tự cho \\( y \\).\n\n2. **Khả vi toàn cục**: Hàm số \\( z = f(x, y) \\) khả vi toàn cục tại \\( (x_0, y_0) \\) nếu \\( f \\) khả vi theo từng biến tại \\( (x_0, y_0) \\) và \\( \\nabla f(x_0, y_0) \\neq 0 \\).\n\n3. **Khả vi Lipschitz**: Hàm số \\( z = f(x, y) \\) khả vi Lipschitz toàn cục tại \\( (x_0, y_0) \\) nếu tồn tại hằng số \\( K > 0 \\) sao cho:\n   \\[\n   |f(x, y) - f(x', y')| \\leq K \\| (x, y) - (x', y') \\|\n   \\]\n   cho mọi \\( (x, y), (x', y') \\) gần \\( (x_0, y_0) \\).\n\n4. **Khả vi C^k**: Hàm số \\( z = f(x, y) \\) khả vi C^k toàn cục tại \\( (x_0, y_0) \\) nếu \\( f \\) khả vi theo từng biến và đạo hàm bậc \\( k+1 \\) tồn tại và liên tục.\n\nĐây là các điều kiện phổ biến để đảm bảo hàm số nhiều biến có hành vi tốt khi \\( (x, y) \\) tiến tới \\( (x_0, y_0) \\)."
+  },
+  {
+    "index": 93,
+    "input": "Phát biểu công thức đạo hàm của hàm hợp nhiều biến (quy tắc chuỗi).",
+    "output": "Không có thông tin cụ thể về quy tắc chuỗi cho hàm hợp nhiều biến trong đoạn văn được cung cấp. Tuy nhiên, tôi có thể giải thích quy tắc chuỗi bằng cách sử dụng các công thức đã cho:\n\n1. **Đạo hàm riêng của hàm hợp theo biến đầu tiên**:\n   - Nếu \\( z = f(u, v) \\), và \\( u = g(x, y) \\), \\( v = h(x, y) \\), thì đạo hàm riêng của \\( z \\) theo \\( x \\) được tính như sau:\n     \\[\n     \\frac{\\partial z}{\\partial x} = \\frac{\\partial f}{\\partial u} \\cdot \\frac{\\partial u}{\\partial x} + \\frac{\\partial f}{\\partial v} \\cdot \\frac{\\partial v}{\\partial x}\n     \\]\n\n2. **Đạo hàm riêng của hàm hợp theo biến thứ hai**:\n   - Nếu \\( z = f(u, v) \\), và \\( u = g(x, y) \\), \\( v = h(x, y) \\), thì đạo hàm riêng của \\( z \\) theo \\( y \\) được tính như sau:\n     \\[\n     \\frac{\\partial z}{\\partial y} = \\frac{\\partial f}{\\partial u} \\cdot \\frac{\\partial u}{\\partial y} + \\frac{\\partial f}{\\partial v} \\cdot \\frac{\\partial v}{\\partial y}\n     \\]\n\n3. **Đạo hàm riêng của hàm hợp theo cả hai biến**:\n   - Nếu \\( z = f(g(h(x, y))) \\), thì:\n     \\[\n     \\frac{\\partial z}{\\partial x} = \\frac{\\partial f}{\\partial g} \\cdot \\frac{\\partial g}{\\partial h} \\cdot \\frac{\\partial h}{\\partial x}\n     \\]\n     \\[\n     \\frac{\\partial z}{\\partial y} = \\frac{\\partial f}{\\partial g} \\cdot \\frac{\\partial g}{\\partial h} \\cdot \\frac{\\partial h}{\\partial y}\n     \\]\n\nNhững công thức này giúp chúng ta hiểu cách tính đạo hàm riêng của hàm hợp nhiều biến, dựa trên các đạo hàm riêng của các hàm thành phần."
+  },
+  {
+    "index": 94,
+    "input": "Khái niệm đạo hàm riêng cấp hai và vi phân cấp hai.",
+    "output": "Đạo hàm riêng cấp hai là các đạo hàm riêng của các đạo hàm riêng cấp một. Ví dụ, nếu \\( z = f(x, y) \\), thì:\n\n1. \\( \\frac{\\partial^2 f}{\\partial x^2} \\) là đạo hàm riêng bậc hai theo \\( x \\).\n2. \\( \\frac{\\partial^2 f}{\\partial y \\partial x} \\) (hoặc \\( \\frac{\\partial^2 f}{\\partial x \\partial y} \\)) là đạo hàm riêng bậc hai theo \\( x \\) và \\( y \\).\n\nVi phân toàn phần cấp hai, còn được gọi là vi phân toàn phần bậc hai, là tổng bình phương của các đạo hàm riêng bậc hai. Công thức tính vi phân toàn phần cấp hai là:\n\n\\[ d^2z = \\frac{\\partial^2 f}{\\partial x^2} dx^2 + 2 \\frac{\\partial^2 f}{\\partial x \\partial y} dx dy + \\frac{\\partial^2 f}{\\partial y^2} dy^2 \\]\n\nTrong đó:\n- \\( dz = \\frac{\\partial f}{\\partial x} dx + \\frac{\\partial f}{\\partial y} dy \\)\n- \\( d^2z \\) là vi phân toàn phần bậc hai của \\( z \\)\n\nNếu các đạo hàm riêng bậc hai liên tục tại một điểm, thì chúng bằng nhau, tức là \\( \\frac{\\partial^2 f}{\\partial x \\partial y} = \\frac{\\partial^2 f}{\\partial y \\partial x} \\)."
+  },
+  {
+    "index": 95,
+    "input": "Khái niệm đạo hàm theo hướng và gradient.",
+    "output": "Để trả lời câu hỏi này một cách ngắn gọn, chúng ta cần hiểu rõ khái niệm về đạo hàm theo hướng và gradient:\n\n1. **Đạo hàm theo hướng**:\n   - Đạo hàm theo hướng $\\vec{l}$ (còn được gọi là đạo hàm theo vectơ hướng) của một hàm số $f$ tại một điểm $M_0$ được định nghĩa như sau:\n     $$\\frac{\\partial f}{\\partial \\vec{l}}(M_0) = \\vec{\\text{grad}} f \\cdot \\vec{l} = |\\vec{\\text{grad}} f| |\\vec{l}| \\cos(\\vec{\\text{grad}} f, \\vec{l})$$\n   - Trong đó, $\\vec{\\text{grad}} f$ là gradient của $f$ tại $M_0$, và $\\vec{l}$ là một vectơ hướng.\n\n2. **Gradient**:\n   - Gradient của một hàm số $f$ tại một điểm $M_0$ là vector:\n     $$\\vec{\\text{grad}} f(M_0) = \\left( \\frac{\\partial f}{\\partial x}(M_0), \\frac{\\partial f}{\\partial y}(M_0), \\frac{\\partial f}{\\partial z}(M_0) \\right)$$\n   - Gradient $\\vec{\\text{grad}} f$ cho thấy hướng mà hàm số $f$ tăng nhanh nhất tại $M_0$. Độ lớn của gradient tương ứng với tốc độ tăng trưởng.\n\n3. **Tại sao đạo hàm theo hướng và gradient liên quan đến nhau?**\n   - Công thức $\\frac{\\partial f}{\\partial \\vec{l}}(M_0) = \\vec{\\text{grad}} f \\cdot \\vec{l}$ cho thấy rằng đạo hàm theo hướng $\\vec{l}$ có thể được tính bằng tích vô hướng giữa gradient và vectơ hướng. Điều này giúp chúng ta hiểu rõ hơn về hướng mà hàm số tăng hoặc giảm nhanh nhất.\n\n4. **Sử dụng trong thực tế**:\n   - Trong nhiều ứng dụng, đặc biệt là trong vật lý và kỹ thuật, đạo hàm theo hướng và gradient rất hữu ích để mô tả sự thay đổi của các trường lực, nhiệt độ, áp suất, v.v., theo các hướng khác nhau.\n\nHy vọng những thông tin này giúp bạn hiểu rõ hơn về đạo hàm theo hướng và gradient."
+  },
+  {
+    "index": 96,
+    "input": "Phát biểu định lý Schwarz về đạo hàm riêng hỗn hợp.",
+    "output": "Không có thông tin cụ thể về định lý Schwarz trong ngữ cảnh này. Tuy nhiên, định lý Schwarz nêu rằng nếu $f$ có các đạo hàm riêng bậc hai liên tục trong một miền $D$, thì:\n\n$$\\frac{\\partial^2 f}{\\partial x \\partial y} = \\frac{\\partial^2 f}{\\partial y \\partial x}$$\n\nĐiều này có nghĩa là đạo hàm riêng hỗn hợp của $f$ theo $x$ và $y$ bằng nhau."
+  },
+  {
+    "index": 97,
+    "input": "Định nghĩa hàm ẩn và công thức đạo hàm hàm số ẩn.",
+    "output": "Hàm ẩn là một hàm số mà biến đầu vào là một hàm số khác. Ví dụ, nếu chúng ta có phương trình $F(x, y) = 0$, thì $y$ là hàm ẩn của $x$.\n\nCông thức đạo hàm của hàm số ẩn được cho bởi:\n\n- Đối với hàm số ẩn $y = y(x)$ thỏa mãn phương trình $F(x, y) = 0$:\n  $$y'(x) = -\\frac{\\frac{\\partial F}{\\partial x}}{\\frac{\\partial F}{\\partial y}}$$\n\n- Đối với hàm số ẩn $z = z(x, y)$ thỏa mãn phương trình $F(x, y, z) = 0$:\n  $$\\frac{\\partial z}{\\partial x} = -\\frac{\\frac{\\partial F}{\\partial x}}{\\frac{\\partial F}{\\partial z}}, \\quad \\frac{\\partial z}{\\partial y} = -\\frac{\\frac{\\partial F}{\\partial y}}{\\frac{\\partial F}{\\partial z}}$$\n\nĐể xây dựng công thức đạo hàm cho các hàm lượng giác ngược, chúng ta thường sử dụng các tính chất của hàm lượng giác và mối quan hệ giữa hàm gốc và hàm ngược. Ví dụ, đối với hàm sin, nếu $y = \\sin^{-1}(x)$, thì:\n\n- $\\cos(y) = \\sqrt{1-x^2}$\n- $\\frac{dy}{dx} = \\frac{1}{\\sqrt{1-x^2}}$\n\nVì vậy, $\\frac{d}{dx}(\\sin^{-1}(x)) = \\frac{1}{\\sqrt{1-x^2}}$."
+  },
+  {
+    "index": 98,
+    "input": "Điều kiện cực trị tự do của hàm hai biến.",
+    "output": "Để tìm cực trị tự do của hàm hai biến, ta cần:\n\n1. Tìm đạo hàm riêng bậc nhất của hàm số.\n2. Giải hệ phương trình đạo hàm riêng bằng phương pháp Lagrange.\n\nGiải thích chi tiết:\n\n1. Đối với hàm số $z = f(x, y)$, đạo hàm riêng bậc nhất được cho bởi:\n   $$p = \\frac{\\partial f}{\\partial x}, \\quad q = \\frac{\\partial f}{\\partial y}$$\n\n2. Để tìm cực trị tự do, ta đặt các đạo hàm riêng bằng không:\n   $$\\frac{\\partial f}{\\partial x} = 0, \\quad \\frac{\\partial f}{\\partial y} = 0$$\n\n3. Giải hệ phương trình này để tìm giá trị tối ưu của $x$ và $y$.\n\n4. Sau đó, tính đạo hàm riêng bậc hai:\n   $$r = \\frac{\\partial^2 f}{\\partial x^2}, \\quad s = \\frac{\\partial^2 f}{\\partial x \\partial y}, \\quad t = \\frac{\\partial^2 f}{\\partial y^2}$$\n\n5. Sử dụng các biểu thức này để đánh giá dấu của $s^2 - rt$:\n   - Nếu $s^2 - rt < 0$, hàm số đạt cực trị tại $(x, y)$.\n   - Nếu $s^2 - rt > 0$, hàm số không đạt cực trị tại $(x, y)$.\n\n6. Nếu $s^2 - rt = 0$, ta cần đánh giá thêm $f(x, y)$ tại các điểm lân cận để xác định cực trị.\n\nPhương pháp này đảm bảo tìm được tất cả các cực trị tự do của hàm số hai biến, bao gồm cả cực trị tối đa và tối thiểu."
+  },
+  {
+    "index": 99,
+    "input": "Phương pháp nhân tử Lagrange để tìm cực trị có điều kiện.",
+    "output": "Phương pháp nhân tử Lagrange để tìm cực trị có điều kiện bao gồm các bước sau:\n\n1. **Xác định hàm Lagrange**: Hàm Lagrange $\\phi(x, y, \\lambda) = f(x, y) + \\lambda \\varphi(x, y)$, trong đó $\\lambda$ là tham số Lagrange.\n\n2. **Xây dựng hệ phương trình**: Tạo hệ phương trình:\n   \\[\n   \\begin{cases}\n   \\frac{\\partial \\phi}{\\partial x} = 0 \\\\\n   \\frac{\\partial \\phi}{\\partial y} = 0 \\\\\n   \\frac{\\partial \\phi}{\\partial \\lambda} = 0\n   \\end{cases}\n   \\]\n   Điều này dẫn đến:\n   \\[\n   \\begin{cases}\n   \\frac{\\partial f}{\\partial x} + \\lambda \\frac{\\partial \\varphi}{\\partial x} = 0 \\\\\n   \\frac{\\partial f}{\\partial y} + \\lambda \\frac{\\partial \\varphi}{\\partial y} = 0 \\\\\n   \\varphi(x, y) = 0\n   \\end{cases}\n   \\]\n\n3. **Giải hệ phương trình**: Giải hệ phương trình trên để tìm các điểm cực trị có điều kiện. Các điểm cực trị có điều kiện là các điểm mà hệ phương trình này có nghiệm duy nhất.\n\n4. **Kiểm tra cực trị**: Sau khi tìm được các điểm cực trị có điều kiện, kiểm tra xem chúng có phải là cực trị thực sự của hàm số $f(x, y)$ bằng cách sử dụng Định lý 3.56 hoặc tính vi phân cấp hai.\n\n5. **Điều kiện cần**: Theo Định lý 3.56, nếu các điều kiện sau được thỏa mãn, thì tồn tại một số $\\lambda_0$ làm cho hệ phương trình trên có nghiệm duy nhất:\n   \\[\n   \\begin{cases}\n   \\frac{\\partial f}{\\partial x} + \\lambda_0 \\frac{\\partial \\varphi}{\\partial x} = 0 \\\\\n   \\frac{\\partial f}{\\partial y} + \\lambda_0 \\frac{\\partial \\varphi}{\\partial y} = 0 \\\\\n   \\varphi(x, y) = 0\n   \\end{cases}\n   \\]\n\n6. **Điều kiện đủ**: Nếu các điều kiện trên được thỏa mãn, thì $(x_0, y_0)$ là cực trị có điều kiện của $f(x, y)$.\n\n7. **Xử lý trường hợp không tìm được $y = y(x)$**: Nếu không tìm được $y = y(x)$ từ $\\varphi(x, y) = 0$, ta vẫn có thể sử dụng phương pháp nhân tử Lagrange để tìm cực trị có điều kiện.\n\nBằng cách tuân theo các bước này, ta có thể tìm cực trị có điều kiện của hàm số $f(x, y)$ dưới điều kiện $\\varphi(x, y) = 0$."
+  },
+  {
+    "index": 100,
+    "input": "Ví dụ minh họa cực trị có điều kiện bằng nhân tử Lagrange.",
+    "output": "Trong ví dụ đầu tiên, chúng ta đã sử dụng phương pháp nhân tử Lagrange để tìm cực trị có điều kiện:\n\nCho hàm số $z = \\frac{1}{x} + \\frac{1}{y}$ với điều kiện $\\frac{1}{x^2} + \\frac{1}{y^2} = \\frac{1}{a^2}$.\n\nHàm số Lagrange được đặt như sau:\n$\\phi(x,y,\\lambda) = z + \\lambda(\\frac{1}{x^2} + \\frac{1}{y^2} - \\frac{1}{a^2})$\n\nTừ hệ phương trình đạo hàm riêng, ta có thể tìm được các điểm cực trị có điều kiện. Kết quả là:\n- Điểm cực tiểu có điều kiện: $(a\\sqrt{2}, a\\sqrt{2})$ với $z_{\\text{min}} = \\frac{\\sqrt{2}}{a}$\n- Điểm cực đại có điều kiện: $(-a\\sqrt{2}, -a\\sqrt{2})$ với $z_{\\text{max}} = -\\frac{\\sqrt{2}}{a}$\n\nVí dụ này minh họa cách sử dụng phương pháp nhân tử Lagrange để tìm cực trị có điều kiện trong bài toán tối ưu hóa đa biến."
+  },
+  {
+    "index": 101,
+    "input": "Khái niệm giá trị lớn nhất và nhỏ nhất của hàm số nhiều biến.",
+    "output": "Giá trị lớn nhất và nhỏ nhất của hàm số nhiều biến là các giá trị mà hàm số đạt được trong miền xác định. Cụ thể:\n\n1. **Giá trị lớn nhất**: Đây là giá trị tối đa của hàm số trên miền xác định. Nếu $f$ đạt giá trị lớn nhất tại một điểm $M_0$, thì với mọi điểm $M$ trong lân cận nào đó của $M_0$ nhưng khác $M_0$, ta có $f(M) \\leq f(M_0)$.\n\n2. **Giá trị nhỏ nhất**: Đây là giá trị tối thiểu của hàm số trên miền xác định. Nếu $f$ đạt giá trị nhỏ nhất tại một điểm $M_0$, thì với mọi điểm $M$ trong lân cận nào đó của $M_0$ nhưng khác $M_0$, ta có $f(M) \\geq f(M_0)$.\n\nĐể tìm các giá trị này, ta cần:\n- Xét giá trị của hàm số tại tất cả các điểm trong miền xác định.\n- Xem xét đạo hàm riêng để xác định nơi hàm số có khả năng đạt cực trị.\n- So sánh các giá trị này với các giá trị của hàm số trên biên của miền xác định (cực trị có điều kiện)."
+  }
+]
