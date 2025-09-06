@@ -1960,9 +1960,9 @@
           "Vậy $(x, y, z) = (-y, y, -y) = y(-1, 1, -1)$.",
           "$U \\cap V = \\{t(-1, 1, -1) : t \\in \\mathbb{R}\\}$ = span$\\{(-1, 1, -1)\\}$.",
           "c) $U \\cap V$ là không gian con vì:",
-          "- Chứa vector không (khi $t=0$)",
-          "- Đóng với cộng: $t_1(-1,1,-1) + t_2(-1,1,-1) = (t_1+t_2)(-1,1,-1)$",
-          "- Đóng với nhân vô hướng: $c[t(-1,1,-1)] = (ct)(-1,1,-1)$"
+          "Chứa vector không (khi $t=0$)",
+          "Đóng với cộng: $t_1(-1,1,-1) + t_2(-1,1,-1) = (t_1+t_2)(-1,1,-1)$",
+          "Đóng với nhân vô hướng: $c[t(-1,1,-1)] = (ct)(-1,1,-1)$"
         ]
       }
     },
@@ -3326,10 +3326,10 @@
       "answer": {
         "steps": [
           "a) Để chứng minh $T$ là tuyến tính, ta kiểm tra hai điều kiện. Cho $u=(x_1, y_1), v=(x_2, y_2)$.",
-          "1. $T(u+v) = T(x_1+x_2, y_1+y_2) = (x_1+x_2, (x_1+x_2)+(y_1+y_2), (x_1+x_2)-(y_1+y_2))$.",
+          "$T(u+v) = T(x_1+x_2, y_1+y_2) = (x_1+x_2, (x_1+x_2)+(y_1+y_2), (x_1+x_2)-(y_1+y_2))$.",
           "$T(u)+T(v) = (x_1, x_1+y_1, x_1-y_1) + (x_2, x_2+y_2, x_2-y_2) = (x_1+x_2, x_1+y_1+x_2+y_2, x_1-y_1+x_2-y_2)$.",
           "Hai kết quả bằng nhau, vậy $T(u+v) = T(u)+T(v)$.",
-          "2. Cho hằng số $c$. $T(cu) = T(cx_1, cy_1) = (cx_1, cx_1+cy_1, cx_1-cy_1) = c(x_1, x_1+y_1, x_1-y_1) = cT(u)$.",
+          "Cho hằng số $c$. $T(cu) = T(cx_1, cy_1) = (cx_1, cx_1+cy_1, cx_1-cy_1) = c(x_1, x_1+y_1, x_1-y_1) = cT(u)$.",
           "Vì cả hai điều kiện đều thỏa mãn, $T$ là một ánh xạ tuyến tính.",
           "b) Tìm ảnh của $v=(3,-1)$: $T(3, -1) = (3, 3+(-1), 3-(-1)) = (3, 2, 4)$."
         ]
@@ -3393,8 +3393,8 @@
       "answer": {
         "steps": [
           "a) Ta kiểm tra hai tính chất của ánh xạ tuyến tính:",
-          "1. $T(p(x)+q(x)) = (p(x)+q(x))' = p'(x) + q'(x) = T(p(x)) + T(q(x))$.",
-          "2. $T(c \\cdot p(x)) = (c \\cdot p(x))' = c \\cdot p'(x) = c \\cdot T(p(x))$.",
+          "$T(p(x)+q(x)) = (p(x)+q(x))' = p'(x) + q'(x) = T(p(x)) + T(q(x))$.",
+          "$T(c \\cdot p(x)) = (c \\cdot p(x))' = c \\cdot p'(x) = c \\cdot T(p(x))$.",
           "Cả hai đều là các tính chất cơ bản của phép lấy đạo hàm. Vậy $T$ là tuyến tính.",
           "b) $T(3x^2 - 5x + 2) = (3x^2 - 5x + 2)' = 6x - 5$.",
           "c) Hạt nhân $Ker(T)$ là tập các đa thức $p(x) \\in P_2$ sao cho $T(p(x)) = p'(x) = 0$.",
@@ -3419,8 +3419,8 @@
       "answer": {
         "steps": [
           "a) Kiểm tra hai tính chất. Cho $A, B \\in M_{22}$ và hằng số $c$.",
-          "1. $T(A+B) = tr(A+B) = tr(A) + tr(B) = T(A) + T(B)$.",
-          "2. $T(cA) = tr(cA) = c \\cdot tr(A) = c \\cdot T(A)$.",
+          "$T(A+B) = tr(A+B) = tr(A) + tr(B) = T(A) + T(B)$.",
+          "$T(cA) = tr(cA) = c \\cdot tr(A) = c \\cdot T(A)$.",
           "Các tính chất này đúng với định nghĩa của phép lấy vết. Vậy $T$ là tuyến tính.",
           "b) Vết của ma trận là tổng các phần tử trên đường chéo chính. $T(\\begin{pmatrix} 5 & 2 \\\\ 7 & -3 \\end{pmatrix}) = 5 + (-3) = 2$.",
           "c) Vì ta có thể tạo ra ma trận có vết là bất kỳ số thực nào (ví dụ $A = \\begin{pmatrix} k & 0 \\\\ 0 & 0 \\end{pmatrix}$ có $tr(A)=k$), nên không gian ảnh của $T$ là toàn bộ tập hợp số thực $\\mathbb{R}$."
@@ -3527,7 +3527,7 @@
       "answer": {
         "steps": [
           "a) Kiểm tra 2 tính chất: 1. $T(A+B) = T(\\begin{pmatrix} a_1+a_2 & b_1+b_2 \\\\ c_1+c_2 & d_1+d_2 \\end{pmatrix}) = (a_1+a_2, b_1+b_2, c_1+c_2, d_1+d_2) = (a_1,b_1,c_1,d_1)+(a_2,b_2,c_2,d_2) = T(A)+T(B)$.",
-          "2. $T(kA) = T(\\begin{pmatrix} ka & kb \\\\ kc & kd \\end{pmatrix}) = (ka, kb, kc, kd) = k(a,b,c,d) = kT(A)$. Vậy T là tuyến tính.",
+          "$T(kA) = T(\\begin{pmatrix} ka & kb \\\\ kc & kd \\end{pmatrix}) = (ka, kb, kc, kd) = k(a,b,c,d) = kT(A)$. Vậy T là tuyến tính.",
           "b) Để chứng minh T là đẳng cấu, ta chứng minh nó đơn ánh và toàn ánh.",
           "Đơn ánh: Tìm $Ker(T)$. $T(A)=\\vec{0} \\Leftrightarrow (a,b,c,d)=(0,0,0,0) \\Leftrightarrow a=b=c=d=0$. Điều này có nghĩa là $A$ là ma trận không. Vì $Ker(T)$ chỉ chứa ma trận không, $T$ là đơn ánh.",
           "Toàn ánh: Cho một vector bất kỳ $(x,y,z,w) \\in \\mathbb{R}^4$. Ta có thể tìm được một ma trận $A = \\begin{pmatrix} x & y \\\\ z & w \\end{pmatrix}$ sao cho $T(A)=(x,y,z,w)$. Do đó $Im(T) = \\mathbb{R}^4$. $T$ là toàn ánh.",

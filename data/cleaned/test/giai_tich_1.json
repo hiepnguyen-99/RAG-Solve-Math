@@ -5,13 +5,13 @@
       "answer": {
         "steps": [
           "a) Để tính giá trị của hàm số tại một điểm, ta cần xác định điểm đó thuộc khoảng nào.",
-          "- Với $x=2$: vì $2 \\ge 0$, ta dùng công thức $f(x) = x^2 + 1$. Do đó, $f(2) = 2^2 + 1 = 5$.",
-          "- Với $x=-3$: vì $-3 < 0$, ta dùng công thức $f(x) = 2x + 1$. Do đó, $f(-3) = 2(-3) + 1 = -5$.",
-          "- Với $x=0$: vì $0 \\ge 0$, ta dùng công thức $f(x) = x^2 + 1$. Do đó, $f(0) = 0^2 + 1 = 1$.",
+          "Với $x=2$: vì $2 \\ge 0$, ta dùng công thức $f(x) = x^2 + 1$. Do đó, $f(2) = 2^2 + 1 = 5$.",
+          "Với $x=-3$: vì $-3 < 0$, ta dùng công thức $f(x) = 2x + 1$. Do đó, $f(-3) = 2(-3) + 1 = -5$.",
+          "Với $x=0$: vì $0 \\ge 0$, ta dùng công thức $f(x) = x^2 + 1$. Do đó, $f(0) = 0^2 + 1 = 1$.",
           "b) Hàm số được định nghĩa trên hai khoảng $(-\\infty, 0)$ và $[0, +\\infty)$, hợp của hai khoảng này là toàn bộ trục số $\\mathbb{R}$. Vậy tập xác định của hàm số là $D = \\mathbb{R}$.",
           "c) Ta cần giải phương trình $f(x) = 5$. Ta xét hai trường hợp:",
-          "- TH1: $x \\ge 0$. Ta có $x^2 + 1 = 5 \\Leftrightarrow x^2 = 4 \\Leftrightarrow x = 2$ (nhận vì $2 \\ge 0$) hoặc $x = -2$ (loại vì $-2 < 0$).",
-          "- TH2: $x < 0$. Ta có $2x + 1 = 5 \\Leftrightarrow 2x = 4 \\Leftrightarrow x = 2$ (loại vì $2 \\not< 0$).",
+          "TH1: $x \\ge 0$. Ta có $x^2 + 1 = 5 \\Leftrightarrow x^2 = 4 \\Leftrightarrow x = 2$ (nhận vì $2 \\ge 0$) hoặc $x = -2$ (loại vì $-2 < 0$).",
+          "TH2: $x < 0$. Ta có $2x + 1 = 5 \\Leftrightarrow 2x = 4 \\Leftrightarrow x = 2$ (loại vì $2 \\not< 0$).",
           "Vậy, $y=5$ thuộc tập giá trị của hàm số và giá trị $x$ tương ứng là $x=2$."
         ]
       }
@@ -94,15 +94,15 @@
       "answer": {
         "steps": [
           "a) Ta xét các khoảng giá trị của $x$ dựa trên các nghiệm $x=2$ và $x=-2$.",
-          "- Nếu $x < -2$: $f(x) = -(x-2) - (x+2) = -x+2-x-2 = -2x$.",
-          "- Nếu $-2 \\le x < 2$: $f(x) = -(x-2) + (x+2) = -x+2+x+2 = 4$.",
-          "- Nếu $x \\ge 2$: $f(x) = (x-2) + (x+2) = 2x$.",
+          "Nếu $x < -2$: $f(x) = -(x-2) - (x+2) = -x+2-x-2 = -2x$.",
+          "Nếu $-2 \\le x < 2$: $f(x) = -(x-2) + (x+2) = -x+2+x+2 = 4$.",
+          "Nếu $x \\ge 2$: $f(x) = (x-2) + (x+2) = 2x$.",
           "Vậy, $f(x) = \\begin{cases} -2x & \\text{khi } x < -2 \\\\ 4 & \\text{khi } -2 \\le x < 2 \\\\ 2x & \\text{khi } x \\ge 2 \\end{cases}$.",
           "b) Tập xác định $D = \\mathbb{R}$ là tập đối xứng. Ta có $f(-x) = |-x-2| + |-x+2| = |-(x+2)| + |-(x-2)| = |x+2| + |x-2| = f(x)$. Vậy $f(x)$ là hàm số chẵn.",
           "c) Từ công thức ghép ở câu a, ta thấy:",
-          "- Khi $x < -2$, $f(x) = -2x > -2(-2) = 4$.",
-          "- Khi $-2 \\le x < 2$, $f(x) = 4$.",
-          "- Khi $x \\ge 2$, $f(x) = 2x \\ge 2(2) = 4$.",
+          "Khi $x < -2$, $f(x) = -2x > -2(-2) = 4$.",
+          "Khi $-2 \\le x < 2$, $f(x) = 4$.",
+          "Khi $x \\ge 2$, $f(x) = 2x \\ge 2(2) = 4$.",
           "Kết hợp cả ba trường hợp, ta thấy giá trị của hàm số luôn lớn hơn hoặc bằng 4. Vậy giá trị nhỏ nhất của hàm số là 4, đạt được khi $-2 \\le x \\le 2$."
         ]
       }
@@ -436,11 +436,11 @@
       "answer": {
         "steps": [
           "a) Ta tính lần lượt các số hạng đầu:",
-          "- $a_1 = 3$",
-          "- $a_2 = a_1 + 2 = 3 + 2 = 5$",
-          "- $a_3 = a_2 + 2 = 5 + 2 = 7$",
-          "- $a_4 = a_3 + 2 = 7 + 2 = 9$",
-          "- $a_5 = a_4 + 2 = 9 + 2 = 11$",
+          "$a_1 = 3$",
+          "$a_2 = a_1 + 2 = 3 + 2 = 5$",
+          "$a_3 = a_2 + 2 = 5 + 2 = 7$",
+          "$a_4 = a_3 + 2 = 7 + 2 = 9$",
+          "$a_5 = a_4 + 2 = 9 + 2 = 11$",
           "5 số hạng đầu là: 3, 5, 7, 9, 11.",
           "b) Đây là một cấp số cộng với số hạng đầu $a_1=3$ và công sai $d=2$. Công thức tổng quát của cấp số cộng là $a_n = a_1 + (n-1)d$.",
           "Vậy, $a_n = 3 + (n-1)2 = 3 + 2n - 2 = 2n + 1$.",
@@ -747,8 +747,8 @@
           "$x_1 = (1+1)(0)=0$, $x_2 = (1+0)(1/2)=1/2$, $x_3 = (1-1)(2/3)=0$, $x_4 = (1+0)(3/4)=3/4$,",
           "$x_5 = (1+1)(4/5)=8/5$, $x_6 = (1+0)(5/6)=5/6$, $x_7 = (1-1)(6/7)=0$, $x_8 = (1+0)(7/8)=7/8$.",
           "b) Ta xét các dãy con tương ứng với chu kỳ của sin:",
-          "- Dãy con $n=4k-1$ (lẻ, sin=-1) và $n=2k-1$ (lẻ, sin=+-1): $x_{2k-1}$ có thể là 0 hoặc khác 0. $x_{4k-1} = (1-1)... = 0$. $x_{4k-3} = (1+1)(1-\\frac{1}{4k-3}) \\to 2(1)=2$.",
-          "- Dãy con $n=2k$ (chẵn, sin=0): $x_{2k} = (1+0)\\frac{2k-1}{2k} = 1-\\frac{1}{2k} \\to 1$.",
+          "Dãy con $n=4k-1$ (lẻ, sin=-1) và $n=2k-1$ (lẻ, sin=+-1): $x_{2k-1}$ có thể là 0 hoặc khác 0. $x_{4k-1} = (1-1)... = 0$. $x_{4k-3} = (1+1)(1-\\frac{1}{4k-3}) \\to 2(1)=2$.",
+          "Dãy con $n=2k$ (chẵn, sin=0): $x_{2k} = (1+0)\\frac{2k-1}{2k} = 1-\\frac{1}{2k} \\to 1$.",
           "Các điểm tụ là giới hạn của các dãy con hội tụ: 0, 1, và 2.",
           "c) $\\limsup x_n$ là điểm tụ lớn nhất, vậy $\\limsup x_n = 2$.",
           "$\\liminf x_n$ là điểm tụ nhỏ nhất, vậy $\\liminf x_n = 0$.",
@@ -1023,9 +1023,9 @@
       "answer": {
         "steps": [
           "a) Khi $u \\to 0$, ta có các VCB tương đương sau:",
-          "- $e^u - 1 \\sim u$. Với $u=2x$, ta có $e^{2x}-1 \\sim 2x$.",
-          "- $\\sin(u) \\sim u$. Với $u=3x$, ta có $\\sin(3x) \\sim 3x$.",
-          "- $\\ln(1+u) \\sim u$. Với $u=x^2$, ta có $\\ln(1+x^2) \\sim x^2$.",
+          "$e^u - 1 \\sim u$. Với $u=2x$, ta có $e^{2x}-1 \\sim 2x$.",
+          "$\\sin(u) \\sim u$. Với $u=3x$, ta có $\\sin(3x) \\sim 3x$.",
+          "$\\ln(1+u) \\sim u$. Với $u=x^2$, ta có $\\ln(1+x^2) \\sim x^2$.",
           "b) Thay thế các biểu thức trong giới hạn bằng các VCB tương đương:",
           "$L = \\lim_{x \\to 0} \\frac{2x \\cdot 3x}{x^2}$.",
           "c) Rút gọn biểu thức:",
@@ -1125,8 +1125,8 @@
           "$L = \\lim_{x \\to 0} (\\frac{1 - \\cos(x)}{x^2} + \\frac{\\cos(x)(1 - \\cos(2x))}{x^2})$.",
           "$L = \\lim_{x \\to 0} \\frac{1 - \\cos(x)}{x^2} + \\lim_{x \\to 0} (\\cos(x) \\cdot \\frac{1 - \\cos(2x)}{x^2})$.",
           "c) Tính từng giới hạn:",
-          "- Giới hạn thứ nhất: $\\lim_{x \\to 0} \\frac{1 - \\cos(x)}{x^2}$. Sử dụng VCB $1-\\cos(x) \\sim \\frac{x^2}{2}$, giới hạn này bằng $\\lim_{x \\to 0} \\frac{x^2/2}{x^2} = \\frac{1}{2}$.",
-          "- Giới hạn thứ hai: $\\lim_{x \\to 0} (\\cos(x) \\cdot \\frac{1 - \\cos(2x)}{x^2})$. Ta có $\\lim \\cos(x) = 1$. Với phần còn lại, dùng VCB $1-\\cos(2x) \\sim \\frac{(2x)^2}{2} = 2x^2$. Giới hạn của phần này là $\\lim \\frac{2x^2}{x^2} = 2$. Vậy giới hạn thứ hai bằng $1 \\cdot 2 = 2$.",
+          "Giới hạn thứ nhất: $\\lim_{x \\to 0} \\frac{1 - \\cos(x)}{x^2}$. Sử dụng VCB $1-\\cos(x) \\sim \\frac{x^2}{2}$, giới hạn này bằng $\\lim_{x \\to 0} \\frac{x^2/2}{x^2} = \\frac{1}{2}$.",
+          "Giới hạn thứ hai: $\\lim_{x \\to 0} (\\cos(x) \\cdot \\frac{1 - \\cos(2x)}{x^2})$. Ta có $\\lim \\cos(x) = 1$. Với phần còn lại, dùng VCB $1-\\cos(2x) \\sim \\frac{(2x)^2}{2} = 2x^2$. Giới hạn của phần này là $\\lim \\frac{2x^2}{x^2} = 2$. Vậy giới hạn thứ hai bằng $1 \\cdot 2 = 2$.",
           "Kết quả cuối cùng: $L = \\frac{1}{2} + 2 = \\frac{5}{2}$."
         ]
       }
@@ -1152,8 +1152,8 @@
         "steps": [
           "a) Ta thêm bớt 1 vào tử số: $L = \\lim_{x \\to 0} \\frac{(e^{ax}-1) - (\\cos(bx)-1)}{x} = \\lim_{x \\to 0} (\\frac{e^{ax}-1}{x} - \\frac{\\cos(bx)-1}{x})$.",
           "b) Theo định nghĩa đạo hàm, $f'(x_0) = \\lim_{h \\to 0} \\frac{f(x_0+h)-f(x_0)}{h}$.",
-          "- Phần thứ nhất, $\\lim_{x \\to 0} \\frac{e^{ax}-1}{x}$, có thể được viết là $\\lim_{x \\to 0} \\frac{e^{ax}-e^{a \\cdot 0}}{x-0}$. Đây chính là định nghĩa đạo hàm của hàm số $f(x)=e^{ax}$ tại $x_0=0$.",
-          "- Phần thứ hai, $\\lim_{x \\to 0} \\frac{\\cos(bx)-1}{x}$, có thể được viết là $\\lim_{x \\to 0} \\frac{\\cos(bx)-\\cos(b \\cdot 0)}{x-0}$. Đây chính là định nghĩa đạo hàm của hàm số $g(x)=\\cos(bx)$ tại $x_0=0$.",
+          "Phần thứ nhất, $\\lim_{x \\to 0} \\frac{e^{ax}-1}{x}$, có thể được viết là $\\lim_{x \\to 0} \\frac{e^{ax}-e^{a \\cdot 0}}{x-0}$. Đây chính là định nghĩa đạo hàm của hàm số $f(x)=e^{ax}$ tại $x_0=0$.",
+          "Phần thứ hai, $\\lim_{x \\to 0} \\frac{\\cos(bx)-1}{x}$, có thể được viết là $\\lim_{x \\to 0} \\frac{\\cos(bx)-\\cos(b \\cdot 0)}{x-0}$. Đây chính là định nghĩa đạo hàm của hàm số $g(x)=\\cos(bx)$ tại $x_0=0$.",
           "c) Ta tính các đạo hàm: $f'(x) = a e^{ax}$, do đó $f'(0) = a e^0 = a$.",
           "$g'(x) = -b \\sin(bx)$, do đó $g'(0) = -b \\sin(0) = 0$.",
           "Vậy, giới hạn ban đầu là $L = f'(0) - g'(0) = a - 0 = a$."
@@ -1405,9 +1405,9 @@
       "answer": {
         "steps": [
           "a) Ta tìm bậc của từng VCB:",
-          "- $\\alpha(x) = x^3$: Dễ thấy $\\alpha(x)$ có bậc 3.",
-          "- $\\beta(x) = 1-\\cos(x)$: Ta có $1-\\cos(x) \\sim \\frac{x^2}{2}$. Vậy $\\beta(x)$ có bậc 2.",
-          "- $\\gamma(x) = \\tan(x)$: Ta có $\\tan(x) \\sim x$. Vậy $\\gamma(x)$ có bậc 1.",
+          "$\\alpha(x) = x^3$: Dễ thấy $\\alpha(x)$ có bậc 3.",
+          "$\\beta(x) = 1-\\cos(x)$: Ta có $1-\\cos(x) \\sim \\frac{x^2}{2}$. Vậy $\\beta(x)$ có bậc 2.",
+          "$\\gamma(x) = \\tan(x)$: Ta có $\\tan(x) \\sim x$. Vậy $\\gamma(x)$ có bậc 1.",
           "b) So sánh các bậc: Bậc của $\\gamma(x)$ là 1. Bậc của $\\beta(x)$ là 2. Bậc của $\\alpha(x)$ là 3.",
           "Ta có $1 < 2 < 3$.",
           "c) Bậc tăng dần có nghĩa là VCB tiến về 0 chậm nhất đến nhanh nhất.",

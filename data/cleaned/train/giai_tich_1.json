@@ -352,8 +352,8 @@
           "$h(x) = f(\\frac{1}{x}) = \\frac{1/x}{(1/x) + 1} = \\frac{1/x}{(1+x)/x}$.",
           "Rút gọn biểu thức: $h(x) = \\frac{1}{x} \\cdot \\frac{x}{1+x} = \\frac{1}{1+x}$.",
           "b) Để $h(x)$ xác định, cần hai điều kiện: ",
-          "1. $x$ phải thuộc tập xác định của $g(x)$, tức là $x \\neq 0$.",
-          "2. $g(x)$ phải thuộc tập xác định của $f(x)$, tức là $g(x) \\neq -1 \\implies \\frac{1}{x} \\neq -1 \\implies x \\neq -1$.",
+          "$x$ phải thuộc tập xác định của $g(x)$, tức là $x \\neq 0$.",
+          "$g(x)$ phải thuộc tập xác định của $f(x)$, tức là $g(x) \\neq -1 \\implies \\frac{1}{x} \\neq -1 \\implies x \\neq -1$.",
           "Kết hợp lại, tập xác định của $h(x)$ là $D_h = R \\setminus \\{-1, 0\\}$.",
           "c) Ta tính $h(2)$ bằng cách thay $x=2$ vào công thức rút gọn:",
           "$h(2) = \\frac{1}{1+2} = \\frac{1}{3}$."
@@ -466,13 +466,13 @@
         "steps": [
           "a) $h(x) = f(g(x)) = f(\\sqrt{x+1}) = \\frac{1}{\\sqrt{x+1} - 2}$.",
           "b) Để $h(x)$ xác định, cần hai điều kiện:",
-          "1. $x$ phải thuộc TXĐ của $g(x)$, tức là $x+1 \\ge 0 \\implies x \\ge -1$.",
-          "2. $g(x)$ phải thuộc TXĐ của $f(x)$, tức là $g(x) \\neq 2 \\implies \\sqrt{x+1} \\neq 2 \\implies x+1 \\neq 4 \\implies x \\neq 3$.",
+          "$x$ phải thuộc TXĐ của $g(x)$, tức là $x+1 \\ge 0 \\implies x \\ge -1$.",
+          "$g(x)$ phải thuộc TXĐ của $f(x)$, tức là $g(x) \\neq 2 \\implies \\sqrt{x+1} \\neq 2 \\implies x+1 \\neq 4 \\implies x \\neq 3$.",
           "Kết hợp lại, tập xác định của $h(x)$ là $D_h = [-1, 3) \\cup (3, +\\infty)$.",
           "c) $k(x) = g(f(x)) = g(\\frac{1}{x-2}) = \\sqrt{\\frac{1}{x-2} + 1} = \\sqrt{\\frac{1 + x-2}{x-2}} = \\sqrt{\\frac{x-1}{x-2}}$.",
           "Để $k(x)$ xác định, cần hai điều kiện:",
-          "1. $x$ phải thuộc TXĐ của $f(x)$, tức là $x \\neq 2$.",
-          "2. Biểu thức dưới dấu căn phải không âm: $\\frac{x-1}{x-2} \\ge 0$.",
+          "$x$ phải thuộc TXĐ của $f(x)$, tức là $x \\neq 2$.",
+          "Biểu thức dưới dấu căn phải không âm: $\\frac{x-1}{x-2} \\ge 0$.",
           "Lập bảng xét dấu, ta được $x \\in (-\\infty, 1] \\cup (2, +\\infty)$. Kết hợp với $x\\neq 2$, ta có tập xác định $D_k = (-\\infty, 1] \\cup (2, +\\infty)$."
         ]
       }
@@ -3978,7 +3978,7 @@
         "steps": [
           "a) Hàm số là phân thức hữu tỷ, xác định khi mẫu số khác 0. $x-3 \\neq 0 \\Leftrightarrow x \\neq 3$. Tập xác định là $D = \\mathbb{R} \\setminus \\{3\\}$.",
           "b) Để xét tính liên tục tại $x=3$, ta kiểm tra 3 điều kiện:",
-          "1. $f(3)$ không xác định (mẫu bằng 0).",
+          "$f(3)$ không xác định (mẫu bằng 0).",
           "Điều kiện đầu tiên đã không thỏa mãn, vậy hàm số không liên tục tại $x=3$. Ta nói hàm số gián đoạn tại $x=3$.",
           "c) Ta xét giới hạn: $\\lim_{x \\to 3^+} \\frac{x+2}{x-3} = +\\infty$. Vì giới hạn là vô cùng, đây là điểm gián đoạn loại 2."
         ]
@@ -5747,8 +5747,8 @@
           "$g(a) = f(a) - a$. Vì $f$ ánh xạ từ $[a, b]$ vào $[a, b]$, ta có $f(a) \\in [a, b]$, nghĩa là $f(a) \\ge a$. Do đó, $g(a) = f(a) - a \\ge 0$.",
           "$g(b) = f(b) - b$. Tương tự, vì $f(b) \\in [a, b]$, ta có $f(b) \\le b$. Do đó, $g(b) = f(b) - b \\le 0$.",
           "Bây giờ ta có hai khả năng:",
-          "1. Nếu $g(a) = 0$ hoặc $g(b) = 0$, thì $f(a)=a$ hoặc $f(b)=b$. Khi đó $c=a$ hoặc $c=b$ là điểm bất động.",
-          "2. Nếu $g(a) > 0$ và $g(b) < 0$, thì $g(a) \\cdot g(b) < 0$.",
+          "Nếu $g(a) = 0$ hoặc $g(b) = 0$, thì $f(a)=a$ hoặc $f(b)=b$. Khi đó $c=a$ hoặc $c=b$ là điểm bất động.",
+          "Nếu $g(a) > 0$ và $g(b) < 0$, thì $g(a) \\cdot g(b) < 0$.",
           "Vì $g(x)$ liên tục trên $[a, b]$ và $g(a), g(b)$ trái dấu, theo IVT, tồn tại một điểm $c \\in (a, b)$ sao cho $g(c) = 0$.",
           "Điều này có nghĩa là $f(c) - c = 0$, hay $f(c) = c$.",
           "Kết luận: Trong mọi trường hợp, luôn tồn tại $c \\in [a, b]$ sao cho $f(c) = c$."
@@ -5887,11 +5887,11 @@
           "$f(x) = \\max\\{g(x), h(x)\\} = \\frac{g(x) + h(x) + |g(x) - h(x)|}{2}$.",
           "b) Ta sẽ sử dụng các tính chất của hàm liên tục để chứng minh $f(x)$ liên tục.",
           "Cho $g(x)$ và $h(x)$ là hai hàm liên tục trên $\\mathbb{R}$.",
-          "1. Tổng của hai hàm liên tục là một hàm liên tục: $g(x) + h(x)$ liên tục trên $\\mathbb{R}$.",
-          "2. Hiệu của hai hàm liên tục là một hàm liên tục: $g(x) - h(x)$ liên tục trên $\\mathbb{R}$.",
-          "3. Nếu $u(x)$ là hàm liên tục, thì $|u(x)|$ cũng là hàm liên tục. Do đó, $|g(x) - h(x)|$ liên tục trên $\\mathbb{R}$.",
-          "4. Cộng hàm liên tục $g(x)+h(x)$ với hàm liên tục $|g(x)-h(x)|$, ta được hàm $g(x) + h(x) + |g(x) - h(x)|$ cũng liên tục trên $\\mathbb{R}$.",
-          "5. Nhân một hàm liên tục với một hằng số (ở đây là $\\frac{1}{2}$) ta được một hàm liên tục.",
+          "Tổng của hai hàm liên tục là một hàm liên tục: $g(x) + h(x)$ liên tục trên $\\mathbb{R}$.",
+          "Hiệu của hai hàm liên tục là một hàm liên tục: $g(x) - h(x)$ liên tục trên $\\mathbb{R}$.",
+          "Nếu $u(x)$ là hàm liên tục, thì $|u(x)|$ cũng là hàm liên tục. Do đó, $|g(x) - h(x)|$ liên tục trên $\\mathbb{R}$.",
+          "Cộng hàm liên tục $g(x)+h(x)$ với hàm liên tục $|g(x)-h(x)|$, ta được hàm $g(x) + h(x) + |g(x) - h(x)|$ cũng liên tục trên $\\mathbb{R}$.",
+          "Nhân một hàm liên tục với một hằng số (ở đây là $\\frac{1}{2}$) ta được một hàm liên tục.",
           "Từ các bước trên, ta kết luận rằng $f(x) = \\frac{g(x) + h(x) + |g(x) - h(x)|}{2}$ là một hàm số liên tục trên $\\mathbb{R}$."
         ]
       }
@@ -7934,10 +7934,10 @@
       "answer": {
         "steps": [
           "a) Kiểm tra các điều kiện của định lý Rolle:",
-          "- Hàm $f(x)$ là một đa thức nên nó liên tục trên $[1, 5]$.",
-          "- Hàm $f(x)$ có đạo hàm $f'(x) = 2x - 6$, xác định với mọi $x$, nên nó khả vi trên $(1, 5)$.",
-          "- Tính giá trị tại hai đầu mút: $f(1) = 1^2 - 6(1) + 5 = 0$ và $f(5) = 5^2 - 6(5) + 5 = 25 - 30 + 5 = 0$.",
-          "- Vì $f(1) = f(5) = 0$, hàm số thỏa mãn tất cả các điều kiện của định lý Rolle.",
+          "Hàm $f(x)$ là một đa thức nên nó liên tục trên $[1, 5]$.",
+          "Hàm $f(x)$ có đạo hàm $f'(x) = 2x - 6$, xác định với mọi $x$, nên nó khả vi trên $(1, 5)$.",
+          "Tính giá trị tại hai đầu mút: $f(1) = 1^2 - 6(1) + 5 = 0$ và $f(5) = 5^2 - 6(5) + 5 = 25 - 30 + 5 = 0$.",
+          "Vì $f(1) = f(5) = 0$, hàm số thỏa mãn tất cả các điều kiện của định lý Rolle.",
           "b) Tìm giá trị $c$: Theo định lý Rolle, tồn tại $c \\in (1, 5)$ sao cho $f'(c) = 0$.",
           "Ta có $f'(x) = 2x - 6$. Cho $f'(c) = 0 \\Leftrightarrow 2c - 6 = 0 \\Leftrightarrow c = 3$.",
           "Giá trị $c=3$ nằm trong khoảng $(1, 5)$. Vậy $c = 3$ là giá trị cần tìm."
@@ -7949,14 +7949,14 @@
       "answer": {
         "steps": [
           "a) Để áp dụng định lý Rolle, ba điều kiện phải được thỏa mãn: liên tục trên $[-2, 2]$, khả vi trên $(-2, 2)$, và $g(-2) = g(2)$.",
-          "- Hàm $g(x)$ là đa thức nên liên tục và khả vi trên $\\mathbb{R}$.",
-          "- Tính giá trị tại hai đầu mút: $g(-2) = (-2)^3 - 3(-2) = -8 + 6 = -2$.",
-          "- $g(2) = 2^3 - 3(2) = 8 - 6 = 2$.",
-          "- Vì $g(-2) \\neq g(2)$, điều kiện thứ ba của định lý Rolle không được thỏa mãn. Do đó, không thể áp dụng định lý Rolle.",
+          "Hàm $g(x)$ là đa thức nên liên tục và khả vi trên $\\mathbb{R}$.",
+          "Tính giá trị tại hai đầu mút: $g(-2) = (-2)^3 - 3(-2) = -8 + 6 = -2$.",
+          "$g(2) = 2^3 - 3(2) = 8 - 6 = 2$.",
+          "Vì $g(-2) \\neq g(2)$, điều kiện thứ ba của định lý Rolle không được thỏa mãn. Do đó, không thể áp dụng định lý Rolle.",
           "b) Tìm các điểm $c$ sao cho $g'(c) = 0$.",
-          "- Tính đạo hàm: $g'(x) = 3x^2 - 3$.",
-          "- Giải phương trình $g'(c) = 0 \\Leftrightarrow 3c^2 - 3 = 0 \\Leftrightarrow c^2 = 1 \\Leftrightarrow c = 1$ hoặc $c = -1$.",
-          "- Cả hai giá trị $c=1$ và $c=-1$ đều thuộc khoảng $(-2, 2)$."
+          "Tính đạo hàm: $g'(x) = 3x^2 - 3$.",
+          "Giải phương trình $g'(c) = 0 \\Leftrightarrow 3c^2 - 3 = 0 \\Leftrightarrow c^2 = 1 \\Leftrightarrow c = 1$ hoặc $c = -1$.",
+          "Cả hai giá trị $c=1$ và $c=-1$ đều thuộc khoảng $(-2, 2)$."
         ]
       }
     },
@@ -7965,15 +7965,15 @@
       "answer": {
         "steps": [
           "a) Kiểm tra điều kiện định lý Lagrange:",
-          "- Hàm $h(x) = \\sqrt{x} + 2$ liên tục trên $[1, 9]$ vì nó xác định và liên tục cho mọi $x \\ge 0$.",
-          "- Đạo hàm $h'(x) = \\frac{1}{2\\sqrt{x}}$ xác định và hữu hạn với mọi $x > 0$, do đó hàm số khả vi trên $(1, 9)$.",
-          "- Vậy, hàm số thỏa mãn các điều kiện của định lý Lagrange.",
+          "Hàm $h(x) = \\sqrt{x} + 2$ liên tục trên $[1, 9]$ vì nó xác định và liên tục cho mọi $x \\ge 0$.",
+          "Đạo hàm $h'(x) = \\frac{1}{2\\sqrt{x}}$ xác định và hữu hạn với mọi $x > 0$, do đó hàm số khả vi trên $(1, 9)$.",
+          "Vậy, hàm số thỏa mãn các điều kiện của định lý Lagrange.",
           "b) Tìm điểm $c$: Theo định lý Lagrange, tồn tại $c \\in (1, 9)$ sao cho $h'(c) = \\frac{h(9) - h(1)}{9 - 1}$.",
-          "- Ta có $h(9) = \\sqrt{9} + 2 = 3 + 2 = 5$ và $h(1) = \\sqrt{1} + 2 = 1 + 2 = 3$.",
-          "- Vế phải: $\\frac{5 - 3}{9 - 1} = \\frac{2}{8} = \\frac{1}{4}$.",
-          "- Vế trái: $h'(c) = \\frac{1}{2\\sqrt{c}}$.",
-          "- Giải phương trình $\\frac{1}{2\\sqrt{c}} = \\frac{1}{4} \\Leftrightarrow 2\\sqrt{c} = 4 \\Leftrightarrow \\sqrt{c} = 2 \\Leftrightarrow c = 4$.",
-          "- Giá trị $c=4$ thuộc khoảng $(1, 9)$. Vậy $c=4$ là giá trị cần tìm."
+          "Ta có $h(9) = \\sqrt{9} + 2 = 3 + 2 = 5$ và $h(1) = \\sqrt{1} + 2 = 1 + 2 = 3$.",
+          "Vế phải: $\\frac{5 - 3}{9 - 1} = \\frac{2}{8} = \\frac{1}{4}$.",
+          "Vế trái: $h'(c) = \\frac{1}{2\\sqrt{c}}$.",
+          "Giải phương trình $\\frac{1}{2\\sqrt{c}} = \\frac{1}{4} \\Leftrightarrow 2\\sqrt{c} = 4 \\Leftrightarrow \\sqrt{c} = 2 \\Leftrightarrow c = 4$.",
+          "Giá trị $c=4$ thuộc khoảng $(1, 9)$. Vậy $c=4$ là giá trị cần tìm."
         ]
       }
     },
@@ -8000,13 +8000,13 @@
       "answer": {
         "steps": [
           "a) Xét $L_1 = \\lim_{x \\to 0} \\frac{e^x - 1}{\\sin(x)}$.",
-          "- Khi $x \\to 0$, tử số $e^0 - 1 = 0$ và mẫu số $\\sin(0) = 0$. Đây là dạng vô định $\\frac{0}{0}$.",
-          "- Áp dụng quy tắc L'Hôpital: $L_1 = \\lim_{x \\to 0} \\frac{(e^x - 1)'}{(\\sin(x))'} = \\lim_{x \\to 0} \\frac{e^x}{\\cos(x)}$.",
-          "- Thay $x=0$ vào biểu thức: $\\frac{e^0}{\\cos(0)} = \\frac{1}{1} = 1$. Vậy $L_1 = 1$.",
+          "Khi $x \\to 0$, tử số $e^0 - 1 = 0$ và mẫu số $\\sin(0) = 0$. Đây là dạng vô định $\\frac{0}{0}$.",
+          "Áp dụng quy tắc L'Hôpital: $L_1 = \\lim_{x \\to 0} \\frac{(e^x - 1)'}{(\\sin(x))'} = \\lim_{x \\to 0} \\frac{e^x}{\\cos(x)}$.",
+          "Thay $x=0$ vào biểu thức: $\\frac{e^0}{\\cos(0)} = \\frac{1}{1} = 1$. Vậy $L_1 = 1$.",
           "b) Xét $L_2 = \\lim_{x \\to 1} \\frac{x^3 - 1}{x - 1}$.",
-          "- Khi $x \\to 1$, tử số $1^3 - 1 = 0$ và mẫu số $1 - 1 = 0$. Đây là dạng vô định $\\frac{0}{0}$.",
-          "- Áp dụng quy tắc L'Hôpital: $L_2 = \\lim_{x \\to 1} \\frac{(x^3 - 1)'}{(x - 1)'} = \\lim_{x \\to 1} \\frac{3x^2}{1}$.",
-          "- Thay $x=1$ vào biểu thức: $\\frac{3(1)^2}{1} = 3$. Vậy $L_2 = 3$."
+          "Khi $x \\to 1$, tử số $1^3 - 1 = 0$ và mẫu số $1 - 1 = 0$. Đây là dạng vô định $\\frac{0}{0}$.",
+          "Áp dụng quy tắc L'Hôpital: $L_2 = \\lim_{x \\to 1} \\frac{(x^3 - 1)'}{(x - 1)'} = \\lim_{x \\to 1} \\frac{3x^2}{1}$.",
+          "Thay $x=1$ vào biểu thức: $\\frac{3(1)^2}{1} = 3$. Vậy $L_2 = 3$."
         ]
       }
     },
@@ -8015,11 +8015,11 @@
       "answer": {
         "steps": [
           "Xét $L = \\lim_{x \\to +\\infty} \\frac{\\ln(x)}{x}$.",
-          "- Khi $x \\to +\\infty$, tử số $\\ln(x) \\to +\\infty$ và mẫu số $x \\to +\\infty$. Đây là dạng vô định $\\frac{\\infty}{\\infty}$.",
-          "- Áp dụng quy tắc L'Hôpital:",
+          "Khi $x \\to +\\infty$, tử số $\\ln(x) \\to +\\infty$ và mẫu số $x \\to +\\infty$. Đây là dạng vô định $\\frac{\\infty}{\\infty}$.",
+          "Áp dụng quy tắc L'Hôpital:",
           "$L = \\lim_{x \\to +\\infty} \\frac{(\\ln(x))'}{(x)'} = \\lim_{x \\to +\\infty} \\frac{1/x}{1} = \\lim_{x \\to +\\infty} \\frac{1}{x}$.",
-          "- Khi $x \\to +\\infty$, thì $\\frac{1}{x} \\to 0$.",
-          "- Vậy, $L=0$."
+          "Khi $x \\to +\\infty$, thì $\\frac{1}{x} \\to 0$.",
+          "Vậy, $L=0$."
         ]
       }
     },
@@ -8028,13 +8028,13 @@
       "answer": {
         "steps": [
           "a) Tìm khai triển Maclaurin của $f(x) = \\cos(x)$. Ta cần tính các đạo hàm tại $x=0$.",
-          "- $f(x) = \\cos(x) \\Rightarrow f(0) = 1$.",
-          "- $f'(x) = -\\sin(x) \\Rightarrow f'(0) = 0$.",
-          "- $f''(x) = -\\cos(x) \\Rightarrow f''(0) = -1$.",
-          "- $f'''(x) = \\sin(x) \\Rightarrow f'''(0) = 0$.",
-          "- $f^{(4)}(x) = \\cos(x) \\Rightarrow f^{(4)}(0) = 1$.",
-          "- Công thức khai triển Maclaurin đến bậc 4: $f(x) \\approx f(0) + f'(0)x + \\frac{f''(0)}{2!}x^2 + \\frac{f'''(0)}{3!}x^3 + \\frac{f^{(4)}(0)}{4!}x^4$.",
-          "- Thay số: $\\cos(x) \\approx 1 + 0 \\cdot x + \\frac{-1}{2}x^2 + 0 \\cdot x^3 + \\frac{1}{24}x^4 = 1 - \\frac{x^2}{2} + \\frac{x^4}{24}$.",
+          "$f(x) = \\cos(x) \\Rightarrow f(0) = 1$.",
+          "$f'(x) = -\\sin(x) \\Rightarrow f'(0) = 0$.",
+          "$f''(x) = -\\cos(x) \\Rightarrow f''(0) = -1$.",
+          "$f'''(x) = \\sin(x) \\Rightarrow f'''(0) = 0$.",
+          "$f^{(4)}(x) = \\cos(x) \\Rightarrow f^{(4)}(0) = 1$.",
+          "Công thức khai triển Maclaurin đến bậc 4: $f(x) \\approx f(0) + f'(0)x + \\frac{f''(0)}{2!}x^2 + \\frac{f'''(0)}{3!}x^3 + \\frac{f^{(4)}(0)}{4!}x^4$.",
+          "Thay số: $\\cos(x) \\approx 1 + 0 \\cdot x + \\frac{-1}{2}x^2 + 0 \\cdot x^3 + \\frac{1}{24}x^4 = 1 - \\frac{x^2}{2} + \\frac{x^4}{24}$.",
           "b) Xấp xỉ giá trị $\\cos(0.1)$ bằng cách thay $x=0.1$ vào khai triển:",
           "$\\cos(0.1) \\approx 1 - \\frac{(0.1)^2}{2} + \\frac{(0.1)^4}{24} = 1 - \\frac{0.01}{2} + \\frac{0.0001}{24}$.",
           "$\\cos(0.1) \\approx 1 - 0.005 + 0.00000416... \\approx 0.99500417$."
@@ -8046,13 +8046,13 @@
       "answer": {
         "steps": [
           "Tìm khai triển Taylor của $f(x) = x^{-1}$ tại $x_0 = 1$ đến bậc 2. Ta cần tính các đạo hàm tại $x=1$.",
-          "- $f(x) = x^{-1} \\Rightarrow f(1) = 1$.",
-          "- $f'(x) = -x^{-2} = -\\frac{1}{x^2} \\Rightarrow f'(1) = -1$.",
-          "- $f''(x) = 2x^{-3} = \\frac{2}{x^3} \\Rightarrow f''(1) = 2$.",
-          "- Công thức khai triển Taylor bậc 2 tại $x_0=1$: $P_2(x) = f(1) + f'(1)(x-1) + \\frac{f''(1)}{2!}(x-1)^2$.",
-          "- Thay số: $P_2(x) = 1 + (-1)(x-1) + \\frac{2}{2}(x-1)^2 = 1 - (x-1) + (x-1)^2$.",
-          "- Khai triển đa thức (tùy chọn): $1 - x + 1 + x^2 - 2x + 1 = x^2 - 3x + 3$.",
-          "- Vậy khai triển Taylor cần tìm là $1 - (x-1) + (x-1)^2$."
+          "$f(x) = x^{-1} \\Rightarrow f(1) = 1$.",
+          "$f'(x) = -x^{-2} = -\\frac{1}{x^2} \\Rightarrow f'(1) = -1$.",
+          "$f''(x) = 2x^{-3} = \\frac{2}{x^3} \\Rightarrow f''(1) = 2$.",
+          "Công thức khai triển Taylor bậc 2 tại $x_0=1$: $P_2(x) = f(1) + f'(1)(x-1) + \\frac{f''(1)}{2!}(x-1)^2$.",
+          "Thay số: $P_2(x) = 1 + (-1)(x-1) + \\frac{2}{2}(x-1)^2 = 1 - (x-1) + (x-1)^2$.",
+          "Khai triển đa thức (tùy chọn): $1 - x + 1 + x^2 - 2x + 1 = x^2 - 3x + 3$.",
+          "Vậy khai triển Taylor cần tìm là $1 - (x-1) + (x-1)^2$."
         ]
       }
     },
@@ -8062,17 +8062,17 @@
         "steps": [
           "Tập xác định của hàm số là $D = \\mathbb{R}$.",
           "a) Tìm khoảng đồng biến, nghịch biến:",
-          "- Tính đạo hàm: $y' = 3x^2 - 12x + 9$.",
-          "- Cho $y' = 0 \\Leftrightarrow 3x^2 - 12x + 9 = 0 \\Leftrightarrow x^2 - 4x + 3 = 0$.",
-          "- Phương trình có hai nghiệm $x=1$ và $x=3$.",
-          "- Lập bảng xét dấu cho $y'$:",
-          "  - Khoảng $(-\\infty, 1)$: $y' > 0$, hàm số đồng biến.",
-          "  - Khoảng $(1, 3)$: $y' < 0$, hàm số nghịch biến.",
-          "  - Khoảng $(3, +\\infty)$: $y' > 0$, hàm số đồng biến.",
+          "Tính đạo hàm: $y' = 3x^2 - 12x + 9$.",
+          "Cho $y' = 0 \\Leftrightarrow 3x^2 - 12x + 9 = 0 \\Leftrightarrow x^2 - 4x + 3 = 0$.",
+          "Phương trình có hai nghiệm $x=1$ và $x=3$.",
+          "Lập bảng xét dấu cho $y'$:",
+          "Khoảng $(-\\infty, 1)$: $y' > 0$, hàm số đồng biến.",
+          "Khoảng $(1, 3)$: $y' < 0$, hàm số nghịch biến.",
+          "Khoảng $(3, +\\infty)$: $y' > 0$, hàm số đồng biến.",
           "b) Tìm điểm cực trị:",
-          "- Tại $x=1$, $y'$ đổi dấu từ dương sang âm, nên hàm số đạt cực đại tại $x=1$. Giá trị cực đại $y(1) = 1 - 6 + 9 + 1 = 5$.",
-          "- Tại $x=3$, $y'$ đổi dấu từ âm sang dương, nên hàm số đạt cực tiểu tại $x=3$. Giá trị cực tiểu $y(3) = 3^3 - 6(3^2) + 9(3) + 1 = 27 - 54 + 27 + 1 = 1$.",
-          "- Kết luận: Điểm cực đại là $(1, 5)$, điểm cực tiểu là $(3, 1)$."
+          "Tại $x=1$, $y'$ đổi dấu từ dương sang âm, nên hàm số đạt cực đại tại $x=1$. Giá trị cực đại $y(1) = 1 - 6 + 9 + 1 = 5$.",
+          "Tại $x=3$, $y'$ đổi dấu từ âm sang dương, nên hàm số đạt cực tiểu tại $x=3$. Giá trị cực tiểu $y(3) = 3^3 - 6(3^2) + 9(3) + 1 = 27 - 54 + 27 + 1 = 1$.",
+          "Kết luận: Điểm cực đại là $(1, 5)$, điểm cực tiểu là $(3, 1)$."
         ]
       }
     },
@@ -8082,20 +8082,20 @@
         "steps": [
           "Tập xác định $D = \\mathbb{R}$.",
           "a) Tìm điểm cực trị:",
-          "- Tính đạo hàm cấp một: $f'(x) = 4x^3 - 4x = 4x(x^2 - 1)$.",
-          "- Giải $f'(x) = 0 \\Leftrightarrow 4x(x-1)(x+1) = 0 \\Leftrightarrow x=0, x=1, x=-1$. Đây là các điểm tới hạn.",
-          "- Tính đạo hàm cấp hai: $f''(x) = 12x^2 - 4$.",
-          "- Áp dụng quy tắc đạo hàm cấp hai:",
-          "  - Tại $x=0$: $f''(0) = -4 < 0$, hàm số đạt cực đại tại $x=0$. $f(0)=3$.",
-          "  - Tại $x=1$: $f''(1) = 12 - 4 = 8 > 0$, hàm số đạt cực tiểu tại $x=1$. $f(1)=2$.",
-          "  - Tại $x=-1$: $f''(-1) = 12 - 4 = 8 > 0$, hàm số đạt cực tiểu tại $x=-1$. $f(-1)=2$.",
+          "Tính đạo hàm cấp một: $f'(x) = 4x^3 - 4x = 4x(x^2 - 1)$.",
+          "Giải $f'(x) = 0 \\Leftrightarrow 4x(x-1)(x+1) = 0 \\Leftrightarrow x=0, x=1, x=-1$. Đây là các điểm tới hạn.",
+          "Tính đạo hàm cấp hai: $f''(x) = 12x^2 - 4$.",
+          "Áp dụng quy tắc đạo hàm cấp hai:",
+          "Tại $x=0$: $f''(0) = -4 < 0$, hàm số đạt cực đại tại $x=0$. $f(0)=3$.",
+          "Tại $x=1$: $f''(1) = 12 - 4 = 8 > 0$, hàm số đạt cực tiểu tại $x=1$. $f(1)=2$.",
+          "Tại $x=-1$: $f''(-1) = 12 - 4 = 8 > 0$, hàm số đạt cực tiểu tại $x=-1$. $f(-1)=2$.",
           "b) Tìm khoảng lồi, lõm và điểm uốn:",
-          "- Xét dấu $f''(x) = 12x^2 - 4$.",
-          "- Giải $f''(x) = 0 \\Leftrightarrow 12x^2 = 4 \\Leftrightarrow x^2 = \\frac{1}{3} \\Leftrightarrow x = \\pm \\frac{1}{\\sqrt{3}}$.",
-          "- Lập bảng xét dấu cho $f''$:",
-          "  - Khoảng $(-\\infty, -\\frac{1}{\\sqrt{3}})$ và $(\\frac{1}{\\sqrt{3}}, +\\infty)$: $f''(x) > 0$, đồ thị hàm số lõm (hướng lên trên).",
-          "  - Khoảng $(-\\frac{1}{\\sqrt{3}}, \\frac{1}{\\sqrt{3}})$: $f''(x) < 0$, đồ thị hàm số lồi (hướng xuống dưới).",
-          "- Vì $f''(x)$ đổi dấu khi đi qua $x = \\pm \\frac{1}{\\sqrt{3}}$, nên đồ thị có hai điểm uốn tại $x = -\\frac{1}{\\sqrt{3}}$ và $x = \\frac{1}{\\sqrt{3}}$."
+          "Xét dấu $f''(x) = 12x^2 - 4$.",
+          "Giải $f''(x) = 0 \\Leftrightarrow 12x^2 = 4 \\Leftrightarrow x^2 = \\frac{1}{3} \\Leftrightarrow x = \\pm \\frac{1}{\\sqrt{3}}$.",
+          "Lập bảng xét dấu cho $f''$:",
+          "Khoảng $(-\\infty, -\\frac{1}{\\sqrt{3}})$ và $(\\frac{1}{\\sqrt{3}}, +\\infty)$: $f''(x) > 0$, đồ thị hàm số lõm (hướng lên trên).",
+          "Khoảng $(-\\frac{1}{\\sqrt{3}}, \\frac{1}{\\sqrt{3}})$: $f''(x) < 0$, đồ thị hàm số lồi (hướng xuống dưới).",
+          "Vì $f''(x)$ đổi dấu khi đi qua $x = \\pm \\frac{1}{\\sqrt{3}}$, nên đồ thị có hai điểm uốn tại $x = -\\frac{1}{\\sqrt{3}}$ và $x = \\frac{1}{\\sqrt{3}}$."
         ]
       }
     },
@@ -8104,20 +8104,20 @@
       "answer": {
         "steps": [
           "a) Kiểm tra điều kiện định lý Rolle:",
-          "- Hàm $f(x) = \\sin(2x)$ liên tục và khả vi trên $\\mathbb{R}$, do đó nó liên tục trên $[0, \\pi]$ và khả vi trên $(0, \\pi)$.",
-          "- Tính giá trị tại hai đầu mút: $f(0) = \\sin(0) = 0$.",
-          "- $f(\\pi) = \\sin(2\\pi) = 0$.",
-          "- Vì $f(0) = f(\\pi)$, hàm số thỏa mãn các điều kiện của định lý Rolle.",
+          "Hàm $f(x) = \\sin(2x)$ liên tục và khả vi trên $\\mathbb{R}$, do đó nó liên tục trên $[0, \\pi]$ và khả vi trên $(0, \\pi)$.",
+          "Tính giá trị tại hai đầu mút: $f(0) = \\sin(0) = 0$.",
+          "$f(\\pi) = \\sin(2\\pi) = 0$.",
+          "Vì $f(0) = f(\\pi)$, hàm số thỏa mãn các điều kiện của định lý Rolle.",
           "b) Tìm điểm $c$:",
-          "- Tính đạo hàm: $f'(x) = 2\\cos(2x)$.",
-          "- Giải phương trình $f'(c) = 0 \\Leftrightarrow 2\\cos(2c) = 0 \\Leftrightarrow \\cos(2c) = 0$.",
-          "- Điều này xảy ra khi $2c = \\frac{\\pi}{2} + k\\pi$, với $k$ là số nguyên.",
-          "- Suy ra $c = \\frac{\\pi}{4} + \\frac{k\\pi}{2}$.",
-          "- Ta cần tìm $c \\in (0, \\pi)$.",
-          "  - Với $k=0$, $c = \\frac{\\pi}{4}$, thỏa mãn.",
-          "  - Với $k=1$, $c = \\frac{\\pi}{4} + \\frac{\\pi}{2} = \\frac{3\\pi}{4}$, thỏa mãn.",
-          "  - Với các giá trị $k$ khác, $c$ sẽ nằm ngoài khoảng $(0, \\pi)$.",
-          "- Vậy có hai giá trị là $c = \\frac{\\pi}{4}$ và $c = \\frac{3\\pi}{4}$."
+          "Tính đạo hàm: $f'(x) = 2\\cos(2x)$.",
+          "Giải phương trình $f'(c) = 0 \\Leftrightarrow 2\\cos(2c) = 0 \\Leftrightarrow \\cos(2c) = 0$.",
+          "Điều này xảy ra khi $2c = \\frac{\\pi}{2} + k\\pi$, với $k$ là số nguyên.",
+          "Suy ra $c = \\frac{\\pi}{4} + \\frac{k\\pi}{2}$.",
+          "Ta cần tìm $c \\in (0, \\pi)$.",
+          "Với $k=0$, $c = \\frac{\\pi}{4}$, thỏa mãn.",
+          "Với $k=1$, $c = \\frac{\\pi}{4} + \\frac{\\pi}{2} = \\frac{3\\pi}{4}$, thỏa mãn.",
+          "Với các giá trị $k$ khác, $c$ sẽ nằm ngoài khoảng $(0, \\pi)$.",
+          "Vậy có hai giá trị là $c = \\frac{\\pi}{4}$ và $c = \\frac{3\\pi}{4}$."
         ]
       }
     },
@@ -8130,13 +8130,13 @@
           "Áp dụng định lý Lagrange trên đoạn $[27, 28]$:",
           "$f(28) - f(27) = f'(c)(28 - 27)$ với $c \\in (27, 28)$.",
           "Tính các giá trị:",
-          "- $f(27) = \\sqrt[3]{27} = 3$.",
-          "- $f'(x) = \\frac{1}{3}x^{-2/3} = \\frac{1}{3\\sqrt[3]{x^2}}$.",
-          "- Ta có: $f(28) - 3 = \\frac{1}{3\\sqrt[3]{c^2}} \\cdot 1$.",
-          "- Vì $c \\in (27, 28)$, $c$ rất gần 27. Ta có thể xấp xỉ $c \\approx 27$.",
-          "- Khi đó $f'(c) \\approx f'(27) = \\frac{1}{3\\sqrt[3]{27^2}} = \\frac{1}{3 \\cdot 9} = \\frac{1}{27}$.",
-          "- Thay vào biểu thức: $f(28) - 3 \\approx \\frac{1}{27}$.",
-          "- Vậy $\\sqrt[3]{28} = f(28) \\approx 3 + \\frac{1}{27} \\approx 3.037$."
+          "$f(27) = \\sqrt[3]{27} = 3$.",
+          "$f'(x) = \\frac{1}{3}x^{-2/3} = \\frac{1}{3\\sqrt[3]{x^2}}$.",
+          "Ta có: $f(28) - 3 = \\frac{1}{3\\sqrt[3]{c^2}} \\cdot 1$.",
+          "Vì $c \\in (27, 28)$, $c$ rất gần 27. Ta có thể xấp xỉ $c \\approx 27$.",
+          "Khi đó $f'(c) \\approx f'(27) = \\frac{1}{3\\sqrt[3]{27^2}} = \\frac{1}{3 \\cdot 9} = \\frac{1}{27}$.",
+          "Thay vào biểu thức: $f(28) - 3 \\approx \\frac{1}{27}$.",
+          "Vậy $\\sqrt[3]{28} = f(28) \\approx 3 + \\frac{1}{27} \\approx 3.037$."
         ]
       }
     },
@@ -8164,21 +8164,21 @@
         "steps": [
           "Tập xác định $D = \\mathbb{R}$.",
           "a) Tính đơn điệu:",
-          "- Đạo hàm: $f'(x) = 1 \\cdot e^x + x \\cdot e^x = e^x(1+x)$.",
-          "- Vì $e^x > 0$ với mọi $x$, dấu của $f'(x)$ phụ thuộc vào dấu của $(1+x)$.",
-          "- $f'(x) = 0 \\Leftrightarrow 1+x = 0 \\Leftrightarrow x = -1$.",
-          "- Nếu $x > -1$, $f'(x) > 0$, hàm số đồng biến trên $(-1, +\\infty)$.",
-          "- Nếu $x < -1$, $f'(x) < 0$, hàm số nghịch biến trên $(-\\infty, -1)$.",
+          "Đạo hàm: $f'(x) = 1 \\cdot e^x + x \\cdot e^x = e^x(1+x)$.",
+          "Vì $e^x > 0$ với mọi $x$, dấu của $f'(x)$ phụ thuộc vào dấu của $(1+x)$.",
+          "$f'(x) = 0 \\Leftrightarrow 1+x = 0 \\Leftrightarrow x = -1$.",
+          "Nếu $x > -1$, $f'(x) > 0$, hàm số đồng biến trên $(-1, +\\infty)$.",
+          "Nếu $x < -1$, $f'(x) < 0$, hàm số nghịch biến trên $(-\\infty, -1)$.",
           "b) Cực trị:",
-          "- Tại $x=-1$, $f'(x)$ đổi dấu từ âm sang dương, nên hàm số đạt cực tiểu tại $x=-1$.",
-          "- Giá trị cực tiểu: $f(-1) = (-1)e^{-1} = -\\frac{1}{e}$. Điểm cực tiểu là $(-1, -1/e)$.",
+          "Tại $x=-1$, $f'(x)$ đổi dấu từ âm sang dương, nên hàm số đạt cực tiểu tại $x=-1$.",
+          "Giá trị cực tiểu: $f(-1) = (-1)e^{-1} = -\\frac{1}{e}$. Điểm cực tiểu là $(-1, -1/e)$.",
           "c) Tính lồi lõm:",
-          "- Tính đạo hàm cấp hai: $f''(x) = (e^x(1+x))' = e^x(1+x) + e^x(1) = e^x(x+2)$.",
-          "- Vì $e^x > 0$, dấu của $f''(x)$ phụ thuộc vào dấu của $(x+2)$.",
-          "- $f''(x) = 0 \\Leftrightarrow x+2 = 0 \\Leftrightarrow x = -2$.",
-          "- Nếu $x > -2$, $f''(x) > 0$, đồ thị hàm số lõm (hướng lên).",
-          "- Nếu $x < -2$, $f''(x) < 0$, đồ thị hàm số lồi (hướng xuống).",
-          "- Đồ thị có một điểm uốn tại $x=-2$."
+          "Tính đạo hàm cấp hai: $f''(x) = (e^x(1+x))' = e^x(1+x) + e^x(1) = e^x(x+2)$.",
+          "Vì $e^x > 0$, dấu của $f''(x)$ phụ thuộc vào dấu của $(x+2)$.",
+          "$f''(x) = 0 \\Leftrightarrow x+2 = 0 \\Leftrightarrow x = -2$.",
+          "Nếu $x > -2$, $f''(x) > 0$, đồ thị hàm số lõm (hướng lên).",
+          "Nếu $x < -2$, $f''(x) < 0$, đồ thị hàm số lồi (hướng xuống).",
+          "Đồ thị có một điểm uốn tại $x=-2$."
         ]
       }
     },
@@ -8187,13 +8187,13 @@
       "answer": {
         "steps": [
           "Ta cần tính các đạo hàm của $f(x) = \\ln(1+x)$ tại $x=0$.",
-          "- $f(x) = \\ln(1+x) \\Rightarrow f(0) = \\ln(1) = 0$.",
-          "- $f'(x) = \\frac{1}{1+x} = (1+x)^{-1} \\Rightarrow f'(0) = 1$.",
-          "- $f''(x) = -(1+x)^{-2} = -\\frac{1}{(1+x)^2} \\Rightarrow f''(0) = -1$.",
-          "- $f'''(x) = 2(1+x)^{-3} = \\frac{2}{(1+x)^3} \\Rightarrow f'''(0) = 2$.",
-          "- Công thức khai triển Maclaurin bậc 3: $P_3(x) = f(0) + f'(0)x + \\frac{f''(0)}{2!}x^2 + \\frac{f'''(0)}{3!}x^3$.",
-          "- Thay số: $P_3(x) = 0 + 1 \\cdot x + \\frac{-1}{2}x^2 + \\frac{2}{6}x^3$.",
-          "- Vậy khai triển cần tìm là $x - \\frac{x^2}{2} + \\frac{x^3}{3}$."
+          "$f(x) = \\ln(1+x) \\Rightarrow f(0) = \\ln(1) = 0$.",
+          "$f'(x) = \\frac{1}{1+x} = (1+x)^{-1} \\Rightarrow f'(0) = 1$.",
+          "$f''(x) = -(1+x)^{-2} = -\\frac{1}{(1+x)^2} \\Rightarrow f''(0) = -1$.",
+          "$f'''(x) = 2(1+x)^{-3} = \\frac{2}{(1+x)^3} \\Rightarrow f'''(0) = 2$.",
+          "Công thức khai triển Maclaurin bậc 3: $P_3(x) = f(0) + f'(0)x + \\frac{f''(0)}{2!}x^2 + \\frac{f'''(0)}{3!}x^3$.",
+          "Thay số: $P_3(x) = 0 + 1 \\cdot x + \\frac{-1}{2}x^2 + \\frac{2}{6}x^3$.",
+          "Vậy khai triển cần tìm là $x - \\frac{x^2}{2} + \\frac{x^3}{3}$."
         ]
       }
     },
@@ -8203,10 +8203,10 @@
         "steps": [
           "a) Hàm số $f(x) = |x-2|$ là hàm giá trị tuyệt đối của một hàm đa thức, do đó nó liên tục trên toàn bộ $\\mathbb{R}$, bao gồm cả đoạn $[0, 4]$.",
           "b) Ta xét tính khả vi tại điểm $x=2$.",
-          "- $f(x) = \\begin{cases} x-2 & \\text{khi } x \\ge 2 \\\\ 2-x & \\text{khi } x < 2 \\end{cases}$.",
-          "- Đạo hàm phải: $\\lim_{h \\to 0^+} \\frac{f(2+h)-f(2)}{h} = \\lim_{h \\to 0^+} \\frac{|h|-0}{h} = \\lim_{h \\to 0^+} \\frac{h}{h} = 1$.",
-          "- Đạo hàm trái: $\\lim_{h \\to 0^-} \\frac{f(2+h)-f(2)}{h} = \\lim_{h \\to 0^-} \\frac{|h|-0}{h} = \\lim_{h \\to 0^-} \\frac{-h}{h} = -1$.",
-          "- Vì đạo hàm trái và phải tại $x=2$ khác nhau, hàm số không khả vi tại $x=2$. Do đó, hàm số không khả vi trên toàn khoảng $(0, 4)$.",
+          "$f(x) = \\begin{cases} x-2 & \\text{khi } x \\ge 2 \\\\ 2-x & \\text{khi } x < 2 \\end{cases}$.",
+          "Đạo hàm phải: $\\lim_{h \\to 0^+} \\frac{f(2+h)-f(2)}{h} = \\lim_{h \\to 0^+} \\frac{|h|-0}{h} = \\lim_{h \\to 0^+} \\frac{h}{h} = 1$.",
+          "Đạo hàm trái: $\\lim_{h \\to 0^-} \\frac{f(2+h)-f(2)}{h} = \\lim_{h \\to 0^-} \\frac{|h|-0}{h} = \\lim_{h \\to 0^-} \\frac{-h}{h} = -1$.",
+          "Vì đạo hàm trái và phải tại $x=2$ khác nhau, hàm số không khả vi tại $x=2$. Do đó, hàm số không khả vi trên toàn khoảng $(0, 4)$.",
           "c) Để áp dụng định lý Rolle, hàm số phải khả vi trên khoảng mở $(0, 4)$. Vì điều kiện này không được thỏa mãn, ta không thể áp dụng định lý Rolle cho hàm số này trên đoạn $[0, 4]$, mặc dù $f(0)=|0-2|=2$ và $f(4)=|4-2|=2$ (tức là $f(0)=f(4)$)."
         ]
       }
@@ -8232,16 +8232,16 @@
         "steps": [
           "Tập xác định $D = \\mathbb{R}$ vì mẫu số $x^2+1 > 0$ với mọi $x$.",
           "a) Tìm khoảng đơn điệu:",
-          "- Tính đạo hàm: $f'(x) = \\frac{1(x^2+1) - x(2x)}{(x^2+1)^2} = \\frac{x^2+1-2x^2}{(x^2+1)^2} = \\frac{1-x^2}{(x^2+1)^2}$.",
-          "- Mẫu số $(x^2+1)^2$ luôn dương. Dấu của $f'(x)$ phụ thuộc vào dấu của tử số $1-x^2$.",
-          "- $f'(x) = 0 \\Leftrightarrow 1-x^2 = 0 \\Leftrightarrow x = 1$ hoặc $x = -1$.",
-          "- Lập bảng xét dấu:",
-          "  - Khoảng $(-\\infty, -1)$ và $(1, +\\infty)$: $1-x^2 < 0 \\Rightarrow f'(x) < 0$, hàm số nghịch biến.",
-          "  - Khoảng $(-1, 1)$: $1-x^2 > 0 \\Rightarrow f'(x) > 0$, hàm số đồng biến.",
+          "Tính đạo hàm: $f'(x) = \\frac{1(x^2+1) - x(2x)}{(x^2+1)^2} = \\frac{x^2+1-2x^2}{(x^2+1)^2} = \\frac{1-x^2}{(x^2+1)^2}$.",
+          "Mẫu số $(x^2+1)^2$ luôn dương. Dấu của $f'(x)$ phụ thuộc vào dấu của tử số $1-x^2$.",
+          "$f'(x) = 0 \\Leftrightarrow 1-x^2 = 0 \\Leftrightarrow x = 1$ hoặc $x = -1$.",
+          "Lập bảng xét dấu:",
+          "Khoảng $(-\\infty, -1)$ và $(1, +\\infty)$: $1-x^2 < 0 \\Rightarrow f'(x) < 0$, hàm số nghịch biến.",
+          "Khoảng $(-1, 1)$: $1-x^2 > 0 \\Rightarrow f'(x) > 0$, hàm số đồng biến.",
           "b) Tìm điểm cực trị:",
-          "- Tại $x=-1$, $f'(x)$ đổi dấu từ âm sang dương, nên hàm số đạt cực tiểu. $f(-1) = \\frac{-1}{(-1)^2+1} = -\\frac{1}{2}$.",
-          "- Tại $x=1$, $f'(x)$ đổi dấu từ dương sang âm, nên hàm số đạt cực đại. $f(1) = \\frac{1}{1^2+1} = \\frac{1}{2}$.",
-          "- Kết luận: Điểm cực tiểu là $(-1, -1/2)$, điểm cực đại là $(1, 1/2)$."
+          "Tại $x=-1$, $f'(x)$ đổi dấu từ âm sang dương, nên hàm số đạt cực tiểu. $f(-1) = \\frac{-1}{(-1)^2+1} = -\\frac{1}{2}$.",
+          "Tại $x=1$, $f'(x)$ đổi dấu từ dương sang âm, nên hàm số đạt cực đại. $f(1) = \\frac{1}{1^2+1} = \\frac{1}{2}$.",
+          "Kết luận: Điểm cực tiểu là $(-1, -1/2)$, điểm cực đại là $(1, 1/2)$."
         ]
       }
     },
@@ -8251,17 +8251,17 @@
         "steps": [
           "Đặt $f(x) = x^5 + 3x - 5$. Đây là một hàm đa thức, nên liên tục và khả vi trên $\\mathbb{R}$.",
           "Bước 1: Chứng minh có ít nhất một nghiệm.",
-          "- Ta dùng Định lý giá trị trung gian. Chọn hai giá trị $x$ sao cho $f(x)$ đổi dấu.",
-          "- $f(0) = -5 < 0$.",
-          "- $f(2) = 2^5 + 3(2) - 5 = 32 + 6 - 5 = 33 > 0$.",
-          "- Vì $f(0) < 0$ và $f(2) > 0$, và $f(x)$ liên tục, nên theo Định lý giá trị trung gian, phải tồn tại ít nhất một nghiệm $c \\in (0, 2)$.",
+          "Ta dùng Định lý giá trị trung gian. Chọn hai giá trị $x$ sao cho $f(x)$ đổi dấu.",
+          "$f(0) = -5 < 0$.",
+          "$f(2) = 2^5 + 3(2) - 5 = 32 + 6 - 5 = 33 > 0$.",
+          "Vì $f(0) < 0$ và $f(2) > 0$, và $f(x)$ liên tục, nên theo Định lý giá trị trung gian, phải tồn tại ít nhất một nghiệm $c \\in (0, 2)$.",
           "Bước 2: Chứng minh có không quá một nghiệm (tức là duy nhất).",
-          "- Ta dùng Định lý Rolle. Giả sử phương trình có hai nghiệm phân biệt $a$ và $b$, tức là $f(a)=f(b)=0$.",
-          "- Theo định lý Rolle, phải tồn tại một số $d$ nằm giữa $a$ và $b$ sao cho $f'(d) = 0$.",
-          "- Tính đạo hàm: $f'(x) = 5x^4 + 3$.",
-          "- Ta thấy $x^4 \\ge 0$ với mọi $x$, do đó $5x^4 \\ge 0$. Suy ra $f'(x) = 5x^4 + 3 \\ge 3 > 0$ với mọi $x$.",
-          "- Điều này có nghĩa là không tồn tại số $d$ nào để $f'(d) = 0$. Mâu thuẫn với giả sử ban đầu.",
-          "- Vậy giả sử phương trình có hai nghiệm phân biệt là sai. Phương trình chỉ có thể có tối đa một nghiệm.",
+          "Ta dùng Định lý Rolle. Giả sử phương trình có hai nghiệm phân biệt $a$ và $b$, tức là $f(a)=f(b)=0$.",
+          "Theo định lý Rolle, phải tồn tại một số $d$ nằm giữa $a$ và $b$ sao cho $f'(d) = 0$.",
+          "Tính đạo hàm: $f'(x) = 5x^4 + 3$.",
+          "Ta thấy $x^4 \\ge 0$ với mọi $x$, do đó $5x^4 \\ge 0$. Suy ra $f'(x) = 5x^4 + 3 \\ge 3 > 0$ với mọi $x$.",
+          "Điều này có nghĩa là không tồn tại số $d$ nào để $f'(d) = 0$. Mâu thuẫn với giả sử ban đầu.",
+          "Vậy giả sử phương trình có hai nghiệm phân biệt là sai. Phương trình chỉ có thể có tối đa một nghiệm.",
           "Kết hợp hai bước, ta kết luận phương trình có đúng một nghiệm thực."
         ]
       }
@@ -8271,9 +8271,9 @@
       "answer": {
         "steps": [
           "a) Tính các đạo hàm của $f(x) = e^{2x}$ tại $x_0 = 1$.",
-          "- $f(x) = e^{2x} \\Rightarrow f(1) = e^2$.",
-          "- $f'(x) = 2e^{2x} \\Rightarrow f'(1) = 2e^2$.",
-          "- $f''(x) = 4e^{2x} \\Rightarrow f''(1) = 4e^2$.",
+          "$f(x) = e^{2x} \\Rightarrow f(1) = e^2$.",
+          "$f'(x) = 2e^{2x} \\Rightarrow f'(1) = 2e^2$.",
+          "$f''(x) = 4e^{2x} \\Rightarrow f''(1) = 4e^2$.",
           "b) Công thức khai triển Taylor bậc 2 tại $x_0=1$ là:",
           "$P_2(x) = f(1) + f'(1)(x-1) + \\frac{f''(1)}{2!}(x-1)^2$.",
           "Thay các giá trị đã tính vào:",
@@ -8288,10 +8288,10 @@
       "answer": {
         "steps": [
           "a) Kiểm tra các điều kiện của định lý Rolle:",
-          "- Hàm $f(x)$ là đa thức nên liên tục trên $[-1, 1]$ và khả vi trên $(-1, 1)$.",
-          "- Tính giá trị tại hai đầu mút: $f(-1) = 4(-1)^3 - 3(-1) + 1 = -4 + 3 + 1 = 0$.",
-          "- $f(1) = 4(1)^3 - 3(1) + 1 = 4 - 3 + 1 = 2$.",
-          "- Vì $f(-1) \\neq f(1)$, hàm số không thỏa mãn điều kiện thứ ba của định lý Rolle. Do đó không thể áp dụng định lý Rolle.",
+          "Hàm $f(x)$ là đa thức nên liên tục trên $[-1, 1]$ và khả vi trên $(-1, 1)$.",
+          "Tính giá trị tại hai đầu mút: $f(-1) = 4(-1)^3 - 3(-1) + 1 = -4 + 3 + 1 = 0$.",
+          "$f(1) = 4(1)^3 - 3(1) + 1 = 4 - 3 + 1 = 2$.",
+          "Vì $f(-1) \\neq f(1)$, hàm số không thỏa mãn điều kiện thứ ba của định lý Rolle. Do đó không thể áp dụng định lý Rolle.",
           "b) Vì không thể áp dụng định lý Rolle nên không có kết luận về sự tồn tại của điểm $c$ theo định lý này. Tuy nhiên, ta vẫn có thể tìm điểm mà tại đó đạo hàm bằng 0. $f'(x) = 12x^2 - 3$. $f'(x) = 0 \\Leftrightarrow 12x^2 = 3 \\Leftrightarrow x^2 = 1/4 \\Leftrightarrow x = \\pm 1/2$. Cả hai điểm này đều nằm trong $(-1, 1)$."
         ]
       }
@@ -8301,15 +8301,15 @@
       "answer": {
         "steps": [
           "a) Kiểm tra điều kiện định lý Lagrange:",
-          "- Hàm $g(x) = \\ln(x)$ liên tục trên miền xác định $(0, +\\infty)$, do đó liên tục trên $[1, e]$.",
-          "- Đạo hàm $g'(x) = \\frac{1}{x}$ xác định với mọi $x > 0$, do đó hàm khả vi trên $(1, e)$.",
-          "- Vậy hàm số thỏa mãn các điều kiện của định lý Lagrange.",
+          "Hàm $g(x) = \\ln(x)$ liên tục trên miền xác định $(0, +\\infty)$, do đó liên tục trên $[1, e]$.",
+          "Đạo hàm $g'(x) = \\frac{1}{x}$ xác định với mọi $x > 0$, do đó hàm khả vi trên $(1, e)$.",
+          "Vậy hàm số thỏa mãn các điều kiện của định lý Lagrange.",
           "b) Tìm giá trị $c$: Theo định lý, tồn tại $c \\in (1, e)$ sao cho $g'(c) = \\frac{g(e) - g(1)}{e - 1}$.",
-          "- Ta có: $g(e) = \\ln(e) = 1$ và $g(1) = \\ln(1) = 0$.",
-          "- Vế phải: $\\frac{1 - 0}{e - 1} = \\frac{1}{e - 1}$.",
-          "- Vế trái: $g'(c) = \\frac{1}{c}$.",
-          "- Giải phương trình $\\frac{1}{c} = \\frac{1}{e - 1} \\Leftrightarrow c = e - 1$.",
-          "- Ta kiểm tra xem $c$ có thuộc $(1, e)$ hay không. Vì $2 < e < 3$, nên $1 < e-1 < 2$. Do đó $1 < c < e$. Giá trị $c = e-1$ thỏa mãn."
+          "Ta có: $g(e) = \\ln(e) = 1$ và $g(1) = \\ln(1) = 0$.",
+          "Vế phải: $\\frac{1 - 0}{e - 1} = \\frac{1}{e - 1}$.",
+          "Vế trái: $g'(c) = \\frac{1}{c}$.",
+          "Giải phương trình $\\frac{1}{c} = \\frac{1}{e - 1} \\Leftrightarrow c = e - 1$.",
+          "Ta kiểm tra xem $c$ có thuộc $(1, e)$ hay không. Vì $2 < e < 3$, nên $1 < e-1 < 2$. Do đó $1 < c < e$. Giá trị $c = e-1$ thỏa mãn."
         ]
       }
     },
@@ -8318,14 +8318,14 @@
       "answer": {
         "steps": [
           "a) Xét $L_1 = \\lim_{x \\to 0} \\frac{1 - \\cos(3x)}{x^2}$.",
-          "- Khi $x \\to 0$, tử số $1-\\cos(0) = 0$, mẫu số $0^2=0$. Dạng $\\frac{0}{0}$.",
-          "- Áp dụng L'Hôpital: $L_1 = \\lim_{x \\to 0} \\frac{(1 - \\cos(3x))'}{(x^2)'} = \\lim_{x \\to 0} \\frac{3\\sin(3x)}{2x}$.",
-          "- Giới hạn này vẫn có dạng $\\frac{0}{0}$. Áp dụng L'Hôpital lần nữa: $L_1 = \\lim_{x \\to 0} \\frac{(3\\sin(3x))'}{(2x)'} = \\lim_{x \\to 0} \\frac{9\\cos(3x)}{2}$.",
-          "- Thay $x=0$: $L_1 = \\frac{9\\cos(0)}{2} = \\frac{9}{2}$.",
+          "Khi $x \\to 0$, tử số $1-\\cos(0) = 0$, mẫu số $0^2=0$. Dạng $\\frac{0}{0}$.",
+          "Áp dụng L'Hôpital: $L_1 = \\lim_{x \\to 0} \\frac{(1 - \\cos(3x))'}{(x^2)'} = \\lim_{x \\to 0} \\frac{3\\sin(3x)}{2x}$.",
+          "Giới hạn này vẫn có dạng $\\frac{0}{0}$. Áp dụng L'Hôpital lần nữa: $L_1 = \\lim_{x \\to 0} \\frac{(3\\sin(3x))'}{(2x)'} = \\lim_{x \\to 0} \\frac{9\\cos(3x)}{2}$.",
+          "Thay $x=0$: $L_1 = \\frac{9\\cos(0)}{2} = \\frac{9}{2}$.",
           "b) Xét $L_2 = \\lim_{x \\to \\frac{\\pi}{2}} \\frac{\\cos(x)}{x - \\frac{\\pi}{2}}$.",
-          "- Khi $x \\to \\frac{\\pi}{2}$, tử số $\\cos(\\frac{\\pi}{2})=0$, mẫu số $\\frac{\\pi}{2}-\\frac{\\pi}{2}=0$. Dạng $\\frac{0}{0}$.",
-          "- Áp dụng L'Hôpital: $L_2 = \\lim_{x \\to \\frac{\\pi}{2}} \\frac{(\\cos(x))'}{(x - \\frac{\\pi}{2})'} = \\lim_{x \\to \\frac{\\pi}{2}} \\frac{-\\sin(x)}{1}$.",
-          "- Thay $x=\\frac{\\pi}{2}$: $L_2 = \\frac{-\\sin(\\frac{\\pi}{2})}{1} = -1$."
+          "Khi $x \\to \\frac{\\pi}{2}$, tử số $\\cos(\\frac{\\pi}{2})=0$, mẫu số $\\frac{\\pi}{2}-\\frac{\\pi}{2}=0$. Dạng $\\frac{0}{0}$.",
+          "Áp dụng L'Hôpital: $L_2 = \\lim_{x \\to \\frac{\\pi}{2}} \\frac{(\\cos(x))'}{(x - \\frac{\\pi}{2})'} = \\lim_{x \\to \\frac{\\pi}{2}} \\frac{-\\sin(x)}{1}$.",
+          "Thay $x=\\frac{\\pi}{2}$: $L_2 = \\frac{-\\sin(\\frac{\\pi}{2})}{1} = -1$."
         ]
       }
     },
@@ -8334,14 +8334,14 @@
       "answer": {
         "steps": [
           "a) Tìm khai triển Maclaurin của $f(x) = \\sin(x)$.",
-          "- $f(x) = \\sin(x) \\Rightarrow f(0) = 0$.",
-          "- $f'(x) = \\cos(x) \\Rightarrow f'(0) = 1$.",
-          "- $f''(x) = -\\sin(x) \\Rightarrow f''(0) = 0$.",
-          "- $f'''(x) = -\\cos(x) \\Rightarrow f'''(0) = -1$.",
-          "- $f^{(4)}(x) = \\sin(x) \\Rightarrow f^{(4)}(0) = 0$.",
-          "- $f^{(5)}(x) = \\cos(x) \\Rightarrow f^{(5)}(0) = 1$.",
-          "- Khai triển Maclaurin đến bậc 5: $\\sin(x) \\approx f(0) + \\frac{f'(0)}{1!}x + \\frac{f''(0)}{2!}x^2 + \\frac{f'''(0)}{3!}x^3 + \\frac{f^{(4)}(0)}{4!}x^4 + \\frac{f^{(5)}(0)}{5!}x^5$.",
-          "- Thay số: $\\sin(x) \\approx 0 + x + 0 - \\frac{1}{6}x^3 + 0 + \\frac{1}{120}x^5 = x - \\frac{x^3}{6} + \\frac{x^5}{120}$.",
+          "$f(x) = \\sin(x) \\Rightarrow f(0) = 0$.",
+          "$f'(x) = \\cos(x) \\Rightarrow f'(0) = 1$.",
+          "$f''(x) = -\\sin(x) \\Rightarrow f''(0) = 0$.",
+          "$f'''(x) = -\\cos(x) \\Rightarrow f'''(0) = -1$.",
+          "$f^{(4)}(x) = \\sin(x) \\Rightarrow f^{(4)}(0) = 0$.",
+          "$f^{(5)}(x) = \\cos(x) \\Rightarrow f^{(5)}(0) = 1$.",
+          "Khai triển Maclaurin đến bậc 5: $\\sin(x) \\approx f(0) + \\frac{f'(0)}{1!}x + \\frac{f''(0)}{2!}x^2 + \\frac{f'''(0)}{3!}x^3 + \\frac{f^{(4)}(0)}{4!}x^4 + \\frac{f^{(5)}(0)}{5!}x^5$.",
+          "Thay số: $\\sin(x) \\approx 0 + x + 0 - \\frac{1}{6}x^3 + 0 + \\frac{1}{120}x^5 = x - \\frac{x^3}{6} + \\frac{x^5}{120}$.",
           "b) Tính gần đúng $\\sin(0.2)$:",
           "$\\sin(0.2) \\approx 0.2 - \\frac{(0.2)^3}{6} + \\frac{(0.2)^5}{120} = 0.2 - \\frac{0.008}{6} + \\frac{0.00032}{120}$.",
           "$\\sin(0.2) \\approx 0.2 - 0.001333... + 0.00000266... \\approx 0.198669$."
@@ -8354,15 +8354,15 @@
         "steps": [
           "Tập xác định $D = \\mathbb{R}$.",
           "a) Tìm khoảng đơn điệu:",
-          "- Tính đạo hàm: $y' = 6x^2 + 6x - 12 = 6(x^2 + x - 2)$.",
-          "- Cho $y' = 0 \\Leftrightarrow x^2 + x - 2 = 0 \\Leftrightarrow (x+2)(x-1) = 0 \\Leftrightarrow x = -2$ hoặc $x=1$.",
-          "- Lập bảng xét dấu cho $y'$:",
-          "  - Khoảng $(-\\infty, -2)$: $y' > 0$, hàm số đồng biến.",
-          "  - Khoảng $(-2, 1)$: $y' < 0$, hàm số nghịch biến.",
-          "  - Khoảng $(1, +\\infty)$: $y' > 0$, hàm số đồng biến.",
+          "Tính đạo hàm: $y' = 6x^2 + 6x - 12 = 6(x^2 + x - 2)$.",
+          "Cho $y' = 0 \\Leftrightarrow x^2 + x - 2 = 0 \\Leftrightarrow (x+2)(x-1) = 0 \\Leftrightarrow x = -2$ hoặc $x=1$.",
+          "Lập bảng xét dấu cho $y'$:",
+          "Khoảng $(-\\infty, -2)$: $y' > 0$, hàm số đồng biến.",
+          "Khoảng $(-2, 1)$: $y' < 0$, hàm số nghịch biến.",
+          "Khoảng $(1, +\\infty)$: $y' > 0$, hàm số đồng biến.",
           "b) Tìm điểm cực trị:",
-          "- Tại $x=-2$, $y'$ đổi dấu từ dương sang âm, là điểm cực đại. $y(-2) = 2(-8) + 3(4) - 12(-2) + 1 = -16 + 12 + 24 + 1 = 21$. Điểm CĐ: $(-2, 21)$.",
-          "- Tại $x=1$, $y'$ đổi dấu từ âm sang dương, là điểm cực tiểu. $y(1) = 2 + 3 - 12 + 1 = -6$. Điểm CT: $(1, -6)$."
+          "Tại $x=-2$, $y'$ đổi dấu từ dương sang âm, là điểm cực đại. $y(-2) = 2(-8) + 3(4) - 12(-2) + 1 = -16 + 12 + 24 + 1 = 21$. Điểm CĐ: $(-2, 21)$.",
+          "Tại $x=1$, $y'$ đổi dấu từ âm sang dương, là điểm cực tiểu. $y(1) = 2 + 3 - 12 + 1 = -6$. Điểm CT: $(1, -6)$."
         ]
       }
     },
@@ -8371,15 +8371,15 @@
       "answer": {
         "steps": [
           "Tập xác định $D = \\mathbb{R}$.",
-          "- Tính đạo hàm cấp một: $y' = 1 \\cdot e^{-x} + x \\cdot (-e^{-x}) = e^{-x}(1-x)$.",
-          "- Tính đạo hàm cấp hai: $y'' = -e^{-x}(1-x) + e^{-x}(-1) = e^{-x}(-1+x-1) = e^{-x}(x-2)$.",
-          "- Dấu của $y''$ phụ thuộc vào dấu của $(x-2)$ vì $e^{-x} > 0$ với mọi $x$.",
-          "- Giải $y'' = 0 \\Leftrightarrow x-2 = 0 \\Leftrightarrow x=2$.",
-          "- Xét dấu $y''$:",
-          "  - Khoảng $(-\\infty, 2)$: $y'' < 0$, đồ thị hàm số lồi (hướng xuống).",
-          "  - Khoảng $(2, +\\infty)$: $y'' > 0$, đồ thị hàm số lõm (hướng lên).",
-          "- Vì $y''$ đổi dấu tại $x=2$, nên đồ thị có điểm uốn tại $x=2$.",
-          "- Tọa độ điểm uốn: $y(2) = 2e^{-2} = \\frac{2}{e^2}$. Điểm uốn là $(2, 2/e^2)$."
+          "Tính đạo hàm cấp một: $y' = 1 \\cdot e^{-x} + x \\cdot (-e^{-x}) = e^{-x}(1-x)$.",
+          "Tính đạo hàm cấp hai: $y'' = -e^{-x}(1-x) + e^{-x}(-1) = e^{-x}(-1+x-1) = e^{-x}(x-2)$.",
+          "Dấu của $y''$ phụ thuộc vào dấu của $(x-2)$ vì $e^{-x} > 0$ với mọi $x$.",
+          "Giải $y'' = 0 \\Leftrightarrow x-2 = 0 \\Leftrightarrow x=2$.",
+          "Xét dấu $y''$:",
+          "Khoảng $(-\\infty, 2)$: $y'' < 0$, đồ thị hàm số lồi (hướng xuống).",
+          "Khoảng $(2, +\\infty)$: $y'' > 0$, đồ thị hàm số lõm (hướng lên).",
+          "Vì $y''$ đổi dấu tại $x=2$, nên đồ thị có điểm uốn tại $x=2$.",
+          "Tọa độ điểm uốn: $y(2) = 2e^{-2} = \\frac{2}{e^2}$. Điểm uốn là $(2, 2/e^2)$."
         ]
       }
     },
@@ -8388,10 +8388,10 @@
       "answer": {
         "steps": [
           "a) Hàm $f(x)=x^2$ là đa thức nên liên tục và khả vi trên $\\mathbb{R}$. Theo định lý Lagrange trên $[a, b]$, tồn tại $c \\in (a, b)$ sao cho $f'(c) = \\frac{f(b) - f(a)}{b - a}$.",
-          "- Đạo hàm: $f'(x) = 2x$. Vậy $f'(c) = 2c$.",
-          "- Vế phải: $\\frac{b^2 - a^2}{b-a} = \\frac{(b-a)(b+a)}{b-a} = a+b$.",
-          "- Giải phương trình: $2c = a+b \\Leftrightarrow c = \\frac{a+b}{2}$.",
-          "- Giá trị $c = \\frac{a+b}{2}$ chính là trung điểm của đoạn $[a, b]$, do đó $c$ luôn thuộc khoảng $(a,b)$.",
+          "Đạo hàm: $f'(x) = 2x$. Vậy $f'(c) = 2c$.",
+          "Vế phải: $\\frac{b^2 - a^2}{b-a} = \\frac{(b-a)(b+a)}{b-a} = a+b$.",
+          "Giải phương trình: $2c = a+b \\Leftrightarrow c = \\frac{a+b}{2}$.",
+          "Giá trị $c = \\frac{a+b}{2}$ chính là trung điểm của đoạn $[a, b]$, do đó $c$ luôn thuộc khoảng $(a,b)$.",
           "b) Ý nghĩa hình học: Đối với parabol $y=x^2$, tại trung điểm $c = \\frac{a+b}{2}$ của một đoạn $[a,b]$ bất kỳ, tiếp tuyến của đồ thị sẽ song song với cát tuyến nối hai điểm $(a, a^2)$ và $(b, b^2)$."
         ]
       }
@@ -8417,16 +8417,16 @@
         "steps": [
           "Hàm số liên tục trên đoạn $[-4, 4]$. Giá trị lớn nhất (GTLN) và giá trị nhỏ nhất (GTNN) sẽ đạt được tại các điểm tới hạn hoặc tại hai đầu mút của đoạn.",
           "Bước 1: Tìm các điểm tới hạn.",
-          "- Tính đạo hàm: $f'(x) = 3x^2 - 6x - 9 = 3(x^2 - 2x - 3)$.",
-          "- Giải $f'(x) = 0 \\Leftrightarrow x^2 - 2x - 3 = 0 \\Leftrightarrow (x-3)(x+1) = 0$.",
-          "- Ta có hai điểm tới hạn là $x=3$ và $x=-1$. Cả hai điểm đều nằm trong đoạn $[-4, 4]$.",
+          "Tính đạo hàm: $f'(x) = 3x^2 - 6x - 9 = 3(x^2 - 2x - 3)$.",
+          "Giải $f'(x) = 0 \\Leftrightarrow x^2 - 2x - 3 = 0 \\Leftrightarrow (x-3)(x+1) = 0$.",
+          "Ta có hai điểm tới hạn là $x=3$ và $x=-1$. Cả hai điểm đều nằm trong đoạn $[-4, 4]$.",
           "Bước 2: Tính giá trị của hàm số tại các điểm tới hạn và hai đầu mút.",
-          "- $f(-4) = (-4)^3 - 3(-4)^2 - 9(-4) + 35 = -64 - 48 + 36 + 35 = -41$.",
-          "- $f(-1) = (-1)^3 - 3(-1)^2 - 9(-1) + 35 = -1 - 3 + 9 + 35 = 40$.",
-          "- $f(3) = 3^3 - 3(3^2) - 9(3) + 35 = 27 - 27 - 27 + 35 = 8$.",
-          "- $f(4) = 4^3 - 3(4^2) - 9(4) + 35 = 64 - 48 - 36 + 35 = 15$.",
+          "$f(-4) = (-4)^3 - 3(-4)^2 - 9(-4) + 35 = -64 - 48 + 36 + 35 = -41$.",
+          "$f(-1) = (-1)^3 - 3(-1)^2 - 9(-1) + 35 = -1 - 3 + 9 + 35 = 40$.",
+          "$f(3) = 3^3 - 3(3^2) - 9(3) + 35 = 27 - 27 - 27 + 35 = 8$.",
+          "$f(4) = 4^3 - 3(4^2) - 9(4) + 35 = 64 - 48 - 36 + 35 = 15$.",
           "Bước 3: So sánh các giá trị.",
-          "- Trong các giá trị $\\{-41, 40, 8, 15\\}$, giá trị lớn nhất là 40 và giá trị nhỏ nhất là -41.",
+          "Trong các giá trị $\\{-41, 40, 8, 15\\}$, giá trị lớn nhất là 40 và giá trị nhỏ nhất là -41.",
           "Kết luận: GTLN của hàm số trên $[-4, 4]$ là 40, đạt tại $x=-1$. GTNN là -41, đạt tại $x=-4$."
         ]
       }
@@ -8436,11 +8436,11 @@
       "answer": {
         "steps": [
           "Ta cần tính giá trị của đa thức và các đạo hàm của nó tại $x_0 = 1$.",
-          "- $P(x) = x^3 - 2x^2 + 3x + 5 \\Rightarrow P(1) = 1 - 2 + 3 + 5 = 7$.",
-          "- $P'(x) = 3x^2 - 4x + 3 \\Rightarrow P'(1) = 3 - 4 + 3 = 2$.",
-          "- $P''(x) = 6x - 4 \\Rightarrow P''(1) = 6 - 4 = 2$.",
-          "- $P'''(x) = 6 \\Rightarrow P'''(1) = 6$.",
-          "- $P^{(4)}(x) = 0$ và các đạo hàm cấp cao hơn cũng bằng 0.",
+          "$P(x) = x^3 - 2x^2 + 3x + 5 \\Rightarrow P(1) = 1 - 2 + 3 + 5 = 7$.",
+          "$P'(x) = 3x^2 - 4x + 3 \\Rightarrow P'(1) = 3 - 4 + 3 = 2$.",
+          "$P''(x) = 6x - 4 \\Rightarrow P''(1) = 6 - 4 = 2$.",
+          "$P'''(x) = 6 \\Rightarrow P'''(1) = 6$.",
+          "$P^{(4)}(x) = 0$ và các đạo hàm cấp cao hơn cũng bằng 0.",
           "Công thức khai triển Taylor tại $x_0=1$:",
           "$P(x) = P(1) + \\frac{P'(1)}{1!}(x-1) + \\frac{P''(1)}{2!}(x-1)^2 + \\frac{P'''(1)}{3!}(x-1)^3$.",
           "Thay số:",
@@ -8478,10 +8478,10 @@
           "Giả sử phản chứng rằng phương trình $f(x)=0$ có ít nhất 5 nghiệm phân biệt, gọi là $x_1 < x_2 < x_3 < x_4 < x_5$.",
           "Ta có $f(x_1) = f(x_2) = f(x_3) = f(x_4) = f(x_5) = 0$.",
           "Áp dụng định lý Rolle trên các đoạn $[x_1, x_2], [x_2, x_3], [x_3, x_4], [x_4, x_5]$.",
-          "- Trên $[x_1, x_2]$, tồn tại $c_1 \\in (x_1, x_2)$ sao cho $f'(c_1)=0$.",
-          "- Trên $[x_2, x_3]$, tồn tại $c_2 \\in (x_2, x_3)$ sao cho $f'(c_2)=0$.",
-          "- Trên $[x_3, x_4]$, tồn tại $c_3 \\in (x_3, x_4)$ sao cho $f'(c_3)=0$.",
-          "- Trên $[x_4, x_5]$, tồn tại $c_4 \\in (x_4, x_5)$ sao cho $f'(c_4)=0$.",
+          "Trên $[x_1, x_2]$, tồn tại $c_1 \\in (x_1, x_2)$ sao cho $f'(c_1)=0$.",
+          "Trên $[x_2, x_3]$, tồn tại $c_2 \\in (x_2, x_3)$ sao cho $f'(c_2)=0$.",
+          "Trên $[x_3, x_4]$, tồn tại $c_3 \\in (x_3, x_4)$ sao cho $f'(c_3)=0$.",
+          "Trên $[x_4, x_5]$, tồn tại $c_4 \\in (x_4, x_5)$ sao cho $f'(c_4)=0$.",
           "Vì $x_1 < c_1 < x_2 < c_2 < x_3 < c_3 < x_4 < c_4 < x_5$, các giá trị $c_1, c_2, c_3, c_4$ là phân biệt.",
           "Như vậy, phương trình $f'(x)=0$ có ít nhất 4 nghiệm phân biệt. Điều này mâu thuẫn với giả thiết rằng $f'(x)=0$ chỉ có 3 nghiệm phân biệt.",
           "Vậy giả sử ban đầu là sai. Phương trình $f(x)=0$ có không quá 4 nghiệm."
@@ -8509,19 +8509,19 @@
       "answer": {
         "steps": [
           "Tập xác định: $D = \\mathbb{R} \\setminus \\{-1\\}$.",
-          "1. Tìm tiệm cận đứng:",
-          "- Xét giới hạn tại điểm $x=-1$.",
-          "- $\\lim_{x \\to -1^+} y = \\lim_{x \\to -1^+} \\frac{x^2 - 3x + 2}{x+1}$. Tử số tiến đến $(-1)^2 - 3(-1) + 2 = 6 > 0$. Mẫu số $x+1$ tiến đến $0^+$.",
-          "- Vậy $\\lim_{x \\to -1^+} y = +\\infty$.",
-          "- Do đó, đường thẳng $x=-1$ là tiệm cận đứng của đồ thị hàm số.",
-          "2. Tìm tiệm cận ngang:",
-          "- Xét $\\lim_{x \\to \\infty} y = \\lim_{x \\to \\infty} \\frac{x^2 - 3x + 2}{x+1} = \\lim_{x \\to \\infty} \\frac{x - 3 + 2/x}{1+1/x} = \\infty$.",
-          "- Vì giới hạn không hữu hạn, đồ thị không có tiệm cận ngang.",
-          "3. Tìm tiệm cận xiên (dạng $y=ax+b$):",
-          "- $a = \\lim_{x \\to \\infty} \\frac{f(x)}{x} = \\lim_{x \\to \\infty} \\frac{x^2 - 3x + 2}{x(x+1)} = \\lim_{x \\to \\infty} \\frac{x^2 - 3x + 2}{x^2+x} = 1$.",
-          "- $b = \\lim_{x \\to \\infty} (f(x) - ax) = \\lim_{x \\to \\infty} \\left( \\frac{x^2 - 3x + 2}{x+1} - 1 \\cdot x \\right)$.",
-          "- $b = \\lim_{x \\to \\infty} \\frac{x^2 - 3x + 2 - x(x+1)}{x+1} = \\lim_{x \\to \\infty} \\frac{x^2 - 3x + 2 - x^2 - x}{x+1} = \\lim_{x \\to \\infty} \\frac{-4x + 2}{x+1} = -4$.",
-          "- Vậy đường thẳng $y=x-4$ là tiệm cận xiên của đồ thị hàm số."
+          "Tìm tiệm cận đứng:",
+          "Xét giới hạn tại điểm $x=-1$.",
+          "$\\lim_{x \\to -1^+} y = \\lim_{x \\to -1^+} \\frac{x^2 - 3x + 2}{x+1}$. Tử số tiến đến $(-1)^2 - 3(-1) + 2 = 6 > 0$. Mẫu số $x+1$ tiến đến $0^+$.",
+          "Vậy $\\lim_{x \\to -1^+} y = +\\infty$.",
+          "Do đó, đường thẳng $x=-1$ là tiệm cận đứng của đồ thị hàm số.",
+          "Tìm tiệm cận ngang:",
+          "Xét $\\lim_{x \\to \\infty} y = \\lim_{x \\to \\infty} \\frac{x^2 - 3x + 2}{x+1} = \\lim_{x \\to \\infty} \\frac{x - 3 + 2/x}{1+1/x} = \\infty$.",
+          "Vì giới hạn không hữu hạn, đồ thị không có tiệm cận ngang.",
+          "Tìm tiệm cận xiên (dạng $y=ax+b$):",
+          "$a = \\lim_{x \\to \\infty} \\frac{f(x)}{x} = \\lim_{x \\to \\infty} \\frac{x^2 - 3x + 2}{x(x+1)} = \\lim_{x \\to \\infty} \\frac{x^2 - 3x + 2}{x^2+x} = 1$.",
+          "$b = \\lim_{x \\to \\infty} (f(x) - ax) = \\lim_{x \\to \\infty} \\left( \\frac{x^2 - 3x + 2}{x+1} - 1 \\cdot x \\right)$.",
+          "$b = \\lim_{x \\to \\infty} \\frac{x^2 - 3x + 2 - x(x+1)}{x+1} = \\lim_{x \\to \\infty} \\frac{x^2 - 3x + 2 - x^2 - x}{x+1} = \\lim_{x \\to \\infty} \\frac{-4x + 2}{x+1} = -4$.",
+          "Vậy đường thẳng $y=x-4$ là tiệm cận xiên của đồ thị hàm số."
         ]
       }
     },
@@ -8549,9 +8549,9 @@
           "Hàm $f(x)=x^3$ thỏa mãn các điều kiện của định lý Lagrange trên $[0, b]$.",
           "Theo định lý, tồn tại $c \\in (0, b)$ sao cho $f'(c) = \\frac{f(b) - f(0)}{b - 0}$.",
           "Tính các thành phần:",
-          "- $f'(x) = 3x^2$, suy ra $f'(c) = 3c^2$.",
-          "- $f(b) = b^3$, $f(0) = 0$.",
-          "- Vế phải: $\\frac{b^3 - 0}{b} = b^2$.",
+          "$f'(x) = 3x^2$, suy ra $f'(c) = 3c^2$.",
+          "$f(b) = b^3$, $f(0) = 0$.",
+          "Vế phải: $\\frac{b^3 - 0}{b} = b^2$.",
           "Giải phương trình: $3c^2 = b^2 \\Leftrightarrow c^2 = \\frac{b^2}{3}$.",
           "Vì $c$ phải thuộc khoảng $(0, b)$ nên $c$ phải dương. Do đó $c = \\sqrt{\\frac{b^2}{3}} = \\frac{b}{\\sqrt{3}}$.",
           "Ta thấy $c$ phụ thuộc tuyến tính vào $b$. Cụ thể, $c$ luôn bằng $b$ chia cho $\\sqrt{3}$. Vì $1 < \\sqrt{3}$, nên $0 < c < b$, điều này thỏa mãn."
@@ -8568,9 +8568,9 @@
           "Quy đồng mẫu số để xét dấu:",
           "$f'(x) = \\frac{1 - (1+x^2)}{1+x^2} = \\frac{-x^2}{1+x^2}$.",
           "Phân tích dấu của $f'(x)$:",
-          "- Mẫu số $1+x^2$ luôn dương với mọi $x$.",
-          "- Tử số $-x^2 \\le 0$ với mọi $x$.",
-          "- Do đó, $f'(x) \\le 0$ với mọi $x$. Dấu bằng chỉ xảy ra tại $x=0$.",
+          "Mẫu số $1+x^2$ luôn dương với mọi $x$.",
+          "Tử số $-x^2 \\le 0$ với mọi $x$.",
+          "Do đó, $f'(x) \\le 0$ với mọi $x$. Dấu bằng chỉ xảy ra tại $x=0$.",
           "Kết luận: Vì $f'(x) \\le 0$ và chỉ bằng 0 tại một điểm hữu hạn, hàm số $f(x) = \\arctan(x) - x$ luôn nghịch biến trên toàn bộ $\\mathbb{R}$."
         ]
       }
@@ -8583,8 +8583,8 @@
           "Chọn điểm $a=9$ là điểm gần 10 mà ta biết căn bậc hai chính xác. Xét đoạn $[9, 10]$.",
           "Áp dụng định lý Lagrange, tồn tại $c \\in (9, 10)$ sao cho $f(10) - f(9) = f'(c)(10-9)$.",
           "Tính toán các giá trị:",
-          "- $f(9) = \\sqrt{9} = 3$.",
-          "- $f'(x) = \\frac{1}{2\\sqrt{x}}$. Vậy $f'(c) = \\frac{1}{2\\sqrt{c}}$.",
+          "$f(9) = \\sqrt{9} = 3$.",
+          "$f'(x) = \\frac{1}{2\\sqrt{x}}$. Vậy $f'(c) = \\frac{1}{2\\sqrt{c}}$.",
           "Ta có: $\\sqrt{10} - 3 = \\frac{1}{2\\sqrt{c}}$.",
           "Vì $c$ rất gần 9, ta có thể xấp xỉ $c \\approx 9$.",
           "Khi đó $f'(c) \\approx f'(9) = \\frac{1}{2\\sqrt{9}} = \\frac{1}{2 \\cdot 3} = \\frac{1}{6}$.",
@@ -8615,10 +8615,10 @@
       "answer": {
         "steps": [
           "Ta tính các đạo hàm của $f(x) = (1-x)^{-1}$ tại $x=0$.",
-          "- $f(x) = (1-x)^{-1} \\Rightarrow f(0) = 1$.",
-          "- $f'(x) = -1(1-x)^{-2}(-1) = (1-x)^{-2} \\Rightarrow f'(0) = 1$.",
-          "- $f''(x) = -2(1-x)^{-3}(-1) = 2(1-x)^{-3} \\Rightarrow f''(0) = 2$.",
-          "- $f'''(x) = 2(-3)(1-x)^{-4}(-1) = 6(1-x)^{-4} \\Rightarrow f'''(0) = 6$.",
+          "$f(x) = (1-x)^{-1} \\Rightarrow f(0) = 1$.",
+          "$f'(x) = -1(1-x)^{-2}(-1) = (1-x)^{-2} \\Rightarrow f'(0) = 1$.",
+          "$f''(x) = -2(1-x)^{-3}(-1) = 2(1-x)^{-3} \\Rightarrow f''(0) = 2$.",
+          "$f'''(x) = 2(-3)(1-x)^{-4}(-1) = 6(1-x)^{-4} \\Rightarrow f'''(0) = 6$.",
           "Khai triển Maclaurin đến bậc 3:",
           "$f(x) \\approx f(0) + \\frac{f'(0)}{1!}x + \\frac{f''(0)}{2!}x^2 + \\frac{f'''(0)}{3!}x^3$.",
           "Thay số: $f(x) \\approx 1 + \\frac{1}{1}x + \\frac{2}{2}x^2 + \\frac{6}{6}x^3 = 1 + x + x^2 + x^3$.",
@@ -8633,16 +8633,16 @@
       "answer": {
         "steps": [
           "a) Kiểm tra điều kiện định lý Cauchy:",
-          "- Cả $f(x) = \\sin(x)$ và $g(x) = \\cos(x)$ đều là các hàm lượng giác cơ bản, nên chúng liên tục trên $[0, \\pi/2]$ và khả vi trên $(0, \\pi/2)$.",
-          "- Tính đạo hàm của $g(x)$: $g'(x) = -\\sin(x)$.",
-          "- Trên khoảng $(0, \\pi/2)$, $\\sin(x) > 0$, do đó $g'(x) = -\\sin(x) \\neq 0$.",
-          "- Tất cả các điều kiện của định lý Cauchy đều được thỏa mãn.",
+          "Cả $f(x) = \\sin(x)$ và $g(x) = \\cos(x)$ đều là các hàm lượng giác cơ bản, nên chúng liên tục trên $[0, \\pi/2]$ và khả vi trên $(0, \\pi/2)$.",
+          "Tính đạo hàm của $g(x)$: $g'(x) = -\\sin(x)$.",
+          "Trên khoảng $(0, \\pi/2)$, $\\sin(x) > 0$, do đó $g'(x) = -\\sin(x) \\neq 0$.",
+          "Tất cả các điều kiện của định lý Cauchy đều được thỏa mãn.",
           "b) Theo định lý Cauchy, tồn tại $c \\in (0, \\pi/2)$ sao cho $\\frac{f' (c)}{g'(c)} = \\frac{f(\\pi/2) - f(0)}{g(\\pi/2) - g(0)}$.",
-          "- Tính các giá trị: $f(\\pi/2) = \\sin(\\pi/2) = 1$, $f(0) = 0$. $g(\\pi/2) = \\cos(\\pi/2) = 0$, $g(0) = 1$.",
-          "- Vế phải: $\\frac{1 - 0}{0 - 1} = -1$.",
-          "- Vế trái: $\\frac{f'(c)}{g'(c)} = \\frac{\\cos(c)}{-\\sin(c)} = -\\cot(c)$.",
-          "- Giải phương trình: $-\\cot(c) = -1 \\Leftrightarrow \\cot(c) = 1$.",
-          "- Vì $c \\in (0, \\pi/2)$, nghiệm duy nhất là $c = \\pi/4$. Giá trị này thỏa mãn điều kiện."
+          "Tính các giá trị: $f(\\pi/2) = \\sin(\\pi/2) = 1$, $f(0) = 0$. $g(\\pi/2) = \\cos(\\pi/2) = 0$, $g(0) = 1$.",
+          "Vế phải: $\\frac{1 - 0}{0 - 1} = -1$.",
+          "Vế trái: $\\frac{f'(c)}{g'(c)} = \\frac{\\cos(c)}{-\\sin(c)} = -\\cot(c)$.",
+          "Giải phương trình: $-\\cot(c) = -1 \\Leftrightarrow \\cot(c) = 1$.",
+          "Vì $c \\in (0, \\pi/2)$, nghiệm duy nhất là $c = \\pi/4$. Giá trị này thỏa mãn điều kiện."
         ]
       }
     },
@@ -8667,17 +8667,17 @@
       "answer": {
         "steps": [
           "a) $f(x) = (1+x)^{1/3}$. Ta tính các đạo hàm tại $x=0$.",
-          "- $f(x) = (1+x)^{1/3} \\Rightarrow f(0) = 1$.",
-          "- $f'(x) = \\frac{1}{3}(1+x)^{-2/3} \\Rightarrow f'(0) = \\frac{1}{3}$.",
-          "- $f''(x) = \\frac{1}{3} \\cdot (-\\frac{2}{3})(1+x)^{-5/3} = -\\frac{2}{9}(1+x)^{-5/3} \\Rightarrow f''(0) = -\\frac{2}{9}$.",
-          "- $P_2(x) = f(0) + f'(0)x + \\frac{f''(0)}{2!}x^2 = 1 + \\frac{1}{3}x - \\frac{2/9}{2}x^2 = 1 + \\frac{1}{3}x - \\frac{1}{9}x^2$.",
+          "$f(x) = (1+x)^{1/3} \\Rightarrow f(0) = 1$.",
+          "$f'(x) = \\frac{1}{3}(1+x)^{-2/3} \\Rightarrow f'(0) = \\frac{1}{3}$.",
+          "$f''(x) = \\frac{1}{3} \\cdot (-\\frac{2}{3})(1+x)^{-5/3} = -\\frac{2}{9}(1+x)^{-5/3} \\Rightarrow f''(0) = -\\frac{2}{9}$.",
+          "$P_2(x) = f(0) + f'(0)x + \\frac{f''(0)}{2!}x^2 = 1 + \\frac{1}{3}x - \\frac{2/9}{2}x^2 = 1 + \\frac{1}{3}x - \\frac{1}{9}x^2$.",
           "b) Xấp xỉ $\\sqrt[3]{1.03} = f(0.03)$.",
           "$\\sqrt[3]{1.03} \\approx P_2(0.03) = 1 + \\frac{1}{3}(0.03) - \\frac{1}{9}(0.03)^2 = 1 + 0.01 - \\frac{0.0009}{9} = 1.01 - 0.0001 = 1.0099$.",
           "c) Sai số được ước lượng bởi $|R_2(0.03)| = |\\frac{f'''(c)}{3!}(0.03)^3|$ với $c \\in (0, 0.03)$.",
-          "- $f'''(x) = -\\frac{2}{9} \\cdot (-\\frac{5}{3})(1+x)^{-8/3} = \\frac{10}{27}(1+x)^{-8/3}$.",
-          "- $|R_2(0.03)| = |\\frac{10}{27(1+c)^{8/3}} \\cdot \\frac{(0.03)^3}{6}|$.",
-          "- Vì $c \\in (0, 0.03)$, $1 < 1+c < 1.03$. Do đó $(1+c)^{8/3} > 1$, và $\\frac{1}{(1+c)^{8/3}} < 1$.",
-          "- $|R_2(0.03)| < \\frac{10}{27} \\cdot 1 \\cdot \\frac{0.000027}{6} = \\frac{10}{6} \\cdot 0.000001 = \\frac{5}{3} \\cdot 10^{-6} \\approx 1.67 \\times 10^{-6}$. Sai số rất nhỏ."
+          "$f'''(x) = -\\frac{2}{9} \\cdot (-\\frac{5}{3})(1+x)^{-8/3} = \\frac{10}{27}(1+x)^{-8/3}$.",
+          "$|R_2(0.03)| = |\\frac{10}{27(1+c)^{8/3}} \\cdot \\frac{(0.03)^3}{6}|$.",
+          "Vì $c \\in (0, 0.03)$, $1 < 1+c < 1.03$. Do đó $(1+c)^{8/3} > 1$, và $\\frac{1}{(1+c)^{8/3}} < 1$.",
+          "$|R_2(0.03)| < \\frac{10}{27} \\cdot 1 \\cdot \\frac{0.000027}{6} = \\frac{10}{6} \\cdot 0.000001 = \\frac{5}{3} \\cdot 10^{-6} \\approx 1.67 \\times 10^{-6}$. Sai số rất nhỏ."
         ]
       }
     },
@@ -8686,17 +8686,17 @@
       "answer": {
         "steps": [
           "a) Gọi $x$ là chiều rộng (cạnh vuông góc với sông) và $y$ là chiều dài (cạnh song song với sông).",
-          "- Chu vi hàng rào là tổng của hai cạnh rộng và một cạnh dài: $2x + y = 2400$.",
-          "- Từ đó, $y = 2400 - 2x$.",
-          "- Diện tích của cánh đồng là $A = x \\cdot y = x(2400 - 2x) = 2400x - 2x^2$.",
-          "- Vậy hàm số diện tích là $A(x) = 2400x - 2x^2$. Miền xác định hợp lý cho $x$ là $x > 0$ và $y > 0 \\Rightarrow 2400 - 2x > 0 \\Rightarrow x < 1200$. Vậy $x \\in (0, 1200)$.",
+          "Chu vi hàng rào là tổng của hai cạnh rộng và một cạnh dài: $2x + y = 2400$.",
+          "Từ đó, $y = 2400 - 2x$.",
+          "Diện tích của cánh đồng là $A = x \\cdot y = x(2400 - 2x) = 2400x - 2x^2$.",
+          "Vậy hàm số diện tích là $A(x) = 2400x - 2x^2$. Miền xác định hợp lý cho $x$ là $x > 0$ và $y > 0 \\Rightarrow 2400 - 2x > 0 \\Rightarrow x < 1200$. Vậy $x \\in (0, 1200)$.",
           "b) Để tìm diện tích lớn nhất, ta tìm cực đại của $A(x)$.",
-          "- Tính đạo hàm: $A'(x) = 2400 - 4x$.",
-          "- Cho $A'(x) = 0 \\Leftrightarrow 2400 - 4x = 0 \\Leftrightarrow x = 600$.",
-          "- Tính đạo hàm cấp hai: $A''(x) = -4 < 0$. Do đó, $x=600$ là điểm cực đại.",
-          "- Kích thước tối ưu: chiều rộng $x = 600$ mét.",
-          "- Chiều dài $y = 2400 - 2(600) = 2400 - 1200 = 1200$ mét.",
-          "- Vậy kích thước để diện tích lớn nhất là 600m x 1200m."
+          "Tính đạo hàm: $A'(x) = 2400 - 4x$.",
+          "Cho $A'(x) = 0 \\Leftrightarrow 2400 - 4x = 0 \\Leftrightarrow x = 600$.",
+          "Tính đạo hàm cấp hai: $A''(x) = -4 < 0$. Do đó, $x=600$ là điểm cực đại.",
+          "Kích thước tối ưu: chiều rộng $x = 600$ mét.",
+          "Chiều dài $y = 2400 - 2(600) = 2400 - 1200 = 1200$ mét.",
+          "Vậy kích thước để diện tích lớn nhất là 600m x 1200m."
         ]
       }
     },
@@ -8706,18 +8706,18 @@
         "steps": [
           "Đặt $f(x) = 2x - 1 - \\sin(x)$.",
           "Bước 1: Chứng minh có ít nhất một nghiệm.",
-          "- $f(x)$ là hàm liên tục trên $\\mathbb{R}$.",
-          "- Chọn $x=0$, $f(0) = -1 < 0$.",
-          "- Chọn $x=\\pi/2$, $f(\\pi/2) = 2(\\pi/2) - 1 - \\sin(\\pi/2) = \\pi - 1 - 1 = \\pi - 2 > 0$.",
-          "- Vì $f(0)f(\\pi/2) < 0$, theo định lý giá trị trung gian, tồn tại ít nhất một nghiệm $c \\in (0, \\pi/2)$.",
+          "$f(x)$ là hàm liên tục trên $\\mathbb{R}$.",
+          "Chọn $x=0$, $f(0) = -1 < 0$.",
+          "Chọn $x=\\pi/2$, $f(\\pi/2) = 2(\\pi/2) - 1 - \\sin(\\pi/2) = \\pi - 1 - 1 = \\pi - 2 > 0$.",
+          "Vì $f(0)f(\\pi/2) < 0$, theo định lý giá trị trung gian, tồn tại ít nhất một nghiệm $c \\in (0, \\pi/2)$.",
           "Bước 2: Chứng minh có không quá một nghiệm.",
-          "- Giả sử phương trình có hai nghiệm phân biệt $a$ và $b$, tức là $f(a)=f(b)=0$.",
-          "- Theo định lý Rolle, tồn tại $d$ nằm giữa $a$ và $b$ sao cho $f'(d)=0$.",
-          "- Tính đạo hàm: $f'(x) = 2 - \\cos(x)$.",
-          "- Ta biết rằng $-1 \\le \\cos(x) \\le 1$ với mọi $x$.",
-          "- Do đó, $f'(x) = 2 - \\cos(x) \\ge 2 - 1 = 1 > 0$ với mọi $x$.",
-          "- Điều này có nghĩa là $f'(x)$ không bao giờ bằng 0, mâu thuẫn với kết luận từ định lý Rolle.",
-          "- Vậy giả sử có hai nghiệm là sai. Phương trình chỉ có tối đa một nghiệm.",
+          "Giả sử phương trình có hai nghiệm phân biệt $a$ và $b$, tức là $f(a)=f(b)=0$.",
+          "Theo định lý Rolle, tồn tại $d$ nằm giữa $a$ và $b$ sao cho $f'(d)=0$.",
+          "Tính đạo hàm: $f'(x) = 2 - \\cos(x)$.",
+          "Ta biết rằng $-1 \\le \\cos(x) \\le 1$ với mọi $x$.",
+          "Do đó, $f'(x) = 2 - \\cos(x) \\ge 2 - 1 = 1 > 0$ với mọi $x$.",
+          "Điều này có nghĩa là $f'(x)$ không bao giờ bằng 0, mâu thuẫn với kết luận từ định lý Rolle.",
+          "Vậy giả sử có hai nghiệm là sai. Phương trình chỉ có tối đa một nghiệm.",
           "Kết luận: Từ hai bước trên, phương trình có đúng một nghiệm thực."
         ]
       }
@@ -8727,11 +8727,11 @@
       "answer": {
         "steps": [
           "Ta sử dụng các khai triển Maclaurin đã biết:",
-          "- $\\ln(1+u) = u - \\frac{u^2}{2} + O(u^3)$. Cho $u=x^2$, ta có $\\ln(1+x^2) = x^2 - \\frac{(x^2)^2}{2} + O((x^2)^3) = x^2 - \\frac{x^4}{2} + O(x^6)$.",
-          "- $\\cos(x) = 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} + O(x^6) = 1 - \\frac{x^2}{2} + \\frac{x^4}{24} + O(x^6)$.",
+          "$\\ln(1+u) = u - \\frac{u^2}{2} + O(u^3)$. Cho $u=x^2$, ta có $\\ln(1+x^2) = x^2 - \\frac{(x^2)^2}{2} + O((x^2)^3) = x^2 - \\frac{x^4}{2} + O(x^6)$.",
+          "$\\cos(x) = 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} + O(x^6) = 1 - \\frac{x^2}{2} + \\frac{x^4}{24} + O(x^6)$.",
           "Thay các khai triển này vào biểu thức giới hạn:",
-          "- Tử số: $\\ln(1+x^2) - x^2 = (x^2 - \\frac{x^4}{2} + O(x^6)) - x^2 = -\\frac{x^4}{2} + O(x^6)$.",
-          "- Mẫu số: $\\cos(x) - 1 + x^2/2 = (1 - \\frac{x^2}{2} + \\frac{x^4}{24} + O(x^6)) - 1 + \\frac{x^2}{2} = \\frac{x^4}{24} + O(x^6)$.",
+          "Tử số: $\\ln(1+x^2) - x^2 = (x^2 - \\frac{x^4}{2} + O(x^6)) - x^2 = -\\frac{x^4}{2} + O(x^6)$.",
+          "Mẫu số: $\\cos(x) - 1 + x^2/2 = (1 - \\frac{x^2}{2} + \\frac{x^4}{24} + O(x^6)) - 1 + \\frac{x^2}{2} = \\frac{x^4}{24} + O(x^6)$.",
           "Tính giới hạn:",
           "$L = \\lim_{x \\to 0} \\frac{-\\frac{x^4}{2} + O(x^6)}{\\frac{x^4}{24} + O(x^6)}$.",
           "Chia cả tử và mẫu cho $x^4$:",
@@ -8744,18 +8744,18 @@
       "answer": {
         "steps": [
           "a) Tập xác định: $4-x^2 \\ge 0 \\Leftrightarrow x^2 \\le 4 \\Leftrightarrow -2 \\le x \\le 2$. Vậy $D = [-2, 2]$.",
-          "- Tính đạo hàm: $f'(x) = 1 \\cdot \\sqrt{4-x^2} + x \\cdot \\frac{-2x}{2\\sqrt{4-x^2}} = \\sqrt{4-x^2} - \\frac{x^2}{\\sqrt{4-x^2}}$.",
-          "- $f'(x) = \\frac{(4-x^2) - x^2}{\\sqrt{4-x^2}} = \\frac{4-2x^2}{\\sqrt{4-x^2}}$.",
-          "- Cho $f'(x)=0 \\Leftrightarrow 4-2x^2 = 0 \\Leftrightarrow x^2=2 \\Leftrightarrow x = \\pm \\sqrt{2}$. (Cả hai đều thuộc D).",
-          "- Xét dấu $f'(x)$ trên $(-2, 2)$: Dấu của $f'(x)$ phụ thuộc vào tử số $4-2x^2$.",
-          "  - Khoảng $(-\\sqrt{2}, \\sqrt{2})$: $f'(x) > 0$, hàm số đồng biến.",
-          "  - Khoảng $(-2, -\\sqrt{2})$ và $(\\sqrt{2}, 2)$: $f'(x) < 0$, hàm số nghịch biến.",
+          "Tính đạo hàm: $f'(x) = 1 \\cdot \\sqrt{4-x^2} + x \\cdot \\frac{-2x}{2\\sqrt{4-x^2}} = \\sqrt{4-x^2} - \\frac{x^2}{\\sqrt{4-x^2}}$.",
+          "$f'(x) = \\frac{(4-x^2) - x^2}{\\sqrt{4-x^2}} = \\frac{4-2x^2}{\\sqrt{4-x^2}}$.",
+          "Cho $f'(x)=0 \\Leftrightarrow 4-2x^2 = 0 \\Leftrightarrow x^2=2 \\Leftrightarrow x = \\pm \\sqrt{2}$. (Cả hai đều thuộc D).",
+          "Xét dấu $f'(x)$ trên $(-2, 2)$: Dấu của $f'(x)$ phụ thuộc vào tử số $4-2x^2$.",
+          "Khoảng $(-\\sqrt{2}, \\sqrt{2})$: $f'(x) > 0$, hàm số đồng biến.",
+          "Khoảng $(-2, -\\sqrt{2})$ và $(\\sqrt{2}, 2)$: $f'(x) < 0$, hàm số nghịch biến.",
           "b) Để tìm cực trị toàn cục, ta tính giá trị hàm số tại các điểm tới hạn và hai đầu mút.",
-          "- $f(-2) = -2\\sqrt{4-4} = 0$.",
-          "- $f(-\\sqrt{2}) = -\\sqrt{2}\\sqrt{4-2} = -\\sqrt{2}\\sqrt{2} = -2$.",
-          "- $f(\\sqrt{2}) = \\sqrt{2}\\sqrt{4-2} = \\sqrt{2}\\sqrt{2} = 2$.",
-          "- $f(2) = 2\\sqrt{4-4} = 0$.",
-          "- So sánh các giá trị $\\{0, -2, 2\\}$: Giá trị lớn nhất là 2 tại $x=\\sqrt{2}$. Giá trị nhỏ nhất là -2 tại $x=-\\sqrt{2}$."
+          "$f(-2) = -2\\sqrt{4-4} = 0$.",
+          "$f(-\\sqrt{2}) = -\\sqrt{2}\\sqrt{4-2} = -\\sqrt{2}\\sqrt{2} = -2$.",
+          "$f(\\sqrt{2}) = \\sqrt{2}\\sqrt{4-2} = \\sqrt{2}\\sqrt{2} = 2$.",
+          "$f(2) = 2\\sqrt{4-4} = 0$.",
+          "So sánh các giá trị $\\{0, -2, 2\\}$: Giá trị lớn nhất là 2 tại $x=\\sqrt{2}$. Giá trị nhỏ nhất là -2 tại $x=-\\sqrt{2}$."
         ]
       }
     },
@@ -8784,19 +8784,19 @@
       "answer": {
         "steps": [
           "Tập xác định: $x^2+2x \\ge 0 \\Leftrightarrow x(x+2) \\ge 0 \\Leftrightarrow x \\in (-\\infty, -2] \\cup [0, +\\infty)$.",
-          "1. Tiệm cận đứng: Hàm số xác định và liên tục trên tập xác định. Không có điểm $x_0$ nào mà giới hạn tại đó ra vô cùng. Vậy không có tiệm cận đứng.",
-          "2. Tiệm cận ngang: $\\lim_{x \\to \\pm\\infty} \\sqrt{x^2+2x} = +\\infty$. Không có tiệm cận ngang.",
-          "3. Tiệm cận xiên $y=ax+b$:",
-          "- Khi $x \\to +\\infty$:",
-          "  $a = \\lim_{x \\to +\\infty} \\frac{\\sqrt{x^2+2x}}{x} = \\lim_{x \\to +\\infty} \\frac{\\sqrt{x^2(1+2/x)}}{x} = \\lim_{x \\to +\\infty} \\frac{x\\sqrt{1+2/x}}{x} = 1$.",
-          "  $b = \\lim_{x \\to +\\infty} (\\sqrt{x^2+2x} - x) = \\lim_{x \\to +\\infty} \\frac{(\\sqrt{x^2+2x} - x)(\\sqrt{x^2+2x} + x)}{\\sqrt{x^2+2x} + x}$.",
-          "  $b = \\lim_{x \\to +\\infty} \\frac{x^2+2x-x^2}{\\sqrt{x^2+2x} + x} = \\lim_{x \\to +\\infty} \\frac{2x}{x\\sqrt{1+2/x} + x} = \\lim_{x \\to +\\infty} \\frac{2}{\\sqrt{1+2/x} + 1} = \\frac{2}{1+1} = 1$.",
-          "  Vậy $y = x+1$ là tiệm cận xiên khi $x \\to +\\infty$.",
-          "- Khi $x \\to -\\infty$:",
-          "  $a = \\lim_{x \\to -\\infty} \\frac{\\sqrt{x^2+2x}}{x} = \\lim_{x \\to -\\infty} \\frac{\\sqrt{x^2(1+2/x)}}{x} = \\lim_{x \\to -\\infty} \\frac{|x|\\sqrt{1+2/x}}{x} = \\lim_{x \\to -\\infty} \\frac{-x\\sqrt{1+2/x}}{x} = -1$.",
-          "  $b = \\lim_{x \\to -\\infty} (\\sqrt{x^2+2x} - (-1)x) = \\lim_{x \\to -\\infty} (\\sqrt{x^2+2x} + x)$.",
-          "  $b = \\lim_{x \\to -\\infty} \\frac{(\\sqrt{x^2+2x} + x)(\\sqrt{x^2+2x} - x)}{\\sqrt{x^2+2x} - x} = \\lim_{x \\to -\\infty} \\frac{2x}{\\sqrt{x^2+2x} - x} = \\lim_{x \\to -\\infty} \\frac{2x}{-x\\sqrt{1+2/x} - x} = \\lim_{x \\to -\\infty} \\frac{2}{-\\sqrt{1+2/x} - 1} = \\frac{2}{-1-1} = -1$.",
-          "  Vậy $y = -x-1$ là tiệm cận xiên khi $x \\to -\\infty$."
+          "Tiệm cận đứng: Hàm số xác định và liên tục trên tập xác định. Không có điểm $x_0$ nào mà giới hạn tại đó ra vô cùng. Vậy không có tiệm cận đứng.",
+          "Tiệm cận ngang: $\\lim_{x \\to \\pm\\infty} \\sqrt{x^2+2x} = +\\infty$. Không có tiệm cận ngang.",
+          "Tiệm cận xiên $y=ax+b$:",
+          "Khi $x \\to +\\infty$:",
+          "$a = \\lim_{x \\to +\\infty} \\frac{\\sqrt{x^2+2x}}{x} = \\lim_{x \\to +\\infty} \\frac{\\sqrt{x^2(1+2/x)}}{x} = \\lim_{x \\to +\\infty} \\frac{x\\sqrt{1+2/x}}{x} = 1$.",
+          "$b = \\lim_{x \\to +\\infty} (\\sqrt{x^2+2x} - x) = \\lim_{x \\to +\\infty} \\frac{(\\sqrt{x^2+2x} - x)(\\sqrt{x^2+2x} + x)}{\\sqrt{x^2+2x} + x}$.",
+          "$b = \\lim_{x \\to +\\infty} \\frac{x^2+2x-x^2}{\\sqrt{x^2+2x} + x} = \\lim_{x \\to +\\infty} \\frac{2x}{x\\sqrt{1+2/x} + x} = \\lim_{x \\to +\\infty} \\frac{2}{\\sqrt{1+2/x} + 1} = \\frac{2}{1+1} = 1$.",
+          "Vậy $y = x+1$ là tiệm cận xiên khi $x \\to +\\infty$.",
+          "Khi $x \\to -\\infty$:",
+          "$a = \\lim_{x \\to -\\infty} \\frac{\\sqrt{x^2+2x}}{x} = \\lim_{x \\to -\\infty} \\frac{\\sqrt{x^2(1+2/x)}}{x} = \\lim_{x \\to -\\infty} \\frac{|x|\\sqrt{1+2/x}}{x} = \\lim_{x \\to -\\infty} \\frac{-x\\sqrt{1+2/x}}{x} = -1$.",
+          "$b = \\lim_{x \\to -\\infty} (\\sqrt{x^2+2x} - (-1)x) = \\lim_{x \\to -\\infty} (\\sqrt{x^2+2x} + x)$.",
+          "$b = \\lim_{x \\to -\\infty} \\frac{(\\sqrt{x^2+2x} + x)(\\sqrt{x^2+2x} - x)}{\\sqrt{x^2+2x} - x} = \\lim_{x \\to -\\infty} \\frac{2x}{\\sqrt{x^2+2x} - x} = \\lim_{x \\to -\\infty} \\frac{2x}{-x\\sqrt{1+2/x} - x} = \\lim_{x \\to -\\infty} \\frac{2}{-\\sqrt{1+2/x} - 1} = \\frac{2}{-1-1} = -1$.",
+          "Vậy $y = -x-1$ là tiệm cận xiên khi $x \\to -\\infty$."
         ]
       }
     },
@@ -8805,17 +8805,17 @@
       "answer": {
         "steps": [
           "Từ điều kiện bài toán, ta có hệ 3 phương trình:",
-          "1. Đồ thị đi qua điểm cực tiểu $(0, -1)$: $f(0) = -1$.",
-          "2. Đạt cực trị tại $x=0$: $f'(0)=0$.",
-          "3. Có điểm uốn tại $x=1/2$: $f''(1/2)=0$.",
+          "Đồ thị đi qua điểm cực tiểu $(0, -1)$: $f(0) = -1$.",
+          "Đạt cực trị tại $x=0$: $f'(0)=0$.",
+          "Có điểm uốn tại $x=1/2$: $f''(1/2)=0$.",
           "Tính các đạo hàm:",
           "$f'(x) = 2e^{2x}(ax^2+bx+c) + e^{2x}(2ax+b) = e^{2x}(2ax^2 + (2b+2a)x + 2c+b)$.",
           "$f''(x) = 2e^{2x}(2ax^2 + (2b+2a)x + 2c+b) + e^{2x}(4ax + 2b+2a)$.",
           "$f''(x) = e^{2x}(4ax^2 + (4b+4a+4a)x + (4c+2b+2b+2a)) = e^{2x}(4ax^2 + (8a+4b)x + 4c+4b+2a)$.",
           "Áp dụng các điều kiện:",
-          "1. $f(0) = e^0(c) = c = -1$.",
-          "2. $f'(0) = e^0(2c+b) = 2c+b = 0$. Với $c=-1$, ta có $2(-1)+b=0 \\Rightarrow b=2$.",
-          "3. $f''(1/2) = e^1(4a(1/4) + (8a+4b)(1/2) + 4c+4b+2a) = 0$.",
+          "$f(0) = e^0(c) = c = -1$.",
+          "$f'(0) = e^0(2c+b) = 2c+b = 0$. Với $c=-1$, ta có $2(-1)+b=0 \\Rightarrow b=2$.",
+          "$f''(1/2) = e^1(4a(1/4) + (8a+4b)(1/2) + 4c+4b+2a) = 0$.",
           "$e(a + 4a+2b + 4c+4b+2a) = 0 \\Rightarrow 7a+6b+4c=0$.",
           "Thay $b=2, c=-1$ vào: $7a + 6(2) + 4(-1) = 0 \\Rightarrow 7a+12-4=0 \\Rightarrow 7a = -8 \\Rightarrow a=-8/7$.",
           "Vậy $a = -8/7$, $b=2$, $c=-1$."
@@ -8848,9 +8848,9 @@
           "Tại các điểm cực trị, đạo hàm phải bằng 0. Do đó, $f'(1)=0$ và $f'(3)=0$.",
           "Vậy ta đã tìm được 3 nghiệm phân biệt cho $f'(x)=0$ là $x=1, x=3$ và $c_1 \\in (1, 3)$.",
           "b) Không cần tính đạo hàm, ta có thể suy luận các nghiệm của $f'(x)=0$ như sau:",
-          "- Tại các điểm cực trị địa phương, đạo hàm bằng 0. Do dạng của hàm số $(x-1)^2(x-3)^2 \\ge 0$, ta thấy $f(x)$ đạt giá trị nhỏ nhất (bằng 0) tại $x=1$ và $x=3$. Đây là hai điểm cực tiểu, vậy $f'(1)=0$ và $f'(3)=0$.",
-          "- Giữa hai điểm cực tiểu $x=1$ và $x=3$, phải có một điểm cực đại. Gọi điểm đó là $c$. Tại điểm cực đại này, đạo hàm cũng phải bằng 0, tức là $f'(c)=0$. Điểm này phải nằm trong khoảng $(1,3)$.",
-          "- Vậy ba nghiệm là $x=1$, $x=3$ và điểm cực đại nằm giữa chúng. (Bằng cách tính toán, ta có thể tìm được $c=2$)."
+          "Tại các điểm cực trị địa phương, đạo hàm bằng 0. Do dạng của hàm số $(x-1)^2(x-3)^2 \\ge 0$, ta thấy $f(x)$ đạt giá trị nhỏ nhất (bằng 0) tại $x=1$ và $x=3$. Đây là hai điểm cực tiểu, vậy $f'(1)=0$ và $f'(3)=0$.",
+          "Giữa hai điểm cực tiểu $x=1$ và $x=3$, phải có một điểm cực đại. Gọi điểm đó là $c$. Tại điểm cực đại này, đạo hàm cũng phải bằng 0, tức là $f'(c)=0$. Điểm này phải nằm trong khoảng $(1,3)$.",
+          "Vậy ba nghiệm là $x=1$, $x=3$ và điểm cực đại nằm giữa chúng. (Bằng cách tính toán, ta có thể tìm được $c=2$)."
         ]
       }
     },
@@ -8858,22 +8858,22 @@
       "question": "Khảo sát và vẽ đồ thị hàm số $y = \\frac{2x^2+x-1}{x+1}$.",
       "answer": {
         "steps": [
-          "1. Tập xác định: $D = \\mathbb{R} \\setminus \\{-1\\}$.",
-          "2. Rút gọn (nếu có thể): Tử số $2x^2+x-1 = (2x-1)(x+1)$.",
+          "Tập xác định: $D = \\mathbb{R} \\setminus \\{-1\\}$.",
+          "Rút gọn (nếu có thể): Tử số $2x^2+x-1 = (2x-1)(x+1)$.",
           "Vậy $y = \\frac{(2x-1)(x+1)}{x+1} = 2x-1$ với $x \\neq -1$.",
           "Đồ thị hàm số là đường thẳng $y=2x-1$ bị thủng một lỗ tại điểm có hoành độ $x=-1$.",
           "Tại $x=-1$, $y = 2(-1)-1 = -3$.",
-          "3. Sự biến thiên:",
-          "- $y' = 2 > 0$ với mọi $x \\in D$. Hàm số luôn đồng biến trên $(-\\infty, -1)$ và $(-1, +\\infty)$.",
-          "- Hàm số không có cực trị.",
-          "4. Tính lồi, lõm, điểm uốn:",
-          "- $y'' = 0$. Đồ thị không lồi, không lõm, không có điểm uốn.",
-          "5. Tiệm cận:",
-          "- $\\lim_{x \\to -1} y = \\lim_{x \\to -1} (2x-1) = -3$. Giới hạn hữu hạn nên không có tiệm cận đứng.",
-          "- Không có tiệm cận ngang và tiệm cận xiên vì đồ thị là một đường thẳng.",
-          "6. Bảng biến thiên và đồ thị:",
-          "- Bảng biến thiên cho thấy hàm số luôn đi lên.",
-          "- Đồ thị là đường thẳng $y=2x-1$, đi qua các điểm $(0, -1), (1/2, 0)$, nhưng có một điểm gián đoạn (lỗ hổng) tại tọa độ $(-1, -3)$."
+          "Sự biến thiên:",
+          "$y' = 2 > 0$ với mọi $x \\in D$. Hàm số luôn đồng biến trên $(-\\infty, -1)$ và $(-1, +\\infty)$.",
+          "Hàm số không có cực trị.",
+          "Tính lồi, lõm, điểm uốn:",
+          "$y'' = 0$. Đồ thị không lồi, không lõm, không có điểm uốn.",
+          "Tiệm cận:",
+          "$\\lim_{x \\to -1} y = \\lim_{x \\to -1} (2x-1) = -3$. Giới hạn hữu hạn nên không có tiệm cận đứng.",
+          "Không có tiệm cận ngang và tiệm cận xiên vì đồ thị là một đường thẳng.",
+          "Bảng biến thiên và đồ thị:",
+          "Bảng biến thiên cho thấy hàm số luôn đi lên.",
+          "Đồ thị là đường thẳng $y=2x-1$, đi qua các điểm $(0, -1), (1/2, 0)$, nhưng có một điểm gián đoạn (lỗ hổng) tại tọa độ $(-1, -3)$."
         ]
       }
     },
@@ -8882,12 +8882,12 @@
       "answer": {
         "steps": [
           "Xét hàm số $g(x) = f(x) + x - 1$. Hàm $g(x)$ liên tục và khả vi trên $[0, 1]$.",
-          "- Ta có $g(0) = f(0)+0-1 = -1$.",
-          "- $g(1) = f(1)+1-1 = 1$.",
-          "- Vì $g(0)g(1) < 0$, theo định lý giá trị trung gian, tồn tại $c \\in (0, 1)$ sao cho $g(c)=0$, tức là $f(c)+c-1=0 \\Rightarrow f(c) = 1-c$.",
+          "Ta có $g(0) = f(0)+0-1 = -1$.",
+          "$g(1) = f(1)+1-1 = 1$.",
+          "Vì $g(0)g(1) < 0$, theo định lý giá trị trung gian, tồn tại $c \\in (0, 1)$ sao cho $g(c)=0$, tức là $f(c)+c-1=0 \\Rightarrow f(c) = 1-c$.",
           "Bây giờ áp dụng định lý Lagrange cho hàm $f(x)$ trên hai đoạn $[0, c]$ và $[c, 1]$.",
-          "- Trên $[0, c]$, tồn tại $a \\in (0, c)$ sao cho $f'(a) = \\frac{f(c)-f(0)}{c-0} = \\frac{1-c-0}{c} = \\frac{1-c}{c}$.",
-          "- Trên $[c, 1]$, tồn tại $b \\in (c, 1)$ sao cho $f'(b) = \\frac{f(1)-f(c)}{1-c} = \\frac{1-(1-c)}{1-c} = \\frac{c}{1-c}$.",
+          "Trên $[0, c]$, tồn tại $a \\in (0, c)$ sao cho $f'(a) = \\frac{f(c)-f(0)}{c-0} = \\frac{1-c-0}{c} = \\frac{1-c}{c}$.",
+          "Trên $[c, 1]$, tồn tại $b \\in (c, 1)$ sao cho $f'(b) = \\frac{f(1)-f(c)}{1-c} = \\frac{1-(1-c)}{1-c} = \\frac{c}{1-c}$.",
           "Vì $a \\in (0, c)$ và $b \\in (c, 1)$, nên $a$ và $b$ là hai số phân biệt trong $(0, 1)$.",
           "Nhân $f'(a)$ và $f'(b)$ với nhau:",
           "$f'(a)f'(b) = \\left( \\frac{1-c}{c} \\right) \\cdot \\left( \\frac{c}{1-c} \\right) = 1$.",
@@ -8900,10 +8900,10 @@
       "answer": {
         "steps": [
           "Ta cần tính các đạo hàm của $f(x)=\\cos(x)$ tại $x_0=\\pi/3$.",
-          "- $f(x) = \\cos(x) \\Rightarrow f(\\pi/3) = \\cos(\\pi/3) = 1/2$.",
-          "- $f'(x) = -\\sin(x) \\Rightarrow f'(\\pi/3) = -\\sin(\\pi/3) = -\\sqrt{3}/2$.",
-          "- $f''(x) = -\\cos(x) \\Rightarrow f''(\\pi/3) = -\\cos(\\pi/3) = -1/2$.",
-          "- $f'''(x) = \\sin(x) \\Rightarrow f'''(\\pi/3) = \\sin(\\pi/3) = \\sqrt{3}/2$.",
+          "$f(x) = \\cos(x) \\Rightarrow f(\\pi/3) = \\cos(\\pi/3) = 1/2$.",
+          "$f'(x) = -\\sin(x) \\Rightarrow f'(\\pi/3) = -\\sin(\\pi/3) = -\\sqrt{3}/2$.",
+          "$f''(x) = -\\cos(x) \\Rightarrow f''(\\pi/3) = -\\cos(\\pi/3) = -1/2$.",
+          "$f'''(x) = \\sin(x) \\Rightarrow f'''(\\pi/3) = \\sin(\\pi/3) = \\sqrt{3}/2$.",
           "Công thức khai triển Taylor bậc 3 tại $x_0 = \\pi/3$ là:",
           "$P_3(x) = f(x_0) + \\frac{f'(x_0)}{1!}(x-x_0) + \\frac{f''(x_0)}{2!}(x-x_0)^2 + \\frac{f'''(x_0)}{3!}(x-x_0)^3$.",
           "Thay số:",
@@ -8960,12 +8960,12 @@
           "Đặt $t = \\cos(x)$, với $x \\in [0, \\pi]$ thì $t \\in [-1, 1]$.",
           "Phương trình trở thành $2t^2 + t - 1 = 0 \\Leftrightarrow (2t-1)(t+1) = 0$.",
           "Nghiệm là $t=1/2$ hoặc $t=-1$.",
-          "- Nếu $\\cos(x) = 1/2$, trên $[0, \\pi]$ ta có $x=\\pi/3$.",
-          "- Nếu $\\cos(x) = -1$, trên $[0, \\pi]$ ta có $x=\\pi$.",
+          "Nếu $\\cos(x) = 1/2$, trên $[0, \\pi]$ ta có $x=\\pi/3$.",
+          "Nếu $\\cos(x) = -1$, trên $[0, \\pi]$ ta có $x=\\pi$.",
           "Các điểm cần xét là: $0, \\pi/3, \\pi$.",
-          "- $f(0) = \\sin(0)(1+\\cos(0)) = 0$.",
-          "- $f(\\pi/3) = \\sin(\\pi/3)(1+\\cos(\\pi/3)) = \\frac{\\sqrt{3}}{2}(1+\\frac{1}{2}) = \\frac{\\sqrt{3}}{2} \\cdot \\frac{3}{2} = \\frac{3\\sqrt{3}}{4}$.",
-          "- $f(\\pi) = \\sin(\\pi)(1+\\cos(\\pi)) = 0$.",
+          "$f(0) = \\sin(0)(1+\\cos(0)) = 0$.",
+          "$f(\\pi/3) = \\sin(\\pi/3)(1+\\cos(\\pi/3)) = \\frac{\\sqrt{3}}{2}(1+\\frac{1}{2}) = \\frac{\\sqrt{3}}{2} \\cdot \\frac{3}{2} = \\frac{3\\sqrt{3}}{4}$.",
+          "$f(\\pi) = \\sin(\\pi)(1+\\cos(\\pi)) = 0$.",
           "So sánh các giá trị, giá trị lớn nhất là $\\frac{3\\sqrt{3}}{4}$ đạt được tại $x=\\pi/3$."
         ]
       }
@@ -9000,8 +9000,8 @@
       "answer": {
         "steps": [
           "Áp dụng định lý Lagrange cho hàm $f(x)$ trên hai đoạn $[0, 1]$ và $[1, 2]$.",
-          "- Trên đoạn $[0, 1]$, tồn tại $c_1 \\in (0, 1)$ sao cho $f'(c_1) = \\frac{f(1)-f(0)}{1-0} = \\frac{1-0}{1} = 1$.",
-          "- Trên đoạn $[1, 2]$, tồn tại $c_2 \\in (1, 2)$ sao cho $f'(c_2) = \\frac{f(2)-f(1)}{2-1} = \\frac{2-1}{1} = 1$.",
+          "Trên đoạn $[0, 1]$, tồn tại $c_1 \\in (0, 1)$ sao cho $f'(c_1) = \\frac{f(1)-f(0)}{1-0} = \\frac{1-0}{1} = 1$.",
+          "Trên đoạn $[1, 2]$, tồn tại $c_2 \\in (1, 2)$ sao cho $f'(c_2) = \\frac{f(2)-f(1)}{2-1} = \\frac{2-1}{1} = 1$.",
           "Bây giờ ta có $c_1 \\in (0, 1)$ và $c_2 \\in (1, 2)$, do đó $c_1 < c_2$.",
           "Xét hàm số $g(x) = f'(x)$ trên đoạn $[c_1, c_2]$.",
           "Hàm $f(x)$ khả vi bậc hai trên $[0, 2]$ nên $f'(x)$ liên tục trên $[c_1, c_2]$ và khả vi trên $(c_1, c_2)$.",
@@ -9020,14 +9020,14 @@
           "Ta cần xây dựng một hàm phụ $g(x)$ sao cho $g(a)=g(b)$ và $g'(x)$ có dạng $e^{kx}(f'(x) + kf(x))$.",
           "Xét hàm số phụ: $g(x) = e^{kx}f(x)$.",
           "a) Kiểm tra điều kiện định lý Rolle cho $g(x)$ trên $[a,b]$:",
-          "- Vì $e^{kx}$ và $f(x)$ liên tục và khả vi, nên $g(x)$ cũng liên tục trên $[a,b]$ và khả vi trên $(a,b)$.",
-          "- Tính giá trị tại hai đầu mút: $g(a) = e^{ka}f(a) = e^{ka} \\cdot 0 = 0$.",
-          "- $g(b) = e^{kb}f(b) = e^{kb} \\cdot 0 = 0$.",
-          "- Do đó $g(a) = g(b)$.",
+          "Vì $e^{kx}$ và $f(x)$ liên tục và khả vi, nên $g(x)$ cũng liên tục trên $[a,b]$ và khả vi trên $(a,b)$.",
+          "Tính giá trị tại hai đầu mút: $g(a) = e^{ka}f(a) = e^{ka} \\cdot 0 = 0$.",
+          "$g(b) = e^{kb}f(b) = e^{kb} \\cdot 0 = 0$.",
+          "Do đó $g(a) = g(b)$.",
           "b) Áp dụng định lý Rolle: Tồn tại $c \\in (a, b)$ sao cho $g'(c) = 0$.",
-          "- Tính đạo hàm của $g(x)$: $g'(x) = (e^{kx})'f(x) + e^{kx}f'(x) = ke^{kx}f(x) + e^{kx}f'(x) = e^{kx}(kf(x) + f'(x))$.",
-          "- Theo kết luận của định lý Rolle, $g'(c) = e^{kc}(kf(c) + f'(c)) = 0$.",
-          "- Vì $e^{kc} > 0$ với mọi $c$, ta suy ra $kf(c) + f'(c) = 0$. Đây là điều phải chứng minh."
+          "Tính đạo hàm của $g(x)$: $g'(x) = (e^{kx})'f(x) + e^{kx}f'(x) = ke^{kx}f(x) + e^{kx}f'(x) = e^{kx}(kf(x) + f'(x))$.",
+          "Theo kết luận của định lý Rolle, $g'(c) = e^{kc}(kf(c) + f'(c)) = 0$.",
+          "Vì $e^{kc} > 0$ với mọi $c$, ta suy ra $kf(c) + f'(c) = 0$. Đây là điều phải chứng minh."
         ]
       }
     },
@@ -9077,8 +9077,8 @@
           "Tính đạo hàm: $D'(x) = 4x^3 - 10x = 2x(2x^2 - 5)$.",
           "Cho $D'(x) = 0 \\Leftrightarrow x=0$ hoặc $2x^2-5=0 \\Leftrightarrow x = \\pm \\sqrt{5/2}$.",
           "Tính đạo hàm cấp hai: $D''(x) = 12x^2 - 10$.",
-          "- Tại $x=0$, $D''(0) = -10 < 0$, đây là điểm cực đại.",
-          "- Tại $x = \\pm \\sqrt{5/2}$, $D''(\\pm \\sqrt{5/2}) = 12(5/2) - 10 = 30-10=20 > 0$, đây là các điểm cực tiểu.",
+          "Tại $x=0$, $D''(0) = -10 < 0$, đây là điểm cực đại.",
+          "Tại $x = \\pm \\sqrt{5/2}$, $D''(\\pm \\sqrt{5/2}) = 12(5/2) - 10 = 30-10=20 > 0$, đây là các điểm cực tiểu.",
           "Vậy khoảng cách ngắn nhất đạt được tại $x = \\pm \\sqrt{5/2}$.",
           "Tọa độ các điểm cần tìm là: $(-\\sqrt{5/2}, 5/2)$ và $(\\sqrt{5/2}, 5/2)$."
         ]
@@ -9095,9 +9095,9 @@
           "Bây giờ ta kiểm tra điều kiện đủ $y''(1)<0$ cho từng trường hợp.",
           "Tính đạo hàm cấp hai: $y'' = 6x - 6m$.",
           "Trường hợp 1: $m=0$.",
-          "- $y'' = 6x$. Tại $x=1$, $y''(1) = 6 > 0$. Hàm số đạt cực tiểu tại $x=1$. (Loại)",
+          "$y'' = 6x$. Tại $x=1$, $y''(1) = 6 > 0$. Hàm số đạt cực tiểu tại $x=1$. (Loại)",
           "Trường hợp 2: $m=2$.",
-          "- $y'' = 6x - 6(2) = 6x - 12$. Tại $x=1$, $y''(1) = 6-12 = -6 < 0$. Hàm số đạt cực đại tại $x=1$. (Nhận)",
+          "$y'' = 6x - 6(2) = 6x - 12$. Tại $x=1$, $y''(1) = 6-12 = -6 < 0$. Hàm số đạt cực đại tại $x=1$. (Nhận)",
           "Vậy giá trị cần tìm của tham số là $m=2$."
         ]
       }
@@ -9162,20 +9162,20 @@
         "steps": [
           "Đặt $f(x) = x^4 - 4x + 1$.",
           "Bước 1: Chứng minh có ít nhất hai nghiệm.",
-          "- $f(x)$ liên tục trên $\\mathbb{R}$.",
-          "- $f(0) = 1 > 0$.",
-          "- $f(1) = 1 - 4 + 1 = -2 < 0$. Vì $f(0)f(1)<0$, có ít nhất một nghiệm $c_1 \\in (0, 1)$.",
-          "- $f(2) = 16 - 8 + 1 = 9 > 0$. Vì $f(1)f(2)<0$, có ít nhất một nghiệm $c_2 \\in (1, 2)$.",
+          "$f(x)$ liên tục trên $\\mathbb{R}$.",
+          "$f(0) = 1 > 0$.",
+          "$f(1) = 1 - 4 + 1 = -2 < 0$. Vì $f(0)f(1)<0$, có ít nhất một nghiệm $c_1 \\in (0, 1)$.",
+          "$f(2) = 16 - 8 + 1 = 9 > 0$. Vì $f(1)f(2)<0$, có ít nhất một nghiệm $c_2 \\in (1, 2)$.",
           "Vậy phương trình có ít nhất hai nghiệm thực.",
           "Bước 2: Chứng minh có không quá hai nghiệm.",
-          "- Tính đạo hàm: $f'(x) = 4x^3 - 4 = 4(x^3 - 1)$.",
-          "- $f'(x) = 0 \\Leftrightarrow x^3-1=0 \\Leftrightarrow x=1$.",
-          "- Giả sử phương trình $f(x)=0$ có ba nghiệm phân biệt $a < b < d$.",
-          "- Theo định lý Rolle, giữa hai nghiệm bất kỳ của $f(x)$ phải có một nghiệm của $f'(x)$.",
-          "- Vậy, phải tồn tại $k_1 \\in (a, b)$ và $k_2 \\in (b, d)$ sao cho $f'(k_1)=0$ và $f'(k_2)=0$.",
-          "- Điều này có nghĩa là phương trình $f'(x)=0$ phải có ít nhất hai nghiệm phân biệt.",
-          "- Nhưng ta đã thấy $f'(x)=0$ chỉ có một nghiệm duy nhất là $x=1$. Mâu thuẫn.",
-          "- Vậy giả sử có ba nghiệm là sai. Phương trình có tối đa hai nghiệm.",
+          "Tính đạo hàm: $f'(x) = 4x^3 - 4 = 4(x^3 - 1)$.",
+          "$f'(x) = 0 \\Leftrightarrow x^3-1=0 \\Leftrightarrow x=1$.",
+          "Giả sử phương trình $f(x)=0$ có ba nghiệm phân biệt $a < b < d$.",
+          "Theo định lý Rolle, giữa hai nghiệm bất kỳ của $f(x)$ phải có một nghiệm của $f'(x)$.",
+          "Vậy, phải tồn tại $k_1 \\in (a, b)$ và $k_2 \\in (b, d)$ sao cho $f'(k_1)=0$ và $f'(k_2)=0$.",
+          "Điều này có nghĩa là phương trình $f'(x)=0$ phải có ít nhất hai nghiệm phân biệt.",
+          "Nhưng ta đã thấy $f'(x)=0$ chỉ có một nghiệm duy nhất là $x=1$. Mâu thuẫn.",
+          "Vậy giả sử có ba nghiệm là sai. Phương trình có tối đa hai nghiệm.",
           "Kết luận: Từ hai bước, phương trình có đúng hai nghiệm thực."
         ]
       }
@@ -9191,11 +9191,11 @@
           "Dấu của $y''$ phụ thuộc vào dấu của tử số $2-2x^2$ vì mẫu số luôn dương.",
           "Cho $y'' = 0 \\Leftrightarrow 2-2x^2 = 0 \\Leftrightarrow x^2=1 \\Leftrightarrow x = \\pm 1$.",
           "Lập bảng xét dấu cho $y''$:",
-          "- Khoảng $(-\\infty, -1)$ và $(1, +\\infty)$: $2-2x^2 < 0 \\Rightarrow y'' < 0$. Đồ thị lồi (hướng xuống).",
-          "- Khoảng $(-1, 1)$: $2-2x^2 > 0 \\Rightarrow y'' > 0$. Đồ thị lõm (hướng lên).",
+          "Khoảng $(-\\infty, -1)$ và $(1, +\\infty)$: $2-2x^2 < 0 \\Rightarrow y'' < 0$. Đồ thị lồi (hướng xuống).",
+          "Khoảng $(-1, 1)$: $2-2x^2 > 0 \\Rightarrow y'' > 0$. Đồ thị lõm (hướng lên).",
           "Vì $y''$ đổi dấu tại $x=1$ và $x=-1$, đồ thị có hai điểm uốn.",
-          "- Tọa độ điểm uốn: $y(1)=y(-1)=\\ln(1^2+1)=\\ln(2)$.",
-          "- Các điểm uốn là $(1, \\ln 2)$ và $(-1, \\ln 2)$."
+          "Tọa độ điểm uốn: $y(1)=y(-1)=\\ln(1^2+1)=\\ln(2)$.",
+          "Các điểm uốn là $(1, \\ln 2)$ và $(-1, \\ln 2)$."
         ]
       }
     },
@@ -9258,8 +9258,8 @@
       "answer": {
         "steps": [
           "Để $U(1, 2)$ là điểm uốn, đồ thị phải thỏa mãn hai điều kiện:",
-          "1. Đồ thị đi qua điểm $U(1, 2)$, tức là $y(1)=2$.",
-          "2. Đạo hàm cấp hai tại $x=1$ bằng 0, tức là $y''(1)=0$. (Và $y''$ đổi dấu qua $x=1$).",
+          "Đồ thị đi qua điểm $U(1, 2)$, tức là $y(1)=2$.",
+          "Đạo hàm cấp hai tại $x=1$ bằng 0, tức là $y''(1)=0$. (Và $y''$ đổi dấu qua $x=1$).",
           "Tính các đạo hàm:",
           "$y' = 3ax^2 + 2bx$.",
           "$y'' = 6ax + 2b$.",
@@ -9370,17 +9370,17 @@
         "steps": [
           "Xét hàm số $g(x) = f(x) - x$. Ta cần chứng minh phương trình $g(x)=0$ có duy nhất một nghiệm trong $[0,1]$.",
           "Bước 1: Chứng minh có ít nhất một nghiệm.",
-          "- Hàm $g(x)$ liên tục trên $[0,1]$ vì $f(x)$ và $x$ đều liên tục.",
-          "- Xét giá trị tại hai đầu mút: $g(0) = f(0) - 0 = f(0)$. Theo giả thiết, $f(0)>0$ nên $g(0)>0$.",
-          "- $g(1) = f(1) - 1$. Theo giả thiết, $f(1)<1$ nên $g(1)<0$.",
-          "- Vì $g(0) > 0$ và $g(1) < 0$, theo định lý giá trị trung gian, tồn tại ít nhất một nghiệm $c \\in (0, 1)$ sao cho $g(c)=0$.",
+          "Hàm $g(x)$ liên tục trên $[0,1]$ vì $f(x)$ và $x$ đều liên tục.",
+          "Xét giá trị tại hai đầu mút: $g(0) = f(0) - 0 = f(0)$. Theo giả thiết, $f(0)>0$ nên $g(0)>0$.",
+          "$g(1) = f(1) - 1$. Theo giả thiết, $f(1)<1$ nên $g(1)<0$.",
+          "Vì $g(0) > 0$ và $g(1) < 0$, theo định lý giá trị trung gian, tồn tại ít nhất một nghiệm $c \\in (0, 1)$ sao cho $g(c)=0$.",
           "Bước 2: Chứng minh có không quá một nghiệm (tính duy nhất).",
-          "- Tính đạo hàm của $g(x)$: $g'(x) = f'(x) - 1$.",
-          "- Theo giả thiết, $0 < f'(x) < 1$ với mọi $x \\in [0, 1]$.",
-          "- Do đó, $g'(x) = f'(x) - 1 < 1 - 1 = 0$.",
-          "- Vì $g'(x) < 0$ với mọi $x \\in [0, 1]$, hàm số $g(x)$ luôn nghịch biến trên $[0, 1]$.",
-          "- Một hàm số luôn nghịch biến (hoặc luôn đồng biến) trên một khoảng chỉ có thể cắt trục hoành tại tối đa một điểm.",
-          "- Vậy phương trình $g(x)=0$ có tối đa một nghiệm.",
+          "Tính đạo hàm của $g(x)$: $g'(x) = f'(x) - 1$.",
+          "Theo giả thiết, $0 < f'(x) < 1$ với mọi $x \\in [0, 1]$.",
+          "Do đó, $g'(x) = f'(x) - 1 < 1 - 1 = 0$.",
+          "Vì $g'(x) < 0$ với mọi $x \\in [0, 1]$, hàm số $g(x)$ luôn nghịch biến trên $[0, 1]$.",
+          "Một hàm số luôn nghịch biến (hoặc luôn đồng biến) trên một khoảng chỉ có thể cắt trục hoành tại tối đa một điểm.",
+          "Vậy phương trình $g(x)=0$ có tối đa một nghiệm.",
           "Kết luận: Từ hai bước trên, phương trình $f(x)=x$ có duy nhất một nghiệm trong $[0, 1]$."
         ]
       }
@@ -9392,8 +9392,8 @@
           "Giả sử phản chứng rằng $f''(x) \\ge 0$ với mọi $x \\in (0, 1)$.",
           "Điều này có nghĩa là hàm $f'(x)$ là một hàm không giảm trên $(0, 1)$, và đồ thị của $f(x)$ là lõm (hoặc thẳng) trên $(0, 1)$.",
           "Áp dụng định lý Lagrange trên $[0, a]$ và $[a, 1]$:",
-          "- Tồn tại $c_1 \\in (0, a)$ sao cho $f'(c_1) = \\frac{f(a) - f(0)}{a - 0} = \\frac{f(a)}{a}$.",
-          "- Tồn tại $c_2 \\in (a, 1)$ sao cho $f'(c_2) = \\frac{f(1) - f(a)}{1 - a} = \\frac{-f(a)}{1 - a}$.",
+          "Tồn tại $c_1 \\in (0, a)$ sao cho $f'(c_1) = \\frac{f(a) - f(0)}{a - 0} = \\frac{f(a)}{a}$.",
+          "Tồn tại $c_2 \\in (a, 1)$ sao cho $f'(c_2) = \\frac{f(1) - f(a)}{1 - a} = \\frac{-f(a)}{1 - a}$.",
           "Vì $a \\in (0, 1)$ và $f(a) > 0$, ta có $f'(c_1) > 0$ và $f'(c_2) < 0$.",
           "Mặt khác, vì $0 < c_1 < a < c_2 < 1$, ta có $c_1 < c_2$.",
           "Vì $f'(x)$ là hàm không giảm, nên $f'(c_1) \\le f'(c_2)$.",
@@ -9437,8 +9437,8 @@
           "Vì $g'(x) > 0$ với mọi $x$, hàm số $g(x)$ luôn đồng biến (nghiêm ngặt) trên $\\mathbb{R}$.",
           "Một hàm đồng biến nghiêm ngặt là một hàm đơn ánh. Vậy $g(x)$ là đơn ánh.",
           "b) Phương trình $f(x)=x$ tương đương với $x - f(x) = 0$, tức là $g(x)=0$.",
-          "- Tính duy nhất: Vì $g(x)$ là hàm đơn ánh (đã chứng minh ở câu a), phương trình $g(x)=0$ có tối đa một nghiệm.",
-          "- Tính tồn tại: Ta cần chứng minh tồn tại $c$ sao cho $g(c)=0$.",
+          "Tính duy nhất: Vì $g(x)$ là hàm đơn ánh (đã chứng minh ở câu a), phương trình $g(x)=0$ có tối đa một nghiệm.",
+          "Tính tồn tại: Ta cần chứng minh tồn tại $c$ sao cho $g(c)=0$.",
           "Áp dụng định lý Lagrange cho $f(x)$ trên đoạn $[0, x]$ (với $x > 0$):",
           "$\\frac{f(x)-f(0)}{x-0} = f'(c)$ cho $c \\in (0,x)$. Suy ra $|f(x)-f(0)| = |x f'(c)| = |x| |f'(c)| \\le k|x|$.",
           "Do đó, $-k|x| \\le f(x)-f(0) \\le k|x|$. Suy ra $f(0)-kx \\le f(x) \\le f(0)+kx$ khi $x>0$.",
@@ -9575,9 +9575,9 @@
           "Biến đổi biểu thức trong tổng: $\\frac{n}{n^2+k^2} = \\frac{n}{n^2(1 + (k/n)^2)} = \\frac{1}{n} \\frac{1}{1+(k/n)^2}$.",
           "Vậy $L = \\lim_{n \\to \\infty} \\sum_{k=1}^{n} \\frac{1}{1+(k/n)^2} \\cdot \\frac{1}{n}$.",
           "So sánh với dạng tổng Riemann:",
-          "- Ta thấy $\\Delta x = \\frac{1}{n}$. Nếu chọn $a=0, b=1$, thì $\\Delta x = \\frac{1-0}{n} = \\frac{1}{n}$ phù hợp.",
-          "- Điểm mẫu $x_k = a + k \\Delta x = 0 + k/n = k/n$.",
-          "- Hàm số $f(x_k) = \\frac{1}{1+(k/n)^2}$ tương ứng với $f(x) = \\frac{1}{1+x^2}$.",
+          "Ta thấy $\\Delta x = \\frac{1}{n}$. Nếu chọn $a=0, b=1$, thì $\\Delta x = \\frac{1-0}{n} = \\frac{1}{n}$ phù hợp.",
+          "Điểm mẫu $x_k = a + k \\Delta x = 0 + k/n = k/n$.",
+          "Hàm số $f(x_k) = \\frac{1}{1+(k/n)^2}$ tương ứng với $f(x) = \\frac{1}{1+x^2}$.",
           "Do đó, giới hạn của tổng Riemann chính là tích phân xác định của hàm $f(x)=\\frac{1}{1+x^2}$ trên đoạn $[0, 1]$.",
           "$L = \\int_0^1 \\frac{1}{1+x^2} dx$.",
           "Tính tích phân: Nguyên hàm của $\\frac{1}{1+x^2}$ là $\\arctan(x)$.",
@@ -9612,8 +9612,8 @@
         "steps": [
           "Ta nghĩ đến việc áp dụng định lý Lagrange. Tuy nhiên, áp dụng một lần chỉ cho ta một điểm $c$.",
           "Xét điểm $a \\in (0,1)$ bất kỳ. Áp dụng định lý Lagrange trên hai đoạn $[0,a]$ và $[a,1]$.",
-          "- Tồn tại $c_1 \\in (0,a)$ sao cho $f'(c_1) = \\frac{f(a) - f(0)}{a-0} = \\frac{f(a)}{a}$.",
-          "- Tồn tại $c_2 \\in (a,1)$ sao cho $f'(c_2) = \\frac{f(1) - f(a)}{1-a} = \\frac{1-f(a)}{1-a}$.",
+          "Tồn tại $c_1 \\in (0,a)$ sao cho $f'(c_1) = \\frac{f(a) - f(0)}{a-0} = \\frac{f(a)}{a}$.",
+          "Tồn tại $c_2 \\in (a,1)$ sao cho $f'(c_2) = \\frac{f(1) - f(a)}{1-a} = \\frac{1-f(a)}{1-a}$.",
           "Vì $a \\in (0,1)$, ta có $c_1 < a < c_2$ nên $c_1 \\neq c_2$.",
           "Bây giờ ta tính tổng $S(a) = f'(c_1) + f'(c_2) = \\frac{f(a)}{a} + \\frac{1-f(a)}{1-a}$.",
           "Ta muốn chứng minh rằng tồn tại một giá trị $a$ sao cho $S(a) = 2$.",
@@ -9634,9 +9634,9 @@
           "Ta xây dựng một hàm phụ để áp dụng định lý Rolle.",
           "Xét hàm số $g(x) = \\begin{cases} \\frac{f(x)-f(a)}{x-a} & \\text{khi } x \\in (a, b] \\\\ f'(a) & \\text{khi } x=a \\end{cases}$.",
           "a) Chứng minh $g(x)$ liên tục trên $[a,b]$.",
-          "- $g(x)$ liên tục trên $(a,b]$ vì $f(x)$ liên tục.",
-          "- Tại $x=a$, $\\lim_{x \\to a^+} g(x) = \\lim_{x \\to a^+} \\frac{f(x)-f(a)}{x-a} = f'(a) = g(a)$.",
-          "- Vậy $g(x)$ liên tục trên $[a,b]$.",
+          "$g(x)$ liên tục trên $(a,b]$ vì $f(x)$ liên tục.",
+          "Tại $x=a$, $\\lim_{x \\to a^+} g(x) = \\lim_{x \\to a^+} \\frac{f(x)-f(a)}{x-a} = f'(a) = g(a)$.",
+          "Vậy $g(x)$ liên tục trên $[a,b]$.",
           "b) Áp dụng định lý Lagrange cho hàm $f(x)$ trên $[a,b]$, tồn tại $d \\in (a,b)$ sao cho $f'(d) = \\frac{f(b)-f(a)}{b-a}$.",
           "Theo định nghĩa của $g(x)$, ta có $g(b) = \\frac{f(b)-f(a)}{b-a} = f'(d)$.",
           "Bây giờ ta so sánh $g(a)$ và $g(b)$. Ta có $g(a) = f'(a)$. Giả thiết là $f'(a) = f'(b)$.",
@@ -9897,9 +9897,9 @@
           "c) Ta sẽ áp dụng định lý Lagrange cho hàm $g(x)$ trên đoạn $[0,1]$.",
           "Theo định lý Lagrange, tồn tại $c \\in (0,1)$ sao cho $g'(c) = \\frac{g(1)-g(0)}{1-0}$.",
           "d) Tính các giá trị cần thiết:",
-          "- $g(1) = f(1) - \\frac{1^2}{2} = f(1) - \\frac{1}{2}$.",
-          "- $g(0) = f(0) - \\frac{0^2}{2} = f(0)$.",
-          "- $g(1) - g(0) = f(1) - \\frac{1}{2} - f(0) = (f(1)-f(0)) - \\frac{1}{2}$.",
+          "$g(1) = f(1) - \\frac{1^2}{2} = f(1) - \\frac{1}{2}$.",
+          "$g(0) = f(0) - \\frac{0^2}{2} = f(0)$.",
+          "$g(1) - g(0) = f(1) - \\frac{1}{2} - f(0) = (f(1)-f(0)) - \\frac{1}{2}$.",
           "e) Theo giả thiết, $f(1)-f(0)=1/2$. Do đó, $g(1)-g(0) = \\frac{1}{2} - \\frac{1}{2} = 0$.",
           "f) Thay vào công thức Lagrange: $g'(c) = \\frac{0}{1} = 0$.",
           "g) Tính đạo hàm của $g(x)$: $g'(x) = f'(x) - x$.",
@@ -9914,8 +9914,8 @@
         "steps": [
           "a) Đây là một bất đẳng thức Landau-Kolmogorov cho trường hợp đơn giản. Ta sử dụng khai triển Taylor.",
           "b) Với $x$ bất kỳ và $h>0$, khai triển Taylor của $f(x+h)$ và $f(x-h)$ tại $x$ là:",
-          "- $f(x+h) = f(x) + hf'(x) + \\frac{h^2}{2}f''(c_1)$ với $c_1 \\in (x, x+h)$.",
-          "- $f(x-h) = f(x) - hf'(x) + \\frac{h^2}{2}f''(c_2)$ với $c_2 \\in (x-h, x)$.",
+          "$f(x+h) = f(x) + hf'(x) + \\frac{h^2}{2}f''(c_1)$ với $c_1 \\in (x, x+h)$.",
+          "$f(x-h) = f(x) - hf'(x) + \\frac{h^2}{2}f''(c_2)$ với $c_2 \\in (x-h, x)$.",
           "c) Trừ hai phương trình trên cho nhau: $f(x+h) - f(x-h) = 2hf'(x) + \\frac{h^2}{2}(f''(c_1) - f''(c_2))$.",
           "d) Sắp xếp lại để biểu diễn $f'(x)$: $2hf'(x) = f(x+h) - f(x-h) - \\frac{h^2}{2}(f''(c_1) - f''(c_2))$.",
           "e) Lấy giá trị tuyệt đối và sử dụng bất đẳng thức tam giác:",
@@ -10029,8 +10029,8 @@
           "r) Một hàm đơn điệu giảm nghiêm ngặt chỉ có thể cắt trục hoành tại tối đa một điểm trong mỗi khoảng đó.",
           "s) Ta đã tìm thấy một nghiệm trong mỗi khoảng $(a_i, a_{i+1})$. Vậy trong các khoảng này, nghiệm là duy nhất.",
           "t) Xét các khoảng $(-\\infty, a_1)$ và $(a_n, +\\infty)$.",
-          "- Trên $(-\\infty, a_1)$, mỗi số hạng $\\frac{1}{x-a_i}$ đều âm. Vậy $f'(x) < 0$. Không có nghiệm.",
-          "- Trên $(a_n, +\\infty)$, mỗi số hạng $\\frac{1}{x-a_i}$ đều dương. Vậy $f'(x) > 0$. Không có nghiệm.",
+          "Trên $(-\\infty, a_1)$, mỗi số hạng $\\frac{1}{x-a_i}$ đều âm. Vậy $f'(x) < 0$. Không có nghiệm.",
+          "Trên $(a_n, +\\infty)$, mỗi số hạng $\\frac{1}{x-a_i}$ đều dương. Vậy $f'(x) > 0$. Không có nghiệm.",
           "u) Kết luận: Phương trình có đúng $n-1$ nghiệm thực, mỗi nghiệm nằm giữa hai nghiệm liên tiếp của $P(x)$."
         ]
       }
@@ -12692,7 +12692,7 @@
       "question": "Xét sự hội tụ của tích phân $I = \\int_1^\\infty \\frac{2 + \\cos(x)}{x} dx$. a) Ta có thể kết luận rằng $I$ phân kỳ vì hàm dưới dấu tích phân tương đương với $\\frac{1}{x}$ không? Giải thích. b) Sử dụng tiêu chuẩn so sánh trực tiếp để chứng minh tích phân này phân kỳ.",
       "answer": {
         "steps": [
-          "a) Không thể kết luận ngay lập tức. Tiêu chuẩn so sánh giới hạn yêu cầu các hàm phải dương. Hàm $2 + \\cos(x)$ luôn dương, nhưng việc nói \"tương đương\" thường ngầm chỉ tiêu chuẩn so sánh giới hạn, vốn không áp dụng trực tiếp ở đây một cách đơn giản vì sự dao động của $\\cos(x)$ không có giới hạn khi $x \\to \\infty$. Tuy nhiên, ý tưởng so sánh với $\\frac{1}{x}$ là đúng hướng.",
+          "a) Không thể kết luận ngay lập tức. Tiêu chuẩn so sánh giới hạn yêu cầu các hàm phải dương. Hàm $2 + \\cos(x)$ luôn dương, nhưng việc nói \"tương đương\"thường ngầm chỉ tiêu chuẩn so sánh giới hạn, vốn không áp dụng trực tiếp ở đây một cách đơn giản vì sự dao động của $\\cos(x)$ không có giới hạn khi $x \\to \\infty$. Tuy nhiên, ý tưởng so sánh với $\\frac{1}{x}$ là đúng hướng.",
           "b) Ta sử dụng tiêu chuẩn so sánh trực tiếp. Ta cần tìm một hàm $g(x)$ nhỏ hơn hoặc bằng hàm đã cho, mà tích phân của $g(x)$ phân kỳ. Ta có: $-1 \\le \\cos(x) \\le 1$.",
           "Suy ra: $2 - 1 \\le 2 + \\cos(x) \\le 2 + 1 \\Rightarrow 1 \\le 2 + \\cos(x) \\le 3$.",
           "Do đó, với $x > 0$, ta có: $\\frac{1}{x} \\le \\frac{2 + \\cos(x)}{x}$.",
@@ -12702,7 +12702,7 @@
       }
     },
     {
-      "question": " Tính tích phân suy rộng $I = \\int_{-\\infty}^\\infty \\frac{e^x}{1 + e^{2x}} dx$. a) Tại sao cần phải tách tích phân này thành hai phần? Hãy tách nó tại $x=0$. b) Tính giá trị của mỗi phần. c) Kết luận về sự hội tụ và giá trị của $I$.",
+      "question": "Tính tích phân suy rộng $I = \\int_{-\\infty}^\\infty \\frac{e^x}{1 + e^{2x}} dx$. a) Tại sao cần phải tách tích phân này thành hai phần? Hãy tách nó tại $x=0$. b) Tính giá trị của mỗi phần. c) Kết luận về sự hội tụ và giá trị của $I$.",
       "answer": {
         "steps": [
           "a) Đây là tích phân suy rộng loại 1 với cả hai cận là vô cực. Theo định nghĩa, ta phải tách nó tại một điểm hữu hạn bất kỳ, ví dụ $x=0$, và xét sự hội tụ của hai tích phân con: $I = \\int_{-\\infty}^0 \\frac{e^x}{1 + e^{2x}} dx + \\int_0^\\infty \\frac{e^x}{1 + e^{2x}} dx = I_1 + I_2$.",
@@ -17431,8 +17431,8 @@
           "a) Ta sử dụng công thức $D = f''_{xx}f''_{yy} - (f''_{xy})^2$.",
           "Thay các giá trị đã cho: $D(P) = (-3)(-5) - (2)^2 = 15 - 4 = 11$.",
           "b) Ta tiến hành kiểm tra các điều kiện:",
-          "1. $D(P) = 11 > 0$, do đó $P$ là một điểm cực trị (cực đại hoặc cực tiểu).",
-          "2. Ta xét dấu của $f''_{xx}(P)$. Ta có $f''_{xx}(P) = -3 < 0$.",
+          "$D(P) = 11 > 0$, do đó $P$ là một điểm cực trị (cực đại hoặc cực tiểu).",
+          "Ta xét dấu của $f''_{xx}(P)$. Ta có $f''_{xx}(P) = -3 < 0$.",
           "Vì $D>0$ và $f''_{xx}<0$, ta kết luận rằng $P$ là một điểm cực đại.",
           "**Kết luận:** $D=11$. Điểm $P$ là một điểm cực đại."
         ]
@@ -19246,8 +19246,8 @@
           "$f_{xy} = k$.",
           "Biệt thức $D = f_{xx}f_{yy} - (f_{xy})^2 = 2 \\cdot 2 - k^2 = 4 - k^2$.",
           "a) Để hàm số có điểm cực tiểu tại $(0,0)$, ta cần hai điều kiện:",
-          "1. $D > 0 \\Leftrightarrow 4 - k^2 > 0 \\Leftrightarrow k^2 < 4 \\Leftrightarrow -2 < k < 2$.",
-          "2. $f_{xx}(0,0) > 0$. Ta có $f_{xx}=2>0$, điều kiện này luôn thỏa mãn.",
+          "$D > 0 \\Leftrightarrow 4 - k^2 > 0 \\Leftrightarrow k^2 < 4 \\Leftrightarrow -2 < k < 2$.",
+          "$f_{xx}(0,0) > 0$. Ta có $f_{xx}=2>0$, điều kiện này luôn thỏa mãn.",
           "Vậy, để hàm số có cực tiểu tại $(0,0)$, ta cần $-2 < k < 2$.",
           "b) Để hàm số có điểm yên ngựa tại $(0,0)$, ta cần $D < 0$.",
           "$D < 0 \\Leftrightarrow 4 - k^2 < 0 \\Leftrightarrow k^2 > 4 \\Leftrightarrow k > 2$ hoặc $k < -2$.",
