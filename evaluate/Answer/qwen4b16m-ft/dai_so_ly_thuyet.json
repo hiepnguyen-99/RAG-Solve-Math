@@ -1,0 +1,542 @@
+[
+  {
+    "index": 1,
+    "input": "Định nghĩa ma trận cỡ $m \\times n$.",
+    "output": "Ma trận cỡ $m \\times n$ là một bảng số (thực hoặc phức) hình chữ nhật có $m$ hàng và $n$ cột."
+  },
+  {
+    "index": 2,
+    "input": "Thế nào là ma trận không?",
+    "output": "Ma trận không là ma trận có tất cả các phần tử bằng 0."
+  },
+  {
+    "index": 3,
+    "input": "Định nghĩa ma trận vuông và ma trận tam giác.",
+    "output": "$$ \\text{Ma trận vuông:} \\quad \\text{Ma trận có số hàng bằng số cột.} $$  \n$$ \\text{Ma trận tam giác trên:} \\quad \\text{Các phần tử phía dưới đường chéo chính bằng 0.} $$  \n$$ \\text{Ma trận tam giác dưới:} \\quad \\text{Các phần tử phía trên đường chéo chính bằng 0.} $$"
+  },
+  {
+    "index": 4,
+    "input": "Định nghĩa ma trận chéo và ma trận đơn vị.",
+    "output": "Ma trận chéo có các phần tử ngoài đường chéo chính bằng 0. Ma trận đơn vị là ma trận chéo với các phần tử trên đường chéo bằng 1."
+  },
+  {
+    "index": 5,
+    "input": "Định nghĩa ma trận chuyển vị.",
+    "output": "Ma trận chuyển vị của ma trận $A = (a_{ij})_{m \\times n}$, kí hiệu $A^T$, được tạo ra bằng cách chuyển hàng thành cột, tức $A^T = (a_{ji})_{n \\times m}$."
+  },
+  {
+    "index": 6,
+    "input": "Định nghĩa ma trận đối xứng và phản đối xứng.",
+    "output": "Ma trận vuông $A$ gọi là **đối xứng** nếu $A^T = A$.  \nMa trận vuông $A$ gọi là **phản đối xứng** nếu $A^T = -A$."
+  },
+  {
+    "index": 7,
+    "input": "Định nghĩa ma trận bậc thang.",
+    "output": "Ma trận bậc thang là ma trận hình chữ nhật, không phải toàn số 0, thỏa mãn hai điều kiện sau:  \n1. Nếu một hàng khác 0 thì phần tử đầu tiên khác 0 của hàng đó (gọi là phần tử cơ sở) nằm ở vị trí phía phải phần tử cơ sở của hàng trên.  \n2. Các hàng toàn số 0 (nếu có) nằm phía dưới."
+  },
+  {
+    "index": 8,
+    "input": "Nêu các phép biến đổi sơ cấp trên hàng.",
+    "output": "Các phép biến đổi sơ cấp trên hàng gồm:\n1. Nhân một hàng với một số khác 0: $h_i \\rightarrow \\alpha h_i$.\n2. Cộng vào một hàng một hàng khác đã được nhân với số tùy ý: $h_i \\rightarrow h_i + \\beta h_j$.\n3. Đổi chỗ hai hàng: $h_i \\leftrightarrow h_j$."
+  },
+  {
+    "index": 9,
+    "input": "Điều kiện để hai ma trận bằng nhau.",
+    "output": "Hai ma trận bằng nhau nếu chúng cùng cỡ và các phần tử tương ứng bằng nhau."
+  },
+  {
+    "index": 10,
+    "input": "Định nghĩa phép cộng và phép nhân ma trận với số.",
+    "output": "Phép cộng hai ma trận $A, B$ cùng cỡ: cộng các phần tử tương ứng.  \nPhép nhân ma trận $A$ với số $\\alpha$: nhân $\\alpha$ vào tất cả các phần tử của $A$."
+  },
+  {
+    "index": 11,
+    "input": "Định nghĩa phép nhân hai ma trận.",
+    "output": "Phép nhân hai ma trận $A$ và $B$ là một phép toán tạo ra một ma trận $C$ mà các phần tử $c_{ij}$ được tính bằng tổng các tích của các phần tử tương ứng hàng $i$ của $A$ và cột $j$ của $B$.  \nĐiều kiện: số cột của $A$ phải bằng số hàng của $B$.  \nNếu $A$ là $m \\times p$ và $B$ là $p \\times n$, thì $C = A \\cdot B$ là ma trận $m \\times n$ với  \n$c_{ij} = a_{i1}b_{1j} + a_{i2}b_{2j} + \\cdots + a_{ip}b_{pj}$."
+  },
+  {
+    "index": 12,
+    "input": "Nêu các tính chất của phép nhân ma trận.",
+    "output": "Các tính chất của phép nhân ma trận:  \ni) $A(BC) = (AB)C$ (nhân phân phối trên)  \nii) $A(B + C) = AB + AC$ (nhân phân phối thứ hai)  \niii) $(B + C)A = BA + CA$ (nhân phân phối thứ nhất)  \niv) $I_m A = AI_m = A$ (tính chất đơn vị)  \nv) $\\alpha(AB) = (\\alpha A)B = A(\\alpha B)$ (phân phối với số vô hướng)  \n**Chú ý:** $AB \\neq BA$ (không giao hoán), $AB = AC \\nRightarrow B = C$, $AB = 0 \\nRightarrow A = 0 \\vee B = 0$."
+  },
+  {
+    "index": 13,
+    "input": "Định nghĩa hạng của ma trận.",
+    "output": "Hạng của ma trận là số hàng khác 0 của ma trận bậc thang tương đương của nó, ký hiệu $r(A)$."
+  },
+  {
+    "index": 14,
+    "input": "Định nghĩa ma trận nghịch đảo và điều kiện tồn tại.",
+    "output": "Ma trận nghịch đảo của $A$ là ma trận $B$ thỏa mãn $AB = I = BA$.  \nĐiều kiện tồn tại: Không phải mọi ma trận đều có nghịch đảo. Một ma trận có nghịch đảo nếu và chỉ nếu nó khả nghịch (tồn tại). Trong ngữ cảnh này, điều kiện tồn tại của nghịch đảo của ma trận vuông $A$ là $\\det(A) \\neq 0$."
+  },
+  {
+    "index": 15,
+    "input": "Nêu các tính chất của ma trận nghịch đảo.",
+    "output": "Các tính chất của ma trận nghịch đảo $A^{-1}$:  \n1. $(A^{-1})^{-1} = A$  \n2. $(AB)^{-1} = B^{-1}A^{-1}$  \n3. $(A^T)^{-1} = (A^{-1})^T$  \n4. $(A^n)^{-1} = (A^{-1})^n$ với $n \\in \\mathbb{Z}$  \n5. $I^{-1} = I$  \n6. Nếu $A^{-1}$ tồn tại thì $A$ duy nhất và $A$ khả nghịch."
+  },
+  {
+    "index": 16,
+    "input": "Định nghĩa định thức của ma trận vuông cấp $n$ theo hoán vị.",
+    "output": "$$ \\det(A) = \\sum_{\\sigma \\in S_n} \\text{sgn}(\\sigma) a_{1\\sigma(1)} a_{2\\sigma(2)} \\cdots a_{n\\sigma(n)} $$  \nTrong đó $S_n$ là tập tất cả các hoán vị của $\\{1, 2, ..., n\\}$, $\\text{sgn}(\\sigma)$ là dấu của hoán vị $\\sigma$ (1 nếu chẵn, -1 nếu lẻ)."
+  },
+  {
+    "index": 17,
+    "input": "Định nghĩa định thức cấp 2 và cấp 3.",
+    "output": "$$ \\det(A) = \\begin{vmatrix} a & b \\\\ c & d \\end{vmatrix} = ad - bc $$\n$$ \\det(B) = \\begin{vmatrix} a & b & c \\\\ d & e & f \\\\ g & h & i \\end{vmatrix} = a \\begin{vmatrix} e & f \\\\ h & i \\end{vmatrix} - b \\begin{vmatrix} d & f \\\\ g & i \\end{vmatrix} + c \\begin{vmatrix} d & e \\\\ g & h \\end{vmatrix} $$"
+  },
+  {
+    "index": 18,
+    "input": "Phát biểu khai triển Laplace theo hàng $i$.",
+    "output": "Khai triển Laplace theo hàng $i$ của $\\det(A)$:  \n$\\det(A) = a_{i1}A_{i1} + a_{i2}A_{i2} + \\cdots + a_{in}A_{in}$.  \nTrong đó $A_{jk}$ là phần bù đại số của phần tử $a_{jk}$, tính bởi $A_{jk} = (-1)^{j+k} \\cdot M_{jk}$, với $M_{jk}$ là định thức của mỏng hóa chính phương thu được từ $A$ bằng cách xóa hàng $i$ và cột $k$."
+  },
+  {
+    "index": 19,
+    "input": "Phát biểu khai triển Laplace theo cột $j$.",
+    "output": "$$ |A| = \\begin{vmatrix} \\cdots & \\cdots & \\cdots & \\cdots \\\\ a_{1j} & a_{2j} & \\cdots & a_{nj} \\\\ \\cdots & \\cdots & \\cdots & \\cdots \\end{vmatrix} = a_{1j}A_{1j} + a_{2j}A_{2j} + \\cdots + a_{nj}A_{nj} $$  \nTrong đó $A_{kj}$ là phần phụ hợp của phần tử $a_{kj}$."
+  },
+  {
+    "index": 20,
+    "input": "Định nghĩa phần bù đại số của phần tử $a_{ij}$.",
+    "output": "Phần bù đại số của phần tử $a_{ij}$, ký hiệu $A_{ij}$, được định nghĩa bởi:\n$$ A_{ij} = (-1)^{i+j} \\cdot M_{ij} $$\ntrong đó $M_{ij}$ là phần tử con thu được bằng cách xóa hàng $i$ và cột $j$ của ma trận."
+  },
+  {
+    "index": 21,
+    "input": "Nêu các tính chất cơ bản của định thức.",
+    "output": "- Đổi chỗ hai hàng (hoặc hai cột) thì dấu của định thức đổi dấu.  \n- Nhân một số vào một hàng (hoặc cột) thì định thức bị nhân với số đó.  \n- Cộng một hàng vào một hàng khác thì định thức không đổi.  \n- Nếu một hàng bằng 0 thì định thức bằng 0.  \n- Nếu hai hàng tương đương thì định thức bằng 0.  \n- Nếu một hàng là tổng hai số thì định thức bằng tổng hai định thức."
+  },
+  {
+    "index": 22,
+    "input": "Phát biểu tính chất định thức của ma trận chuyển vị.",
+    "output": "$\\det(A^T) = \\det(A)$."
+  },
+  {
+    "index": 23,
+    "input": "Phát biểu tính chất định thức của tích ma trận.",
+    "output": "$$\\det(AB) = \\det(A) \\cdot \\det(B)$$"
+  },
+  {
+    "index": 24,
+    "input": "Ứng dụng biến đổi sơ cấp trong tính định thức.",
+    "output": "Sử dụng biến đổi sơ cấp để tính định thức:  \n1) Nhân hàng với $\\alpha \\neq 0$: $| \\cdot | \\xrightarrow{h_i \\to \\alpha h_i} \\alpha \\cdot | \\cdot |$.  \n2) Cộng vào hàng một hàng khác đã được nhân với $\\beta$: $| \\cdot | \\xrightarrow{h_i \\to h_i + \\beta h_j} | \\cdot |$ (không đổi).  \n3) Đổi chỗ 2 hàng: $| \\cdot | \\xrightarrow{h_i \\leftrightarrow h_j} -| \\cdot |$.  \n**Chú ý**: Chỉ dùng các phép biến đổi sơ cấp trên hàng để đơn giản hóa tính toán."
+  },
+  {
+    "index": 25,
+    "input": "Phát biểu định lý: điều kiện khả nghịch của ma trận qua định thức.",
+    "output": "Phát biểu định lý:  \nCho $A$ là ma trận vuông. Khi đó, $A$ khả nghịch khi và chỉ khi $\\det(A) \\neq 0$.  \nTức là: $A$ có nghịch đảo $\\iff |A| \\neq 0$."
+  },
+  {
+    "index": 26,
+    "input": "Định nghĩa ma trận phụ hợp.",
+    "output": "Ma trận phụ hợp (adjugate matrix) của một ma trận vuông $A$ là ma trận chuyển vị của ma trận chứa các phần tử phụ hợp (cofactor) của $A$, được kí hiệu bởi $\\text{adj}(A)$.  \nNếu $A = (a_{ij})_{n \\times n}$, thì phần tử $(i,j)$ của $\\text{adj}(A)$ là $A_{ji}$.  \nCông thức: $\\text{adj}(A) = \\text{transpose}(\\text{ma trận các phần tử phụ hợp của } A)$."
+  },
+  {
+    "index": 27,
+    "input": "Công thức tìm ma trận nghịch đảo bằng định thức.",
+    "output": "$$ A^{-1} = \\frac{1}{|A|} \\cdot \\text{adj}(A) $$"
+  },
+  {
+    "index": 28,
+    "input": "Định nghĩa hệ phương trình tuyến tính $m$ phương trình $n$ ẩn.",
+    "output": "Hệ phương trình tuyến tính $m$ phương trình $n$ ẩn có dạng  \n$ \\begin{cases} a_{11}x_1 + a_{12}x_2 + \\dots + a_{1n}x_n = b_1 \\\\ a_{21}x_1 + a_{22}x_2 + \\dots + a_{2n}x_n = b_2 \\\\ \\vdots \\\\ a_{m1}x_1 + a_{m2}x_2 + \\dots + a_{mn}x_n = b_m \\end{cases} $  \nTrong đó $a_{ij}$ là hệ số, $b_i$ là hệ số tự do."
+  },
+  {
+    "index": 29,
+    "input": "Định nghĩa ma trận hệ số và ma trận mở rộng của hệ tuyến tính.",
+    "output": "Trong hệ phương trình tuyến tính, ta có:  \n- **Ma trận hệ số** $A$ chỉ chứa các hệ số tự do của các ẩn trong các phương trình.  \n- **Ma trận mở rộng** $(A|b)$ được tạo thành bằng cách viết ma trận $A$ và vector các hệ số tự do $b$ thành một bảng, trong đó cột cuối cùng là $b$."
+  },
+  {
+    "index": 30,
+    "input": "Thế nào là hai hệ phương trình tuyến tính tương đương?",
+    "output": "Hai hệ phương trình tuyến tính tương đương nếu chúng có cùng tập nghiệm."
+  },
+  {
+    "index": 31,
+    "input": "Phát biểu các phép biến đổi sơ cấp trên hệ phương trình tuyến tính.",
+    "output": "Các phép biến đổi sơ cấp trên hệ phương trình tuyến tính:  \n1) Nhân một phương trình với một số khác 0.  \n2) Cộng vào một phương trình một phương trình khác đã được nhân với số tùy ý.  \n3) Đổi chỗ hai phương trình."
+  },
+  {
+    "index": 32,
+    "input": "Phát biểu định lý Kronecker–Capelli về nghiệm của hệ tuyến tính.",
+    "output": "Định lý Kronecker–Capelli: Hệ phương trình tuyến tính $AX = b$ có nghiệm khi và chỉ khi hạng của ma trận các hệ số $A$ bằng hạng của ma trận mở rộng $[A|b]$, tức $r(A) = r(A|b)$.  \n- Nếu $r(A|b) \\neq r(A)$ thì hệ vô nghiệm.  \n- Nếu $r(A|b) = r(A)$ thì hệ có nghiệm.  \nNếu $r(A|b) = r(A) = \\text{số ẩn}$ thì hệ có nghiệm duy nhất.  \nNếu $r(A|b) = r(A) < \\text{số ẩn}$ thì hệ có vô số nghiệm."
+  },
+  {
+    "index": 33,
+    "input": "Nêu điều kiện để hệ tuyến tính có nghiệm duy nhất.",
+    "output": "Hệ tuyến tính có nghiệm duy nhất khi và chỉ khi số phương trình bằng số ẩn và định thức của ma trận hệ số khác 0.  \n**Điều kiện:**\n- Số phương trình $m = $ số ẩn $n$.\n- $\\det(A) \\neq 0$."
+  },
+  {
+    "index": 34,
+    "input": "Nêu điều kiện để hệ tuyến tính vô nghiệm.",
+    "output": "Hệ tuyến tính vô nghiệm nếu $r(A|b) > r(A)$, tức là hạng của ma trận mở rộng lớn hơn hạng của ma trận hệ số."
+  },
+  {
+    "index": 35,
+    "input": "Phát biểu quy tắc Cramer.",
+    "output": "Quy tắc Cramer: Cho hệ phương trình $AX=b$ với $A$ là ma trận vuông cấp $n$ và $\\det(A) \\neq 0$. Nghiệm của hệ được tính bởi $x_i = \\frac{|A_i|}{|A|}$ với $i = 1, 2, ..., n$, trong đó $A_i$ là ma trận thu được từ $A$ bằng cách thay cột $i$ bởi vector $b$."
+  },
+  {
+    "index": 36,
+    "input": "Định nghĩa hệ tuyến tính thuần nhất.",
+    "output": "Hệ phương trình tuyến tính thuần nhất là hệ có tất cả các hệ số tự do bằng 0.  \n$$\\begin{cases} a_{11}x_1 + a_{12}x_2 + \\dots + a_{1n}x_n = 0 \\\\ a_{21}x_1 + a_{22}x_2 + \\dots + a_{2n}x_n = 0 \\\\ \\vdots \\\\ a_{m1}x_1 + a_{m2}x_2 + \\dots + a_{mn}x_n = 0 \\end{cases}$$"
+  },
+  {
+    "index": 37,
+    "input": "Nêu mối liên hệ giữa nghiệm của hệ thuần nhất và hạng ma trận hệ số.",
+    "output": "Nếu $r(A) < n$ thì hệ thuần nhất có vô số nghiệm. Nếu $r(A) = n$ thì hệ thuần nhất chỉ có nghiệm tầm thường. Hạng $r(A)$ là số phương trình độc lập tuyến tính tối đa của hệ."
+  },
+  {
+    "index": 38,
+    "input": "Trình bày cách giải hệ tuyến tính bằng phương pháp Gauss.",
+    "output": "Đưa ma trận $\\tilde{A} = [A|b]$ về dạng bậc thang bằng các phép biến đổi sơ cấp theo hàng. Dựa vào bậc thang để xác định số nghiệm và loại nghiệm (dạng tổng quát hoặc duy nhất). Sau đó, dùng phương pháp thế ngược để tìm nghiệm."
+  },
+  {
+    "index": 39,
+    "input": "Nêu ý nghĩa của hệ tuyến tính trong toán học và ứng dụng.",
+    "output": "Hệ phương trình tuyến tính là một công cụ nền tảng trong toán học, mô tả mối quan hệ tuyến tính giữa các biến số. Nó xuất hiện rộng rãi trong các lĩnh vực như vật lý, kỹ thuật, kinh tế, khoa học máy tính và kinh tế học để biểu diễn các vấn đề thực tế như phân tích chi phí-lợi nhuận, thiết kế cấu trúc, dự báo xu hướng, và tối ưu hóa quy trình. Việc giải hệ phương trình tuyến tính giúp tìm ra các giá trị biến số mà khi thay vào sẽ thỏa mãn đồng thời tất cả các phương trình, từ đó đưa ra quyết định hoặc kết luận cần thiết trong từng lĩnh vực ứng dụng."
+  },
+  {
+    "index": 40,
+    "input": "Định nghĩa không gian véc tơ trên trường $K$.",
+    "output": "Không gian véc tơ trên trường $K$ là một tập hợp $V$ khác rỗng, cùng với hai phép toán: cộng hai véc tơ và nhân véc tơ với số, thỏa mãn 8 tiên đề sau:  \ni) $x + y = y + x$  \nii) $(x + y) + z = x + (y + z)$  \niii) $\\exists 0 \\in V: x + 0 = x$  \niv) $\\forall x \\in V, \\exists (-x) \\in V: x + (-x) = 0$  \nv) $\\alpha, \\beta \\in K: (\\alpha + \\beta)x = \\alpha x + \\beta x$  \nvi) $\\alpha \\in K: (\\alpha \\beta)x = \\alpha(\\beta x)$  \nvii) $\\exists 1 \\in K: 1 \\cdot x = x$  \nviii) $0 \\cdot x = 0, \\forall x \\in V$  \nKí hiệu $[V, +, \\cdot]$ là một không gian vector.  \n**Ghi chú**: $K$ là trường số, thông thường là $\\mathbb{R}$ hoặc $\\mathbb{C}$."
+  },
+  {
+    "index": 41,
+    "input": "Cho ví dụ về không gian véc tơ trên $\\mathbb{R}$.",
+    "output": "Trong $\\mathbb{R}^n$ với phép toán thông thường:  \n- $ (x_1, x_2, \\dots, x_n) + (y_1, y_2, \\dots, y_n) = (x_1 + y_1, x_2 + y_2, \\dots, x_n + y_n) $  \n- $ \\alpha (x_1, x_2, \\dots, x_n) = (\\alpha x_1, \\alpha x_2, \\dots, \\alpha x_n) $  \n$\\mathbb{R}^n$ là không gian véc tơ trên $\\mathbb{R}$.  \n**Ví dụ**: $\\mathbb{R}^2 = \\{(x, y) \\mid x, y \\in \\mathbb{R}\\}$ với phép toán thông thường là không gian véc tơ."
+  },
+  {
+    "index": 42,
+    "input": "Định nghĩa quan hệ phụ thuộc tuyến tính (PTTT) của các véc tơ.",
+    "output": "Trong không gian vector $V$, cho tập hợp $M = \\{x_1, x_2, \\ldots, x_m\\}$ các vector.  \n**Phụ thuộc tuyến tính** của $M$ nếu tồn tại các hệ số $\\alpha_1, \\alpha_2, \\ldots, \\alpha_m$ không phải toàn số 0 thỏa mãn:  \n$$\\alpha_1 x_1 + \\alpha_2 x_2 + \\cdots + \\alpha_m x_m = 0.$$  \nNếu không tồn tại các hệ số như vậy thì $M$ được gọi là **độc lập tuyến tính**.  \n**Ghi chú**:  \n- Nếu $M$ PTTT thì có một vector nào đó là tổ hợp tuyến tính của các vector còn lại.  \n- Nếu $M$ PTTT thì có thể loại bỏ một số vector của $M$ mà không làm mất đi tính PTTT.  \n- Nếu $M$ PTTT thì tập $M$ có số vector bằng số chiều của không gian $V$.  \n**Mối liên hệ với số chiều của không gian $V$**:\n- Nếu $M$ có $m$ vector và $M$ PTTT thì $m$ lớn hơn hoặc bằng số chiều của $V$.\n- Nếu $M$ có $m$ vector và $M$ ĐLTT thì $m$ nhỏ hơn hoặc bằng số chiều của $V$."
+  },
+  {
+    "index": 43,
+    "input": "Định nghĩa quan hệ độc lập tuyến tính (ĐLTT) của các véc tơ.",
+    "output": "Trong không gian vector $V$, cho tập các véc tơ $M = \\{x_1, x_2, \\dots, x_m\\}$.  \n**Độc lập tuyến tính (DLTT)** của $M$ được định nghĩa như sau:  \nM được gọi độc lập tuyến tính nếu tồn tại duy nhất một tổ hợp tuyến tính của các véc tơ trong $M$ bằng không, đó là tổ hợp tầm thường (tất cả hệ số bằng 0).  \nTức là:  \n$$\\alpha_1 x_1 + \\alpha_2 x_2 + \\cdots + \\alpha_m x_m = 0 \\iff \\alpha_1 = \\alpha_2 = \\cdots = \\alpha_m = 0.$$  \nNgược lại, nếu tồn tại một tổ hợp tuyến tính khác tầm thường bằng không thì $M$ được gọi phụ thuộc tuyến tính (PTTT)."
+  },
+  {
+    "index": 44,
+    "input": "Định nghĩa hệ sinh của một không gian véc tơ.",
+    "output": "Họ véc tơ $S$ được gọi là hệ sinh của không gian vector $V$ nếu mọi véc tơ của $V$ đều có thể được biểu diễn là tổ hợp tuyến tính của các véc tơ thuộc $S$."
+  },
+  {
+    "index": 45,
+    "input": "Định nghĩa hạng của một hệ véc tơ.",
+    "output": "Hạng của một hệ véc tơ là số véc tơ độc lập tuyến tính tối đại trong hệ đó."
+  },
+  {
+    "index": 46,
+    "input": "Định nghĩa cơ sở của không gian véc tơ.",
+    "output": "$$ \\text{Cho } V \\text{ là tập hợp khác rỗng và hai phép toán: cộng hai véc tơ } u, v \\in V \\text{ và nhân véc tơ với số } \\alpha \\in K \\text{ thỏa mãn 8 tiên đề sau:} $$  \ni) $x+y=y+x$  \nii) $(x+y)+z=x+(y+z)$  \niii) $\\exists 0 \\in V : x+0=x$  \niv) $\\forall x \\in V, \\exists (-x) \\in V : x+(-x)=0$  \nv) $\\alpha, \\beta \\in K : (\\alpha+\\beta)x = \\alpha x + \\beta x$  \nvi) $\\alpha \\in K : (\\alpha\\beta)x = \\alpha(\\beta x)$  \nvii) $\\alpha \\in K : \\alpha(x+y) = \\alpha x + \\alpha y$  \nviii) $1 \\cdot x = x$  \n$$ \\text{Khi đó, ta nói } V \\text{ là một không gian vector.} $$  \n**Chú ý**: Đây là khái niệm được mở rộng từ khái niệm véc tơ ở phổ thông. Tập các véc tơ trong mặt phẳng (hoặc không gian) có gốc O là một không gian vector.  \n**Định nghĩa**:  \nCho $V$ là một không gian vector. Một tập con $F$ của $V$ cùng với phép toán của $V$ tạo thành một không gian vector thì $F$ được gọi là **không gian con** của $V$.  \n**Điều kiện tương đương**:  \nCho $F \\ne \\emptyset$ và $F \\subset V$ là không gian con của $V$ khi và chỉ khi bốn điều kiện sau được thỏa:  \ni) $\\forall x, y \\in F: x - y \\in F$  \nii) $\\forall x \\in F: 0 \\cdot x \\in F$  \niii) $\\forall x \\in F: 1 \\cdot x \\in F$  \niv) $\\forall x \\in F: -x \\in F$  \n**Ý nghĩa**:  \nNếu $F$ là không gian con của $V$ thì mọi quy tắc phép toán của $V$ đều có hiệu lực trên $F$.  \n**Ví dụ**:  \nTrong $R^3$, cho $F = \\{(x_1, x_2, x_3) \\in R^3 \\mid x_1 + 2x_2 - x_3 = 0\\}$.  \na) Chứng tỏ $F$ là không gian con.  \nb) Tìm một cơ sở và số chiều của $F$.  \n**Bài làm**:  \na) $F \\ne \\emptyset$. Với 2 véc tơ $x = (x'_1, x'_2, x'_3)$, $y = (y'_1, y'_2, y'_3) \\in F$ thì $x + y \\in F$ và $\\alpha x \\in F$ với mọi $\\alpha \\in R$. Vậy $F$ là không gian con.  \nb) Chọn $x_1 = 2t - x_3$, $x_2 = t$. Khi đó, $x = (2t - x_3, t, x_3) = t(2, 1, 0) + x_3(1, 0, 1)$.  \nMặt khác, $F$ là tập con của $R^3$ nên $x \\in F$ thì $x = (x'_1, x'_2, x'_3)$ và $x'_1 + 2x'_2 - x'_3 = 0$.  \nSuy ra $F$ có số chiều là 2 và một cơ sở là $B = \\{(2, 1, 0), (1, 0, 1)\\}$.  \n**Các phép toán trên không gian con**:  \nNếu $F$ là không gian con của $V$ thì các phép toán trên $V$ có thể thực hiện trực tiếp trên $F$.  \n**Ví dụ**:  \nCho $F = \\{(x_1, x_2, x_3) \\in R^3 \\mid x_1 + x_2 - x_3 = 0\\}$.  \na) Chứng tỏ $F$ là không gian con.  \nb) Tìm một cơ sở và số chiều của $F$.  \n**Bài làm**:  \na) $F \\ne \\emptyset$. Với 2 véc tơ $x = (x'_1, x'_2, x'_3)$, $y = (y'_1, y'_2, y'_3) \\in F$ thì $x + y \\in F$ và $\\alpha x \\in F$ với mọi $\\alpha \\in R$. Vậy $F$ là không gian con.  \nb) Chọn $x_1 = -x_2 + x_3$. Khi đó, $x = (-x_2 + x_3, x_2, x_3) = x_2(-1, 1, 0) + x_3(1, 0, 1)$.  \nMặt khác, $F$ là tập con của $R^3$ nên $x \\in F$ thì $x = (x'_1, x'_2, x'_3)$ và $x'_1 + x'_2 - x'_3 = 0$.  \nSuy ra $F$ có số chiều là 2 và một cơ sở là $B = \\{(-1, 1, 0), (1, 0, 1)\\}$.  \n**Ý nghĩa**:  \nNếu $F$ là không gian con của $V$ thì mọi quy tắc phép toán của $V$ đều có hiệu lực trên $F$.  \n**Ví dụ**:  \nCho $F = \\{(x_1, x_2, x_3) \\in R^3 \\mid x_1 + x_2 - x_3 = 0\\}$.  \na) Chứng tỏ $F$ là không gian con.  \nb) Tìm một cơ sở và số chiều của $F$.  \n**Bài làm**:  \na) $F \\ne \\emptyset$. Với 2 véc tơ $x = (x'_1, x'_2, x'_3)$, $y = (y'_1, y'_2, y'_3) \\in F$ thì $x + y \\in F$ và $\\alpha x \\in F$ với mọi $\\alpha \\in R$. Vậy $F$ là không gian con.  \nb) Chọn $x_1 = -x_2 + x_3$. Khi đó, $x = (-x_2 + x_3, x_2, x_3) = x_2(-1, 1, 0) + x_3(1, 0, 1)$.  \nMặt khác, $F$ là tập con của $R^3$ nên $x \\in F$ thì $x = (x'_1, x'_2, x'_3)$ và $x'_1 + x'_2 - x'_3 = 0$.  \nSuy ra $F$ có số chiều là 2 và một cơ sở là $B = \\{(-1, 1, 0), (1, 0, 1)\\}$.  \n**Ý nghĩa**:  \nNếu $F$ là không gian con của $V$ thì mọi quy tắc phép toán của $V$ đều có hiệu lực trên $F$.  \n**Ví dụ**:  \nCho $F = \\{(x_1, x_2, x_3) \\in R^3 \\mid x_1 + x_2 - x_3 = 0\\}$.  \na) Chứng tỏ $F$ là không gian con.  \nb) Tìm một cơ sở và số chiều của $F$.  \n**Bài làm**:  \na) $F \\ne \\emptyset$. Với 2 véc tơ $x = (x'_1, x'_2, x'_3)$, $y = (y'_1, y'_2, y'_3) \\in F$ thì $x + y \\in F$ và $\\alpha x \\in F$ với mọi $\\alpha \\in R$. Vậy $F$ là không gian con.  \nb) Chọn $x_1 = -x_2 + x_3$. Khi đó, $x = (-x_2 + x_3, x_2, x_3) = x_2(-1, 1, 0) + x_3(1, 0, 1)$.  \nMặt khác, $F$ là tập con của $R^3$ nên $x \\in F$ thì $x = (x'_1, x'_2, x'_3)$ và $x'_1 + x'_2 - x'_3 = 0$.  \nSuy ra $F$ có số chiều là 2 và một cơ sở là $B = \\{(-1, 1, 0), (1, 0, 1)\\}$.  \n**Ý nghĩa**:  \nNếu $F$ là không gian con của $V$ thì mọi quy tắc phép toán"
+  },
+  {
+    "index": 47,
+    "input": "Định nghĩa số chiều của không gian véc tơ.",
+    "output": "Số chiều của không gian véc tơ $V$ là số phần tử của một cơ sở bất kỳ của $V$, được kí hiệu là $\\dim(V)$. Nếu $V$ có cơ sở gồm $n$ véc tơ thì $\\dim(V) = n$. Nếu $V = \\{0\\}$ thì $\\dim(V) = 0$."
+  },
+  {
+    "index": 48,
+    "input": "Thế nào là tọa độ của một véc tơ theo một cơ sở?",
+    "output": "Tọa độ của một véc tơ theo một cơ sở là các hệ số của sự biểu diễn đó dưới dạng tổ hợp tuyến tính của các véc tơ trong cơ sở. Nếu $x = x_1e_1 + x_2e_2 + \\dots + x_ne_n$ với $\\{e_1, e_2, \\dots, e_n\\}$ là cơ sở, thì tọa độ của $x$ là $[x]_E = \\begin{pmatrix} x_1 \\\\ x_2 \\\\ \\vdots \\\\ x_n \\end{pmatrix}$."
+  },
+  {
+    "index": 49,
+    "input": "Định nghĩa ma trận chuyển cơ sở.",
+    "output": "Ma trận chuyển cơ sở từ cơ sở $E$ sang cơ sở $E'$ là ma trận $P$ được tạo thành bằng cách dùng các tọa độ của các véc tơ của $E'$ theo cơ sở $E$ làm các hàng. Nghĩa là, nếu $[e'_j]_E$ là tọa độ của $e'_j$ theo $E$, thì cột thứ $j$ của $P$ chính là tọa độ của $e'_j$ theo $E$."
+  },
+  {
+    "index": 50,
+    "input": "Trình bày cách tính tọa độ véc tơ trong cơ sở mới.",
+    "output": "Để tính tọa độ của một véc tơ $x$ trong cơ sở mới $E'$ dựa vào tọa độ của nó trong cơ sở cũ $E$:\n\n1. Tìm ma trận chuyển cơ sở $P$ từ $E$ sang $E'$.\n2. Dùng công thức $[x]_{E'} = P \\cdot [x]_E$.\n\n**Lưu ý**:\n- Nếu $P$ là ma trận chuyển cơ sở từ $E$ sang $E'$, thì $[x]_{E'} = P [x]_E$.\n- Nếu $P$ là ma trận chuyển từ $E'$ sang $E$, thì $[x]_E = P [x]_{E'}$."
+  },
+  {
+    "index": 51,
+    "input": "Định nghĩa không gian con của một không gian véc tơ.",
+    "output": "Một tập con $F$ của không gian vector $V$ được gọi là không gian con của $V$ nếu $F$ cùng với các phép toán trong $V$ cũng tạo thành một không gian vector. Điều này tương đương với việc $F$ thỏa mãn ba điều kiện sau:  \n1. $0 \\in F$.  \n2. Nếu $x, y \\in F$ thì $x + y \\in F$.  \n3. Nếu $x \\in F$ và $\\alpha$ là số vô hướng thì $\\alpha x \\in F$."
+  },
+  {
+    "index": 52,
+    "input": "Nêu ví dụ về không gian con trong $\\mathbb{R}^3$.",
+    "output": "Trong $\\mathbb{R}^3$, các ví dụ về không gian con bao gồm:  \n1. Mặt phẳng $xy$: $z=0$, với tập các điểm $(x, y, 0)$.  \n2. Đường thẳng $x=y=z$, với tập các điểm $(t, t, t)$.  \n3. Tập các vector $(x, y, z)$ thỏa $x+y+z=0$.  \nMọi tập con này cùng với phép toán cộng và nhân với số vô hướng của $\\mathbb{R}^3$ lập thành một không gian con."
+  },
+  {
+    "index": 53,
+    "input": "Định nghĩa tổng của hai không gian con.",
+    "output": "Tổng của hai không gian con $F$ và $G$ của không gian vector $V$, ký hiệu $F+G$, là không gian con của $V$ được định nghĩa bởi:\n$$F + G = \\{ f + g \\mid f \\in F, g \\in G \\}$$\nTức là tổng của hai không gian con là tập hợp tất cả các vector có thể được viết dưới dạng tổng của một vector thuộc $F$ và một vector thuộc $G$."
+  },
+  {
+    "index": 54,
+    "input": "Định nghĩa giao của hai không gian con.",
+    "output": "Giao của hai không gian con $F \\cap G$ là tập hợp các vector thuộc cả $F$ và $G$."
+  },
+  {
+    "index": 55,
+    "input": "Định nghĩa không gian Euclide.",
+    "output": "Không gian Euclide là một không gian vector hữu hạn chiều cùng với tích vô hướng."
+  },
+  {
+    "index": 56,
+    "input": "Định nghĩa chuẩn của véc tơ trong không gian Euclide.",
+    "output": "Trong không gian Euclide, chuẩn (hay độ dài) của véc tơ $x = (x_1, x_2, \\dots, x_n)$ được định nghĩa bởi:\n$$\\|x\\| = \\sqrt{x_1^2 + x_2^2 + \\dots + x_n^2}$$"
+  },
+  {
+    "index": 57,
+    "input": "Định nghĩa góc giữa hai véc tơ trong không gian Euclide.",
+    "output": "Trong không gian Euclide, góc $\\alpha$ giữa hai véc tơ $u, v$ được định nghĩa bởi công thức:\n$$\\cos \\alpha = \\frac{(u, v)}{\\|u\\| \\|v\\|}$$\nvới $(u, v)$ là tích vô hướng và $\\|u\\|, \\|v\\|$ là độ dài của các véc tơ. Góc $\\alpha$ thỏa mãn $0^\\circ \\le \\alpha \\le 180^\\circ$."
+  },
+  {
+    "index": 58,
+    "input": "Định nghĩa hai véc tơ trực giao.",
+    "output": "Hai véc tơ $u, v$ được gọi là trực giao nếu tích vô hướng của chúng bằng 0, tức $(u, v) = 0$."
+  },
+  {
+    "index": 59,
+    "input": "Định nghĩa hệ trực giao và hệ trực chuẩn.",
+    "output": "Hệ $M = \\{x_1, x_2, \\dots, x_m\\}$ gọi là trực giao nếu $\\forall i \\neq j: x_i \\bot x_j$, tức là $(x_i, x_j) = 0$.  \nHệ $M$ gọi là trực chuẩn nếu nó trực giao và $\\|x_i\\| = 1$ với mọi $i$."
+  },
+  {
+    "index": 60,
+    "input": "Phát biểu bất đẳng thức Cauchy–Schwarz.",
+    "output": "$$|(u, v)| \\leq \\|u\\| \\cdot \\|v\\|$$  \nvới mọi $u, v \\in V$. Đẳng thức xảy ra khi và chỉ khi $u, v$ cùng phương."
+  },
+  {
+    "index": 61,
+    "input": "Trình bày phương pháp Gram–Schmidt.",
+    "output": "Phương pháp Gram–Schmidt dùng để tạo một tập trực giao (hoặc trực chuẩn) từ một tập vector cho trước.\n\n**Mối liên hệ:**\nCho $E = \\{e_1, e_2, \\ldots, e_m\\}$ là tập độc lập tuyến tính. Ta tạo tập $F = \\{f_1, f_2, \\ldots, f_m\\}$ trực giao và cùng không gian con của $E$.\n\n**Quy trình:**\n- $f_1 = e_1$\n- $f_2 = e_2 - \\frac{(e_2, f_1)}{(f_1, f_1)} f_1$\n- $f_3 = e_3 - \\frac{(e_3, f_1)}{(f_1, f_1)} f_1 - \\frac{(e_3, f_2)}{(f_2, f_2)} f_2$\n- ...\n- $f_k = e_k - \\sum_{i=1}^{k-1} \\frac{(e_k, f_i)}{(f_i, f_i)} f_i$\n\n**Chú ý:**\nNếu muốn $F$ là tập trực chuẩn, ta chia mỗi $f_i$ cho $\\|f_i\\|$."
+  },
+  {
+    "index": 62,
+    "input": "Định nghĩa trực giao của một không gian con.",
+    "output": "Hai không gian con $F, G$ của $\\mathbb{R}^n$ gọi là trực giao nếu chúng cùng vuông góc với nhau, tức là $\\forall x \\in F, \\forall y \\in G: x \\perp y$.  \nĐiều này tương đương với tích vô hướng $(x, y) = 0$ với mọi $x \\in F, y \\in G$.  \n**Chú ý**: Trực giao của không gian con không có nghĩa là chúng song song hoặc chéo nhau mà là chúng vuông góc với nhau theo nghĩa tích vô hướng."
+  },
+  {
+    "index": 63,
+    "input": "Định nghĩa hình chiếu vuông góc của một véc tơ lên không gian con.",
+    "output": "Hình chiếu vuông góc của một véc tơ $v$ lên không gian con $F$ là phần của $v$ thuộc $F$, được biểu diễn duy nhất dưới dạng $f = v - q$ với $q$ là phần của $v$ thuộc phần bù vuông góc $F^\\perp$ (tức là $q \\perp F$). Kí hiệu $f = \\text{Pr}_F v$."
+  },
+  {
+    "index": 64,
+    "input": "Phát biểu định lý Pythagore trong không gian Euclide.",
+    "output": "Trong không gian Euclide, định lý Pytago phát biểu rằng:  \n$\\|u - v\\|^2 = \\|u\\|^2 + \\|v\\|^2$ với mọi hai vector $u, v$ trực giao ($(u, v) = 0$)."
+  },
+  {
+    "index": 65,
+    "input": "Trình bày công thức tính khoảng cách từ một điểm đến một không gian con.",
+    "output": "Khoảng cách từ điểm $P$ đến không gian con $F$ được tính bằng độ dài của vector hình chiếu vuông góc của vector $\\vec{PQ}$ (Q là một điểm thuộc $F$) xuống pháp tuyến của $F$.  \nCụ thể hơn, nếu $\\vec{n}$ là vector pháp tuyến của $F$ và $\\vec{PQ}$ là vector từ điểm $Q \\in F$ đến điểm $P$, thì khoảng cách là:\n$$ d = \\frac{\\|\\vec{PQ} \\cdot \\vec{n}\\|}{\\|\\vec{n}\\|} $$"
+  },
+  {
+    "index": 66,
+    "input": "Trình bày quan hệ giữa hệ trực chuẩn và tọa độ véc tơ.",
+    "output": "Nếu $\\{e_1, e_2, \\dots, e_n\\}$ là hệ trực chuẩn thì mọi vector $x$ có thể được viết dưới dạng $x = (x, e_1)e_1 + (x, e_2)e_2 + \\dots + (x, e_n)e_n$.  \nTọa độ của $x$ trong hệ này là $[x]_E = \\begin{pmatrix} (x, e_1) \\\\ (x, e_2) \\\\ \\vdots \\\\ (x, e_n) \\end{pmatrix}$.  \nVí dụ: nếu $e_1 = (1,0)$, $e_2 = (0,1)$ thì tọa độ của $x = (x_1, x_2)$ là $[x]_E = \\begin{pmatrix} x_1 \\\\ x_2 \\end{pmatrix}$."
+  },
+  {
+    "index": 67,
+    "input": "Nêu ý nghĩa ứng dụng của không gian Euclide.",
+    "output": "Không gian Euclide là nền tảng của hình học và vật lý hiện đại. Nó cung cấp khung toán học để mô tả không gian phẳng và không gian ba chiều thông qua các khái niệm như độ dài, góc, khoảng cách và tích vô hướng. Ứng dụng bao gồm:  \n- **Hình học** (đo góc, tính diện tích, thể tích).  \n- **Vật lý** (mô tả lực, vận tốc, gia tốc như các véc tơ).  \n- **Kỹ thuật** (tính toán các hệ phương trình tuyến tính, phân tích sai số).  \n- **Máy tính và AI** (phân tích dữ liệu, xử lý hình ảnh, học máy dựa trên không gian Euclide)."
+  },
+  {
+    "index": 68,
+    "input": "Định nghĩa ánh xạ tuyến tính giữa hai không gian véc tơ.",
+    "output": "Ánh xạ tuyến tính $f: V \\to W$ giữa hai không gian vector $V, W$ là một hàm thỏa mãn hai tính chất:  \n1. $f(u + v) = f(u) + f(v)$ với mọi $u, v \\in V$.  \n2. $f(\\alpha u) = \\alpha f(u)$ với mọi $u \\in V$ và $\\alpha$ là số thực (hoặc số phức)."
+  },
+  {
+    "index": 69,
+    "input": "Cho ví dụ về ánh xạ tuyến tính trong $\\mathbb{R}^n$.",
+    "output": "Ánh xạ tuyến tính $f: \\mathbb{R}^2 \\to \\mathbb{R}^2$ cho bởi $f(x, y) = (2x, x - y)$.  \n**Tính chất:**\n- $f((x_1, y_1) + (x_2, y_2)) = f(x_1 + x_2, y_1 + y_2) = (2(x_1 + x_2), (x_1 + x_2) - (y_1 + y_2)) = (2x_1, x_1 - y_1) + (2x_2, x_2 - y_2) = f(x_1, y_1) + f(x_2, y_2)$.\n- $f(\\alpha(x, y)) = f(\\alpha x, \\alpha y) = (2\\alpha x, \\alpha x - \\alpha y) = \\alpha(2x, x - y) = \\alpha f(x, y)$.  \nVí dụ này thể hiện phép biến đổi tuyến tính trong mặt phẳng."
+  },
+  {
+    "index": 70,
+    "input": "Định nghĩa tổng và tích của các ánh xạ tuyến tính.",
+    "output": "Tổng của hai ánh xạ tuyến tính $f, g: V \\to W$ là một ánh xạ $f+g: V \\to W$ xác định bởi $(f+g)(x) = f(x) + g(x)$.  \nTích của một số vô hướng $\\alpha$ với một ánh xạ tuyến tính $f: V \\to W$ là một ánh xạ $\\alpha f: V \\to W$ xác định bởi $(\\alpha f)(x) = \\alpha \\cdot f(x)$.  \nCả hai phép toán này kết quả đều là các ánh xạ tuyến tính."
+  },
+  {
+    "index": 71,
+    "input": "Định nghĩa hạt nhân (kernel) của ánh xạ tuyến tính.",
+    "output": "Hạt nhân (kernel) của ánh xạ tuyến tính $f: V \\to W$ là tập hợp tất cả các vector $x \\in V$ sao cho $f(x) = 0$, được kí hiệu là $\\ker(f)$."
+  },
+  {
+    "index": 72,
+    "input": "Định nghĩa ảnh (image) của ánh xạ tuyến tính.",
+    "output": "Ảnh (Image) của ánh xạ tuyến tính $f: V \\to W$ được định nghĩa là tập hợp tất cả các vector $w \\in W$ có thể được tạo ra bởi $f$, tức là $\\Im(f) = \\{ f(v) \\mid v \\in V \\}$."
+  },
+  {
+    "index": 73,
+    "input": "Phát biểu định lý hạng–khuyết (Rank–Nullity Theorem).",
+    "output": "$$\\text{Định lý hạng–khuyết: } \\dim(\\text{ker}(f)) + \\dim(\\text{Im}(f)) = \\dim(V)$$"
+  },
+  {
+    "index": 74,
+    "input": "Định nghĩa ma trận của một ánh xạ tuyến tính theo một cơ sở.",
+    "output": "Ma trận của ánh xạ tuyến tính $f: V \\to W$ theo cặp cơ sở $E = \\{e_1, \\ldots, e_n\\}$ của $V$ và $F = \\{f_1, \\ldots, f_m\\}$ của $W$ là ma trận $A_{E,F} = (a_{ij})_{m \\times n}$, trong đó $a_{ij}$ là hệ số của $f(e_j)$ khi được biểu diễn dưới dạng tổ hợp tuyến tính theo cơ sở $F$. Cụ thể:  \n$$f(e_j) = a_{1j} f_1 + a_{2j} f_2 + \\dots + a_{mj} f_m.$$"
+  },
+  {
+    "index": 75,
+    "input": "Trình bày mối liên hệ giữa ánh xạ tuyến tính và ma trận.",
+    "output": "Ánh xạ tuyến tính $f: V \\to W$ giữa hai không gian hữu hạn chiều tương ứng duy nhất một ma trận $A$ sao cho $[f(x)]_W = A [x]_V$. Ngược lại, mỗi ma trận $A$ xác định duy nhất một ánh xạ tuyến tính $f$. Ta có thể coi ánh xạ tuyến tính là ma trận và không phân biệt chúng."
+  },
+  {
+    "index": 76,
+    "input": "Trình bày công thức thay đổi cơ sở cho ma trận của ánh xạ tuyến tính.",
+    "output": "Khi đổi cơ sở cho ánh xạ tuyến tính $f: V \\to W$, giả sử:\n- $E, E'$ là các cơ sở của $V$,\n- $F, F'$ là các cơ sở của $W$,\n- $A_{E,F}$ là ma trận của $f$ trong cặp cơ sở $E, F$.\n\nGọi:\n- $P$ là ma trận chuyển từ $E$ sang $E'$,\n- $Q$ là ma trận chuyển từ $F$ sang $F'$.\n\n**Công thức thay đổi cơ sở:**\n$$[f]_{E', F'} = Q^{-1} \\cdot A_{E,F} \\cdot P$$\nĐiều này có nghĩa:\n- Nếu ta biết tọa độ của $x$ trong $E'$, ta dùng $P$ để chuyển về $E$,\n- Áp dụng $A_{E,F}$ để được kết quả trong $F$,\n- Sau đó dùng $Q^{-1}$ để chuyển kết quả về $F'$."
+  },
+  {
+    "index": 77,
+    "input": "Nêu ý nghĩa ứng dụng của ánh xạ tuyến tính.",
+    "output": "Ánh xạ tuyến tính là công cụ nền tảng trong toán học và các lĩnh vực ứng dụng như vật lý, kỹ thuật, khoa học máy tính. Nó mô tả quá trình biến đổi trực tiếp, bảo toàn phép cộng và nhân với số, giúp đơn giản hóa các bài toán phức tạp (ví dụ: chuyển hệ tọa độ, mô tả lực, biến đổi hình học). Nó cũng là cơ sở cho các khái niệm trừu tượng như không gian vector, không gian con, hạng, và các phép toán trên không gian vector. Trong học máy, ánh xạ tuyến tính xuất hiện trong các phép biến đổi dữ liệu và mô hình hồi quy tuyến tính."
+  },
+  {
+    "index": 78,
+    "input": "Định nghĩa trị riêng của ma trận vuông.",
+    "output": "Sử dụng ngữ cảnh:\n------\n#### Định nghĩa 1.1\nCho $A$ là ma trận vuông. Số $\\lambda$ được gọi là **trị riêng** của $A$ nếu tồn tại véc tơ $x \\neq 0$ sao cho $Ax = \\lambda x$.  \nKhi đó, $x$ được gọi là **vector riêng** tương ứng với trị riêng $\\lambda$ của $A$.  \n**Chú ý:**\n• $x \\neq 0$ là điều kiện không tầm thường.  \n• $Ax = \\lambda x \\iff Ax - \\lambda x = 0 \\iff (A - \\lambda I)x = 0$.  \n• $(A - \\lambda I)x = 0$ là hệ thuần nhất, nên nó có tập nghiệm suy rộng khác $\\{0\\}$ khi và chỉ khi $\\det(A - \\lambda I) = 0$.  \n**Định nghĩa 1.2**\n$\\det(A - \\lambda I)$ được gọi là **đa thức đặc trưng** (characteristic polynomial) của $A$.  \n$\\deg(P) = n$ được gọi là **bậc của đa thức đặc trưng**.  \n**Định nghĩa 1.3**\n$P_A(\\lambda) = \\det(A - \\lambda I)$ được gọi là **đa thức đặc trưng** của $A$.  \n**Định nghĩa 1.4**\nTrị riêng (TR) của $A$ là nghiệm của phương trình đặc trưng $\\det(A - \\lambda I) = 0$.  \n**Định nghĩa 1.5**\nVector riêng (VTR) của $A$ tương ứng với TR $\\lambda$ là vector $x \\ne 0$ thỏa mãn $(A - \\lambda I)x = 0$.\n------\nTrả lời:\nSố $\\lambda$ được gọi là trị riêng của ma trận vuông $A$ nếu tồn tại vector $x \\neq 0$ thỏa mãn $Ax = \\lambda x$. Nghĩa là vector $x$ được nhân với $\\lambda$ mà không đổi hướng (hoặc ngược hướng)."
+  },
+  {
+    "index": 79,
+    "input": "Định nghĩa véc tơ riêng ứng với trị riêng.",
+    "output": "Một véc tơ $\\mathbf{x} \\neq \\mathbf{0}$ được gọi là véc tơ riêng (VTR) ứng với trị riêng (TR) $\\lambda$ của ma trận $A$ nếu nó thỏa mãn $A\\mathbf{x} = \\lambda \\mathbf{x}$. Nghĩa là $A\\mathbf{x}$ cùng phương với $\\mathbf{x}$."
+  },
+  {
+    "index": 80,
+    "input": "Định nghĩa đa thức đặc trưng của ma trận $A$.",
+    "output": "Đa thức đặc trưng của ma trận $A$ là hàm số $P_A(\\lambda) = \\det(A - \\lambda I)$."
+  },
+  {
+    "index": 81,
+    "input": "Mối quan hệ giữa trị riêng và hạt nhân của $A - \\lambda I$.",
+    "output": "Số $\\lambda$ là trị riêng của $A$ khi và chỉ khi $\\det(A - \\lambda I) = 0$. Khi đó, các véc tơ riêng ứng với $\\lambda$ chính là các vector khác không thuộc nhân của $A - \\lambda I$, tức là $x \\in \\ker(A - \\lambda I)$. Hạng của $A - \\lambda I$ cho biết số chiều của không gian riêng tương ứng."
+  },
+  {
+    "index": 82,
+    "input": "Định nghĩa không gian riêng ứng với trị riêng $\\lambda$.",
+    "output": "Không gian riêng ứng với trị riêng $\\lambda$ là không gian con $E_\\lambda$ gồm tất cả các véc tơ khác không và vector không mà khi ánh xạ $f$ tác động lên chúng thì kết quả cùng phương với chúng. Nó được định nghĩa là không gian nghiệm của hệ phương trình $(A - \\lambda I)x = 0$."
+  },
+  {
+    "index": 83,
+    "input": "Định nghĩa bội đại số và bội hình học của một trị riêng.",
+    "output": "Bội đại số của trị riêng $\\lambda$ là bội nghiệm của $\\lambda$ trong phương trình đặc trưng.  \nBội hình học của trị riêng $\\lambda$ là số chiều của không gian con riêng ứng với $\\lambda$, tức là $\\dim(E_\\lambda)$."
+  },
+  {
+    "index": 84,
+    "input": "Phát biểu định lý về số lượng trị riêng.",
+    "output": "Mọi ma trận vuông cấp $n$ có đúng $n$ trị riêng (tính cả bội đại số)."
+  },
+  {
+    "index": 85,
+    "input": "Nêu tính chất các trị riêng của ma trận tam giác.",
+    "output": "Các trị riêng của ma trận tam giác bằng các phần tử trên đường chéo chính.  \n**Chú ý:** Đây là một tính chất đặc biệt của ma trận tam giác, không phải của mọi ma trận."
+  },
+  {
+    "index": 86,
+    "input": "Nêu quan hệ giữa trị riêng với định thức và hệ số của đa thức đặc trưng.",
+    "output": "- Tổng các trị riêng (đếm bội) bằng hệ số tự do của đa thức đặc trưng (được nhân với $(-1)^{n-1}$).  \n- Tích các trị riêng (đếm bội) bằng giá trị tuyệt đối của định thức.  \n**Ghi chú:** Tổng các trị riêng bằng $\\text{tr}(A)$, tích bằng $\\det(A)$."
+  },
+  {
+    "index": 87,
+    "input": "Định nghĩa ma trận khả chéo.",
+    "output": "Ma trận khả chéo là một ma trận vuông có thể đưa về dạng chéo thông qua các phép biến đổi sơ cấp. Dạng chéo có các phần tử khác 0 nằm trên đường chéo chính và các phần tử khác ngoài đường chéo chính bằng 0."
+  },
+  {
+    "index": 88,
+    "input": "Điều kiện cần và đủ để một ma trận khả chéo.",
+    "output": "Điều kiện cần và đủ để một ma trận khả chéo hóa là nó có $n$ véc tơ riêng độc lập tuyến tính.  \n**Tương đương:**  \n- Ma trận có $n$ trị riêng (đếm cả bội) phân biệt.  \n- Với mọi trị riêng $\\lambda_i$, số chiều của không gian riêng $E_{\\lambda_i}$ bằng bội đại số của $\\lambda_i$."
+  },
+  {
+    "index": 89,
+    "input": "Phát biểu quan hệ giữa bội đại số và bội hình học.",
+    "output": "Bội hình học có thể nhỏ hơn hoặc bằng bội đại số. Nếu chúng bằng nhau với tất cả các trị riêng thì ma trận khả nghịch trực giao hóa. Nếu không thì ma trận không khả nghịch trực giao hóa."
+  },
+  {
+    "index": 90,
+    "input": "Định nghĩa đa thức tối tiểu của ma trận.",
+    "output": "Đa thức tối tiểu của ma trận $A$ là đa thức monic bậc nhỏ nhất $m(\\lambda)$ sao cho $m(A) = 0$. Nó chia hết đa thức đặc trưng của $A$."
+  },
+  {
+    "index": 91,
+    "input": "Phát biểu định lý phổ (Spectral theorem) cho ma trận đối xứng thực.",
+    "output": "$ \\boxed{\\text{Mọi ma trận đối xứng thực } A \\text{ đều có các trị riêng thực và các véc tơ riêng ứng với các trị riêng khác nhau là trực giao.}} $"
+  },
+  {
+    "index": 92,
+    "input": "Nêu tính chất trị riêng của ma trận đối xứng thực.",
+    "output": "- Trị riêng của ma trận đối xứng thực là những số thực.  \n- Các véc tơ riêng ứng với các trị riêng khác nhau thì vuông góc.  \n- Ma trận đối xứng luôn chéo hóa trực giao được."
+  },
+  {
+    "index": 93,
+    "input": "Ứng dụng của chéo hóa ma trận trong tính toán.",
+    "output": "Chéo hóa ma trận được ứng dụng rộng rãi trong tính toán vì nó đơn giản hóa các phép toán phức tạp như:  \n- **Tính lũy thừa** $A^n$: $A^n = P D^n P^{-1}$, dễ tính hơn nhiều so với nhân trực tiếp.  \n- **Tính hàm số của ma trận** $f(A)$: dựa vào khai triển Taylor hoặc các công thức đại số.  \n- **Tính định thức** $\\det(A) = \\prod \\lambda_i$ (trị riêng).  \n- **Tính số hạng tổng quát của dãy số** $a_n$ khi $a_n = \\det(A_n)$, nhờ tính chất không đổi của định thức.  \n- **Giải hệ phương trình tuyến tính** $Ax=b$ bằng cách đưa $A$ về dạng chéo để tính toán nhanh hơn."
+  },
+  {
+    "index": 94,
+    "input": "Ví dụ: Tìm trị riêng và véc tơ riêng của ma trận $A = \\begin{bmatrix}2 & 0 \\\\ 0 & 3\\end{bmatrix}$.",
+    "output": "Cho $A = \\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix}$.  \n**Trị riêng:**\n- $A$ là đường chéo nên các phần tử trên đường chéo là các trị riêng. Vậy $\\lambda_1 = 2, \\lambda_2 = 3$.  \n**Véc tơ riêng:**\n- Với $\\lambda_1 = 2$: giải $(A - 2I)x = 0 \\Rightarrow \\begin{pmatrix} 0 & 0 \\\\ 0 & 1 \\end{pmatrix} \\begin{pmatrix} x_1 \\\\ x_2 \\end{pmatrix} = 0$.  \n  $\\Rightarrow x_2 = 0$, $x_1$ tự do. Véc tơ riêng: $\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}$.  \n- Với $\\lambda_2 = 3$: giải $(A - 3I)x = 0 \\Rightarrow \\begin{pmatrix} -1 & 0 \\\\ 0 & 0 \\end{pmatrix} \\begin{pmatrix} x_1 \\\\ x_2 \\end{pmatrix} = 0$.  \n  $\\Rightarrow x_1 = 0$, $x_2$ tự do. Véc tơ riêng: $\\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}$."
+  },
+  {
+    "index": 95,
+    "input": "Ví dụ: Ma trận nào không khả chéo?",
+    "output": "Ma trận $A = \\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}$ không khả chéo hóa vì nó chỉ có một véc tơ riêng ứng với trị riêng $\\lambda=1$."
+  },
+  {
+    "index": 96,
+    "input": "Định nghĩa trị riêng và véc tơ riêng của ánh xạ tuyến tính.",
+    "output": "Sử dụng ngữ cảnh:\n------\n#### Định nghĩa 1.1\nMột hàm số $f: X \\to Y$ được gọi là đơn ánh nếu nó đơn một (tức là khác nhau thì phải có ảnh khác nhau).  \nMột hàm số $f: X \\to Y$ được gọi là toàn ánh nếu ảnh của nó phủ toàn bộ tập $Y$.  \nMột hàm số $f: X \\to Y$ được gọi là tương đẳng (hay 1-1 và toàn ánh) nếu nó vừa đơn ánh vừa toàn ánh.  \n#### Định nghĩa 1.2\nMột ánh xạ $f: X \\to Y$ được gọi là đơn ánh nếu:\n$f(x_1) = f(x_2) \\Longrightarrow x_1 = x_2$\nMột ánh xạ $f: X \\to Y$ được gọi là toàn ánh nếu:\n$f(X) = Y$\nMột ánh xạ $f: X \\to Y$ được gọi là tương đẳng nếu nó đơn ánh và toàn ánh.  \n#### Định nghĩa 1.3\nMột ánh xạ $f: X \\to Y$ được gọi là tương đẳng nếu nó là đơn ánh và toàn ánh.\n------\nTrả lời:\nCho ánh xạ tuyến tính $f: V \\to V$.  \n- **Trị riêng $\\lambda$** của $f$ nếu tồn tại véc tơ $x \\neq 0$ sao cho $f(x) = \\lambda x$.  \n- **Véc tơ riêng** tương ứng với $\\lambda$ là véc tơ $x$ thỏa mãn $f(x) = \\lambda x$.  \n**Chú ý:** $x$ và $f(x)$ cùng phương."
+  },
+  {
+    "index": 97,
+    "input": "Định nghĩa dạng toàn phương trong $n$ biến.",
+    "output": "Dạng toàn phương trong $n$ biến là một hàm thực $f: \\mathbb{R}^n \\to \\mathbb{R}$ có thể được biểu diễn dưới dạng $f(x) = x^T A x$, trong đó $x$ là vector cột biến số và $A$ là một ma trận đối xứng."
+  },
+  {
+    "index": 98,
+    "input": "Giải thích vì sao mỗi dạng toàn phương có thể biểu diễn bởi ma trận đối xứng.",
+    "output": "Mỗi dạng toàn phương $f(x) = x^T A x$ có thể biểu diễn bởi ma trận đối xứng vì ta có thể viết lại $f(x) = x_1(A_{11}x_1 + A_{12}x_2 + \\cdots + A_{1n}x_n) + x_2(A_{21}x_1 + A_{22}x_2 + \\cdots + A_{2n}x_n) + \\cdots + x_n(A_{n1}x_1 + \\cdots + A_{nn}x_n)$. Nếu ta đặt $A_{ij} = A_{ji}$ thì ta có một ma trận đối xứng. Điều này chứng tỏ mọi dạng toàn phương đều có thể được biểu diễn bởi một ma trận đối xứng."
+  },
+  {
+    "index": 99,
+    "input": "Định nghĩa hai dạng toàn phương tương đương.",
+    "output": "Hai dạng toàn phương tương đương nếu chúng có thể biến đổi một sang hai bằng cách đổi biến $x = Py$ với $P$ là ma trận khả nghịch."
+  },
+  {
+    "index": 100,
+    "input": "Phát biểu định lý Sylvester về quán tính của dạng toàn phương.",
+    "output": "**Định lý Sylvester về quán tính của dạng toàn phương**  \nChỉ số dương quán tính và chỉ số âm quán tính của một dạng toàn phương là những đại lượng bất biến, không phụ thuộc vào cách đưa dạng toàn phương về dạng chính tắc. Nghĩa là, nếu hai dạng toàn phương tương đương (có thể đưa về cùng một dạng chính tắc), thì chúng có cùng chỉ số dương quán tính và chỉ số âm quán tính."
+  },
+  {
+    "index": 101,
+    "input": "Định nghĩa dạng toàn phương chính tắc.",
+    "output": "Dạng toàn phương chính tắc là dạng toàn phương có các hệ số của các bình phương tự do bằng 0 và các hệ số của các tích $x_i x_j$ (với $i \\neq j$) bằng 0. Nó có dạng $f = \\lambda_1 y_1^2 + \\lambda_2 y_2^2 + \\dots + \\lambda_n y_n^2$."
+  },
+  {
+    "index": 102,
+    "input": "Định nghĩa chỉ số quán tính của dạng toàn phương.",
+    "output": "Chỉ số quán tính của dạng toàn phương là số chỉ số dương (hoặc âm) của các hệ số trong dạng chính tắc của nó."
+  },
+  {
+    "index": 103,
+    "input": "Định nghĩa dạng toàn phương xác định dương và xác định âm.",
+    "output": "Dạng toàn phương $f(x)$ xác định dương nếu $\\forall x \\neq 0: f(x) > 0$.  \nDạng toàn phương $f(x)$ xác định âm nếu $\\forall x \\neq 0: f(x) < 0$."
+  },
+  {
+    "index": 104,
+    "input": "Đưa ra tiêu chuẩn Sylvester để kiểm tra xác định dương.",
+    "output": "Tiêu chuẩn Sylvester để kiểm tra dạng toàn phương $f(x) = x^T A x$ xác định dương là:  \n$\\Delta_i > 0$ với mọi $i = 1, 2, \\dots, n$, trong đó $\\Delta_i$ là định thức con chính cấp $i$ của ma trận $A$."
+  },
+  {
+    "index": 105,
+    "input": "Nêu cách biến đổi một dạng toàn phương về dạng chính tắc.",
+    "output": "Đưa dạng toàn phương về dạng chính tắc bằng phương pháp Lagrange hoặc biến đổi trực giao.  \n**Phương pháp Lagrange**:  \n- Chọn số hạng $x_k^2$ có hệ số khác 0.  \n- Lập thành bình phương và nhóm các số hạng còn lại.  \n- Lặp lại cho dạng toàn phương thu được.  \n**Phương pháp biến đổi trực giao**:  \n- Viết dạng toàn phương thành dạng $x^T A x$.  \n- Chéo hóa $A$ bằng $P, D$ (trực giao và chéo).  \n- Dạng chính tắc là $y^T D y$ và $x = Py$."
+  },
+  {
+    "index": 106,
+    "input": "Nêu quan hệ giữa trị riêng và tính xác định của dạng toàn phương.",
+    "output": "Trị riêng và tính xác định của dạng toàn phương có mối liên hệ trực tiếp:  \n- Dạng toàn phương xác định dương $\\iff$ tất cả các trị riêng của $A$ dương.  \n- Dạng toàn phương xác định âm $\\iff$ tất cả các trị riêng của $A$ âm.  \n- Dạng toàn phương không xác định dấu $\\iff$ có cả trị riêng dương và âm.  \n**Ghi chú:** Nếu $A$ có trị riêng bằng 0 thì dạng toàn phương không xác định dấu."
+  },
+  {
+    "index": 107,
+    "input": "Ứng dụng của dạng toàn phương trong hình học và vật lý.",
+    "output": "Dạng toàn phương được dùng để biểu diễn phương trình mặt quadric (nón, ellipsoid, paraboloid,...) trong không gian Oxyz. Trong vật lý, nó xuất hiện trong các bài toán cơ học (ví dụ: năng lượng tổng quát của hệ vật thể) và điện từ học (ví dụ: năng lượng điện trường trong tụ điện)."
+  },
+  {
+    "index": 108,
+    "input": "Ví dụ: Cho $Q(x,y) = 3x^2 + 2xy + y^2$. Hãy viết $Q$ dưới dạng ma trận.",
+    "output": "Viết lại $Q(x,y) = (x,y) \\begin{pmatrix} 3 & 1 \\\\ 1 & 1 \\end{pmatrix} \\begin{pmatrix} x \\\\ y \\end{pmatrix}$. Ma trận này là $\\begin{pmatrix} 3 & 1 \\\\ 1 & 1 \\end{pmatrix}$."
+  }
+]
