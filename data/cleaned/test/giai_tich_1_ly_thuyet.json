@@ -1,0 +1,1129 @@
+{
+    "problems": [
+        {
+            "question": "Nêu các tập số cơ bản trong giải tích.",
+            "answer": {
+                "steps": [
+                    "Các tập số cơ bản:",
+                    "- $\\mathbb{N}$: tập số tự nhiên.",
+                    "- $\\mathbb{Z}$: tập số nguyên.",
+                    "- $\\mathbb{Q}$: tập số hữu tỉ.",
+                    "- $\\mathbb{R}$: tập số thực.",
+                    "- $\\mathbb{C}$: tập số phức (mặc dù trong Giải tích 1 chủ yếu xét $\\mathbb{R}$)."
+                ]
+            }
+        },
+        {
+            "question": "Tập số $\\mathbb{N}, \\mathbb{Z}, \\mathbb{Q}, \\mathbb{R}$ có mối quan hệ bao hàm như thế nào?",
+            "answer": {
+                "steps": [
+                    "Các tập số mở rộng dần: $\\mathbb{N}$ là tập số tự nhiên, $\\mathbb{Z}$ là số nguyên.",
+                    "$\\mathbb{Q}$ là tập số hữu tỉ (chứa tất cả phân số), bao hàm $\\mathbb{Z}$.",
+                    "$\\mathbb{R}$ là tập số thực, bao hàm $\\mathbb{Q}$ và lấp đầy trục số.",
+                    "Mối quan hệ: $\\mathbb{N} \\subset \\mathbb{Z} \\subset \\mathbb{Q} \\subset \\mathbb{R}$."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa trị tuyệt đối của một số thực.",
+            "answer": {
+                "steps": [
+                    "Với $x \\in \\mathbb{R}$, trị tuyệt đối của $x$ ký hiệu là $|x|$, được định nghĩa:",
+                    "$$ |x| = \\begin{cases} x & x \\geq 0 \\\\ -x & x < 0 \\end{cases} $$",
+                    "Ý nghĩa hình học: $|x|$ biểu diễn khoảng cách từ $x$ đến 0 trên trục số thực.",
+                    "Ví dụ: $|3|=3$, $|-3|=3$."
+                ]
+            }
+        },
+        {
+            "question": "Nêu các tính chất cơ bản của trị tuyệt đối.",
+            "answer": {
+                "steps": [
+                    "Một số tính chất quan trọng:",
+                    "1. $|x| \\geq 0$, và $|x| = 0 \\Leftrightarrow x=0$.",
+                    "2. $|xy| = |x||y|$ với mọi $x,y \\in \\mathbb{R}$.",
+                    "3. $|x+y| \\leq |x| + |y|$ (bất đẳng thức tam giác).",
+                    "4. $||x|-|y|| \\leq |x-y|$.",
+                    "Các tính chất này rất quan trọng trong chứng minh các mệnh đề về hội tụ, giới hạn."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa hàm số một biến thực.",
+            "answer": {
+                "steps": [
+                    "Hàm số một biến thực là quy tắc gán cho mỗi $x$ thuộc tập con $D \\subseteq \\mathbb{R}$ một số thực $y = f(x) \\in \\mathbb{R}$.",
+                    "Ký hiệu: $f: D \\to \\mathbb{R}$, với $D$ gọi là tập xác định của hàm số.",
+                    "Ví dụ: $f(x)=x^2$ có tập xác định $D=\\mathbb{R}$."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa tính đơn điệu của hàm số.",
+            "answer": {
+                "steps": [
+                    "Hàm số $f(x)$ trên khoảng $I$:",
+                    "- Đồng biến nếu $x_1 < x_2 \\Rightarrow f(x_1) \\leq f(x_2)$ với mọi $x_1,x_2 \\in I$.",
+                    "- Nghịch biến nếu $x_1 < x_2 \\Rightarrow f(x_1) \\geq f(x_2)$ với mọi $x_1,x_2 \\in I$.",
+                    "Nếu bất đẳng thức là chặt, ta nói hàm đồng biến (hoặc nghịch biến) nghiêm ngặt.",
+                    "Ví dụ: $f(x)=x^3$ đồng biến nghiêm ngặt trên $\\mathbb{R}$."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa hàm chẵn và hàm lẻ.",
+            "answer": {
+                "steps": [
+                    "Hàm $f(x)$ được gọi là:",
+                    "- Chẵn nếu $f(-x) = f(x)$ với mọi $x$ thuộc tập xác định. Đồ thị đối xứng qua trục tung.",
+                    "- Lẻ nếu $f(-x) = -f(x)$ với mọi $x$ thuộc tập xác định. Đồ thị đối xứng qua gốc tọa độ.",
+                    "Ví dụ: $f(x)=x^2$ là hàm chẵn, $f(x)=x^3$ là hàm lẻ."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa hàm tuần hoàn.",
+            "answer": {
+                "steps": [
+                    "Hàm số $f(x)$ được gọi là tuần hoàn nếu tồn tại $T>0$ sao cho:",
+                    "$$ f(x+T) = f(x), \\; \\forall x $$.",
+                    "Số $T$ nhỏ nhất thỏa mãn tính chất trên gọi là chu kỳ cơ bản.",
+                    "Ví dụ: $\\sin x$ và $\\cos x$ có chu kỳ cơ bản $2\\pi$."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa hàm hợp và hàm ngược.",
+            "answer": {
+                "steps": [
+                    "Hàm hợp: $(f \\circ g)(x) = f(g(x))$.",
+                    "Hàm ngược: $f^{-1}$ là hàm sao cho $f(f^{-1}(y)) = y$ với mọi $y$ trong miền xác định của $f^{-1}$.",
+                    "Điều kiện để hàm có hàm ngược: hàm phải đơn ánh trên miền đang xét.",
+                    "Ví dụ: $f(x) = 2x+3$, hàm ngược là $f^{-1}(x) = \\frac{x-3}{2}$."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa hàm hợp.",
+            "answer": {
+                "steps": [
+                    "Cho hai hàm $y=f(u)$ xác định trên $D_f$ và $u=g(x)$ xác định trên $D_g$.",
+                    "Khi đó hàm hợp $h(x) = f(g(x))$ được xác định trên tập $D = \\{x \\in D_g : g(x) \\in D_f\\}$.",
+                    "Ý nghĩa: ta thay biến trung gian $u=g(x)$ vào $f(u)$ để tạo ra hàm mới.",
+                    "Ví dụ: $f(u)=u^2$, $g(x)=\\sin x$, thì $h(x) = f(g(x)) = (\\sin x)^2$."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa hàm ngược.",
+            "answer": {
+                "steps": [
+                    "Cho hàm số $y=f(x)$ xác định và đơn điệu trên tập $D$. Khi đó $f$ khả nghịch, tức tồn tại hàm ngược $f^{-1}$ thỏa mãn:",
+                    "- $f^{-1}(f(x)) = x$, với mọi $x \\in D$.",
+                    "- $f(f^{-1}(y)) = y$, với mọi $y \\in f(D)$.",
+                    "Ví dụ: $f(x)=e^x$ trên $\\mathbb{R}$ có hàm ngược $f^{-1}(x)=\\ln x$ trên $(0,\\infty)$."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa dãy số.",
+            "answer": {
+                "steps": [
+                    "Dãy số là một ánh xạ từ tập số tự nhiên $\\mathbb{N}$ vào tập số thực $\\mathbb{R}$.",
+                    "Ký hiệu dãy số $(u_n)$ với $u_n = u(n)$. Mỗi phần tử $u_n$ gọi là số hạng thứ $n$ của dãy.",
+                    "Ví dụ: dãy $u_n = 1/n$ cho ta $u_1 = 1, u_2 = 1/2, u_3 = 1/3,...$",
+                    "Như vậy, dãy số là một chuỗi vô hạn các số được sắp xếp theo thứ tự chỉ số."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa giới hạn của dãy số.",
+            "answer": {
+                "steps": [
+                    "Dãy $(u_n)$ có giới hạn $L$ khi $n \\to \\infty$ nếu với mọi $\\epsilon > 0$, tồn tại số tự nhiên $N$ sao cho với mọi $n > N$ thì $|u_n - L| < \\epsilon$.",
+                    "Ký hiệu: $\\lim_{n \\to \\infty} u_n = L$ hoặc $u_n \\to L$ khi $n \\to \\infty$.",
+                    "Điều này có nghĩa là các số hạng $u_n$ tiến gần đến $L$ và ở đủ xa thì nằm trong khoảng $\\epsilon$-lân cận của $L$."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa dãy số hội tụ và phân kỳ.",
+            "answer": {
+                "steps": [
+                    "- Dãy $(u_n)$ được gọi là hội tụ nếu tồn tại số thực $L$ sao cho $\\lim_{n \\to \\infty} u_n = L$.",
+                    "- Dãy được gọi là phân kỳ nếu không có giới hạn hữu hạn.",
+                    "Có hai kiểu phân kỳ:",
+                    "+ Phân kỳ vô hạn: dãy có xu hướng tiến ra $+\\infty$ hoặc $-\\infty$.",
+                    "+ Phân kỳ không có giới hạn: dãy dao động không ổn định.",
+                    "Ví dụ: $u_n = 1/n$ hội tụ về 0, $u_n = n$ phân kỳ ra $+\\infty$, $u_n = (-1)^n$ phân kỳ vì dao động."
+                ]
+            }
+        },
+        {
+            "question": "Nêu các tính chất cơ bản của giới hạn dãy số.",
+            "answer": {
+                "steps": [
+                    "Nếu $\\lim u_n = a$ và $\\lim v_n = b$ thì:",
+                    "1. $\\lim (u_n + v_n) = a + b$.",
+                    "2. $\\lim (u_n - v_n) = a - b$.",
+                    "3. $\\lim (u_n v_n) = ab$.",
+                    "4. $\\lim \\frac{u_n}{v_n} = \\frac{a}{b}$ nếu $b \\neq 0$.",
+                    "Ngoài ra: Nếu $u_n \\leq v_n$ với mọi $n$ đủ lớn thì $\\lim u_n \\leq \\lim v_n$.",
+                    "Đây là các tính chất quan trọng giúp tính giới hạn bằng cách tách nhỏ."
+                ]
+            }
+        },
+        {
+            "question": "Trình bày tiêu chuẩn Cauchy cho dãy số hội tụ.",
+            "answer": {
+                "steps": [
+                    "Một dãy $(u_n)$ hội tụ khi và chỉ khi nó là dãy Cauchy.",
+                    "Nghĩa là: Với mọi $\\epsilon > 0$, tồn tại $N$ sao cho với mọi $m,n > N$ ta có $|u_m - u_n| < \\epsilon$.",
+                    "Ý nghĩa: các số hạng của dãy trở nên 'gần nhau' khi chỉ số đủ lớn.",
+                    "Tiêu chuẩn này cho thấy sự hội tụ chỉ phụ thuộc vào khoảng cách giữa các số hạng chứ không cần biết giới hạn."
+                ]
+            }
+        },
+        {
+            "question": "Nêu tiêu chuẩn đơn điệu – bị chặn cho hội tụ của dãy số.",
+            "answer": {
+                "steps": [
+                    "Định lý: Nếu một dãy $(u_n)$ là đơn điệu (tăng hoặc giảm) và bị chặn thì dãy đó hội tụ.",
+                    "- Dãy tăng bị chặn trên thì hội tụ đến cận trên.",
+                    "- Dãy giảm bị chặn dưới thì hội tụ đến cận dưới.",
+                    "Ví dụ: $u_n = 1 - 1/n$ là dãy tăng và bị chặn trên bởi 1 nên $u_n \\to 1$."
+                ]
+            }
+        },
+        {
+            "question": "Cho ví dụ về dãy số hội tụ.",
+            "answer": {
+                "steps": [
+                    "Xét dãy $u_n = 1/n$.",
+                    "Khi $n$ lớn, $u_n$ ngày càng nhỏ.",
+                    "Với mọi $\\epsilon > 0$, chỉ cần chọn $N > 1/\\epsilon$ thì $|u_n - 0| < \\epsilon$ với mọi $n > N$.",
+                    "Do đó $\\lim_{n \\to \\infty} u_n = 0$. Dãy này hội tụ về 0."
+                ]
+            }
+        },
+        {
+            "question": "Cho ví dụ về dãy số phân kỳ.",
+            "answer": {
+                "steps": [
+                    "Xét dãy $u_n = n$.",
+                    "Khi $n$ lớn, $u_n$ tăng không giới hạn.",
+                    "Với mọi số thực $M > 0$, ta luôn tìm được $N = M$ sao cho $u_n > M$ với mọi $n > N$.",
+                    "Do đó $u_n \\to +\\infty$, tức là phân kỳ."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa giới hạn hàm số tại một điểm.",
+            "answer": {
+                "steps": [
+                    "Hàm $f(x)$ có giới hạn $L$ khi $x \\to x_0$ nếu với mọi $\\epsilon > 0$, tồn tại $\\delta > 0$ sao cho $0 < |x - x_0| < \\delta$ thì $|f(x) - L| < \\epsilon$.",
+                    "Ký hiệu: $\\lim_{x \\to x_0} f(x) = L$.",
+                    "Ý nghĩa: khi $x$ tiến đến $x_0$, thì $f(x)$ tiến gần đến $L$ và có thể làm $f(x)$ gần $L$ tùy ý bằng cách lấy $x$ đủ gần $x_0$."
+                ]
+            }
+        },
+        {
+            "question": "Nêu định nghĩa giới hạn một bên của hàm số.",
+            "answer": {
+                "steps": [
+                    "Giới hạn bên trái: $\\lim_{x \\to x_0^-} f(x) = L$ nếu $f(x)$ tiến về $L$ khi $x \\to x_0$ từ phía nhỏ hơn $x_0$.",
+                    "Giới hạn bên phải: $\\lim_{x \\to x_0^+} f(x) = L$ nếu $f(x)$ tiến về $L$ khi $x \\to x_0$ từ phía lớn hơn $x_0$.",
+                    "Giới hạn $\\lim_{x \\to x_0} f(x)$ tồn tại khi và chỉ khi cả hai giới hạn một bên tồn tại và bằng nhau."
+                ]
+            }
+        },
+        {
+            "question": "Phát biểu các phép toán trên giới hạn hàm số.",
+            "answer": {
+                "steps": [
+                    "Nếu $\\lim_{x \\to x_0} f(x) = A$ và $\\lim_{x \\to x_0} g(x) = B$, thì:",
+                    "1. $\\lim (f+g) = A+B$.",
+                    "2. $\\lim (f-g) = A-B$.",
+                    "3. $\\lim (fg) = AB$.",
+                    "4. $\\lim (f/g) = A/B$ nếu $B \\neq 0$.",
+                    "Ngoài ra, $\\lim |f(x)| = |A|$.",
+                    "Những tính chất này giúp ta tính giới hạn các biểu thức phức tạp."
+                ]
+            }
+        },
+        {
+            "question": "Nêu định nghĩa vô cùng bé.",
+            "answer": {
+                "steps": [
+                    "Hàm $\\alpha(x)$ được gọi là vô cùng bé khi $x \\to x_0$ nếu $\\lim_{x \\to x_0} \\alpha(x) = 0$.",
+                    "Ký hiệu: $\\alpha(x) \\to 0$ khi $x \\to x_0$.",
+                    "Ví dụ: $\\alpha(x) = x$ là vô cùng bé khi $x \\to 0$.",
+                    "Ý nghĩa: giá trị hàm có thể nhỏ tùy ý nếu $x$ đủ gần $x_0$."
+                ]
+            }
+        },
+        {
+            "question": "Nêu định nghĩa vô cùng lớn.",
+            "answer": {
+                "steps": [
+                    "Hàm $\\beta(x)$ được gọi là vô cùng lớn khi $x \\to x_0$ nếu với mọi $M > 0$, tồn tại $\\delta > 0$ sao cho $0 < |x - x_0| < \\delta$ thì $|\\beta(x)| > M$.",
+                    "Ký hiệu: $\\beta(x) \\to \\infty$ khi $x \\to x_0$.",
+                    "Ví dụ: $\\beta(x) = 1/x$ là vô cùng lớn khi $x \\to 0^+$.",
+                    "Ý nghĩa: giá trị hàm vượt qua mọi ngưỡng cho trước khi $x$ đủ gần $x_0$."
+                ]
+            }
+        },
+        {
+            "question": "Nêu mối quan hệ giữa vô cùng bé và vô cùng lớn.",
+            "answer": {
+                "steps": [
+                    "Nếu $\\beta(x)$ là vô cùng lớn thì $1/\\beta(x)$ là vô cùng bé (khác 0).",
+                    "Ngược lại, nếu $\\alpha(x)$ là vô cùng bé khác 0 thì $1/\\alpha(x)$ là vô cùng lớn.",
+                    "Ví dụ: $\\alpha(x)=1/n$ là vô cùng bé khi $n \\to \\infty$, còn $\\beta(n)=n$ là vô cùng lớn.",
+                    "Hai khái niệm này thường được dùng cùng nhau trong phân tích giới hạn."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa hàm số liên tục tại một điểm.",
+            "answer": {
+                "steps": [
+                    "Hàm $f(x)$ liên tục tại $x_0$ nếu thỏa mãn 3 điều kiện:",
+                    "1. $f(x_0)$ xác định.",
+                    "2. $\\lim_{x \\to x_0} f(x)$ tồn tại.",
+                    "3. $\\lim_{x \\to x_0} f(x) = f(x_0)$.",
+                    "Ý nghĩa: đồ thị hàm số 'không bị đứt đoạn' tại điểm $x_0$."
+                ]
+            }
+        },
+        {
+            "question": "Nêu các tính chất của hàm số liên tục.",
+            "answer": {
+                "steps": [
+                    "Một số tính chất cơ bản:",
+                    "1. Tổng, hiệu của các hàm liên tục là hàm liên tục.",
+                    "2. Tích của các hàm liên tục là hàm liên tục.",
+                    "3. Thương của các hàm liên tục là liên tục (trừ điểm mẫu số bằng 0).",
+                    "4. Hàm hợp của các hàm liên tục cũng liên tục.",
+                    "Nhờ vậy ta dễ dàng tạo nhiều hàm liên tục từ các hàm sơ cấp."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa hàm số liên tục trên một khoảng.",
+            "answer": {
+                "steps": [
+                    "Hàm $f(x)$ gọi là liên tục trên khoảng $I$ nếu nó liên tục tại mọi điểm $x_0 \\in I$.",
+                    "Ví dụ: $f(x) = x^2$ liên tục trên $\\mathbb{R}$ vì nó liên tục tại mọi điểm."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa điểm gián đoạn của hàm số.",
+            "answer": {
+                "steps": [
+                    "Điểm $x_0$ là điểm gián đoạn của $f(x)$ nếu $f$ không liên tục tại $x_0$.",
+                    "Có nghĩa là một trong các điều kiện sau sai:",
+                    "- $f(x_0)$ xác định.",
+                    "- $\\lim_{x \\to x_0} f(x)$ tồn tại.",
+                    "- $\\lim_{x \\to x_0} f(x) = f(x_0)$."
+                ]
+            }
+        },
+        {
+            "question": "Phân loại các điểm gián đoạn.",
+            "answer": {
+                "steps": [
+                    "Có ba loại gián đoạn thường gặp:",
+                    "1. Gián đoạn loại 1: giới hạn trái và phải tồn tại hữu hạn nhưng khác nhau.",
+                    "2. Gián đoạn loại 2: ít nhất một trong hai giới hạn trái/phải không tồn tại hữu hạn.",
+                    "3. Gián đoạn có thể khử: giới hạn tồn tại nhưng không bằng giá trị hàm tại điểm, hoặc hàm chưa xác định tại điểm đó."
+                ]
+            }
+        },
+        {
+            "question": "Cho ví dụ về gián đoạn loại 1.",
+            "answer": {
+                "steps": [
+                    "Xét hàm $f(x) = \\text{sgn}(x) = \\begin{cases}-1 & x<0 \\\\ 1 & x>0\\end{cases}$.",
+                    "Tại $x=0$: giới hạn trái = -1, giới hạn phải = 1.",
+                    "Cả hai giới hạn hữu hạn nhưng khác nhau, nên $x=0$ là điểm gián đoạn loại 1."
+                ]
+            }
+        },
+        {
+            "question": "Cho ví dụ về gián đoạn loại 2.",
+            "answer": {
+                "steps": [
+                    "Xét hàm $f(x) = \\tan x$ tại $x=\\pi/2$.",
+                    "Khi $x \\to (\\pi/2)^-$ thì $f(x) \\to +\\infty$.",
+                    "Khi $x \\to (\\pi/2)^+$ thì $f(x) \\to -\\infty$.",
+                    "Do một trong các giới hạn bên không hữu hạn, $x=\\pi/2$ là điểm gián đoạn loại 2."
+                ]
+            }
+        },
+        {
+            "question": "Cho ví dụ về gián đoạn có thể khử.",
+            "answer": {
+                "steps": [
+                    "Xét hàm $f(x) = \\frac{\\sin x}{x}$ khi $x \\neq 0$.",
+                    "Khi $x \\to 0$, $\\lim f(x) = 1$.",
+                    "Tuy nhiên tại $x=0$, hàm chưa xác định.",
+                    "Nếu ta bổ sung $f(0)=1$ thì hàm trở nên liên tục trên $\\mathbb{R}$.",
+                    "Vậy $x=0$ là điểm gián đoạn có thể khử."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa đạo hàm của hàm số tại một điểm.",
+            "answer": {
+                "steps": [
+                    "Hàm số $y=f(x)$ được gọi là khả vi tại điểm $x_0$ nếu tồn tại giới hạn:",
+                    "$$ f'(x_0) = \\lim_{\\Delta x \\to 0} \\frac{f(x_0+\\Delta x) - f(x_0)}{\\Delta x}. $$",
+                    "Ý nghĩa: Đạo hàm biểu diễn tốc độ thay đổi tức thời của hàm số tại điểm $x_0$.",
+                    "Ví dụ: Với $f(x)=x^2$, ta có $f'(x_0) = \\lim_{\\Delta x\\to 0} \\frac{(x_0+\\Delta x)^2 - x_0^2}{\\Delta x} = 2x_0$."
+                ]
+            }
+        },
+        {
+            "question": "Nêu các quy tắc tính đạo hàm cơ bản.",
+            "answer": {
+                "steps": [
+                    "Quy tắc tuyến tính: $(u \\pm v)' = u' \\pm v'$, $(cu)' = c u'$.",
+                    "Tích: $(uv)' = u'v + uv'$.",
+                    "Thương: $\\left(\\frac{u}{v}\\right)' = \\frac{u'v - uv'}{v^2}$ với $v \\neq 0$.",
+                    "Hằng số: $(c)' = 0$, $(x^n)' = n x^{n-1}$.",
+                    "Ví dụ: $(x^3 + 5x)' = 3x^2 + 5$."
+                ]
+            }
+        },
+        {
+            "question": "Phát biểu công thức đạo hàm của hàm hợp (chain rule).",
+            "answer": {
+                "steps": [
+                    "Nếu $y=f(u)$ khả vi tại $u_0$ và $u=\\varphi(x)$ khả vi tại $x_0$, với $u_0=\\varphi(x_0)$,",
+                    "thì hợp $y=f(\\varphi(x))$ khả vi tại $x_0$ và:",
+                    "$$ (f\\circ \\varphi)'(x_0) = f'(\\varphi(x_0)) \\cdot \\varphi'(x_0). $$",
+                    "Ví dụ: $y=\\sin(x^2)$. Đặt $u=x^2$, $y=\\sin u$, ta có $y' = \\cos(u)\\cdot 2x = 2x\\cos(x^2)$."
+                ]
+            }
+        },
+        {
+            "question": "Phát biểu công thức đạo hàm của hàm ngược.",
+            "answer": {
+                "steps": [
+                    "Nếu $y=f(x)$ liên tục, đơn điệu và khả vi tại $x_0$ với $f'(x_0)\\neq 0$,",
+                    "thì hàm ngược $x=f^{-1}(y)$ khả vi tại $y_0=f(x_0)$ và:",
+                    "$$ (f^{-1})'(y_0) = \\frac{1}{f'(x_0)}. $$",
+                    "Ví dụ: $y=e^x$, hàm ngược $x=\\ln y$. Ta có $(\\ln y)' = 1/y$, đúng với công thức."
+                ]
+            }
+        },
+        {
+            "question": "Viết các công thức đạo hàm của các hàm số sơ cấp cơ bản.",
+            "answer": {
+                "steps": [
+                    "Lũy thừa: $(x^n)' = n x^{n-1}$.",
+                    "Mũ: $(e^x)'=e^x, \\quad (a^x)'=a^x \\ln a$.",
+                    "Logarit: $(\\ln x)'=1/x, \\quad (\\log_a x)' = 1/(x\\ln a)$.",
+                    "Lượng giác: $(\\sin x)'=\\cos x, (\\cos x)'=-\\sin x$.",
+                    "Các hàm còn lại: $(\\tan x)'=1/\\cos^2 x, (\\cot x)'=-1/\\sin^2 x$."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa vi phân của hàm số.",
+            "answer": {
+                "steps": [
+                    "Nếu $f$ khả vi tại $x$, ta định nghĩa vi phân:",
+                    "$$ df = f'(x) dx, $$",
+                    "Trong đó $dx$ là vi phân của biến $x$.",
+                    "Ý nghĩa: Vi phân là phần tuyến tính trong khai triển $\\Delta y$.",
+                    "Ví dụ: Với $f(x)=x^2$, ta có $df=2x dx$."
+                ]
+            }
+        },
+        {
+            "question": "Ý nghĩa hình học của vi phân $dy=f'(x)dx$.",
+            "answer": {
+                "steps": [
+                    "Vi phân $dy$ là độ thay đổi xấp xỉ của hàm số ứng với thay đổi $dx$ nhỏ của biến số.",
+                    "Hình học: $dy$ chính là độ tăng của tiếp tuyến tại điểm $(x,f(x))$.",
+                    "Ví dụ: $f(x)=\\sqrt{x}$, tại $x=4$, $df=\\frac{1}{2\\sqrt{4}} dx = \\frac{1}{4}dx$. Nếu $dx=0.1$ thì $dy=0.025$, gần bằng $\\Delta y=\\sqrt{4.1}-2$."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa đạo hàm cấp cao.",
+            "answer": {
+                "steps": [
+                    "Nếu $f'(x)$ khả vi, đạo hàm cấp 2: $f''(x)=(f'(x))'$.",
+                    "Tương tự, $f^{(n)}(x)=(f^{(n-1)}(x))'$ là đạo hàm cấp $n$.",
+                    "Ý nghĩa: đạo hàm bậc cao phản ánh mức độ cong, dao động của hàm số.",
+                    "Ví dụ: $f(x)=x^3$, $f'(x)=3x^2$, $f''(x)=6x$, $f^{(3)}(x)=6$."
+                ]
+            }
+        },
+        {
+            "question": "Phát biểu công thức Leibniz cho đạo hàm cấp $n$ của tích $uv$.",
+            "answer": {
+                "steps": [
+                    "Nếu $u,v$ có đạo hàm đến cấp $n$, thì:",
+                    "$$ (uv)^{(n)} = \\sum_{k=0}^n C_n^k u^{(k)} v^{(n-k)}. $$",
+                    "Trong đó $C_n^k$ là tổ hợp chập $k$ của $n$.",
+                    "Ví dụ: $(x^2 e^x)'' = (x^2)'' e^x + 2(x^2)'(e^x)' + x^2 (e^x)'' = 2e^x + 4x e^x + x^2 e^x$."
+                ]
+            }
+        },
+        {
+            "question": "Khái niệm vi phân cấp cao.",
+            "answer": {
+                "steps": [
+                    "Vi phân cấp 1: $df=f'(x)dx$.",
+                    "Vi phân cấp 2: $d^2 f = f''(x) dx^2$.",
+                    "Tổng quát: $d^n f = f^{(n)}(x) dx^n$.",
+                    "Ví dụ: $f(x)=x^3$, $d^2f=6x dx^2$, $d^3f=6 dx^3$."
+                ]
+            }
+        },
+        {
+            "question": "Điều kiện cần của khả vi tại một điểm.",
+            "answer": {
+                "steps": [
+                    "Nếu hàm số khả vi tại $x_0$ thì nó phải liên tục tại $x_0$.",
+                    "Điều kiện cần: $f$ liên tục tại $x_0$.",
+                    "Ngược lại, hàm liên tục chưa chắc khả vi (ví dụ: $f(x)=|x|$ tại $0$)."
+                ]
+            }
+        },
+        {
+            "question": "Phát biểu định lý Rolle.",
+            "answer": {
+                "steps": [
+                    "Nếu $f$ liên tục trên $[a,b]$, khả vi trên $(a,b)$ và $f(a)=f(b)$,",
+                    "thì tồn tại $c\\in (a,b)$ sao cho $f'(c)=0$.",
+                    "Ý nghĩa: Đồ thị có ít nhất một tiếp tuyến song song trục hoành.",
+                    "Ví dụ: $f(x)=\\cos x$ trên $[0,2\\pi]$. $f(0)=f(2\\pi)=1$, tồn tại $c=\\pi$ sao cho $f'(\\pi)=0$."
+                ]
+            }
+        },
+        {
+            "question": "Phát biểu định lý Lagrange (giá trị trung bình).",
+            "answer": {
+                "steps": [
+                    "Nếu $f$ liên tục trên $[a,b]$, khả vi trên $(a,b)$,",
+                    "thì tồn tại $c\\in(a,b)$ sao cho:",
+                    "$$ f'(c)=\\frac{f(b)-f(a)}{b-a}. $$",
+                    "Ý nghĩa: tồn tại một tiếp tuyến song song với dây cung $AB$.",
+                    "Ví dụ: $f(x)=x^2$ trên $[1,3]$, ta có $\\frac{f(3)-f(1)}{2} = 4$. Đạo hàm $f'(c)=2c=4 \\Rightarrow c=2$."
+                ]
+            }
+        },
+        {
+            "question": "Phát biểu công thức Taylor với số hạng dư Lagrange.",
+            "answer": {
+                "steps": [
+                    "Nếu $f$ có đạo hàm đến cấp $n+1$ quanh $x_0$,",
+                    "thì với $x$ gần $x_0$:",
+                    "$$ f(x) = f(x_0) + f'(x_0)(x-x_0) + \\cdots + \\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n + R_n(x), $$",
+                    "với $R_n(x)=\\frac{f^{(n+1)}(\\xi)}{(n+1)!}(x-x_0)^{n+1}$, $\\xi$ giữa $x$ và $x_0$.",
+                    "Ví dụ: $e^x = 1+x+\\frac{x^2}{2!}+\\cdots+\\frac{x^n}{n!}+R_n(x)$."
+                ]
+            }
+        },
+        {
+            "question": "Phát biểu quy tắc L’Hospital.",
+            "answer": {
+                "steps": [
+                    "Nếu $\\lim f(x)=\\lim g(x)=0$ hoặc $\\pm \\infty$, $g'(x)\\neq 0$ gần điểm xét,",
+                    "và $\\lim \\frac{f'(x)}{g'(x)}$ tồn tại,",
+                    "thì $\\lim \\frac{f(x)}{g(x)} = \\lim \\frac{f'(x)}{g'(x)}$.",
+                    "Ví dụ: $\\lim_{x\\to 0} \\frac{\\sin x}{x} = \\lim \\frac{\\cos x}{1} = 1$."
+                ]
+            }
+        },
+        {
+            "question": "Các dạng vô định thường gặp trong giải tích.",
+            "answer": {
+                "steps": [
+                    "$0/0$, $\\infty/\\infty$, $0\\cdot\\infty$, $\\infty-\\infty$, $0^0$, $1^\\infty$, $\\infty^0$.",
+                    "Ví dụ: $\\lim_{x\\to 0}\\frac{\\sin x}{x}$ là dạng $0/0$."
+                ]
+            }
+        },
+        {
+            "question": "Khái niệm thay thế tương đương khi tính giới hạn.",
+            "answer": {
+                "steps": [
+                    "Nếu $u(x)\\sim v(x)$ khi $x\\to x_0$, tức là $\\lim \\frac{u(x)}{v(x)}=1$,",
+                    "thì trong giới hạn ta có thể thay $u(x)$ bằng $v(x)$ để tính toán.",
+                    "Ví dụ: $\\sin x \\sim x$ khi $x\\to 0$."
+                ]
+            }
+        },
+        {
+            "question": "Ví dụ về sử dụng thay thế tương đương khi tính giới hạn.",
+            "answer": {
+                "steps": [
+                    "Xét $\\lim_{x\\to 0}\\frac{1-\\cos x}{x^2}$. ",
+                    "Ta có $1-\\cos x \\sim x^2/2$ khi $x\\to 0$.",
+                    "Do đó giới hạn = $\\lim \\frac{x^2/2}{x^2}=1/2$."
+                ]
+            }
+        },
+        {
+            "question": "Nêu các bất đẳng thức cơ bản dùng trong đánh giá giới hạn.",
+            "answer": {
+                "steps": [
+                    "$|\\sin x| \\le |x|$ với mọi $x$.",
+                    "Bất đẳng thức Bernoulli: $(1+x)^\\alpha \\ge 1+\\alpha x$ với $\\alpha>1, x>-1$.",
+                    "Bất đẳng thức AM–GM: $\\frac{a+b}{2}\\ge \\sqrt{ab}$ cho $a,b>0$."
+                ]
+            }
+        },
+        {
+            "question": "Một số giới hạn vô cùng lớn tiêu biểu.",
+            "answer": {
+                "steps": [
+                    "$\\lim_{x\\to 0^+} 1/x = +\\infty$.",
+                    "$\\lim_{x\\to +\\infty} e^x = +\\infty$.",
+                    "$\\lim_{x\\to 0^+}\\ln x = -\\infty$."
+                ]
+            }
+        },
+        {
+            "question": "Trình bày các bước khảo sát và vẽ đồ thị hàm số $y=f(x)$.",
+            "answer": {
+                "steps": [
+                    "1. Xác định tập xác định, tập giá trị.",
+                    "2. Xét tính chẵn lẻ, tuần hoàn, đối xứng.",
+                    "3. Tìm tiệm cận đứng, ngang, xiên.",
+                    "4. Tính đạo hàm, xét khoảng đồng biến, nghịch biến, tìm cực trị.",
+                    "5. Tính đạo hàm cấp 2, tìm điểm uốn, độ cong.",
+                    "6. Lập bảng biến thiên và vẽ đồ thị."
+                ]
+            }
+        },
+        {
+            "question": "Khảo sát đường cong cho dưới dạng tham số.",
+            "answer": {
+                "steps": [
+                    "Cho $x=\\varphi(t), y=\\psi(t)$.",
+                    "Xác định miền xác định của tham số $t$.",
+                    "Tính $dx/dt, dy/dt$, xét tiếp tuyến, cực trị.",
+                    "Lập bảng biến thiên theo $t$ và vẽ hình.",
+                    "Ví dụ: $x=\\cos t, y=\\sin t$ cho đường tròn đơn vị."
+                ]
+            }
+        },
+        {
+            "question": "Khảo sát đường cong trong hệ tọa độ cực.",
+            "answer": {
+                "steps": [
+                    "Cho $r=\\rho(\\theta)$.",
+                    "Xác định miền của $\\theta$, xét đối xứng, chu kỳ.",
+                    "Tính $dr/d\\theta$, tìm cực trị của $r$.",
+                    "Thay các giá trị vào để vẽ đường cong.",
+                    "Ví dụ: $r=1+\\cos\\theta$ là đường cardioid."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa nguyên hàm của một hàm số.",
+            "answer": {
+                "steps": [
+                    "Cho hàm số $f(x)$ xác định trên một khoảng $K \\subset \\mathbb{R}$.",
+                    "Một hàm $F(x)$ được gọi là nguyên hàm của $f(x)$ trên $K$ nếu $F'(x) = f(x), \\forall x \\in K$.",
+                    "Tập hợp tất cả các nguyên hàm của $f(x)$ gọi là tích phân bất định, ký hiệu:",
+                    "$$ \\int f(x) dx = F(x) + C, \\; C \\in \\mathbb{R}. $$",
+                    "Ý nghĩa: nguyên hàm chính là phép “đảo ngược” của đạo hàm, tức tích phân bất định khôi phục lại hàm gốc từ đạo hàm của nó."
+                ]
+            }
+        },
+        {
+            "question": "Nguyên hàm có tính chất duy nhất như thế nào?",
+            "answer": {
+                "steps": [
+                    "Nếu $F(x)$ và $G(x)$ đều là nguyên hàm của $f(x)$ thì $F'(x) = G'(x) = f(x)$.",
+                    "Suy ra $F(x) - G(x)$ là hằng số.",
+                    "Kết luận: nguyên hàm không duy nhất, nhưng mọi nguyên hàm của cùng một hàm số chỉ khác nhau bởi một hằng số cộng.",
+                    "Điều này giải thích tại sao khi viết $\\int f(x) dx$ ta luôn thêm $+C$."
+                ]
+            }
+        },
+        {
+            "question": "Định lý về sự tồn tại nguyên hàm.",
+            "answer": {
+                "steps": [
+                    "Nếu $f(x)$ là hàm số liên tục trên một khoảng $(a,b)$ thì luôn tồn tại ít nhất một hàm số $F(x)$ sao cho $F'(x) = f(x)$.",
+                    "Điều này đảm bảo: mọi hàm số liên tục đều có nguyên hàm.",
+                    "Ý nghĩa: đây là cơ sở lý thuyết để bảng nguyên hàm cơ bản là đúng và đủ cho các bài toán thực tế."
+                ]
+            }
+        },
+        {
+            "question": "Nguyên hàm của hàm số lũy thừa $x^n$ có dạng gì?",
+            "answer": {
+                "steps": [
+                    "Với $n \\in \\mathbb{R}, n \\neq -1$:",
+                    "$$ \\int x^n dx = \\frac{x^{n+1}}{n+1} + C. $$",
+                    "Với $n = -1$:",
+                    "$$ \\int \\frac{1}{x} dx = \\ln|x| + C. $$",
+                    "Đây là công thức cơ bản nhất, được dùng thường xuyên khi giải các bài toán nguyên hàm – tích phân."
+                ]
+            }
+        },
+        {
+            "question": "Nguyên hàm của các hàm số mũ và logarit.",
+            "answer": {
+                "steps": [
+                    "Các công thức cơ bản:",
+                    "$$ \\int e^x dx = e^x + C, $$",
+                    "$$ \\int a^x dx = \\frac{a^x}{\\ln a} + C, \\; a>0, a \\neq 1, $$",
+                    "$$ \\int \\frac{1}{x} dx = \\ln|x| + C. $$",
+                    "Ý nghĩa: hàm mũ và logarit có vai trò đặc biệt trong giải tích, nguyên hàm của chúng giữ nguyên bản chất (ví dụ $e^x$)."
+                ]
+            }
+        },
+        {
+            "question": "Nguyên hàm của các hàm lượng giác cơ bản.",
+            "answer": {
+                "steps": [
+                    "Một số công thức quan trọng:",
+                    "$$ \\int \\sin x dx = -\\cos x + C, $$",
+                    "$$ \\int \\cos x dx = \\sin x + C, $$",
+                    "$$ \\int \\tan x dx = -\\ln|\\cos x| + C, $$",
+                    "$$ \\int \\cot x dx = \\ln|\\sin x| + C. $$",
+                    "Những công thức này thường dùng trong giải tích phân lượng giác."
+                ]
+            }
+        },
+        {
+            "question": "Phương pháp đổi biến số trong tích phân bất định.",
+            "answer": {
+                "steps": [
+                    "Đặt $t = \\varphi(x)$, với $\\varphi$ khả vi, $\\varphi'(x)$ liên tục.",
+                    "Khi đó:",
+                    "$$ \\int f(\\varphi(x)) \\varphi'(x) dx = \\int f(t) dt. $$",
+                    "Ý nghĩa: đổi biến giúp biến đổi tích phân phức tạp về dạng cơ bản hơn, thường gọi là “quay ngược phép đạo hàm theo hàm hợp”."
+                ]
+            }
+        },
+        {
+            "question": "Ví dụ minh họa phương pháp đổi biến số.",
+            "answer": {
+                "steps": [
+                    "Xét $\\int 2x \\cos(x^2) dx$.",
+                    "Đặt $t = x^2 \\Rightarrow dt = 2x dx$, khi đó tích phân trở thành $\\int \\cos t dt$.",
+                    "Ví dụ này cho thấy: đổi biến hợp lý sẽ loại bỏ nhân tử phức tạp, đưa tích phân về dạng quen thuộc."
+                ]
+            }
+        },
+        {
+            "question": "Công thức tích phân từng phần.",
+            "answer": {
+                "steps": [
+                    "Nếu $u(x), v(x)$ khả vi thì:",
+                    "$$ \\int u dv = uv - \\int v du. $$",
+                    "Ý nghĩa: công thức này là hệ quả từ đạo hàm của tích $uv$.",
+                    "Áp dụng khi tích phân chứa tích của hai hàm, một hàm dễ đạo hàm, hàm kia dễ lấy nguyên hàm."
+                ]
+            }
+        },
+        {
+            "question": "Ví dụ minh họa phương pháp tích phân từng phần.",
+            "answer": {
+                "steps": [
+                    "Xét $\\int x e^x dx$.",
+                    "Chọn $u = x$ (dễ đạo hàm), $dv = e^x dx$ (dễ tích phân).",
+                    "Khi đó áp dụng công thức từng phần để đơn giản hóa.",
+                    "Ý nghĩa: minh họa cách lựa chọn $u$ và $dv$ trong thực tế."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa tích phân xác định được phát biểu như thế nào?",
+            "answer": {
+                "steps": [
+                    "Giả sử $f(x)$ bị chặn trên $[a,b]$, chia đoạn thành $n$ phần nhỏ $[x_i, x_{i+1}]$ và chọn $\\xi_i \\in [x_i, x_{i+1}]$.",
+                    "Xét tổng Riemann: $S_n = \\sum_{i=0}^{n-1} f(\\xi_i)\\Delta x_i$, với $\\Delta x_i = x_{i+1} - x_i$.",
+                    "Nếu tồn tại giới hạn hữu hạn $I = \\lim_{\\lambda \\to 0} S_n$, độc lập với cách chia và chọn $\\xi_i$, thì $I$ gọi là tích phân xác định của $f$ trên $[a,b]$, ký hiệu $\\int_a^b f(x)\\,dx$."
+                ]
+            }
+        },
+        {
+            "question": "Tiêu chuẩn khả tích cần và đủ của một hàm số bị chặn trên $[a,b]$ là gì?",
+            "answer": {
+                "steps": [
+                    "Đặt $S = \\sum_{i=1}^{n+1} M_i \\Delta x_i$, $s = \\sum_{i=1}^{n+1} m_i \\Delta x_i$,",
+                    "trong đó $M_i = \\sup_{x \\in [x_i, x_{i+1}]} f(x)$, $m_i = \\inf_{x \\in [x_i, x_{i+1}]} f(x)$.",
+                    "Điều kiện cần và đủ để $f(x)$ khả tích trên $[a,b]$ là $\\lim_{\\lambda \\to 0}(S-s) = 0$."
+                ]
+            }
+        },
+        {
+            "question": "Nêu các định lý thường dùng để suy ra tính khả tích của hàm số trên đoạn $[a,b]$.",
+            "answer": {
+                "steps": [
+                    "Nếu $f(x)$ liên tục trên $[a,b]$ thì $f(x)$ khả tích trên $[a,b]$.",
+                    "Nếu $f(x)$ bị chặn trên $[a,b]$ và chỉ có hữu hạn điểm gián đoạn thì $f(x)$ khả tích trên $[a,b]$.",
+                    "Nếu $f(x)$ bị chặn và đơn điệu trên $[a,b]$ thì $f(x)$ khả tích trên $[a,b]$."
+                ]
+            }
+        },
+        {
+            "question": "Các tính chất cơ bản của tích phân xác định.",
+            "answer": {
+                "steps": [
+                    "1. Tuyến tính: $\\int_a^b (\\alpha f + \\beta g) dx = \\alpha \\int_a^b f dx + \\beta \\int_a^b g dx.$",
+                    "2. Đảo cận: $\\int_a^b f(x) dx = -\\int_b^a f(x) dx.$",
+                    "3. Cộng đoạn: $\\int_a^c f(x) dx = \\int_a^b f(x) dx + \\int_b^c f(x) dx.$",
+                    "Ý nghĩa: giúp biến đổi tích phân phức tạp thành tích phân đơn giản hơn."
+                ]
+            }
+        },
+        {
+            "question": "Công thức đổi biến trong tích phân xác định.",
+            "answer": {
+                "steps": [
+                    "Nếu $t = \\varphi(x)$ khả vi, đơn điệu, thì:",
+                    "$$ \\int_a^b f(\\varphi(x)) \\varphi'(x) dx = \\int_{\\varphi(a)}^{\\varphi(b)} f(t) dt. $$",
+                    "Ý nghĩa: chuyển tích phân về biến mới phù hợp hơn."
+                ]
+            }
+        },
+        {
+            "question": "Công thức tích phân từng phần trong tích phân xác định.",
+            "answer": {
+                "steps": [
+                    "Nếu $u(x), v(x)$ khả vi trên $[a,b]$:",
+                    "$$ \\int_a^b u dv = [uv]_a^b - \\int_a^b v du. $$",
+                    "Ý nghĩa: giảm bớt độ phức tạp của tích phân."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa tích phân suy rộng loại 1.",
+            "answer": {
+                "steps": [
+                    "Nếu cận trên là $+\\infty$:",
+                    "$$ \\int_a^{+\\infty} f(x) dx = \\lim_{t \\to +\\infty} \\int_a^t f(x) dx. $$",
+                    "Nếu giới hạn tồn tại thì gọi là hội tụ.",
+                    "Ý nghĩa: cho phép mở rộng khái niệm tích phân sang miền vô hạn."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa tích phân suy rộng loại 2.",
+            "answer": {
+                "steps": [
+                    "Nếu $f(x)$ không bị chặn tại một điểm trong khoảng, ví dụ tại $a$:",
+                    "$$ \\int_a^b f(x) dx = \\lim_{t \\to a^+} \\int_t^b f(x) dx. $$",
+                    "Nếu giới hạn hữu hạn thì gọi là hội tụ.",
+                    "Ý nghĩa: dùng cho các hàm có điểm kỳ dị."
+                ]
+            }
+        },
+        {
+            "question": "Tiêu chuẩn so sánh hội tụ cho tích phân suy rộng.",
+            "answer": {
+                "steps": [
+                    "Giả sử $0 \\leq f(x) \\leq g(x)$ với $x$ lớn.",
+                    "Nếu $\\int g(x) dx$ hội tụ thì $\\int f(x) dx$ cũng hội tụ.",
+                    "Nếu $\\int f(x) dx$ phân kỳ thì $\\int g(x) dx$ cũng phân kỳ.",
+                    "Ý nghĩa: so sánh với một tích phân đã biết để suy ra tính hội tụ."
+                ]
+            }
+        },
+        {
+            "question": "Điều kiện hội tụ của $\\int_1^{+\\infty} \\frac{1}{x^p} dx$.",
+            "answer": {
+                "steps": [
+                    "Xét hàm $f(x) = \\frac{1}{x^p}$ trên $[1, +\\infty)$.",
+                    "Tích phân hội tụ khi $p > 1$, phân kỳ khi $p \\leq 1$.",
+                    "Ý nghĩa: đây là tiêu chuẩn $p$-test cho tích phân."
+                ]
+            }
+        },
+        {
+            "question": "Điều kiện hội tụ của $\\int_0^1 \\frac{1}{x^p} dx$.",
+            "answer": {
+                "steps": [
+                    "Xét gần 0, $f(x) = x^{-p}$.",
+                    "Tích phân hội tụ khi $p < 1$, phân kỳ khi $p \\geq 1$.",
+                    "Ý nghĩa: dùng để nhận biết tích phân có cận dưới bằng 0."
+                ]
+            }
+        },
+        {
+            "question": "Công thức tính diện tích hình phẳng dưới đồ thị $y=f(x)$.",
+            "answer": {
+                "steps": [
+                    "Nếu $f(x) \\geq 0$ trên $[a,b]$, diện tích là:",
+                    "$$ S = \\int_a^b f(x) dx. $$",
+                    "Ý nghĩa: tích phân xác định chính là diện tích hình phẳng."
+                ]
+            }
+        },
+        {
+            "question": "Công thức diện tích miền giới hạn bởi hai đồ thị $y=f(x)$ và $y=g(x)$.",
+            "answer": {
+                "steps": [
+                    "Giả sử $f(x) \\geq g(x)$ trên $[a,b]$, diện tích là:",
+                    "$$ S = \\int_a^b (f(x) - g(x)) dx. $$",
+                    "Ý nghĩa: tích phân tính diện tích phần giữa hai đường cong."
+                ]
+            }
+        },
+        {
+            "question": "Công thức tính độ dài cung đường cong $y=f(x)$.",
+            "answer": {
+                "steps": [
+                    "Trên $[a,b]$ độ dài cung là:",
+                    "$$ L = \\int_a^b \\sqrt{1 + (f'(x))^2} dx. $$",
+                    "Ý nghĩa: tổng vi phân độ dài cung được cộng dồn bằng tích phân."
+                ]
+            }
+        },
+        {
+            "question": "Công thức tính thể tích khối tròn xoay quanh trục Ox.",
+            "answer": {
+                "steps": [
+                    "Với miền $y=f(x) \\geq 0, x \\in [a,b]$, quay quanh Ox:",
+                    "$$ V = \\pi \\int_a^b (f(x))^2 dx. $$",
+                    "Ý nghĩa: công thức đĩa tròn mỏng."
+                ]
+            }
+        },
+        {
+            "question": "Công thức tính thể tích khối tròn xoay quanh trục Oy.",
+            "answer": {
+                "steps": [
+                    "Với miền $x=g(y), y \\in [c,d]$, quay quanh Oy:",
+                    "$$ V = \\pi \\int_c^d (g(y))^2 dy. $$",
+                    "Ý nghĩa: công thức tương tự khi trục quay đổi sang Oy."
+                ]
+            }
+        },
+        {
+            "question": "Công thức tính diện tích mặt tròn xoay quanh trục Ox.",
+            "answer": {
+                "steps": [
+                    "Nếu $y=f(x) \\geq 0$, diện tích khi quay quanh Ox:",
+                    "$$ S = 2\\pi \\int_a^b f(x) \\sqrt{1 + (f'(x))^2} dx. $$",
+                    "Ý nghĩa: tổng vi phân diện tích vòng tròn sinh ra từ $f(x)$."
+                ]
+            }
+        },
+        {
+            "question": "Công thức tính diện tích mặt tròn xoay quanh trục Oy.",
+            "answer": {
+                "steps": [
+                    "Nếu $x=g(y)$, diện tích khi quay quanh Oy:",
+                    "$$ S = 2\\pi \\int_c^d g(y) \\sqrt{1 + (g'(y))^2} dy. $$",
+                    "Ý nghĩa: tương tự nhưng trục quay là Oy."
+                ]
+            }
+        },
+        {
+            "question": "Ví dụ minh họa cách thiết lập tích phân tính diện tích miền giới hạn.",
+            "answer": {
+                "steps": [
+                    "Giả sử miền giới hạn bởi $y=x^2$ và $y=\\sqrt{x}$.",
+                    "Bước 1: tìm giao điểm hai đường cong.",
+                    "Bước 2: xác định đường cong nằm trên trong khoảng xét.",
+                    "Bước 3: thiết lập công thức diện tích:",
+                    "$$ S = \\int_a^b (\\sqrt{x} - x^2) dx. $$",
+                    "Ý nghĩa: tích phân biểu diễn sự chênh lệch hai hàm số."
+                ]
+            }
+        },
+        {
+            "question": "Ví dụ minh họa cách thiết lập công thức thể tích khối tròn xoay.",
+            "answer": {
+                "steps": [
+                    "Xét miền $y=f(x)$ quay quanh trục Ox.",
+                    "Bước 1: xác định miền $[a,b]$.",
+                    "Bước 2: áp dụng công thức:",
+                    "$$ V = \\pi \\int_a^b (f(x))^2 dx. $$",
+                    "Ví dụ: nếu $f(x)=\\sqrt{x}$, thay vào công thức để có công thức tích phân thể tích.",
+                    "Ý nghĩa: phương pháp đĩa tròn mỏng cho thấy mối liên hệ giữa tích phân và hình học không gian."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa giới hạn của hàm số hai biến.",
+            "answer": {
+                "steps": [
+                    "Cho hàm số $z=f(x,y)$ xác định trong lân cận của điểm $(x_0,y_0)$, trừ chính điểm đó.",
+                    "Ta nói $\\lim_{(x,y) \\to (x_0,y_0)} f(x,y) = L$ nếu với mọi $\\varepsilon > 0$ tồn tại $\\delta > 0$ sao cho:",
+                    "$$ 0 < \\sqrt{(x-x_0)^2+(y-y_0)^2} < \\delta \\implies |f(x,y)-L|<\\varepsilon. $$",
+                    "Điều kiện: giới hạn phải tồn tại và độc lập với cách tiến tới $(x_0,y_0)$. ",
+                    "Ý nghĩa: khái niệm này tổng quát từ giới hạn hàm một biến; nó cho thấy sự ổn định của hàm nhiều biến quanh một điểm."
+                ]
+            }
+        },
+        {
+            "question": "Điều kiện tồn tại giới hạn của hàm nhiều biến.",
+            "answer": {
+                "steps": [
+                    "Một giới hạn $\\lim_{(x,y)\\to(x_0,y_0)} f(x,y)$ chỉ tồn tại nếu:",
+                    "1. Các giới hạn theo mọi đường thẳng, đường cong đi qua $(x_0,y_0)$ đều tồn tại.",
+                    "2. Tất cả các giới hạn đó phải bằng nhau.",
+                    "Ví dụ: nếu theo trục $x$ ra kết quả khác với theo trục $y$, thì giới hạn không tồn tại.",
+                    "Ý nghĩa: đảm bảo tính duy nhất của giá trị giới hạn."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa tính liên tục của hàm nhiều biến.",
+            "answer": {
+                "steps": [
+                    "Hàm $f(x,y)$ liên tục tại $(x_0,y_0)$ nếu:",
+                    "1. Hàm xác định tại $(x_0,y_0)$. ",
+                    "2. Giới hạn $\\lim_{(x,y)\\to(x_0,y_0)} f(x,y)$ tồn tại.",
+                    "3. Giá trị giới hạn bằng giá trị hàm: $f(x_0,y_0)$. ",
+                    "Ý nghĩa: tại điểm liên tục, đồ thị hàm không có 'khe hở' hay 'nhảy cóc'."
+                ]
+            }
+        },
+        {
+            "question": "Khái niệm đạo hàm riêng theo biến.",
+            "answer": {
+                "steps": [
+                    "Với $z=f(x,y)$, đạo hàm riêng theo $x$ tại $(x_0,y_0)$ là:",
+                    "$$ f'_x(x_0,y_0) = \\lim_{\\Delta x \\to 0} \\frac{f(x_0+\\Delta x,y_0)-f(x_0,y_0)}{\\Delta x}. $$",
+                    "Trong đó $y$ cố định.",
+                    "Tương tự cho đạo hàm riêng theo $y$.",
+                    "Ý nghĩa hình học: độ dốc tiếp tuyến theo trục $x$ hoặc $y$ khi giữ biến còn lại cố định."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa vi phân toàn phần của hàm hai biến.",
+            "answer": {
+                "steps": [
+                    "Nếu $f(x,y)$ khả vi tại $(x_0,y_0)$ thì tồn tại vi phân toàn phần:",
+                    "$$ dz = f'_x(x_0,y_0) dx + f'_y(x_0,y_0) dy. $$",
+                    "Trong đó $dx, dy$ là các vi phân độc lập.",
+                    "Ý nghĩa: $dz$ cho phép xấp xỉ sự thay đổi của hàm bằng một biểu thức tuyến tính, dùng trong khai triển Taylor và cực trị."
+                ]
+            }
+        },
+        {
+            "question": "Điều kiện khả vi của hàm nhiều biến.",
+            "answer": {
+                "steps": [
+                    "Nếu các đạo hàm riêng của $f(x,y)$ tồn tại và liên tục trong một lân cận của $(x_0,y_0)$ thì $f$ khả vi tại đó.",
+                    "Đây là điều kiện đủ (không phải điều kiện cần).",
+                    "Ý nghĩa: điều kiện này đảm bảo vi phân toàn phần tồn tại, từ đó các công thức gần đúng và tính cực trị được áp dụng an toàn."
+                ]
+            }
+        },
+        {
+            "question": "Phát biểu công thức đạo hàm của hàm hợp nhiều biến (quy tắc chuỗi).",
+            "answer": {
+                "steps": [
+                    "Giả sử $z=f(x,y)$ với $x=g(t), y=h(t)$ khả vi.",
+                    "Khi đó:",
+                    "$$ \\frac{dz}{dt} = f'_x(x,y) g'(t) + f'_y(x,y) h'(t). $$",
+                    "Nếu $x,y$ còn phụ thuộc vào nhiều biến khác, ta mở rộng bằng tổng các thành phần.",
+                    "Ý nghĩa: quy tắc chuỗi mở rộng đạo hàm một biến, rất quan trọng trong tối ưu hóa và mô hình phức tạp."
+                ]
+            }
+        },
+        {
+            "question": "Khái niệm đạo hàm riêng cấp hai và vi phân cấp hai.",
+            "answer": {
+                "steps": [
+                    "Đạo hàm riêng cấp hai ví dụ: $f_{xx} = \\frac{\\partial^2 f}{\\partial x^2}, f_{xy} = \\frac{\\partial^2 f}{\\partial x\\partial y}$. ",
+                    "Vi phân cấp hai:",
+                    "$$ d^2z = f_{xx} (dx)^2 + 2f_{xy} dxdy + f_{yy} (dy)^2. $$",
+                    "Ý nghĩa: dùng để khảo sát độ cong của bề mặt và phân loại cực trị (qua ma trận Hessian)."
+                ]
+            }
+        },
+        {
+            "question": "Khái niệm đạo hàm theo hướng và gradient.",
+            "answer": {
+                "steps": [
+                    "Cho vectơ đơn vị $\\vec{u}=(\\cos\\alpha,\\cos\\beta)$. ",
+                    "Đạo hàm theo hướng $\\vec{u}$:",
+                    "$$ D_{\\vec{u}}f(x_0,y_0) = f'_x(x_0,y_0) \\cos\\alpha + f'_y(x_0,y_0) \\cos\\beta. $$",
+                    "Gradient: $\\nabla f(x,y) = (f'_x, f'_y)$. ",
+                    "Ý nghĩa: gradient chỉ hướng tăng nhanh nhất, độ lớn gradient là tốc độ tăng cực đại của hàm tại điểm."
+                ]
+            }
+        },
+        {
+            "question": "Phát biểu định lý Schwarz về đạo hàm riêng hỗn hợp.",
+            "answer": {
+                "steps": [
+                    "Nếu $f_{xy}, f_{yx}$ tồn tại và liên tục trong một lân cận $(x_0,y_0)$ thì:",
+                    "$$ f_{xy}(x_0,y_0) = f_{yx}(x_0,y_0). $$",
+                    "Ý nghĩa: việc lấy đạo hàm theo thứ tự khác nhau cho cùng kết quả, giúp tính toán linh hoạt và đơn giản hơn."
+                ]
+            }
+        },
+        {
+            "question": "Định nghĩa hàm ẩn và công thức đạo hàm hàm số ẩn.",
+            "answer": {
+                "steps": [
+                    "Xét $F(x,y)=0$ xác định $y=y(x)$ trong một lân cận.",
+                    "Nếu $F$ khả vi và $F_y(x_0,y_0) \\neq 0$ thì tồn tại hàm $y(x)$ sao cho:",
+                    "$$ \\frac{dy}{dx} = -\\frac{F_x}{F_y}. $$",
+                    "Ý nghĩa: định lý hàm ẩn cho phép suy ra đạo hàm mà không cần giải biểu thức tường minh, hữu ích trong vật lý và tối ưu hóa."
+                ]
+            }
+        },
+        {
+            "question": "Điều kiện cực trị tự do của hàm hai biến.",
+            "answer": {
+                "steps": [
+                    "Điểm tới hạn $(x_0,y_0)$ thỏa $f'_x(x_0,y_0)=f'_y(x_0,y_0)=0$. ",
+                    "Xét định thức Hessian:",
+                    "$$ H = f_{xx} f_{yy} - (f_{xy})^2. $$",
+                    "Nếu $H>0, f_{xx}>0$ → cực tiểu. ",
+                    "Nếu $H>0, f_{xx}<0$ → cực đại. ",
+                    "Nếu $H<0$ → điểm yên ngựa. ",
+                    "Nếu $H=0$ → chưa đủ kết luận.",
+                    "Ý nghĩa: đây là tiêu chuẩn hình học để phân loại cực trị của bề mặt."
+                ]
+            }
+        },
+        {
+            "question": "Phương pháp nhân tử Lagrange để tìm cực trị có điều kiện.",
+            "answer": {
+                "steps": [
+                    "Bài toán: cực trị $f(x,y)$ với điều kiện $\\varphi(x,y)=0$.",
+                    "Lập hàm Lagrange: $L(x,y,\\lambda) = f(x,y) + \\lambda \\varphi(x,y)$. ",
+                    "Giải hệ: $\\nabla f(x,y) = -\\lambda \\nabla \\varphi(x,y), \\, \\varphi(x,y)=0$. ",
+                    "Ý nghĩa: nhân tử Lagrange biến bài toán ràng buộc thành hệ phương trình đại số, rất quan trọng trong tối ưu hóa."
+                ]
+            }
+        },
+        {
+            "question": "Ví dụ minh họa cực trị có điều kiện bằng nhân tử Lagrange.",
+            "answer": {
+                "steps": [
+                    "Ví dụ: tìm cực trị của $f(x,y)=x^2+y^2$ với điều kiện $x+y=1$.",
+                    "Bước 1: Lập $L(x,y,\\lambda) = x^2+y^2 + \\lambda(x+y-1)$. ",
+                    "Bước 2: Viết hệ: $2x+\\lambda=0, 2y+\\lambda=0, x+y=1$. ",
+                    "Bước 3: Giải hệ để tìm $(x,y)$. ",
+                    "Ý nghĩa: minh họa cách áp dụng Lagrange để tìm cực trị khi có ràng buộc tuyến tính."
+                ]
+            }
+        },
+        {
+            "question": "Khái niệm giá trị lớn nhất và nhỏ nhất của hàm số nhiều biến.",
+            "answer": {
+                "steps": [
+                    "Cho $f$ xác định trên miền $D$. ",
+                    "Nếu $f(M) \\leq f(M_0)$ với mọi $M \\in D$ thì $f(M_0)$ là giá trị lớn nhất (GTLN). ",
+                    "Nếu $f(M) \\geq f(M_0)$ với mọi $M \\in D$ thì $f(M_0)$ là giá trị nhỏ nhất (GTNN). ",
+                    "Ý nghĩa: khái niệm này khái quát min – max của hàm một biến sang nhiều biến, ứng dụng trong tối ưu hóa kinh tế, kỹ thuật."
+                ]
+            }
+        }
+    ]
+}
