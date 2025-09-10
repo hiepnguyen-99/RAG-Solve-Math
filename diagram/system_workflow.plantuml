@@ -1,6 +1,5 @@
 @startuml Luồng Xử Lý Câu Hỏi
 !theme plain
-' Cài đặt giao diện cho sơ đồ
 skinparam defaultFontName "Arial"
 skinparam defaultFontSize 14
 skinparam sequenceActorBorderColor black
@@ -12,7 +11,6 @@ skinparam participantBackgroundColor #F8F8F8
 
 title Luồng xử lý câu hỏi của hệ thống
 
-' Khai báo các tác nhân và thành phần hệ thống
 actor "Người dùng" as User
 participant "Hệ thống API" as API
 box "Hệ thống xử lý lõi" #LightYellow
@@ -22,7 +20,6 @@ box "Hệ thống xử lý lõi" #LightYellow
     participant "Generator" as Generator
 end box
 
-' Bắt đầu luồng
 User -> API : Gửi câu hỏi
 activate API
 
@@ -31,20 +28,26 @@ activate ClassRewrite
 
 ClassRewrite -> ClassRewrite : Phân loại câu hỏi (Lý thuyết / Giải bài tập)
 
-' Kiểm tra điều kiện có lịch sử trò chuyện hay không
+' Xây dựng ngữ cảnh từ lịch sử cho cả hai loại
 alt Có lịch sử trò chuyện (>= 2)
-    ClassRewrite -> ClassRewrite : 1. Tạo ngữ cảnh từ lịch sử
-    ClassRewrite -> ClassRewrite : 2. Rewrite câu hỏi gốc -> k câu hỏi mới
+    ClassRewrite -> ClassRewrite : Tạo ngữ cảnh từ lịch sử
 else Không có lịch sử trò chuyện
-    note right of ClassRewrite : Bỏ qua bước rewrite, \nsử dụng câu hỏi gốc.
+    note right of ClassRewrite : Bỏ qua bước xây dựng ngữ cảnh, \nsử dụng câu hỏi gốc.
 end
 
-' Bắt đầu quy trình RAG
-group Quy trình Retrieval-Augmented Generation (RAG)
+alt Loại câu hỏi: Giải bài tập
+    ClassRewrite -> Generator : Gửi câu hỏi + ngữ cảnh (nếu có) trực tiếp
+    deactivate ClassRewrite
+    activate Generator
+
+else Loại câu hỏi: Lý thuyết
+    ClassRewrite -> ClassRewrite : Rewrite k câu hỏi mới \nTừ câu hỏi gốc + ngữ cảnh(nếu có)
+
     ClassRewrite -> Retriever : Gửi các câu hỏi để tìm kiếm
     deactivate ClassRewrite
     activate Retriever
 
+    Retriever -> Retriever : Embedding câu hỏi với Qwen/Qwen3-Embedding-0.6B
     Retriever -> Retriever : Thu thập k*k tài liệu liên quan
     Retriever -> Reranker : Gửi tài liệu để xếp hạng lại
     deactivate Retriever
@@ -55,12 +58,10 @@ group Quy trình Retrieval-Augmented Generation (RAG)
 
     Reranker -> Generator : Gửi ngữ cảnh (tài liệu đã xử lý)
     deactivate Reranker
-    activate Generator
 end
 
-' Tạo prompt và sinh câu trả lời
 group Tạo Prompt và Sinh câu trả lời
-    Generator -> Generator : 1. Sử dụng PromptTemplate để tạo prompt
+    Generator -> Generator : 1. Tạo prompt từ câu hỏi + ngữ cảnh
     Generator -> Generator : 2. Sinh câu trả lời từ prompt cuối cùng
 end
 
