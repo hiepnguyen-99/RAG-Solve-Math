@@ -24,8 +24,14 @@ class ModelManager:
                 'loaded': False
             },
             'model-api': {
-                'name': 'llama 7B (API)',
-                'module': 'model.rag_7b_api', 
+                'name': 'llama 8B (API)',
+                'module': 'model.rag_8b_api', 
+                'function': 'solve_question_api_groq_8',
+                'loaded': False
+            },
+            'model-9b-api': {
+                'name': 'llama 9B (API)',
+                'module': 'model.rag_9b_api',
                 'function': 'solve_question_api_groq',
                 'loaded': False
             },
