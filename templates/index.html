@@ -42,7 +42,15 @@
                 </div>
                 
                 <div class="header-controls">
-                    <!-- Header controls now empty -->
+                    <!-- Menu toggle button -->
+                    <button class="menu-toggle" id="sidebar-toggle" title="Menu">
+                        <span class="material-icons">menu</span>
+                    </button>
+                    
+                    <!-- Model management toggle -->
+                    <button class="menu-toggle" id="model-management-toggle" title="Quản lý Models">
+                        <span class="material-icons">settings</span>
+                    </button>
                 </div>
             </div>
         </header>
@@ -205,11 +213,22 @@
             <div class="input-section">
                 <div class="input-container">
                     <div class="input-wrapper gemini-style">
-                        <!-- Left buttons group -->
-                        <div class="input-left-buttons">
-                            <!-- Add button with dropdown -->
+                        <!-- Input content area ở trên -->
+                        <div class="input-content-area">
+                            <!-- Main input -->
+                            <textarea 
+                                id="user-input" 
+                                placeholder="Đặt câu hỏi Toán học"
+                                rows="1"
+                                maxlength="2000"
+                            ></textarea>
+                        </div>
+                        
+                        <!-- Action buttons ở dưới (like Gemini) -->
+                        <div class="input-action-buttons">
+                            <!-- Add/Plus button với dropdown -->
                             <div class="dropdown-container">
-                                <button class="input-btn" id="add-dropdown-btn" title="Tùy chọn thêm">
+                                <button class="input-action-btn" id="add-button" title="Thêm">
                                     <span class="material-icons">add</span>
                                 </button>
                                 <div class="dropdown-menu" id="add-dropdown-menu">
@@ -235,18 +254,6 @@
                                         </div>
                                     </div>
                                     
-                                    <!-- Rerank Toggle -->
-                                    <div class="dropdown-item">
-                                        <label class="dropdown-label">Reranking:</label>
-                                        <div class="toggle-switch-mini">
-                                            <input type="checkbox" id="rerank-toggle" class="toggle-input" {% if rerank_enabled %}checked{% endif %}>
-                                            <label for="rerank-toggle" class="toggle-label">
-                                                <span class="toggle-slider"></span>
-                                            </label>
-                                        </div>
-                                        <small class="rerank-status" id="rerank-status">Đang kiểm tra...</small>
-                                    </div>
-                                    
                                     <!-- New Chat option -->
                                     <div class="dropdown-item dropdown-button" id="new-chat">
                                         <span class="material-icons">chat</span>
@@ -254,26 +261,23 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <!-- Main input -->
-                        <textarea 
-                            id="user-input" 
-                            placeholder="Đặt câu hỏi Toán học"
-                            rows="1"
-                            maxlength="2000"
-                        ></textarea>
-                        
-                        <!-- Right buttons group -->
-                        <div class="input-right-buttons">
+                            
                             <!-- Image Upload -->
-                            <button class="input-btn" id="image-button" title="Hình ảnh">
+                            <button class="input-action-btn" id="image-button" title="Hình ảnh">
                                 <span class="material-icons">image</span>
+                                <span class="action-label">Hình ảnh</span>
                             </button>
                             
-                            <!-- Documents Library -->
-                            <button class="input-btn" id="docs-toggle" title="Thư viện tài liệu">
+                            <!-- Documents -->
+                            <button class="input-action-btn" id="docs-toggle" title="Tài liệu">
                                 <span class="material-icons">library_books</span>
+                                <span class="action-label">Tài liệu</span>
+                            </button>
+                            
+                            <!-- Rerank toggle -->
+                            <button class="input-action-btn rerank-btn" id="rerank-toggle-btn" title="Reranking">
+                                <span class="material-icons">sort</span>
+                                <span class="action-label" id="rerank-label">Rerank</span>
                             </button>
                             
                             <!-- Send Button -->
@@ -282,43 +286,48 @@
                             </button>
                         </div>
                         
+                        <!-- Settings dropdown (hidden, accessible via add button) -->
+                        <div class="dropdown-container" style="display: none;">
+                            <div class="dropdown-menu" id="add-dropdown-menu">
+                                <!-- Model Selection -->
+                                <div class="dropdown-item">
+                                    <label class="dropdown-label">Model:</label>
+                                    <select id="model-select" class="model-select-mini">
+                                        {% for key, model in models.items() %}
+                                        <option value="{{ key }}" {% if key == current_model %}selected{% endif %}>
+                                            {{ model.name }}
+                                        </option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                
+                                <!-- Document Count -->
+                                <div class="dropdown-item">
+                                    <label class="dropdown-label">Số tài liệu:</label>
+                                    <div class="slider-container">
+                                        <input type="range" id="k-select" class="k-slider" 
+                                               min="1" max="10" value="3" step="1">
+                                        <div class="slider-value" id="k-value">3</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- New Chat option -->
+                                <div class="dropdown-item dropdown-button" id="new-chat">
+                                    <span class="material-icons">chat</span>
+                                    <span>Cuộc trò chuyện mới</span>
+                                </div>
+                            </div>
+                        </div>
+                        
                         <input type="file" id="image-input" accept="image/*" style="display: none;">
                     </div>
                     
-                    <!-- Bottom row with more controls -->
-                    <div class="input-footer-controls">
-                        <div class="input-footer-left">
-                            <span class="char-counter" id="char-counter">0/2000</span>
-                        </div>
-                        <div class="input-footer-right">
-                            <!-- Menu button with dropdown -->
-                            <div class="dropdown-container">
-                                <button class="footer-btn" id="menu-dropdown-btn" title="Menu">
-                                    <span class="material-icons">menu</span>
-                                </button>
-                                <div class="dropdown-menu menu-dropdown" id="menu-dropdown-menu">
-                                    <!-- Chat History -->
-                                    <div class="dropdown-item dropdown-button" id="chat-history-toggle">
-                                        <span class="material-icons">history</span>
-                                        <span>Lịch sử chat</span>
-                                    </div>
-                                    
-                                    <!-- Theme Toggle -->
-                                    <div class="dropdown-item dropdown-button" id="theme-toggle">
-                                        <span class="material-icons">light_mode</span>
-                                        <span>Chuyển chế độ tối</span>
-                                    </div>
-                                    
-                                    <!-- Settings -->
-                                    <div class="dropdown-item dropdown-button" id="model-management-toggle">
-                                        <span class="material-icons">settings</span>
-                                        <span>Cài đặt</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <span class="model-info" id="model-info">Qwen 1.5B</span>
-                        </div>
+                    <!-- Simplified footer with just char counter and model name -->
+                    <div class="input-footer-simple">
+                        <span class="char-counter" id="char-counter">0/2000</span>
+                        <span class="current-model-display">
+                            <span class="model-name" id="current-model-name">{{ models[current_model].name if current_model in models else 'Chọn model' }}</span>
+                        </span>
                     </div>
                 </div>
             </div>

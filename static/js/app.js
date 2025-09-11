@@ -17,6 +17,13 @@ class ChatApp {
         this.checkRerankStatus();
         this.loadChatHistorySidebar();
         this.initializeModelStatus();
+        
+        // Update current model display
+        setTimeout(() => {
+            if (this.modelSelect && this.modelSelect.value) {
+                this.updateCurrentModelDisplay(this.modelSelect.value);
+            }
+        }, 100);
     }
 
     initElements() {
@@ -37,11 +44,15 @@ class ChatApp {
         this.modelSelect = document.getElementById('model-select');
         this.kSelect = document.getElementById('k-select');
         this.kValue = document.getElementById('k-value');
-        this.rerankToggle = document.getElementById('rerank-toggle');
+        this.rerankToggleBtn = document.getElementById('rerank-toggle-btn');
+        this.rerankLabel = document.getElementById('rerank-label');
         this.themeToggle = document.getElementById('theme-toggle');
         this.clearChat = document.getElementById('clear-chat');
         this.newChat = document.getElementById('new-chat');
         this.chatHistoryToggle = document.getElementById('chat-history-toggle');
+        
+        // State for rerank
+        this.rerankEnabled = false;
         
         // Sidebar elements
         this.documentSidebar = document.getElementById('document-sidebar');
@@ -63,7 +74,6 @@ class ChatApp {
         
         // Info elements
         this.charCounter = document.getElementById('char-counter');
-        this.modelInfo = document.getElementById('model-info');
         this.toastContainer = document.getElementById('toast-container');
         this.rerankStatus = document.getElementById('rerank-status');
     }
@@ -90,7 +100,11 @@ class ChatApp {
         this.modelSelect.addEventListener('change', () => this.handleModelChange());
         this.kSelect.addEventListener('input', () => this.handleKChange());
         this.kSelect.addEventListener('change', () => this.handleKChange());
-        this.rerankToggle.addEventListener('change', () => this.handleRerankToggle());
+        
+        // Action button events
+        if (this.rerankToggleBtn) {
+            this.rerankToggleBtn.addEventListener('click', () => this.handleRerankButtonToggle());
+        }
         
         // Initialize slider progress on load with wave effect
         setTimeout(() => {
@@ -107,19 +121,19 @@ class ChatApp {
         // this.chatHistoryToggle.addEventListener('click', () => this.toggleChatHistory());
         
         // Add dropdown functionality
-        const addDropdownBtn = document.getElementById('add-dropdown-btn');
+        const addButton = document.getElementById('add-button');
         const addDropdownMenu = document.getElementById('add-dropdown-menu');
         const newChatBtn = document.getElementById('new-chat');
         
-        if (addDropdownBtn && addDropdownMenu) {
-            addDropdownBtn.addEventListener('click', (e) => {
+        if (addButton && addDropdownMenu) {
+            addButton.addEventListener('click', (e) => {
                 e.stopPropagation();
                 this.toggleAddDropdown();
             });
             
             // Close dropdown when clicking outside
             document.addEventListener('click', (e) => {
-                if (!addDropdownBtn.contains(e.target) && !addDropdownMenu.contains(e.target)) {
+                if (!addButton.contains(e.target) && !addDropdownMenu.contains(e.target)) {
                     this.closeAddDropdown();
                 }
             });
@@ -130,6 +144,18 @@ class ChatApp {
                 this.handleNewChat();
                 this.closeAddDropdown();
             });
+        }
+        
+        // Header menu buttons
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const modelManagementToggle = document.getElementById('model-management-toggle');
+        
+        if (sidebarToggle) {
+            sidebarToggle.addEventListener('click', () => this.toggleChatHistory());
+        }
+        
+        if (modelManagementToggle) {
+            modelManagementToggle.addEventListener('click', () => this.toggleModelManagement());
         }
         
         // Menu dropdown functionality
@@ -179,12 +205,6 @@ class ChatApp {
         // Additional buttons
         if (this.imageButton) {
             this.imageButton.addEventListener('click', () => this.imageInput.click());
-        }
-        
-        // Deep research button
-        const deepResearchBtn = document.getElementById('deep-research');
-        if (deepResearchBtn) {
-            deepResearchBtn.addEventListener('click', () => this.handleDeepResearch());
         }
         
         // Model management sidebar controls
@@ -447,7 +467,7 @@ class ChatApp {
 
         const selectedModel = this.modelSelect.value;
         const kDocuments = parseInt(this.kSelect.value);
-        const rerankEnabled = this.rerankToggle.checked;
+        const rerankEnabled = this.rerankEnabled; // Use our new state instead of toggle
 
         // Tạo user message ngay lập tức để hiển thị
         const userMessage = {
@@ -696,7 +716,9 @@ class ChatApp {
     // ===== Control Handlers =====
     async handleModelChange() {
         const selectedModel = this.modelSelect.value;
-        this.modelInfo.textContent = this.getModelDisplayName(selectedModel);
+        
+        // Update model name in footer
+        this.updateCurrentModelDisplay(selectedModel);
         
         this.showModelLoadingState(selectedModel);
         
@@ -807,6 +829,23 @@ class ChatApp {
         this.showToast(`Đã ${statusText} reranking`, 'info');
     }
 
+    // New action button handlers
+    handleRerankButtonToggle() {
+        this.rerankEnabled = !this.rerankEnabled;
+        
+        if (this.rerankEnabled) {
+            this.rerankToggleBtn.classList.add('active');
+            this.rerankLabel.textContent = 'Rerank';
+            this.rerankLabel.style.fontWeight = '600';
+            this.showToast('Đã bật reranking', 'success');
+        } else {
+            this.rerankToggleBtn.classList.remove('active');
+            this.rerankLabel.textContent = 'Rerank';
+            this.rerankLabel.style.fontWeight = '500';
+            this.showToast('Đã tắt reranking', 'info');
+        }
+    }
+
     async handleClearChat() {
         if (this.messages.length === 0) return;
 
@@ -881,6 +920,13 @@ class ChatApp {
 
     toggleChatHistory() {
         this.showChatHistoryModal();
+    }
+
+    updateCurrentModelDisplay(modelId) {
+        const currentModelNameElement = document.getElementById('current-model-name');
+        if (currentModelNameElement) {
+            currentModelNameElement.textContent = this.getModelDisplayName(modelId);
+        }
     }
 
     async showChatHistoryModal() {
@@ -1695,20 +1741,25 @@ class ChatApp {
             const response = await fetch('/api/rerank-status');
             const data = await response.json();
             
-            if (this.rerankStatus) {
-                this.rerankStatus.textContent = data.message;
-                this.rerankStatus.className = `rerank-status ${data.available ? 'available' : 'unavailable'}`;
-                
-                if (!data.available && this.rerankToggle) {
-                    this.rerankToggle.disabled = true;
-                    this.rerankToggle.checked = false;
-                }
+            // Update rerank button availability
+            if (!data.available && this.rerankToggleBtn) {
+                this.rerankToggleBtn.disabled = true;
+                this.rerankToggleBtn.style.opacity = '0.5';
+                this.rerankToggleBtn.title = 'Reranking không khả dụng: ' + data.message;
+                this.rerankEnabled = false;
+            } else if (this.rerankToggleBtn) {
+                this.rerankToggleBtn.disabled = false;
+                this.rerankToggleBtn.style.opacity = '1';
+                this.rerankToggleBtn.title = 'Reranking';
             }
+            
+            console.log('Rerank status:', data.available ? 'Available' : 'Unavailable', '-', data.message);
         } catch (error) {
             console.error('Error checking rerank status:', error);
-            if (this.rerankStatus) {
-                this.rerankStatus.textContent = 'Không thể kiểm tra';
-                this.rerankStatus.className = 'rerank-status unavailable';
+            if (this.rerankToggleBtn) {
+                this.rerankToggleBtn.disabled = true;
+                this.rerankToggleBtn.style.opacity = '0.5';
+                this.rerankToggleBtn.title = 'Không thể kiểm tra reranking';
             }
         }
     }
@@ -1723,8 +1774,6 @@ class ChatApp {
     processMarkdown(text) {
         if (!text) return '';
         
-        console.log('Input text:', text); // Debug
-        
         // Bảo vệ LaTeX expressions trước khi escape HTML
         const latexPlaceholders = [];
         let placeholderCounter = 0;
@@ -1733,7 +1782,6 @@ class ChatApp {
         text = text.replace(/\$\$([\s\S]*?)\$\$/g, (match) => {
             const placeholder = `__LATEX_PLACEHOLDER_${placeholderCounter}__`;
             latexPlaceholders.push({ placeholder, original: match });
-            console.log('Display math placeholder:', placeholder, '=', match); // Debug
             placeholderCounter++;
             return placeholder;
         });
@@ -1742,7 +1790,6 @@ class ChatApp {
         text = text.replace(/\$([^$\n]+?)\$/g, (match) => {
             const placeholder = `__LATEX_PLACEHOLDER_${placeholderCounter}__`;
             latexPlaceholders.push({ placeholder, original: match });
-            console.log('Inline math placeholder:', placeholder, '=', match); // Debug
             placeholderCounter++;
             return placeholder;
         });
@@ -1751,20 +1798,14 @@ class ChatApp {
         text = text.replace(/\\[\(\[][\s\S]*?\\[\)\]]/g, (match) => {
             const placeholder = `__LATEX_PLACEHOLDER_${placeholderCounter}__`;
             latexPlaceholders.push({ placeholder, original: match });
-            console.log('LaTeX command placeholder:', placeholder, '=', match); // Debug
             placeholderCounter++;
             return placeholder;
         });
-        
-        console.log('Text after placeholder replacement:', text); // Debug
-        console.log('Placeholders array:', latexPlaceholders); // Debug
         
         // Escape HTML cho phần còn lại
         const div = document.createElement('div');
         div.textContent = text;
         let processed = div.innerHTML;
-        
-        console.log('Text after HTML escape:', processed); // Debug
         
         // Xử lý các format Markdown cơ bản
         processed = processed
@@ -1782,16 +1823,11 @@ class ChatApp {
             .replace(/^## (.*$)/gim, '<h2>$1</h2>')
             .replace(/^# (.*$)/gim, '<h1>$1</h1>');
         
-        console.log('Text after markdown processing:', processed); // Debug
-        
         // Khôi phục LaTeX expressions - theo thứ tự ngược lại để tránh conflict
         for (let i = latexPlaceholders.length - 1; i >= 0; i--) {
             const { placeholder, original } = latexPlaceholders[i];
-            console.log('Restoring:', placeholder, 'to', original); // Debug
             processed = processed.split(placeholder).join(original);
         }
-        
-        console.log('Final processed text:', processed); // Debug
         
         return processed;
     }
@@ -1800,7 +1836,8 @@ class ChatApp {
         const models = {
             'qwen-1.5b': 'Qwen 1.5B',
             'qwen-4b': 'Qwen 4B',
-            'model-api': 'llama 7B (API)',
+            'model-api': 'llama 8B (API)',
+            'model-9b-api': 'llama 9B (API)',
             'gemini-api': 'Gemini (API)',
             'Rag-2B': 'Qwen-2B',
         };
@@ -2089,14 +2126,6 @@ class ChatApp {
         this.userInput.value = '';
         this.handleInputChange();
         this.userInput.focus();
-    }
-
-    // ===== Function Button Handlers =====
-    handleDeepResearch() {
-        // Chế độ nghiên cứu sâu - có thể thêm logic đặc biệt sau
-        this.userInput.focus();
-        this.userInput.placeholder = "Nhập câu hỏi cần nghiên cứu sâu...";
-        this.addMessage('system', '🔍 Chế độ nghiên cứu sâu đã được kích hoạt. Tôi sẽ tìm kiếm và phân tích chi tiết cho câu hỏi của bạn.');
     }
 
     // ===== Dropdown Handlers =====

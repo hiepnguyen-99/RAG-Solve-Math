@@ -1,12 +1,10 @@
-import os
 import torch
+import re
+from .function import *
 from dotenv import load_dotenv
-from langchain.prompts import PromptTemplate as MathPromptTemplate
+from .conversation_manager import conversation_manager
 from groq import Groq
-
-from retrieval import *
-from conversation_manager import conversation_manager
-from function import *
+from langchain.prompts import PromptTemplate as MathPromptTemplate
 
 # ==== Thiết bị ====
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -32,30 +30,98 @@ if not GROQ_API_KEY:
     print("⚠️ GROQ_API_KEY không được cấu hình")
 client = Groq(api_key=GROQ_API_KEY) if GROQ_API_KEY else None
 
+# ==== Instructions & Styles ====
+MATH_STRICT_INSTRUCTION = """
+    Bạn là một trợ lý toán học, chuyên giải quyết các bài toán và câu hỏi của người dùng. 
+    Khi trình bày bạn phải
+      + mỗi công thức, Tiêu đề,... phải ở trên một dòng riêng.
+      + Không dùng inline LaTeX.
+      + Ngắn gọn, chỉ giữ bước quan trọng, không văn hoa.
+"""
+
+STYLES = {
+    # Phong cách mặc định cho các bài toán (đúng yêu cầu người dùng)
+    "bai_toan": MATH_STRICT_INSTRUCTION
+}
+
 # ==== Rewrite query ====
-def rewrite_query_groq(query, k=5):
+def rewrite_query_groq_8(query, k=5, conversation_history=None):
     """
-    Viết lại câu query bằng Groq LLaMA 3 8B.
+    Rewrite query sử dụng context hội thoại (multi-turn) - logic từ 4b model
     """
     if not client:
         print("⚠️ Groq API không khả dụng, trả về query gốc")
         return [query]
 
-    rewrite_prompt = f"""
-    Từ truy vấn:
-    "{query}"
-    Hãy tạo {k} truy vấn khác nhau bằng tiếng Việt.
-    """
+    # Xây dựng context hội thoại nếu có
+    history_text = ""
+    if conversation_history:
+        for turn in conversation_history:
+            user = turn.get("user", "")
+            model = turn.get("model", "")
+            history_text += f"User: {user}\nModel: {model}\n"
+
+    query_rewrite_prompt = (
+        f"Dựa vào lịch sử hội thoại sau (nếu có):\n{history_text}\n"
+        f"Từ câu hỏi: '{query}'\n"
+        f"Tạo {k} câu hỏi TÌM KIẾM khác nhau, mỗi câu tập trung vào khía cạnh riêng:\n"
+        f"- Câu 1: Tìm định nghĩa/khái niệm\n"
+        f"- Câu 2: Tìm công thức/phương pháp\n"
+        f"- Câu 3: Tìm ví dụ/bài tập\n"
+        f"Chỉ viết {k} câu hỏi, mỗi câu một dòng, không đánh số:\n"
+    )
 
     try:
         resp = client.chat.completions.create(
-            model="llama3-8b-8192",
-            messages=[{"role": "user", "content": rewrite_prompt}],
-            temperature=0.4,
+            model="llama-3.1-8b-instant",
+            messages=[{"role": "user", "content": query_rewrite_prompt}],
+            temperature=0.7,  # Tăng từ 0.4 lên 0.7 để đa dạng hơn
             max_tokens=256
         )
-        text = resp.choices[0].message.content
-        return [line.strip("-• ") for line in text.strip().split("\n") if line.strip()]
+        
+        response = resp.choices[0].message.content
+
+        if response and not response.startswith("Lỗi:"):
+            # Tách các dòng và làm sạch
+            lines = response.split('\n')
+            queries = []
+            seen_queries = set()  # Để tránh trùng lặp
+
+            for line in lines:
+                line = line.strip()
+                if not line:
+                    continue
+
+                # Bỏ qua các dòng không phải câu hỏi (tiếng Anh, số thứ tự, etc.)
+                if any(word.lower() in line.lower() for word in ['okay', 'let\'s', 'first', 'user', 'think', 'wait', 'the']):
+                    continue
+
+                # Loại bỏ số thứ tự ở đầu dòng (1., 2., -, •, etc.)
+                line = re.sub(r'^\d+\.?\s*', '', line)  # Loại bỏ "1. " hoặc "1 "
+                line = re.sub(r'^[-•*]\s*', '', line)   # Loại bỏ "- " hoặc "• "
+                line = line.strip()
+
+                # Kiểm tra trùng lặp và điều kiện khác
+                if (line and len(line) > 10 and 
+                    not line.lower().startswith(('vui lòng', 'okay', 'first')) and
+                    line.lower() not in seen_queries and
+                    line != query):  # Không trùng với câu gốc
+                    
+                    queries.append(line)
+                    seen_queries.add(line.lower())
+
+            # Giới hạn số lượng câu hỏi theo k
+            queries = queries[:k] if len(queries) > k else queries
+            
+            print(f"🔍 Generated {len(queries)} unique rewrite queries")
+            for i, q in enumerate(queries, 1):
+                print(f"   {i}. {q}")
+                
+            return queries if queries else [query]
+        else:
+            print(f"Rewrite failed: {response}")
+            return [query]
+            
     except Exception as e:
         print(f"⚠️ Lỗi khi rewrite query: {e}")
         return [query]
@@ -81,15 +147,15 @@ Trả lời:
 # ==== Template toán ====
 math_template = MathPromptTemplate(
     input_variables=["context", "question", "conversation_context"],
-    template="""
-Bạn là trợ lý AI chuyên giải các bài toán. 
+    template=f"""
+{STYLES["bai_toan"]}
 
-{conversation_context}
+{{conversation_context}}
 
 Dựa vào thông tin sau:
-{context}
+{{context}}
 Hãy giải bài toán sau từng bước một, hiển thị công thức trong khối LaTeX `$$`.
-Câu hỏi: {question}
+Câu hỏi: {{question}}
 1. Phân tích.
 2. Giải chi tiết.
 3. Kết luận.
@@ -97,7 +163,7 @@ Câu hỏi: {question}
 )
 
 # ==== Hàm chính ====
-def classify_question_groq(question: str) -> str:
+def classify_question_groq_8(question: str) -> str:
     """
     Phân loại câu hỏi bằng chính Groq LLaMA3 model
     """
@@ -124,7 +190,7 @@ Trả lời CHÍNH XÁC một trong hai từ: SOLVING hoặc KNOWLEDGE
     
     try:
         resp = client.chat.completions.create(
-            model="llama3-8b-8192",
+            model="llama-3.1-8b-instant",
             messages=[{"role": "user", "content": classification_prompt}],
             temperature=0.1,
             max_tokens=10
@@ -143,7 +209,7 @@ Trả lời CHÍNH XÁC một trong hai từ: SOLVING hoặc KNOWLEDGE
         return None
 
 
-def solve_question_api_groq(question: str, k: int = 3, rerank: bool = False, rewrite: bool = True, math: bool = False, conversation_history: list = None):
+def solve_question_api_groq_8(question: str, k: int = 3, rerank: bool = False, rewrite: bool = True, math: bool = False, conversation_history: list = None):
     """
     Hàm giải câu hỏi qua Groq API LLaMA3.
     Tự động phân loại câu hỏi để quyết định dùng RAG hay giải toán trực tiếp.
@@ -153,7 +219,7 @@ def solve_question_api_groq(question: str, k: int = 3, rerank: bool = False, rew
             return "Lỗi: GROQ_API_KEY không được cấu hình.", [], []
 
         # Phân loại câu hỏi bằng chính Groq LLaMA3 model
-        question_type = classify_question_type_generic(question, classify_question_groq)
+        question_type = classify_question_type_generic(question, classify_question_groq_8)
         print(f"🔍 Loại câu hỏi được phân loại bởi LLaMA3: {question_type}")
 
         # Context hội thoại
@@ -165,7 +231,7 @@ def solve_question_api_groq(question: str, k: int = 3, rerank: bool = False, rew
         if question_type == 'math_solving':
             # Giải toán trực tiếp - không cần retrieval
             print("⚡ Chế độ giải toán trực tiếp (không dùng RAG)")
-            return solve_math_direct_groq(question, conversation_history)
+            return solve_math_direct_groq_8(question, conversation_history)
         else:
             # Dùng RAG để tìm kiếm tài liệu
             print("📚 Chế độ tìm kiếm tài liệu (dùng RAG)")
@@ -175,10 +241,10 @@ def solve_question_api_groq(question: str, k: int = 3, rerank: bool = False, rew
                 if conversation_context:
                     topics = conversation_manager.extract_key_topics(conversation_history)
                     enhanced_question = f"{question} (Liên quan: {', '.join(topics)})" if topics else question
-                    queries = rewrite_query_groq(enhanced_question, 3)
+                    queries = rewrite_query_groq_8(enhanced_question, 3, conversation_history)  # Dùng k=3 như 4b
                 else:
-                    queries = rewrite_query_groq(question, 3)
-                queries.append(question)
+                    queries = rewrite_query_groq_8(question, 3, conversation_history)  # Dùng k=3 như 4b
+                queries.append(question)  # Tổng cộng 4 câu (3 mới + 1 gốc)
             else:
                 queries = [question]
 
@@ -186,7 +252,7 @@ def solve_question_api_groq(question: str, k: int = 3, rerank: bool = False, rew
             docs = []
             for query in queries:
                 retriever = db.as_retriever(search_kwargs={"k": k})
-                doc = retriever.get_relevant_documents(query)
+                doc = retriever.invoke(query)
                 if rerank and RERANK_AVAILABLE:
                     try:
                         reranker = FlagReranker(RERANK_MODEL, use_fp16=True)
@@ -198,16 +264,32 @@ def solve_question_api_groq(question: str, k: int = 3, rerank: bool = False, rew
             docs = reciprocal_rank_fusion(docs, num_docs=k)
             context = "\n".join([split_combined_content(doc.page_content) for doc in docs]) if docs else "Không tìm thấy tài liệu liên quan."
 
-            # Prompt
+            # Prompt và gọi API
             if math:
-                prompt = math_template.format(context=context, question=question, conversation_context=conversation_context)
+                # Sử dụng system message cho math
+                user_content = f"""
+{conversation_context}
+
+Dựa vào thông tin sau:
+{context}
+Hãy giải bài toán sau từng bước một, hiển thị công thức trong khối LaTeX `$$`.
+Câu hỏi: {question}
+1. Phân tích.
+2. Giải chi tiết.
+3. Kết luận.
+"""
+                messages = [
+                    {"role": "system", "content": STYLES["bai_toan"]},
+                    {"role": "user", "content": user_content}
+                ]
             else:
                 prompt = promt_text(context, question, conversation_context)
+                messages = [{"role": "user", "content": prompt}]
 
             # Gọi Groq API
             resp = client.chat.completions.create(
-                model="llama3-8b-8192",
-                messages=[{"role": "user", "content": prompt}],
+                model="llama-3.1-8b-instant",
+                messages=messages,
                 temperature=0.4,
                 max_tokens=512
             )
@@ -226,12 +308,12 @@ def solve_question_api_groq(question: str, k: int = 3, rerank: bool = False, rew
         return f"Lỗi khi xử lý Groq API: {str(e)}", [], []
 
 # ==== Alias cho toán ====
-def solve_math_question_api_groq(question: str, k: int = 3, rerank: bool = False, rewrite: bool = True, conversation_history: list = None):
-    return solve_question_api_groq(question, k=k, rerank=rerank, rewrite=rewrite, math=True, conversation_history=conversation_history)
+def solve_math_question_api_groq_8(question: str, k: int = 3, rerank: bool = False, rewrite: bool = True, conversation_history: list = None):
+    return solve_question_api_groq_8(question, k=k, rerank=rerank, rewrite=rewrite, math=True, conversation_history=conversation_history)
 
 
 # Hàm giải toán không dùng retrieval - chỉ dùng model trực tiếp
-def solve_math_direct_groq(question: str, conversation_history: list = None):
+def solve_math_direct_groq_8(question: str, conversation_history: list = None):
     """
     Giải toán trực tiếp bằng Groq API không cần retrieval documents
     
@@ -249,10 +331,10 @@ def solve_math_direct_groq(question: str, conversation_history: list = None):
             conversation_context = conversation_manager.build_conversation_context(conversation_history, question)
             print(f"🔄 Sử dụng conversation context: {len(conversation_context)} ký tự")
 
-        # Tạo prompt giải toán trực tiếp
-        math_prompt = f"""
-Bạn là trợ lý AI chuyên giải các bài toán.
-
+        # Tạo messages với system instruction
+        messages = [
+            {"role": "system", "content": STYLES["bai_toan"]},
+            {"role": "user", "content": f"""
 {conversation_context}
 
 Hãy giải bài toán sau đây từng bước một, hiển thị các công thức trong khối LaTeX (đặt giữa $$):
@@ -263,14 +345,13 @@ Hãy làm theo các bước:
 1. Phân tích đề bài và xác định phương pháp giải
 2. Giải chi tiết từng bước với các công thức toán học
 3. Đưa ra kết luận cuối cùng
-
-Trả lời:
-"""
+"""}
+        ]
 
         # Gọi Groq API
         resp = client.chat.completions.create(
-            model="llama3-8b-8192",
-            messages=[{"role": "user", "content": math_prompt}],
+            model="llama-3.1-8b-instant",
+            messages=messages,
             temperature=0.3,
             max_tokens=1024
         )
