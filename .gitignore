@@ -3,3 +3,4 @@
 /appenv
 chat_history.json
 .venv/
+hiep.env

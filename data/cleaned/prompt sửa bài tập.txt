@@ -7,20 +7,35 @@ giải từng bước cụ thể
 các bài tập đều khác nhau, cũng khác với các bài ở trên
 làm đúng yêu cầu này: tạo text không để 1 dấu \, chỉ tạo 2 dấu \\, \ thường đứng trước kí tự khác để xuống dòng hoặc tạo công thức đặc biệt trong file md cũng phải tạo thành \\ ví dụ \{ thì thay thành \\{ , không đứng đặt đứng trước $ hoặc ý nhỏ a b c
 không đánh dấu số bài
-tạo với form giống ở dưới
-{
-  "problems": [
+
+yêu cầu trả về với định dạng giống form như dưới và sửa những phần sau:
+- không trả lời tự do, không sửa logic
+- Nếu mẫu nào có lời giải đã đúng thì không sửa, bước nào đã hoàn chỉnh thì bỏ qua, đạt yêu cầu tiêu chí nào ở dưới thì bỏ qua, tiếu chí nào chưa đạt thì sửa lại tiêu chí đó
+- Nếu câu hỏi có những ý phụ a, b, c, ... thì hãy chỉnh sửa "Bước" trong ý phụ đó
+- thêm "Bước" và viết nội dung cần làm, ví dụ "Bước 1: ...(nội dung cần làm)", sau đó những dòng dưới (sau "Bước", có thể nhiều dòng) là quá trình tính toán nhỏ hơn
+- 1 mẫu có nhiều tính toán phải chia 2 bước hoặc nhiều hơn, nếu câu nào chỉ cần thực hiện 1 phép tính, đổi "Bước 1" thành "Bước duy nhất: ..."
+- Nếu chưa có "bước: nội dung cần làm"  thì có thể tạo thêm, chỉnh sửa nội dung đó
+- steps cuối cùng luôn là "Kết luận: a) ... . b) ... . " chỉ chứa kết quả / câu trả lời cuối cùng của toàn bộ question
+- tạo thụt lề 1 mức nữa so với mẫu (thụt cả phần tử chứa question, answer)
+- Nếu mẫu nào hỏi Chứng minh thì Kết luận khẳng định lại câu hỏi, khẳng định câu đó tính từ sau chữ "Chứng minh" ..., bỏ Đã chứng minh / đã chứng tỏ
+ví dụ 1 mẫu
     {
-      "question": "Cho hai ma trận cùng kích thước: $A = \\begin{pmatrix} 1 & -2 & 3 \\\\ 0 & 4 & 5 \\end{pmatrix}$ và $B = \\begin{pmatrix} 2 & 1 & -1 \\\\ 3 & -2 & 0 \\end{pmatrix}$. Thực hiện: a) Tính $A + B$. b) Tính $2A - 3B$. c) Phép trừ $A - B^T$ có thực hiện được không? Giải thích.",
+      "question": "Cho ma trận $A = \\begin{pmatrix} 4 & -1 \\\\ 2 & 1 \\end{pmatrix}$. Thực hiện: a) Tính $\\det(A)$. b) Tìm $A^{-1}$ (nếu có). c) Kiểm tra $A\\cdot A^{-1} = I_2$. d) Chứng minh A là ma trận",
       "answer": {
         "steps": [
-          "Kiểm tra kích thước: $A, B$ đều là ma trận $2 \\times 3$, nên phép cộng và nhân vô hướng là hợp lệ.",
-          "a) Cộng theo từng phần tử: $A + B = \\begin{pmatrix} 1+2 & -2+1 & 3+(-1) \\\\ 0+3 & 4+(-2) & 5+0 \\end{pmatrix} = \\begin{pmatrix} 3 & -1 & 2 \\\\ 3 & 2 & 5 \\end{pmatrix}$.",
-          "b) Tính $2A = \\begin{pmatrix} 2 & -4 & 6 \\\\ 0 & 8 & 10 \\end{pmatrix}$ và $3B = \\begin{pmatrix} 6 & 3 & -3 \\\\ 9 & -6 & 0 \\end{pmatrix}$. Do đó $2A - 3B = \\begin{pmatrix} -4 & -7 & 9 \\\\ -9 & 14 & 10 \\end{pmatrix}$.",
-          "c) $B^T$ có kích thước $3 \\times 2$ còn $A$ là $2 \\times 3$. Vì không cùng kích thước nên $A - B^T$ không xác định.",
-          "Kết luận: Thực hiện được (a), (b); không thực hiện được (c) do không cùng kích thước."
+          "a) Tính $\\det(A)$.",
+          "Bước duy nhất: Áp dụng công thức định thức cho ma trận $2 \\times 2$.",
+          "$\\det(A) = ad - bc = 4(1) - (-1)(2) = 4 + 2 = 6$.",
+          "b) Tìm $A^{-1}$.",
+          "Bước 1: Kiểm tra điều kiện khả nghịch. Vì $\\det(A) = 6 \\neq 0$, ma trận A khả nghịch.",
+          "Bước 2: Áp dụng công thức tìm ma trận nghịch đảo.",
+          "$A^{-1} = \\frac{1}{\\det(A)}\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix} = \\frac{1}{6}\\begin{pmatrix} 1 & 1 \\\\ -2 & 4 \\end{pmatrix} = \\begin{pmatrix} 1/6 & 1/6 \\\\ -1/3 & 2/3 \\end{pmatrix}$.",
+          "c) Kiểm tra $A \\cdot A^{-1} = I_2$.",
+          "Bước 1: Thực hiện phép nhân $A \\cdot A^{-1}$.",
+          "$A \\cdot A^{-1} = \\begin{pmatrix} 4 & -1 \\\\ 2 & 1 \\end{pmatrix} \\begin{pmatrix} 1/6 & 1/6 \\\\ -1/3 & 2/3 \\end{pmatrix} = \\begin{pmatrix} 4/6+1/3 & 4/6-2/3 \\\\ 2/6-1/3 & 2/6+2/3 \\end{pmatrix}$.",
+          "Bước 2: Rút gọn kết quả.",
+          "$\\begin{pmatrix} 2/3+1/3 & 2/3-2/3 \\\\ 1/3-1/3 & 1/3+2/3 \\end{pmatrix} = \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix} = I_2$.",
+          "Kết luận: a) $\\det(A) = 6$. b) $A^{-1} = \\begin{pmatrix} 1/6 & 1/6 \\\\ -1/3 & 2/3 \\end{pmatrix}$. c) Phép tính kiểm tra $A \\cdot A^{-1} = I_2$ cho kết quả đúng. d) A là ma trận"
         ]
       }
-    }
-  ]
-}
+    },
