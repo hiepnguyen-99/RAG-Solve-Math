@@ -1,4 +1,4 @@
-@startuml Luồng Xử Lý Câu Hỏi
+@startuml Luồng Xử Lý Câu Hỏi - Modular Monolith
 !theme plain
 skinparam defaultFontName "Arial"
 skinparam defaultFontSize 14
@@ -9,66 +9,81 @@ skinparam sequenceLifeLineBorderColor gray
 skinparam actorBackgroundColor #ADD8E6
 skinparam participantBackgroundColor #F8F8F8
 
-title Luồng xử lý câu hỏi của hệ thống
+title Luồng xử lý yêu cầu của hệ thống
 
 actor "Người dùng" as User
-participant "Hệ thống API" as API
-box "Hệ thống xử lý lõi" #LightYellow
-    participant "Phân loại & Rewrite" as ClassRewrite
-    participant "Retriever" as Retriever
-    participant "Reranker" as Reranker
-    participant "Generator" as Generator
+participant "API Gateway Module" as APIGateway
+box "Modular Monolith - Core Processing Modules" #F0F6FF
+    participant "Retriever Module\n(Phân loại & Rewrite)" as RetrieverModule
+    participant "Retriever Module\n(Search Engine)" as SearchEngine  
+    participant "Retriever Module\n(Reranker)" as Reranker
+    participant "Generator Module" as GeneratorModule
 end box
+database "ChromaDB\n(Vector Database)" as ChromaDB
+participant "Fine-tuned LLM\n(hoặc API)" as LLM
 
-User -> API : Gửi câu hỏi
-activate API
 
-API -> ClassRewrite : Yêu cầu xử lý câu hỏi
-activate ClassRewrite
+User -> APIGateway : B. Yêu cầu qua API (Gửi câu hỏi)
+activate APIGateway
+note right of APIGateway : 2. Định tuyến yêu cầu
 
-ClassRewrite -> ClassRewrite : Phân loại câu hỏi (Lý thuyết / Giải bài tập)
+APIGateway -> RetrieverModule : Yêu cầu xử lý câu hỏi
+activate RetrieverModule
+
+RetrieverModule -> RetrieverModule : Phân loại câu hỏi (Lý thuyết / Giải bài tập)
 
 ' Xây dựng ngữ cảnh từ lịch sử cho cả hai loại
 alt Có lịch sử trò chuyện (>= 2)
-    ClassRewrite -> ClassRewrite : Tạo ngữ cảnh từ lịch sử
+    RetrieverModule -> RetrieverModule : Tạo ngữ cảnh từ lịch sử
 else Không có lịch sử trò chuyện
-    note right of ClassRewrite : Bỏ qua bước xây dựng ngữ cảnh, \nsử dụng câu hỏi gốc.
+    note right of RetrieverModule : Bỏ qua bước xây dựng ngữ cảnh, \nsử dụng câu hỏi gốc.
 end
 
 alt Loại câu hỏi: Giải bài tập
-    ClassRewrite -> Generator : Gửi câu hỏi + ngữ cảnh (nếu có) trực tiếp
-    deactivate ClassRewrite
-    activate Generator
+    RetrieverModule -> GeneratorModule : 4. Gửi câu hỏi + ngữ cảnh (nếu có) trực tiếp
+    deactivate RetrieverModule
+    activate GeneratorModule
 
 else Loại câu hỏi: Lý thuyết
-    ClassRewrite -> ClassRewrite : Rewrite k câu hỏi mới \nTừ câu hỏi gốc + ngữ cảnh(nếu có)
+    RetrieverModule -> RetrieverModule : Rewrite k câu hỏi mới \nTừ câu hỏi gốc + ngữ cảnh(nếu có)
 
-    ClassRewrite -> Retriever : Gửi các câu hỏi để tìm kiếm
-    deactivate ClassRewrite
-    activate Retriever
+    RetrieverModule -> SearchEngine : Gửi các câu hỏi để tìm kiếm
+    deactivate RetrieverModule
+    activate SearchEngine
 
-    Retriever -> Retriever : Embedding câu hỏi với Qwen/Qwen3-Embedding-0.6B
-    Retriever -> Retriever : Thu thập k*k tài liệu liên quan
-    Retriever -> Reranker : Gửi tài liệu để xếp hạng lại
-    deactivate Retriever
+    SearchEngine -> SearchEngine : Embedding câu hỏi với\nQwen/Qwen3-Embedding-0.6B
+    
+    SearchEngine -> ChromaDB : 3. Đọc các vector liên quan
+    activate ChromaDB
+    ChromaDB --> SearchEngine : Trả về k*k tài liệu liên quan  
+    deactivate ChromaDB
+
+    SearchEngine -> Reranker : Gửi tài liệu để xếp hạng lại
+    deactivate SearchEngine
     activate Reranker
 
-    Reranker -> Reranker : Xếp hạng lại với BAAI/bge-reranker-base
+    Reranker -> Reranker : Xếp hạng lại với\nBAAI/bge-reranker-base
     Reranker -> Reranker : Kết hợp k tài liệu tốt nhất\n(sử dụng Reciprocal Rank Fusion)
 
-    Reranker -> Generator : Gửi ngữ cảnh (tài liệu đã xử lý)
+    Reranker -> GeneratorModule : Gửi ngữ cảnh (tài liệu đã xử lý)
     deactivate Reranker
 end
 
 group Tạo Prompt và Sinh câu trả lời
-    Generator -> Generator : 1. Tạo prompt từ câu hỏi + ngữ cảnh
-    Generator -> Generator : 2. Sinh câu trả lời từ prompt cuối cùng
+    GeneratorModule -> GeneratorModule : 1. Tạo prompt từ câu hỏi + ngữ cảnh
+    
+    GeneratorModule -> LLM : 5. Gửi prompt
+    activate LLM
+    LLM --> GeneratorModule : 6. Trả về văn bản được tạo
+    deactivate LLM
+    
+    GeneratorModule -> GeneratorModule : 2. Xử lý và định dạng câu trả lời
 end
 
-Generator --> API : Gửi câu trả lời đã tạo
-deactivate Generator
+GeneratorModule -> APIGateway : 7. Gửi câu trả lời cuối cùng
+deactivate GeneratorModule
 
-API --> User : Trả về câu trả lời
-deactivate API
+APIGateway -> User : 8. Phản hồi qua API (Trả về câu trả lời)
+deactivate APIGateway
 
 @enduml
