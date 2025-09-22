@@ -1,0 +1,4 @@
+model,correct,total_subparts,percent
+qwen2b-ft,301,761,39.55
+qwen4b,364,761,47.83
+qwen4b8m-ft,427,761,56.11
