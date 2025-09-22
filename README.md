@@ -1,6 +1,6 @@
 # RAG-Solve-Math
 
-![Giao diện hệ thống](WebUI.png)
+![Giao diện hệ thống](diagram/WebUI.png)
 
 ## Mô tả dự án
 RAG-Solve-Math là hệ thống đánh giá và so sánh hiệu quả các mô hình AI trong việc giải toán tự động bằng phương pháp Retrieval-Augmented Generation (RAG). Dự án tập trung vào các bài toán đại số và giải tích 1
@@ -22,6 +22,10 @@ RAG-Solve-Math là hệ thống đánh giá và so sánh hiệu quả các mô h
     - `baitap_final.png`, `lythuyet_final.png`: Biểu đồ trực quan hóa kết quả đánh giá bài tập và lý thuyết.
 - `model/`: Các module quản lý mô hình, truy xuất, và chức năng AI.
 - `static/`, `templates/`: Tài nguyên giao diện web (HTML, CSS, JS).
+
+## Kiến trúc hệ thống
+
+![Kiến trúc hệ thống](diagram/UML.png)
 
 ## Hướng dẫn sử dụng
 
