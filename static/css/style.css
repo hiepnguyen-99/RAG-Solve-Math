@@ -8,9 +8,9 @@
     --surface-color: #f8f9fa;
     --surface-hover: #f1f3f4;
     --surface-elevated: #ffffff;
-    --text-primary: #202124;
-    --text-secondary: #5f6368;
-    --text-muted: #9aa0a6;
+    --text-primary: #4a4a4a;
+    --text-secondary: #6b6b6b;
+    --text-muted: #8a8a8a;
     --border-color: #e8eaed;
     --border-focus: #1a73e8;
     --shadow-light: 0 1px 3px rgba(0,0,0,0.1);
@@ -29,9 +29,9 @@
     --surface-color: #1f1f1f;
     --surface-hover: #2d2d2d;
     --surface-elevated: #2a2a2a;
-    --text-primary: #e8eaed;
-    --text-secondary: #9aa0a6;
-    --text-muted: #5f6368;
+    --text-primary: #b8b8b8;
+    --text-secondary: #9a9a9a;
+    --text-muted: #7a7a7a;
     --border-color: #3c4043;
     --border-focus: #8ab4f8;
     --shadow-light: 0 1px 3px rgba(0,0,0,0.3);
@@ -46,6 +46,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Hide scrollbar for webkit browsers */
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+    display: none;
+}
+
+/* Hide scrollbar for Firefox */
+html {
+    scrollbar-width: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+body {
+    -ms-overflow-style: none;
+}
+
+/* Global scrollbar hiding */
+* {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+*::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
 }
 
 body {
@@ -307,7 +334,7 @@ body {
     text-align: center;
     font-size: 12px;
     font-weight: 600;
-    color: #6b7280;
+    color: var(--text-secondary);
     background: var(--surface-elevated);
     border-radius: 6px;
     padding: 4px 6px;
@@ -471,6 +498,44 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 8px;
+}
+
+.menu-toggle {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background: var(--surface-color);
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-light);
+}
+
+.menu-toggle:hover {
+    background: var(--surface-hover);
+    color: var(--text-primary);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-medium);
+}
+
+.menu-toggle .material-icons {
+    font-size: 20px;
+}
+
+/* ===== Main Layout ===== */
+.main-layout {
+    flex: 1;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-content {
     flex: 1;
     padding: 0 20px;
 }
@@ -665,26 +730,15 @@ body {
     overflow-y: auto;
     padding: 24px;
     scroll-behavior: smooth;
-    max-width: 800px;
+    max-width: 768px;
     margin: 0 auto;
     width: 100%;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
 }
 
 .chat-messages::-webkit-scrollbar {
-    width: 6px;
-}
-
-.chat-messages::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.chat-messages::-webkit-scrollbar-thumb {
-    background: var(--border-color);
-    border-radius: 3px;
-}
-
-.chat-messages::-webkit-scrollbar-thumb:hover {
-    background: var(--text-muted);
+    display: none; /* Chrome, Safari and Opera */
 }
 
 /* ===== Welcome Message ===== */
@@ -2167,9 +2221,8 @@ body {
 
 /* ===== Gemini-Style Input Section ===== */
 .input-section {
-    padding: 20px;
+    padding: 20px 24px;
     background: var(--background-color);
-    border-top: 1px solid var(--border-color);
 }
 
 .input-container {
@@ -2179,12 +2232,206 @@ body {
 
 .input-wrapper.gemini-style {
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
     background: var(--surface-elevated);
     border: 1px solid var(--border-color);
     border-radius: 24px;
-    padding: 8px 12px;
+    padding: 8px 12px 4px 12px;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-light);
+    position: relative;
+}
+
+.input-wrapper.gemini-style:hover {
+    box-shadow: var(--shadow-medium);
+}
+
+.input-wrapper.gemini-style:focus-within {
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+}
+
+/* Action buttons inside input */
+.input-action-buttons {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.input-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    min-height: 24px;
+    font-family: 'Google Sans', sans-serif;
+}
+
+.input-action-btn:hover {
+    background: var(--surface-hover);
+    border-color: var(--border-color);
+    transform: translateY(-1px);
+}
+
+.input-action-btn:active {
+    transform: translateY(0);
+}
+
+.input-action-btn .material-icons {
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+.input-action-btn .action-label {
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+/* Add button đầu tiên - chỉ hiện icon */
+.input-action-buttons .dropdown-container:first-child .input-action-btn {
+    padding: 8px 8px;
+    min-width: 32px;
+    justify-content: center;
+}
+
+.input-action-buttons .dropdown-container:first-child .input-action-btn .action-label {
+    display: none;
+}
+
+/* Rerank button styling */
+.rerank-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.rerank-btn.active .material-icons {
+    color: white;
+}
+
+.rerank-btn.active .action-label {
+    font-weight: 600;
+}
+
+.rerank-btn.active .material-icons {
+    color: white;
+}
+
+/* Disabled state for action buttons */
+.input-action-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.input-action-btn:disabled .material-icons {
+    color: var(--text-muted);
+}
+
+.input-action-btn:disabled .action-label {
+    color: var(--text-muted);
+}
+
+/* Input area - main content area ở trên cùng */
+.input-content-area {
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+/* Input area styling */
+.input-wrapper.gemini-style textarea {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    resize: none;
+    font-family: 'Google Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--text-primary);
+    min-height: 20px;
+    max-height: 200px;
+    width: 100%;
+    padding: 0;
+}
+
+.input-wrapper.gemini-style textarea::placeholder {
+    color: var(--text-muted);
+}
+
+/* Action buttons ở dưới input */
+.input-action-buttons {
+    display: flex;
     gap: 8px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Add button đầu tiên - chỉ hiện icon */
+.input-action-buttons .dropdown-container:first-child .input-action-btn {
+    padding: 8px 8px;
+    min-width: 32px;
+    justify-content: center;
+}
+
+.input-action-buttons .dropdown-container:first-child .input-action-btn .action-label {
+    display: none;
+}
+
+/* Dropdown positioning for add button */
+.input-action-buttons .dropdown-container {
+    position: relative;
+}
+
+.input-action-buttons .dropdown-menu {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    margin-bottom: 8px;
+    z-index: 1000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .input-action-buttons {
+        gap: 6px;
+    }
+    
+    .input-action-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+        min-height: 28px;
+    }
+    
+    .input-action-btn .material-icons {
+        font-size: 16px;
+    }
+    
+    .input-action-btn .action-label {
+        font-size: 12px;
+    }
+}
+
+.input-wrapper.gemini-style {
+    display: flex;
+    flex-direction: column;
+    background: var(--surface-elevated);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 16px;
     transition: all 0.2s ease;
     box-shadow: var(--shadow-light);
 }
@@ -2233,20 +2480,21 @@ body {
     font-size: 20px;
 }
 
-/* Send button special styling */
+/* Send button styling when inline with action buttons */
 .send-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     border: none;
     background: var(--primary-color);
-    border-radius: 20px;
+    border-radius: 16px;
     cursor: pointer;
     transition: all 0.2s ease;
     color: white;
-    margin-left: 4px;
+    margin-left: auto;
+    flex-shrink: 0;
 }
 
 .send-btn:hover:not(:disabled) {
@@ -2262,7 +2510,7 @@ body {
 }
 
 .send-btn .material-icons {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 #user-input {
@@ -2284,13 +2532,38 @@ body {
     color: var(--text-muted);
 }
 
-/* Input Footer Controls */
+/* Input Footer Controls - Old (keep for backward compatibility) */
 .input-footer-controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 12px;
     padding: 0 16px;
+}
+
+/* Simplified footer */
+.input-footer-simple {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2px;
+    padding: 0 4px;
+}
+
+.input-footer-simple .char-counter {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.current-model-display {
+    font-size: 11px;
+    color: var(--text-muted);
+    opacity: 0.7;
+    font-weight: 500;
+}
+
+.model-name {
+    color: var(--text-muted);
 }
 
 .input-footer-left,
