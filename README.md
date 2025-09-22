@@ -50,6 +50,30 @@ python app.py
   ![Biểu đồ kết quả bài tập](evaluate/baitap_final.png)
   ![Biểu đồ kết quả lý thuyết](evaluate/lythuyet_final.png)
 
+## Hướng dẫn sử dụng ngrok_kaggle.ipynb để chạy model Qwen4b và Qwen2b
+
+Notebook `ngrok_kaggle.ipynb` giúp triển khai và truy cập các mô hình AI (Qwen4b, Qwen2b) trên môi trường Kaggle thông qua ngrok tunnel.
+
+### Các bước thực hiện:
+
+1. **Mở notebook ngrok_kaggle.ipynb trên Kaggle**
+   - Upload notebook vào Kaggle hoặc mở trực tiếp nếu đã có sẵn.
+
+2. **Cài đặt các thư viện cần thiết**
+   - Chạy cell đầu tiên để cài đặt các package.
+
+3. **Thiết lập ngrok**
+   - Đăng ký tài khoản ngrok và lấy token tại https://dashboard.ngrok.com/get-started/your-authtoken
+   - Dán token vào cell cấu hình ngrok trong notebook.
+   - Chạy cell để khởi tạo tunnel, nhận đường dẫn truy cập từ xa.
+
+4. **Chạy mô hình Qwen4b hoặc Qwen2b**
+   - Chọn mô hình cần chạy (Qwen4b hoặc 2b) bằng cách chỉnh tên model
+   - Chạy các cell liên quan để khởi động server phục vụ mô hình.
+
+5. **Truy cập và kiểm tra**
+   - Sử dụng đường link ngrok sinh ra để dán vào NGROK_URL trong file .env
+
 ## Công nghệ sử dụng
 - Python 3.x
 - Pandas, Numpy, Matplotlib, Seaborn
