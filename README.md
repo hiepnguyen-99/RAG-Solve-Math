@@ -72,6 +72,7 @@ Notebook `ngrok_kaggle.ipynb` giúp triển khai và truy cập các mô hình A
    - Chạy cell để khởi tạo tunnel, nhận đường dẫn truy cập từ xa.
 
 4. **Chạy mô hình Qwen4b hoặc Qwen2b**
+   - Cài đặt ADAPTER_PATH, chọn mô hình đã được finetune trong [drive](https://drive.google.com/drive/folders/1AgNbhbTnCqR7NM57nvkKvkSKJ0vQk3CP)
    - Chọn mô hình cần chạy (Qwen4b hoặc 2b) bằng cách chỉnh tên model
    - Chạy các cell liên quan để khởi động server phục vụ mô hình.
 
